@@ -1,0 +1,146 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0.01; }
+  to {
+    opacity: 1; } }
+
+.f {
+  display: flex; }
+
+.f_i {
+  display: flex !important; }
+
+.f-i {
+  display: inline-flex; }
+
+.fd-c {
+  flex-direction: column; }
+
+.fd-rr {
+  flex-direction: row-reverse; }
+
+.ai-c {
+  align-items: center; }
+
+.ai-fs {
+  align-items: flex-start; }
+
+.ai-fe {
+  align-items: flex-end; }
+
+.as-fs {
+  align-self: flex-start; }
+
+.as-c {
+  align-self: center; }
+
+.as-fe {
+  align-self: flex-end; }
+
+.jc-c {
+  justify-content: center; }
+
+.jc-sb {
+  justify-content: space-between; }
+
+.jc-fe {
+  justify-content: flex-end; }
+
+.fw-w {
+  flex-wrap: wrap; }
+
+.fs-0 {
+  flex-shrink: 0; }
+
+.fb-100 {
+  flex-basis: 100%; }
+
+.fg-1 {
+  flex-grow: 1; }
+
+.fg-2 {
+  flex-grow: 2; }
+
+.page {
+  padding-left: 100px;
+  height: 100%; }
+
+.section {
+  height: 100%;
+  padding: 30px 10%; }
+
+.title {
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 30px; }
+
+.subtitle {
+  position: relative;
+  font-size: 30px;
+  color: rgba(40, 44, 52, 0.6);
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 30px; }
+
+.link {
+  color: #259991; }
+  .link_blue {
+    color: #4078c0; }
+  .link:hover {
+    text-decoration: underline; }
+    @media (hover: none) {
+      .link:hover {
+        text-decoration: none; } }
+
+.open-tag {
+  margin-bottom: 40px; }
+
+.close-tag {
+  margin-top: 40px; }
+
+.social-icon {
+  width: 26px;
+  height: 26px;
+  fill: #282c34; }
+
+.material-icons {
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-delay: 0ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform; }
+  button:hover .material-icons {
+    transform: rotate(180deg); }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #282c34;
+  background-color: #62a5fc !important; }
+
+#root {
+  background-color: white; }
+
+h1, h2, h3, h4, h5, h6,
+ul,
+figure {
+  margin: 0; }
+
+p {
+  margin-top: 0; }
+
+a {
+  user-select: none;
+  text-decoration: none; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+code {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+address {
+  font-style: normal; }

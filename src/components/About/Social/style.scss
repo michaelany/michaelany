@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.social {
+  background-color: $green;
+}
+
+.social__content {
+  height: calc(100vh - 30px);
+  min-height: 400px;
+}
+
+.social__item {
+  position: relative;
+  margin: 0 10px;
+
+  &:first-child,
+  &:last-child {
+    top: -29px;
+  }
+}

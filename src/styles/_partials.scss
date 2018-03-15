@@ -1,0 +1,62 @@
+.page {
+  padding-left: $sidebar-width;
+  height: 100%;
+}
+
+.section {
+  height: 100%;
+  padding: 30px 10%;
+}
+
+.title {
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  position: relative;
+  font-size: 30px;
+  color: $black-60;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.link {
+  color: $green-two;
+
+  &_blue {
+    color: $blue-two;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    @include no-hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.open-tag {
+  margin-bottom: 40px;
+}
+
+.close-tag {
+  margin-top: 40px;
+}
+
+.social-icon {
+  width: 26px;
+  height: 26px;
+  fill: $black;
+}
+
+.material-icons {
+  @include transit(transform, $standard);
+
+  button:hover & {
+    transform: rotate(180deg);
+  }
+}

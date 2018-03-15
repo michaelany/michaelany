@@ -1,0 +1,12 @@
+.greeting__hello {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1.1; }
+
+.greeting__title {
+  margin: 20px 0;
+  font-weight: 300; }
+
+.greeting__letter {
+  font-weight: 900;
+  color: #f7bc3f; }

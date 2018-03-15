@@ -1,0 +1,52 @@
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin transit($prop, $duration: $short, $delay: 0ms, $function: $ease-in-out) {
+  transition-property: $prop;
+  transition-duration: $duration;
+  transition-delay: $delay;
+  transition-timing-function: $function;
+  will-change: $prop;
+}
+
+@mixin animate($name, $duration: $longest, $delay: 0ms, $function: $ease-in-out) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-fill-mode: forwards;
+  animation-timing-function: $function;
+}
+
+@mixin image-2x($image) {
+  @media (min-resolution: 2dppx),
+  (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url($image);
+  }
+}
+
+@mixin no-hover {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1279px) {
+    @content;
+  }
+}

@@ -1,0 +1,82 @@
+.sidebar {
+  width: 100px;
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  padding: 5px 0;
+  background-color: transparent; }
+
+.sidebar__logo {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-delay: 0ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color;
+  display: block;
+  font-size: 40px;
+  letter-spacing: -5px;
+  font-weight: 900;
+  color: white;
+  padding: 0 20px;
+  margin-bottom: 60px; }
+  .sidebar_yellow > .sidebar__logo {
+    color: #f7bc3f; }
+  .sidebar_green > .sidebar__logo {
+    color: #31d0c9; }
+  .sidebar_blue > .sidebar__logo {
+    color: #62a5fc; }
+
+.sidebar__link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-delay: 0ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color;
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  line-height: 0;
+  color: #282c34;
+  text-align: center; }
+  .sidebar__link:focus {
+    outline: 0; }
+  .sidebar__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-delay: 0ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    border-radius: 2px;
+    opacity: 0; }
+    .sidebar_yellow .sidebar__link::after {
+      background-color: #f7bc3f; }
+    .sidebar_green .sidebar__link::after {
+      background-color: #31d0c9; }
+    .sidebar_blue .sidebar__link::after {
+      background-color: #62a5fc; }
+  .sidebar__link:hover {
+    color: white; }
+    .sidebar_yellow .sidebar__link:hover {
+      color: #f7bc3f; }
+    .sidebar_green .sidebar__link:hover {
+      color: #31d0c9; }
+    .sidebar_blue .sidebar__link:hover {
+      color: #62a5fc; }
+  .sidebar__link_active {
+    color: white; }
+    .sidebar_yellow .sidebar__link_active {
+      color: #f7bc3f; }
+    .sidebar_green .sidebar__link_active {
+      color: #31d0c9; }
+    .sidebar_blue .sidebar__link_active {
+      color: #62a5fc; }
+    .sidebar__link_active::after {
+      opacity: 1; }

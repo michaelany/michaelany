@@ -1,0 +1,17 @@
+.bio__title {
+  color: #31d0c9; }
+
+.bio__list {
+  padding-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 20px; }
+
+.bio__item {
+  margin-bottom: 10px; }
+
+.bio__sublist {
+  padding-left: 40px;
+  list-style-type: circle; }
+
+.bio__sub-item {
+  margin-top: 10px; }

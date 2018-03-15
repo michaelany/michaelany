@@ -1,0 +1,107 @@
+@import 'styles/variables';
+
+.sidebar {
+  width: $sidebar-width;
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  padding: 5px 0;
+  background-color: transparent;
+}
+
+.sidebar__logo {
+  @include transit(color);
+  display: block;
+  font-size: 40px;
+  letter-spacing: -5px;
+  font-weight: 900;
+  color: white;
+  padding: 0 20px;
+  margin-bottom: 60px;
+
+  .sidebar_yellow > & {
+    color: $yellow;
+  }
+
+  .sidebar_green > & {
+    color: $green;
+  }
+
+  .sidebar_blue > & {
+    color: $blue;
+  }
+}
+
+.sidebar__link {
+  @include transit(color);
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  line-height: 0;
+  color: $black;
+  text-align: center;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::after {
+    @include pseudo();
+    @include transit(opacity);
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    border-radius: 2px;
+    opacity: 0;
+
+    .sidebar_yellow & {
+      background-color: $yellow;
+    }
+
+    .sidebar_green & {
+      background-color: $green;
+    }
+
+    .sidebar_blue & {
+      background-color: $blue;
+    }
+  }
+
+  &:hover {
+    color: white;
+
+    .sidebar_yellow & {
+      color: $yellow;
+    }
+
+    .sidebar_green & {
+      color: $green;
+    }
+
+    .sidebar_blue & {
+      color: $blue;
+    }
+  }
+
+  &_active {
+    color: white;
+
+    .sidebar_yellow & {
+      color: $yellow;
+    }
+
+    .sidebar_green & {
+      color: $green;
+    }
+
+    .sidebar_blue & {
+      color: $blue;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

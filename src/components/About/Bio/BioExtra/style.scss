@@ -1,0 +1,15 @@
+@import 'styles/variables';
+
+.bio-extra__content {
+  @include transit(height, $long);
+  overflow: hidden;
+}
+
+.bio-extra__block {
+  @include transit(opacity, $longest);
+  opacity: 0.01;
+
+  .bio-extra__content_open > & {
+    opacity: 1;
+  }
+}
