@@ -23,6 +23,8 @@ import sass from './sass.jpg';
 import sass2x from './sass@2x.jpg';
 import bootstrap from './bootstrap.jpg';
 import bootstrap2x from './bootstrap@2x.jpg';
+import semanticUI from './semantic-ui.jpg';
+import semanticUI2x from './semantic-ui@2x.jpg';
 import materialUI from './material-ui.jpg';
 import materialUI2x from './material-ui@2x.jpg';
 import foundationForEmails from './foundation-for-emails.jpg';
@@ -84,6 +86,7 @@ const technologyGroups = [
             {id: 2, title: 'Sass', img: [sass, sass2x], url: LINKS.technologies.sass},
             {id: 3, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
             {id: 4, title: 'Bootstrap', img: [bootstrap, bootstrap2x], url: LINKS.technologies.bootstrap},
+            {id: 4, title: 'Semantic UI', img: [semanticUI, semanticUI2x], url: LINKS.technologies.semanticUI},
             {id: 5, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], url: LINKS.technologies.foundationForEmails}
         ]
     },

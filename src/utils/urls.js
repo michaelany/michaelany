@@ -28,6 +28,7 @@ export const LINKS = {
         css: 'https://www.w3.org/Style/CSS',
         sass: 'https://sass-lang.com',
         bootstrap: 'https://getbootstrap.com',
+        semanticUI: 'https://semantic-ui.com',
         materialUI: 'https://material-ui-next.com',
         foundationForEmails: 'https://foundation.zurb.com/emails.html',
         javascript: 'https://www.javascript.com',
