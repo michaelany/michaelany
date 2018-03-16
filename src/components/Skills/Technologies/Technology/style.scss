@@ -1,0 +1,78 @@
+@import 'styles/variables';
+
+.technology {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.technology__figure {
+  height: 100%;
+  width: 100%;
+}
+
+.technology__image {
+  @include transit(transform, $long);
+  max-width: 50%;
+  max-height: 70px;
+
+  .technology:hover & {
+    transform: scale(1.3);
+    @include no-hover {
+      transform: scale(1);
+    }
+  }
+}
+
+.technology__caption {
+  @include transit((opacity, transform));
+  border-radius: 4px;
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.6);
+
+  .technologies__group_type_html & {
+    background-color: $red-60;
+  }
+
+  .technologies__group_type_css & {
+    background-color: $blue-60;
+  }
+
+  .technologies__group_type_java-script & {
+    background-color: $yellow-60;
+  }
+
+  .technologies__group_type_php & {
+    background-color: $violet-60;
+  }
+
+  .technologies__group_type_build-tools & {
+    background-color: $green-60;
+  }
+
+  .technologies__group_type_tools & {
+    background-color: $acid-60;
+  }
+
+  .technology:hover & {
+    opacity: 1;
+    transform: scale(1);
+    @include no-hover {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  }
+}
+
+.technology__title {
+  text-align: center;
+  font-size: 1vw;
+  background-color: $white-80;
+  border-radius: 4px;
+  line-height: 1.25;
+  padding: 2px 5px;
+}

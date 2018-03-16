@@ -14,7 +14,7 @@ export default function Greeting({onGoToPortfolio, onGoToContact}) {
         <section className="greeting section f fd-c jc-sb">
             <code className="open-tag">&lt;home&gt;</code>
             <div>
-                <div className="greeting__hello">Привет,</div>
+                <div className="greeting__hello title">Привет,</div>
                 <h1 className="greeting__title title">
                     меня зовут<br />
                     <span className="greeting__letter">М</span>

@@ -7,7 +7,7 @@
 
 .bio-extra__block {
   @include transit(opacity, $longest);
-  opacity: 0.01;
+  opacity: 0;
 
   .bio-extra__content_open > & {
     opacity: 1;

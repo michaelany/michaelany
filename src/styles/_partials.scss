@@ -1,11 +1,35 @@
 .page {
   padding-left: $sidebar-width;
   height: 100%;
+
+  &_background_blue {
+    background-color: $blue;
+  }
+
+  &_background_violet {
+    background-color: $violet;
+  }
+
+  &_background_green {
+    background-color: $green;
+  }
 }
 
 .section {
   height: 100%;
   padding: 30px 10%;
+
+  &_background_yellow {
+    background-color: $yellow;
+  }
+
+  &_background_green {
+    background-color: $green;
+  }
+
+  &_background_blue {
+    background-color: $blue;
+  }
 }
 
 .title {
@@ -13,6 +37,14 @@
   line-height: 1.1;
   font-weight: 900;
   margin-bottom: 30px;
+
+  &_color_white {
+    color: white;
+  }
+
+  &_color_green {
+    color: $green;
+  }
 }
 
 .subtitle {
@@ -25,10 +57,14 @@
 }
 
 .link {
-  color: $green-two;
+  color: $blue-two;
 
-  &_blue {
-    color: $blue-two;
+  &_color_green {
+    color: $green-two;
+  }
+
+  &_color_white {
+    color: white;
   }
 
   &:hover {
@@ -41,10 +77,18 @@
 
 .open-tag {
   margin-bottom: 40px;
+
+  &_white {
+    color: white;
+  }
 }
 
 .close-tag {
   margin-top: 40px;
+
+  &_white {
+    color: white;
+  }
 }
 
 .social-icon {

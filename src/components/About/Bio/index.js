@@ -30,7 +30,7 @@ const features = [
     },
     {id: 6, text: <span>Следую <strong>современным стандартам</strong> и нахожусь в состоянии <strong>постоянного обучения</strong> (документации, статьи, книги и курсы)</span>},
     {id: 7, text: <span>Испытываю гордость и удовлетворение когда вижу <strong>эффективно работающий</strong> созданный мною проект</span>},
-    {id: 8, text: <span>Работаю в компании <a className="link" href={LINKS.sevenGlyphs} rel="noopener noreferrer" target="_blank">7 glyphs</a> front-end разработчиком</span>}
+    {id: 8, text: <span>Работаю в компании <a className="link link_color_green" href={LINKS.bio.sevenGlyphs} rel="noopener noreferrer" target="_blank">7 glyphs</a> front-end разработчиком</span>}
 ];
 
 const renderFeatures = () => features.map(({id, text, subFeatures}) => {
@@ -51,7 +51,7 @@ export default function Bio() {
         <section className="bio section f fd-c jc-sb">
             <code className="open-tag">&lt;about&gt;</code>
             <div>
-                <h2 className="bio__title title">Обо мне</h2>
+                <h2 className="title title_color_green">Обо мне</h2>
                 <h3 className="subtitle">Профессионально занимаюсь веб-разработкой два года. Родился и живу в Москве.</h3>
                 <ul className="bio__list">
                     {renderFeatures()}

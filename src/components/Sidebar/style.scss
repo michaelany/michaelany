@@ -10,7 +10,7 @@
 }
 
 .sidebar__logo {
-  @include transit(color);
+  @include transit((color, transform));
   display: block;
   font-size: 40px;
   letter-spacing: -5px;
@@ -18,6 +18,13 @@
   color: white;
   padding: 0 20px;
   margin-bottom: 60px;
+
+  &:hover {
+    transform: scale(1.2) rotate(-15deg);
+    @include no-hover {
+      transform: none;
+    }
+  }
 
   .sidebar_yellow > & {
     color: $yellow;

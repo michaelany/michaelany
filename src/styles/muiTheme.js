@@ -22,10 +22,11 @@ export default {
         MuiButton: {
             root: {
                 fontSize: 18,
-                padding: 0
+                padding: 0,
+                borderRadius: 4,
+                color: COLORS.black
             },
             raised: {
-                borderRadius: 4,
                 lineHeight: 1,
                 minWidth: 180,
                 minHeight: 46
@@ -34,6 +35,23 @@ export default {
         MuiIcon: {
             root: {
                 fontSize: 32
+            }
+        },
+        Paper: {
+            root: {
+                borderRadius: 4
+            }
+        },
+        MuiExpansionPanel: {
+            root: {
+                '&:first-child': {
+                    borderTopLeftRadius: 4,
+                    borderTopRightRadius: 4
+                },
+                '&:last-child': {
+                    borderBottomLeftRadius: 4,
+                    borderBottomRightRadius: 4
+                }
             }
         }
     }
