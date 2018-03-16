@@ -22,7 +22,7 @@ export default function Technology({title, img, url}) {
         <Button component="a" href={url} className="technology" rel="noopener noreferrer" target="_blank" style={styles.button}>
             <figure className="technology__figure f ai-c jc-c">
                 <img className="technology__image" src={img[0]} srcSet={`${img[1]} 2x`} alt={title} />
-                <figcaption className="technology__caption f ai-c jc-c">
+                <figcaption className="technology__caption f ai-fe jc-c">
                     <h5 className="technology__title">{title}</h5>
                 </figcaption>
             </figure>

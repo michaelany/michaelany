@@ -7,11 +7,11 @@
   background-color: transparent; }
 
 .sidebar__logo {
-  transition-property: color;
+  transition-property: color, transform;
   transition-duration: 250ms;
   transition-delay: 0ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: color;
+  will-change: color, transform;
   display: block;
   font-size: 40px;
   letter-spacing: -5px;
@@ -19,6 +19,11 @@
   color: white;
   padding: 0 20px;
   margin-bottom: 60px; }
+  .sidebar__logo:hover {
+    transform: scale(1.2) rotate(-15deg); }
+    @media (hover: none) {
+      .sidebar__logo:hover {
+        transform: none; } }
   .sidebar_yellow > .sidebar__logo {
     color: #f7bc3f; }
   .sidebar_green > .sidebar__logo {

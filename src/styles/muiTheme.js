@@ -1,5 +1,6 @@
 export const COLORS = {
     black: 'rgb(40, 44, 52)',
+    black12: 'rgba(40, 44, 52, 0.12)',
     blue: 'rgb(98, 165, 252)',
     darkBlue: 'rgb(88, 149, 224)',
     green: 'rgb(49, 208, 201)',
@@ -24,7 +25,10 @@ export default {
                 fontSize: 18,
                 padding: 0,
                 borderRadius: 4,
-                color: COLORS.black
+                color: COLORS.black,
+                '&:hover': {
+                    backgroundColor: COLORS.black12
+                }
             },
             raised: {
                 lineHeight: 1,

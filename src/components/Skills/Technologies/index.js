@@ -47,8 +47,16 @@ import gulp from './gulp.jpg';
 import gulp2x from './gulp@2x.jpg';
 import phpstorm from './phpstorm.jpg';
 import phpstorm2x from './phpstorm@2x.jpg';
+import git from './git.jpg';
+import git2x from './git@2x.jpg';
 import zeplin from './zeplin.jpg';
 import zeplin2x from './zeplin@2x.jpg';
+import sketch from './sketch.jpg';
+import sketch2x from './sketch@2x.jpg';
+import paw from './paw.jpg';
+import paw2x from './paw@2x.jpg';
+import imageOptim from './image-optim.jpg';
+import imageOptim2x from './image-optim@2x.jpg';
 import Technology from './Technology';
 import ResponsiveBlock from '../../_common/ResponsiveBlock';
 import {STYLES} from '../../../styles/muiTheme';
@@ -117,10 +125,11 @@ const technologyGroups = [
         type: 'tools',
         technologies: [
             {id: 1, title: 'PhpStorm', img: [phpstorm, phpstorm2x], url: LINKS.technologies.phpstorm},
+            {id: 1, title: 'Git', img: [git, git2x], url: LINKS.technologies.git},
             {id: 2, title: 'Zeplin', img: [zeplin, zeplin2x], url: LINKS.technologies.zeplin},
-            {id: 3, title: 'Paw', img: [npm, npm2x], url: LINKS.technologies.npm},
-            {id: 4, title: 'Sketch', img: [npm, npm2x], url: LINKS.technologies.npm},
-            {id: 5, title: 'ImageOptim', img: [npm, npm2x], url: LINKS.technologies.npm}
+            {id: 3, title: 'Sketch', img: [sketch, sketch2x], url: LINKS.technologies.sketch},
+            {id: 4, title: 'Paw', img: [paw, paw2x], url: LINKS.technologies.paw},
+            {id: 5, title: 'ImageOptim', img: [imageOptim, imageOptim2x], url: LINKS.technologies.imageOptim}
         ]
     },
 ];

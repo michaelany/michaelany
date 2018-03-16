@@ -9,16 +9,12 @@ const commonStyles = {
     whiteColorButton: {
         color: 'white'
     },
-    blackColorButton: {
-        color: COLORS.black
-    },
     marginButton: {
         marginRight: 20
     }
 };
 const styles = {
     whiteButton: {
-        ...commonStyles.blackColorButton,
         backgroundColor: 'white',
         '&:hover': {
             '@media (hover: none)': {

@@ -42,6 +42,10 @@ export const LINKS = {
         webpack: 'https://webpack.js.org',
         gulp: 'https://gulpjs.com',
         phpstorm: 'https://www.jetbrains.com/phpstorm',
+        git: 'https://git-scm.com',
         zeplin: 'https://zeplin.io',
+        sketch: 'https://www.sketchapp.com',
+        paw: 'https://paw.cloud',
+        imageOptim: 'https://imageoptim.com',
     }
 };
