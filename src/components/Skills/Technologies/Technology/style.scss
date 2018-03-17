@@ -34,28 +34,28 @@
   opacity: 0;
   transform: scale(0.6);
 
-  .technologies__group_type_html & {
+  &_color_grey {
+    background-color: $grey-12;
+  }
+
+  &_color_red {
     background-color: $red-12;
   }
 
-  .technologies__group_type_css & {
+  &_color_blue {
     background-color: $blue-12;
   }
 
-  .technologies__group_type_java-script & {
+  &_color_yellow {
     background-color: $yellow-12;
   }
 
-  .technologies__group_type_php & {
+  &_color_violet {
     background-color: $violet-12;
   }
 
-  .technologies__group_type_build-tools & {
+  &_color_green {
     background-color: $green-12;
-  }
-
-  .technologies__group_type_tools & {
-    background-color: $acid-12;
   }
 
   .technology:hover & {
@@ -72,6 +72,7 @@
   text-align: center;
   font-size: 1vw;
   background-color: $white-80;
+  color: $black;
   border-radius: 4px;
   line-height: 1.25;
   padding: 2px 5px;

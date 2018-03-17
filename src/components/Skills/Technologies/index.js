@@ -68,93 +68,84 @@ const technologyGroups = [
     {
         id: 1,
         title: 'HTML',
-        type: 'html',
         technologies: [
-            {id: 1, title: 'HTML5', img: [html, html2x], url: LINKS.technologies.html},
-            {id: 2, title: 'JSX', img: [react, react2x], url: LINKS.technologies.jsx},
-            {id: 3, title: 'Pug', img: [pug, pug2x], url: LINKS.technologies.pug},
+            {id: 1, title: 'HTML5', img: [html, html2x], color: 'red', url: LINKS.technologies.html},
+            {id: 2, title: 'JSX', img: [react, react2x], color: 'blue', url: LINKS.technologies.jsx},
+            {id: 3, title: 'Pug', img: [pug, pug2x], color: 'yellow', url: LINKS.technologies.pug},
             {id: 4, title: 'Handlebars', img: [handlebars, handlebars2x], url: LINKS.technologies.handlebars},
-            {id: 5, title: 'Blade', img: [laravel, laravel2x], url: LINKS.technologies.blade}
+            {id: 5, title: 'Blade', img: [laravel, laravel2x], color: 'red', url: LINKS.technologies.blade}
         ]
     },
     {
         id: 2,
         title: 'CSS',
-        type: 'css',
         technologies: [
-            {id: 1, title: 'CSS3', img: [css, css2x], url: LINKS.technologies.css},
-            {id: 2, title: 'Sass', img: [sass, sass2x], url: LINKS.technologies.sass},
+            {id: 1, title: 'CSS3', img: [css, css2x], color: 'blue', url: LINKS.technologies.css},
+            {id: 2, title: 'Sass', img: [sass, sass2x], color: 'red', url: LINKS.technologies.sass},
             {id: 3, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
-            {id: 4, title: 'Bootstrap', img: [bootstrap, bootstrap2x], url: LINKS.technologies.bootstrap},
-            {id: 4, title: 'Semantic UI', img: [semanticUI, semanticUI2x], url: LINKS.technologies.semanticUI},
-            {id: 5, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], url: LINKS.technologies.foundationForEmails}
+            {id: 4, title: 'Bootstrap', img: [bootstrap, bootstrap2x], color: 'violet', url: LINKS.technologies.bootstrap},
+            {id: 5, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
+            {id: 6, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'yellow', url: LINKS.technologies.foundationForEmails}
         ]
     },
     {
         id: 3,
         title: 'JavaScript',
-        type: 'java-script',
         technologies: [
-            {id: 1, title: 'JavaScript', img: [javascript, javascript2x], url: LINKS.technologies.javascript},
-            {id: 2, title: 'React', img: [react, react2x], url: LINKS.technologies.react},
-            {id: 3, title: 'Redux', img: [redux, redux2x], url: LINKS.technologies.redux},
+            {id: 1, title: 'JavaScript', img: [javascript, javascript2x], color: 'yellow', url: LINKS.technologies.javascript},
+            {id: 2, title: 'React', img: [react, react2x], color: 'blue', url: LINKS.technologies.react},
+            {id: 3, title: 'Redux', img: [redux, redux2x], color: 'violet', url: LINKS.technologies.redux},
             {id: 4, title: 'Node', img: [node, node2x], url: LINKS.technologies.node},
-            {id: 5, title: 'jQuery', img: [jquery, jquery2x], url: LINKS.technologies.jquery}
+            {id: 5, title: 'jQuery', img: [jquery, jquery2x], color: 'blue', url: LINKS.technologies.jquery}
         ]
     },
     {
         id: 4,
         title: 'PHP',
-        type: 'php',
         technologies: [
-            {id: 1, title: 'PHP', img: [php, php2x], url: LINKS.technologies.php},
-            {id: 2, title: 'Laravel', img: [laravel, laravel2x], url: LINKS.technologies.laravel}
+            {id: 1, title: 'PHP', img: [php, php2x], color: 'violet', url: LINKS.technologies.php},
+            {id: 2, title: 'Laravel', img: [laravel, laravel2x], color: 'red', url: LINKS.technologies.laravel}
         ]
     },
     {
         id: 5,
         title: 'Build Tools',
-        type: 'build-tools',
         technologies: [
-            {id: 1, title: 'NPM', img: [npm, npm2x], url: LINKS.technologies.npm},
-            {id: 2, title: 'Yarn', img: [yarn, yarn2x], url: LINKS.technologies.yarn},
-            {id: 3, title: 'Webpack', img: [webpack, webpack2x], url: LINKS.technologies.webpack},
-            {id: 3, title: 'Gulp', img: [gulp, gulp2x], url: LINKS.technologies.gulp}
+            {id: 1, title: 'NPM', img: [npm, npm2x], color: 'red', url: LINKS.technologies.npm},
+            {id: 2, title: 'Yarn', img: [yarn, yarn2x], color: 'blue', url: LINKS.technologies.yarn},
+            {id: 3, title: 'Webpack', img: [webpack, webpack2x], color: 'blue', url: LINKS.technologies.webpack},
+            {id: 4, title: 'Gulp', img: [gulp, gulp2x], color: 'red', url: LINKS.technologies.gulp}
         ]
     },
     {
         id: 6,
         title: 'Tools',
-        type: 'tools',
         technologies: [
-            {id: 1, title: 'PhpStorm', img: [phpstorm, phpstorm2x], url: LINKS.technologies.phpstorm},
-            {id: 1, title: 'Git', img: [git, git2x], url: LINKS.technologies.git},
-            {id: 2, title: 'Zeplin', img: [zeplin, zeplin2x], url: LINKS.technologies.zeplin},
-            {id: 3, title: 'Sketch', img: [sketch, sketch2x], url: LINKS.technologies.sketch},
-            {id: 4, title: 'Paw', img: [paw, paw2x], url: LINKS.technologies.paw},
-            {id: 5, title: 'ImageOptim', img: [imageOptim, imageOptim2x], url: LINKS.technologies.imageOptim}
+            {id: 1, title: 'PhpStorm', img: [phpstorm, phpstorm2x], color: 'violet', url: LINKS.technologies.phpstorm},
+            {id: 2, title: 'Git', img: [git, git2x], color: 'red', url: LINKS.technologies.git},
+            {id: 3, title: 'Zeplin', img: [zeplin, zeplin2x], color: 'yellow', url: LINKS.technologies.zeplin},
+            {id: 4, title: 'Sketch', img: [sketch, sketch2x], color: 'yellow', url: LINKS.technologies.sketch},
+            {id: 5, title: 'Paw', img: [paw, paw2x], color: 'blue', url: LINKS.technologies.paw},
+            {id: 6, title: 'ImageOptim', img: [imageOptim, imageOptim2x], url: LINKS.technologies.imageOptim}
         ]
     },
 ];
 
-const renderTechnologyGroups = () => technologyGroups.map(({id, title, type, technologies}) => (
-    <ExpansionPanel key={id} defaultExpanded>
-        <ExpansionPanelSummary expandIcon={<Icon>expand_more</Icon>}>
-            <h4 className="technologies__title subtitle">{title}</h4>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-            <Grid
-                container
-                component="ul"
-                className={`technologies__group technologies__group_type_${type}`}
-                spacing={0}
-                style={STYLES.gridContainer}
-            >
-                {renderTechnologies(technologies)}
-            </Grid>
-        </ExpansionPanelDetails>
-    </ExpansionPanel>
-));
+const renderTechnologyGroups = () => technologyGroups.map(({id, title, technologies}) => {
+    const defaultExpanded = id === 1 || id === 2 || id === 3;
+    return (
+        <ExpansionPanel key={id} {...{defaultExpanded}}>
+            <ExpansionPanelSummary expandIcon={<Icon>expand_more</Icon>}>
+                <h4 className="technologies__title subtitle">{title}</h4>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+                <Grid container component="ul" spacing={0} style={STYLES.gridContainer}>
+                    {renderTechnologies(technologies)}
+                </Grid>
+            </ExpansionPanelDetails>
+        </ExpansionPanel>
+    );
+});
 
 const renderTechnologies = (technologies) => technologies.map(({id, ...props}) => (
     <Grid key={id} item component="li" xs={3}>
