@@ -64,22 +64,25 @@
 .page {
   padding-left: 100px;
   height: 100%; }
-  .page_background_blue {
+  .page_bg-color_blue {
     background-color: #62a5fc; }
-  .page_background_violet {
+  .page_bg-color_violet {
     background-color: #9170fb; }
-  .page_background_green {
+  .page_bg-color_green {
     background-color: #31d0c9; }
 
 .section {
-  height: 100%;
-  padding: 30px 10%; }
-  .section_background_yellow {
+  padding: 100px 10%;
+  height: 100%; }
+  .section_bg-color_yellow {
     background-color: #f7bc3f; }
-  .section_background_green {
+  .section_bg-color_green {
     background-color: #31d0c9; }
-  .section_background_blue {
+  .section_bg-color_blue {
     background-color: #62a5fc; }
+
+.container {
+  height: calc(100vh - 200px); }
 
 .title {
   font-size: 52px;

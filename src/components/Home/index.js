@@ -14,7 +14,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="home page">
-                <Grid container spacing={0} style={STYLES.gridContainer}>
+                <Grid container spacing={0} style={STYLES.mainGridContainer}>
                     <Grid item xs={6}>
                         <Greeting onGoToPortfolio={this.handleGoToPortfolio} onGoToContact={this.handleGoToContact} />
                     </Grid>

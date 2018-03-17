@@ -2,34 +2,38 @@
   padding-left: $sidebar-width;
   height: 100%;
 
-  &_background_blue {
+  &_bg-color_blue {
     background-color: $blue;
   }
 
-  &_background_violet {
+  &_bg-color_violet {
     background-color: $violet;
   }
 
-  &_background_green {
+  &_bg-color_green {
     background-color: $green;
   }
 }
 
 .section {
+  padding: 100px 10%;
   height: 100%;
-  padding: 30px 10%;
 
-  &_background_yellow {
+  &_bg-color_yellow {
     background-color: $yellow;
   }
 
-  &_background_green {
+  &_bg-color_green {
     background-color: $green;
   }
 
-  &_background_blue {
+  &_bg-color_blue {
     background-color: $blue;
   }
+}
+
+.container {
+  height: calc(100vh - 200px);
 }
 
 .title {

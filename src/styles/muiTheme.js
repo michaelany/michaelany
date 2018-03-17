@@ -13,7 +13,7 @@ export const COLORS = {
 };
 
 export const STYLES = {
-    gridContainer: {
+    mainGridContainer: {
         height: '100%'
     }
 };

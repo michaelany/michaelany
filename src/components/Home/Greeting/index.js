@@ -11,9 +11,7 @@ Greeting.propTypes = {
 
 export default function Greeting({onGoToPortfolio, onGoToContact}) {
     return (
-        <section className="greeting section f fd-c jc-sb">
-            <code className="open-tag">&lt;home&gt;</code>
-            <div>
+        <section className="greeting section f fd-c jc-c">
                 <div className="greeting__hello title">Привет,</div>
                 <h1 className="greeting__title title">
                     меня зовут<br />
@@ -22,10 +20,10 @@ export default function Greeting({onGoToPortfolio, onGoToContact}) {
                     я веб-разработчик.
                 </h1>
                 <h2 className="subtitle">Front-End Developer / React JS</h2>
-                <MuiButton isMargin variant="raised" kind="green" onClick={onGoToPortfolio}>Портфолио</MuiButton>
-                <MuiButton variant="raised" kind="blue" onClick={onGoToContact}>Контакты</MuiButton>
-            </div>
-            <code className="close-tag">&lt;/home&gt;</code>
+                <div>
+                    <MuiButton isMargin variant="raised" kind="green" onClick={onGoToPortfolio}>Портфолио</MuiButton>
+                    <MuiButton variant="raised" kind="blue" onClick={onGoToContact}>Контакты</MuiButton>
+                </div>
         </section>
     );
 }

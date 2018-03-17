@@ -5,7 +5,7 @@ import mac from './mac.png';
 
 export default function Poster() {
     return (
-        <section className="poster section section_background_yellow f fd-c jc-c">
+        <section className="poster section section_bg-color_yellow f fd-c jc-c">
             <img className="poster__image" src={mac} alt="mac" />
         </section>
     );

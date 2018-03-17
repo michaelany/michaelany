@@ -8,7 +8,7 @@ import {STYLES} from '../../styles/muiTheme';
 export default function About() {
     return (
         <div className="about page">
-            <Grid container spacing={0} style={STYLES.gridContainer}>
+            <Grid container spacing={0} style={STYLES.mainGridContainer}>
                 <Grid item xs={6}>
                     <Bio />
                 </Grid>

@@ -6,7 +6,7 @@ import {STYLES} from '../../styles/muiTheme';
 
 export default function Portfolio() {
     return (
-        <div className="portfolio page">
+        <div className="portfolio page page_bg-color_green">
             <Grid container spacing={0} style={STYLES.gridContainer}>
                 <Grid item xs={6}>
                     <section className="greeting section f fd-c jc-sb">

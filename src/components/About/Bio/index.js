@@ -48,17 +48,13 @@ const renderSubFeatures = (subFeatures) => subFeatures.map(({id, text}) => (
 
 export default function Bio() {
     return (
-        <section className="bio section f fd-c jc-sb">
-            <code className="open-tag">&lt;about&gt;</code>
-            <div>
-                <h2 className="title title_color_green">Обо мне</h2>
-                <h3 className="subtitle">Профессионально занимаюсь веб-разработкой два года. Родился и живу в Москве.</h3>
-                <ul className="bio__list">
-                    {renderFeatures()}
-                </ul>
-                <BioExtra />
-            </div>
-            <code className="close-tag">&lt;/about&gt;</code>
+        <section className="bio section f fd-c jc-c">
+            <h2 className="title title_color_green">Обо мне</h2>
+            <h3 className="subtitle">Профессионально занимаюсь веб-разработкой два года. Родился и живу в Москве.</h3>
+            <ul className="bio__list">
+                {renderFeatures()}
+            </ul>
+            <BioExtra />
         </section>
     );
 }

@@ -40,8 +40,8 @@ const renderLinks = () => links.map(({id, name, icon, url, tooltip}) => (
 
 export default function Bio() {
     return (
-        <section className="social section section_background_green">
-            <div className="social__content f fd-c ai-c jc-c">
+        <section className="social section section_bg-color_green">
+            <div className="container f fd-c ai-c jc-c">
                 <Avatar src={me} srcSet={`${me2x} 2x`} style={styles.avatar} />
                 <ul className="f">{renderLinks()}</ul>
             </div>
