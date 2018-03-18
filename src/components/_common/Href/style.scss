@@ -1,0 +1,12 @@
+@import 'styles/variables';
+
+.href {
+  color: $blue-two;
+
+  &:hover {
+    text-decoration: underline;
+    @include no-hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import Avatar from 'material-ui/Avatar';
-import Tooltip from 'material-ui/Tooltip';
 
 import './style.css';
 import me from './me.jpg';
@@ -13,10 +12,10 @@ import MuiButton from '../../_common/MuiButton';
 import {LINKS} from "../../../utils/urls";
 
 const links = [
-    {id: 1, name: 'Профиль GitHub', icon: <GitHubIcon />, url: LINKS.social.gitHub, tooltip: 'left'},
-    {id: 2, name: 'Профиль LinkedIn', icon: <LinkedInIcon />, url: LINKS.social.linkedIn, tooltip: 'bottom'},
-    {id: 3, name: 'Команда 7 glyphs', icon: <GlyphsIcon />, url: LINKS.social.sevenGlyphs, tooltip: 'bottom'},
-    {id: 4, name: 'Профиль VK', icon: <VKIcon />, url: LINKS.social.vk, tooltip: 'right'}
+    {id: 1, icon: <GitHubIcon />, url: LINKS.social.gitHub},
+    {id: 2, icon: <LinkedInIcon />, url: LINKS.social.linkedIn},
+    {id: 3, icon: <GlyphsIcon />, url: LINKS.experience.sevenGlyphs},
+    {id: 4, icon: <VKIcon />, url: LINKS.social.vk}
 ];
 
 const styles = {
@@ -28,13 +27,19 @@ const styles = {
     }
 };
 
-const renderLinks = () => links.map(({id, name, icon, url, tooltip}) => (
+const renderLinks = () => links.map(({id, name, icon, url}) => (
     <li key={id} className="social__item">
-        <Tooltip title={name} placement={tooltip} enterDelay={300} leaveDelay={100}>
-            <MuiButton component="a" variant="fab" href={url} rel="noopener noreferrer" target="_blank" role="link">
-                {icon}
-            </MuiButton>
-        </Tooltip>
+        <MuiButton
+            component="a"
+            variant="fab"
+            kind="white"
+            href={url}
+            rel="noopener noreferrer"
+            target="_blank"
+            role="link"
+        >
+            {icon}
+        </MuiButton>
     </li>
 ));
 

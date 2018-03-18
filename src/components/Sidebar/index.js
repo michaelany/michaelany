@@ -33,7 +33,8 @@ function Sidebar({location}) {
     const sidebarClass = cn('sidebar', {
         'sidebar_yellow': location.pathname === '/',
         'sidebar_green': location.pathname === '/about',
-        'sidebar_blue': location.pathname === '/contact'
+        'sidebar_blue': location.pathname === '/skills',
+        'sidebar_violet': location.pathname === '/experience'
     });
     return (
         <aside className={sidebarClass}>

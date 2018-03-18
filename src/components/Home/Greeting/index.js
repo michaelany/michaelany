@@ -17,7 +17,7 @@ export default function Greeting({onGoToPortfolio, onGoToContact}) {
                     меня зовут<br />
                     <span className="greeting__letter">М</span>
                     ихаил <span className="greeting__letter">А</span>наньев,<br />
-                    я веб-разработчик.
+                    я веб-разработчик
                 </h1>
                 <h2 className="subtitle">Front-End Developer / React JS</h2>
                 <div>

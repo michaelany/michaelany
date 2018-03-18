@@ -16,7 +16,6 @@ export const LINKS = {
     social: {
         gitHub: 'https://github.com/vashstamp',
         linkedIn: 'https://www.linkedin.com/in/michael-ananiev-5423b115b',
-        sevenGlyphs: 'https://7glyphs.com/#/agency/team',
         vk: 'https://vk.com/mclananiev'
     },
     technologies: {
@@ -26,6 +25,7 @@ export const LINKS = {
         handlebars: 'https://handlebarsjs.com',
         blade: 'https://laravel.com/docs/5.6/blade#introduction',
         css: 'https://www.w3.org/Style/CSS',
+        bem: 'https://bem.info',
         sass: 'https://sass-lang.com',
         bootstrap: 'https://getbootstrap.com',
         semanticUI: 'https://semantic-ui.com',
@@ -42,11 +42,28 @@ export const LINKS = {
         yarn: 'https://yarnpkg.com',
         webpack: 'https://webpack.js.org',
         gulp: 'https://gulpjs.com',
-        phpstorm: 'https://www.jetbrains.com/phpstorm',
+        phpStorm: 'https://www.jetbrains.com/phpstorm',
+        iTerm: 'https://www.iterm2.com',
+        chromeDevTools: 'https://developer.chrome.com/devtools',
         git: 'https://git-scm.com',
         zeplin: 'https://zeplin.io',
         sketch: 'https://www.sketchapp.com',
         paw: 'https://paw.cloud',
         imageOptim: 'https://imageoptim.com',
+    },
+    skills: {
+        mdn: 'https://developer.mozilla.org',
+        webRef: 'https://webref.ru',
+        learnJS: 'https://learn.javascript.ru',
+        infoJS: 'https://javascript.info',
+        learnJSCourses: 'https://learn.javascript.ru/courses',
+        hexlet: 'https://hexlet.io',
+        laracasts: 'https://laracasts.com',
+        loftSchool: 'https://loftschool.com',
+        codecademy: 'https://www.codecademy.com',
+    },
+    experience: {
+        sevenGlyphs: 'https://7glyphs.com/#/agency/team',
+        everpoint: 'http://www.everpoint.ru/#&panel1-1'
     }
 };

@@ -44,8 +44,8 @@ export default {
                 fontSize: 32
             }
         },
-        Paper: {
-            root: {
+        MuiPaper: {
+            rounded: {
                 borderRadius: 4
             }
         },
@@ -59,6 +59,21 @@ export default {
                     borderBottomLeftRadius: 4,
                     borderBottomRightRadius: 4
                 }
+            }
+        },
+        MuiStepper: {
+            root: {
+                borderRadius: 4
+            }
+        },
+        MuiStepPosition: {
+            active: {
+                color: COLORS.blue
+            }
+        },
+        MuiStepIcon: {
+            completed: {
+                color: COLORS.blue
             }
         }
     }

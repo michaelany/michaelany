@@ -30,6 +30,8 @@
     color: #31d0c9; }
   .sidebar_blue > .sidebar__logo {
     color: #62a5fc; }
+  .sidebar_violet > .sidebar__logo {
+    color: #9170fb; }
 
 .sidebar__link {
   transition-property: color;
@@ -67,6 +69,8 @@
       background-color: #31d0c9; }
     .sidebar_blue .sidebar__link::after {
       background-color: #62a5fc; }
+    .sidebar_violet .sidebar__link::after {
+      background-color: #9170fb; }
   .sidebar__link:hover {
     color: white; }
     .sidebar_yellow .sidebar__link:hover {
@@ -75,6 +79,8 @@
       color: #31d0c9; }
     .sidebar_blue .sidebar__link:hover {
       color: #62a5fc; }
+    .sidebar_violet .sidebar__link:hover {
+      color: #9170fb; }
   .sidebar__link_active {
     color: white; }
     .sidebar_yellow .sidebar__link_active {
@@ -83,5 +89,7 @@
       color: #31d0c9; }
     .sidebar_blue .sidebar__link_active {
       color: #62a5fc; }
+    .sidebar_violet .sidebar__link_active {
+      color: #9170fb; }
     .sidebar__link_active::after {
       opacity: 1; }

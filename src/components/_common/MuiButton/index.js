@@ -41,6 +41,16 @@ const styles = {
                 backgroundColor: COLORS.green
             }
         }
+    },
+    violetButton: {
+        ...commonStyles.whiteColorButton,
+        backgroundColor: COLORS.violet,
+        '&:hover': {
+            backgroundColor: COLORS.darkViolet,
+            '@media (hover: none)': {
+                backgroundColor: COLORS.violet
+            }
+        }
     }
 };
 
@@ -51,12 +61,12 @@ MuiButton.propTypes = {
     isMargin: PropTypes.bool
 };
 
-function MuiButton({children, classes, kind = 'white', isMargin = false, ...props}) {
+function MuiButton({children, classes, kind = '', isMargin = false, ...props}) {
     const buttonStyle = isMargin ? commonStyles.marginButton : null;
     return (
         <Button
             {...props}
-            className={classes[`${kind}Button`]}
+            className={kind && classes[`${kind}Button`]}
             style={buttonStyle}
         >
             {children}

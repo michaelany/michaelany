@@ -19,6 +19,8 @@ import laravel from './laravel.jpg';
 import laravel2x from './laravel@2x.jpg';
 import css from './css.jpg';
 import css2x from './css@2x.jpg';
+import bem from './bem.jpg';
+import bem2x from './bem@2x.jpg';
 import sass from './sass.jpg';
 import sass2x from './sass@2x.jpg';
 import bootstrap from './bootstrap.jpg';
@@ -47,8 +49,12 @@ import webpack from './webpack.jpg';
 import webpack2x from './webpack@2x.jpg';
 import gulp from './gulp.jpg';
 import gulp2x from './gulp@2x.jpg';
-import phpstorm from './phpstorm.jpg';
-import phpstorm2x from './phpstorm@2x.jpg';
+import phpStorm from './php-storm.jpg';
+import phpStorm2x from './php-storm@2x.jpg';
+import iTerm from './i-term.jpg';
+import iTerm2x from './i-term@2x.jpg';
+import chromeDevTools from './chrome-devtools.jpg';
+import chromeDevTools2x from './chrome-devtools@2x.jpg';
 import git from './git.jpg';
 import git2x from './git@2x.jpg';
 import zeplin from './zeplin.jpg';
@@ -81,11 +87,12 @@ const technologyGroups = [
         title: 'CSS',
         technologies: [
             {id: 1, title: 'CSS3', img: [css, css2x], color: 'blue', url: LINKS.technologies.css},
-            {id: 2, title: 'Sass', img: [sass, sass2x], color: 'red', url: LINKS.technologies.sass},
-            {id: 3, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
-            {id: 4, title: 'Bootstrap', img: [bootstrap, bootstrap2x], color: 'violet', url: LINKS.technologies.bootstrap},
-            {id: 5, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
-            {id: 6, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'yellow', url: LINKS.technologies.foundationForEmails}
+            {id: 2, title: 'BEM', img: [bem, bem2x], color: 'yellow', url: LINKS.technologies.bem},
+            {id: 3, title: 'Sass', img: [sass, sass2x], color: 'red', url: LINKS.technologies.sass},
+            {id: 4, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
+            {id: 5, title: 'Bootstrap', img: [bootstrap, bootstrap2x], color: 'violet', url: LINKS.technologies.bootstrap},
+            {id: 6, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
+            {id: 7, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'red', url: LINKS.technologies.foundationForEmails}
         ]
     },
     {
@@ -96,7 +103,7 @@ const technologyGroups = [
             {id: 2, title: 'React', img: [react, react2x], color: 'blue', url: LINKS.technologies.react},
             {id: 3, title: 'Redux', img: [redux, redux2x], color: 'violet', url: LINKS.technologies.redux},
             {id: 4, title: 'Node', img: [node, node2x], url: LINKS.technologies.node},
-            {id: 5, title: 'jQuery', img: [jquery, jquery2x], color: 'blue', url: LINKS.technologies.jquery}
+            {id: 5, title: 'jQuery', img: [jquery, jquery2x], url: LINKS.technologies.jquery}
         ]
     },
     {
@@ -121,12 +128,14 @@ const technologyGroups = [
         id: 6,
         title: 'Tools',
         technologies: [
-            {id: 1, title: 'PhpStorm', img: [phpstorm, phpstorm2x], color: 'violet', url: LINKS.technologies.phpstorm},
-            {id: 2, title: 'Git', img: [git, git2x], color: 'red', url: LINKS.technologies.git},
-            {id: 3, title: 'Zeplin', img: [zeplin, zeplin2x], color: 'yellow', url: LINKS.technologies.zeplin},
-            {id: 4, title: 'Sketch', img: [sketch, sketch2x], color: 'yellow', url: LINKS.technologies.sketch},
-            {id: 5, title: 'Paw', img: [paw, paw2x], color: 'blue', url: LINKS.technologies.paw},
-            {id: 6, title: 'ImageOptim', img: [imageOptim, imageOptim2x], url: LINKS.technologies.imageOptim}
+            {id: 1, title: 'PhpStorm', img: [phpStorm, phpStorm2x], color: 'violet', url: LINKS.technologies.phpStorm},
+            {id: 2, title: 'iTerm2', img: [iTerm, iTerm2x], url: LINKS.technologies.iTerm},
+            {id: 3, title: 'Chrome DevTools', img: [chromeDevTools, chromeDevTools2x], url: LINKS.technologies.chromeDevTools},
+            {id: 4, title: 'Git', img: [git, git2x], color: 'red', url: LINKS.technologies.git},
+            {id: 5, title: 'Zeplin', img: [zeplin, zeplin2x], color: 'yellow', url: LINKS.technologies.zeplin},
+            {id: 6, title: 'Sketch', img: [sketch, sketch2x], color: 'yellow', url: LINKS.technologies.sketch},
+            {id: 7, title: 'Paw', img: [paw, paw2x], color: 'blue', url: LINKS.technologies.paw},
+            {id: 8, title: 'ImageOptim', img: [imageOptim, imageOptim2x], url: LINKS.technologies.imageOptim}
         ]
     },
 ];
@@ -158,7 +167,7 @@ const renderTechnologies = (technologies) => technologies.map(({id, ...props}) =
 
 export default function Technologies() {
     return (
-        <section className="technologies section">
+        <section className="technologies section section_bg-color_blue">
             {renderTechnologyGroups()}
         </section>
     );
