@@ -51,6 +51,26 @@ const styles = {
                 backgroundColor: COLORS.violet
             }
         }
+    },
+    yellowButton: {
+        ...commonStyles.whiteColorButton,
+        backgroundColor: COLORS.yellow,
+        '&:hover': {
+            backgroundColor: COLORS.darkYellow,
+            '@media (hover: none)': {
+                backgroundColor: COLORS.yellow
+            }
+        }
+    },
+    redButton: {
+        ...commonStyles.whiteColorButton,
+        backgroundColor: COLORS.red,
+        '&:hover': {
+            backgroundColor: COLORS.darkRed,
+            '@media (hover: none)': {
+                backgroundColor: COLORS.red
+            }
+        }
     }
 };
 

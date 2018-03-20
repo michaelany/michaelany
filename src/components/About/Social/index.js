@@ -30,7 +30,6 @@ const styles = {
 const renderLinks = () => links.map(({id, name, icon, url}) => (
     <li key={id} className="social__item">
         <MuiButton
-            component="a"
             variant="fab"
             kind="white"
             href={url}

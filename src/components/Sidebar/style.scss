@@ -52,10 +52,6 @@
   color: $black;
   text-align: center;
 
-  &:focus {
-    outline: 0;
-  }
-
   &::after {
     @include pseudo();
     @include transit(opacity);
@@ -84,7 +80,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: white;
 
     .sidebar_yellow & {
@@ -102,6 +99,10 @@
     .sidebar_violet & {
       color: $violet;
     }
+  }
+
+  &:focus {
+    outline: 0;
   }
 
   &_active {

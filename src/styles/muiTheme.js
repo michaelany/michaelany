@@ -3,13 +3,15 @@ export const COLORS = {
     black12: 'rgba(40, 44, 52, 0.12)',
     grey: 'rgb(155, 151, 152)',
     yellow: 'rgb(247, 188, 63)',
+    darkYellow: 'rgb(219, 165, 57)',
     blue: 'rgb(98, 165, 252)',
     darkBlue: 'rgb(88, 149, 224)',
     green: 'rgb(49, 208, 201)',
     darkGreen: 'rgb(45, 179, 167)',
     violet: 'rgb(145, 112, 251)',
     darkViolet: 'rgb(130, 101, 224)',
-    red: 'rgb(250, 136, 97)'
+    red: 'rgb(250, 136, 97)',
+    darkRed: 'rgb(224, 122, 88)'
 };
 
 export const STYLES = {

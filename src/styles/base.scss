@@ -3,6 +3,10 @@
 @import 'utils';
 @import 'partials';
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: $font-family;
   font-size: 18px;

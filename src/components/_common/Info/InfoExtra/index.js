@@ -37,21 +37,20 @@ export default class InfoExtra extends Component {
 
     setBlockRef = (ref) => this.block = ref;
 
-    renderExtra = () => this.props.extra.map(({id, text}) => <p key={id}>{text}</p>);
-
     render() {
-        const {color} = this.props;
+        const {extra, color} = this.props;
         const {contentHeight} = this.state;
         const contentClass = cn('info-extra__content', {'info-extra__content_open': contentHeight});
         const contentStyle = {
             height: contentHeight
         };
+        const extraContent = extra.map(({id, text}) => <p key={id}>{text}</p>);
         const buttonText = contentHeight ? 'Короче' : 'Подробнее';
         return (
             <div className="info-extra">
                 <div className={contentClass} style={contentStyle}>
                     <div className="info-extra__block" ref={this.setBlockRef}>
-                        {this.renderExtra()}
+                        {extraContent}
                     </div>
                 </div>
                 <MuiButton variant="raised" kind={color} onClick={this.handleContentHeightToggle}>

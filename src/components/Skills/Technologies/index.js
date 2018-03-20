@@ -9,6 +9,8 @@ import Icon from 'material-ui/Icon';
 import './style.css';
 import html from './html.jpg';
 import html2x from './html@2x.jpg';
+import svg from './svg.jpg';
+import svg2x from './svg@2x.jpg';
 import react from './react.jpg';
 import react2x from './react@2x.jpg';
 import pug from './pug.jpg';
@@ -23,12 +25,14 @@ import bem from './bem.jpg';
 import bem2x from './bem@2x.jpg';
 import sass from './sass.jpg';
 import sass2x from './sass@2x.jpg';
+import cssModules from './css-modules.jpg';
+import cssModules2x from './css-modules@2x.jpg';
+import materialUI from './material-ui.jpg';
+import materialUI2x from './material-ui@2x.jpg';
 import bootstrap from './bootstrap.jpg';
 import bootstrap2x from './bootstrap@2x.jpg';
 import semanticUI from './semantic-ui.jpg';
 import semanticUI2x from './semantic-ui@2x.jpg';
-import materialUI from './material-ui.jpg';
-import materialUI2x from './material-ui@2x.jpg';
 import foundationForEmails from './foundation-for-emails.jpg';
 import foundationForEmails2x from './foundation-for-emails@2x.jpg';
 import javascript from './javascript.jpg';
@@ -76,10 +80,12 @@ const technologyGroups = [
         title: 'HTML',
         technologies: [
             {id: 1, title: 'HTML5', img: [html, html2x], color: 'red', url: LINKS.technologies.html},
-            {id: 2, title: 'JSX', img: [react, react2x], color: 'blue', url: LINKS.technologies.jsx},
-            {id: 3, title: 'Pug', img: [pug, pug2x], color: 'yellow', url: LINKS.technologies.pug},
-            {id: 4, title: 'Handlebars', img: [handlebars, handlebars2x], url: LINKS.technologies.handlebars},
-            {id: 5, title: 'Blade', img: [laravel, laravel2x], color: 'red', url: LINKS.technologies.blade}
+            {id: 2, title: 'SVG', img: [svg, svg2x], color: 'yellow', url: LINKS.technologies.svg},
+            {id: 3, title: 'JSX', img: [react, react2x], color: 'blue', url: LINKS.technologies.jsx},
+            {id: 4, title: 'Pug', img: [pug, pug2x], color: 'yellow', url: LINKS.technologies.pug},
+            {id: 5, title: 'Handlebars', img: [handlebars, handlebars2x], url: LINKS.technologies.handlebars},
+            {id: 6, title: 'Blade', img: [laravel, laravel2x], color: 'red', url: LINKS.technologies.blade}
+
         ]
     },
     {
@@ -89,10 +95,11 @@ const technologyGroups = [
             {id: 1, title: 'CSS3', img: [css, css2x], color: 'blue', url: LINKS.technologies.css},
             {id: 2, title: 'BEM', img: [bem, bem2x], color: 'yellow', url: LINKS.technologies.bem},
             {id: 3, title: 'Sass', img: [sass, sass2x], color: 'red', url: LINKS.technologies.sass},
-            {id: 4, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
-            {id: 5, title: 'Bootstrap', img: [bootstrap, bootstrap2x], color: 'violet', url: LINKS.technologies.bootstrap},
-            {id: 6, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
-            {id: 7, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'red', url: LINKS.technologies.foundationForEmails}
+            {id: 4, title: 'CSS Modules', img: [cssModules, cssModules2x], url: LINKS.technologies.cssModules},
+            {id: 5, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
+            {id: 6, title: 'Bootstrap', img: [bootstrap, bootstrap2x], color: 'violet', url: LINKS.technologies.bootstrap},
+            {id: 7, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
+            {id: 8, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'red', url: LINKS.technologies.foundationForEmails}
         ]
     },
     {

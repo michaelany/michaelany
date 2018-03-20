@@ -79,7 +79,7 @@
   opacity: 0;
 
   .technology:hover & {
-    @include transit(opacity, $standard, $short);
+    @include transit(opacity, $standard, $standard);
     opacity: 1;
   }
 }

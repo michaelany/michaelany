@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {NavLink, withRouter} from 'react-router-dom';
 import cn from 'classnames';
 import Icon from 'material-ui/Icon';
@@ -16,6 +17,10 @@ const navLinks = [
     {id: 5, name: 'Портфолио', icon: 'visibility', url: urls.portfolio},
     {id: 6, name: 'Контакты', icon: 'mail', url: urls.contact}
 ];
+
+Sidebar.propTypes = {
+    location: PropTypes.object.isRequired
+};
 
 const renderLinks = () => navLinks.map(({id, name, url, icon}) => (
     <li key={id}>
