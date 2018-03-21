@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.assets__slider {
+  margin-bottom: 30px;
+}
+
+.assets__image {
+  max-width: 100%;
+  margin: auto;
+}
+
+.assets__point {
+  @include transit(transform);
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transform: scale(0.5);
+
+  .slick-active & {
+    transform: scale(1);
+    background-color: transparent;
+    border: 2px solid white;
+  }
+}

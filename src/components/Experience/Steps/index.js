@@ -10,12 +10,12 @@ const steps = [
     {id: 1, title: 'Октябрь 2008 - май 2010', content: <span>Работал <strong>инженером технической поддержки</strong> в компании "М.Видео".</span>},
     {id: 2, title: 'май 2010 - июнь 2014', content: 'Вел деятельность не связанную с разработкой и программированием.'},
     {id: 3, title: 'июнь 2014 - июль 2016', content: 'Создавал собственные и курсовые проекты в процессе обучения.'},
-    {id: 4, title: 'июль 2016', content: <span>Выполнил тестовое задание для интервью (написал таймер на JavaScript + ООП + CSS). Прошел интервью. Выполнил заключительное задание (сверстал адаптивную страницу по макету, используя CSS + SASS + Handlebars). Пригласили на работу <strong>верстальщиком</strong> в компанию "Everpoint".</span>},
-    {id: 5, title: 'июль 2016 - ноябрь 2017', content: <span>Работал <strong>верстальщиком</strong> в компании "Everpoint".</span>},
-    {id: 6, title: 'ноябрь 2017', content: <span>Получил повышение до <strong>frontend-разработчика</strong> в компании "Everpoint".</span>},
-    {id: 7, title: 'ноябрь 2016 - апрель 2017', content: <span>Работал <strong>frontend-разработчиком</strong> в компании "Everpoint".</span>},
-    {id: 8, title: 'апрель 2017', content: <span>Был приглашен в компанию "7 glyphs" на должность <strong>frontend-разработчика</strong> на более выгодных условиях. Принял взвешенное решение и перешел из "Everpoint" в "7 glyphs".</span>},
-    {id: 9, title: 'апрель 2017 - настоящее время', content: <span>Работаю удаленно <strong>frontend-разработчиком</strong> в компании "7 glyphs".</span>},
+    {id: 4, title: 'июль 2016', content: <span>Выполнил тестовое задание для интервью (написал таймер на JavaScript + ООП + CSS). Прошел интервью. Выполнил заключительное задание (сверстал адаптивную страницу по макету, используя CSS + SASS + Handlebars). Был приглашен на работу <strong>верстальщиком</strong> в компанию "Everpoint".</span>},
+    {id: 5, title: 'июль 2016 - ноябрь 2016', content: <span>Работал <strong>верстальщиком</strong> в компании "Everpoint".</span>},
+    {id: 6, title: 'ноябрь 2016', content: <span>В результате хорошей работы получил повышение до <strong>frontend-разработчика</strong> в компании "Everpoint".</span>},
+    {id: 7, title: 'ноябрь 2016 - апрель 2017', content: <span>Работал <strong>frontend-разработчиком</strong> в компании "Everpoint". В свободное время делал проект (переписывал сайт на React) для компании "7 glyphs".</span>},
+    {id: 8, title: 'апрель 2017', content: <span>В результате успешной реализации проекта был приглашен в компанию "7 glyphs" на должность <strong>frontend-разработчика</strong> на более выгодных условиях. Принял взвешенное решение и перешел из "Everpoint" в "7 glyphs".</span>},
+    {id: 9, title: 'апрель 2017 - настоящее время', content: <span>Работаю <strong>frontend-разработчиком</strong> в компании "7 glyphs".</span>},
 ];
 
 export default class  extends Component {

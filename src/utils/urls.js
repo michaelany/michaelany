@@ -67,5 +67,13 @@ export const LINKS = {
     experience: {
         sevenGlyphs: 'https://7glyphs.com/#/agency/team',
         everpoint: 'http://www.everpoint.ru/#&panel1-1'
+    },
+    projects: {
+        msp: 'https://navigator.smbn.ru',
+        sevenGlyphs: 'https://7glyphs.com',
+        lazyAz: 'https://staging.lazyaz.co.nz',
+        whipAround: 'https://api.whip-around.com/dashboard',
+        servicePackages: 'https://7glyphs.com/packages/web-application-development',
+        myPortfolio: 'https://7glyphs.com',
     }
 };

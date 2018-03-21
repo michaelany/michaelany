@@ -41,6 +41,10 @@
   .sidebar_violet > & {
     color: $violet;
   }
+
+  .sidebar_red > & {
+    color: $red;
+  }
 }
 
 .sidebar__link {
@@ -78,6 +82,10 @@
     .sidebar_violet & {
       background-color: $violet;
     }
+
+    .sidebar_red & {
+      background-color: $red;
+    }
   }
 
   &:hover,
@@ -98,6 +106,10 @@
 
     .sidebar_violet & {
       color: $violet;
+    }
+
+    .sidebar_red & {
+      color: $red;
     }
   }
 
@@ -122,6 +134,10 @@
 
     .sidebar_violet & {
       color: $violet;
+    }
+
+    .sidebar_red & {
+      color: $red;
     }
 
     &::after {

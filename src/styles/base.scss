@@ -1,3 +1,5 @@
+@import '~slick-carousel/slick/slick.css';
+
 @import 'variables';
 @import 'animations';
 @import 'utils';
@@ -41,4 +43,24 @@ code {
 
 address {
   font-style: normal;
+}
+
+img {
+  pointer-events: none
+}
+
+//for react-slick
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
+.slick-list {
+  border-radius: 4px;
+}
+
+.slick-dots {
+  margin-top: 10px;
+  display: flex !important;
+  justify-content: center;
 }

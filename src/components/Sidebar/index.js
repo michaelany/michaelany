@@ -10,23 +10,23 @@ import './style.css';
 import urls from '../../utils/urls';
 
 const navLinks = [
-    {id: 1, name: 'Главная', icon: 'home', url: urls.home},
-    {id: 2, name: 'Обо мне', icon: 'person', url: urls.about},
-    {id: 3, name: 'Навыки', icon: 'school', url: urls.skills},
-    {id: 4, name: 'Опыт', icon: 'work', url: urls.experience},
-    {id: 5, name: 'Портфолио', icon: 'visibility', url: urls.portfolio},
-    {id: 6, name: 'Контакты', icon: 'mail', url: urls.contact}
+    {id: 1, title: 'Главная', icon: 'home', url: urls.home},
+    {id: 2, title: 'Обо мне', icon: 'person', url: urls.about},
+    {id: 3, title: 'Навыки', icon: 'school', url: urls.skills},
+    {id: 4, title: 'Опыт', icon: 'work', url: urls.experience},
+    {id: 5, title: 'Портфолио', icon: 'visibility', url: urls.portfolio},
+    {id: 6, title: 'Контакты', icon: 'mail', url: urls.contact}
 ];
 
 Sidebar.propTypes = {
     location: PropTypes.object.isRequired
 };
 
-const renderLinks = () => navLinks.map(({id, name, url, icon}) => (
+const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
     <li key={id}>
-        <Tooltip title={name} placement="right" enterDelay={300} leaveDelay={100}>
+        <Tooltip {...{title}} placement="right" enterDelay={300} leaveDelay={100}>
             <Button fullWidth component="div" role="link" tabIndex={null}>
-                <NavLink exact className="sidebar__link fb-100" activeClassName="sidebar__link_active" to={url}>
+                <NavLink exact={url !== urls.portfolio} className="sidebar__link fb-100" activeClassName="sidebar__link_active" to={url}>
                     <Icon>{icon}</Icon>
                 </NavLink>
             </Button>
@@ -34,15 +34,22 @@ const renderLinks = () => navLinks.map(({id, name, url, icon}) => (
     </li>
 ));
 
-function Sidebar({location}) {
-    const sidebarClass = cn('sidebar', {
-        'sidebar_yellow': location.pathname === '/',
-        'sidebar_green': location.pathname === '/about',
-        'sidebar_blue': location.pathname === '/skills',
-        'sidebar_violet': location.pathname === '/experience'
-    });
+const getSidebarClass = (pathname) => cn('sidebar', {
+    'sidebar_yellow': pathname === '/'
+        || pathname === '/portfolio/lazy-az-dashboard'
+        || pathname === '/portfolio/12-saffron',
+    'sidebar_green': pathname === '/about'
+        || pathname === '/portfolio/7-glyphs'
+        || pathname === '/portfolio/service-packages'
+        || pathname === '/portfolio/whip-around',
+    'sidebar_blue': pathname === '/skills' || pathname === '/portfolio/msp',
+    'sidebar_violet': pathname === '/experience' || pathname === '/portfolio/fcdc',
+    'sidebar_red': pathname === '/portfolio/lazy-az' || pathname === '/portfolio/my-portfolio'
+});
+
+function Sidebar({location: {pathname}}) {
     return (
-        <aside className={sidebarClass}>
+        <aside className={getSidebarClass(pathname)}>
             <NavLink className="sidebar__logo" to={urls.home}>MA</NavLink>
             <nav>
                 <ul>

@@ -14,7 +14,7 @@ Info.propTypes = {
 
 const renderItems = (items) => items.map(({id, text, subItems}) => {
     return (
-        <li key={id} className="info__item">
+        <li key={id} className="list-item">
             {text}
             {subItems && <ul className="info__sublist">{renderSubItems(subItems)}</ul>}
         </li>
@@ -30,7 +30,7 @@ export default function Info({title, subtitle, color, items, extra = null}) {
         <section className="info section">
             <h2 className={`title title_color_${color}`}>{title}</h2>
             <h3 className="subtitle">{subtitle}</h3>
-            <ul className="info__list">
+            <ul className="list">
                 {renderItems(items)}
             </ul>
             {extra && <InfoExtra {...{extra, color}} />}

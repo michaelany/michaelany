@@ -1,0 +1,13 @@
+.arrow {
+  position: absolute;
+  top: calc(50% - 20px);
+  transform: translateY(-50%);
+
+  &_left {
+    left: -55px;
+  }
+
+  &_right {
+    right: -55px;
+  }
+}

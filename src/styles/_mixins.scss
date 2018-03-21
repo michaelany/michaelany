@@ -18,6 +18,7 @@
   animation-delay: $delay;
   animation-fill-mode: forwards;
   animation-timing-function: $function;
+  animation-direction: normal;
 }
 
 @mixin image-2x($image) {

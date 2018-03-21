@@ -18,11 +18,12 @@ const abilities = [
             {id: 3, text: <span>Есть опыт работы с Laravel <strong>Blade</strong> для PHP</span>}
         ]
     },
-    {id: 5, text: <span>Программирую на <strong>JavaScript</strong>, используя современные возможности <strong>ES2015</strong> и <strong>ES2016</strong></span>},
+    {id: 5, text: <span>Программирую на <strong>JavaScript</strong>, используя современные возможности <strong>ES2015</strong></span>},
     {id: 6, text: <span>В редких случаях для специфических задач использую <strong>jQuery</strong></span>},
-    {id: 7, text: <span>Предпочитаю методологию <strong>BEM</strong> и препроцессор <strong>Sass</strong> для <strong>CSS</strong>, иногда пишу CSS-in-JS, в частности для стилизации компонентов библиотеки Material-UI</span>},
-    {id: 8, text: <span>Есть опыт работы с <strong>CSS Modules</strong></span>},
-    {id: 9, text: 'Из CSS-фреймворков люблю:',
+    {id: 7, text: <span>Работаю с <strong>регулярными выражениями</strong></span>},
+    {id: 8, text: <span>Предпочитаю методологию <strong>BEM</strong> и препроцессор <strong>Sass</strong> для <strong>CSS</strong>, иногда пишу CSS-in-JS, в частности для стилизации компонентов библиотеки Material-UI</span>},
+    {id: 9, text: <span>Есть опыт работы с <strong>CSS Modules</strong></span>},
+    {id: 10, text: 'Из CSS-фреймворков люблю:',
         subItems: [
             {id: 1, text: <span><strong>Material-UI</strong> (для React-приложений)</span>},
             {id: 2, text: <strong>Bootstrap</strong>},
@@ -30,10 +31,10 @@ const abilities = [
             {id: 4, text: <span><strong>Foundation for Emails</strong> (для верстки писем)</span>},
         ]
     },
-    {id: 10, text: <span>Знаю основы <strong>PHP</strong>, есть опыт работы с <strong>Laravel</strong></span>},
-    {id: 11, text: <span>Для управления зависимостями пользуюсь <strong>Yarn</strong>/<strong>NPM</strong></span>},
-    {id: 12, text: <span>Для сборки React-проектов часто обращаюсь к <strong>Create React App</strong> (кастомизирую при необходимости), для остальных пишу свою конфигурацию на <strong>Webpack</strong> и <strong>Gulp</strong></span>},
-    {id: 13, text: 'Мой инструментарий:',
+    {id: 11, text: <span>Знаю основы <strong>PHP</strong>, есть опыт работы с <strong>Laravel</strong></span>},
+    {id: 12, text: <span>Для управления зависимостями пользуюсь <strong>Yarn</strong>/<strong>NPM</strong></span>},
+    {id: 13, text: <span>Для сборки React-проектов часто обращаюсь к <strong>Create React App</strong> (кастомизирую при необходимости), для остальных пишу свою конфигурацию на <strong>Webpack</strong> и <strong>Gulp</strong></span>},
+    {id: 14, text: 'Мой инструментарий:',
         subItems: [
             {id: 1, text: <span><strong>PhpStorm</strong> (IDE)</span>},
             {id: 2, text: <strong>iTerm2</strong>},
@@ -45,7 +46,7 @@ const abilities = [
             {id: 8, text: <strong>ImageOptim</strong>}
         ]
     },
-    {id: 14, text:  <span>Пользуюсь различными <strong>онлайн-инструментами</strong> для анализа производительности, работы со стилями, шрифтами, иконками и т.д.</span>}
+    {id: 15, text:  <span>Пользуюсь различными <strong>онлайн-инструментами</strong> для анализа производительности, работы со стилями, шрифтами, иконками и т.д.</span>}
 ];
 const extra = [
     {id: 1, text: <span>Мой технологический стек постоянно обновляется и пополняется. В основном читаю официальные документации по изучаемым технологиям, также справочники (часто обращаюсь к <Href href={LINKS.skills.mdn}>MDN</Href> и <Href href={LINKS.skills.webRef}>WebReference</Href>) и учебники (любимый <Href href={LINKS.skills.learnJS}>"Современный учебник Javascript"</Href> от Ильи Кантора, сейчас перечитываю английскую версию <Href href={LINKS.skills.infoJS}>"The Modern JavaScript Tutorial"</Href>), статьи и книги (акцент на паттерны, практики, информационные технологии и программирование в целом). Сейчас освежаю знания по верстке и JavaScript, после продолжу изучение React Native и Mobx, далее хочу углубиться в Node JS и PHP.</span>},

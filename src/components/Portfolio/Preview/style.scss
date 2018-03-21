@@ -1,0 +1,112 @@
+@import 'styles/variables';
+
+.preview {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preview__image {
+  @include transit(transform, $long);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .preview:hover & {
+    transform: scale(1.2);
+  }
+
+  &_name_msp {
+    background-image: url('./msp.jpg');
+    background-color: $blue;
+    @include image-2x('./msp@2x.jpg');
+  }
+
+  &_name_7-glyphs {
+    background-image: url('./7-glyphs.jpg');
+    background-color: $dark-green;
+    @include image-2x('./7-glyphs@2x.jpg');
+  }
+
+  &_name_lazy-az {
+    background-image: url('./lazy-az.jpg');
+    background-color: $red;
+    @include image-2x('./lazy-az@2x.jpg');
+  }
+
+  &_name_lazy-az-dashboard {
+    background-image: url('./lazy-az-dashboard.jpg');
+    background-color: $yellow;
+    @include image-2x('./lazy-az-dashboard@2x.jpg');
+  }
+
+  &_name_whip-around {
+    background-image: url('./whip-around.jpg');
+    background-color: $dark-green;
+    @include image-2x('./whip-around@2x.jpg');
+  }
+
+  &_name_12-saffron {
+    background-image: url('./12-saffron.jpg');
+    background-color: $yellow;
+    @include image-2x('./12-saffron@2x.jpg');
+  }
+
+  &_name_fcdc-dashboard {
+    background-image: url('./fcdc.jpg');
+    background-color: $violet;
+    @include image-2x('./fcdc@2x.jpg');
+  }
+
+  &_name_service-packages {
+    background-image: url('./service-packages.jpg');
+    background-color: $dark-green;
+    @include image-2x('./service-packages@2x.jpg');
+  }
+
+  &_name_my-portfolio {
+    /* background-image: url('fcdc.jpg');*/
+    background-color: $red;
+    /* @include image-2x('./fcdc@2x.jpg');*/
+  }
+}
+
+.preview__content {
+  @include transit(opacity);
+  position: absolute;
+  background-color: $black-80;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  opacity: 0;
+
+  .preview:hover & {
+    opacity: 1;
+  }
+}
+
+.preview__title {
+  @include transit(transform, $standard);
+  font-size: 18px;
+
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  transform: translateY(-100%);
+
+  .preview:hover & {
+    transform: translateY(0);
+  }
+}
+
+.preview__block {
+  @include transit(transform, $standard);
+  transform: translateY(50%);
+
+  .preview:hover & {
+    transform: translateY(0);
+  }
+}

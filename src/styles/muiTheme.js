@@ -39,6 +39,9 @@ export default {
                 lineHeight: 1,
                 minWidth: 180,
                 minHeight: 46
+            },
+            fab: {
+                color: COLORS.black
             }
         },
         MuiIcon: {
