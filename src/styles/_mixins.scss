@@ -12,13 +12,14 @@
   will-change: $prop;
 }
 
-@mixin animate($name, $duration: $longest, $delay: 0ms, $function: $ease-in-out) {
+@mixin animate($name, $duration: $longest, $delay: 0ms, $iteration-count: 1, $function: $ease-in-out) {
   animation-name: $name;
   animation-duration: $duration;
   animation-delay: $delay;
   animation-fill-mode: forwards;
   animation-timing-function: $function;
   animation-direction: normal;
+  animation-iteration-count: $iteration-count;
 }
 
 @mixin image-2x($image) {

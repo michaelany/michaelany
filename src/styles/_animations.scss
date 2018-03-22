@@ -7,3 +7,21 @@
     opacity: 1;
   }
 }
+
+@keyframes eyeBlink {
+  from {
+    transform: scaleY(1);
+  }
+
+  6% {
+    transform: scaleY(0.1);
+  }
+
+  12% {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}

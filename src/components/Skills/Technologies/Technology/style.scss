@@ -58,6 +58,10 @@
     background-color: $green-12;
   }
 
+  &_color_grass {
+    background-color: $grass-12;
+  }
+
   .technology:hover & {
     opacity: 1;
     transform: scale(1);

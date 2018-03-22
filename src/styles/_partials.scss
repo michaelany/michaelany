@@ -15,8 +15,16 @@
   padding: 100px 10%;
   height: 100%;
 
+  &_bg-color_red {
+    background-color: $red;
+  }
+
   &_bg-color_yellow {
     background-color: $yellow;
+  }
+
+  &_bg-color_grass {
+    background-color: $grass;
   }
 
   &_bg-color_green {
@@ -30,10 +38,6 @@
   &_bg-color_violet {
     background-color: $violet;
   }
-
-  &_bg-color_red {
-    background-color: $red;
-  }
 }
 
 .container {
@@ -46,12 +50,16 @@
   font-weight: 900;
   margin-bottom: 30px;
 
-  &_color_white {
-    color: white;
+  &_color_red {
+    color: $red;
   }
 
   &_color_yellow {
     color: $yellow;
+  }
+
+  &_color_grass {
+    color: $grass;
   }
 
   &_color_green {
@@ -66,8 +74,8 @@
     color: $violet;
   }
 
-  &_color_red {
-    color: $red;
+  &_color_white {
+    color: white;
   }
 }
 

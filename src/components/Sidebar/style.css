@@ -24,16 +24,18 @@
     @media (hover: none) {
       .sidebar__logo:hover {
         transform: none; } }
+  .sidebar_red > .sidebar__logo {
+    color: #fa8861; }
   .sidebar_yellow > .sidebar__logo {
     color: #f7bc3f; }
+  .sidebar_grass > .sidebar__logo {
+    color: #6ed486; }
   .sidebar_green > .sidebar__logo {
     color: #31d0c9; }
   .sidebar_blue > .sidebar__logo {
     color: #62a5fc; }
   .sidebar_violet > .sidebar__logo {
     color: #9170fb; }
-  .sidebar_red > .sidebar__logo {
-    color: #fa8861; }
 
 .sidebar__link {
   transition-property: color;
@@ -63,41 +65,47 @@
     background-color: white;
     border-radius: 2px;
     opacity: 0; }
+    .sidebar_red .sidebar__link::after {
+      background-color: #fa8861; }
     .sidebar_yellow .sidebar__link::after {
       background-color: #f7bc3f; }
+    .sidebar_grass .sidebar__link::after {
+      background-color: #6ed486; }
     .sidebar_green .sidebar__link::after {
       background-color: #31d0c9; }
     .sidebar_blue .sidebar__link::after {
       background-color: #62a5fc; }
     .sidebar_violet .sidebar__link::after {
       background-color: #9170fb; }
-    .sidebar_red .sidebar__link::after {
-      background-color: #fa8861; }
   .sidebar__link:hover, .sidebar__link:focus {
     color: white; }
+    .sidebar_red .sidebar__link:hover, .sidebar_red .sidebar__link:focus {
+      color: #fa8861; }
     .sidebar_yellow .sidebar__link:hover, .sidebar_yellow .sidebar__link:focus {
       color: #f7bc3f; }
+    .sidebar_grass .sidebar__link:hover, .sidebar_grass .sidebar__link:focus {
+      color: #6ed486; }
     .sidebar_green .sidebar__link:hover, .sidebar_green .sidebar__link:focus {
       color: #31d0c9; }
     .sidebar_blue .sidebar__link:hover, .sidebar_blue .sidebar__link:focus {
       color: #62a5fc; }
     .sidebar_violet .sidebar__link:hover, .sidebar_violet .sidebar__link:focus {
       color: #9170fb; }
-    .sidebar_red .sidebar__link:hover, .sidebar_red .sidebar__link:focus {
-      color: #fa8861; }
   .sidebar__link:focus {
     outline: 0; }
   .sidebar__link_active {
     color: white; }
+    .sidebar_red .sidebar__link_active {
+      color: #fa8861; }
     .sidebar_yellow .sidebar__link_active {
       color: #f7bc3f; }
+    .sidebar_grass .sidebar__link_active {
+      color: #6ed486; }
     .sidebar_green .sidebar__link_active {
       color: #31d0c9; }
     .sidebar_blue .sidebar__link_active {
       color: #62a5fc; }
     .sidebar_violet .sidebar__link_active {
       color: #9170fb; }
-    .sidebar_red .sidebar__link_active {
-      color: #fa8861; }
     .sidebar__link_active::after {
       opacity: 1; }

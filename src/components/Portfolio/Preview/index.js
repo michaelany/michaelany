@@ -34,7 +34,7 @@ class Preview extends Component {
                     <h3 className="preview__title">{title}</h3>
                     <div className="preview__block">
                         <MuiButton variant="fab" kind={color} onClick={this.handleGoToProject}>
-                            <Icon>visibility</Icon>
+                            <Icon className="preview__icon">visibility</Icon>
                         </MuiButton>
                     </div>
                 </div>

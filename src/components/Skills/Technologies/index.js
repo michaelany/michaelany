@@ -109,7 +109,7 @@ const technologyGroups = [
             {id: 1, title: 'JavaScript', img: [javascript, javascript2x], color: 'yellow', url: LINKS.technologies.javascript},
             {id: 2, title: 'React', img: [react, react2x], color: 'blue', url: LINKS.technologies.react},
             {id: 3, title: 'Redux', img: [redux, redux2x], color: 'violet', url: LINKS.technologies.redux},
-            {id: 4, title: 'Node', img: [node, node2x], url: LINKS.technologies.node},
+            {id: 4, title: 'Node', img: [node, node2x], color: 'grass', url: LINKS.technologies.node},
             {id: 5, title: 'jQuery', img: [jquery, jquery2x], url: LINKS.technologies.jquery}
         ]
     },
@@ -136,7 +136,7 @@ const technologyGroups = [
         title: 'Tools',
         technologies: [
             {id: 1, title: 'PhpStorm', img: [phpStorm, phpStorm2x], color: 'violet', url: LINKS.technologies.phpStorm},
-            {id: 2, title: 'iTerm2', img: [iTerm, iTerm2x], url: LINKS.technologies.iTerm},
+            {id: 2, title: 'iTerm2', img: [iTerm, iTerm2x], color: 'grass', url: LINKS.technologies.iTerm},
             {id: 3, title: 'Chrome DevTools', img: [chromeDevTools, chromeDevTools2x], url: LINKS.technologies.chromeDevTools},
             {id: 4, title: 'Git', img: [git, git2x], color: 'red', url: LINKS.technologies.git},
             {id: 5, title: 'Zeplin', img: [zeplin, zeplin2x], color: 'yellow', url: LINKS.technologies.zeplin},

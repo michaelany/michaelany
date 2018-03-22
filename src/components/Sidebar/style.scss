@@ -26,8 +26,16 @@
     }
   }
 
+  .sidebar_red > & {
+    color: $red;
+  }
+
   .sidebar_yellow > & {
     color: $yellow;
+  }
+
+  .sidebar_grass > & {
+    color: $grass;
   }
 
   .sidebar_green > & {
@@ -40,10 +48,6 @@
 
   .sidebar_violet > & {
     color: $violet;
-  }
-
-  .sidebar_red > & {
-    color: $red;
   }
 }
 
@@ -67,8 +71,16 @@
     border-radius: 2px;
     opacity: 0;
 
+    .sidebar_red & {
+      background-color: $red;
+    }
+
     .sidebar_yellow & {
       background-color: $yellow;
+    }
+
+    .sidebar_grass & {
+      background-color: $grass;
     }
 
     .sidebar_green & {
@@ -82,18 +94,22 @@
     .sidebar_violet & {
       background-color: $violet;
     }
-
-    .sidebar_red & {
-      background-color: $red;
-    }
   }
 
   &:hover,
   &:focus {
     color: white;
 
+    .sidebar_red & {
+      color: $red;
+    }
+
     .sidebar_yellow & {
       color: $yellow;
+    }
+
+    .sidebar_grass & {
+      color: $grass;
     }
 
     .sidebar_green & {
@@ -106,10 +122,6 @@
 
     .sidebar_violet & {
       color: $violet;
-    }
-
-    .sidebar_red & {
-      color: $red;
     }
   }
 
@@ -120,8 +132,16 @@
   &_active {
     color: white;
 
+    .sidebar_red & {
+      color: $red;
+    }
+
     .sidebar_yellow & {
       color: $yellow;
+    }
+
+    .sidebar_grass & {
+      color: $grass;
     }
 
     .sidebar_green & {
@@ -134,10 +154,6 @@
 
     .sidebar_violet & {
       color: $violet;
-    }
-
-    .sidebar_red & {
-      color: $red;
     }
 
     &::after {

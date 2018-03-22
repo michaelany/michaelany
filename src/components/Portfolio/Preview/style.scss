@@ -27,7 +27,7 @@
 
   &_name_7-glyphs {
     background-image: url('./7-glyphs.jpg');
-    background-color: $dark-green;
+    background-color: $grass;
     @include image-2x('./7-glyphs@2x.jpg');
   }
 
@@ -45,7 +45,7 @@
 
   &_name_whip-around {
     background-image: url('./whip-around.jpg');
-    background-color: $dark-green;
+    background-color: $green;
     @include image-2x('./whip-around@2x.jpg');
   }
 
@@ -63,7 +63,7 @@
 
   &_name_service-packages {
     background-image: url('./service-packages.jpg');
-    background-color: $dark-green;
+    background-color: $grass;
     @include image-2x('./service-packages@2x.jpg');
   }
 
@@ -109,4 +109,8 @@
   .preview:hover & {
     transform: translateY(0);
   }
+}
+
+.preview__icon {
+  @include animate(eyeBlink, 3s, 0ms, infinite);
 }

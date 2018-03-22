@@ -71,6 +71,16 @@ const styles = {
                 backgroundColor: COLORS.red
             }
         }
+    },
+    grassButton: {
+        ...commonStyles.whiteColorButton,
+        backgroundColor: COLORS.grass,
+        '&:hover': {
+            backgroundColor: COLORS.darkGrass,
+            '@media (hover: none)': {
+                backgroundColor: COLORS.grass
+            }
+        }
     }
 };
 

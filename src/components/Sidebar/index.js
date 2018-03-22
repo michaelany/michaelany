@@ -35,16 +35,13 @@ const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
 ));
 
 const getSidebarClass = (pathname) => cn('sidebar', {
-    'sidebar_yellow': pathname === '/'
-        || pathname === '/portfolio/lazy-az-dashboard'
+    'sidebar_red': pathname === '/portfolio/lazy-az' || pathname === '/portfolio/my-portfolio',
+    'sidebar_yellow': pathname === '/' || pathname === '/portfolio/lazy-az-dashboard'
         || pathname === '/portfolio/12-saffron',
-    'sidebar_green': pathname === '/about'
-        || pathname === '/portfolio/7-glyphs'
-        || pathname === '/portfolio/service-packages'
-        || pathname === '/portfolio/whip-around',
+    'sidebar_grass': pathname === '/portfolio/7-glyphs' || pathname === '/portfolio/service-packages',
+    'sidebar_green': pathname === '/about' || pathname === '/portfolio/whip-around',
     'sidebar_blue': pathname === '/skills' || pathname === '/portfolio/msp',
-    'sidebar_violet': pathname === '/experience' || pathname === '/portfolio/fcdc',
-    'sidebar_red': pathname === '/portfolio/lazy-az' || pathname === '/portfolio/my-portfolio'
+    'sidebar_violet': pathname === '/experience' || pathname === '/portfolio/fcdc'
 });
 
 function Sidebar({location: {pathname}}) {

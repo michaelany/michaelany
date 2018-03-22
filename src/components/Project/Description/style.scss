@@ -10,23 +10,28 @@
   margin-bottom: 15px;
   line-height: 1.3;
 
-  &_color_blue {
-    color: $blue;
-  }
-
-  &_color_green {
-    color: $green;
+  &_color_red {
+    color: $red;
   }
 
   &_color_yellow {
     color: $yellow;
   }
 
+  &_color_grass {
+    color: $grass;
+  }
+
+  &_color_green {
+    color: $green;
+  }
+
+  &_color_blue {
+    color: $blue;
+  }
+
   &_color_violet {
     color: $violet;
   }
 
-  &_color_red {
-    color: $red;
-  }
 }
