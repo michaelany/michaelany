@@ -86,7 +86,7 @@ export default {
         MuiTooltip: {
             tooltip: {
                 borderRadius: 4,
-                fontSize: '12px !important',
+                fontSize: '13px !important',
             }
         }
     }

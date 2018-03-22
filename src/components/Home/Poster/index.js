@@ -1,12 +1,19 @@
 import React from 'react';
+import Grid from 'material-ui/Grid';
 
 import './style.css';
 import mac from './mac.png';
 
+const styles = {
+    gridContainer: {
+        height: '33.3%'
+    }
+};
+
 export default function Poster() {
     return (
-        <section className="poster section section_bg-color_yellow f fd-c jc-c">
-            <img className="poster__image" src={mac} alt="mac" />
+        <section className="poster section f fd-c jc-c">
+
         </section>
     );
 }

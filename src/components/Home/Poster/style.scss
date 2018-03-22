@@ -1,3 +1,6 @@
-.poster__image {
-  max-width: 100%;
+@import 'styles/variables';
+
+.poster {
+  @include animate(variousBackgroundColors, 10s, 0ms, infinite);
+  height: 100%;
 }

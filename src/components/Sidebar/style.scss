@@ -26,6 +26,10 @@
     }
   }
 
+  .sidebar_various > & {
+    @include animate(variousColors, 10s, 0ms, infinite);
+  }
+
   .sidebar_red > & {
     color: $red;
   }
@@ -71,6 +75,10 @@
     border-radius: 2px;
     opacity: 0;
 
+    .sidebar_various & {
+      @include animate(variousBackgroundColors, 10s, 0ms, infinite);
+    }
+
     .sidebar_red & {
       background-color: $red;
     }
@@ -99,6 +107,10 @@
   &:hover,
   &:focus {
     color: white;
+
+    .sidebar_various & {
+      @include animate(variousColors, 2s, 0ms, infinite, linear);
+    }
 
     .sidebar_red & {
       color: $red;
@@ -131,6 +143,10 @@
 
   &_active {
     color: white;
+
+    .sidebar_various & {
+      @include animate(variousColors, 10s, 0ms, infinite);
+    }
 
     .sidebar_red & {
       color: $red;

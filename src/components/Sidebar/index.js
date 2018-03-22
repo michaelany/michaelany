@@ -35,8 +35,9 @@ const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
 ));
 
 const getSidebarClass = (pathname) => cn('sidebar', {
+    'sidebar_various': pathname === '/',
     'sidebar_red': pathname === '/portfolio/lazy-az' || pathname === '/portfolio/my-portfolio',
-    'sidebar_yellow': pathname === '/' || pathname === '/portfolio/lazy-az-dashboard'
+    'sidebar_yellow': pathname === '/portfolio/lazy-az-dashboard'
         || pathname === '/portfolio/12-saffron',
     'sidebar_grass': pathname === '/portfolio/7-glyphs' || pathname === '/portfolio/service-packages',
     'sidebar_green': pathname === '/about' || pathname === '/portfolio/whip-around',

@@ -11,7 +11,7 @@
 }
 
 .greeting__letter {
+  @include animate(variousColors, 10s, 0ms, infinite);
   font-weight: 900;
-  color: $yellow;
 }
 
