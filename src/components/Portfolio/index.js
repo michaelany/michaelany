@@ -25,7 +25,7 @@ const renderProjects = () => projects.map(({id, ...props}) => (
 
 export default function Portfolio() {
     return (
-        <div className="portfolio page page_bg-color_green">
+        <div className="portfolio page page_bg-color_blue">
             <section className="portfolio__section">
                 <h2 className="title title_color_white">Портфолио</h2>
                 <div>

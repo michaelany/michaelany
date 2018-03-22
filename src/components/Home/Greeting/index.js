@@ -27,10 +27,10 @@ class Greeting extends Component {
                 </h1>
                 <h2 className="subtitle">Front-End Developer / React JS</h2>
                 <div>
-                    <MuiButton isMargin variant="raised" kind="green" onClick={this.handleGoToPortfolio}>
+                    <MuiButton isMargin variant="raised" kind="blue" onClick={this.handleGoToPortfolio}>
                         Портфолио
                     </MuiButton>
-                    <MuiButton variant="raised" kind="blue" onClick={this.handleGoToContact}>
+                    <MuiButton variant="raised" kind="green" onClick={this.handleGoToContact}>
                         Контакты
                     </MuiButton>
                 </div>

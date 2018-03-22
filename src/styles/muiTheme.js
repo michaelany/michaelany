@@ -82,6 +82,12 @@ export default {
             completed: {
                 color: COLORS.blue
             }
+        },
+        MuiTooltip: {
+            tooltip: {
+                borderRadius: 4,
+                fontSize: '12px !important',
+            }
         }
     }
 }

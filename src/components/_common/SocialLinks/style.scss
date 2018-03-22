@@ -1,0 +1,17 @@
+.social-links__item {
+  position: relative;
+  margin: 0 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .social-links_round &:first-child,
+  .social-links_round &:last-child {
+    top: -29px;
+  }
+}

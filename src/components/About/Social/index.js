@@ -1,15 +1,13 @@
 import React from 'react';
 import Avatar from 'material-ui/Avatar';
-import Tooltip from 'material-ui/Tooltip';
 
-import './style.css';
 import me from './me.jpg';
 import me2x from './me@2x.jpg';
 import GitHubIcon from '../../_icons/GitHubIcon';
 import LinkedInIcon from '../../_icons/LinkedInIcon';
 import GlyphsIcon from '../../_icons/GlyphsIcon';
 import VKIcon from '../../_icons/VKIcon';
-import MuiButton from '../../_common/MuiButton';
+import SocialLinks from '../../_common/SocialLinks';
 import {LINKS} from "../../../utils/urls";
 
 const links = [
@@ -28,29 +26,12 @@ const styles = {
     }
 };
 
-const renderLinks = () => links.map(({id, title, icon, url, placement}) => (
-    <li key={id} className="social__item">
-        <Tooltip {...{title, placement}} enterDelay={300} leaveDelay={100}>
-            <MuiButton
-                variant="fab"
-                kind="white"
-                href={url}
-                rel="noopener noreferrer"
-                target="_blank"
-                role="link"
-            >
-                {icon}
-            </MuiButton>
-        </Tooltip>
-    </li>
-));
-
-export default function Bio() {
+export default function Social() {
     return (
         <section className="social section section_bg-color_green">
             <div className="container f fd-c ai-c jc-c">
                 <Avatar src={me} srcSet={`${me2x} 2x`} style={styles.avatar} />
-                <ul className="f">{renderLinks()}</ul>
+                <SocialLinks isRound {...{links}} />
             </div>
         </section>
     );

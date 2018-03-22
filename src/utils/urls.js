@@ -18,6 +18,10 @@ export const LINKS = {
         linkedIn: 'https://www.linkedin.com/in/michael-ananiev-5423b115b',
         vk: 'https://vk.com/mclananiev'
     },
+    contacts: {
+        email: 'mailto:mclananiev@gmail.com',
+        skype: 'skype:claudio.calautti?userinfo'
+    },
     technologies: {
         html: 'https://www.w3.org/html',
         svg: 'https://www.w3.org/Graphics/SVG',
