@@ -13,7 +13,8 @@ const styles = {
         overflow: 'hidden',
         display: 'block',
         transition: 'none',
-        color: 'white'
+        color: 'white',
+        borderRadius: 0
     },
     icon: {
         color: 'white',
