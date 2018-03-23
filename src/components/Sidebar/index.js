@@ -25,7 +25,7 @@ Sidebar.propTypes = {
 const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
     <li key={id}>
         <Tooltip {...{title}} placement="right" enterDelay={300} leaveDelay={100}>
-            <Button fullWidth component="div" role="link" tabIndex={null}>
+            <Button fullWidth component="div" role="link" tabIndex="-1">
                 <NavLink exact={url !== urls.portfolio} className="sidebar__link fb-100" activeClassName="sidebar__link_active" to={url}>
                     <Icon>{icon}</Icon>
                 </NavLink>

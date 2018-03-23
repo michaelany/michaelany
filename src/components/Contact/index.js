@@ -2,11 +2,11 @@ import React from 'react';
 import Grid from 'material-ui/Grid';
 
 import './style.css';
-import ContactMap from './ContactMap';
 import SkypeIcon from '../_icons/SkypeIcon';
 import GitHubIcon from '../_icons/GitHubIcon';
 import LinkedInIcon from '../_icons/LinkedInIcon';
 import VKIcon from '../_icons/VKIcon';
+import ContactMap from './ContactMap';
 import SocialLinks from '../_common/SocialLinks';
 import {STYLES} from '../../styles/muiTheme';
 import {LINKS} from "../../utils/urls";
@@ -30,9 +30,7 @@ export default function Contact() {
                     </section>
                 </Grid>
                 <Grid item xs={6}>
-                    <div className="contact__map">
-                        <ContactMap />
-                    </div>
+                    <ContactMap />
                 </Grid>
             </Grid>
         </div>

@@ -6,15 +6,15 @@ import Preview from './Preview';
 import {STYLES} from '../../styles/muiTheme';
 
 const projects = [
-    {id: 1, name: 'msp', title: 'Бизнес-навигатор МСП', color: 'blue'},
-    {id: 2, name: '7-glyphs', title: '7 Glyphs', color: 'grass'},
-    {id: 3, name: 'lazy-az', title: 'LazyAz', color: 'red'},
-    {id: 4, name: 'lazy-az-dashboard', title: 'LazyAz Dashboard', color: 'yellow'},
-    {id: 5, name: 'whip-around', title: 'Whip Around', color: 'green'},
-    {id: 6, name: '12-saffron', title: '12 Saffron', color: 'yellow'},
-    {id: 7, name: 'fcdc-dashboard', title: 'FCDC Dashboard', color: 'violet'},
-    {id: 8, name: 'service-packages', title: 'Service Packages', color: 'grass'},
-    {id: 9, name: 'my-portfolio', title: 'Мое портфолио', color: 'red'}
+    {id: 1, name: 'msp', title: 'Бизнес-навигатор МСП'},
+    {id: 2, name: '7-glyphs', title: '7 Glyphs'},
+    {id: 3, name: 'lazy-az', title: 'LazyAz'},
+    {id: 4, name: 'lazy-az-dashboard', title: 'LazyAz Dashboard'},
+    {id: 5, name: 'whip-around', title: 'Whip Around'},
+    {id: 6, name: '12-saffron', title: '12 Saffron'},
+    {id: 7, name: 'fcdc-dashboard', title: 'FCDC Dashboard'},
+    {id: 8, name: 'service-packages', title: 'Service Packages'},
+    {id: 9, name: 'my-portfolio', title: 'Мое портфолио'}
 ];
 
 const renderProjects = () => projects.map(({id, ...props}) => (

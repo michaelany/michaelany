@@ -49,12 +49,11 @@ const renderImages = (images, title) => images.map(image => (
     </div>
 ));
 
-const renderButton = (type, url, isLast = false, isPdf = false) => {
+const renderButton = (type, url, isPdf = false) => {
     const icon = isPdf ? 'picture_as_pdf' : 'launch';
     return (
         <Tooltip title={`Открыть ${type}`} placement="bottom" enterDelay={300} leaveDelay={100}>
             <MuiButton
-                isMargin={!isLast}
                 variant="fab"
                 kind="white"
                 href={url}
@@ -77,8 +76,8 @@ export default function Assets({title, color, images, url = '', pdf = ''}) {
                 </Slider>
             </div>
             <div className="f jc-c">
-                {url && renderButton('проект', url, !pdf)}
-                {pdf && renderButton('Бизнес-план', pdf, true, true)}
+                {url && renderButton('проект', url)}
+                {pdf && renderButton('Бизнес-план', pdf, true)}
             </div>
         </section>
     );

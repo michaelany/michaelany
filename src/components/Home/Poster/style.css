@@ -1,2 +1,9 @@
-.poster__image {
-  max-width: 100%; }
+.poster {
+  animation-name: variousBackgroundColors;
+  animation-duration: 10s;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  height: 100%; }

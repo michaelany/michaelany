@@ -42,12 +42,7 @@ export default class  extends Component {
                 <StepContent>
                     <div className="steps__step-content">
                         <p>{content}</p>
-                        <MuiButton
-                            isMargin
-                            variant="fab"
-                            disabled={activeStep === 0}
-                            onClick={this.handleStepBack}
-                        >
+                        <MuiButton variant="fab" disabled={activeStep === 0} onClick={this.handleStepBack}>
                             <Icon>arrow_back</Icon>
                         </MuiButton>
                         <MuiButton variant="fab"  kind="violet" onClick={this.handleStepNext}>

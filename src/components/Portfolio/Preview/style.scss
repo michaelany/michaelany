@@ -1,6 +1,7 @@
 @import 'styles/variables';
 
 .preview {
+  display: block;
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -68,14 +69,12 @@
   }
 
   &_name_my-portfolio {
-    /* background-image: url('fcdc.jpg');*/
     background-color: $red;
-    /* @include image-2x('./fcdc@2x.jpg');*/
   }
 }
 
 .preview__content {
-  @include transit(opacity);
+  @include transit((opacity, transform));
   position: absolute;
   background-color: $black-80;
   width: 100%;
@@ -90,7 +89,7 @@
 
 .preview__title {
   @include transit(transform, $standard);
-  font-size: 18px;
+  font-size: 20px;
 
   text-align: center;
   color: white;

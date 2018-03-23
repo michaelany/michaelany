@@ -15,6 +15,38 @@
   to {
     transform: scaleY(1); } }
 
+@keyframes variousColors {
+  from {
+    color: #fa8861; }
+  16.66% {
+    color: #f7bc3f; }
+  33.33% {
+    color: #6ed486; }
+  50% {
+    color: #31d0c9; }
+  66.66% {
+    color: #62a5fc; }
+  83.33% {
+    color: #9170fb; }
+  to {
+    color: #fa8861; } }
+
+@keyframes variousBackgroundColors {
+  from {
+    background-color: #fa8861; }
+  16.66% {
+    background-color: #f7bc3f; }
+  33.33% {
+    background-color: #6ed486; }
+  50% {
+    background-color: #31d0c9; }
+  66.66% {
+    background-color: #62a5fc; }
+  83.33% {
+    background-color: #9170fb; }
+  to {
+    background-color: #fa8861; } }
+
 .f {
   display: flex; }
 

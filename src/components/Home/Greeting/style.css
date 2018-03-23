@@ -7,5 +7,11 @@
   font-weight: 300; }
 
 .greeting__letter {
-  font-weight: 900;
-  color: #f7bc3f; }
+  animation-name: variousColors;
+  animation-duration: 10s;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  font-weight: 900; }

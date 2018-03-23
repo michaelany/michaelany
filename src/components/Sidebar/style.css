@@ -24,6 +24,14 @@
     @media (hover: none) {
       .sidebar__logo:hover {
         transform: none; } }
+  .sidebar_various > .sidebar__logo {
+    animation-name: variousColors;
+    animation-duration: 10s;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-direction: normal;
+    animation-iteration-count: infinite; }
   .sidebar_red > .sidebar__logo {
     color: #fa8861; }
   .sidebar_yellow > .sidebar__logo {
@@ -65,6 +73,14 @@
     background-color: white;
     border-radius: 2px;
     opacity: 0; }
+    .sidebar_various .sidebar__link::after {
+      animation-name: variousBackgroundColors;
+      animation-duration: 10s;
+      animation-delay: 0ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-direction: normal;
+      animation-iteration-count: infinite; }
     .sidebar_red .sidebar__link::after {
       background-color: #fa8861; }
     .sidebar_yellow .sidebar__link::after {
@@ -79,6 +95,14 @@
       background-color: #9170fb; }
   .sidebar__link:hover, .sidebar__link:focus {
     color: white; }
+    .sidebar_various .sidebar__link:hover, .sidebar_various .sidebar__link:focus {
+      animation-name: variousColors;
+      animation-duration: 2s;
+      animation-delay: 0ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-direction: normal;
+      animation-iteration-count: infinite; }
     .sidebar_red .sidebar__link:hover, .sidebar_red .sidebar__link:focus {
       color: #fa8861; }
     .sidebar_yellow .sidebar__link:hover, .sidebar_yellow .sidebar__link:focus {
@@ -95,6 +119,14 @@
     outline: 0; }
   .sidebar__link_active {
     color: white; }
+    .sidebar_various .sidebar__link_active {
+      animation-name: variousColors;
+      animation-duration: 10s;
+      animation-delay: 0ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-direction: normal;
+      animation-iteration-count: infinite; }
     .sidebar_red .sidebar__link_active {
       color: #fa8861; }
     .sidebar_yellow .sidebar__link_active {

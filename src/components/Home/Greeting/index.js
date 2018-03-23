@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 
@@ -8,12 +8,10 @@ import urls from "../../../utils/urls";
 
 class Greeting extends Component {
     static propTypes = {
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
     };
 
-    handleGoToPortfolio = () => this.props.history.push(urls.portfolio);
-
-    handleGoToContact = () => this.props.history.push(urls.contact);
+    handle
 
     render() {
         return (
@@ -27,10 +25,10 @@ class Greeting extends Component {
                 </h1>
                 <h2 className="subtitle">Front-End Developer / React JS</h2>
                 <div>
-                    <MuiButton isMargin variant="raised" kind="blue" onClick={this.handleGoToPortfolio}>
+                    <MuiButton isMargin variant="raised" kind="blue">
                         Портфолио
                     </MuiButton>
-                    <MuiButton variant="raised" kind="green" onClick={this.handleGoToContact}>
+                    <MuiButton variant="raised" kind="green">
                         Контакты
                     </MuiButton>
                 </div>
