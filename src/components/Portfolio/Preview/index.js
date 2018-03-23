@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import Button from 'material-ui/Button';
 import Icon from 'material-ui/Icon';
 
@@ -10,8 +10,10 @@ import urls from '../../../utils/urls';
 
 const styles = {
     button: {
-
-
+        overflow: 'hidden',
+        display: 'block',
+        transition: 'none',
+        color: 'white'
     },
     icon: {
         color: 'white',
@@ -19,15 +21,22 @@ const styles = {
     }
 };
 
-Preview.propTypes = {
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
-};
+class Preview extends Component {
+    static propTypes = {
+        history: PropTypes.object.isRequired,
+        name: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
+    };
 
-export default function Preview({name, title}) {
-    return (
-        <Link className="preview" to={`${urls.portfolio}/${name}`} tabIndex="-1">
-            <Button component="div" style={styles.button}>
+    handleGoToProject = () => {
+        const {history, name} = this.props;
+        history.push(`${urls.portfolio}/${name}`);
+    };
+
+    render() {
+        const {name, title} = this.props;
+        return (
+            <Button className="preview" component="a" role="link" style={styles.button} onClick={this.handleGoToProject}>
                 <ResponsiveBlock>
                     <div
                         className={`preview__image preview__image_name_${name}`}
@@ -42,6 +51,8 @@ export default function Preview({name, title}) {
                     </div>
                 </ResponsiveBlock>
             </Button>
-        </Link>
-    );
+        );
+    }
 }
+
+export default withRouter(Preview);

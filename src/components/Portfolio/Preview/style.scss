@@ -1,12 +1,5 @@
 @import 'styles/variables';
 
-.preview {
-  display: block;
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
 .preview__image {
   @include transit(transform, $long);
   position: absolute;
@@ -81,9 +74,11 @@
   height: 100%;
   padding: 20px;
   opacity: 0;
+  transform: scale(0.8);
 
   .preview:hover & {
     opacity: 1;
+    transform: scale(1);
   }
 }
 

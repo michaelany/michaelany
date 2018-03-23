@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import {withStyles} from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
@@ -87,17 +88,19 @@ const styles = {
 MuiButton.propTypes = {
     children: PropTypes.node.isRequired,
     classes: PropTypes.object.isRequired,
+    className: PropTypes.string,
     kind: PropTypes.string,
     isMargin: PropTypes.bool
 };
 
-function MuiButton({children, classes, kind = '', isMargin = false, ...props}) {
+function MuiButton({children, classes, className = '', kind = '', isMargin = false, ...props}) {
+    const buttonClass = kind ? cn({[classes[`${kind}Button`]]: kind, [className]: className}) : null;
     const buttonStyle = isMargin ? commonStyles.marginButton : null;
     return (
         <Button
             {...props}
-            className={kind && classes[`${kind}Button`]}
             style={buttonStyle}
+            className={buttonClass}
         >
             {children}
         </Button>

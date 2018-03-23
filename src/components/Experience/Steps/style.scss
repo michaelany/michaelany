@@ -1,3 +1,5 @@
+@import 'styles/variables';
+
 .steps__step-content {
   padding-right: 15px;
   padding-left: 15px;
@@ -8,4 +10,27 @@
   padding-right: 24px;
   padding-left: 24px;
   padding-bottom: 24px;
+}
+
+.steps__icon {
+  @include transit(transform);
+
+  .steps__button:hover & {
+    transform: rotate(90deg);
+    @include no-hover {
+      transform: none;
+    }
+
+    &_type_check {
+      transform: none;
+    }
+  }
+}
+
+.steps__refresh-icon {
+  @include transit(transform, $standard);
+
+  .steps__button:hover & {
+    transform: rotate(360deg);
+  }
 }

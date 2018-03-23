@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import cn from 'classnames';
 import Paper from 'material-ui/Paper';
 import Stepper, {Step, StepLabel, StepContent} from 'material-ui/Stepper';
 import Icon from 'material-ui/Icon';
@@ -36,17 +37,25 @@ export default class  extends Component {
     renderSteps = () => steps.map(({id, title, content}) => {
         const {activeStep} = this.state;
         const nextButtonIcon = activeStep === steps.length - 1 ? 'check' : 'arrow_forward';
+        const nextIconClass = cn('steps__icon', {'steps__icon_type_check': nextButtonIcon === 'check'});
         return (
             <Step key={id}>
                 <StepLabel>{title}</StepLabel>
                 <StepContent>
                     <div className="steps__step-content">
                         <p>{content}</p>
-                        <MuiButton isMargin variant="fab" disabled={activeStep === 0} onClick={this.handleStepBack}>
-                            <Icon>arrow_back</Icon>
+                        <MuiButton
+                            isMargin
+                            className="steps__button"
+                            variant="fab"
+                            kind="violet"
+                            disabled={activeStep === 0}
+                            onClick={this.handleStepBack}
+                        >
+                            <Icon className="steps__icon">arrow_back</Icon>
                         </MuiButton>
-                        <MuiButton variant="fab"  kind="violet" onClick={this.handleStepNext}>
-                            <Icon>{nextButtonIcon}</Icon>
+                        <MuiButton className="steps__button" variant="fab" kind="violet" onClick={this.handleStepNext}>
+                            <Icon className={nextIconClass}>{nextButtonIcon}</Icon>
                         </MuiButton>
                     </div>
                 </StepContent>
@@ -65,8 +74,8 @@ export default class  extends Component {
                     {activeStep === steps.length && (
                         <div className="steps__refresh">
                             <p>Таков мой <strong>опыт работы</strong> на данный момент в ключевых этапах.</p>
-                            <MuiButton variant="fab" kind="violet" onClick={this.handleStepReset}>
-                                <Icon>refresh</Icon>
+                            <MuiButton className="steps__button" variant="fab" kind="violet" onClick={this.handleStepReset}>
+                                <Icon className="steps__refresh-icon">refresh</Icon>
                             </MuiButton>
                         </div>
                     )}
