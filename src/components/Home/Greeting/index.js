@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 
@@ -11,7 +11,9 @@ class Greeting extends Component {
         history: PropTypes.object.isRequired,
     };
 
-    handle
+    handleGoToPortfolio = () => this.props.history.push(urls.portfolio);
+
+    handleGoToContact = () => this.props.history.push(urls.contact);
 
     render() {
         return (
@@ -25,10 +27,10 @@ class Greeting extends Component {
                 </h1>
                 <h2 className="subtitle">Front-End Developer / React JS</h2>
                 <div>
-                    <MuiButton isMargin variant="raised" kind="blue">
+                    <MuiButton isMargin variant="raised" kind="blue" onClick={this.handleGoToPortfolio}>
                         Портфолио
                     </MuiButton>
-                    <MuiButton variant="raised" kind="green">
+                    <MuiButton variant="raised" kind="green" onClick={this.handleGoToContact}>
                         Контакты
                     </MuiButton>
                 </div>
