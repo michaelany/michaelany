@@ -11,6 +11,9 @@
 
   .preview:hover & {
     transform: scale(1.2);
+    @include no-hover {
+      transform: none;
+    }
   }
 
   &_name_msp {
@@ -79,13 +82,16 @@
   .preview:hover & {
     opacity: 1;
     transform: scale(1);
+    @include no-hover {
+      opacity: 0;
+      transform: scale(0.6);
+    }
   }
 }
 
 .preview__title {
   @include transit(transform, $standard);
   font-size: 20px;
-
   text-align: center;
   color: white;
   margin-bottom: 20px;
@@ -93,6 +99,9 @@
 
   .preview:hover & {
     transform: translate3d(0, 0, 0);
+    @include no-hover {
+      transform: translate3d(0, -100%, 0);
+    }
   }
 }
 
@@ -102,6 +111,9 @@
 
   .preview:hover & {
     transform: translate3d(0, 0, 0);
+    @include no-hover {
+      transform: translate3d(0, 50%, 0);
+    }
   }
 }
 

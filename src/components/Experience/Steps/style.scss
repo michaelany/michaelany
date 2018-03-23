@@ -22,7 +22,10 @@
     }
 
     &_type_check {
-      transform: none;
+      transform: scale(1.3);
+      @include no-hover {
+        transform: none;
+      }
     }
   }
 }
@@ -31,6 +34,9 @@
   @include transit(transform, $standard);
 
   .steps__button:hover & {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.3);
+    @include no-hover {
+      transform: none;
+    }
   }
 }
