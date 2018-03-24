@@ -34,7 +34,7 @@ const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
     </li>
 ));
 
-const getSidebarClass = (pathname) => cn('sidebar', {
+const getSidebarClass = (pathname) => cn(`sidebar sidebar_page_${pathname.split('/')[1] || 'home'}`, {
     'sidebar_various': pathname === '/',
     'sidebar_red': pathname === '/portfolio/lazy-az' || pathname === '/portfolio/my-portfolio',
     'sidebar_yellow': pathname === '/portfolio/lazy-az-dashboard'
@@ -49,7 +49,7 @@ function Sidebar({location: {pathname}}) {
     return (
         <aside className={getSidebarClass(pathname)}>
             <NavLink className="sidebar__logo" to={urls.home}>MA</NavLink>
-            <nav>
+            <nav className="sidebar__navigation">
                 <ul>
                     {renderLinks()}
                 </ul>
