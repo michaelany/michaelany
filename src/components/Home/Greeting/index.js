@@ -6,6 +6,12 @@ import './style.css';
 import MuiButton from '../../_common/MuiButton';
 import urls from "../../../utils/urls";
 
+const styles = {
+    button: {
+        marginTop: 10
+    }
+};
+
 class Greeting extends Component {
     static propTypes = {
         history: PropTypes.object.isRequired,
@@ -25,12 +31,12 @@ class Greeting extends Component {
                     ихаил <span className="greeting__letter">А</span>наньев,<br />
                     я веб-разработчик
                 </h1>
-                <h2 className="subtitle">Front-End Developer / React JS</h2>
+                <h2 className="greeting__subtitle subtitle">Front-End Developer / React JS</h2>
                 <div>
-                    <MuiButton isMargin variant="raised" kind="blue" onClick={this.handleGoToPortfolio}>
+                    <MuiButton isMargin variant="raised" kind="blue" style={styles.button} onClick={this.handleGoToPortfolio}>
                         Портфолио
                     </MuiButton>
-                    <MuiButton variant="raised" kind="green" onClick={this.handleGoToContact}>
+                    <MuiButton variant="raised" kind="green" style={styles.button} onClick={this.handleGoToContact}>
                         Контакты
                     </MuiButton>
                 </div>

@@ -89,13 +89,14 @@ MuiButton.propTypes = {
     children: PropTypes.node.isRequired,
     classes: PropTypes.object.isRequired,
     className: PropTypes.string,
+    style: PropTypes.object,
     kind: PropTypes.string,
     isMargin: PropTypes.bool
 };
 
-function MuiButton({children, classes, className = '', kind = '', isMargin = false, ...props}) {
+function MuiButton({children, classes, className = '', style = null, kind = '', isMargin = false, ...props}) {
     const buttonClass = kind ? cn({[classes[`${kind}Button`]]: kind, [className]: className}) : null;
-    const buttonStyle = isMargin ? commonStyles.marginButton : null;
+    const buttonStyle = isMargin ? {...commonStyles.marginButton, ...style} : style;
     return (
         <Button
             {...props}

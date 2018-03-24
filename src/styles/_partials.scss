@@ -19,12 +19,14 @@
   height: 100%;
   min-height: 100vh;
   @include sm {
-    padding-top: calc(60px + #{$header-height});
-    padding-bottom: 60px;
+    padding-top: calc(80px + #{$header-height});
+    padding-bottom: 80px;
     padding-left: 40px;
     padding-right: 40px;
   }
   @include xs {
+    padding-top: calc(60px + #{$header-height});
+    padding-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -75,8 +77,8 @@
   @include md {
     font-size: 44px;
   }
-  @include sm {
-    font-size: 38px;
+  @include xs {
+    font-size: 36px;
   }
 
   &_color_red {
@@ -117,6 +119,9 @@
   margin-bottom: 30px;
   @include md {
     font-size: 26px;
+  }
+  @include xs {
+    font-size: 22px;
   }
 
   &_black {

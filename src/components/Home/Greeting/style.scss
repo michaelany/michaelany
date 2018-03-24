@@ -10,6 +10,10 @@
   font-weight: 300;
 }
 
+.greeting__subtitle {
+  margin-bottom: 20px;
+}
+
 .greeting__letter {
   @include animate(variousColors, 10s, 0ms, infinite);
   font-weight: 900;
