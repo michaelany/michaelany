@@ -9,10 +9,10 @@ export default function Home() {
     return (
         <div className="home page">
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Greeting />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Poster />
                 </Grid>
             </Grid>

@@ -45,6 +45,56 @@
   .sidebar_violet > .sidebar__logo {
     color: #9170fb; }
 
+.sidebar__navigation {
+  position: relative; }
+  .sidebar__navigation::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-delay: 0ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 52px;
+    background-color: white;
+    border-radius: 2px; }
+    .sidebar_page_home > .sidebar__navigation::after {
+      transform: translate3d(0, 0, 0); }
+    .sidebar_page_about > .sidebar__navigation::after {
+      transform: translate3d(0, 52px, 0); }
+    .sidebar_page_skills > .sidebar__navigation::after {
+      transform: translate3d(0, 104px, 0); }
+    .sidebar_page_experience > .sidebar__navigation::after {
+      transform: translate3d(0, 156px, 0); }
+    .sidebar_page_portfolio > .sidebar__navigation::after {
+      transform: translate3d(0, 208px, 0); }
+    .sidebar_page_contact > .sidebar__navigation::after {
+      transform: translate3d(0, 260px, 0); }
+    .sidebar_various > .sidebar__navigation::after {
+      animation-name: variousBackgroundColors;
+      animation-duration: 10s;
+      animation-delay: 0ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-direction: normal;
+      animation-iteration-count: infinite; }
+    .sidebar_red > .sidebar__navigation::after {
+      background-color: #fa8861; }
+    .sidebar_yellow > .sidebar__navigation::after {
+      background-color: #f7bc3f; }
+    .sidebar_grass > .sidebar__navigation::after {
+      background-color: #6ed486; }
+    .sidebar_green > .sidebar__navigation::after {
+      background-color: #31d0c9; }
+    .sidebar_blue > .sidebar__navigation::after {
+      background-color: #62a5fc; }
+    .sidebar_violet > .sidebar__navigation::after {
+      background-color: #9170fb; }
+
 .sidebar__link {
   transition-property: color;
   transition-duration: 250ms;
@@ -57,42 +107,6 @@
   line-height: 0;
   color: #282c34;
   text-align: center; }
-  .sidebar__link::after {
-    content: "";
-    display: block;
-    position: absolute;
-    transition-property: opacity;
-    transition-duration: 250ms;
-    transition-delay: 0ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: opacity;
-    top: 0;
-    right: 0;
-    width: 5px;
-    height: 100%;
-    background-color: white;
-    border-radius: 2px;
-    opacity: 0; }
-    .sidebar_various .sidebar__link::after {
-      animation-name: variousBackgroundColors;
-      animation-duration: 10s;
-      animation-delay: 0ms;
-      animation-fill-mode: forwards;
-      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      animation-direction: normal;
-      animation-iteration-count: infinite; }
-    .sidebar_red .sidebar__link::after {
-      background-color: #fa8861; }
-    .sidebar_yellow .sidebar__link::after {
-      background-color: #f7bc3f; }
-    .sidebar_grass .sidebar__link::after {
-      background-color: #6ed486; }
-    .sidebar_green .sidebar__link::after {
-      background-color: #31d0c9; }
-    .sidebar_blue .sidebar__link::after {
-      background-color: #62a5fc; }
-    .sidebar_violet .sidebar__link::after {
-      background-color: #9170fb; }
   .sidebar__link:hover, .sidebar__link:focus {
     color: white; }
     .sidebar_various .sidebar__link:hover, .sidebar_various .sidebar__link:focus {

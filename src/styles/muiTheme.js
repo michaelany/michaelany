@@ -16,6 +16,12 @@ export const COLORS = {
     darkGrass: 'rgb(97, 186, 118)'
 };
 
+const breakpoints = {
+    xs: '@media (max-width: 599px)',
+    sm: '@media (max-width: 959px)',
+    md: '@media (max-width: 1279px)',
+};
+
 export const STYLES = {
     mainGridContainer: {
         height: '100%'
@@ -35,12 +41,19 @@ export default {
                 color: COLORS.black,
                 '&:hover': {
                     backgroundColor: COLORS.black12
+                },
+                [breakpoints.md]: {
+                    fontSize: 16,
                 }
             },
             raised: {
                 lineHeight: 1,
                 minWidth: 180,
-                minHeight: 46
+                minHeight: 46,
+                [breakpoints.md]: {
+                    minWidth: 160,
+                    minHeight: 40,
+                }
             },
             fab: {
                 color: COLORS.black
