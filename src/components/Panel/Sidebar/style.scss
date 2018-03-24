@@ -11,12 +11,7 @@
 
 .sidebar__logo {
   @include transit((color, transform));
-  display: block;
-  font-size: 40px;
-  letter-spacing: -5px;
-  font-weight: 900;
-  color: white;
-  padding: 0 20px;
+  padding: 15px 20px;
   margin-bottom: 60px;
 
   &:hover {

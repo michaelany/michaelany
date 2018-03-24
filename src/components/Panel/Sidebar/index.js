@@ -7,7 +7,7 @@ import Tooltip from 'material-ui/Tooltip';
 import Button from 'material-ui/Button';
 
 import './style.css';
-import urls from '../../utils/urls';
+import urls from '../../../utils/urls';
 
 const navLinks = [
     {id: 1, title: 'Главная', icon: 'home', url: urls.home},
@@ -48,7 +48,7 @@ const getSidebarClass = (pathname) => cn(`sidebar sidebar_page_${pathname.split(
 function Sidebar({location: {pathname}}) {
     return (
         <aside className={getSidebarClass(pathname)}>
-            <NavLink className="sidebar__logo" to={urls.home}>MA</NavLink>
+            <NavLink className="sidebar__logo logo" to={urls.home}>MA</NavLink>
             <nav className="sidebar__navigation">
                 <ul>
                     {renderLinks()}
