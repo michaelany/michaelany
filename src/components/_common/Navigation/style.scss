@@ -1,0 +1,178 @@
+@import 'styles/variables';
+
+.navigation {
+  position: relative;
+
+  &::after {
+    @include pseudo();
+    @include transit(transform, $standard);
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 52px;
+    background-color: white;
+    border-radius: 2px;
+
+    .sidebar_page_home > &,
+    .header__panel_page_home > & {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .sidebar_page_about > &,
+    .header__drawer_page_about > & {
+      transform: translate3d(0, 52px, 0);
+    }
+
+    .sidebar_page_skills > &,
+    .header__drawer_page_skills > & {
+      transform: translate3d(0, 104px, 0);
+    }
+
+    .sidebar_page_experience > &,
+    .header__drawer_page_experience > & {
+      transform: translate3d(0, 156px, 0);
+    }
+
+    .sidebar_page_portfolio > &,
+    .header__drawer_page_portfolio > & {
+      transform: translate3d(0, 208px, 0);
+    }
+
+    .sidebar_page_contact > &,
+    .header__drawer_page_contact > & {
+      transform: translate3d(0, 260px, 0);
+    }
+
+    .sidebar_various > &,
+    .header__drawer_various > & {
+      @include animate(variousBackgroundColors, 10s, 0ms, infinite);
+    }
+
+    .sidebar_red > &,
+    .header__drawer_red > & {
+      background-color: $red;
+    }
+
+    .sidebar_yellow > &,
+    .header__drawer_yellow > & {
+      background-color: $yellow;
+    }
+
+    .sidebar_grass > &,
+    .header__drawer_grass > & {
+      background-color: $grass;
+    }
+
+    .sidebar_green > &,
+    .header__drawer_green > & {
+      background-color: $green;
+    }
+
+    .sidebar_blue > &,
+    .header__drawer_blue > & {
+      background-color: $blue;
+    }
+
+    .sidebar_violet > &,
+    .header__drawer_violet > & {
+      background-color: $violet;
+    }
+  }
+}
+
+.navigation__link {
+  @include transit(color);
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  line-height: 0;
+  color: $black;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: white;
+
+    .sidebar_various &,
+    .header__drawer_various & {
+      @include animate(variousColors, 2s, 0ms, infinite, linear);
+    }
+
+    .sidebar_red &,
+    .header__drawer_red & {
+      color: $red;
+    }
+
+    .sidebar_yellow &,
+    .header__drawer_yellow & {
+      color: $yellow;
+    }
+
+    .sidebar_grass &,
+    .header__drawer_grass & {
+      color: $grass;
+    }
+
+    .sidebar_green &,
+    .header__drawer_green & {
+      color: $green;
+    }
+
+    .sidebar_blue &,
+    .header__drawer_blue & {
+      color: $blue;
+    }
+
+    .sidebar_violet &,
+    .header__drawer_violet & {
+      color: $violet;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &_active {
+    color: white;
+
+    .sidebar_various &,
+    .header__drawer_various & {
+      @include animate(variousColors, 10s, 0ms, infinite);
+    }
+
+    .sidebar_red &,
+    .header__drawer_red & {
+      color: $red;
+    }
+
+    .sidebar_yellow &,
+    .header__drawer_yellow & {
+      color: $yellow;
+    }
+
+    .sidebar_grass &,
+    .header__drawer_grass & {
+      color: $grass;
+    }
+
+    .sidebar_green &,
+    .header__drawer_green & {
+      color: $green;
+    }
+
+    .sidebar_blue &,
+    .header__drawer_blue & {
+      color: $blue;
+    }
+
+    .sidebar_violet &,
+    .header__drawer_violet & {
+      color: $violet;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'styles/variables';
+
+.logo {
+  @include transit((color, transform));
+  display: block;
+  font-size: 40px;
+  letter-spacing: -5px;
+  font-weight: 900;
+  line-height: 0.8;
+  color: white;
+
+  &_type_sidebar {
+    padding: 15px 20px;
+    margin-bottom: 60px;
+
+    &:hover {
+      transform: scale(1.2) rotate(-15deg);
+      @include no-hover {
+        transform: none;
+      }
+    }
+  }
+
+  &_type_header {
+    padding: 20px;
+  }
+
+  .sidebar_various > &,
+  .header_various & {
+    @include animate(variousColors, 10s, 0ms, infinite);
+  }
+
+  .sidebar_red > &,
+  .header_red & {
+    color: $red;
+  }
+
+  .sidebar_yellow > &,
+  .header_yellow & {
+    color: $yellow;
+  }
+
+  .sidebar_grass > &,
+  .header_grass & {
+    color: $grass;
+  }
+
+  .sidebar_green > &,
+  .header_green & {
+    color: $green;
+  }
+
+  .sidebar_blue > &,
+  .header_blue & {
+    color: $blue;
+  }
+
+  .sidebar_violet > &,
+  .header_violet & {
+    color: $violet;
+  }
+}

@@ -85,3 +85,33 @@
     background-color: $red;
   }
 }
+
+@keyframes variousBorderColors {
+  from {
+    border-color: $red;
+  }
+
+  16.66% {
+    border-color: $yellow;
+  }
+
+  33.33% {
+    border-color: $grass;
+  }
+
+  50% {
+    border-color: $green;
+  }
+
+  66.66% {
+    border-color: $blue;
+  }
+
+  83.33% {
+    border-color: $violet;
+  }
+
+  to {
+    border-color: $red;
+  }
+}
