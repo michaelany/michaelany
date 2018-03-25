@@ -1,3 +1,5 @@
+@import 'styles/variables';
+
 .social-links {
   max-width: 284px;
   width: 100%;
@@ -5,18 +7,37 @@
 
 .social-links__item {
   position: relative;
+  opacity: 0;
 
-  .social-links_round &:first-child,
-  .social-links_round &:last-child {
+  &:first-child {
+    @include animate(twisterInUp, $long, 300ms);
+  }
+
+  &:nth-child(2) {
+    @include animate(twisterInUp, $long, 400ms);
+  }
+
+  &:nth-child(3) {
+    @include animate(twisterInUp, $long, 500ms);
+  }
+
+  &:last-child {
+    @include animate(twisterInUp, $long, 600ms);
+  }
+
+  .social-links_round > &:first-child {
     top: -29px;
   }
 
-  .social-links_round &:nth-child(2) {
+  .social-links_round > &:nth-child(2) {
     margin-right: 3px;
   }
 
-  .social-links_round &:nth-child(3) {
+  .social-links_round > &:nth-child(3) {
     margin-left: 3px;
   }
 
+  .social-links_round > &:last-child {
+    top: -29px;
+  }
 }

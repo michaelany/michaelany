@@ -79,7 +79,7 @@ const renderButton = (type, url, isMargin, isPdf = false) => {
 export default function Assets({title, color, images, url = '', pdf = ''}) {
     return (
         <section className={`assets section section_bg-color_${color}`}>
-            <Slider {...settings}>
+            <Slider className="assets__slider" {...settings}>
                 {renderImages(images, title)}
             </Slider>
             {(url || pdf) && (

@@ -15,6 +15,7 @@
 }
 
 .section {
+  @include animate(fadeIn);
   padding: 100px 10%;
   height: 100%;
   @include sm {
@@ -63,6 +64,7 @@
 }
 
 .title {
+  @include animate(bounceInLeft);
   font-size: 52px;
   line-height: 1.1;
   font-weight: 900;
@@ -104,6 +106,8 @@
 }
 
 .subtitle {
+  @include animate(fadeIn, $long, 300ms);
+  opacity: 0;
   position: relative;
   font-size: 30px;
   color: $black-60;
@@ -138,6 +142,8 @@
 }
 
 .list {
+  @include animate(fadeIn, $longest, 600ms);
+  opacity: 0;
   padding-left: 20px;
   list-style-type: disc;
   margin-bottom: 20px;

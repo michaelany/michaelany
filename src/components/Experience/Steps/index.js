@@ -67,7 +67,7 @@ export default class  extends Component {
         const {activeStep} = this.state;
         return (
             <section className="steps section section_bg-color_violet">
-                <Paper elevation={1}>
+                <Paper className="steps__paper" elevation={1}>
                     <Stepper activeStep={activeStep} orientation="vertical">
                         {this.renderSteps()}
                     </Stepper>

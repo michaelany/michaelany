@@ -25,8 +25,8 @@ class Description extends Component {
         return (
             <section className="description section section_first">
                 <h2 className={`title title_color_${color}`}>{title}</h2>
+                <h3 className="subtitle">{subtitle}</h3>
                 <div className="description__block">
-                    <h3 className="subtitle">{subtitle}</h3>
                     {description.map(({id, text}) => <p key={id}>{text}</p>)}
                 </div>
                 <div className="description__block">

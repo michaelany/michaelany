@@ -1,5 +1,10 @@
 @import 'styles/variables';
 
+.preview {
+  @include animate(bounceIn, $long, 200ms);
+  opacity: 0;
+}
+
 .preview__image {
   @include transit(transform, $long);
   position: absolute;
