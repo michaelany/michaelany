@@ -12,6 +12,7 @@ import Experience from '../Experience';
 import Portfolio from '../Portfolio';
 import Project from '../Project';
 import Contact from '../Contact';
+import ScrollToTop from '../_common/ScrollToTop';
 import muiTheme from '../../styles/muiTheme';
 import urls from '../../utils/urls';
 
@@ -20,24 +21,26 @@ const theme = createMuiTheme(muiTheme);
 export default function App() {
     return (
         <HashRouter>
-            <MuiThemeProvider {...{theme}}>
-                <div className="app f">
-                    <Reboot />
-                    <Panel />
-                    <main className="app__main fb-100">
-                        <Switch>
-                            <Route exact path={urls.home} component={Home} />
-                            <Route exact path={urls.about} component={About} />
-                            <Route exact path={urls.skills} component={Skills} />
-                            <Route exact path={urls.experience} component={Experience} />
-                            <Route exact path={urls.portfolio} component={Portfolio} />
-                            <Route exact path={`${urls.portfolio}/:project`} component={Project} />
-                            <Route exact path={urls.contact} component={Contact} />
-                            <Route render={() => <h1>Error</h1>} />
-                        </Switch>
-                    </main>
-                </div>
+            <ScrollToTop>
+                <MuiThemeProvider {...{theme}}>
+                    <div className="app f">
+                        <Reboot />
+                        <Panel />
+                        <main className="app__main fb-100">
+                            <Switch>
+                                <Route exact path={urls.home} component={Home} />
+                                <Route exact path={urls.about} component={About} />
+                                <Route exact path={urls.skills} component={Skills} />
+                                <Route exact path={urls.experience} component={Experience} />
+                                <Route exact path={urls.portfolio} component={Portfolio} />
+                                <Route exact path={`${urls.portfolio}/:project`} component={Project} />
+                                <Route exact path={urls.contact} component={Contact} />
+                                <Route render={() => <h1>Error</h1>} />
+                            </Switch>
+                        </main>
+                    </div>
             </MuiThemeProvider>
+            </ScrollToTop>
         </HashRouter>
     );
 }
