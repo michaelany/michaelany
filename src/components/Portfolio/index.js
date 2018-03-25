@@ -13,8 +13,7 @@ const projects = [
     {id: 5, name: 'whip-around', title: 'Whip Around'},
     {id: 6, name: '12-saffron', title: '12 Saffron'},
     {id: 7, name: 'fcdc-dashboard', title: 'FCDC Dashboard'},
-    {id: 8, name: 'service-packages', title: 'Service Packages'},
-    {id: 9, name: 'my-portfolio', title: 'Мое портфолио'}
+    {id: 8, name: 'service-packages', title: 'Service Packages'}
 ];
 
 const renderProjects = () => projects.map(({id, ...props}) => (

@@ -79,15 +79,15 @@ const renderButton = (type, url, isMargin, isPdf = false) => {
 export default function Assets({title, color, images, url = '', pdf = ''}) {
     return (
         <section className={`assets section section_bg-color_${color}`}>
-            <div className="assets__slider">
-                <Slider {...settings}>
-                    {renderImages(images, title)}
-                </Slider>
-            </div>
-            <div className="f jc-c">
-                {url && renderButton('проект', url, Boolean(pdf))}
-                {pdf && renderButton('Бизнес-план', pdf, false, true)}
-            </div>
+            <Slider {...settings}>
+                {renderImages(images, title)}
+            </Slider>
+            {(url || pdf) && (
+                <div className="assets__buttons f jc-c">
+                    {url && renderButton('проект', url, Boolean(pdf))}
+                    {pdf && renderButton('Бизнес-план', pdf, false, true)}
+                </div>
+            )}
         </section>
     );
 }

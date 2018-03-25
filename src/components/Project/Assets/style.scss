@@ -1,9 +1,5 @@
 @import 'styles/variables';
 
-.assets__slider {
-  margin-bottom: 30px;
-}
-
 .assets__image {
   height: 100%;
   margin: auto;
@@ -22,4 +18,8 @@
     background-color: transparent;
     border: 2px solid white;
   }
+}
+
+.assets__buttons {
+  margin-top: 30px;
 }

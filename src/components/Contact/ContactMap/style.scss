@@ -2,5 +2,8 @@
 
 .contact-map {
   position: relative;
-  min-height: calc(100vh - #{$header-height});
+  height: 100%;
+  @include sm {
+    min-height: calc(100vh - #{$header-height});
+  }
 }
