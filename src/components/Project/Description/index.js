@@ -23,7 +23,7 @@ class Description extends Component {
         const {title, subtitle, description, technologies, release, color} = this.props;
         const subtitleClass = `description__subtitle description__subtitle_color_${color}`;
         return (
-            <section className="description section">
+            <section className="description section section_first">
                 <h2 className={`title title_color_${color}`}>{title}</h2>
                 <div className="description__block">
                     <h3 className="subtitle">{subtitle}</h3>

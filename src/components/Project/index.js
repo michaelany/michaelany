@@ -266,10 +266,10 @@ export default function Project({match}) {
     return (
         <div className="project page">
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Description {...{title, subtitle, description, technologies, release, color}} />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Assets {...{title, color, images, url, pdf}} />
                 </Grid>
             </Grid>
