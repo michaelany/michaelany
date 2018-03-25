@@ -17,7 +17,7 @@ const projects = [
 ];
 
 const renderProjects = () => projects.map(({id, ...props}) => (
-    <Grid key={id} item component="li" xs={3}>
+    <Grid key={id} item component="li" xs={12} sm={6} md={4} lg={3}>
         <Preview {...props} />
     </Grid>
 ));

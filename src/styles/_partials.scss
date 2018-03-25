@@ -26,10 +26,10 @@
 
   &_first {
     @include sm {
-      padding-top: calc(80px + #{$header-height})
+      padding-top: calc(80px + #{$header-height});
     }
     @include xs {
-      padding-top: calc(60px + #{$header-height})
+      padding-top: calc(60px + #{$header-height});
     }
   }
 
