@@ -45,7 +45,7 @@ export default function About() {
     return (
         <div className="about page">
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Info
                         {...{extra}}
                         title="Обо мне"
@@ -54,7 +54,7 @@ export default function About() {
                         items={features}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Social />
                 </Grid>
             </Grid>

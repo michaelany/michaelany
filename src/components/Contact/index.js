@@ -22,14 +22,14 @@ export default function Contact() {
     return (
         <div className="contact page page_bg-color_green">
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
-                <Grid item xs={6}>
-                    <section className="section">
+                <Grid item xs={12} md={6}>
+                    <section className="section section_first">
                         <h2 className="title title_color_white">Контакты</h2>
                         <h3 className="contact__subtitle subtitle subtitle_black">Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне письмо на <a className="link link_white" href={LINKS.contacts.email}>mclananiev@gmail.com</a></h3>
                         <SocialLinks {...{links}} />
                     </section>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <ContactMap />
                 </Grid>
             </Grid>

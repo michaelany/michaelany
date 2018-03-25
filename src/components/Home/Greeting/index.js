@@ -23,7 +23,7 @@ class Greeting extends Component {
 
     render() {
         return (
-            <section className="greeting section f fd-c jc-c">
+            <section className="greeting section section_first f fd-c jc-c">
                 <div className="greeting__hello title">Привет,</div>
                 <h1 className="greeting__title title">
                     меня зовут<br />

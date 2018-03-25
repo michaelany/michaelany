@@ -58,7 +58,7 @@ export default function Skills() {
     return (
         <div className="skills page">
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Info
                         {...{extra}}
                         title="Навыки"
@@ -67,7 +67,7 @@ export default function Skills() {
                         items={abilities}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Technologies />
                 </Grid>
             </Grid>

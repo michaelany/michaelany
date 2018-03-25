@@ -164,7 +164,7 @@ const renderTechnologyGroups = () => technologyGroups.map(({id, title, technolog
 });
 
 const renderTechnologies = (technologies) => technologies.map(({id, ...props}) => (
-    <Grid key={id} item component="li" xs={3} md={4} lg={3}>
+    <Grid key={id} item component="li" xs={6} sm={3} md={4} lg={3}>
         <ResponsiveBlock>
             <Technology {...props} />
         </ResponsiveBlock>

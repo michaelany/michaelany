@@ -12,7 +12,7 @@ SocialLinks.propTypes = {
 };
 
 export default function SocialLinks({links, isRound = false}) {
-    const listClass = cn('social-links', {'social-links_round': isRound}, 'f');
+    const listClass = cn('social-links', {'social-links_round': isRound}, 'f jc-sb');
     return (
         <ul className={listClass}>
             {links.map(({id, title, icon, url, placement}) => (

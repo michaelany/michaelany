@@ -17,18 +17,20 @@
 .section {
   padding: 100px 10%;
   height: 100%;
-  min-height: 100vh;
   @include sm {
-    padding-top: calc(80px + #{$header-height});
-    padding-bottom: 80px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 80px 40px;
   }
   @include xs {
-    padding-top: calc(60px + #{$header-height});
-    padding-bottom: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 60px 20px;
+  }
+
+  &_first {
+    @include sm {
+      padding-top: calc(80px + #{$header-height})
+    }
+    @include xs {
+      padding-top: calc(60px + #{$header-height})
+    }
   }
 
   &_bg-color_red {

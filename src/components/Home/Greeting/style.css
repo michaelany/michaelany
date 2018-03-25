@@ -6,6 +6,9 @@
   margin-bottom: 20px;
   font-weight: 300; }
 
+.greeting__subtitle {
+  margin-bottom: 20px; }
+
 .greeting__letter {
   animation-name: variousColors;
   animation-duration: 10s;

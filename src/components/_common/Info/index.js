@@ -27,7 +27,7 @@ const renderSubItems = (subItems) => subItems.map(({id, text}) => (
 
 export default function Info({title, subtitle, color, items, extra = null}) {
     return (
-        <section className="info section">
+        <section className="info section section_first">
             <h2 className={`title title_color_${color}`}>{title}</h2>
             <h3 className="subtitle">{subtitle}</h3>
             <ul className="list">

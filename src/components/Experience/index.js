@@ -51,7 +51,7 @@ export default function Experience() {
     return (
         <div className="experience page">
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Info
                         title="Опыт"
                         subtitle='Работаю в компании "7 glyphs". Профессионально занимаюсь веб-разработкой два года'
@@ -59,7 +59,7 @@ export default function Experience() {
                         items={responsibilities}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Steps />
                 </Grid>
             </Grid>

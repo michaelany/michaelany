@@ -3,6 +3,7 @@ import {HashRouter, Switch, Route} from 'react-router-dom';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
 
+import './style.css';
 import Panel from '../Panel';
 import Home from '../Home';
 import About from '../About';
@@ -23,7 +24,7 @@ export default function App() {
                 <div className="app f">
                     <Reboot />
                     <Panel />
-                    <main className="fb-100">
+                    <main className="app__main fb-100">
                         <Switch>
                             <Route exact path={urls.home} component={Home} />
                             <Route exact path={urls.about} component={About} />

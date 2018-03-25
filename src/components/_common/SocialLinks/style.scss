@@ -1,17 +1,22 @@
+.social-links {
+  max-width: 284px;
+  width: 100%;
+}
+
 .social-links__item {
   position: relative;
-  margin: 0 10px;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   .social-links_round &:first-child,
   .social-links_round &:last-child {
     top: -29px;
   }
+
+  .social-links_round &:nth-child(2) {
+    margin-right: 3px;
+  }
+
+  .social-links_round &:nth-child(3) {
+    margin-left: 3px;
+  }
+
 }

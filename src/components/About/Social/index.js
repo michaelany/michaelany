@@ -29,7 +29,7 @@ const styles = {
 export default function Social() {
     return (
         <section className="social section section_bg-color_green">
-            <div className="container f fd-c ai-c jc-c">
+            <div className="f fd-c ai-c jc-c">
                 <Avatar src={me} srcSet={`${me2x} 2x`} style={styles.avatar} />
                 <SocialLinks isRound {...{links}} />
             </div>
