@@ -124,4 +124,7 @@
 
 .preview__icon {
   @include animate(eyeBlink, 3s, 0ms, infinite);
+  @include no-hover {
+    animation: none;
+  }
 }

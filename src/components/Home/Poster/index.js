@@ -14,7 +14,7 @@ const options = {
 
 export default function Poster() {
     return (
-        <section className="poster section f fd-c jc-c">
+        <section className="poster section f ai-c jc-c">
             <Tilt {...{options}} easing="cubic-bezier(0.4, 0, 0.2, 1)">
                 <img className="poster__image" src={mac} srcSet={`${mac2x} 2x`} alt="Mac" />
             </Tilt>
