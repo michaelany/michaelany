@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import Collapse from 'material-ui/transitions/Collapse';
 
 import './style.css';
 import ScrollAnimation from '../../../_common/ScrollAnimation';
@@ -8,7 +9,7 @@ import MuiButton from '../../../_common/MuiButton';
 
 export default class InfoExtra extends Component {
     state = {
-        contentHeight: 0
+        isExtraOpen: false
     };
 
     static propTypes = {
@@ -16,46 +17,25 @@ export default class InfoExtra extends Component {
         color: PropTypes.string.isRequired
     };
 
-    componentDidMount() {
-        window.addEventListener('resize', this.handleContentHeightSet);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleContentHeightSet);
-    }
-
-    handleContentHeightSet = () => {
-        const {contentHeight} = this.state;
-        const blockHeight = this.block.clientHeight;
-        if (contentHeight && contentHeight !== blockHeight) this.setState({
-            contentHeight: blockHeight + 20
-        });
-    };
-
-    handleContentHeightToggle = () => this.setState((prevState) => ({
-        contentHeight: prevState.contentHeight ? 0 : this.block.clientHeight + 20
+    handleExtraToggle = () => this.setState((prevState) => ({
+        isExtraOpen: !prevState.isExtraOpen
     }));
-
-    setBlockRef = (ref) => this.block = ref;
 
     render() {
         const {extra, color} = this.props;
-        const {contentHeight} = this.state;
-        const contentClass = cn('info-extra__content', {'info-extra__content_open': contentHeight});
-        const contentStyle = {
-            height: contentHeight
-        };
+        const {isExtraOpen} = this.state;
+        const contentClass = cn('info-extra__content', {'info-extra__content_show': isExtraOpen});
         const extraContent = extra.map(({id, text}) => <p key={id}>{text}</p>);
-        const buttonText = contentHeight ? 'Короче' : 'Подробнее';
+        const buttonText = isExtraOpen ? 'Короче' : 'Подробнее';
         return (
             <div className="info-extra">
-                <div className={contentClass} style={contentStyle}>
-                    <div className="info-extra__block" ref={this.setBlockRef}>
+                <Collapse in={isExtraOpen} timeout={800}>
+                    <div className={contentClass}>
                         {extraContent}
                     </div>
-                </div>
+                </Collapse>
                 <ScrollAnimation name="bounceInUp">
-                    <MuiButton variant="raised" kind={color} onClick={this.handleContentHeightToggle}>
+                    <MuiButton variant="raised" kind={color} onClick={this.handleExtraToggle}>
                         {buttonText}
                     </MuiButton>
                 </ScrollAnimation>

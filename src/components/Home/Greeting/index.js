@@ -43,7 +43,7 @@ class Greeting extends Component {
                 <h1 className="greeting__title greeting__title_name">
                     <Typist cursor={{show: false}} startDelay={3000}>я веб-разработчик</Typist>
                 </h1>
-                <h2 className="greeting__subtitle">Front-End Developer / React JS</h2>
+                <h2 className="greeting__subtitle">Frontend Developer / React JS</h2>
                 <div className="greeting__buttons">
                     <MuiButton isMargin variant="raised" kind="blue" style={styles.button} onClick={this.handleGoToPortfolio}>
                         Портфолио

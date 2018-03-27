@@ -33,7 +33,7 @@ const features = [
     },
     {id: 6, text: <span>Следую <strong>современным стандартам</strong> и нахожусь в состоянии <strong>постоянного обучения</strong> (документации, статьи, книги и курсы)</span>},
     {id: 7, text: <span>Испытываю гордость и удовлетворение когда вижу <strong>эффективно работающий</strong> созданный мною проект</span>},
-    {id: 8, text: <span>Работаю в компании <Href href={LINKS.experience.sevenGlyphs} >"7 glyphs"</Href> front-end разработчиком</span>}
+    {id: 8, text: <span>Работаю в компании <Href href={LINKS.experience.sevenGlyphs} >"7 glyphs"</Href> frontend разработчиком</span>}
 ];
 const extra = [
         {id: 1, text: <span>Первое знакомство с веб-разработкой состоялось в 2003 году, когда мне было 13 лет. Проштудировав книгу <Href href={LINKS.bio.book} >"HTML. Экспресс-курс"</Href>, я создал свой первый сайт-презентацию для домашнего задания по информатике, проигнорировав PowerPoint. Это был довольно большой проект на чистом HTML без CSS и JS, единственная интерактивность которого заключалась в ссылках.</span>},

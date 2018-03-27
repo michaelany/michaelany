@@ -12,7 +12,7 @@ const navLinks = [
     {id: 2, title: 'Обо мне', icon: 'person', url: urls.about},
     {id: 3, title: 'Навыки', icon: 'school', url: urls.skills},
     {id: 4, title: 'Опыт', icon: 'work', url: urls.experience},
-    {id: 5, title: 'Портфолио', icon: 'visibility', url: urls.portfolio},
+    {id: 5, title: 'Портфолио', icon: 'web', url: urls.portfolio},
     {id: 6, title: 'Контакты', icon: 'mail', url: urls.contact}
 ];
 

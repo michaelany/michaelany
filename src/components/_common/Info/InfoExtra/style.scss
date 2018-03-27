@@ -1,15 +1,10 @@
 @import 'styles/variables';
 
 .info-extra__content {
-  @include transit(height, $long);
-  overflow: hidden;
-}
-
-.info-extra__block {
-  @include transit(opacity, $long);
+  @include transit(opacity, $longest);
   opacity: 0;
 
-  .info-extra__content_open > & {
+  &_show {
     opacity: 1;
   }
 }

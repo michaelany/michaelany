@@ -53,6 +53,16 @@ img {
   pointer-events: none
 }
 
+.Typist {
+  min-height: 57px;
+  @include md {
+    min-height: 48px;
+  }
+  @include xs {
+    min-height: 39px;
+  }
+}
+
 .slick-list {
   border-radius: 4px;
 }
