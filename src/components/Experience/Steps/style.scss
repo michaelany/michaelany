@@ -2,6 +2,9 @@
 
 .steps__paper {
   @include animate(bounceInRight);
+  @include sm {
+    animation: none;
+  }
 }
 
 .steps__step-content {
