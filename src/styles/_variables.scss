@@ -30,7 +30,6 @@ $white-20: rgba(255, 255, 255, 0.2);
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $sidebar-width: 100px;
 $header-height: 75px;
-$max-page-width: 1800px;
 
 $short: 250ms;
 $standard: 500ms;
@@ -38,6 +37,3 @@ $long: 800ms;
 $longest: 1s;
 
 $ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-$ease-out: cubic-bezier(0.0, 0, 0.2, 1);
-$ease-in: cubic-bezier(0.4, 0, 1, 1);
-$sharp: cubic-bezier(0.4, 0, 0.6, 1);

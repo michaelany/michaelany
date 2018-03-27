@@ -1,4 +1,5 @@
 .page {
+  @include animate(fadeIn);
   padding-left: $sidebar-width;
   height: 100%;
   @include sm {
@@ -15,7 +16,6 @@
 }
 
 .section {
-  @include animate(fadeIn);
   padding: 100px 10%;
   height: 100%;
   @include sm {
