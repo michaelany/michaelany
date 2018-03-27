@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './style.css';
+import ScrollAnimation from '../../../_common/ScrollAnimation';
 import MuiButton from '../../../_common/MuiButton';
 
 export default class InfoExtra extends Component {
@@ -53,9 +54,11 @@ export default class InfoExtra extends Component {
                         {extraContent}
                     </div>
                 </div>
-                <MuiButton variant="raised" kind={color} onClick={this.handleContentHeightToggle}>
-                    {buttonText}
-                </MuiButton>
+                <ScrollAnimation name="bounceInUp">
+                    <MuiButton variant="raised" kind={color} onClick={this.handleContentHeightToggle}>
+                        {buttonText}
+                    </MuiButton>
+                </ScrollAnimation>
             </div>
         );
     }

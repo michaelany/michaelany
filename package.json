@@ -17,6 +17,7 @@
     "react-scripts": "1.1.1",
     "react-slick": "0.20",
     "react-transition-group": "^2.2.1",
+    "react-waypoint": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 
 import './style.css';
+import ScrollAnimation from '../../_common/ScrollAnimation';
 import MuiButton from '../../_common/MuiButton';
 import urls from '../../../utils/urls';
 
@@ -39,9 +40,11 @@ class Description extends Component {
                     <h4 className={subtitleClass}>Дата выхода</h4>
                     <p>{release}</p>
                 </div>
-                <MuiButton variant="raised" kind={color} onClick={this.handleGoToPortfolio}>
-                    Назад
-                </MuiButton>
+                <ScrollAnimation name="bounceInUp">
+                    <MuiButton variant="raised" kind={color} onClick={this.handleGoToPortfolio}>
+                        Назад
+                    </MuiButton>
+                </ScrollAnimation>
             </section>
         );
     }
