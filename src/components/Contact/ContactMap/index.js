@@ -2,7 +2,7 @@ import React from 'react';
 import {Map, Marker} from 'google-maps-react';
 
 import './style.css';
-import marker from './marker.svg';
+import marker from './marker.png';
 import mapStyles from '../../../utils/mapStyles';
 
 const initialCenter = {

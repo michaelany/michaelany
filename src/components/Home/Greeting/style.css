@@ -72,4 +72,5 @@
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-direction: normal;
   animation-iteration-count: 1;
+  transform: translate3d(0, 3000px, 0);
   opacity: 0; }
