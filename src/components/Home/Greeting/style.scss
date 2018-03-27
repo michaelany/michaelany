@@ -1,21 +1,59 @@
 @import 'styles/variables';
 
-.greeting__hello {
-  margin-bottom: 0;
-}
-
 .greeting__title {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: 300;
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 900;
+  @include md {
+    font-size: 44px;
+  }
+  @include xs {
+    font-size: 36px;
+  }
+
+  &_name {
+    font-weight: 300;
+  }
 }
 
 .greeting__subtitle {
+  @include animate(bounceInLeft, $long, 4500ms);
+  opacity: 0;
+  position: relative;
+  font-size: 30px;
+  color: $black-60;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-top: 20px;
   margin-bottom: 20px;
+  @include md {
+    font-size: 26px;
+  }
+  @include xs {
+    font-size: 22px;
+  }
+}
+
+.greeting__name {
+  display: inline-block;
+  opacity: 0;
+
+  &_first {
+    @include animate(bounceIn, $long, 1800ms);
+  }
+
+  &_last {
+    @include animate(bounceIn, $long, 2200ms);
+  }
 }
 
 .greeting__letter {
   @include animate(variousColors, 10s, 0ms, infinite);
   font-weight: 900;
+}
+
+.greeting__buttons {
+  @include animate(bounceInUp, $long, 5s);
+  opacity: 0;
 }
 
