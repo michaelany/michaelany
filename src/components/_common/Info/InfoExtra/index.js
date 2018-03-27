@@ -17,13 +17,9 @@ export default class InfoExtra extends Component {
         color: PropTypes.string.isRequired
     };
 
-    handleExtraOpen = () => this.setState({
-        isExtraOpen: true
-    });
-
-    handleExtraClose = () => this.setState({
-        isExtraOpen: false
-    });
+    handleExtraToggle = () => this.setState((prevState) => ({
+        isExtraOpen: !prevState.isExtraOpen
+    }));
 
     render() {
         const {extra, color} = this.props;
@@ -39,14 +35,7 @@ export default class InfoExtra extends Component {
                     </div>
                 </Collapse>
                 <ScrollAnimation name="bounceInUp">
-                    <MuiButton
-                        variant="raised"
-                        kind={color}
-                        onClick={isExtraOpen
-                            ? this.handleExtraClose
-                            : this.handleExtraOpen
-                        }
-                    >
+                    <MuiButton variant="raised" kind={color} onClick={this.handleExtraToggle}>
                         {buttonText}
                     </MuiButton>
                 </ScrollAnimation>
