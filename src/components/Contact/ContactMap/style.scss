@@ -1,8 +1,8 @@
 @import 'styles/variables';
 
 .contact-map {
-  @include animate(vanishIn, $long, 400ms);
-  opacity: 0;
+  @include animate(bounceInRight, $long, 400ms);
+  transform: translate3d(3000px, 0, 0);
   position: relative;
   height: 100%;
   @include sm {

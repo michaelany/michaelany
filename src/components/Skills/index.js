@@ -27,8 +27,9 @@ const abilities = [
         subItems: [
             {id: 1, text: <span><strong>Material-UI</strong> (для React-приложений)</span>},
             {id: 2, text: <strong>Bootstrap</strong>},
-            {id: 3, text: <span>Есть опыт работы с <strong>Semantic-UI</strong></span>},
-            {id: 4, text: <span><strong>Foundation for Emails</strong> (для верстки писем)</span>},
+            {id: 3, text: <strong>Materialize</strong>},
+            {id: 4, text: <span>Есть опыт работы с <strong>Semantic-UI</strong></span>},
+            {id: 5, text: <span><strong>Foundation for Emails</strong> (для верстки писем)</span>},
         ]
     },
     {id: 11, text: <span>Знаю основы <strong>PHP</strong>, есть опыт работы с <strong>Laravel</strong></span>},

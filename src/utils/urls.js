@@ -35,6 +35,7 @@ export const LINKS = {
         cssModules: 'https://github.com/css-modules',
         materialUI: 'https://material-ui-next.com',
         bootstrap: 'https://getbootstrap.com',
+        materialize: 'http://materializecss.com',
         semanticUI: 'https://semantic-ui.com',
         foundationForEmails: 'https://foundation.zurb.com/emails.html',
         javascript: 'https://www.javascript.com',

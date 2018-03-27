@@ -31,6 +31,8 @@ import materialUI from './material-ui.jpg';
 import materialUI2x from './material-ui@2x.jpg';
 import bootstrap from './bootstrap.jpg';
 import bootstrap2x from './bootstrap@2x.jpg';
+import materialize from './materialize.jpg';
+import materialize2x from './materialize@2x.jpg';
 import semanticUI from './semantic-ui.jpg';
 import semanticUI2x from './semantic-ui@2x.jpg';
 import foundationForEmails from './foundation-for-emails.jpg';
@@ -98,8 +100,9 @@ const technologyGroups = [
             {id: 4, title: 'CSS Modules', img: [cssModules, cssModules2x], url: LINKS.technologies.cssModules},
             {id: 5, title: 'Material-UI', img: [materialUI, materialUI2x], url: LINKS.technologies.materialUI},
             {id: 6, title: 'Bootstrap', img: [bootstrap, bootstrap2x], color: 'violet', url: LINKS.technologies.bootstrap},
-            {id: 7, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
-            {id: 8, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'red', url: LINKS.technologies.foundationForEmails}
+            {id: 7, title: 'Materialize', img: [materialize, materialize2x], color: 'red', url: LINKS.technologies.materialize},
+            {id: 8, title: 'Semantic UI', img: [semanticUI, semanticUI2x], color: 'green', url: LINKS.technologies.semanticUI},
+            {id: 9, title: 'Foundation for Emails', img: [foundationForEmails, foundationForEmails2x], color: 'red', url: LINKS.technologies.foundationForEmails}
         ]
     },
     {
