@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
+import Typist from 'react-typist';
 
 import './style.css';
 import ScrollAnimation from '../../_common/ScrollAnimation';
@@ -25,14 +26,16 @@ class Description extends Component {
         const subtitleClass = `description__subtitle description__subtitle_color_${color}`;
         return (
             <section className="description section section_first">
-                <h2 className={`title title_color_${color}`}>{title}</h2>
+                <h2 className={`title title_color_${color}`}>
+                    <Typist startDelay={200}>{title}</Typist>
+                </h2>
                 <h3 className="subtitle">{subtitle}</h3>
                 <div className="description__block">
                     {description.map(({id, text}) => <p key={id}>{text}</p>)}
                 </div>
                 <div className="description__block">
                     <h4 className={subtitleClass}>Технологии</h4>
-                    <ul className="list">
+                    <ul className="list list_project">
                         {technologies.map((technology) => <li key={technology} className="list-item">{technology}</li>)}
                     </ul>
                 </div>

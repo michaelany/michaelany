@@ -1,19 +1,23 @@
 import React from 'react';
-import Grid from 'material-ui/Grid';
+import Tilt from 'react-tilt';
 
 import './style.css';
 import mac from './mac.png';
+import mac2x from './mac@2x.png';
 
-const styles = {
-    gridContainer: {
-        height: '33.3%'
-    }
+const options = {
+    max: 60,
+    scale: 1,
+    speed: 3000,
+    reset: false
 };
 
 export default function Poster() {
     return (
         <section className="poster section f fd-c jc-c">
-
+            <Tilt {...{options}} easing="cubic-bezier(0.4, 0, 0.2, 1)">
+                <img className="poster__image" src={mac} srcSet={`${mac2x} 2x`} alt="Mac" />
+            </Tilt>
         </section>
     );
 }

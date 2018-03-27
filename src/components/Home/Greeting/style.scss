@@ -17,7 +17,7 @@
 }
 
 .greeting__subtitle {
-  @include animate(bounceInLeft, $long, 4500ms);
+  @include animate(bounceInLeft, $long, 4s);
   opacity: 0;
   position: relative;
   font-size: 30px;
@@ -53,7 +53,7 @@
 }
 
 .greeting__buttons {
-  @include animate(bounceInUp, $long, 5s);
+  @include animate(bounceInUp, $long, 4500ms);
   opacity: 0;
 }
 

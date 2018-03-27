@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Typist from 'react-typist';
 
 import './style.css';
 import InfoExtra from './InfoExtra';
@@ -28,7 +29,9 @@ const renderSubItems = (subItems) => subItems.map(({id, text}) => (
 export default function Info({title, subtitle, color, items, extra = null}) {
     return (
         <section className="info section section_first">
-            <h2 className={`title title_color_${color}`}>{title}</h2>
+            <h2 className={`title title_color_${color}`}>
+                <Typist startDelay={200}>{title}</Typist>
+            </h2>
             <h3 className="subtitle">{subtitle}</h3>
             <ul className="list">
                 {renderItems(items)}

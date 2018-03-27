@@ -1,4 +1,5 @@
 @import url(~slick-carousel/slick/slick.css);
+@import url(~react-typist/dist/Typist.css);
 @keyframes fadeIn {
   from {
     opacity: 0; }
@@ -66,17 +67,13 @@
   to {
     transform: translate3d(0, 0, 0); } }
 
-@keyframes vanishIn {
-  0% {
+@keyframes rollIn {
+  from {
     opacity: 0;
-    transform-origin: 50% 50%;
-    transform: scale(2, 2);
-    filter: blur(90px); }
-  100% {
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg); }
+  to {
     opacity: 1;
-    transform-origin: 50% 50%;
-    transform: scale(1, 1);
-    filter: blur(0px); } }
+    transform: translate3d(0, 0, 0); } }
 
 @keyframes twisterInUp {
   0% {
@@ -256,13 +253,6 @@
   height: calc(100vh - 200px); }
 
 .title {
-  animation-name: bounceInLeft;
-  animation-duration: 800ms;
-  animation-delay: 0ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: normal;
-  animation-iteration-count: 1;
   font-size: 52px;
   line-height: 1.1;
   font-weight: 900;
@@ -291,7 +281,7 @@
 .subtitle {
   animation-name: fadeIn;
   animation-duration: 800ms;
-  animation-delay: 300ms;
+  animation-delay: 600ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-direction: normal;
@@ -325,7 +315,7 @@
 .list {
   animation-name: fadeIn;
   animation-duration: 1s;
-  animation-delay: 600ms;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-direction: normal;
@@ -334,6 +324,9 @@
   padding-left: 20px;
   list-style-type: disc;
   margin-bottom: 20px; }
+  .list_project {
+    opacity: 1;
+    animation: 0; }
 
 .list-item {
   margin-bottom: 10px; }
@@ -391,10 +384,6 @@ address {
 img {
   pointer-events: none; }
 
-* {
-  min-height: 0;
-  min-width: 0; }
-
 .slick-list {
   border-radius: 4px; }
 
@@ -405,3 +394,7 @@ img {
   margin-top: 10px;
   display: flex !important;
   justify-content: center; }
+
+* {
+  min-height: 0;
+  min-width: 0; }

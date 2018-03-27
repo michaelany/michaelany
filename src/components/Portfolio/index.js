@@ -1,4 +1,5 @@
 import React from 'react';
+import Typist from 'react-typist';
 import Grid from 'material-ui/Grid';
 
 import './style.css';
@@ -26,7 +27,9 @@ export default function Portfolio() {
     return (
         <div className="portfolio page page_bg-color_blue">
             <section className="portfolio__section">
-                <h2 className="title title_color_white">Портфолио</h2>
+                <h2 className="title title_color_white">
+                    <Typist startDelay={200}>Портфолио</Typist>
+                </h2>
                 <div>
                     <Grid container component="ul" className="portfolio__list" spacing={0} style={STYLES.mainGridContainer}>
                         {renderProjects()}

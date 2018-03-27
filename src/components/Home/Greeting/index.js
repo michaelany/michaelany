@@ -25,12 +25,12 @@ class Greeting extends Component {
     render() {
         return (
             <section className="greeting section section_first f fd-c jc-c">
-                <Typist cursor={{show: false}}>
-                    <div className="greeting__title">Привет,</div>
-                </Typist>
-                <Typist cursor={{show: false}} startDelay={1000}>
-                    <h1 className="greeting__title greeting__title_name">меня зовут</h1>
-                </Typist>
+                <div className="greeting__title">
+                    <Typist startDelay={200}>Привет,</Typist>
+                </div>
+                <h1 className="greeting__title greeting__title_name">
+                    <Typist cursor={{show: false}} startDelay={1000}>меня зовут</Typist>
+                </h1>
                 <h1 className="greeting__title greeting__title_name">
                     <span className="greeting__name greeting__name_first">
                         <span className="greeting__letter">М</span>ихаил
@@ -40,9 +40,9 @@ class Greeting extends Component {
                         <span className="greeting__letter">А</span>наньев,
                     </span>
                 </h1>
-                <Typist cursor={{show: false}} startDelay={3200}>
-                    <h1 className="greeting__title greeting__title_name">я веб-разработчик</h1>
-                </Typist>
+                <h1 className="greeting__title greeting__title_name">
+                    <Typist cursor={{show: false}} startDelay={3000}>я веб-разработчик</Typist>
+                </h1>
                 <h2 className="greeting__subtitle">Front-End Developer / React JS</h2>
                 <div className="greeting__buttons">
                     <MuiButton isMargin variant="raised" kind="blue" style={styles.button} onClick={this.handleGoToPortfolio}>

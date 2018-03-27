@@ -1,6 +1,6 @@
 {
   "name": "mclananiev",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Michael Ananiev | https://github.com/vashstamp",
   "private": true,
   "dependencies": {
@@ -16,6 +16,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-slick": "0.20",
+    "react-tilt": "^0.1.4",
     "react-transition-group": "^2.2.1",
     "react-typist": "^2.0.4",
     "react-waypoint": "^8.0.1",

@@ -1,4 +1,5 @@
 import React from 'react';
+import Typist from 'react-typist';
 import Grid from 'material-ui/Grid';
 
 import './style.css';
@@ -24,7 +25,9 @@ export default function Contact() {
             <Grid container spacing={0} style={STYLES.mainGridContainer}>
                 <Grid item xs={12} md={6}>
                     <section className="section section_first">
-                        <h2 className="title title_color_white">Контакты</h2>
+                        <h2 className="title title_color_white">
+                            <Typist startDelay={200}>Контакты</Typist>
+                        </h2>
                         <h3 className="contact__subtitle subtitle subtitle_black">Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне письмо на <a className="link link_white" href={LINKS.contacts.email}>mclananiev@gmail.com</a></h3>
                         <SocialLinks {...{links}} />
                     </section>

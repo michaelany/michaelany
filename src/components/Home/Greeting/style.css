@@ -14,7 +14,7 @@
 .greeting__subtitle {
   animation-name: bounceInLeft;
   animation-duration: 800ms;
-  animation-delay: 4500ms;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-direction: normal;
@@ -67,7 +67,7 @@
 .greeting__buttons {
   animation-name: bounceInUp;
   animation-duration: 800ms;
-  animation-delay: 5s;
+  animation-delay: 4500ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-direction: normal;

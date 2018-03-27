@@ -4,3 +4,15 @@
   @include animate(variousBackgroundColors, 10s, 0ms, infinite);
   height: 100%;
 }
+
+.poster__image {
+  @include animate(fadeIn, $long, 200ms);
+  opacity: 0;
+  position: relative;
+  max-width: 100%;
+
+  @include sm {
+    animation: none;
+    opacity: 1;
+  }
+}

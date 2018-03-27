@@ -1,4 +1,5 @@
 @import '~slick-carousel/slick/slick.css';
+@import '~react-typist/dist/Typist.css';
 
 @import 'variables';
 @import 'animations';
@@ -52,12 +53,6 @@ img {
   pointer-events: none
 }
 
-//for react-slick
-* {
-  min-height: 0;
-  min-width: 0;
-}
-
 .slick-list {
   border-radius: 4px;
 }
@@ -70,4 +65,10 @@ img {
   margin-top: 10px;
   display: flex !important;
   justify-content: center;
+}
+
+//for react-slick
+* {
+  min-height: 0;
+  min-width: 0;
 }

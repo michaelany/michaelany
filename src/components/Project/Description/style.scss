@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .description__block {
-  @include animate(fadeIn, $longest, 600ms);
+  @include animate(fadeIn, $longest, 800ms);
   opacity: 0;
   margin-bottom: 40px;
 }
