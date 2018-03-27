@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import Collapse from 'material-ui/transitions/Collapse';
 
 import './style.css';
@@ -27,15 +28,25 @@ export default class InfoExtra extends Component {
     render() {
         const {extra, color} = this.props;
         const {isExtraOpen} = this.state;
+        const contentClass = cn('info-extra__content', {'info-extra__content_show': isExtraOpen});
         const extraContent = extra.map(({id, text}) => <p key={id}>{text}</p>);
         const buttonText = isExtraOpen ? 'Короче' : 'Подробнее';
         return (
             <div className="info-extra">
                 <Collapse in={isExtraOpen} timeout={800}>
-                    {extraContent}
+                    <div className={contentClass}>
+                        {extraContent}
+                    </div>
                 </Collapse>
                 <ScrollAnimation name="bounceInUp">
-                    <MuiButton variant="raised" kind={color} onClick={isExtraOpen ? this.handleExtraClose : this.handleExtraOpen}>
+                    <MuiButton
+                        variant="raised"
+                        kind={color}
+                        onClick={isExtraOpen
+                            ? this.handleExtraClose
+                            : this.handleExtraOpen
+                        }
+                    >
                         {buttonText}
                     </MuiButton>
                 </ScrollAnimation>

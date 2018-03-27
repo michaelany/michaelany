@@ -1,0 +1,10 @@
+@import 'styles/variables';
+
+.info-extra__content {
+  @include transit(opacity, $longest);
+  opacity: 0;
+
+  &_show {
+    opacity: 1;
+  }
+}
