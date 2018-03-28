@@ -1,14 +1,5 @@
 @import 'styles/variables';
 
-.assets__slider {
-  @include animate(fadeIn, $long, 200ms);
-  opacity: 0;
-  @include sm {
-    animation: none;
-    opacity: 1;
-  }
-}
-
 .assets__image {
   height: 100%;
   margin: auto;
@@ -30,11 +21,5 @@
 }
 
 .assets__buttons {
-  @include animate(bounceIn, $long, 1000ms);
-  opacity: 0;
   margin-top: 30px;
-  @include sm {
-    animation: none;
-    opacity: 1;
-  }
 }

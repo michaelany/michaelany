@@ -9,6 +9,7 @@ import './style.css';
 import Arrow from './Arrow';
 import ResponsiveBlock from '../../_common/ResponsiveBlock';
 import MuiButton from '../../_common/MuiButton';
+import ScrollAnimation from '../../_common/ScrollAnimation';
 
 const styles = {
     iconButton: {
@@ -79,14 +80,18 @@ const renderButton = (type, url, isMargin, isPdf = false) => {
 export default function Assets({title, color, images, url = '', pdf = ''}) {
     return (
         <section className={`assets section section_bg-color_${color}`}>
-            <Slider className="assets__slider" {...settings}>
-                {renderImages(images, title)}
-            </Slider>
+            <ScrollAnimation name="bounceInUp">
+                <Slider {...settings}>
+                    {renderImages(images, title)}
+                </Slider>
+            </ScrollAnimation>
             {(url || pdf) && (
-                <div className="assets__buttons f jc-c">
-                    {url && renderButton('проект', url, Boolean(pdf))}
-                    {pdf && renderButton('Бизнес-план', pdf, false, true)}
-                </div>
+                <ScrollAnimation name="bounceIn" delay={200} offset={0}>
+                    <div className="assets__buttons f jc-c">
+                        {url && renderButton('проект', url, Boolean(pdf))}
+                        {pdf && renderButton('Бизнес-план', pdf, false, true)}
+                    </div>
+                </ScrollAnimation>
             )}
         </section>
     );

@@ -4,7 +4,6 @@
   animation-delay: 0ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: normal;
   animation-iteration-count: infinite;
   height: 100%; }
 
@@ -14,7 +13,6 @@
   animation-delay: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: normal;
   animation-iteration-count: 1;
   opacity: 0;
   position: relative;

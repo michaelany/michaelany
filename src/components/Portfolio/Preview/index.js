@@ -37,7 +37,12 @@ class Preview extends Component {
     render() {
         const {name, title} = this.props;
         return (
-            <Button className="preview" component="a" role="link" style={styles.button} onClick={this.handleGoToProject}>
+            <Button
+                className="preview"
+                component="a"
+                role="link" style={styles.button}
+                onClick={this.handleGoToProject}
+            >
                 <ResponsiveBlock>
                     <div
                         className={`preview__image preview__image_name_${name}`}
