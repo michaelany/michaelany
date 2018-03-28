@@ -17,7 +17,6 @@
   animation-delay: 4s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: normal;
   animation-iteration-count: 1;
   opacity: 0;
   position: relative;
@@ -43,7 +42,6 @@
     animation-delay: 1800ms;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-direction: normal;
     animation-iteration-count: 1; }
   .greeting__name_last {
     animation-name: bounceIn;
@@ -51,7 +49,6 @@
     animation-delay: 2200ms;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-direction: normal;
     animation-iteration-count: 1; }
 
 .greeting__letter {
@@ -60,7 +57,6 @@
   animation-delay: 0ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: normal;
   animation-iteration-count: infinite;
   font-weight: 900; }
 
@@ -70,7 +66,6 @@
   animation-delay: 4500ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: normal;
   animation-iteration-count: 1;
   transform: translate3d(0, 3000px, 0);
   opacity: 0; }

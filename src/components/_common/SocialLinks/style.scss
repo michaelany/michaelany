@@ -7,25 +7,6 @@
 
 .social-links__item {
   position: relative;
-  opacity: 0;
-
-  &:first-child {
-    @include animate(bounceIn, $long, 400ms);
-  }
-
-  &:nth-child(2) {
-    @include animate(bounceIn, $long, 500ms);
-
-  }
-
-  &:nth-child(3) {
-    @include animate(bounceIn, $long, 600ms);
-
-  }
-
-  &:last-child {
-    @include animate(bounceIn, $long, 700ms);
-  }
 
   .social-links_round > &:first-child {
     top: -29px;

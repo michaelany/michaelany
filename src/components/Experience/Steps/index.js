@@ -6,6 +6,7 @@ import Icon from 'material-ui/Icon';
 
 import './style.css';
 import MuiButton from '../../_common/MuiButton';
+import ScrollAnimation from '../../_common/ScrollAnimation';
 
 const steps = [
     {id: 1, title: 'Октябрь 2008 - май 2010', content: <span>Работал <strong>инженером технической поддержки</strong> в компании "М.Видео".</span>},
@@ -67,19 +68,21 @@ export default class  extends Component {
         const {activeStep} = this.state;
         return (
             <section className="steps section section_bg-color_violet">
-                <Paper className="steps__paper" elevation={1}>
-                    <Stepper activeStep={activeStep} orientation="vertical">
-                        {this.renderSteps()}
-                    </Stepper>
-                    {activeStep === steps.length && (
-                        <div className="steps__refresh">
-                            <p>Таков мой <strong>опыт работы</strong> на данный момент в ключевых этапах.</p>
-                            <MuiButton className="steps__button" variant="fab" kind="violet" onClick={this.handleStepReset}>
-                                <Icon className="steps__refresh-icon">refresh</Icon>
-                            </MuiButton>
-                        </div>
-                    )}
-                </Paper>
+                <ScrollAnimation name="bounceInUp">
+                    <Paper elevation={1}>
+                        <Stepper activeStep={activeStep} orientation="vertical">
+                            {this.renderSteps()}
+                        </Stepper>
+                        {activeStep === steps.length && (
+                            <div className="steps__refresh">
+                                <p>Таков мой <strong>опыт работы</strong> на данный момент в ключевых этапах.</p>
+                                <MuiButton className="steps__button" variant="fab" kind="violet" onClick={this.handleStepReset}>
+                                    <Icon className="steps__refresh-icon">refresh</Icon>
+                                </MuiButton>
+                            </div>
+                        )}
+                    </Paper>
+                </ScrollAnimation>
             </section>
         );
     }

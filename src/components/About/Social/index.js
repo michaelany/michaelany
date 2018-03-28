@@ -11,6 +11,7 @@ import LinkedInIcon from '../../_icons/LinkedInIcon';
 import GlyphsIcon from '../../_icons/GlyphsIcon';
 import VKIcon from '../../_icons/VKIcon';
 import SocialLinks from '../../_common/SocialLinks';
+import ScrollAnimation from '../../_common/ScrollAnimation';
 import {LINKS} from "../../../utils/urls";
 
 const links = [
@@ -31,10 +32,10 @@ export default function Social() {
     return (
         <section className="social section section_bg-color_green">
             <div className="f fd-c ai-c jc-c">
-                <div className="social__avatar">
+                <ScrollAnimation className="social__avatar" name="rollIn">
                     <Avatar src={me} srcSet={`${me2x} 2x`} style={styles.avatar} />
                     <Avatar className="social__secret" src={meSmile} srcSet={`${meSmile2x} 2x`} style={styles.avatar} />
-                </div>
+                </ScrollAnimation>
                 <SocialLinks isRound {...{links}} />
             </div>
         </section>

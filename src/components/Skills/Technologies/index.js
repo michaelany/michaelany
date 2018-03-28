@@ -73,6 +73,7 @@ import imageOptim from './image-optim.jpg';
 import imageOptim2x from './image-optim@2x.jpg';
 import Technology from './Technology';
 import ResponsiveBlock from '../../_common/ResponsiveBlock';
+import ScrollAnimation from '../../_common/ScrollAnimation';
 import {STYLES} from '../../../styles/muiTheme';
 import {LINKS} from '../../../utils/urls';
 
@@ -168,9 +169,11 @@ const renderTechnologyGroups = () => technologyGroups.map(({id, title, technolog
 
 const renderTechnologies = (technologies) => technologies.map(({id, ...props}) => (
     <Grid key={id} item component="li" xs={6} sm={3} md={4} lg={3}>
-        <ResponsiveBlock>
-            <Technology {...props} />
-        </ResponsiveBlock>
+        <ScrollAnimation name="bounceIn">
+            <ResponsiveBlock>
+                <Technology {...props} />
+            </ResponsiveBlock>
+        </ScrollAnimation>
     </Grid>
 ));
 

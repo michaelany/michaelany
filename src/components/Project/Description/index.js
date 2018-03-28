@@ -43,7 +43,7 @@ class Description extends Component {
                     <h4 className={subtitleClass}>Дата выхода</h4>
                     <p>{release}</p>
                 </div>
-                <ScrollAnimation name="bounceInUp">
+                <ScrollAnimation name="bounceInUp" offset={0}>
                     <MuiButton variant="raised" kind={color} onClick={this.handleGoToPortfolio}>
                         Назад
                     </MuiButton>

@@ -24,7 +24,7 @@ export default class ScrollAnimation extends Component {
         className: '',
         duration: 800,
         delay: 0,
-        offset: 0,
+        offset: 100,
         enterFunction: null
     };
 

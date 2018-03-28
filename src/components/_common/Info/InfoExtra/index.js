@@ -4,7 +4,7 @@ import cn from 'classnames';
 import Collapse from 'material-ui/transitions/Collapse';
 
 import './style.css';
-import ScrollAnimation from '../../../_common/ScrollAnimation';
+import ScrollAnimation from '../../ScrollAnimation';
 import MuiButton from '../../../_common/MuiButton';
 
 export default class InfoExtra extends Component {
@@ -34,7 +34,7 @@ export default class InfoExtra extends Component {
                         {extraContent}
                     </div>
                 </Collapse>
-                <ScrollAnimation name="bounceInUp">
+                <ScrollAnimation name="bounceInUp" offset={0}>
                     <MuiButton variant="raised" kind={color} onClick={this.handleExtraToggle}>
                         {buttonText}
                     </MuiButton>

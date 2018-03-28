@@ -1,6 +1,11 @@
+@import 'styles/variables';
+
 .info__sublist {
-  padding-left: 40px;
+  padding-left: 35px;
   list-style-type: circle;
+  @include md {
+    padding-left: 30px;
+  }
 }
 
 .info__sub-item {
