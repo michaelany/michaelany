@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
 
@@ -18,6 +18,8 @@ import urls from '../../utils/urls';
 
 const theme = createMuiTheme(muiTheme);
 
+const renderEmptyPage = () => <Redirect to={urls.home} />;
+
 export default function App() {
     return (
         <HashRouter>
@@ -35,7 +37,7 @@ export default function App() {
                                 <Route exact path={urls.portfolio} component={Portfolio} />
                                 <Route exact path={`${urls.portfolio}/:project`} component={Project} />
                                 <Route exact path={urls.contact} component={Contact} />
-                                <Route render={() => <h1>Error</h1>} />
+                                <Route render={renderEmptyPage} />
                             </Switch>
                         </main>
                     </div>

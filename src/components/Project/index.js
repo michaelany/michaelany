@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Redirect} from 'react-router-dom';
 import Grid from 'material-ui/Grid';
 
 import msp from './msp.jpg';
@@ -79,7 +80,7 @@ import Description from './Description';
 import Assets from './Assets';
 import Href from '../_common/Href';
 import {STYLES} from '../../styles/muiTheme';
-import {LINKS} from '../../utils/urls';
+import urls, {LINKS} from '../../utils/urls';
 
 const projects = [
     {
@@ -262,6 +263,8 @@ Project.propTypes = {
 
 export default function Project({match}) {
     const project = projects.find(({name}) => name === match.params.project);
+    if (!project) return <Redirect to={urls.portfolio} />;
+
     const {title, subtitle, description, technologies, release, color, images, url, pdf} = project;
     return (
         <div className="project page">
