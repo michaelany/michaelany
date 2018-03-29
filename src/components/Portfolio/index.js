@@ -6,7 +6,7 @@ import './style.css';
 import Preview from './Preview';
 import {STYLES} from '../../styles/muiTheme';
 
-const projects = [
+let projects = [
     {id: 1, name: 'msp', title: 'Бизнес-навигатор МСП'},
     {id: 2, name: '7-glyphs', title: '7 Glyphs'},
     {id: 3, name: 'lazy-az', title: 'LazyAz'},
@@ -15,7 +15,7 @@ const projects = [
     {id: 6, name: '12-saffron', title: '12 Saffron'},
     {id: 7, name: 'fcdc-dashboard', title: 'FCDC Dashboard'},
     {id: 8, name: 'service-packages', title: 'Service Packages'}
-];
+].reverse();
 
 const renderProjects = () => projects.map(({id, ...props}) => (
     <Grid key={id} item className="portfolio__item" component="li" xs={12} sm={6} md={4} lg={3}>
