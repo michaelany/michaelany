@@ -6,42 +6,41 @@ import Reboot from 'material-ui/Reboot';
 
 import './style.css';
 import Panel from '../Panel';
+import Loading from '../_common/Loading';
 import ScrollToTop from '../_common/ScrollToTop';
 import muiTheme from '../../styles/muiTheme';
 import urls from '../../utils/urls';
 
-const Loading = () => <div>Loading...</div>;
+const theme = createMuiTheme(muiTheme);
 
 const Home = Loadable({
     loader: () => import('../Home'),
-    loading: Loading,
+    loading: Loading
 });
 const About = Loadable({
     loader: () => import('../About'),
-    loading: Loading,
+    loading: () => <Loading color="green" />
 });
 const Skills = Loadable({
     loader: () => import('../Skills'),
-    loading: Loading,
+    loading: () => <Loading color="blue" />
 });
 const Experience = Loadable({
     loader: () => import('../Experience'),
-    loading: Loading,
+    loading: () => <Loading color="violet" />
 });
 const Portfolio = Loadable({
     loader: () => import('../Portfolio'),
-    loading: Loading,
+    loading: () => <Loading color="blue" />
 });
 const Project = Loadable({
     loader: () => import('../Project'),
-    loading: Loading,
+    loading: () => <Loading color="blue" />
 });
 const Contact = Loadable({
     loader: () => import('../Contact'),
-    loading: Loading,
+    loading: () => <Loading color="green" />
 });
-
-const theme = createMuiTheme(muiTheme);
 
 const renderEmptyPage = () => <Redirect to={urls.home} />;
 
