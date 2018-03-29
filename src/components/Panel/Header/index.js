@@ -62,7 +62,7 @@ class Header extends Component {
                         onClick={this.handleDrawerClose}
                         onKeyDown={this.handleDrawerClose}
                     >
-                        <Navigation />
+                        <Navigation isDrawer />
                     </div>
                 </SwipeableDrawer>
             </header>

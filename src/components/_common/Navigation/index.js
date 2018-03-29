@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import Tooltip from 'material-ui/Tooltip';
 import Button from 'material-ui/Button';
@@ -16,29 +17,34 @@ const navLinks = [
     {id: 6, title: 'Контакты', icon: 'mail', url: urls.contact}
 ];
 
-const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
-    <li key={id}>
-        <Tooltip
-            {...{title}}
-            disableTouchListener
-            placement="right"
-            enterDelay={300}
-            leaveDelay={100}
-        >
-            <Button fullWidth component="div" role="link" tabIndex="-1">
-                <NavLink exact={url !== urls.portfolio} className="navigation__link fb-100" activeClassName="navigation__link_active" to={url}>
-                    <Icon>{icon}</Icon>
-                </NavLink>
-            </Button>
-        </Tooltip>
-    </li>
-));
+Navigation.propTypes = {
+    isDrawer: PropTypes.bool
+};
 
-export default function Navigation() {
+const renderLinks = (isDrawer) => navLinks.map(({id, title, url, icon}) => {
+    const link = (
+        <Button fullWidth component="div" role="link" tabIndex="-1">
+            <NavLink exact={url !== urls.portfolio} className="navigation__link fb-100" activeClassName="navigation__link_active" to={url}>
+                <Icon>{icon}</Icon>
+            </NavLink>
+        </Button>
+    );
+    return (
+        <li key={id}>
+            {!isDrawer ? (
+                <Tooltip {...{title}} placement="right" enterDelay={300} leaveDelay={100}>
+                    {link}
+                </Tooltip>
+            ) : link}
+        </li>
+    );
+});
+
+export default function Navigation({isDrawer = false}) {
     return (
         <nav className="navigation">
             <ul>
-                {renderLinks()}
+                {renderLinks(isDrawer)}
             </ul>
         </nav>
     );
