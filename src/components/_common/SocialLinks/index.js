@@ -19,7 +19,13 @@ export default function SocialLinks({links, isRound = false}) {
             {links.map(({id, title, icon, url, placement}, index) => (
                 <li key={id} className="social-links__item">
                     <ScrollAnimation name="bounceIn" offset={0} delay={100 + 100 * index}>
-                        <Tooltip disableTouchListener {...{title, placement}} enterDelay={300} leaveDelay={100}>
+                        <Tooltip
+                            {...{title, placement}}
+                            disableFocusListener
+                            disableTouchListener
+                            enterDelay={300}
+                            leaveDelay={100}
+                        >
                             <MuiButton
                                 variant="fab"
                                 kind="white"

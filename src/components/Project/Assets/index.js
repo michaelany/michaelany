@@ -61,7 +61,14 @@ const renderImages = (images, title) => images.map(image => (
 const renderButton = (type, url, isMargin, isPdf = false) => {
     const icon = isPdf ? 'picture_as_pdf' : 'launch';
     return (
-        <Tooltip disableTouchListener title={`Открыть ${type}`} placement="bottom" enterDelay={300} leaveDelay={100}>
+        <Tooltip
+            disableFocusListener
+            disableTouchListener
+            title={`Открыть ${type}`}
+            placement="bottom"
+            enterDelay={300}
+            leaveDelay={100}
+        >
             <MuiButton
                 {...{isMargin}}
                 variant="fab"
