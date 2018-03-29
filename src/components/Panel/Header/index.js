@@ -44,10 +44,10 @@ class Header extends Component {
         return (
             <header className={getPanelClass('header', pathname)}>
                 <div className="f jc-sb">
-                    <Logo panel="header" />
                     <IconButton style={styles.iconButton} onClick={this.handleDrawerOpen}>
                         <Icon style={styles.icon}>menu</Icon>
                     </IconButton>
+                    <Logo panel="header" />
                 </div>
                 <SwipeableDrawer
                     anchor="left"
