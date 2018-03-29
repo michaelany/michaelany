@@ -20,7 +20,7 @@ export const LINKS = {
     },
     contacts: {
         email: 'mailto:mclananiev@gmail.com',
-        skype: 'skype:claudio.calautti?userinfo'
+        skype: 'skype:live:bd80acb1b9083867?userinfo'
     },
     technologies: {
         html: 'https://www.w3.org/html',
