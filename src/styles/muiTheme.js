@@ -19,7 +19,7 @@ export const COLORS = {
 const breakpoints = {
     xs: '@media (max-width: 599px)',
     sm: '@media (max-width: 959px)',
-    md: '@media (max-width: 1279px)',
+    md: '@media (max-width: 1279px)'
 };
 
 export const STYLES = {
@@ -86,15 +86,13 @@ export default {
                 borderRadius: 4
             }
         },
-        MuiStepPosition: {
-            active: {
-                color: COLORS.blue
-            }
-        },
         MuiStepIcon: {
+            active: {
+                fill: COLORS.blue
+            },
             completed: {
-                color: COLORS.blue
-            }
+                fill: COLORS.grass
+            },
         },
         MuiTooltip: {
             tooltip: {
