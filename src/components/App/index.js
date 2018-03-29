@@ -1,20 +1,45 @@
 import React from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
 
 import './style.css';
 import Panel from '../Panel';
-import Home from '../Home';
-import About from '../About';
-import Skills from '../Skills';
-import Experience from '../Experience';
-import Portfolio from '../Portfolio';
-import Project from '../Project';
-import Contact from '../Contact';
 import ScrollToTop from '../_common/ScrollToTop';
 import muiTheme from '../../styles/muiTheme';
 import urls from '../../utils/urls';
+
+const Loading = () => <div>Loading...</div>;
+
+const Home = Loadable({
+    loader: () => import('../Home'),
+    loading: Loading,
+});
+const About = Loadable({
+    loader: () => import('../About'),
+    loading: Loading,
+});
+const Skills = Loadable({
+    loader: () => import('../Skills'),
+    loading: Loading,
+});
+const Experience = Loadable({
+    loader: () => import('../Experience'),
+    loading: Loading,
+});
+const Portfolio = Loadable({
+    loader: () => import('../Portfolio'),
+    loading: Loading,
+});
+const Project = Loadable({
+    loader: () => import('../Project'),
+    loading: Loading,
+});
+const Contact = Loadable({
+    loader: () => import('../Contact'),
+    loading: Loading,
+});
 
 const theme = createMuiTheme(muiTheme);
 
