@@ -35,7 +35,7 @@ const Portfolio = Loadable({
 });
 const Project = Loadable({
     loader: () => import('../Project'),
-    loading: () => <Loading color="blue" />
+    loading: () => <Loading color="black" />
 });
 const Contact = Loadable({
     loader: () => import('../Contact'),
