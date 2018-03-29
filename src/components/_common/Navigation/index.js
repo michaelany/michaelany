@@ -20,7 +20,6 @@ const renderLinks = () => navLinks.map(({id, title, url, icon}) => (
     <li key={id}>
         <Tooltip
             {...{title}}
-            disableFocusListener
             disableTouchListener
             placement="right"
             enterDelay={300}

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import Tooltip from 'material-ui/Tooltip';
 
 import './style.css';
 import MuiButton from '../../_common/MuiButton';
@@ -16,27 +15,19 @@ export default function SocialLinks({links, isRound = false}) {
     const listClass = cn('social-links', {'social-links_round': isRound}, 'f jc-sb');
     return (
         <ul className={listClass}>
-            {links.map(({id, title, icon, url, placement}, index) => (
+            {links.map(({id, icon, url}, index) => (
                 <li key={id} className="social-links__item">
                     <ScrollAnimation name="bounceIn" offset={0} delay={100 + 100 * index}>
-                        <Tooltip
-                            {...{title, placement}}
-                            disableFocusListener
-                            disableTouchListener
-                            enterDelay={300}
-                            leaveDelay={100}
+                        <MuiButton
+                            variant="fab"
+                            kind="white"
+                            href={url}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            role="link"
                         >
-                            <MuiButton
-                                variant="fab"
-                                kind="white"
-                                href={url}
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                role="link"
-                            >
-                                {icon}
-                            </MuiButton>
-                        </Tooltip>
+                            {icon}
+                        </MuiButton>
                     </ScrollAnimation>
                 </li>
             ))}

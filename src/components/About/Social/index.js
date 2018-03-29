@@ -15,10 +15,10 @@ import ScrollAnimation from '../../_common/ScrollAnimation';
 import {LINKS} from "../../../utils/urls";
 
 const links = [
-    {id: 1, title: 'Профиль GitHub', icon: <GitHubIcon />, url: LINKS.social.gitHub, placement: 'left'},
-    {id: 2, title: 'Профиль LinkedIn', icon: <LinkedInIcon />, url: LINKS.social.linkedIn, placement: 'bottom'},
-    {id: 3, title: 'Команда 7 glyphs', icon: <GlyphsIcon />, url: LINKS.experience.sevenGlyphs, placement: 'bottom'},
-    {id: 4, title: 'Профиль VK', icon: <VKIcon />, url: LINKS.social.vk, placement: 'right'}
+    {id: 1, icon: <GitHubIcon />, url: LINKS.social.gitHub},
+    {id: 2, icon: <LinkedInIcon />, url: LINKS.social.linkedIn},
+    {id: 3, icon: <GlyphsIcon />, url: LINKS.experience.sevenGlyphs},
+    {id: 4, icon: <VKIcon />, url: LINKS.social.vk}
 ];
 
 const styles = {

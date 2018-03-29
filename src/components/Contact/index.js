@@ -13,10 +13,10 @@ import {STYLES} from '../../styles/muiTheme';
 import {LINKS} from "../../utils/urls";
 
 const links = [
-    {id: 1, title: 'Связаться по Skype', icon: <SkypeIcon />, url: LINKS.contacts.skype, placement: 'bottom'},
-    {id: 2, title: 'Профиль GitHub', icon: <GitHubIcon />, url: LINKS.social.gitHub, placement: 'bottom'},
-    {id: 3, title: 'Профиль LinkedIn', icon: <LinkedInIcon />, url: LINKS.social.linkedIn, placement: 'bottom'},
-    {id: 4, title: 'Профиль VK', icon: <VKIcon />, url: LINKS.social.vk, placement: 'right'}
+    {id: 1, icon: <SkypeIcon />, url: LINKS.contacts.skype},
+    {id: 2, icon: <GitHubIcon />, url: LINKS.social.gitHub},
+    {id: 3, icon: <LinkedInIcon />, url: LINKS.social.linkedIn},
+    {id: 4, icon: <VKIcon />, url: LINKS.social.vk}
 ];
 
 export default function Contact() {

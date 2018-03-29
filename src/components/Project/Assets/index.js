@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import IconButton from 'material-ui/IconButton';
 import Icon from 'material-ui/Icon';
-import Tooltip from 'material-ui/Tooltip';
 
 import './style.css';
 import Arrow from './Arrow';
@@ -58,29 +57,20 @@ const renderImages = (images, title) => images.map(image => (
     </div>
 ));
 
-const renderButton = (type, url, isMargin, isPdf = false) => {
+const renderButton = (url, isMargin, isPdf = false) => {
     const icon = isPdf ? 'picture_as_pdf' : 'launch';
     return (
-        <Tooltip
-            disableFocusListener
-            disableTouchListener
-            title={`Открыть ${type}`}
-            placement="bottom"
-            enterDelay={300}
-            leaveDelay={100}
+        <MuiButton
+            {...{isMargin}}
+            variant="fab"
+            kind="white"
+            href={url}
+            rel="noopener noreferrer"
+            target="_blank"
+            role="link"
         >
-            <MuiButton
-                {...{isMargin}}
-                variant="fab"
-                kind="white"
-                href={url}
-                rel="noopener noreferrer"
-                target="_blank"
-                role="link"
-            >
-                <Icon>{icon}</Icon>
-            </MuiButton>
-        </Tooltip>
+            <Icon>{icon}</Icon>
+        </MuiButton>
     );
 };
 
@@ -95,8 +85,8 @@ export default function Assets({title, color, images, url = '', pdf = ''}) {
             {(url || pdf) && (
                 <ScrollAnimation name="bounceIn" delay={200} offset={0}>
                     <div className="assets__buttons f jc-c">
-                        {url && renderButton('проект', url, Boolean(pdf))}
-                        {pdf && renderButton('Бизнес-план', pdf, false, true)}
+                        {url && renderButton(url, Boolean(pdf))}
+                        {pdf && renderButton(pdf, false, true)}
                     </div>
                 </ScrollAnimation>
             )}
