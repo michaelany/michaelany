@@ -1,6 +1,7 @@
 .page {
   @include animate(fadeIn);
   padding-left: $sidebar-width;
+  overflow: hidden;
   height: 100%;
   @include sm {
     padding-left: 0;
@@ -57,10 +58,6 @@
   &_bg-color_violet {
     background-color: $violet;
   }
-}
-
-.container {
-  height: calc(100vh - 200px);
 }
 
 .title {

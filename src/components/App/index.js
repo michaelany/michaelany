@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import Reboot from 'material-ui/Reboot';
+import CssBaseline from 'material-ui/CssBaseline';
 
 import './style.css';
 import Panel from '../Panel';
@@ -50,7 +50,7 @@ export default function App() {
             <ScrollToTop>
                 <MuiThemeProvider {...{theme}}>
                     <div className="app f">
-                        <Reboot />
+                        <CssBaseline />
                         <Panel />
                         <main className="app__main fb-100">
                             <Switch>

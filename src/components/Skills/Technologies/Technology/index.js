@@ -25,7 +25,7 @@ export default function Technology({title, img, url, color = 'grey'}) {
         color: COLORS[color]
     };
     return (
-        <Button href={url} className="technology" rel="noopener noreferrer" target="_blank" role="link" style={buttonStyle}>
+        <Button href={url} className="technology f" rel="noopener noreferrer" target="_blank" role="link" style={buttonStyle}>
             <figure className="technology__figure f ai-c jc-c">
                 <img className="technology__image" src={img[0]} srcSet={`${img[1]} 2x`} alt={title} />
                 <figcaption className={`technology__caption technology__caption_color_${color} f ai-fe jc-c`}>

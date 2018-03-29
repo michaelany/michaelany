@@ -136,9 +136,6 @@
 .f {
   display: flex; }
 
-.f_i {
-  display: flex !important; }
-
 .f-i {
   display: inline-flex; }
 
@@ -198,6 +195,7 @@
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-iteration-count: 1;
   padding-left: 100px;
+  overflow: hidden;
   height: 100%; }
   @media (max-width: 959px) {
     .page {
@@ -234,9 +232,6 @@
     background-color: #62a5fc; }
   .section_bg-color_violet {
     background-color: #9170fb; }
-
-.container {
-  height: calc(100vh - 200px); }
 
 .title {
   font-size: 52px;
@@ -314,16 +309,6 @@
 
 .list-item {
   margin-bottom: 10px; }
-
-.open-tag {
-  margin-bottom: 40px; }
-  .open-tag_white {
-    color: white; }
-
-.close-tag {
-  margin-top: 40px; }
-  .close-tag_white {
-    color: white; }
 
 .social-icon {
   width: 26px;

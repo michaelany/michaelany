@@ -81,6 +81,7 @@
   @include transit(background-color);
   height: 100%;
   padding: 20px 0;
+  overflow: hidden;
 
   &_page_portfolio {
     background-color: $blue;

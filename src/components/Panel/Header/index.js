@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 import IconButton from 'material-ui/IconButton';
 import Icon from 'material-ui/Icon';
-import Drawer from 'material-ui/Drawer';
+import SwipeableDrawer from 'material-ui/SwipeableDrawer';
 
 import './style.css';
 import Logo from '../../_common/Logo';
@@ -30,9 +30,13 @@ class Header extends Component {
         location: PropTypes.object.isRequired
     };
 
-    handleDrawerToggle = () => this.setState((prevState) => ({
-        isDrawerOpen: !prevState.isDrawerOpen
-    }));
+    handleDrawerOpen = () => this.setState({
+        isDrawerOpen: true
+    });
+
+    handleDrawerClose = () => this.setState({
+        isDrawerOpen: false
+    });
 
     render() {
         const {location: {pathname}} = this.props;
@@ -41,21 +45,26 @@ class Header extends Component {
             <header className={getPanelClass('header', pathname)}>
                 <div className="f jc-sb">
                     <Logo panel="header" />
-                    <IconButton style={styles.iconButton} onClick={this.handleDrawerToggle}>
+                    <IconButton style={styles.iconButton} onClick={this.handleDrawerOpen}>
                         <Icon style={styles.icon}>menu</Icon>
                     </IconButton>
                 </div>
-                <Drawer anchor="left" open={isDrawerOpen} onClose={this.handleDrawerToggle}>
+                <SwipeableDrawer
+                    anchor="left"
+                    open={isDrawerOpen}
+                    onOpen={this.handleDrawerOpen}
+                    onClose={this.handleDrawerClose}
+                >
                     <div
                         className={getPanelClass('header__drawer', pathname)}
                         tabIndex={0}
                         role="button"
-                        onClick={this.handleDrawerToggle}
-                        onKeyDown={this.handleDrawerToggle}
+                        onClick={this.handleDrawerClose}
+                        onKeyDown={this.handleDrawerClose}
                     >
                         <Navigation />
                     </div>
-                </Drawer>
+                </SwipeableDrawer>
             </header>
         );
     }
