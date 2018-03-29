@@ -1,6 +1,6 @@
 import React from 'react';
-import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
-import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
 
 import './style.css';
