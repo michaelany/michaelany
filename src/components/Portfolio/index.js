@@ -8,13 +8,7 @@ import {STYLES} from '../../styles/muiTheme';
 
 let projects = [
     {id: 1, name: 'msp', title: 'Бизнес-навигатор МСП'},
-    {id: 2, name: '7-glyphs', title: '7 Glyphs'},
-    {id: 3, name: 'lazy-az', title: 'LazyAz', hidden: true},
-    {id: 4, name: 'lazy-az-dashboard', title: 'LazyAz Dashboard', hidden: true},
-    {id: 5, name: 'whip-around', title: 'Whip Around', hidden: true},
-    {id: 6, name: '12-saffron', title: '12 Saffron'},
-    {id: 7, name: 'fcdc-dashboard', title: 'FCDC Dashboard', hidden: true},
-    {id: 8, name: 'service-packages', title: 'Service Packages'}
+    {id: 2, name: '12-saffron', title: '12 Saffron'},
 ].reverse();
 
 const renderProjects = () => projects.map(({id, ...props}) => (

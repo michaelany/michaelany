@@ -26,8 +26,7 @@ class Preview extends Component {
     static propTypes = {
         history: PropTypes.object.isRequired,
         name: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        hidden: PropTypes.bool
+        title: PropTypes.string.isRequired
     };
 
     static defaultProps = {
@@ -40,7 +39,7 @@ class Preview extends Component {
     };
 
     render() {
-        const {name, title, hidden} = this.props;
+        const {name, title} = this.props;
         return (
             <Button
                 className="preview"

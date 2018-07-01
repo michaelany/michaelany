@@ -10,30 +10,6 @@
   .portfolio__item:nth-child(2) > & {
     @include animate(bounceIn, $long, 150ms);
   }
-
-  .portfolio__item:nth-child(3) > & {
-    @include animate(bounceIn, $long, 200ms);
-  }
-
-  .portfolio__item:nth-child(4) > & {
-    @include animate(bounceIn, $long, 250ms);
-  }
-
-  .portfolio__item:nth-child(5) > & {
-    @include animate(bounceIn, $long, 300ms);
-  }
-
-  .portfolio__item:nth-child(6) > & {
-    @include animate(bounceIn, $long, 350ms);
-  }
-
-  .portfolio__item:nth-child(7) > & {
-    @include animate(bounceIn, $long, 400ms);
-  }
-
-  .portfolio__item:last-child > & {
-    @include animate(bounceIn, $long, 450ms);
-  }
 }
 
 .preview__image {
@@ -58,50 +34,10 @@
     @include image-2x('./msp@2x.jpg');
   }
 
-  &_name_7-glyphs {
-    background-image: url('./7-glyphs.jpg');
-    background-color: $grass;
-    @include image-2x('./7-glyphs@2x.jpg');
-  }
-
-  &_name_lazy-az {
-    background-image: url('./lazy-az.jpg');
-    background-color: $red;
-    @include image-2x('./lazy-az@2x.jpg');
-  }
-
-  &_name_lazy-az-dashboard {
-    background-image: url('./lazy-az-dashboard.jpg');
-    background-color: $yellow;
-    @include image-2x('./lazy-az-dashboard@2x.jpg');
-  }
-
-  &_name_whip-around {
-    background-image: url('./whip-around.jpg');
-    background-color: $green;
-    @include image-2x('./whip-around@2x.jpg');
-  }
-
   &_name_12-saffron {
     background-image: url('./12-saffron.jpg');
     background-color: $yellow;
     @include image-2x('./12-saffron@2x.jpg');
-  }
-
-  &_name_fcdc-dashboard {
-    background-image: url('./fcdc.jpg');
-    background-color: $violet;
-    @include image-2x('./fcdc@2x.jpg');
-  }
-
-  &_name_service-packages {
-    background-image: url('./service-packages.jpg');
-    background-color: $grass;
-    @include image-2x('./service-packages@2x.jpg');
-  }
-
-  &_name_my-portfolio {
-    background-color: $red;
   }
 }
 
