@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+.Greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Greeting-Title {
+  margin-bottom: 8px;
+}
+
+.Greeting-Icon {
+  position: relative;
+  top: 6px;
+  margin-left: 18px;
+  animation: hello $duration_hello $easing_ease-in-out infinite;
+}
+
+.Greeting-Text {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.Greeting-Letter {
+  font-weight: 900;
+  @include animationAlternate();
+}
+
+.Greeting-Subtext {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}

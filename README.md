@@ -1,13 +1,11 @@
 # mclananiev
 
-Мой сайт-портфолио.
+My portfolio app.
 
-Development:
-```
-yarn start
-```
+##### Development:
 
-Production:
-```
-yarn build
-```
+`yarn start` or `npm start`
+
+##### Production:
+
+`yarn build` or `npm build`

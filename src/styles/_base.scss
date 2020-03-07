@@ -1,0 +1,42 @@
+body {
+  overflow-y: scroll;
+}
+
+p {
+  margin: 0;
+  & > b {
+    font-weight: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+ul,
+nav {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  pointer-events: none;
+}

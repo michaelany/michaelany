@@ -1,0 +1,14 @@
+@import 'styles/variables';
+
+.Banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include animationAlternate(alternateBackgroundColor);
+}
+
+.Banner-Img {
+  width: 100%;
+  max-width: 599px;
+  height: auto;
+}

@@ -1,0 +1,40 @@
+@import 'styles/variables';
+
+.Sidebar {
+  width: $sidebar-width;
+  position: fixed;
+  height: 100%;
+  padding: 5px 0;
+}
+
+.Sidebar-Logo {
+  font-size: 40px;
+  letter-spacing: -5px;
+  font-weight: 900;
+  line-height: 0.8;
+  padding: 15px 20px;
+  margin-bottom: 60px;
+  display: block;
+  transition: transform $duration_standard $easing_ease-in-out, color $duration_short $easing_ease-in-out;
+  @include hover {
+    transform: scale(1.2) rotate(-15deg);
+  }
+  .AppContent_home & {
+    @include animationAlternate();
+  }
+  .AppContent_about & {
+    color: $color_green;
+  }
+  .AppContent_skills & {
+    color: $color_blue;
+  }
+  .AppContent_experience & {
+    color: $color_violet;
+  }
+  .AppContent_portfolio & {
+    color: white;
+  }
+  .AppContent_contact & {
+    color: white;
+  }
+}

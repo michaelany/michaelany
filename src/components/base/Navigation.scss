@@ -1,0 +1,59 @@
+@import 'styles/variables';
+
+.Navigation {
+  position: relative;
+
+  &::after {
+    @include pseudo();
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 54px;
+    border-radius: 4px;
+    transition: transform $duration_medium-long $easing_ease-out, background-color $duration_short $easing_ease-in-out;
+  }
+  .AppContent_home &::after {
+    @include animationAlternate(alternateBackgroundColor);
+  }
+  .AppContent_about &::after {
+    background-color: $color_green;
+    transform: translate3d(0, 54px, 0);
+  }
+  .AppContent_skills &::after {
+    background-color: $color_blue;
+    transform: translate3d(0, 54px * 2, 0);
+  }
+  .AppContent_experience &::after {
+    background-color: $color_violet;
+    transform: translate3d(0, 54px * 3, 0);
+  }
+  .AppContent_portfolio &::after {
+    background-color: white;
+    transform: translate3d(0, 54px * 4, 0);
+  }
+  .AppContent_contact &::after {
+    background-color: white;
+    transform: translate3d(0, 54px * 5, 0);
+  }
+}
+
+.Navigation-Link_active {
+  .AppContent_home & {
+    @include animationAlternate();
+  }
+  .AppContent_about & {
+    color: $color_green;
+  }
+  .AppContent_skills & {
+    color: $color_blue;
+  }
+  .AppContent_experience & {
+    color: $color_violet;
+  }
+  .AppContent_portfolio & {
+    color: white;
+  }
+  .AppContent_contact & {
+    color: white;
+  }
+}

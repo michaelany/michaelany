@@ -1,161 +1,55 @@
-.page {
-  @include animate(fadeIn);
-  padding-left: $sidebar-width;
+.VisuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
+}
+
+.Section {
+  padding: 80px 10%;
   height: 100%;
-  @include sm {
-    padding-left: 0;
+  &_single {
+    padding-left: 5%;
+    padding-right: 5%;
   }
-
-  &_bg-color_blue {
-    background-color: $blue;
+  &_backgroundColor_green {
+    background-color: $color_green;
   }
-
-  &_bg-color_green {
-    background-color: $green;
+  &_backgroundColor_blue {
+    background-color: $color_blue;
+  }
+  &_backgroundColor_violet {
+    background-color: $color_violet;
   }
 }
 
-.section {
-  padding: 100px 10%;
-  height: 100%;
-  @include sm {
-    padding: 80px 40px;
-  }
-  @include xs {
-    padding: 60px 20px;
-  }
-
-  &_first {
-    @include sm {
-      padding-top: calc(80px + #{$header-height});
-    }
-    @include xs {
-      padding-top: calc(60px + #{$header-height});
-    }
-  }
-
-  &_bg-color_red {
-    background-color: $red;
-  }
-
-  &_bg-color_yellow {
-    background-color: $yellow;
-  }
-
-  &_bg-color_grass {
-    background-color: $grass;
-  }
-
-  &_bg-color_green {
-    background-color: $green;
-  }
-
-  &_bg-color_blue {
-    background-color: $blue;
-  }
-
-  &_bg-color_violet {
-    background-color: $violet;
-  }
-}
-
-.title {
+.Title {
   font-size: 52px;
-  line-height: 1.1;
   font-weight: 900;
-  margin-bottom: 30px;
-  @include md {
-    font-size: 44px;
-  }
-  @include xs {
-    font-size: 36px;
-  }
-
-  &_color_red {
-    color: $red;
-  }
-
-  &_color_yellow {
-    color: $yellow;
-  }
-
-  &_color_grass {
-    color: $grass;
-  }
-
+  line-height: 1.2;
+  margin-bottom: 24px;
   &_color_green {
-    color: $green;
+    color: $color_green;
   }
-
   &_color_blue {
-    color: $blue;
+    color: $color_blue;
   }
-
   &_color_violet {
-    color: $violet;
+    color: $color_violet;
   }
-
   &_color_white {
     color: white;
   }
 }
 
-.subtitle {
-  @include animate(fadeIn, $long, 600ms);
-  opacity: 0;
-  position: relative;
+.MainText {
+  color: $color_second-text;
   font-size: 30px;
-  color: $black-60;
   font-weight: 300;
   line-height: 1.3;
-  margin-bottom: 30px;
-  @include md {
-    font-size: 26px;
-  }
-  @include xs {
-    font-size: 22px;
-  }
-
-  &_black {
-    color: $black;
-  }
-}
-
-.link {
-  color: $blue-two;
-
-  &_white {
-    color: white;
-  }
-
-  &:hover {
-    text-decoration: underline;
-    @include no-hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.list {
-  @include animate(fadeIn, $longest, 1s);
-  opacity: 0;
-  padding-left: 20px;
-  list-style-type: disc;
-  margin-bottom: 20px;
-
-  &_project {
-    opacity: 1;
-    animation: 0;
-  }
-}
-
-.list-item {
-  margin-bottom: 10px;
-}
-
-.social-icon {
-  width: 26px;
-  height: 26px;
-  fill: $black;
+  margin-bottom: 24px;
 }

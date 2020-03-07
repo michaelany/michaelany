@@ -1,234 +1,74 @@
-@keyframes fadeIn {
+@keyframes alternateColor {
   from {
-    opacity: 0;
+    color: $color_blue;
   }
-
+  16.66% {
+    color: $color_green;
+  }
+  33.33% {
+    color: $color_grass;
+  }
+  50% {
+    color: $color_red;
+  }
+  66.66% {
+    color: $color_yellow;
+  }
+  83.33% {
+    color: $color_violet;
+  }
   to {
-    opacity: 1;
+    color: $color_blue;
   }
 }
 
-@keyframes bounceIn {
+@keyframes alternateBackgroundColor {
   from {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+    background-color: $color_blue;
   }
-
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
+  16.66% {
+    background-color: $color_green;
   }
-
-  40% {
-    transform: scale3d(0.9, 0.9, 0.9);
+  33.33% {
+    background-color: $color_grass;
   }
-
-  60% {
-    opacity: 1;
-    transform: scale3d(1.03, 1.03, 1.03);
+  50% {
+    background-color: $color_red;
   }
-
-  80% {
-    transform: scale3d(0.97, 0.97, 0.97);
+  66.66% {
+    background-color: $color_yellow;
   }
-
+  83.33% {
+    background-color: $color_violet;
+  }
   to {
-    transform: scale3d(1, 1, 1);
-    opacity: 1;
+    background-color: $color_blue;
   }
 }
 
-@keyframes bounceInUp {
+@keyframes hello {
   from {
-    opacity: 0;
-    transform: translate3d(0, 3000px, 0);
+    transform: rotate(8deg) translate3d(2px, 0, 0);
   }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(0,  -20px, 0);
-  }
-
-  75% {
-    transform: translate3d(0, 10px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, -5px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes bounceInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-3000px, 0, 0);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(25px, 0, 0);
-  }
-
-  75% {
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  90% {
-    transform: translate3d(5px, 0, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes bounceInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(3000px, 0, 0);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(-25px, 0, 0);
-  }
-
-  75% {
-    transform: translate3d(10px, 0, 0);
-  }
-
-  90% {
-    transform: translate3d(-5px, 0, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes rollIn {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-//--------------------custom--------------------
-
-@keyframes eyeBlink {
-  from {
-    transform: scaleY(1);
-  }
-
-  6% {
-    transform: scaleY(0.1);
-  }
-
   12% {
-    transform: scaleY(1);
+    transform: rotate(-12deg) translate3d(-3px, 0, 0);
   }
-
+  24% {
+    transform: rotate(16deg) translate3d(4px, 0, 0);
+  }
+  36% {
+    transform: rotate(-16deg) translate3d(-4px, 0, 0);
+  }
+  48% {
+    transform: rotate(12deg) translate3d(3px, 0, 0);
+  }
+  60% {
+    transform: rotate(-12deg) translate3d(-3px, 0, 0);
+  }
+  72% {
+    transform: rotate(8deg) translate3d(2px, 0, 0);
+  }
   to {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes variousColors {
-  from {
-    color: $red;
-  }
-
-  16.66% {
-    color: $yellow;
-  }
-
-  33.33% {
-    color: $grass;
-  }
-
-  50% {
-    color: $green;
-  }
-
-  66.66% {
-    color: $blue;
-  }
-
-  83.33% {
-    color: $violet;
-  }
-
-  to {
-    color: $red;
-  }
-}
-
-@keyframes variousBackgroundColors {
-  from {
-    background-color: $red;
-  }
-
-  16.66% {
-    background-color: $yellow;
-  }
-
-  33.33% {
-    background-color: $grass;
-  }
-
-  50% {
-    background-color: $green;
-  }
-
-  66.66% {
-    background-color: $blue;
-  }
-
-  83.33% {
-    background-color: $violet;
-  }
-
-  to {
-    background-color: $red;
-  }
-}
-
-@keyframes variousBorderColors {
-  from {
-    border-color: $red;
-  }
-
-  16.66% {
-    border-color: $yellow;
-  }
-
-  33.33% {
-    border-color: $grass;
-  }
-
-  50% {
-    border-color: $green;
-  }
-
-  66.66% {
-    border-color: $blue;
-  }
-
-  83.33% {
-    border-color: $violet;
-  }
-
-  to {
-    border-color: $red;
+    transform: rotate(8deg) translate3d(2px, 0, 0);
   }
 }

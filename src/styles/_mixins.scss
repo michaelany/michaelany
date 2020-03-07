@@ -1,53 +1,42 @@
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+@mixin hover {
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
   content: $content;
   display: $display;
   position: $pos;
 }
 
-@mixin transit($prop, $duration: $short, $delay: 0ms, $function: $ease-in-out) {
-  transition-property: $prop;
-  transition-duration: $duration;
-  transition-delay: $delay;
-  transition-timing-function: $function;
-  will-change: $prop;
-}
-
-@mixin animate($name, $duration: $long, $delay: 0ms, $iteration-count: 1, $function: $ease-in-out) {
-  animation-name: $name;
-  animation-duration: $duration;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  animation-timing-function: $function;
-  animation-iteration-count: $iteration-count;
-}
-
-@mixin image-2x($image) {
-  @media (min-resolution: 2dppx),
-  (-webkit-min-device-pixel-ratio: 2) {
+@mixin image2x($image) {
+  @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
     background-image: url($image);
   }
 }
 
-@mixin no-hover {
-  @media (hover: none) {
-    @content;
-  }
+@mixin animationAlternate($animation: alternateColor) {
+  animation: $animation $duration_alternate $easing_ease-in-out infinite;
 }
 
 @mixin xs {
-  @media (max-width: 599px) {
+  @media (max-width: $breakpoint_xs) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (max-width: 959px) {
+  @media (max-width: $breakpoint_sm) {
     @content;
   }
 }
 
 @mixin md {
-  @media (max-width: 1279px) {
+  @media (max-width: $breakpoint_md) {
     @content;
   }
 }
