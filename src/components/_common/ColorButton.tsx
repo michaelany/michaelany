@@ -1,30 +1,26 @@
-import React, {ElementType, ReactNode} from 'react'
-import {withStyles} from '@material-ui/core/styles'
-import MuiButton from '@material-ui/core/Button'
+import React, {ReactNode} from 'react'
+import {makeStyles} from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 
 import {hasKey, toUpperCaseFirstLetter} from '../../utils/helpers'
-import {Color} from '../../utils/types'
-import THEME from '../../styles/theme'
+import {Route} from '../../utils/enums'
+import {ColorProp} from '../../utils/types'
+import {THEME} from '../../styles/theme'
 
 interface IColorButtonProps {
   children: ReactNode
-  color?: Color
+  component?: ReactNode
+  to?: Route
+  color?: 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+  size?: 'small' | 'medium' | 'large'
+  variant?: 'outlined' | 'contained'
   disableFocusRipple?: boolean
   fullWidth?: boolean
   href?: string
-  size?: 'small' | 'medium' | 'large'
   endIcon?: ReactNode
   startIcon?: ReactNode
-  variant?: 'text' | 'outlined' | 'contained'
   style?: object
   onClick?: () => void
-}
-
-interface IButtons {
-  BlueContainedButton: ElementType
-  GreenContainedButton: ElementType
-  BlueOutlinedButton: ElementType
-  GreenOutlinedButton: ElementType
 }
 
 const commonStyles = {
@@ -36,68 +32,53 @@ const commonStyles = {
 const commonContainedStyles = {
   ...commonStyles,
   color: 'white',
-  '&:not(:last-child)': {
-    marginRight: 16,
-  },
 }
 
-const BlueContainedButton = withStyles({
-  root: {
-    ...commonContainedStyles,
-    backgroundColor: THEME.COLOR.BLUE,
-  },
-  contained: {
-    '@media (hover: hover)': {
-      '&:hover': {
-        backgroundColor: THEME.COLOR.DARK_BLUE,
-      },
-    },
-  },
-})(MuiButton)
+const getStyle = (colorType: ColorProp, isContained?: boolean): object => {
+  const darkColorType = `DARK_${colorType}`
+  const darkValue = hasKey(THEME.COLOR, darkColorType) && THEME.COLOR[darkColorType]
+  return isContained
+    ? {
+        root: {
+          ...commonContainedStyles,
+          backgroundColor: hasKey(THEME.COLOR, colorType) && THEME.COLOR[colorType],
+        },
+        contained: {
+          '@media (hover: hover)': {
+            '&:hover': {
+              backgroundColor: darkValue,
+            },
+          },
+        },
+      }
+    : {
+        root: {
+          ...commonStyles,
+          color: darkValue,
+          borderColor: darkValue,
+        },
+      }
+}
 
-const GreenContainedButton = withStyles({
-  root: {
-    ...commonContainedStyles,
-    backgroundColor: THEME.COLOR.GREEN,
-  },
-  contained: {
-    '@media (hover: hover)': {
-      '&:hover': {
-        backgroundColor: THEME.COLOR.DARK_GREEN,
-      },
-    },
-  },
-})(MuiButton)
-
-const BlueOutlinedButton = withStyles({
-  root: {
-    ...commonStyles,
-    color: THEME.COLOR.DARK_BLUE,
-    borderColor: THEME.COLOR.DARK_BLUE,
-  },
-})(MuiButton)
-
-const GreenOutlinedButton = withStyles({
-  root: {
-    ...commonStyles,
-    color: THEME.COLOR.DARK_GREEN,
-    borderColor: THEME.COLOR.DARK_GREEN,
-  },
-})(MuiButton)
-
-const Buttons: IButtons = {
-  BlueContainedButton,
-  GreenContainedButton,
-  BlueOutlinedButton,
-  GreenOutlinedButton,
+const styles: any = {
+  useBlueContainedStyles: makeStyles(getStyle('BLUE', true)),
+  useBlueOutlinedStyles: makeStyles(getStyle('BLUE')),
+  useGreenContainedStyles: makeStyles(getStyle('GREEN', true)),
+  useGreenOutlinedStyles: makeStyles(getStyle('GREEN')),
 }
 
 export default function ColorButton({children, color = 'blue', variant = 'contained', ...props}: IColorButtonProps) {
-  const colorType = `${toUpperCaseFirstLetter(color) + toUpperCaseFirstLetter(variant)}Button`
-  const ButtonComponent = hasKey(Buttons, colorType) ? Buttons[colorType] : Buttons.BlueContainedButton
+  const classes = styles[`use${toUpperCaseFirstLetter(color)}${toUpperCaseFirstLetter(variant)}Styles`]()
   return (
-    <ButtonComponent variant={variant} {...props}>
+    <Button
+      classes={{
+        root: classes.root,
+        contained: classes.contained,
+      }}
+      variant={variant}
+      {...props}
+    >
       {children}
-    </ButtonComponent>
+    </Button>
   )
 }

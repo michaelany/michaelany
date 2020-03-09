@@ -4,16 +4,9 @@ import Tilt from 'react-tilt'
 import './Banner.scss'
 import macbookImg from '../../assets/img/macbook.png'
 import macbookImg2x from '../../assets/img/macbook@2x.png'
-import THEME from '../../styles/theme'
+import {THEME} from '../../styles/theme'
 
-interface IOptions {
-  max: number
-  scale: number
-  speed: number
-  reset: boolean
-}
-
-const options: IOptions = {
+const tiltOptions = {
   max: 60,
   scale: 1,
   speed: 3000,
@@ -24,7 +17,7 @@ export default function Banner() {
   return (
     <section className="Banner Section">
       <h2 className="VisuallyHidden">Баннер</h2>
-      <Tilt options={options} easing={THEME.EASING.EASE_IN_OUT}>
+      <Tilt options={tiltOptions} easing={THEME.EASING.EASE_IN_OUT}>
         <img
           className="Banner-Img"
           width={599}

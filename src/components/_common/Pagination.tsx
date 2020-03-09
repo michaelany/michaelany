@@ -6,11 +6,20 @@ import Button from '@material-ui/core/Button'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
-import {Route, TITLES_MAP} from '../../utils/enums'
+import {Route, Title} from '../../utils/enums'
 
 interface IPaginationProps {
   prevTo: Route
   nextTo: Route
+}
+
+const TITLES_MAP = {
+  [Route.HOME]: Title.HOME,
+  [Route.ABOUT]: Title.ABOUT,
+  [Route.SKILLS]: Title.SKILLS,
+  [Route.EXPERIENCE]: Title.EXPERIENCE,
+  [Route.PORTFOLIO]: Title.PORTFOLIO,
+  [Route.CONTACT]: Title.CONTACT,
 }
 
 const StyledButton: ElementType = withStyles({

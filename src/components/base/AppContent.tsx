@@ -11,9 +11,9 @@ import Portfolio from '../portfolio/Portfolio'
 import Contact from '../contact/Contact'
 import {Route} from '../../utils/enums'
 
-function AppContent({location: {pathname}}: RouteComponentProps) {
+function AppContent({location}: RouteComponentProps) {
   return (
-    <div className={`AppContent AppContent_${pathname.slice(1) || 'home'}`}>
+    <div className={`AppContent AppContent_${location.pathname.slice(1) || 'home'}`}>
       <Sidebar />
       <main className="AppContent-Main">
         <Switch>

@@ -2,10 +2,16 @@ import React from 'react'
 import {withStyles} from '@material-ui/core/styles'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
-import THEME from '../../styles/theme'
+import {THEME} from '../../styles/theme'
 
 interface IDropdownIconProps {
   isOpen: boolean
+}
+
+const styles = {
+  rotated: {
+    transform: 'rotate(-180deg)',
+  },
 }
 
 const StyledExpandMoreIcon = withStyles({
@@ -15,6 +21,5 @@ const StyledExpandMoreIcon = withStyles({
 })(ExpandMoreIcon)
 
 export default function DropdownIcon({isOpen}: IDropdownIconProps) {
-  const style = isOpen ? {transform: 'rotate(-180deg)'} : undefined
-  return <StyledExpandMoreIcon style={style} />
+  return <StyledExpandMoreIcon style={isOpen ? styles.rotated : undefined} />
 }

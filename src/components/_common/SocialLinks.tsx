@@ -5,7 +5,7 @@ import Tooltip from '@material-ui/core/Tooltip'
 
 import './SocialLinks.scss'
 import {ISocialLink} from '../../utils/data'
-import THEME from '../../styles/theme'
+import {THEME} from '../../styles/theme'
 
 interface ISocialLinksProps {
   links: ISocialLink[]

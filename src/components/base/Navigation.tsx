@@ -13,12 +13,12 @@ import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
 import {Route, Title} from '../../utils/enums'
-import THEME from '../../styles/theme'
+import {THEME} from '../../styles/theme'
 
 interface INavLink {
   id: number
-  title: string
-  to: string
+  title: Title
+  to: Route
   Icon: (props: SvgIconProps) => JSX.Element
 }
 
@@ -39,30 +39,28 @@ const NavLinkButton: ElementType = withStyles({
   },
 })(Button)
 
-const renderedLinks = navLinks.map(({id, title, to, Icon}: INavLink) => {
-  return (
-    <li key={id}>
-      <Tooltip title={title} enterDelay={THEME.DURATION.MEDIUM} placement="right">
-        <NavLinkButton
-          fullWidth
-          exact
-          className="Navigation-Link"
-          activeClassName="Navigation-Link_active"
-          component={NavLink}
-          to={to}
-          aria-label={title}
-        >
-          <Icon fontSize="inherit" />
-        </NavLinkButton>
-      </Tooltip>
-    </li>
-  )
-})
-
 export default function Navigation() {
   return (
     <nav className="Navigation">
-      <ul>{renderedLinks}</ul>
+      <ul>
+        {navLinks.map(({id, title, to, Icon}) => (
+          <li key={id}>
+            <Tooltip title={title} enterDelay={THEME.DURATION.MEDIUM} placement="right">
+              <NavLinkButton
+                fullWidth
+                exact
+                className="Navigation-Link"
+                activeClassName="Navigation-Link_active"
+                component={NavLink}
+                to={to}
+                aria-label={title}
+              >
+                <Icon fontSize="inherit" />
+              </NavLinkButton>
+            </Tooltip>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }

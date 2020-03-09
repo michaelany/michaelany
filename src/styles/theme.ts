@@ -43,7 +43,7 @@ enum Easing {
   EASE_OUT = 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
-const THEME = {
+export const THEME = {
   FONT_FAMILY: [
     '-apple-system',
     'BlinkMacSystemFont',
@@ -66,20 +66,45 @@ const THEME = {
   EASING: Easing,
 }
 
-export const MUI_THEME = {
+const commonProps = {
+  buttonWithoutBoxShadow: {
+    boxShadow: 'none',
+    '&:hover, &:active, &:focus': {
+      boxShadow: 'none',
+    },
+  },
+}
+
+export default {
   typography: {
     fontFamily: THEME.FONT_FAMILY,
     fontSize: 16,
     body2: {
       lineHeight: 1.5,
     },
+    button: {
+      letterSpacing: 1,
+      fontWeight: 700,
+      textTransform: 'capitalize',
+    },
   },
   palette: {
     text: {
       primary: THEME.COLOR.TEXT,
+      secondary: THEME.COLOR.SECOND_TEXT,
     },
     background: {
       default: THEME.COLOR.BACKGROUND,
+    },
+    primary: {
+      light: THEME.COLOR.BLUE,
+      main: THEME.COLOR.BLUE,
+      dark: THEME.COLOR.DARK_BLUE,
+    },
+    secondary: {
+      light: THEME.COLOR.GREEN,
+      main: THEME.COLOR.GREEN,
+      dark: THEME.COLOR.DARK_GREEN,
     },
   },
   transitions: {
@@ -88,8 +113,8 @@ export const MUI_THEME = {
       easeOut: THEME.EASING.EASE_OUT,
     },
     duration: {
-      shorter: THEME.DURATION.SHORTER,
       shortest: THEME.DURATION.SHORTEST,
+      shorter: THEME.DURATION.SHORTER,
       short: THEME.DURATION.SHORT,
       standard: THEME.DURATION.STANDARD,
     },
@@ -102,25 +127,14 @@ export const MUI_THEME = {
     },
     MuiButton: {
       root: {
-        letterSpacing: 1,
-        fontWeight: 700,
+        transition: ['color', 'background-color', 'border']
+          .map((prop: string): string => `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}`)
+          .join(','),
       },
-      contained: {
-        boxShadow: 'none',
-        '&:hover, &:active, &:focus': {
-          boxShadow: 'none',
-        },
-      },
+      contained: commonProps.buttonWithoutBoxShadow,
     },
     MuiFab: {
-      root: {
-        boxShadow: 'none',
-        '&:hover, &:active, &:focus': {
-          boxShadow: 'none',
-        },
-      },
+      root: commonProps.buttonWithoutBoxShadow,
     },
   },
 }
-
-export default THEME

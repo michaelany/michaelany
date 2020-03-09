@@ -1,1 +1,1 @@
-export type Color = 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'
