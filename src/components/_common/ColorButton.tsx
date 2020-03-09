@@ -4,14 +4,14 @@ import Button from '@material-ui/core/Button'
 
 import {hasKey, toUpperCaseFirstLetter} from '../../utils/helpers'
 import {Route} from '../../utils/enums'
-import {ColorProp} from '../../utils/types'
+import {Color, ColorProp} from '../../utils/types'
 import {THEME} from '../../styles/theme'
 
 interface IColorButtonProps {
   children: ReactNode
   component?: ReactNode
   to?: Route
-  color?: 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+  color?: Color
   size?: 'small' | 'medium' | 'large'
   variant?: 'outlined' | 'contained'
   disableFocusRipple?: boolean

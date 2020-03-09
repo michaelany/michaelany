@@ -4,7 +4,7 @@ import Fab from '@material-ui/core/Fab'
 import Tooltip from '@material-ui/core/Tooltip'
 
 import './SocialLinks.scss'
-import {ISocialLink} from '../../utils/data'
+import {ISocialLink} from '../../utils/types'
 import {THEME} from '../../styles/theme'
 
 interface ISocialLinksProps {
