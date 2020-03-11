@@ -20,6 +20,6 @@ const StyledExpandMoreIcon = withStyles({
   },
 })(ExpandMoreIcon)
 
-export default function DropdownIcon({isOpen}: IDropdownIconProps) {
+export default function DropdownIcon({isOpen}: IDropdownIconProps): JSX.Element {
   return <StyledExpandMoreIcon style={isOpen ? styles.rotated : undefined} />
 }

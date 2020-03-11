@@ -7,13 +7,14 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
 import {Route, Title} from '../../utils/enums'
+import {IMap} from '../../utils/types'
 
 interface IPaginationProps {
   prevTo: Route
   nextTo: Route
 }
 
-const TITLES_MAP = {
+const TITLES_MAP: IMap<Title> = {
   [Route.HOME]: Title.HOME,
   [Route.ABOUT]: Title.ABOUT,
   [Route.SKILLS]: Title.SKILLS,
@@ -29,7 +30,7 @@ const StyledButton: ElementType = withStyles({
   },
 })(Button)
 
-export default function Pagination({prevTo, nextTo}: IPaginationProps) {
+export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Element {
   return (
     <Grid container spacing={2}>
       <Grid item xs={6}>

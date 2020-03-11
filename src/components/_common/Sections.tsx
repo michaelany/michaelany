@@ -14,7 +14,7 @@ const GridContainer = withStyles({
   },
 })(Grid)
 
-export default function Sections({firstSection, secondSection}: ISectionsProps) {
+export default function Sections({firstSection, secondSection}: ISectionsProps): JSX.Element {
   return (
     <GridContainer container spacing={0}>
       <Grid item xs={12} md={6}>

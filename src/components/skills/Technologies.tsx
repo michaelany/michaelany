@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Technologies() {
+export default function Technologies(): JSX.Element {
   return (
     <section className="Technologies Section Section_backgroundColor_blue">
       <h2 className="VisuallyHidden">Технологии</h2>

@@ -1,6 +1,10 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
+export interface IMap<T> {
+  [key: string]: T
+}
+
 export interface ISocialLink {
   id: number
   title: string

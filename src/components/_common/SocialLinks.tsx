@@ -21,22 +21,24 @@ const StyledFab: ElementType = withStyles({
   },
 })(Fab)
 
-export default function SocialLinks({links}: ISocialLinksProps) {
+export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
   return (
     <ul className="SocialLinks">
-      {links.map(({id, title, href, Icon}: ISocialLink, index: number) => (
-        <li key={id} className="SocialLinks-Item">
-          <Tooltip
-            title={title}
-            enterDelay={THEME.DURATION.MEDIUM}
-            placement={index === 0 ? 'left' : index === links.length - 1 ? 'right' : 'bottom'}
-          >
-            <StyledFab component="a" href={href} target="_blank" rel="noopener" aria-label={title}>
-              <Icon />
-            </StyledFab>
-          </Tooltip>
-        </li>
-      ))}
+      {links.map(
+        ({id, title, href, Icon}: ISocialLink, index: number): JSX.Element => (
+          <li key={id} className="SocialLinks-Item">
+            <Tooltip
+              title={title}
+              enterDelay={THEME.DURATION.MEDIUM}
+              placement={index === 0 ? 'left' : index === links.length - 1 ? 'right' : 'bottom'}
+            >
+              <StyledFab component="a" href={href} target="_blank" rel="noopener" aria-label={title}>
+                <Icon />
+              </StyledFab>
+            </Tooltip>
+          </li>
+        )
+      )}
     </ul>
   )
 }

@@ -5,7 +5,7 @@ import './Sidebar.scss'
 import Navigation from './Navigation'
 import {Route} from '../../utils/enums'
 
-function Sidebar() {
+function Sidebar(): JSX.Element {
   return (
     <aside className="Sidebar">
       <Link className="Sidebar-Logo" to={Route.HOME}>

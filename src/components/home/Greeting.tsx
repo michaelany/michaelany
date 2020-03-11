@@ -8,7 +8,7 @@ import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
 import ColorButton from '../_common/ColorButton'
 import {Title, Route} from '../../utils/enums'
 
-export default function Greeting() {
+export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
       <h1 className="VisuallyHidden">{Title.HOME}</h1>

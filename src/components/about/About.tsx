@@ -48,10 +48,10 @@ const features: IFeature[] = [
   {id: 17, label: 'Склонный к перфекционизму', Icon: ViewQuiltIcon},
   {id: 18, label: 'Кофеман', Icon: LocalCafeIcon},
 ]
-const mainFeatures = features.slice(0, 10)
-const extraFeatures = features.slice(10)
+const mainFeatures: IFeature[] = features.slice(0, 10)
+const extraFeatures: IFeature[] = features.slice(10)
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <Sections
       firstSection={

@@ -39,27 +39,29 @@ const NavLinkButton: ElementType = withStyles({
   },
 })(Button)
 
-export default function Navigation() {
+export default function Navigation(): JSX.Element {
   return (
     <nav className="Navigation">
       <ul>
-        {navLinks.map(({id, title, to, Icon}) => (
-          <li key={id}>
-            <Tooltip title={title} enterDelay={THEME.DURATION.MEDIUM} placement="right">
-              <NavLinkButton
-                fullWidth
-                exact
-                className="Navigation-Link"
-                activeClassName="Navigation-Link_active"
-                component={NavLink}
-                to={to}
-                aria-label={title}
-              >
-                <Icon fontSize="inherit" />
-              </NavLinkButton>
-            </Tooltip>
-          </li>
-        ))}
+        {navLinks.map(
+          ({id, title, to, Icon}: INavLink): JSX.Element => (
+            <li key={id}>
+              <Tooltip title={title} enterDelay={THEME.DURATION.MEDIUM} placement="right">
+                <NavLinkButton
+                  fullWidth
+                  exact
+                  className="Navigation-Link"
+                  activeClassName="Navigation-Link_active"
+                  component={NavLink}
+                  to={to}
+                  aria-label={title}
+                >
+                  <Icon fontSize="inherit" />
+                </NavLinkButton>
+              </Tooltip>
+            </li>
+          )
+        )}
       </ul>
     </nav>
   )

@@ -67,7 +67,12 @@ const styles: any = {
   useGreenOutlinedStyles: makeStyles(getStyle('GREEN')),
 }
 
-export default function ColorButton({children, color = 'blue', variant = 'contained', ...props}: IColorButtonProps) {
+export default function ColorButton({
+  children,
+  color = 'blue',
+  variant = 'contained',
+  ...props
+}: IColorButtonProps): JSX.Element {
   const classes = styles[`use${toUpperCaseFirstLetter(color)}${toUpperCaseFirstLetter(variant)}Styles`]()
   return (
     <Button

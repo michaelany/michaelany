@@ -6,14 +6,21 @@ import macbookImg from '../../assets/img/macbook.png'
 import macbookImg2x from '../../assets/img/macbook@2x.png'
 import {THEME} from '../../styles/theme'
 
-const tiltOptions = {
+interface ITiltOptions {
+  max: number
+  scale: number
+  speed: number
+  reset: boolean
+}
+
+const tiltOptions: ITiltOptions = {
   max: 60,
   scale: 1,
   speed: 3000,
   reset: false,
 }
 
-export default function Banner() {
+export default function Banner(): JSX.Element {
   return (
     <section className="Banner Section">
       <h2 className="VisuallyHidden">Баннер</h2>

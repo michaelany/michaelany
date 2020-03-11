@@ -5,7 +5,7 @@ import Info from '../_common/Info'
 import Technologies from './Technologies'
 import {Title} from '../../utils/enums'
 
-export default function Skills() {
+export default function Skills(): JSX.Element {
   return (
     <Sections
       firstSection={

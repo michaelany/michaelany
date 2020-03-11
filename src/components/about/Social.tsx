@@ -6,9 +6,9 @@ import Pagination from '../_common/Pagination'
 import {SOCIAL_LINKS} from '../../utils/data'
 import {Route} from '../../utils/enums'
 
-const imgSize = 320
+const imgSize: number = 320
 
-export default function Social() {
+export default function Social(): JSX.Element {
   return (
     <section className="Social Section Section_backgroundColor_green">
       <div className="Social-Content">

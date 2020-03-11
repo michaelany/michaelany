@@ -1,4 +1,4 @@
-import React, {memo, ElementType} from 'react'
+import React, {memo, useState, ElementType} from 'react'
 import {withStyles} from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Collapse from '@material-ui/core/Collapse'
@@ -43,19 +43,21 @@ const InfoItem: ElementType = withStyles({
   },
 })(Grid)
 
-const Features = memo(({items}: IFeaturesProps) => (
-  <InfoList container component="ul" spacing={4}>
-    {items.map(({id, label, Icon}: IFeature) => (
-      <InfoItem key={id} item component="li" xs={6}>
-        <Icon />
-        <p>{label}</p>
-      </InfoItem>
-    ))}
-  </InfoList>
-))
+const Features = memo(
+  ({items}: IFeaturesProps): JSX.Element => (
+    <InfoList container component="ul" spacing={4}>
+      {items.map(({id, label, Icon}: IFeature) => (
+        <InfoItem key={id} item component="li" xs={6}>
+          <Icon />
+          <p>{label}</p>
+        </InfoItem>
+      ))}
+    </InfoList>
+  )
+)
 
-export default function Info({title, mainText, text, features, extraFeatures, color}: IInfoProps) {
-  const [isOpen, toggleOpen] = React.useState(false)
+export default function Info({title, mainText, text, features, extraFeatures, color}: IInfoProps): JSX.Element {
+  const [isOpen, toggleOpen] = useState<boolean>(false)
 
   const handleIsOpenToggle = (): void => {
     toggleOpen(isOpen => !isOpen)

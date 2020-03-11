@@ -11,7 +11,7 @@ import Portfolio from '../portfolio/Portfolio'
 import Contact from '../contact/Contact'
 import {Route} from '../../utils/enums'
 
-function AppContent({location}: RouteComponentProps) {
+function AppContent({location}: RouteComponentProps): JSX.Element {
   return (
     <div className={`AppContent AppContent_${location.pathname.slice(1) || 'home'}`}>
       <Sidebar />
