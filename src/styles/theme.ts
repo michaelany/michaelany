@@ -66,15 +66,6 @@ export const THEME = {
   EASING: Easing,
 }
 
-const commonProps = {
-  buttonWithoutBoxShadow: {
-    boxShadow: 'none',
-    '&:hover, &:active, &:focus': {
-      boxShadow: 'none',
-    },
-  },
-}
-
 export default {
   typography: {
     fontFamily: THEME.FONT_FAMILY,
@@ -119,22 +110,22 @@ export default {
       standard: THEME.DURATION.STANDARD,
     },
   },
+  shadows: ['none'],
   overrides: {
     MuiTooltip: {
       tooltip: {
-        fontSize: 12,
+        fontSize: 14,
       },
     },
     MuiButton: {
       root: {
         transition: ['color', 'background-color', 'border']
-          .map((prop: string): string => `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}`)
+          .map(
+            (prop: string): string =>
+              `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}`
+          )
           .join(','),
       },
-      contained: commonProps.buttonWithoutBoxShadow,
-    },
-    MuiFab: {
-      root: commonProps.buttonWithoutBoxShadow,
     },
   },
 }

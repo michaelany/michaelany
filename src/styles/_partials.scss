@@ -47,11 +47,10 @@
 }
 
 .MainText {
-  color: $color_second-text;
   font-size: 30px;
   font-weight: 300;
   line-height: 1.3;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .Link {
@@ -63,5 +62,12 @@
   }
   @include hover {
     text-decoration: underline;
+  }
+}
+
+.Actions {
+  margin-top: 40px;
+  &_center {
+    text-align: center;
   }
 }

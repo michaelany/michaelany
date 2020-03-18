@@ -11,12 +11,11 @@ import {IFeature, Color} from '../../utils/types'
 import {THEME} from '../../styles/theme'
 
 interface IInfoProps {
-  title: Title
-  mainText: string
-  textContent: string | JSX.Element
-  features: IFeature[]
-  extraFeatures: IFeature[]
   color: Color
+  title: Title
+  text: string
+  features: IFeature[]
+  extraContent: string | JSX.Element
 }
 
 interface IFeaturesProps {
@@ -34,10 +33,9 @@ const InfoList: ElementType = withStyles({
 const InfoItem: ElementType = withStyles({
   root: {
     textAlign: 'center',
-    fontWeight: 500,
-    fontSize: 16,
+    fontSize: 17,
     '& > svg': {
-      fontSize: 32,
+      fontSize: 36,
       color: THEME.COLOR.SECOND_TEXT,
     },
   },
@@ -56,7 +54,13 @@ const Features = memo(
   )
 )
 
-export default function Info({title, mainText, textContent, features, extraFeatures, color}: IInfoProps): JSX.Element {
+export default function Info({
+  color,
+  title,
+  text,
+  features,
+  extraContent,
+}: IInfoProps): JSX.Element {
   const [isOpen, toggleOpen] = useState<boolean>(false)
 
   const handleIsOpenToggle = (): void => {
@@ -67,14 +71,13 @@ export default function Info({title, mainText, textContent, features, extraFeatu
     <section className="Info Section">
       <h1 className={`Title Title_color_${color}`}>{title}</h1>
       <p className="MainText">
-        <b>{mainText}</b>
+        <b>{text}</b>
       </p>
-      <p className="Info-Text">{textContent}</p>
       <Features items={features} />
       <Collapse unmountOnExit in={isOpen} timeout={1000}>
-        <Features items={extraFeatures} />
+        <div className="Info-Extra">{extraContent}</div>
       </Collapse>
-      <div className="Info-More">
+      <div className="Actions Actions_center">
         <ColorButton
           variant={isOpen ? 'outlined' : 'contained'}
           color={color}

@@ -18,6 +18,14 @@ export interface IFeature {
   Icon: (props: SvgIconProps) => JSX.Element
 }
 
+export interface ITechnology {
+  id: number
+  label: string
+  imgs: string[]
+  color: Color
+  href: string
+}
+
 export type Color = 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
 
 export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'

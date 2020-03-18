@@ -23,16 +23,14 @@ export default function Greeting(): JSX.Element {
       </p>
       <p className="Greeting-Text Title">
         <b>
-          <span className="Greeting-Letter">M</span>ichael <span className="Greeting-Letter">A</span>naniev,
+          <span className="Greeting-Letter">M</span>ichael{' '}
+          <span className="Greeting-Letter">A</span>naniev,
         </b>
       </p>
       <p className="Greeting-Text Title">
         <b>я фронтенд-разработчик</b>
       </p>
-      <p className="Greeting-Subtext MainText">
-        <b>JavaScript | TypeScript | React</b>
-      </p>
-      <div>
+      <div className="Actions">
         <ColorButton
           component={Link}
           to={Route.PORTFOLIO}

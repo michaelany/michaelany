@@ -6,6 +6,13 @@ import {ReactComponent as InstagramIcon} from '../assets/icons/instagram.svg'
 import {ReactComponent as VKIcon} from '../assets/icons/vk.svg'
 import {ISocialLink} from './types'
 
+interface IBlankLinkProps {
+  target: string
+  rel: string
+}
+
+export const BLANK_LINK_PROPS: IBlankLinkProps = {target: '_blank', rel: 'noopener noreferrer'}
+
 export const SOCIAL_LINKS: ISocialLink[] = [
   {id: 1, title: '7glyphs website', href: 'https://7glyphs.com/agency/team', Icon: SevenGlyphsIcon},
   {id: 2, title: 'GitHub', href: 'https://github.com/vashstamp', Icon: GitHubIcon},

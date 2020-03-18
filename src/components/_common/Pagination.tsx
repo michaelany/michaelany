@@ -14,7 +14,7 @@ interface IPaginationProps {
   nextTo: Route
 }
 
-const TITLES_MAP: IMap<Title> = {
+const titlesMap: IMap<Title> = {
   [Route.HOME]: Title.HOME,
   [Route.ABOUT]: Title.ABOUT,
   [Route.SKILLS]: Title.SKILLS,
@@ -34,13 +34,25 @@ export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Elem
   return (
     <Grid container spacing={2}>
       <Grid item xs={6}>
-        <StyledButton fullWidth component={Link} to={prevTo} variant="outlined" startIcon={<ChevronLeftIcon />}>
-          {TITLES_MAP[prevTo]}
+        <StyledButton
+          fullWidth
+          component={Link}
+          to={prevTo}
+          variant="outlined"
+          startIcon={<ChevronLeftIcon />}
+        >
+          {titlesMap[prevTo]}
         </StyledButton>
       </Grid>
       <Grid item xs={6}>
-        <StyledButton fullWidth component={Link} to={nextTo} variant="outlined" endIcon={<ChevronRightIcon />}>
-          {TITLES_MAP[nextTo]}
+        <StyledButton
+          fullWidth
+          component={Link}
+          to={nextTo}
+          variant="outlined"
+          endIcon={<ChevronRightIcon />}
+        >
+          {titlesMap[nextTo]}
         </StyledButton>
       </Grid>
     </Grid>
