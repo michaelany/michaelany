@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import ThumbUpIcon from '@material-ui/icons/CheckCircleRounded'
 import SpeedIcon from '@material-ui/icons/SpeedRounded'
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjectsRounded'
@@ -21,7 +22,7 @@ import PaletteIcon from '@material-ui/icons/PaletteRounded'
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
 import Social from './Social'
-import {Title} from '../../utils/enums'
+import {Title, Route} from '../../utils/enums'
 import {IFeature} from '../../utils/types'
 
 const features: IFeature[] = [
@@ -58,8 +59,27 @@ export default function About(): JSX.Element {
         <Info
           title={Title.ABOUT}
           mainText="Живу и работаю в Москве. Профессионально занимаюсь веб-разработкой четыре года"
-          text="Я фронтенд инженер и UI разработчик. Мне нравится создавать простые, красивые и удобные одностраничные
-      приложения | лендинги | многостраничные сайты | админки и я люблю то, что делаю."
+          textContent={
+            <>
+              Я фронтенд инженер и UI разработчик. Мне нравится создавать простые, красивые и удобные{' '}
+              <Link className="Link Link_color_green" to={Route.PORTFOLIO}>
+                одностраничные приложения
+              </Link>
+              ,{' '}
+              <Link className="Link Link_color_green" to={Route.PORTFOLIO}>
+                лендинги
+              </Link>
+              ,{' '}
+              <Link className="Link Link_color_green" to={Route.PORTFOLIO}>
+                многостраничные сайты
+              </Link>{' '}
+              и{' '}
+              <Link className="Link Link_color_green" to={Route.PORTFOLIO}>
+                админки
+              </Link>
+              .
+            </>
+          }
           features={mainFeatures}
           extraFeatures={extraFeatures}
           color="green"

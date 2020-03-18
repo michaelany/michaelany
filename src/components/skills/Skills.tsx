@@ -11,8 +11,8 @@ export default function Skills(): JSX.Element {
       firstSection={
         <Info
           title={Title.SKILLS}
-          mainText="Создаю веб-приложения на React. Бизнес-логику пишу на Redux"
-          text="Мой технологический стек постоянно обновляется и пополняется. В основном читаю официальные документации по изучаемым технологиям, также справочники."
+          mainText="Создаю веб-приложения на React + TypeScript. Бизнес-логику пишу на Redux"
+          textContent="Для создания обычных страниц использую "
           features={[]}
           extraFeatures={[]}
           color="blue"

@@ -13,7 +13,7 @@ import {THEME} from '../../styles/theme'
 interface IInfoProps {
   title: Title
   mainText: string
-  text: string
+  textContent: string | JSX.Element
   features: IFeature[]
   extraFeatures: IFeature[]
   color: Color
@@ -56,7 +56,7 @@ const Features = memo(
   )
 )
 
-export default function Info({title, mainText, text, features, extraFeatures, color}: IInfoProps): JSX.Element {
+export default function Info({title, mainText, textContent, features, extraFeatures, color}: IInfoProps): JSX.Element {
   const [isOpen, toggleOpen] = useState<boolean>(false)
 
   const handleIsOpenToggle = (): void => {
@@ -69,7 +69,7 @@ export default function Info({title, mainText, text, features, extraFeatures, co
       <p className="MainText">
         <b>{mainText}</b>
       </p>
-      <p className="Info-Text">{text}</p>
+      <p className="Info-Text">{textContent}</p>
       <Features items={features} />
       <Collapse unmountOnExit in={isOpen} timeout={1000}>
         <Features items={extraFeatures} />
