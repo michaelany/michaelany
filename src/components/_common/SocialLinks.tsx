@@ -12,7 +12,7 @@ interface ISocialLinksProps {
   links: ISocialLink[]
 }
 
-const StyledFab: ElementType = withStyles({
+const SocialLink: ElementType = withStyles({
   root: {
     color: THEME.COLOR.TEXT,
     backgroundColor: 'white',
@@ -33,9 +33,9 @@ export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
               enterDelay={THEME.DURATION.MEDIUM}
               placement={index === 0 ? 'left' : index === links.length - 1 ? 'right' : 'bottom'}
             >
-              <StyledFab {...BLANK_LINK_PROPS} component="a" href={href} aria-label={title}>
+              <SocialLink {...BLANK_LINK_PROPS} component="a" href={href} aria-label={title}>
                 <Icon />
-              </StyledFab>
+              </SocialLink>
             </Tooltip>
           </li>
         )

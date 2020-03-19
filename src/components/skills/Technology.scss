@@ -1,4 +1,5 @@
 @import 'styles/variables';
+@import 'styles/mixins';
 
 .Technology {
   &::after {
@@ -20,8 +21,147 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &_color_default::after {
+    background-color: rgba($color_second-text, 0.12);
+  }
+  &_color_blue::after {
+    background-color: rgba($color_blue, 0.12);
+  }
+  &_color_green::after {
+    background-color: rgba($color_green, 0.12);
+  }
+  &_color_grass::after {
+    background-color: rgba($color_grass, 0.12);
+  }
+  &_color_red::after {
+    background-color: rgba($color_red, 0.12);
+  }
+  &_color_yellow::after {
+    background-color: rgba($color_yellow, 0.12);
+  }
+  &_color_violet::after {
+    background-color: rgba($color_violet, 0.12);
+  }
+  &_type_html::before {
+    @include image2x('../#{$path_technologies}/html@2x.png');
+    background-image: url('../../#{$path_technologies}/html.png');
+  }
+  &_type_svg::before {
+    @include image2x('../#{$path_technologies}/svg@2x.png');
+    background-image: url('../../#{$path_technologies}/svg.png');
+  }
+  &_type_react::before {
+    @include image2x('../#{$path_technologies}/react@2x.png');
+    background-image: url('../../#{$path_technologies}/react.png');
+  }
+  &_type_pug::before {
+    @include image2x('../#{$path_technologies}/pug@2x.png');
+    background-image: url('../../#{$path_technologies}/pug.png');
+  }
+  &_type_handlebars::before {
+    @include image2x('../#{$path_technologies}/handlebars@2x.png');
+    background-image: url('../../#{$path_technologies}/handlebars.png');
+  }
+  &_type_laravel::before {
+    @include image2x('../#{$path_technologies}/laravel@2x.png');
+    background-image: url('../../#{$path_technologies}/laravel.png');
+  }
+  &_type_markdown::before {
+    @include image2x('../#{$path_technologies}/markdown@2x.png');
+    background-image: url('../../#{$path_technologies}/markdown.png');
+  }
+  &_type_css::before {
+    @include image2x('../#{$path_technologies}/css@2x.png');
+    background-image: url('../../#{$path_technologies}/css.png');
+  }
+  &_type_bem::before {
+    @include image2x('../#{$path_technologies}/bem@2x.png');
+    background-image: url('../../#{$path_technologies}/bem.png');
+  }
+  &_type_sass::before {
+    @include image2x('../#{$path_technologies}/sass@2x.png');
+    background-image: url('../../#{$path_technologies}/sass.png');
+  }
+  &_type_cssModules::before {
+    @include image2x('../#{$path_technologies}/css-modules@2x.png');
+    background-image: url('../../#{$path_technologies}/css-modules.png');
+  }
+  &_type_styledComponents::before {
+    @include image2x('../#{$path_technologies}/styled-components@2x.png');
+    background-image: url('../../#{$path_technologies}/styled-components.png');
+  }
+  &_type_mui::before {
+    @include image2x('../#{$path_technologies}/mui@2x.png');
+    background-image: url('../../#{$path_technologies}/mui.png');
+  }
+  &_type_reactstrap::before {
+    @include image2x('../#{$path_technologies}/reactstrap@2x.png');
+    background-image: url('../../#{$path_technologies}/reactstrap.png');
+  }
+  &_type_antDesign::before {
+    @include image2x('../#{$path_technologies}/ant-design@2x.png');
+    background-image: url('../../#{$path_technologies}/ant-design.png');
+  }
+  &_type_materialize::before {
+    @include image2x('../#{$path_technologies}/materialize@2x.png');
+    background-image: url('../../#{$path_technologies}/materialize.png');
+  }
+  &_type_bootstrap::before {
+    @include image2x('../#{$path_technologies}/bootstrap@2x.png');
+    background-image: url('../../#{$path_technologies}/bootstrap.png');
+  }
+  &_type_semanticUi::before {
+    @include image2x('../#{$path_technologies}/semantic-ui@2x.png');
+    background-image: url('../../#{$path_technologies}/semantic-ui.png');
+  }
+  &_type_foundationForEmails::before {
+    @include image2x('../#{$path_technologies}/foundation-for-emails@2x.png');
+    background-image: url('../../#{$path_technologies}/foundation-for-emails.png');
+  }
+  &_type_js::before {
+    @include image2x('../#{$path_technologies}/js@2x.png');
+    background-image: url('../../#{$path_technologies}/js.png');
+  }
+  &_type_ts::before {
+    @include image2x('../#{$path_technologies}/ts@2x.png');
+    background-image: url('../../#{$path_technologies}/ts.png');
+  }
+  &_type_redux::before {
+    @include image2x('../#{$path_technologies}/redux@2x.png');
+    background-image: url('../../#{$path_technologies}/redux.png');
+  }
+  &_type_mobx::before {
+    @include image2x('../#{$path_technologies}/mobx@2x.png');
+    background-image: url('../../#{$path_technologies}/mobx.png');
+  }
+  &_type_preact::before {
+    @include image2x('../#{$path_technologies}/preact@2x.png');
+    background-image: url('../../#{$path_technologies}/preact.png');
+  }
+  &_type_vue::before {
+    @include image2x('../#{$path_technologies}/vue@2x.png');
+    background-image: url('../../#{$path_technologies}/vue.png');
+  }
+  &_type_svelte::before {
+    @include image2x('../#{$path_technologies}/svelte@2x.png');
+    background-image: url('../../#{$path_technologies}/svelte.png');
+  }
+  &_type_node::before {
+    @include image2x('../#{$path_technologies}/node@2x.png');
+    background-image: url('../../#{$path_technologies}/node.png');
+  }
+  &_type_php::before {
+    @include image2x('../#{$path_technologies}/php@2x.png');
+    background-image: url('../../#{$path_technologies}/php.png');
+  }
+  &_type_mysql::before {
+    @include image2x('../#{$path_technologies}/mysql@2x.png');
+    background-image: url('../../#{$path_technologies}/mysql.png');
+  }
   &::before {
     @include pseudo(relative);
+    width: 50%;
+    height: 70%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,13 +173,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba($color_red, 0.12);
     transform: scale(0.6);
     transition: transform $duration_short $easing_in-out, opacity $duration_short $easing_in-out;
-  }
-  &_type_html::before {
-    width: 50%;
-    height: 70%;
-    background-image: url('#{$path_technologies}/html@2x.jpg');
   }
 }

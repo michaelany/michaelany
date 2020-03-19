@@ -26,6 +26,6 @@ export interface ITechnology {
   href: string
 }
 
-export type Color = 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+export type Color = 'default' | 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
 
 export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'

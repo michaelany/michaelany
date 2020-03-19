@@ -23,7 +23,13 @@ const titlesMap: IMap<Title> = {
   [Route.CONTACT]: Title.CONTACT,
 }
 
-const StyledButton: ElementType = withStyles({
+const Container: ElementType = withStyles({
+  root: {
+    marginTop: 40,
+  },
+})(Grid)
+
+const PaginationButton: ElementType = withStyles({
   root: {
     color: 'white',
     borderColor: 'white',
@@ -32,9 +38,9 @@ const StyledButton: ElementType = withStyles({
 
 export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Element {
   return (
-    <Grid container spacing={2}>
+    <Container container spacing={2}>
       <Grid item xs={6}>
-        <StyledButton
+        <PaginationButton
           fullWidth
           component={Link}
           to={prevTo}
@@ -42,10 +48,10 @@ export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Elem
           startIcon={<ChevronLeftIcon />}
         >
           {titlesMap[prevTo]}
-        </StyledButton>
+        </PaginationButton>
       </Grid>
       <Grid item xs={6}>
-        <StyledButton
+        <PaginationButton
           fullWidth
           component={Link}
           to={nextTo}
@@ -53,8 +59,8 @@ export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Elem
           endIcon={<ChevronRightIcon />}
         >
           {titlesMap[nextTo]}
-        </StyledButton>
+        </PaginationButton>
       </Grid>
-    </Grid>
+    </Container>
   )
 }

@@ -14,12 +14,12 @@ const styles = {
   },
 }
 
-const StyledExpandMoreIcon = withStyles({
+const RotatingExpandMoreIcon = withStyles({
   root: {
     transition: `transform ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`,
   },
 })(ExpandMoreIcon)
 
 export default function DropdownIcon({isOpen}: IDropdownIconProps): JSX.Element {
-  return <StyledExpandMoreIcon style={isOpen ? styles.rotated : undefined} />
+  return <RotatingExpandMoreIcon style={isOpen ? styles.rotated : undefined} />
 }

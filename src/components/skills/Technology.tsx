@@ -9,6 +9,9 @@ import {ITechnology as ITechnologyProps} from '../../utils/types'
 import {THEME} from '../../styles/theme'
 
 const styles = {
+  default: {
+    color: THEME.COLOR.SECOND_TEXT,
+  },
   blue: {
     color: THEME.COLOR.BLUE,
   },
@@ -49,7 +52,9 @@ export default function Technology({type, label, color, href}: ITechnologyProps)
         aria-label={label}
         style={styles[color]}
       >
-        <div className={`Technology-Content Technology-Content_type_${type}`} />
+        <div
+          className={`Technology-Content Technology-Content_color_${color} Technology-Content_type_${type}`}
+        />
       </LinkButton>
     </Tooltip>
   )

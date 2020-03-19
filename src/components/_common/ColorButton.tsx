@@ -9,9 +9,9 @@ import {THEME} from '../../styles/theme'
 
 interface IColorButtonProps {
   children: ReactNode
+  color: Color
   component?: ReactNode
   to?: Route
-  color?: Color
   size?: 'small' | 'medium' | 'large'
   variant?: 'outlined' | 'contained'
   disableFocusRipple?: boolean
@@ -69,11 +69,13 @@ const styles: any = {
 
 export default function ColorButton({
   children,
-  color = 'blue',
+  color,
   variant = 'contained',
   ...props
 }: IColorButtonProps): JSX.Element {
-  const classes = styles[`use${toUpperCaseFirstLetter(color)}${toUpperCaseFirstLetter(variant)}Styles`]()
+  const classes = styles[
+    `use${toUpperCaseFirstLetter(color)}${toUpperCaseFirstLetter(variant)}Styles`
+  ]()
   return (
     <Button
       classes={{

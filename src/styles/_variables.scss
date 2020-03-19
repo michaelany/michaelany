@@ -1,4 +1,7 @@
-@import 'mixins';
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$sidebar-width: 100px;
+$header-height: 75px;
 
 $color_background: #fafafa;
 $color_text: #4a4a4a;
@@ -18,12 +21,7 @@ $color_second-blue: #4078c0;
 $color_violet: #9170fb;
 $color_dark-violet: #8265e0;
 
-$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$sidebar-width: 100px;
-$header-height: 75px;
-
-$path_technologies: '../../assets/img/technologies';
+$path_technologies: 'assets/img/technologies';
 
 $breakpoint_xs: 599px;
 $breakpoint_sm: 959px;
