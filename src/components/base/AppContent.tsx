@@ -1,5 +1,5 @@
 import React from 'react'
-import {Switch, Route as RouteComponent, Redirect, withRouter, RouteComponentProps} from 'react-router-dom'
+import {Switch, Route as RouteComponent, Redirect, useLocation} from 'react-router-dom'
 
 import './AppContent.scss'
 import Sidebar from './Sidebar'
@@ -11,9 +11,10 @@ import Portfolio from '../portfolio/Portfolio'
 import Contact from '../contact/Contact'
 import {Route} from '../../utils/enums'
 
-function AppContent({location}: RouteComponentProps): JSX.Element {
+export default function AppContent(): JSX.Element {
+  const {pathname} = useLocation()
   return (
-    <div className={`AppContent AppContent_${location.pathname.slice(1) || 'home'}`}>
+    <div className={`AppContent AppContent_${pathname.slice(1) || 'home'}`}>
       <Sidebar />
       <main className="AppContent-Main">
         <Switch>
@@ -29,5 +30,3 @@ function AppContent({location}: RouteComponentProps): JSX.Element {
     </div>
   )
 }
-
-export default withRouter(AppContent)

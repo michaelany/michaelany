@@ -1,0 +1,45 @@
+@import 'styles/variables';
+
+.Technology {
+  &::after {
+    @include pseudo(relative);
+    padding-bottom: 100%;
+  }
+  @include hover {
+    & > .Technology-Content::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.Technology-Content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    @include pseudo(relative);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+  &::after {
+    @include pseudo;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba($color_red, 0.12);
+    transform: scale(0.6);
+    transition: transform $duration_short $easing_in-out, opacity $duration_short $easing_in-out;
+  }
+  &_type_html::before {
+    width: 50%;
+    height: 70%;
+    background-image: url('#{$path_technologies}/html@2x.jpg');
+  }
+}

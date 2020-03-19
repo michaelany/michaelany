@@ -15,12 +15,12 @@
   padding: 15px 20px;
   margin-bottom: 64px;
   display: block;
-  transition: transform $duration_standard $easing_ease-in-out, color $duration_short $easing_ease-in-out;
-  @include hover {
+  transition: transform $duration_standard $easing_in-out, color $duration_short $easing_in-out;
+  @include hoverFocus {
     transform: scale(1.2) rotate(-15deg);
   }
   .AppContent_home & {
-    @include animationAlternate();
+    @include animationAlternate;
   }
   .AppContent_about & {
     color: $color_green;

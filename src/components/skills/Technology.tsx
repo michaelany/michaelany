@@ -1,16 +1,56 @@
-import React from 'react'
+import React, {ElementType} from 'react'
+import {withStyles} from '@material-ui/core/styles'
 import ButtonBase from '@material-ui/core/ButtonBase'
+import Tooltip from '@material-ui/core/Tooltip'
 
+import './Technology.scss'
 import {BLANK_LINK_PROPS} from '../../utils/data'
 import {ITechnology as ITechnologyProps} from '../../utils/types'
+import {THEME} from '../../styles/theme'
 
-export default function Technology({label, href}: ITechnologyProps) {
+const styles = {
+  blue: {
+    color: THEME.COLOR.BLUE,
+  },
+  green: {
+    color: THEME.COLOR.GREEN,
+  },
+  grass: {
+    color: THEME.COLOR.GRASS,
+  },
+  red: {
+    color: THEME.COLOR.RED,
+  },
+  yellow: {
+    color: THEME.COLOR.YELLOW,
+  },
+  violet: {
+    color: THEME.COLOR.VIOLET,
+  },
+}
+
+const LinkButton: ElementType = withStyles({
+  root: {
+    overflow: 'hidden',
+    width: '100%',
+    borderRadius: 4,
+  },
+})(ButtonBase)
+
+export default function Technology({type, label, color, href}: ITechnologyProps) {
   return (
-    <ButtonBase {...BLANK_LINK_PROPS} component="a" href={href}>
-      <figure>
-        <img src="" alt={label} />
-        <figcaption>{label}</figcaption>
-      </figure>
-    </ButtonBase>
+    <Tooltip title={label} enterDelay={THEME.DURATION.MEDIUM}>
+      <LinkButton
+        {...BLANK_LINK_PROPS}
+        focusRipple
+        className="Technology"
+        component="a"
+        href={href}
+        aria-label={label}
+        style={styles[color]}
+      >
+        <div className={`Technology-Content Technology-Content_type_${type}`} />
+      </LinkButton>
+    </Tooltip>
   )
 }

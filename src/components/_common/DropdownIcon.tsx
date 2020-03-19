@@ -16,7 +16,7 @@ const styles = {
 
 const StyledExpandMoreIcon = withStyles({
   root: {
-    transition: `transform ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}`,
+    transition: `transform ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`,
   },
 })(ExpandMoreIcon)
 

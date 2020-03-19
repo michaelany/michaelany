@@ -4,13 +4,14 @@
   position: relative;
 
   &::after {
-    @include pseudo();
+    @include pseudo;
     top: 0;
     right: 0;
     width: 8px;
     height: 54px;
     border-radius: 4px;
-    transition: transform $duration_medium-long $easing_ease-out, background-color $duration_short $easing_ease-in-out;
+    transition: transform $duration_medium-long $easing_out,
+      background-color $duration_short $easing_in-out;
   }
   .AppContent_home &::after {
     @include animationAlternate(alternateBackgroundColor);
@@ -39,7 +40,7 @@
 
 .Navigation-Link_active {
   .AppContent_home & {
-    @include animationAlternate();
+    @include animationAlternate;
   }
   .AppContent_about & {
     color: $color_green;

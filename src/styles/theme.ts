@@ -39,8 +39,8 @@ enum Duration {
 }
 
 enum Easing {
-  EASE_IN_OUT = 'cubic-bezier(0.4, 0, 0.2, 1)',
-  EASE_OUT = 'cubic-bezier(0, 0, 0.2, 1)',
+  IN_OUT = 'cubic-bezier(0.4, 0, 0.2, 1)',
+  OUT = 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
 export const THEME = {
@@ -100,8 +100,8 @@ export default {
   },
   transitions: {
     easing: {
-      easeInOut: THEME.EASING.EASE_IN_OUT,
-      easeOut: THEME.EASING.EASE_OUT,
+      easeInOut: THEME.EASING.IN_OUT,
+      easeOut: THEME.EASING.OUT,
     },
     duration: {
       shortest: THEME.DURATION.SHORTEST,
@@ -115,15 +115,15 @@ export default {
     MuiTooltip: {
       tooltip: {
         fontSize: 14,
+        color: THEME.COLOR.TEXT,
+        backgroundColor: 'white',
+        border: `1px solid ${THEME.COLOR.TEXT}`,
       },
     },
     MuiButton: {
       root: {
         transition: ['color', 'background-color', 'border']
-          .map(
-            (prop: string): string =>
-              `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}`
-          )
+          .map((prop: string): string => `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`)
           .join(','),
       },
     },

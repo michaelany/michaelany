@@ -35,7 +35,7 @@ const NavLinkButton: ElementType = withStyles({
   root: {
     fontSize: 32,
     height: 54,
-    transition: `color ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}, background-color ${THEME.DURATION.SHORT}ms ${THEME.EASING.EASE_IN_OUT}`,
+    transition: `color ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}, background-color ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`,
   },
 })(Button)
 

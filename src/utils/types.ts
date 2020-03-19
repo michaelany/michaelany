@@ -20,8 +20,8 @@ export interface IFeature {
 
 export interface ITechnology {
   id: number
+  type: string
   label: string
-  imgs: string[]
   color: Color
   href: string
 }

@@ -2,7 +2,7 @@
 
 .AppContent {
   display: flex;
-  transition: background-color $duration_medium $easing_ease-in-out;
+  transition: background-color $duration_medium $easing_in-out;
   &_portfolio {
     background-color: $color_blue;
   }

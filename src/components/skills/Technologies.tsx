@@ -19,18 +19,18 @@ const groups: IGroup[] = [
     id: 1,
     title: 'HTML',
     technologies: [
-      {id: 1, label: 'HTML5', imgs: ['1x', '2x'], color: 'red', href: 'https://www.w3.org/html'},
-      {id: 2, label: 'SVG', imgs: ['1x', '2x'], color: 'yellow', href: 'https://www.w3.org/html'},
-      {id: 3, label: 'JSX', imgs: ['1x', '2x'], color: 'blue', href: 'https://www.w3.org/html'},
-      {id: 4, label: 'Pug', imgs: ['1x', '2x'], color: 'yellow', href: 'https://www.w3.org/html'},
+      {id: 1, type: 'html', label: 'HTML5', color: 'red', href: 'https://www.w3.org/html'},
+      {id: 2, type: 'html', label: 'SVG', color: 'yellow', href: 'https://www.w3.org/html'},
+      {id: 3, type: 'html', label: 'JSX', color: 'blue', href: 'https://www.w3.org/html'},
+      {id: 4, type: 'html', label: 'Pug', color: 'yellow', href: 'https://www.w3.org/html'},
       {
         id: 5,
+        type: 'html',
         label: 'Handlebars',
-        imgs: ['1x', '2x'],
         color: 'yellow',
         href: 'https://www.w3.org/html',
       },
-      {id: 6, label: 'Blade', imgs: ['1x', '2x'], color: 'red', href: 'https://www.w3.org/html'},
+      {id: 6, type: 'html', label: 'Blade', color: 'red', href: 'https://www.w3.org/html'},
     ],
   },
 ]
@@ -51,7 +51,7 @@ export default function Technologies(): JSX.Element {
       <ul>
         {groups.map(
           ({id, title, technologies}: IGroup): JSX.Element => (
-            <ExpansionPanel key={id} component="li" elevation={0}>
+            <ExpansionPanel key={id} defaultExpanded component="li" elevation={0}>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <h4>{title}</h4>
               </ExpansionPanelSummary>

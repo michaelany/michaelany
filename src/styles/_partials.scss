@@ -60,7 +60,7 @@
   &_color_blue {
     color: $color_dark-blue;
   }
-  @include hover {
+  @include hoverFocus {
     text-decoration: underline;
   }
 }

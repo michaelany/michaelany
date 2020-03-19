@@ -8,4 +8,4 @@ My portfolio app.
 
 ##### Production:
 
-`yarn build` or `npm build`
+`yarn build` or `npm run build`
