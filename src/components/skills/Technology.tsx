@@ -37,10 +37,13 @@ const LinkButton: ElementType = withStyles({
     overflow: 'hidden',
     width: '100%',
     borderRadius: 4,
+    '&.Mui-disabled': {
+      opacity: 0.1,
+    },
   },
 })(ButtonBase)
 
-export default function Technology({type, label, color, href}: ITechnologyProps) {
+export default function Technology({isNew, type, label, color, href}: ITechnologyProps) {
   return (
     <Tooltip title={label} enterDelay={THEME.DURATION.MEDIUM}>
       <LinkButton
@@ -51,6 +54,7 @@ export default function Technology({type, label, color, href}: ITechnologyProps)
         href={href}
         aria-label={label}
         style={styles[color]}
+        disabled={isNew}
       >
         <div
           className={`Technology-Content Technology-Content_color_${color} Technology-Content_type_${type}`}

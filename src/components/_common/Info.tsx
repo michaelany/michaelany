@@ -45,7 +45,7 @@ const Features = memo(
   ({items}: IFeaturesProps): JSX.Element => (
     <InfoList container component="ul" spacing={4}>
       {items.map(({id, label, Icon}: IFeature) => (
-        <InfoItem key={id} item component="li" xs={6}>
+        <InfoItem key={id} item component="li" xs={6} xl={4}>
           <Icon />
           <p>{label}</p>
         </InfoItem>

@@ -20,7 +20,7 @@ interface IGroup {
 const groups: IGroup[] = [
   {
     id: 1,
-    title: 'JavaScript',
+    title: 'Логика',
     expanded: true,
     technologies: [
       {
@@ -60,6 +60,7 @@ const groups: IGroup[] = [
       },
       {
         id: 6,
+        isNew: true,
         type: 'preact',
         label: 'Preact',
         color: 'violet',
@@ -67,6 +68,7 @@ const groups: IGroup[] = [
       },
       {
         id: 7,
+        isNew: true,
         type: 'vue',
         label: 'Vue.js',
         color: 'grass',
@@ -74,22 +76,31 @@ const groups: IGroup[] = [
       },
       {
         id: 8,
+        isNew: true,
         type: 'svelte',
         label: 'Svelte',
         color: 'red',
         href: 'https://svelte.dev',
       },
+      {
+        id: 9,
+        isNew: true,
+        type: 'apollo',
+        label: 'Apollo Client',
+        color: 'blue',
+        href: 'https://www.apollographql.com/docs/react',
+      },
     ],
   },
   {
     id: 2,
-    title: 'Markup',
+    title: 'Разметка',
     expanded: true,
     technologies: [
       {
         id: 1,
         type: 'html',
-        label: 'HTML5',
+        label: 'HTML',
         color: 'red',
         href: 'https://html.spec.whatwg.org/multipage',
       },
@@ -133,13 +144,13 @@ const groups: IGroup[] = [
   },
   {
     id: 3,
-    title: 'Styles',
+    title: 'Стили',
     expanded: true,
     technologies: [
       {
         id: 1,
         type: 'css',
-        label: 'CSS3',
+        label: 'CSS',
         color: 'blue',
         href: 'https://www.w3.org/style/css',
       },
@@ -159,6 +170,7 @@ const groups: IGroup[] = [
       },
       {
         id: 4,
+        isNew: true,
         type: 'cssModules',
         label: 'CSS Modules',
         color: 'default',
@@ -166,6 +178,7 @@ const groups: IGroup[] = [
       },
       {
         id: 5,
+        isNew: true,
         type: 'styledComponents',
         label: 'styled-components',
         color: 'yellow',
@@ -180,6 +193,7 @@ const groups: IGroup[] = [
       },
       {
         id: 7,
+        isNew: true,
         type: 'reactstrap',
         label: 'reactstrap',
         color: 'default',
@@ -187,6 +201,7 @@ const groups: IGroup[] = [
       },
       {
         id: 8,
+        isNew: true,
         type: 'antDesign',
         label: 'Ant Design',
         color: 'blue',
@@ -208,7 +223,7 @@ const groups: IGroup[] = [
       },
       {
         id: 11,
-        type: 'semanticUi',
+        type: 'semanticUI',
         label: 'Semantic UI',
         color: 'green',
         href: 'https://semantic-ui.com',
@@ -224,20 +239,212 @@ const groups: IGroup[] = [
   },
   {
     id: 4,
-    title: 'Build',
-    technologies: [],
-  },
-  {
-    id: 5,
-    title: 'Tools',
-    technologies: [],
-  },
-  {
-    id: 6,
-    title: 'Back-End',
+    title: 'Сборка',
     technologies: [
       {
         id: 1,
+        type: 'npm',
+        label: 'NPM',
+        color: 'red',
+        href: 'https://www.npmjs.com',
+      },
+      {
+        id: 2,
+        type: 'yarn',
+        label: 'Yarn',
+        color: 'blue',
+        href: 'https://yarnpkg.com',
+      },
+      {
+        id: 3,
+        type: 'webpack',
+        label: 'webpack',
+        color: 'blue',
+        href: 'https://webpack.js.org',
+      },
+      {
+        id: 4,
+        isNew: true,
+        type: 'parcel',
+        label: 'Parcel',
+        color: 'yellow',
+        href: 'https://parceljs.org',
+      },
+      {
+        id: 5,
+        type: 'gulp',
+        label: 'Gulp',
+        color: 'red',
+        href: 'https://gulpjs.com',
+      },
+      {
+        id: 6,
+        type: 'cra',
+        label: 'Create React App',
+        color: 'green',
+        href: 'https://create-react-app.dev',
+      },
+      {
+        id: 7,
+        isNew: true,
+        type: 'gatsby',
+        label: 'Gatsby',
+        color: 'violet',
+        href: 'https://www.gatsbyjs.org',
+      },
+      {
+        id: 8,
+        isNew: true,
+        type: 'next',
+        label: 'Next.js',
+        color: 'default',
+        href: 'https://nextjs.org',
+      },
+      {
+        id: 9,
+        isNew: true,
+        type: 'nuxt',
+        label: 'Nuxt.js',
+        color: 'grass',
+        href: 'https://ru.nuxtjs.org',
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Утилиты',
+    technologies: [
+      {
+        id: 1,
+        type: 'babel',
+        label: 'Babel',
+        color: 'yellow',
+        href: 'https://babeljs.io',
+      },
+      {
+        id: 2,
+        type: 'prettier',
+        label: 'Prettier',
+        color: 'default',
+        href: 'https://prettier.io',
+      },
+      {
+        id: 3,
+        type: 'eslint',
+        label: 'ESLint',
+        color: 'violet',
+        href: 'https://eslint.org',
+      },
+      {
+        id: 4,
+        isNew: true,
+        type: 'storybook',
+        label: 'Storybook',
+        color: 'red',
+        href: 'https://storybook.js.org',
+      },
+      {
+        id: 5,
+        isNew: true,
+        type: 'bit',
+        label: 'Bit',
+        color: 'violet',
+        href: 'https://bit.dev',
+      },
+      {
+        id: 6,
+        isNew: true,
+        type: 'jest',
+        label: 'Jest',
+        color: 'red',
+        href: 'https://jestjs.io',
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Инструменты',
+    technologies: [
+      {
+        id: 1,
+        type: 'vscode',
+        label: 'Visual Studio Code',
+        color: 'blue',
+        href: 'https://code.visualstudio.com',
+      },
+      {
+        id: 2,
+        type: 'iterm',
+        label: 'iTerm2',
+        color: 'grass',
+        href: 'https://iterm2.com',
+      },
+      {
+        id: 3,
+        type: 'git',
+        label: 'Git',
+        color: 'red',
+        href: 'https://git-scm.com',
+      },
+      {
+        id: 4,
+        type: 'devTools',
+        label: 'Chrome DevTools',
+        color: 'default',
+        href: 'https://developers.google.com/web/tools/chrome-devtools',
+      },
+      {
+        id: 5,
+        type: 'zeplin',
+        label: 'Zeplin',
+        color: 'yellow',
+        href: 'https://zeplin.io',
+      },
+      {
+        id: 6,
+        type: 'sketch',
+        label: 'Sketch',
+        color: 'yellow',
+        href: 'https://www.sketch.com',
+      },
+      {
+        id: 7,
+        isNew: true,
+        type: 'figma',
+        label: 'Figma',
+        color: 'red',
+        href: 'https://www.figma.com/',
+      },
+      {
+        id: 8,
+        type: 'photoshop',
+        label: 'Photoshop',
+        color: 'blue',
+        href: 'https://www.adobe.com/ru/products/photoshop.html',
+      },
+      {
+        id: 9,
+        type: 'imageOptim',
+        label: 'ImageOptim',
+        color: 'default',
+        href: 'https://imageoptim.com',
+      },
+      {
+        id: 10,
+        type: 'macOS',
+        label: 'macOS Catalina',
+        color: 'default',
+        href: 'https://www.apple.com/macos/catalina',
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Бэкенд',
+    technologies: [
+      {
+        id: 1,
+        isNew: true,
         type: 'node',
         label: 'Node.js',
         color: 'grass',
@@ -245,24 +452,33 @@ const groups: IGroup[] = [
       },
       {
         id: 2,
-        type: 'php',
-        label: 'PHP',
-        color: 'violet',
-        href: 'https://www.php.net/',
+        isNew: true,
+        type: 'mongo',
+        label: 'MongoDB',
+        color: 'grass',
+        href: 'https://www.mongodb.com',
       },
       {
         id: 3,
+        isNew: true,
         type: 'mysql',
         label: 'MySQL',
         color: 'blue',
-        href: 'https://www.mysql.com/',
+        href: 'https://www.mysql.com',
       },
       {
         id: 4,
+        type: 'php',
+        label: 'PHP',
+        color: 'violet',
+        href: 'https://www.php.net',
+      },
+      {
+        id: 5,
         type: 'laravel',
         label: 'Laravel',
         color: 'red',
-        href: 'https://laravel.com/',
+        href: 'https://laravel.com',
       },
     ],
   },
@@ -279,12 +495,12 @@ const renderTechnologies = (technologies: ITechnology[]): JSX.Element[] =>
 
 export default function Technologies(): JSX.Element {
   return (
-    <section className="Technologies Section Section_backgroundColor_blue">
+    <section className="Technologies Section Section_type_pagination Section_backgroundColor_blue">
       <h2 className="VisuallyHidden">Технологии</h2>
       <ul>
         {groups.map(
           ({id, title, expanded, technologies}: IGroup): JSX.Element => (
-            <ExpansionPanel key={id} defaultExpanded component="li" elevation={0}>
+            <ExpansionPanel key={id} defaultExpanded={expanded} component="li" elevation={0}>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <h3>{title}</h3>
               </ExpansionPanelSummary>

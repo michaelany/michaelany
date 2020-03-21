@@ -12,9 +12,15 @@
 .Section {
   padding: 80px 10%;
   height: 100%;
-  &_single {
+  &_type_single {
     padding-left: 5%;
     padding-right: 5%;
+  }
+  &_type_pagination {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
   }
   &_backgroundColor_green {
     background-color: $color_green;

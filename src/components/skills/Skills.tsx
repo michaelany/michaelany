@@ -40,7 +40,7 @@ const features: IFeature[] = [
     label: 'Нахожусь в состоянии постоянного обучения и развития',
     Icon: AllInclusiveIcon,
   },
-  {id: 12, label: 'Делаю код-ревью и занимаюсь обучением', Icon: ChildFriendlyIcon},
+  {id: 12, label: 'Делаю код-ревью, занимаюсь обучением', Icon: ChildFriendlyIcon},
   {id: 13, label: 'Есть опыт верстки писем', Icon: MailIcon},
   {id: 14, label: 'Есть опыт проведения собеседований', Icon: PersonAddIcon},
 ]

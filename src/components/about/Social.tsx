@@ -10,7 +10,7 @@ const imgSize: number = 320
 
 export default function Social(): JSX.Element {
   return (
-    <section className="Social Section Section_backgroundColor_green">
+    <section className="Social Section Section_type_pagination Section_backgroundColor_green">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
         <div className="Social-Photo">

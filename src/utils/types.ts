@@ -20,6 +20,7 @@ export interface IFeature {
 
 export interface ITechnology {
   id: number
+  isNew?: boolean
   type: string
   label: string
   color: Color

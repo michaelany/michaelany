@@ -110,7 +110,7 @@
     @include image2x('../#{$path_technologies}/bootstrap@2x.png');
     background-image: url('../../#{$path_technologies}/bootstrap.png');
   }
-  &_type_semanticUi::before {
+  &_type_semanticUI::before {
     @include image2x('../#{$path_technologies}/semantic-ui@2x.png');
     background-image: url('../../#{$path_technologies}/semantic-ui.png');
   }
@@ -146,9 +146,117 @@
     @include image2x('../#{$path_technologies}/svelte@2x.png');
     background-image: url('../../#{$path_technologies}/svelte.png');
   }
+  &_type_apollo::before {
+    @include image2x('../#{$path_technologies}/apollo@2x.png');
+    background-image: url('../../#{$path_technologies}/apollo.png');
+  }
+  &_type_npm::before {
+    @include image2x('../#{$path_technologies}/npm@2x.png');
+    background-image: url('../../#{$path_technologies}/npm.png');
+  }
+  &_type_yarn::before {
+    @include image2x('../#{$path_technologies}/yarn@2x.png');
+    background-image: url('../../#{$path_technologies}/yarn.png');
+  }
+  &_type_webpack::before {
+    @include image2x('../#{$path_technologies}/webpack@2x.png');
+    background-image: url('../../#{$path_technologies}/webpack.png');
+  }
+  &_type_parcel::before {
+    @include image2x('../#{$path_technologies}/parcel@2x.png');
+    background-image: url('../../#{$path_technologies}/parcel.png');
+  }
+  &_type_gulp::before {
+    @include image2x('../#{$path_technologies}/gulp@2x.png');
+    background-image: url('../../#{$path_technologies}/gulp.png');
+  }
+  &_type_cra::before {
+    @include image2x('../#{$path_technologies}/cra@2x.png');
+    background-image: url('../../#{$path_technologies}/cra.png');
+  }
+  &_type_gatsby::before {
+    @include image2x('../#{$path_technologies}/gatsby@2x.png');
+    background-image: url('../../#{$path_technologies}/gatsby.png');
+  }
+  &_type_next::before {
+    @include image2x('../#{$path_technologies}/next@2x.png');
+    background-image: url('../../#{$path_technologies}/next.png');
+  }
+  &_type_nuxt::before {
+    @include image2x('../#{$path_technologies}/nuxt@2x.png');
+    background-image: url('../../#{$path_technologies}/nuxt.png');
+  }
+  &_type_babel::before {
+    @include image2x('../#{$path_technologies}/babel@2x.png');
+    background-image: url('../../#{$path_technologies}/babel.png');
+  }
+  &_type_prettier::before {
+    @include image2x('../#{$path_technologies}/prettier@2x.png');
+    background-image: url('../../#{$path_technologies}/prettier.png');
+  }
+  &_type_eslint::before {
+    @include image2x('../#{$path_technologies}/eslint@2x.png');
+    background-image: url('../../#{$path_technologies}/eslint.png');
+  }
+  &_type_storybook::before {
+    @include image2x('../#{$path_technologies}/storybook@2x.png');
+    background-image: url('../../#{$path_technologies}/storybook.png');
+  }
+  &_type_bit::before {
+    @include image2x('../#{$path_technologies}/bit@2x.png');
+    background-image: url('../../#{$path_technologies}/bit.png');
+  }
+  &_type_jest::before {
+    @include image2x('../#{$path_technologies}/jest@2x.png');
+    background-image: url('../../#{$path_technologies}/jest.png');
+  }
+  &_type_git::before {
+    @include image2x('../#{$path_technologies}/git@2x.png');
+    background-image: url('../../#{$path_technologies}/git.png');
+  }
+  &_type_vscode::before {
+    @include image2x('../#{$path_technologies}/vscode@2x.png');
+    background-image: url('../../#{$path_technologies}/vscode.png');
+  }
+  &_type_iterm::before {
+    @include image2x('../#{$path_technologies}/iterm@2x.png');
+    background-image: url('../../#{$path_technologies}/iterm.png');
+  }
+  &_type_devTools::before {
+    @include image2x('../#{$path_technologies}/dev-tools@2x.png');
+    background-image: url('../../#{$path_technologies}/dev-tools.png');
+  }
+  &_type_zeplin::before {
+    @include image2x('../#{$path_technologies}/zeplin@2x.png');
+    background-image: url('../../#{$path_technologies}/zeplin.png');
+  }
+  &_type_sketch::before {
+    @include image2x('../#{$path_technologies}/sketch@2x.png');
+    background-image: url('../../#{$path_technologies}/sketch.png');
+  }
+  &_type_figma::before {
+    @include image2x('../#{$path_technologies}/figma@2x.png');
+    background-image: url('../../#{$path_technologies}/figma.png');
+  }
+  &_type_photoshop::before {
+    @include image2x('../#{$path_technologies}/photoshop@2x.png');
+    background-image: url('../../#{$path_technologies}/photoshop.png');
+  }
+  &_type_imageOptim::before {
+    @include image2x('../#{$path_technologies}/image-optim@2x.png');
+    background-image: url('../../#{$path_technologies}/image-optim.png');
+  }
+  &_type_macOS::before {
+    @include image2x('../#{$path_technologies}/mac-os@2x.png');
+    background-image: url('../../#{$path_technologies}/mac-os.png');
+  }
   &_type_node::before {
     @include image2x('../#{$path_technologies}/node@2x.png');
     background-image: url('../../#{$path_technologies}/node.png');
+  }
+  &_type_mongo::before {
+    @include image2x('../#{$path_technologies}/mongo@2x.png');
+    background-image: url('../../#{$path_technologies}/mongo.png');
   }
   &_type_php::before {
     @include image2x('../#{$path_technologies}/php@2x.png');
@@ -161,7 +269,7 @@
   &::before {
     @include pseudo(relative);
     width: 50%;
-    height: 70%;
+    height: 50%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
