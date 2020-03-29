@@ -1,5 +1,5 @@
 enum Color {
-  BACKGROUND = '#fafafa',
+  BACKGROUND = '#fff',
   TEXT = '#4a4a4a',
   SECOND_TEXT = '#7b7b7b',
   LIGHT_GREY = '#e6e6e6',
@@ -47,16 +47,15 @@ export const THEME = {
   FONT_FAMILY: [
     '-apple-system',
     'BlinkMacSystemFont',
-    '"Segoe UI"',
+    'Segoe UI',
     'Roboto',
     'Oxygen',
     'Ubuntu',
-    '"Helvetica Neue"',
-    'Arial',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     'sans-serif',
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
   ].join(','),
   SIDEBAR_WIDTH: 100,
   HEADER_HEIGHT: 75,
@@ -111,6 +110,9 @@ export default {
     },
   },
   shadows: ['none'],
+  shape: {
+    borderRadius: 8,
+  },
   overrides: {
     MuiTooltip: {
       tooltip: {

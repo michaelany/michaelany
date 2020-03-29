@@ -3,7 +3,8 @@ import Grid from '@material-ui/core/Grid'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import {TransitionProps} from '@material-ui/core/transitions/transition'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import Pagination from '../_common/Pagination'
 import Technology from './Technology'
@@ -13,7 +14,6 @@ import {ITechnology} from '../../utils/types'
 interface IGroup {
   id: number
   title: string
-  expanded?: boolean
   technologies: ITechnology[]
 }
 
@@ -21,7 +21,6 @@ const groups: IGroup[] = [
   {
     id: 1,
     title: 'Логика',
-    expanded: true,
     technologies: [
       {
         id: 1,
@@ -68,7 +67,6 @@ const groups: IGroup[] = [
       },
       {
         id: 7,
-        isNew: true,
         type: 'vue',
         label: 'Vue.js',
         color: 'grass',
@@ -95,7 +93,6 @@ const groups: IGroup[] = [
   {
     id: 2,
     title: 'Разметка',
-    expanded: true,
     technologies: [
       {
         id: 1,
@@ -145,7 +142,6 @@ const groups: IGroup[] = [
   {
     id: 3,
     title: 'Стили',
-    expanded: true,
     technologies: [
       {
         id: 1,
@@ -264,18 +260,18 @@ const groups: IGroup[] = [
       },
       {
         id: 4,
+        type: 'gulp',
+        label: 'Gulp',
+        color: 'red',
+        href: 'https://gulpjs.com',
+      },
+      {
+        id: 5,
         isNew: true,
         type: 'parcel',
         label: 'Parcel',
         color: 'yellow',
         href: 'https://parceljs.org',
-      },
-      {
-        id: 5,
-        type: 'gulp',
-        label: 'Gulp',
-        color: 'red',
-        href: 'https://gulpjs.com',
       },
       {
         id: 6,
@@ -484,6 +480,8 @@ const groups: IGroup[] = [
   },
 ]
 
+const transitionProps: TransitionProps = {unmountOnExit: true}
+
 const renderTechnologies = (technologies: ITechnology[]): JSX.Element[] =>
   technologies.map(
     (technology: ITechnology): JSX.Element => (
@@ -499,8 +497,14 @@ export default function Technologies(): JSX.Element {
       <h2 className="VisuallyHidden">Технологии</h2>
       <ul>
         {groups.map(
-          ({id, title, expanded, technologies}: IGroup): JSX.Element => (
-            <ExpansionPanel key={id} defaultExpanded={expanded} component="li" elevation={0}>
+          ({id, title, technologies}: IGroup, index: number): JSX.Element => (
+            <ExpansionPanel
+              key={id}
+              component="li"
+              defaultExpanded={index === 0}
+              elevation={0}
+              TransitionProps={transitionProps}
+            >
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <h3>{title}</h3>
               </ExpansionPanelSummary>

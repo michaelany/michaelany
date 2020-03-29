@@ -10,11 +10,13 @@
 
 .Sidebar-Logo {
   font-size: 40px;
-  letter-spacing: -5px;
+  letter-spacing: -6px;
   font-weight: 900;
   line-height: 0.8;
-  padding: 15px 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-bottom: 64px;
+  text-align: center;
   display: block;
   transition: transform $duration_standard $easing_in-out, color $duration_short $easing_in-out;
   @include hoverFocus {

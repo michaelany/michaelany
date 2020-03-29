@@ -1,18 +1,18 @@
 import React from 'react'
-import ViewQuiltIcon from '@material-ui/icons/ViewQuiltTwoTone'
 import EcoIcon from '@material-ui/icons/EcoTwoTone'
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBikeTwoTone'
 import SchoolIcon from '@material-ui/icons/SchoolTwoTone'
 import PublicIcon from '@material-ui/icons/PublicTwoTone'
 import LocalCafeIcon from '@material-ui/icons/LocalCafeTwoTone'
 import FavoriteIcon from '@material-ui/icons/FavoriteTwoTone'
-import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfiedTwoTone'
-import StarIcon from '@material-ui/icons/StarTwoTone'
-import ImportantDevicesIcon from '@material-ui/icons/ImportantDevicesTwoTone'
-import VideogameAssetIcon from '@material-ui/icons/VideogameAssetTwoTone'
-import KeyboardIcon from '@material-ui/icons/KeyboardTwoTone'
+import AppsIcon from '@material-ui/icons/AppsTwoTone'
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccountTwoTone'
-import PetsIcon from '@material-ui/icons/PetsTwoTone'
+import AllInclusiveIcon from '@material-ui/icons/AllInclusiveTwoTone'
+import CodeIcon from '@material-ui/icons/CodeTwoTone'
+import SquareFootIcon from '@material-ui/icons/SquareFootTwoTone'
+import BookIcon from '@material-ui/icons/BookTwoTone'
+import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltTwoTone'
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenterTwoTone'
 
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
@@ -20,24 +20,33 @@ import Social from './Social'
 import {Title} from '../../utils/enums'
 import {IFeature} from '../../utils/types'
 
-const features: IFeature[] = [
-  {id: 1, label: 'Реализовал 30 коммерческих проектов', Icon: ImportantDevicesIcon},
-  {id: 2, label: 'Программирую и верстаю', Icon: KeyboardIcon},
-  {id: 3, label: 'Склонный к перфекционизму', Icon: ViewQuiltIcon},
-  {id: 4, label: 'Разработка как хобби', Icon: VideogameAssetIcon},
-  {id: 5, label: 'Ведущий разработчик и ментор', Icon: SupervisorAccountIcon},
-  {id: 6, label: 'Имею два высших образования', Icon: SchoolIcon},
-  {id: 7, label: 'Веду здоровый образ жизни', Icon: EcoIcon},
-  {id: 8, label: 'Занимаюсь спортом', Icon: DirectionsBikeIcon},
-  {id: 9, label: 'Люблю путешествовать', Icon: PublicIcon},
-  {id: 10, label: 'Дружелюбный и коммуникабельный', Icon: SentimentSatisfiedIcon},
-  {id: 11, label: 'Счастлив в браке', Icon: FavoriteIcon},
-  {id: 12, label: 'Люблю животных', Icon: PetsIcon},
-  {id: 13, label: 'Кофеман', Icon: LocalCafeIcon},
-  {id: 14, label: 'Стремлюсь к совершенству', Icon: StarIcon},
-]
+const text: string =
+  'Живу и дышу фронтендом. Разрабатываю проекты любой сложности с нуля. Воплощаю в жизнь UI/UX идеи.'
 
-const text: string = 'Живу и работаю в Москве. Профессионально занимаюсь веб-разработкой'
+const features: IFeature[] = [
+  {id: 1, label: 'Реализовал большое количество проектов', Icon: AppsIcon},
+  {id: 2, label: 'Являюсь ведущим разработчиком и ментором', Icon: SupervisorAccountIcon},
+  {
+    id: 3,
+    label: 'Интересуюсь веб-разработкой и программированием',
+    Icon: CodeIcon,
+  },
+  {
+    id: 4,
+    label: 'Нахожусь в состоянии постоянного обучения и развития',
+    Icon: AllInclusiveIcon,
+  },
+  {id: 5, label: 'Организованный и автономный', Icon: BusinessCenterIcon},
+  {id: 6, label: 'Склонный к перфекционизму', Icon: SquareFootIcon},
+  {id: 7, label: 'Дружелюбный и коммуникабельный', Icon: SentimentSatisfiedAltIcon},
+  {id: 8, label: 'Имею два высших образования', Icon: SchoolIcon},
+  {id: 9, label: 'Веду здоровый образ жизни', Icon: EcoIcon},
+  {id: 10, label: 'Занимаюсь спортом', Icon: DirectionsBikeIcon},
+  {id: 11, label: 'Люблю путешествовать', Icon: PublicIcon},
+  {id: 12, label: 'Люблю читать', Icon: BookIcon},
+  {id: 13, label: 'Счастлив в браке', Icon: FavoriteIcon},
+  {id: 14, label: 'Кофеман', Icon: LocalCafeIcon},
+]
 
 const extraContent: string =
   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, dolores quae vitae sit sunt quasi facilis. Exercitationem provident, nulla laudantium earum aut quo non quisquam. Consequatur illo commodi deleniti, perspiciatis doloremque mollitia tempora, excepturi magni nisi similique nobis! Fugit, in architecto tempora quidem doloribus, commodi consequatur temporibus vel error voluptatem, porro iste minus? Dolor totam ipsum aspernatur quidem voluptas quis quo magnam veniam unde harum inventore dignissimos tenetur, odio id, tempora deserunt quos cupiditate ad earum. Et magnam deserunt laborum nostrum, itaque debitis. Quo laudantium ipsam placeat repudiandae sed provident deserunt nemo recusandae, praesentium, aliquam sit minima illum velit commodi.'

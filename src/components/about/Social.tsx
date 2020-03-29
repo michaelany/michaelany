@@ -1,6 +1,8 @@
 import React from 'react'
 
 import './Social.scss'
+import meImg from '../../assets/img/pictures/me.png'
+import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
 import {SOCIAL_LINKS} from '../../utils/data'
@@ -17,7 +19,8 @@ export default function Social(): JSX.Element {
           <img
             width={imgSize}
             height={imgSize}
-            src="https://placekitten.com/640/640"
+            src={meImg}
+            srcSet={`${meImg2x} 2x`}
             alt="Michael Ananiev | vashstamp"
           />
         </div>
