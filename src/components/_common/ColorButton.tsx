@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 
 import {hasKey, toUpperCaseFirstLetter} from '../../utils/helpers'
-import {Route} from '../../utils/enums'
+import {Path} from '../../utils/enums'
 import {Color, ColorProp} from '../../utils/types'
 import {THEME} from '../../styles/theme'
 
@@ -11,7 +11,7 @@ interface IColorButtonProps {
   children: ReactNode
   color: Color
   component?: ReactNode
-  to?: Route
+  to?: Path
   size?: 'small' | 'medium' | 'large'
   variant?: 'outlined' | 'contained'
   disableFocusRipple?: boolean

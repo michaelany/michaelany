@@ -28,7 +28,7 @@
 }
 
 @mixin animationAlternate($animation: alternateColor) {
-  animation: $animation $duration_alternate $easing_in-out infinite;
+  animation: $animation $duration_alternate linear infinite;
 }
 
 @mixin xs {

@@ -6,24 +6,24 @@ import Button from '@material-ui/core/Button'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
-import {Route, Title} from '../../utils/enums'
+import {Path, Title} from '../../utils/enums'
 import {IMap} from '../../utils/types'
 
 interface IPaginationProps {
-  prevTo: Route
-  nextTo: Route
+  prevTo?: Path
+  nextTo?: Path
 }
 
 const titlesMap: IMap<Title> = {
-  [Route.HOME]: Title.HOME,
-  [Route.ABOUT]: Title.ABOUT,
-  [Route.SKILLS]: Title.SKILLS,
-  [Route.EXPERIENCE]: Title.EXPERIENCE,
-  [Route.PORTFOLIO]: Title.PORTFOLIO,
-  [Route.CONTACT]: Title.CONTACT,
+  [Path.HOME]: Title.HOME,
+  [Path.ABOUT]: Title.ABOUT,
+  [Path.SKILLS]: Title.SKILLS,
+  [Path.EXPERIENCE]: Title.EXPERIENCE,
+  [Path.PORTFOLIO]: Title.PORTFOLIO,
+  [Path.CONTACT]: Title.CONTACT,
 }
 
-const Container: ElementType = withStyles({
+const Container = withStyles({
   root: {
     marginTop: 40,
   },
@@ -38,29 +38,33 @@ const PaginationButton: ElementType = withStyles({
 
 export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Element {
   return (
-    <Container container spacing={2}>
-      <Grid item xs={6}>
-        <PaginationButton
-          fullWidth
-          component={Link}
-          to={prevTo}
-          variant="outlined"
-          startIcon={<ChevronLeftIcon />}
-        >
-          {titlesMap[prevTo]}
-        </PaginationButton>
-      </Grid>
-      <Grid item xs={6}>
-        <PaginationButton
-          fullWidth
-          component={Link}
-          to={nextTo}
-          variant="outlined"
-          endIcon={<ChevronRightIcon />}
-        >
-          {titlesMap[nextTo]}
-        </PaginationButton>
-      </Grid>
+    <Container container spacing={2} justify="center">
+      {prevTo && (
+        <Grid item xs={6}>
+          <PaginationButton
+            fullWidth
+            component={Link}
+            to={prevTo}
+            variant="outlined"
+            startIcon={<ChevronLeftIcon />}
+          >
+            {titlesMap[prevTo]}
+          </PaginationButton>
+        </Grid>
+      )}
+      {nextTo && (
+        <Grid item xs={6}>
+          <PaginationButton
+            fullWidth
+            component={Link}
+            to={nextTo}
+            variant="outlined"
+            endIcon={<ChevronRightIcon />}
+          >
+            {titlesMap[nextTo]}
+          </PaginationButton>
+        </Grid>
+      )}
     </Container>
   )
 }

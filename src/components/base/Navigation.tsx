@@ -12,23 +12,23 @@ import WebIcon from '@material-ui/icons/WebRounded'
 import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
-import {Route, Title} from '../../utils/enums'
+import {Path, Title} from '../../utils/enums'
 import {THEME} from '../../styles/theme'
 
 interface INavLink {
   id: number
   title: Title
-  to: Route
+  to: Path
   Icon: (props: SvgIconProps) => JSX.Element
 }
 
 const navLinks: INavLink[] = [
-  {id: 1, title: Title.HOME, to: Route.HOME, Icon: HomeIcon},
-  {id: 2, title: Title.ABOUT, to: Route.ABOUT, Icon: PersonIcon},
-  {id: 3, title: Title.SKILLS, to: Route.SKILLS, Icon: SchoolIcon},
-  {id: 4, title: Title.EXPERIENCE, to: Route.EXPERIENCE, Icon: WorkIcon},
-  {id: 5, title: Title.PORTFOLIO, to: Route.PORTFOLIO, Icon: WebIcon},
-  {id: 6, title: Title.CONTACT, to: Route.CONTACT, Icon: MailIcon},
+  {id: 1, title: Title.HOME, to: Path.HOME, Icon: HomeIcon},
+  {id: 2, title: Title.ABOUT, to: Path.ABOUT, Icon: PersonIcon},
+  {id: 3, title: Title.SKILLS, to: Path.SKILLS, Icon: SchoolIcon},
+  {id: 4, title: Title.EXPERIENCE, to: Path.EXPERIENCE, Icon: WorkIcon},
+  {id: 5, title: Title.PORTFOLIO, to: Path.PORTFOLIO, Icon: WebIcon},
+  {id: 6, title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
 ]
 
 const NavLinkButton: ElementType = withStyles({
@@ -46,7 +46,7 @@ export default function Navigation(): JSX.Element {
         {navLinks.map(
           ({id, title, to, Icon}: INavLink): JSX.Element => (
             <li key={id}>
-              <Tooltip title={title} enterDelay={THEME.DURATION.MEDIUM} placement="right">
+              <Tooltip title={title} placement="right">
                 <NavLinkButton
                   fullWidth
                   exact

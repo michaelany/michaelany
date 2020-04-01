@@ -3,6 +3,7 @@ enum Color {
   TEXT = '#4a4a4a',
   SECOND_TEXT = '#7b7b7b',
   LIGHT_GREY = '#e6e6e6',
+  DIVIDER = 'rgba(0, 0, 0, 0.12)',
   RED = '#fa8861',
   DARK_RED = '#e07a58',
   YELLOW = '#f7bc3f',
@@ -59,6 +60,7 @@ export const THEME = {
   ].join(','),
   SIDEBAR_WIDTH: 100,
   HEADER_HEIGHT: 75,
+  BORDER_RADIUS: 8,
   COLOR: Color,
   BREAKPOINT: Breakpoint,
   DURATION: Duration,
@@ -96,6 +98,7 @@ export default {
       main: THEME.COLOR.GREEN,
       dark: THEME.COLOR.DARK_GREEN,
     },
+    divider: THEME.COLOR.DIVIDER,
   },
   transitions: {
     easing: {
@@ -111,7 +114,12 @@ export default {
   },
   shadows: ['none'],
   shape: {
-    borderRadius: 8,
+    borderRadius: THEME.BORDER_RADIUS,
+  },
+  props: {
+    MuiTooltip: {
+      enterDelay: THEME.DURATION.STANDARD,
+    },
   },
   overrides: {
     MuiTooltip: {

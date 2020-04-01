@@ -30,7 +30,6 @@ export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
           <li key={id} className="SocialLinks-Item">
             <Tooltip
               title={title}
-              enterDelay={THEME.DURATION.MEDIUM}
               placement={index === 0 ? 'left' : index === links.length - 1 ? 'right' : 'bottom'}
             >
               <SocialLink {...BLANK_LINK_PROPS} component="a" href={href} aria-label={title}>

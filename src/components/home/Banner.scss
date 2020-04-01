@@ -8,6 +8,11 @@
   @include animationAlternate(alternateBackgroundColor);
 }
 
+.Banner-Content {
+  display: flex;
+  flex-direction: column;
+}
+
 .Banner-Img {
   width: 100%;
   max-width: 599px;

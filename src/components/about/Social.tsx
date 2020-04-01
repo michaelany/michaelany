@@ -6,7 +6,7 @@ import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
 import {SOCIAL_LINKS} from '../../utils/data'
-import {Route} from '../../utils/enums'
+import {Path} from '../../utils/enums'
 
 const imgSize: number = 320
 
@@ -26,7 +26,7 @@ export default function Social(): JSX.Element {
         </div>
         <SocialLinks links={SOCIAL_LINKS} />
       </div>
-      <Pagination prevTo={Route.HOME} nextTo={Route.SKILLS} />
+      <Pagination prevTo={Path.HOME} nextTo={Path.SKILLS} />
     </section>
   )
 }

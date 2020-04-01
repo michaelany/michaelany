@@ -1,4 +1,4 @@
-export enum Route {
+export enum Path {
   HOME = '/',
   ABOUT = '/about',
   SKILLS = '/skills',

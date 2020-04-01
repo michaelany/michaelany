@@ -32,11 +32,11 @@ const styles = {
   },
 }
 
-const LinkButton: ElementType = withStyles({
+const Link: ElementType = withStyles({
   root: {
     overflow: 'hidden',
     width: '100%',
-    borderRadius: 4,
+    borderRadius: THEME.BORDER_RADIUS,
     '&.Mui-disabled': {
       opacity: 0.1,
     },
@@ -45,8 +45,8 @@ const LinkButton: ElementType = withStyles({
 
 export default function Technology({isNew, type, label, color, href}: ITechnologyProps) {
   return (
-    <Tooltip title={label} enterDelay={THEME.DURATION.MEDIUM}>
-      <LinkButton
+    <Tooltip title={label}>
+      <Link
         {...BLANK_LINK_PROPS}
         focusRipple
         className="Technology"
@@ -59,7 +59,7 @@ export default function Technology({isNew, type, label, color, href}: ITechnolog
         <div
           className={`Technology-Content Technology-Content_color_${color} Technology-Content_type_${type}`}
         />
-      </LinkButton>
+      </Link>
     </Tooltip>
   )
 }

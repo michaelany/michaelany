@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import Pagination from '../_common/Pagination'
 import Technology from './Technology'
-import {Route} from '../../utils/enums'
+import {Path} from '../../utils/enums'
 import {ITechnology} from '../../utils/types'
 
 interface IGroup {
@@ -166,6 +166,13 @@ const groups: IGroup[] = [
       },
       {
         id: 4,
+        type: 'mui',
+        label: 'Material-UI',
+        color: 'blue',
+        href: 'https://material-ui.com',
+      },
+      {
+        id: 5,
         isNew: true,
         type: 'cssModules',
         label: 'CSS Modules',
@@ -173,19 +180,12 @@ const groups: IGroup[] = [
         href: 'https://github.com/css-modules/css-modules',
       },
       {
-        id: 5,
+        id: 6,
         isNew: true,
         type: 'styledComponents',
         label: 'styled-components',
         color: 'yellow',
         href: 'https://styled-components.com',
-      },
-      {
-        id: 6,
-        type: 'mui',
-        label: 'Material-UI',
-        color: 'blue',
-        href: 'https://material-ui.com',
       },
       {
         id: 7,
@@ -517,7 +517,7 @@ export default function Technologies(): JSX.Element {
           )
         )}
       </ul>
-      <Pagination prevTo={Route.ABOUT} nextTo={Route.EXPERIENCE} />
+      <Pagination prevTo={Path.ABOUT} nextTo={Path.EXPERIENCE} />
     </section>
   )
 }

@@ -10,7 +10,7 @@
     right: 0;
     width: 8px;
     height: 54px;
-    border-radius: 4px;
+    border-radius: $border-radius;
     transition: transform $duration_medium-long $easing_out,
       background-color $duration_short $easing_in-out;
   }

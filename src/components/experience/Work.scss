@@ -1,0 +1,31 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Work-Job {
+  width: 100%;
+  border-radius: $border-radius;
+  overflow: hidden;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.Work-JobCaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.Work-JobList {
+  list-style: disc inside;
+  font-size: 17px;
+  margin-bottom: 16px;
+  & > li:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.Work-JobPeriod {
+  color: $color_second-text;
+}
