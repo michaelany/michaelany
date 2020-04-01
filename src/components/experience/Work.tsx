@@ -1,5 +1,4 @@
-import React, {ElementType} from 'react'
-import {withStyles} from '@material-ui/core/styles'
+import React from 'react'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import Tooltip from '@material-ui/core/Tooltip'
 
@@ -12,7 +11,6 @@ import tsftdImg from '../../assets/img/companies/tsftd.png'
 import tsftdImg2x from '../../assets/img/companies/tsftd@2x.png'
 import {BLANK_LINK_PROPS} from '../../utils/data'
 import {Title} from '../../utils/enums'
-import {THEME} from '../../styles/theme'
 
 interface IJob {
   id: number
@@ -89,27 +87,19 @@ const jobs: IJob[] = [
   },
 ]
 
-const Link: ElementType = withStyles({
-  root: {
-    borderRadius: THEME.BORDER_RADIUS,
-    padding: '6px 8px',
-    marginLeft: -8,
-  },
-})(ButtonBase)
-
 const renderedJobs: JSX.Element[] = jobs.map(
   ({id, occupation, company, duties, period}: IJob): JSX.Element => (
     <li key={id} className="Work-Job">
       <div className="Work-JobCaption">
         <Tooltip title={company.title} placement="right">
-          <Link {...BLANK_LINK_PROPS} focusRipple component="a" href={company.url}>
+          <ButtonBase {...BLANK_LINK_PROPS} focusRipple component="a" href={company.url}>
             <img
               height={36}
               src={company.logo}
               srcSet={`${company.logo2x} 2x`}
               alt={company.title}
             />
-          </Link>
+          </ButtonBase>
         </Tooltip>
         <h3>{occupation}</h3>
       </div>

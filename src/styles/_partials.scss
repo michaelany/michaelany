@@ -60,6 +60,27 @@
   color: $color_second-text;
 }
 
+.Button {
+  color: white;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+  @each $key, $value, $second-value in $colors-map {
+    &_color_#{$key} {
+      &.MuiButton-contained {
+        background-color: $value;
+        @include hover {
+          background-color: $second-value;
+        }
+      }
+      &.MuiButton-outlined {
+        color: $second-value;
+        border-color: $second-value;
+      }
+    }
+  }
+}
+
 .Link {
   &_color_green {
     color: $color_dark-green;

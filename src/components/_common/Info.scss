@@ -1,3 +1,12 @@
+@import 'styles/variables';
+
 .Info-Extra {
   margin-top: 40px;
+}
+
+.Info-DropdownIcon {
+  transition: transform $duration_short $easing_in-out;
+  &_open {
+    transform: rotate(180deg);
+  }
 }

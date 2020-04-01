@@ -34,9 +34,9 @@ enum Duration {
   MEDIUM_LONG = 650,
   LONG = 800,
   LONGER = 1000,
-  LONGEST = 1000 * 2,
-  HELLO = 1000 * 3,
-  ALTERNATE = 1000 * 20,
+  LONGEST = 2000,
+  HELLO = 3000,
+  ALTERNATE = 20000,
 }
 
 enum Easing {
@@ -75,9 +75,8 @@ export default {
       lineHeight: 1.5,
     },
     button: {
-      letterSpacing: 1,
-      fontWeight: 700,
-      textTransform: 'capitalize',
+      letterSpacing: 0.5,
+      fontWeight: 600,
     },
   },
   palette: {
@@ -135,6 +134,11 @@ export default {
         transition: ['color', 'background-color', 'border']
           .map((prop: string): string => `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`)
           .join(','),
+      },
+    },
+    MuiIconButton: {
+      root: {
+        color: THEME.COLOR.SECOND_TEXT,
       },
     },
   },

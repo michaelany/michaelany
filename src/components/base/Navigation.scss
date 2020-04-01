@@ -13,49 +13,53 @@
     border-radius: $border-radius;
     transition: transform $duration_medium-long $easing_out,
       background-color $duration_short $easing_in-out;
-  }
-  .AppContent_home &::after {
-    @include animationAlternate(alternateBackgroundColor);
-  }
-  .AppContent_about &::after {
-    background-color: $color_green;
-    transform: translate3d(0, 54px, 0);
-  }
-  .AppContent_skills &::after {
-    background-color: $color_blue;
-    transform: translate3d(0, 54px * 2, 0);
-  }
-  .AppContent_experience &::after {
-    background-color: $color_violet;
-    transform: translate3d(0, 54px * 3, 0);
-  }
-  .AppContent_portfolio &::after {
-    background-color: white;
-    transform: translate3d(0, 54px * 4, 0);
-  }
-  .AppContent_contact &::after {
-    background-color: white;
-    transform: translate3d(0, 54px * 5, 0);
+    .AppContent_home & {
+      @include animationAlternate(alternateBackgroundColor);
+    }
+    .AppContent_about & {
+      background-color: $color_green;
+      transform: translate3d(0, 54px, 0);
+    }
+    .AppContent_skills & {
+      background-color: $color_blue;
+      transform: translate3d(0, 54px * 2, 0);
+    }
+    .AppContent_experience & {
+      background-color: $color_violet;
+      transform: translate3d(0, 54px * 3, 0);
+    }
+    .AppContent_portfolio & {
+      background-color: white;
+      transform: translate3d(0, 54px * 4, 0);
+    }
+    .AppContent_contact & {
+      background-color: white;
+      transform: translate3d(0, 54px * 5, 0);
+    }
   }
 }
 
-.Navigation-Link_active {
-  .AppContent_home & {
-    @include animationAlternate;
-  }
-  .AppContent_about & {
-    color: $color_green;
-  }
-  .AppContent_skills & {
-    color: $color_blue;
-  }
-  .AppContent_experience & {
-    color: $color_violet;
-  }
-  .AppContent_portfolio & {
-    color: white;
-  }
-  .AppContent_contact & {
-    color: white;
+.Navigation-Link {
+  font-size: 32px;
+  height: 54px;
+  &_active {
+    .AppContent_home & {
+      @include animationAlternate;
+    }
+    .AppContent_about & {
+      color: $color_green;
+    }
+    .AppContent_skills & {
+      color: $color_blue;
+    }
+    .AppContent_experience & {
+      color: $color_violet;
+    }
+    .AppContent_portfolio & {
+      color: white;
+    }
+    .AppContent_contact & {
+      color: white;
+    }
   }
 }

@@ -1,6 +1,10 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
+export type Color = 'default' | 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+
+export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'
+
 export interface IMap<T> {
   [key: string]: T
 }
@@ -26,7 +30,3 @@ export interface ITechnology {
   color: Color
   href: string
 }
-
-export type Color = 'default' | 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
-
-export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'

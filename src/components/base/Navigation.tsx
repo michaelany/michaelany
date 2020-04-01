@@ -1,6 +1,5 @@
-import React, {ElementType} from 'react'
+import React from 'react'
 import {NavLink} from 'react-router-dom'
-import {withStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Tooltip from '@material-ui/core/Tooltip'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
@@ -13,7 +12,6 @@ import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
 import {Path, Title} from '../../utils/enums'
-import {THEME} from '../../styles/theme'
 
 interface INavLink {
   id: number
@@ -31,14 +29,6 @@ const navLinks: INavLink[] = [
   {id: 6, title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
 ]
 
-const NavLinkButton: ElementType = withStyles({
-  root: {
-    fontSize: 32,
-    height: 54,
-    transition: `color ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}, background-color ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`,
-  },
-})(Button)
-
 export default function Navigation(): JSX.Element {
   return (
     <nav className="Navigation">
@@ -47,7 +37,7 @@ export default function Navigation(): JSX.Element {
           ({id, title, to, Icon}: INavLink): JSX.Element => (
             <li key={id}>
               <Tooltip title={title} placement="right">
-                <NavLinkButton
+                <Button
                   fullWidth
                   exact
                   className="Navigation-Link"
@@ -57,7 +47,7 @@ export default function Navigation(): JSX.Element {
                   aria-label={title}
                 >
                   <Icon fontSize="inherit" />
-                </NavLinkButton>
+                </Button>
               </Tooltip>
             </li>
           )

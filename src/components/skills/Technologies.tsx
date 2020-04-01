@@ -174,7 +174,7 @@ const groups: IGroup[] = [
       {
         id: 5,
         isNew: true,
-        type: 'cssModules',
+        type: 'cssmodules',
         label: 'CSS Modules',
         color: 'default',
         href: 'https://github.com/css-modules/css-modules',
@@ -182,7 +182,7 @@ const groups: IGroup[] = [
       {
         id: 6,
         isNew: true,
-        type: 'styledComponents',
+        type: 'styled',
         label: 'styled-components',
         color: 'yellow',
         href: 'https://styled-components.com',
@@ -198,7 +198,7 @@ const groups: IGroup[] = [
       {
         id: 8,
         isNew: true,
-        type: 'antDesign',
+        type: 'ant',
         label: 'Ant Design',
         color: 'blue',
         href: 'https://ant.design',
@@ -219,14 +219,14 @@ const groups: IGroup[] = [
       },
       {
         id: 11,
-        type: 'semanticUI',
+        type: 'semantic',
         label: 'Semantic UI',
         color: 'green',
         href: 'https://semantic-ui.com',
       },
       {
         id: 12,
-        type: 'foundationForEmails',
+        type: 'emails',
         label: 'Foundation for Emails',
         color: 'red',
         href: 'https://get.foundation/emails.html',
@@ -384,7 +384,7 @@ const groups: IGroup[] = [
       },
       {
         id: 4,
-        type: 'devTools',
+        type: 'devtools',
         label: 'Chrome DevTools',
         color: 'default',
         href: 'https://developers.google.com/web/tools/chrome-devtools',
@@ -420,14 +420,14 @@ const groups: IGroup[] = [
       },
       {
         id: 9,
-        type: 'imageOptim',
+        type: 'optim',
         label: 'ImageOptim',
         color: 'default',
         href: 'https://imageoptim.com',
       },
       {
         id: 10,
-        type: 'macOS',
+        type: 'mac',
         label: 'macOS Catalina',
         color: 'default',
         href: 'https://www.apple.com/macos/catalina',

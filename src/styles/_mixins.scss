@@ -1,3 +1,20 @@
+@mixin pseudo($pos: absolute, $display: block, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin retinaImg($path, $file) {
+  background-image: url('#{$path}.#{$file}');
+  @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url('#{$path}@2x.#{$file}');
+  }
+}
+
+@mixin animationAlternate($animation: alternateColor) {
+  animation: $animation $duration_alternate linear infinite;
+}
+
 @mixin hoverFocus {
   @media (hover: hover) {
     &:hover,
@@ -13,22 +30,6 @@
       @content;
     }
   }
-}
-
-@mixin pseudo($pos: absolute, $display: block, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
-}
-
-@mixin image2x($image) {
-  @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-    background-image: url($image);
-  }
-}
-
-@mixin animationAlternate($animation: alternateColor) {
-  animation: $animation $duration_alternate linear infinite;
 }
 
 @mixin xs {

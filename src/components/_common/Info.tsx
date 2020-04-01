@@ -1,14 +1,13 @@
-import React, {memo, useState, ElementType} from 'react'
-import {withStyles} from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
+import React, {useState} from 'react'
+import cn from 'classnames'
 import Collapse from '@material-ui/core/Collapse'
+import Button from '@material-ui/core/Button'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
-import ColorButton from '../_common/ColorButton'
-import DropdownIcon from '../_common/DropdownIcon'
+import Features from '../_common/Features'
 import {Title} from '../../utils/enums'
 import {IFeature, Color} from '../../utils/types'
-import {THEME} from '../../styles/theme'
 
 interface IInfoProps {
   color: Color
@@ -17,42 +16,6 @@ interface IInfoProps {
   features: IFeature[]
   extraContent: string | JSX.Element
 }
-
-interface IFeaturesProps {
-  items: IFeature[]
-}
-
-const InfoList: ElementType = withStyles({
-  root: {
-    '&:last-child': {
-      marginTop: 16,
-    },
-  },
-})(Grid)
-
-const InfoItem: ElementType = withStyles({
-  root: {
-    textAlign: 'center',
-    fontSize: 17,
-    '& > svg': {
-      fontSize: 36,
-      color: THEME.COLOR.SECOND_TEXT,
-    },
-  },
-})(Grid)
-
-const Features = memo(
-  ({items}: IFeaturesProps): JSX.Element => (
-    <InfoList container component="ul" spacing={4}>
-      {items.map(({id, label, Icon}: IFeature) => (
-        <InfoItem key={id} item component="li" xs={6} xl={4}>
-          <Icon />
-          <p>{label}</p>
-        </InfoItem>
-      ))}
-    </InfoList>
-  )
-)
 
 export default function Info({
   color,
@@ -78,14 +41,18 @@ export default function Info({
         <div className="Info-Extra">{extraContent}</div>
       </Collapse>
       <div className="Actions Actions_center">
-        <ColorButton
+        <Button
+          className={`Button Button_color_${color}`}
           variant={isOpen ? 'outlined' : 'contained'}
-          color={color}
-          endIcon={<DropdownIcon isOpen={isOpen} />}
+          endIcon={
+            <ExpandMoreIcon
+              className={cn('Info-DropdownIcon', {'Info-DropdownIcon_open': isOpen})}
+            />
+          }
           onClick={handleIsOpenToggle}
         >
           Подробнее
-        </ColorButton>
+        </Button>
       </div>
     </section>
   )

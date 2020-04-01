@@ -4,7 +4,7 @@
   "author": "Michael Ananiev | https://github.com/vashstamp",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "4.9.5",
+    "@material-ui/core": "4.9.8",
     "@material-ui/icons": "4.9.1",
     "@types/classnames": "2.2.10",
     "@types/node": "12.0.0",
