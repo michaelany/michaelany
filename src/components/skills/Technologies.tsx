@@ -60,7 +60,7 @@ const groups: IGroup[] = [
       },
       {
         id: 6,
-        isNew: true,
+        disabled: true,
         type: 'preact',
         label: 'Preact',
         color: 'violet',
@@ -75,7 +75,7 @@ const groups: IGroup[] = [
       },
       {
         id: 8,
-        isNew: true,
+        disabled: true,
         type: 'svelte',
         label: 'Svelte',
         color: 'red',
@@ -83,7 +83,7 @@ const groups: IGroup[] = [
       },
       {
         id: 9,
-        isNew: true,
+        disabled: true,
         type: 'apollo',
         label: 'Apollo Client',
         color: 'blue',
@@ -180,7 +180,7 @@ const groups: IGroup[] = [
       },
       {
         id: 5,
-        isNew: true,
+        disabled: true,
         type: 'cssmodules',
         label: 'CSS Modules',
         color: 'default',
@@ -188,7 +188,7 @@ const groups: IGroup[] = [
       },
       {
         id: 6,
-        isNew: true,
+        disabled: true,
         type: 'styled',
         label: 'styled-components',
         color: 'yellow',
@@ -196,7 +196,7 @@ const groups: IGroup[] = [
       },
       {
         id: 7,
-        isNew: true,
+        disabled: true,
         type: 'reactstrap',
         label: 'reactstrap',
         color: 'default',
@@ -204,7 +204,7 @@ const groups: IGroup[] = [
       },
       {
         id: 8,
-        isNew: true,
+        disabled: true,
         type: 'ant',
         label: 'Ant Design',
         color: 'blue',
@@ -274,7 +274,7 @@ const groups: IGroup[] = [
       },
       {
         id: 5,
-        isNew: true,
+        disabled: true,
         type: 'parcel',
         label: 'Parcel',
         color: 'yellow',
@@ -289,7 +289,7 @@ const groups: IGroup[] = [
       },
       {
         id: 7,
-        isNew: true,
+        disabled: true,
         type: 'gatsby',
         label: 'Gatsby',
         color: 'violet',
@@ -297,7 +297,7 @@ const groups: IGroup[] = [
       },
       {
         id: 8,
-        isNew: true,
+        disabled: true,
         type: 'next',
         label: 'Next.js',
         color: 'default',
@@ -305,7 +305,7 @@ const groups: IGroup[] = [
       },
       {
         id: 9,
-        isNew: true,
+        disabled: true,
         type: 'nuxt',
         label: 'Nuxt.js',
         color: 'grass',
@@ -340,7 +340,7 @@ const groups: IGroup[] = [
       },
       {
         id: 4,
-        isNew: true,
+        disabled: true,
         type: 'storybook',
         label: 'Storybook',
         color: 'red',
@@ -348,7 +348,7 @@ const groups: IGroup[] = [
       },
       {
         id: 5,
-        isNew: true,
+        disabled: true,
         type: 'bit',
         label: 'Bit',
         color: 'violet',
@@ -356,7 +356,7 @@ const groups: IGroup[] = [
       },
       {
         id: 6,
-        isNew: true,
+        disabled: true,
         type: 'jest',
         label: 'Jest',
         color: 'red',
@@ -412,7 +412,7 @@ const groups: IGroup[] = [
       },
       {
         id: 7,
-        isNew: true,
+        disabled: true,
         type: 'figma',
         label: 'Figma',
         color: 'red',
@@ -447,7 +447,7 @@ const groups: IGroup[] = [
     technologies: [
       {
         id: 1,
-        isNew: true,
+        disabled: true,
         type: 'node',
         label: 'Node.js',
         color: 'grass',
@@ -455,7 +455,7 @@ const groups: IGroup[] = [
       },
       {
         id: 2,
-        isNew: true,
+        disabled: true,
         type: 'mongo',
         label: 'MongoDB',
         color: 'grass',
@@ -463,7 +463,7 @@ const groups: IGroup[] = [
       },
       {
         id: 3,
-        isNew: true,
+        disabled: true,
         type: 'mysql',
         label: 'MySQL',
         color: 'blue',

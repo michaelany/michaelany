@@ -6,7 +6,13 @@ import './Technology.scss'
 import {BLANK_LINK_PROPS} from '../../utils/data'
 import {ITechnology as ITechnologyProps} from '../../utils/types'
 
-export default function Technology({isNew, type, label, color, href}: ITechnologyProps) {
+export default function Technology({
+  disabled,
+  type,
+  label,
+  color,
+  href,
+}: ITechnologyProps) {
   return (
     <Tooltip title={label}>
       <ButtonBase
@@ -16,7 +22,7 @@ export default function Technology({isNew, type, label, color, href}: ITechnolog
         component="a"
         href={href}
         aria-label={label}
-        disabled={isNew}
+        disabled={disabled}
       >
         <div className={`Technology-Content Technology-Content_type_${type}`} />
       </ButtonBase>

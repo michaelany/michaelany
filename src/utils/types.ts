@@ -1,7 +1,14 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
-export type Color = 'default' | 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+export type Color =
+  | 'default'
+  | 'blue'
+  | 'green'
+  | 'grass'
+  | 'red'
+  | 'yellow'
+  | 'violet'
 
 export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'
 
@@ -24,7 +31,7 @@ export interface IFeature {
 
 export interface ITechnology {
   id: number
-  isNew?: boolean
+  disabled?: boolean
   type: string
   label: string
   color: Color
