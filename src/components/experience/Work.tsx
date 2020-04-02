@@ -87,12 +87,17 @@ const jobs: IJob[] = [
   },
 ]
 
-const renderedJobs: JSX.Element[] = jobs.map(
+const jobElements: JSX.Element[] = jobs.map(
   ({id, occupation, company, duties, period}: IJob): JSX.Element => (
     <li key={id} className="Work-Job">
       <div className="Work-JobCaption">
         <Tooltip title={company.title} placement="right">
-          <ButtonBase {...BLANK_LINK_PROPS} focusRipple component="a" href={company.url}>
+          <ButtonBase
+            {...BLANK_LINK_PROPS}
+            focusRipple
+            component="a"
+            href={company.url}
+          >
             <img
               height={36}
               src={company.logo}
@@ -101,7 +106,7 @@ const renderedJobs: JSX.Element[] = jobs.map(
             />
           </ButtonBase>
         </Tooltip>
-        <h3>{occupation}</h3>
+        <h3 className="Subtitle Subtitle_size_small">{occupation}</h3>
       </div>
       <ul className="Work-JobList">
         {duties.map(
@@ -120,9 +125,12 @@ export default function Work(): JSX.Element {
     <section className="Work Section">
       <h1 className="Title Title_color_violet">{Title.EXPERIENCE}</h1>
       <p className="MainText">
-        <b>Живу и работаю в Москве. Профессионально занимаюсь фронтенд-разработкой более 4 лет.</b>
+        <b>
+          Живу и работаю в Москве. Профессионально занимаюсь
+          фронтенд-разработкой более 4 лет.
+        </b>
       </p>
-      <ul>{renderedJobs}</ul>
+      <ul>{jobElements}</ul>
     </section>
   )
 }

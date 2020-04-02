@@ -29,30 +29,30 @@ const navLinks: INavLink[] = [
   {id: 6, title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
 ]
 
+const navLinkElements: JSX.Element[] = navLinks.map(
+  ({id, title, to, Icon}: INavLink): JSX.Element => (
+    <li key={id}>
+      <Tooltip title={title} placement="right">
+        <Button
+          fullWidth
+          exact
+          className="Navigation-Link"
+          activeClassName="Navigation-Link_active"
+          component={NavLink}
+          to={to}
+          aria-label={title}
+        >
+          <Icon fontSize="inherit" />
+        </Button>
+      </Tooltip>
+    </li>
+  )
+)
+
 export default function Navigation(): JSX.Element {
   return (
     <nav className="Navigation">
-      <ul>
-        {navLinks.map(
-          ({id, title, to, Icon}: INavLink): JSX.Element => (
-            <li key={id}>
-              <Tooltip title={title} placement="right">
-                <Button
-                  fullWidth
-                  exact
-                  className="Navigation-Link"
-                  activeClassName="Navigation-Link_active"
-                  component={NavLink}
-                  to={to}
-                  aria-label={title}
-                >
-                  <Icon fontSize="inherit" />
-                </Button>
-              </Tooltip>
-            </li>
-          )
-        )}
-      </ul>
+      <ul>{navLinkElements}</ul>
     </nav>
   )
 }

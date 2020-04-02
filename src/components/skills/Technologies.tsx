@@ -27,7 +27,8 @@ const groups: IGroup[] = [
         type: 'js',
         label: 'JavaScript',
         color: 'yellow',
-        href: 'https://www.ecma-international.org/publications/standards/Ecma-262.htm',
+        href:
+          'https://www.ecma-international.org/publications/standards/Ecma-262.htm',
       },
       {
         id: 2,
@@ -101,7 +102,13 @@ const groups: IGroup[] = [
         color: 'red',
         href: 'https://html.spec.whatwg.org/multipage',
       },
-      {id: 2, type: 'svg', label: 'SVG', color: 'yellow', href: 'https://www.w3.org/Graphics/SVG'},
+      {
+        id: 2,
+        type: 'svg',
+        label: 'SVG',
+        color: 'yellow',
+        href: 'https://www.w3.org/Graphics/SVG',
+      },
       {
         id: 3,
         type: 'react',
@@ -506,7 +513,7 @@ export default function Technologies(): JSX.Element {
               TransitionProps={transitionProps}
             >
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <h3>{title}</h3>
+                <h3 className="Subtitle">{title}</h3>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Grid container component="ul">

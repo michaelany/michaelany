@@ -6,7 +6,7 @@ import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
 import Pagination from '../_common/Pagination'
 import {Path} from '../../utils/enums'
-import {THEME} from '../../styles/theme'
+import {Duration, Easing} from '../../styles/theme'
 
 interface ITiltOptions {
   max: number
@@ -18,7 +18,7 @@ interface ITiltOptions {
 const tiltOptions: ITiltOptions = {
   max: 60,
   scale: 1,
-  speed: 3000,
+  speed: Duration.LINGERING,
   reset: false,
 }
 
@@ -27,7 +27,7 @@ export default function Banner(): JSX.Element {
     <section className="Banner Section">
       <h2 className="VisuallyHidden">Баннер</h2>
       <div className="Banner-Content">
-        <Tilt options={tiltOptions} easing={THEME.EASING.IN_OUT}>
+        <Tilt options={tiltOptions} easing={Easing.IN_OUT}>
           <img
             className="Banner-Img"
             width={599}

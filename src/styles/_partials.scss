@@ -52,6 +52,14 @@
   }
 }
 
+.Subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  &_size_small {
+    font-size: 18px;
+  }
+}
+
 .MainText {
   font-size: 30px;
   font-weight: 300;

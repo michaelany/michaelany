@@ -1,31 +1,11 @@
+// $color_...
 enum Color {
-  BACKGROUND = '#fff',
-  TEXT = '#4a4a4a',
-  SECOND_TEXT = '#7b7b7b',
-  LIGHT_GREY = '#e6e6e6',
-  DIVIDER = 'rgba(0, 0, 0, 0.12)',
-  RED = '#fa8861',
-  DARK_RED = '#e07a58',
-  YELLOW = '#f7bc3f',
-  DARK_YELLOW = '#dba539',
-  GRASS = '#6ed486',
-  DARK_GRASS = '#61ba76',
   GREEN = '#31d0c9',
-  DARK_GREEN = '#2db3a7',
   BLUE = '#62a5fc',
-  DARK_BLUE = '#5895e0',
-  SECOND_BLUE = '#4078c0',
-  VIOLET = '#9170fb',
-  DARK_VIOLET = '#8265e0',
 }
 
-enum Breakpoint {
-  XS = 599,
-  SM = 959,
-  MD = 1279,
-}
-
-enum Duration {
+// $duration_...
+export enum Duration {
   SHORTEST = 150,
   SHORTER = 200,
   SHORT = 250,
@@ -35,111 +15,81 @@ enum Duration {
   LONG = 800,
   LONGER = 1000,
   LONGEST = 2000,
-  HELLO = 3000,
+  LINGERING = 3000,
   ALTERNATE = 20000,
 }
 
-enum Easing {
+// $easing_...
+export enum Easing {
   IN_OUT = 'cubic-bezier(0.4, 0, 0.2, 1)',
   OUT = 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
-export const THEME = {
-  FONT_FAMILY: [
-    '-apple-system',
-    'BlinkMacSystemFont',
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    'sans-serif',
-  ].join(','),
-  SIDEBAR_WIDTH: 100,
-  HEADER_HEIGHT: 75,
-  BORDER_RADIUS: 8,
-  COLOR: Color,
-  BREAKPOINT: Breakpoint,
-  DURATION: Duration,
-  EASING: Easing,
-}
-
 export default {
   typography: {
-    fontFamily: THEME.FONT_FAMILY,
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      'sans-serif',
+    ].join(','), // $font-family
     fontSize: 16,
     body2: {
       lineHeight: 1.5,
     },
     button: {
-      letterSpacing: 0.5,
+      fontSize: 16,
+      letterSpacing: 1,
       fontWeight: 600,
+      textTransform: 'normal',
     },
   },
   palette: {
     text: {
-      primary: THEME.COLOR.TEXT,
-      secondary: THEME.COLOR.SECOND_TEXT,
+      primary: '#4a4a4a', // $color_text
+      secondary: '#7b7b7b',
     },
     background: {
-      default: THEME.COLOR.BACKGROUND,
+      default: '#fff', // $color_background
     },
     primary: {
-      light: THEME.COLOR.BLUE,
-      main: THEME.COLOR.BLUE,
-      dark: THEME.COLOR.DARK_BLUE,
+      light: Color.BLUE,
+      main: Color.BLUE,
+      dark: '#5895e0', // $color_dark-blue
     },
     secondary: {
-      light: THEME.COLOR.GREEN,
-      main: THEME.COLOR.GREEN,
-      dark: THEME.COLOR.DARK_GREEN,
+      light: Color.GREEN,
+      main: Color.GREEN,
+      dark: '#2db3a7', // $color_dark-green
     },
-    divider: THEME.COLOR.DIVIDER,
+    divider: 'rgba(0, 0, 0, 0.12)', // $color_divider
   },
   transitions: {
     easing: {
-      easeInOut: THEME.EASING.IN_OUT,
-      easeOut: THEME.EASING.OUT,
+      easeInOut: Easing.IN_OUT,
+      easeOut: Easing.OUT,
     },
     duration: {
-      shortest: THEME.DURATION.SHORTEST,
-      shorter: THEME.DURATION.SHORTER,
-      short: THEME.DURATION.SHORT,
-      standard: THEME.DURATION.STANDARD,
+      shortest: Duration.SHORTEST,
+      shorter: Duration.SHORTER,
+      short: Duration.SHORT,
+      standard: Duration.STANDARD,
     },
   },
   shadows: ['none'],
   shape: {
-    borderRadius: THEME.BORDER_RADIUS,
+    borderRadius: 8, // $border-radius
   },
   props: {
     MuiTooltip: {
-      enterDelay: THEME.DURATION.STANDARD,
-    },
-  },
-  overrides: {
-    MuiTooltip: {
-      tooltip: {
-        fontSize: 14,
-        color: THEME.COLOR.TEXT,
-        backgroundColor: 'white',
-        border: `1px solid ${THEME.COLOR.TEXT}`,
-      },
-    },
-    MuiButton: {
-      root: {
-        transition: ['color', 'background-color', 'border']
-          .map((prop: string): string => `${prop} ${THEME.DURATION.SHORT}ms ${THEME.EASING.IN_OUT}`)
-          .join(','),
-      },
-    },
-    MuiIconButton: {
-      root: {
-        color: THEME.COLOR.SECOND_TEXT,
-      },
+      enterDelay: Duration.STANDARD,
     },
   },
 }

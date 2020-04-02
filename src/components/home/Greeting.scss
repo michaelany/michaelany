@@ -15,7 +15,7 @@
   position: relative;
   top: 6px;
   margin-left: 18px;
-  animation: hello $duration_hello $easing_in-out infinite;
+  animation: hello $duration_lingering $easing_in-out infinite;
 }
 
 .Greeting-Text {

@@ -1,13 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useCallback} from 'react'
 import cn from 'classnames'
 import Collapse from '@material-ui/core/Collapse'
 import Button from '@material-ui/core/Button'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
-import Features from '../_common/Features'
+import Features from './Features'
 import {Title} from '../../utils/enums'
-import {IFeature, Color} from '../../utils/types'
+import {Color, IFeature} from '../../utils/types'
+import {Duration} from '../../styles/theme'
 
 interface IInfoProps {
   color: Color
@@ -26,9 +27,9 @@ export default function Info({
 }: IInfoProps): JSX.Element {
   const [isOpen, toggleOpen] = useState<boolean>(false)
 
-  const handleIsOpenToggle = (): void => {
+  const handleIsOpenToggle = useCallback((): void => {
     toggleOpen(isOpen => !isOpen)
-  }
+  }, [])
 
   return (
     <section className="Info Section">
@@ -37,7 +38,7 @@ export default function Info({
         <b>{text}</b>
       </p>
       <Features items={features} />
-      <Collapse unmountOnExit in={isOpen} timeout={1000}>
+      <Collapse unmountOnExit in={isOpen} timeout={Duration.LONGER}>
         <div className="Info-Extra">{extraContent}</div>
       </Collapse>
       <div className="Actions Actions_center">
@@ -46,7 +47,9 @@ export default function Info({
           variant={isOpen ? 'outlined' : 'contained'}
           endIcon={
             <ExpandMoreIcon
-              className={cn('Info-DropdownIcon', {'Info-DropdownIcon_open': isOpen})}
+              className={cn('Info-DropdownIcon', {
+                'Info-DropdownIcon_open': isOpen,
+              })}
             />
           }
           onClick={handleIsOpenToggle}

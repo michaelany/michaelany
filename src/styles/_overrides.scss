@@ -1,0 +1,20 @@
+.MuiButton-root {
+  transition: color $duration_short $easing_in-out,
+    background-color $duration_short $easing_in-out,
+    border $duration_short $easing_in-out;
+}
+
+.MuiButton-containedSizeLarge {
+  font-size: 18px;
+}
+
+.MuiTooltip-tooltip {
+  font-size: 14px;
+  color: $color_text;
+  background-color: white;
+  border: 1px solid $color_text;
+}
+
+.MuiIconButton-root {
+  color: $color_second-text;
+}
