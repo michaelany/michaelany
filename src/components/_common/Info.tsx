@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react'
+import React, {useState} from 'react'
 import cn from 'classnames'
 import Collapse from '@material-ui/core/Collapse'
 import Button from '@material-ui/core/Button'
@@ -25,11 +25,11 @@ export default function Info({
   features,
   extraContent,
 }: IInfoProps): JSX.Element {
-  const [isOpen, toggleOpen] = useState<boolean>(false)
+  const [open, toggleOpen] = useState<boolean>(false)
 
-  const handleIsOpenToggle = useCallback((): void => {
-    toggleOpen(isOpen => !isOpen)
-  }, [])
+  const handleOpenToggle = (): void => {
+    toggleOpen((open: boolean): boolean => !open)
+  }
 
   return (
     <section className="Info Section">
@@ -38,21 +38,21 @@ export default function Info({
         <b>{text}</b>
       </p>
       <Features items={features} />
-      <Collapse unmountOnExit in={isOpen} timeout={Duration.LONGER}>
+      <Collapse unmountOnExit in={open} timeout={Duration.LONGER}>
         <div className="Info-Extra">{extraContent}</div>
       </Collapse>
       <div className="Actions Actions_center">
         <Button
           className={`Button Button_color_${color}`}
-          variant={isOpen ? 'outlined' : 'contained'}
+          variant={open ? 'outlined' : 'contained'}
           endIcon={
             <ExpandMoreIcon
               className={cn('Info-DropdownIcon', {
-                'Info-DropdownIcon_open': isOpen,
+                'Info-DropdownIcon_open': open,
               })}
             />
           }
-          onClick={handleIsOpenToggle}
+          onClick={handleOpenToggle}
         >
           Подробнее
         </Button>

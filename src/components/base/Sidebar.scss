@@ -9,6 +9,9 @@
 }
 
 .Sidebar-Logo {
+  @include hoverFocus {
+    transform: scale(1.2) rotate(-15deg);
+  }
   font-size: 40px;
   letter-spacing: -6px;
   font-weight: 900;
@@ -18,10 +21,8 @@
   margin-bottom: 64px;
   text-align: center;
   display: block;
-  transition: transform $duration_standard $easing_in-out, color $duration_short $easing_in-out;
-  @include hoverFocus {
-    transform: scale(1.2) rotate(-15deg);
-  }
+  transition: transform $duration_standard $easing_in-out,
+    color $duration_short $easing_in-out;
   .AppContent_home & {
     @include animationAlternate;
   }

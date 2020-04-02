@@ -500,7 +500,7 @@ const renderTechnologies = (technologies: ITechnology[]): JSX.Element[] =>
 
 export default function Technologies(): JSX.Element {
   return (
-    <section className="Technologies Section Section_type_pagination Section_backgroundColor_blue">
+    <section className="Technologies Section Section_type_pagination Section_color_blue">
       <h2 className="VisuallyHidden">Технологии</h2>
       <ul>
         {groups.map(

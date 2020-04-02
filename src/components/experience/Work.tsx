@@ -87,38 +87,39 @@ const jobs: IJob[] = [
   },
 ]
 
-const jobElements: JSX.Element[] = jobs.map(
-  ({id, occupation, company, duties, period}: IJob): JSX.Element => (
-    <li key={id} className="Work-Job">
-      <div className="Work-JobCaption">
-        <Tooltip title={company.title} placement="right">
-          <ButtonBase
-            {...BLANK_LINK_PROPS}
-            focusRipple
-            component="a"
-            href={company.url}
-          >
-            <img
-              height={36}
-              src={company.logo}
-              srcSet={`${company.logo2x} 2x`}
-              alt={company.title}
-            />
-          </ButtonBase>
-        </Tooltip>
-        <h3 className="Subtitle Subtitle_size_small">{occupation}</h3>
-      </div>
-      <ul className="Work-JobList">
-        {duties.map(
-          (duty: string, index: number): JSX.Element => (
-            <li key={index}>{duty}</li>
-          )
-        )}
-      </ul>
-      <p className="Work-JobPeriod">{period}</p>
-    </li>
+const renderJobs = (): JSX.Element[] =>
+  jobs.map(
+    ({id, occupation, company, duties, period}: IJob): JSX.Element => (
+      <li key={id} className="Work-Job">
+        <div className="Work-JobCaption">
+          <Tooltip title={company.title} placement="right">
+            <ButtonBase
+              {...BLANK_LINK_PROPS}
+              focusRipple
+              component="a"
+              href={company.url}
+            >
+              <img
+                height={36}
+                src={company.logo}
+                srcSet={`${company.logo2x} 2x`}
+                alt={company.title}
+              />
+            </ButtonBase>
+          </Tooltip>
+          <h3 className="Subtitle Subtitle_size_small">{occupation}</h3>
+        </div>
+        <ul className="Work-JobList">
+          {duties.map(
+            (duty: string, index: number): JSX.Element => (
+              <li key={index}>{duty}</li>
+            )
+          )}
+        </ul>
+        <p className="Work-JobPeriod">{period}</p>
+      </li>
+    )
   )
-)
 
 export default function Work(): JSX.Element {
   return (
@@ -130,7 +131,7 @@ export default function Work(): JSX.Element {
           фронтенд-разработкой более 4 лет.
         </b>
       </p>
-      <ul>{jobElements}</ul>
+      <ul>{renderJobs()}</ul>
     </section>
   )
 }

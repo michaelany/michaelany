@@ -1,23 +1,25 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
-$technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue', 'apollo', 'html',
-  'svg', 'pug', 'handlebars', 'markdown', 'laravel', 'css', 'bem', 'sass', 'mui', 'cssmodules',
-  'styled', 'reactstrap', 'ant', 'materialize', 'bootstrap', 'semantic', 'emails', 'npm', 'yarn',
-  'webpack', 'gulp', 'parcel', 'cra', 'gatsby', 'next', 'nuxt', 'babel', 'prettier', 'eslint',
-  'storybook', 'bit', 'jest', 'vscode', 'iterm', 'git', 'devtools', 'zeplin', 'sketch', 'figma',
-  'photoshop', 'optim', 'mac', 'node', 'mongo', 'mysql', 'php';
+$technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
+  'apollo', 'html', 'svg', 'pug', 'handlebars', 'markdown', 'laravel', 'css',
+  'bem', 'sass', 'mui', 'cssmodules', 'styled', 'reactstrap', 'ant',
+  'materialize', 'bootstrap', 'semantic', 'emails', 'npm', 'yarn', 'webpack',
+  'gulp', 'parcel', 'cra', 'gatsby', 'next', 'nuxt', 'babel', 'prettier',
+  'eslint', 'storybook', 'bit', 'jest', 'vscode', 'iterm', 'git', 'devtools',
+  'zeplin', 'sketch', 'figma', 'photoshop', 'optim', 'mac', 'node', 'mongo',
+  'mysql', 'php';
 
 .Technology {
-  overflow: hidden;
-  width: 100%;
-  border-radius: $border-radius;
   @include hover {
     & > .Technology-Content::after {
       transform: scale(1);
       opacity: 1;
     }
   }
+  overflow: hidden;
+  width: 100%;
+  border-radius: $border-radius;
   &_color_default {
     color: $color_second-text;
   }
@@ -66,7 +68,8 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue', 
     height: 100%;
     opacity: 0;
     transform: scale(0.6);
-    transition: transform $duration_short $easing_in-out, opacity $duration_short $easing_in-out;
+    transition: transform $duration_short $easing_in-out,
+      opacity $duration_short $easing_in-out;
     .Technology_color_default & {
       background-color: rgba($color_second-text, 0.12);
     }

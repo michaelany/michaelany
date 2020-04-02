@@ -2,7 +2,7 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import Tooltip from '@material-ui/core/Tooltip'
-import {SvgIconProps} from '@material-ui/core/SvgIcon'
+import SvgIcon from '@material-ui/core/SvgIcon'
 import HomeIcon from '@material-ui/icons/HomeRounded'
 import PersonIcon from '@material-ui/icons/PersonRounded'
 import SchoolIcon from '@material-ui/icons/SchoolRounded'
@@ -17,7 +17,7 @@ interface INavLink {
   id: number
   title: Title
   to: Path
-  Icon: (props: SvgIconProps) => JSX.Element
+  Icon: typeof SvgIcon
 }
 
 const navLinks: INavLink[] = [
@@ -29,30 +29,30 @@ const navLinks: INavLink[] = [
   {id: 6, title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
 ]
 
-const navLinkElements: JSX.Element[] = navLinks.map(
-  ({id, title, to, Icon}: INavLink): JSX.Element => (
-    <li key={id}>
-      <Tooltip title={title} placement="right">
-        <Button
-          fullWidth
-          exact
-          className="Navigation-Link"
-          activeClassName="Navigation-Link_active"
-          component={NavLink}
-          to={to}
-          aria-label={title}
-        >
-          <Icon fontSize="inherit" />
-        </Button>
-      </Tooltip>
-    </li>
-  )
-)
-
 export default function Navigation(): JSX.Element {
   return (
     <nav className="Navigation">
-      <ul>{navLinkElements}</ul>
+      <ul>
+        {navLinks.map(
+          ({id, title, to, Icon}: INavLink): JSX.Element => (
+            <li key={id}>
+              <Tooltip title={title} placement="right">
+                <Button
+                  fullWidth
+                  exact
+                  className="Navigation-Link"
+                  activeClassName="Navigation-Link_active"
+                  component={NavLink}
+                  to={to}
+                  aria-label={title}
+                >
+                  <Icon fontSize="inherit" />
+                </Button>
+              </Tooltip>
+            </li>
+          )
+        )}
+      </ul>
     </nav>
   )
 }

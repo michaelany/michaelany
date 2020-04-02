@@ -19,17 +19,12 @@
   &_type_pagination {
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
   }
-  &_backgroundColor_green {
-    background-color: $color_green;
-  }
-  &_backgroundColor_blue {
-    background-color: $color_blue;
-  }
-  &_backgroundColor_violet {
-    background-color: $color_violet;
+  @each $key, $value in $colors-map {
+    &_color_#{$key} {
+      background-color: $value;
+    }
   }
 }
 
@@ -38,14 +33,10 @@
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 24px;
-  &_color_green {
-    color: $color_green;
-  }
-  &_color_blue {
-    color: $color_blue;
-  }
-  &_color_violet {
-    color: $color_violet;
+  @each $key, $value in $colors-map {
+    &_color_#{$key} {
+      color: $value;
+    }
   }
   &_color_white {
     color: white;
@@ -86,18 +77,6 @@
         border-color: $second-value;
       }
     }
-  }
-}
-
-.Link {
-  &_color_green {
-    color: $color_dark-green;
-  }
-  &_color_blue {
-    color: $color_dark-blue;
-  }
-  @include hoverFocus {
-    text-decoration: underline;
   }
 }
 

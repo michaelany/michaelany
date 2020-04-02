@@ -24,6 +24,6 @@
 }
 
 .Greeting-Letter {
-  font-weight: 900;
   @include animationAlternate;
+  font-weight: 900;
 }

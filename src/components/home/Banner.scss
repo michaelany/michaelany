@@ -2,10 +2,10 @@
 @import 'styles/mixins';
 
 .Banner {
+  @include animationAlternate(alternateBackgroundColor);
   display: flex;
   justify-content: center;
   align-items: center;
-  @include animationAlternate(alternateBackgroundColor);
 }
 
 .Banner-Content {

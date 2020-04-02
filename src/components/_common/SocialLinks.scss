@@ -31,9 +31,9 @@
 }
 
 .SocialLinks-Link {
-  color: $color_text;
-  background-color: white;
   @include hover {
     background-color: $color_light-grey;
   }
+  color: $color_text;
+  background-color: white;
 }
