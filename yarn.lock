@@ -1346,6 +1346,19 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/google-maps-react@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@types/google-maps-react/-/google-maps-react-2.0.4.tgz#48027de9fb0bc64440de2f983dce3e14370db344"
+  integrity sha512-8EGr84L6ozODnfjWN9xVUFIxFedBbZinuDe5lBEJ757yh/lZqoKkqxrYLqvrLksDRVVwQYwWdFvfEASujmk36A==
+  dependencies:
+    "@types/googlemaps" "*"
+    "@types/react" "*"
+
+"@types/googlemaps@*":
+  version "3.39.3"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.39.3.tgz#8664e424f335802c8aa46a94676666b0a0f31d97"
+  integrity sha512-L8O9HAVFZj0TuiS8h5ORthiMsrrhjxTC8XUusp5k47oXCst4VTm+qWKvrAvmYMybZVokbp4Udco1mNwJrTNZPQ==
+
 "@types/history@*":
   version "4.7.5"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.5.tgz#527d20ef68571a4af02ed74350164e7a67544860"
@@ -4904,6 +4917,11 @@ globule@^1.0.0:
     glob "~7.1.1"
     lodash "~4.17.12"
     minimatch "~3.0.2"
+
+google-maps-react@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/google-maps-react/-/google-maps-react-2.0.2.tgz#e03fbba032fe570fb38744bf9cd10b946c591cae"
+  integrity sha512-6cYauGwt22haDUrWxKQ6yoNOqjiuxHo8YYcmb+aBvNICokdXmZOUB6Ah4vD5VexMVlrwP2PFqA/D8sHpEB52KA==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.2:
   version "4.2.3"

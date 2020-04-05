@@ -1,7 +1,9 @@
 // $color_...
-enum Color {
+export enum Color {
   GREEN = '#31d0c9',
   BLUE = '#62a5fc',
+  TEXT = '#4a4a4a',
+  SECOND = '#7b7b7b',
 }
 
 // $duration_...
@@ -53,8 +55,8 @@ export default {
   },
   palette: {
     text: {
-      primary: '#4a4a4a', // $color_text
-      secondary: '#7b7b7b',
+      primary: Color.TEXT,
+      secondary: Color.SECOND,
     },
     background: {
       default: '#fff', // $color_background

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="41px" viewBox="0 0 33 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(-6.000000, -3.000000)">
+            <g id="place-black-18dp">
+                <path d="M22.6666667,3.33333333 C31.0666667,3.33333333 38.6666667,9.87888028 38.6666667,20.0021175 C38.6666667,26.4663533 33.7666667,34.0689451 23.9866667,42.8302206 C23.2266667,43.5010376 22.0866667,43.5010376 21.3266667,42.8302206 C11.5666667,34.0689451 6.66666667,26.4663533 6.66666667,20.0021175 C6.66666667,9.87888028 14.2666667,3.33333333 22.6666667,3.33333333 Z" id="Shape" fill="#31D0C9" fill-rule="nonzero"></path>
+                <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+            </g>
+            <g id="Group-3" transform="translate(11.000000, 9.000000)" fill="#FFFFFF" font-family="HelveticaNeue-CondensedBlack, Helvetica Neue" font-size="18" font-style="condensed" font-weight="700">
+                <text id="M">
+                    <tspan x="0.678" y="17">M</tspan>
+                </text>
+                <text id="A">
+                    <tspan x="12.996" y="17">A</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
