@@ -1,20 +1,63 @@
-.MuiButton-root {
-  transition: color $duration_short $easing_in-out,
-    background-color $duration_short $easing_in-out,
-    border $duration_short $easing_in-out;
+.MuiButton {
+  &-root {
+    transition: color $duration_short $easing_in-out,
+      background-color $duration_short $easing_in-out,
+      border $duration_short $easing_in-out;
+  }
+  &-containedSizeLarge {
+    font-size: 18px;
+  }
 }
 
-.MuiButton-containedSizeLarge {
-  font-size: 18px;
+.MuiTooltip {
+  &-tooltip {
+    font-size: 14px;
+    color: $color_text;
+    background-color: white;
+    border: 1px solid $color_text;
+  }
 }
 
-.MuiTooltip-tooltip {
-  font-size: 14px;
-  color: $color_text;
-  background-color: white;
-  border: 1px solid $color_text;
+.MuiIconButton {
+  &-root {
+    color: $color_second-text;
+  }
 }
 
-.MuiIconButton-root {
-  color: $color_second-text;
+.MuiChip {
+  &-root {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba($color_second-text, 0.12);
+    color: $color_text;
+    margin: 4px;
+  }
+  &-icon {
+    color: $color_second-text;
+    font-size: 24px;
+  }
+}
+
+.MuiStepper {
+  &-root {
+    border-radius: $border-radius;
+  }
+}
+
+.MuiStepIcon {
+  &-root {
+    font-size: 24px;
+  }
+  &-text {
+    fill: white;
+  }
+  &-completed {
+    fill: $color_grass;
+  }
+}
+
+.MuiStepLabel {
+  &-label {
+    font-size: 14px;
+  }
 }

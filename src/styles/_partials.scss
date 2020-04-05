@@ -46,9 +46,6 @@
 .Subtitle {
   font-size: 20px;
   font-weight: bold;
-  &_size_small {
-    font-size: 18px;
-  }
 }
 
 .MainText {
@@ -84,5 +81,41 @@
   margin-top: 40px;
   &_center {
     text-align: center;
+  }
+}
+
+.ColorInteractive {
+  @include hover {
+    &::before {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  position: relative;
+  border-radius: $border-radius;
+  &_color_default {
+    color: $color_second-text;
+    &::before {
+      background-color: rgba($color_second-text, 0.12);
+    }
+  }
+  @each $key, $value in $colors-map {
+    &_color_#{$key} {
+      color: $value;
+      &::before {
+        background-color: rgba($value, 0.12);
+      }
+    }
+  }
+
+  &::before {
+    @include pseudo;
+    border-radius: $border-radius;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform $duration_short $easing_in-out,
+      opacity $duration_short $easing_in-out;
   }
 }

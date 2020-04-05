@@ -69,7 +69,6 @@ export default {
       main: Color.GREEN,
       dark: '#2db3a7', // $color_dark-green
     },
-    divider: 'rgba(0, 0, 0, 0.12)', // $color_divider
   },
   transitions: {
     easing: {
@@ -90,6 +89,10 @@ export default {
   props: {
     MuiTooltip: {
       enterDelay: Duration.STANDARD,
+    },
+    MuiExpansionPanel: {
+      elevation: 0,
+      TransitionProps: {unmountOnExit: true},
     },
   },
 }

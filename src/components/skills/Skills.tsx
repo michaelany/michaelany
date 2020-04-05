@@ -22,22 +22,36 @@ const text: string =
   'Создаю веб-приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux.'
 
 const features: IFeature[] = [
-  {id: 1, label: 'Пишу современный и быстро работающий код', Icon: SpeedIcon},
-  {id: 2, label: 'Выбираю простой и эффективный способ решения задачи', Icon: ThumbUpIcon},
-  {id: 3, label: 'Имею в арсенале большое количество паттернов и приемов', Icon: BuildIcon},
+  {label: 'Пишу современный и быстро работающий код', Icon: SpeedIcon},
   {
-    id: 4,
+    label: 'Выбираю простой и эффективный способ решения задачи',
+    Icon: ThumbUpIcon,
+  },
+  {
+    label: 'Имею в арсенале большое количество паттернов и приемов',
+    Icon: BuildIcon,
+  },
+  {
     label: 'Создаю модульную и оптимальную архитектуру для каждого проекта',
     Icon: AccountTreeIcon,
   },
-  {id: 5, label: 'Использую актуальные фреймворки, библиотеки и инструменты', Icon: ExtensionIcon},
-  {id: 6, label: 'Строго соблюдаю единый стиль написания чистого кода', Icon: BrushIcon},
-  {id: 7, label: 'Верстаю семантично, доступно, кроссбраузерно и pixel-perfect', Icon: PaletteIcon},
-  {id: 8, label: 'Реализую адаптивный интерфейс и анимации', Icon: DevicesOtherIcon},
-  {id: 9, label: 'Рефакторю, оптимизирую и тестирую', Icon: LoopIcon},
-  {id: 10, label: 'Анализирую, планирую и декомпозирую', Icon: ListAltIcon},
-  {id: 11, label: 'Делаю код-ревью и занимаюсь обучением', Icon: ChildFriendlyIcon},
-  {id: 12, label: 'Есть опыт проведения собеседований', Icon: PersonAddIcon},
+  {
+    label: 'Использую актуальные фреймворки, библиотеки и инструменты',
+    Icon: ExtensionIcon,
+  },
+  {
+    label: 'Строго соблюдаю единый стиль написания чистого кода',
+    Icon: BrushIcon,
+  },
+  {
+    label: 'Верстаю семантично, доступно, кроссбраузерно и pixel-perfect',
+    Icon: PaletteIcon,
+  },
+  {label: 'Реализую адаптивный интерфейс и анимации', Icon: DevicesOtherIcon},
+  {label: 'Рефакторю, оптимизирую и тестирую', Icon: LoopIcon},
+  {label: 'Анализирую, планирую и декомпозирую', Icon: ListAltIcon},
+  {label: 'Делаю код-ревью и занимаюсь обучением', Icon: ChildFriendlyIcon},
+  {label: 'Есть опыт проведения собеседований', Icon: PersonAddIcon},
 ]
 
 const extraContent: string =

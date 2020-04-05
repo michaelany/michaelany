@@ -14,11 +14,17 @@ export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
   return (
     <ul className="SocialLinks">
       {links.map(
-        ({id, title, href, Icon}: ISocialLink, index: number): JSX.Element => (
-          <li key={id} className="SocialLinks-Item">
+        ({title, href, Icon}: ISocialLink, index: number): JSX.Element => (
+          <li key={index} className="SocialLinks-Item">
             <Tooltip
               title={title}
-              placement={index === 0 ? 'left' : index === links.length - 1 ? 'right' : 'bottom'}
+              placement={
+                index === 0
+                  ? 'left'
+                  : index === links.length - 1
+                  ? 'right'
+                  : 'bottom'
+              }
             >
               <Fab
                 {...BLANK_LINK_PROPS}

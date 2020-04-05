@@ -11,8 +11,15 @@ interface IFeaturesProps {
 function Features({items}: IFeaturesProps): JSX.Element {
   return (
     <Grid container className="Features" component="ul" spacing={4}>
-      {items.map(({id, label, Icon}: IFeature) => (
-        <Grid key={id} className="Features-Item" item component="li" xs={6} xl={4}>
+      {items.map(({label, Icon}: IFeature, index: number) => (
+        <Grid
+          key={index}
+          className="Features-Item"
+          item
+          component="li"
+          xs={6}
+          xl={4}
+        >
           <Icon className="Features-Icon" />
           <p>{label}</p>
         </Grid>

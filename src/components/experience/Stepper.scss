@@ -1,0 +1,48 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Stepper-Text {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.Stepper-Actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.Stepper-Button {
+  @include hover {
+    background-color: $color_dark-violet;
+    .Stepper-ButtonIcon {
+      transform: rotate(90deg);
+      &_refresh {
+        transform: rotate(360deg) scale(1.3);
+      }
+    }
+  }
+  &:focus {
+    .Stepper-ButtonIcon {
+      transform: rotate(90deg);
+      &_refresh {
+        transform: rotate(360deg) scale(1.3);
+      }
+    }
+  }
+  color: white;
+  background-color: $color_violet;
+  &:not(:first-child) {
+    margin-right: 8px;
+  }
+}
+
+.Stepper-ButtonIcon {
+  font-size: 24px;
+  transform: rotate(0deg);
+  transition: transform $duration_short $easing_in-out;
+  &_refresh {
+    transform: rotate(0deg) scale(1);
+    transition: transform $duration_medium $easing_in-out;
+  }
+}

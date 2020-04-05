@@ -14,19 +14,18 @@ import './Navigation.scss'
 import {Path, Title} from '../../utils/enums'
 
 interface INavLink {
-  id: number
   title: Title
   to: Path
   Icon: typeof SvgIcon
 }
 
 const navLinks: INavLink[] = [
-  {id: 1, title: Title.HOME, to: Path.HOME, Icon: HomeIcon},
-  {id: 2, title: Title.ABOUT, to: Path.ABOUT, Icon: PersonIcon},
-  {id: 3, title: Title.SKILLS, to: Path.SKILLS, Icon: SchoolIcon},
-  {id: 4, title: Title.EXPERIENCE, to: Path.EXPERIENCE, Icon: WorkIcon},
-  {id: 5, title: Title.PORTFOLIO, to: Path.PORTFOLIO, Icon: WebIcon},
-  {id: 6, title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
+  {title: Title.HOME, to: Path.HOME, Icon: HomeIcon},
+  {title: Title.ABOUT, to: Path.ABOUT, Icon: PersonIcon},
+  {title: Title.SKILLS, to: Path.SKILLS, Icon: SchoolIcon},
+  {title: Title.EXPERIENCE, to: Path.EXPERIENCE, Icon: WorkIcon},
+  {title: Title.PORTFOLIO, to: Path.PORTFOLIO, Icon: WebIcon},
+  {title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
 ]
 
 export default function Navigation(): JSX.Element {
@@ -34,8 +33,8 @@ export default function Navigation(): JSX.Element {
     <nav className="Navigation">
       <ul>
         {navLinks.map(
-          ({id, title, to, Icon}: INavLink): JSX.Element => (
-            <li key={id}>
+          ({title, to, Icon}: INavLink, index: number): JSX.Element => (
+            <li key={index}>
               <Tooltip title={title} placement="right">
                 <Button
                   fullWidth

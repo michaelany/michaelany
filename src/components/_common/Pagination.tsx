@@ -23,7 +23,10 @@ const titlesMap: IMap<Title> = {
   [Path.CONTACT]: Title.CONTACT,
 }
 
-export default function Pagination({prevTo, nextTo}: IPaginationProps): JSX.Element {
+export default function Pagination({
+  prevTo,
+  nextTo,
+}: IPaginationProps): JSX.Element {
   return (
     <Grid container className="Pagination Actions" spacing={2} justify="center">
       {prevTo && (

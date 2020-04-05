@@ -24,28 +24,29 @@ const text: string =
   'Живу и дышу фронтендом. Разрабатываю проекты любой сложности с нуля. Воплощаю в жизнь UI/UX идеи.'
 
 const features: IFeature[] = [
-  {id: 1, label: 'Реализовал большое количество проектов', Icon: AppsIcon},
-  {id: 2, label: 'Являюсь ведущим разработчиком и ментором', Icon: SupervisorAccountIcon},
+  {label: 'Реализовал большое количество проектов', Icon: AppsIcon},
   {
-    id: 3,
+    label: 'Являюсь ведущим разработчиком и ментором',
+    Icon: SupervisorAccountIcon,
+  },
+  {
     label: 'Интересуюсь веб-разработкой и программированием',
     Icon: CodeIcon,
   },
   {
-    id: 4,
     label: 'Нахожусь в состоянии постоянного обучения и развития',
     Icon: AllInclusiveIcon,
   },
-  {id: 5, label: 'Организованный и автономный', Icon: BusinessCenterIcon},
-  {id: 6, label: 'Склонный к перфекционизму', Icon: SquareFootIcon},
-  {id: 7, label: 'Дружелюбный и коммуникабельный', Icon: SentimentSatisfiedAltIcon},
-  {id: 8, label: 'Имею два высших образования', Icon: SchoolIcon},
-  {id: 9, label: 'Веду здоровый образ жизни', Icon: EcoIcon},
-  {id: 10, label: 'Занимаюсь спортом', Icon: DirectionsBikeIcon},
-  {id: 11, label: 'Люблю путешествовать', Icon: PublicIcon},
-  {id: 12, label: 'Люблю читать', Icon: BookIcon},
-  {id: 13, label: 'Счастлив в браке', Icon: FavoriteIcon},
-  {id: 14, label: 'Кофеман', Icon: LocalCafeIcon},
+  {label: 'Организованный и автономный', Icon: BusinessCenterIcon},
+  {label: 'Склонный к перфекционизму', Icon: SquareFootIcon},
+  {label: 'Дружелюбный и коммуникабельный', Icon: SentimentSatisfiedAltIcon},
+  {label: 'Имею два высших образования', Icon: SchoolIcon},
+  {label: 'Веду здоровый образ жизни', Icon: EcoIcon},
+  {label: 'Занимаюсь спортом', Icon: DirectionsBikeIcon},
+  {label: 'Люблю путешествовать', Icon: PublicIcon},
+  {label: 'Люблю читать', Icon: BookIcon},
+  {label: 'Счастлив в браке', Icon: FavoriteIcon},
+  {label: 'Кофеман', Icon: LocalCafeIcon},
 ]
 
 const extraContent: string =

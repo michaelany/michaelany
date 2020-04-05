@@ -1,6 +1,8 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
+import {Company, Technology} from './enums'
+
 export type Color =
   | 'default'
   | 'blue'
@@ -17,23 +19,39 @@ export interface IMap<T> {
 }
 
 export interface ISocialLink {
-  id: number
   title: string
   href: string
   Icon: FC<SVGProps<SVGSVGElement>>
 }
 
 export interface IFeature {
-  id: number
   label: string
   Icon: (props: SvgIconProps) => JSX.Element
 }
 
 export interface ITechnology {
-  id: number
   disabled?: boolean
   type: string
-  label: string
+  label: Technology
   color: Color
   href: string
+}
+
+export interface ICompany {
+  title: Company
+  color: Color
+  logo: string
+  logo2x: string
+  href: string
+}
+
+export interface IPosition {
+  occupation: string
+  duties: string[]
+}
+
+export interface IJob {
+  company: ICompany
+  positions: IPosition[]
+  features: IFeature[]
 }

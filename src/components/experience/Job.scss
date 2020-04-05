@@ -1,0 +1,67 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Job {
+  &.Mui-expanded {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &:not(:last-child)::after {
+    @include pseudo;
+    bottom: 0;
+    background-color: rgba(black, 0.12);
+    height: 1px;
+    width: 100%;
+  }
+}
+
+.Job-Content {
+  display: block;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+
+.Job-Company {
+  padding: 16px;
+  margin-left: -10px;
+}
+
+.Job-Positions {
+  margin-bottom: 28px;
+}
+
+.Job-Position {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.Job-Occupation {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.Job-Duties {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 17px;
+}
+
+.Job-Duty {
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+
+.Job-Features {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -4px;
+}

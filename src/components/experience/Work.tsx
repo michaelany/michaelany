@@ -1,6 +1,7 @@
 import React from 'react'
-import ButtonBase from '@material-ui/core/ButtonBase'
-import Tooltip from '@material-ui/core/Tooltip'
+import ScheduleIcon from '@material-ui/icons/ScheduleTwoTone'
+import ExploreIcon from '@material-ui/icons/ExploreTwoTone'
+import MyLocationIcon from '@material-ui/icons/MyLocationTwoTone'
 
 import './Work.scss'
 import everpointImg from '../../assets/img/companies/everpoint.png'
@@ -9,121 +10,153 @@ import sevenGlyphsImg from '../../assets/img/companies/7glyphs.png'
 import sevenGlyphsImg2x from '../../assets/img/companies/7glyphs@2x.png'
 import tsftdImg from '../../assets/img/companies/tsftd.png'
 import tsftdImg2x from '../../assets/img/companies/tsftd@2x.png'
-import {BLANK_LINK_PROPS} from '../../utils/data'
-import {Title} from '../../utils/enums'
-
-interface IJob {
-  id: number
-  occupation: string
-  company: ICompany
-  duties: string[]
-  period: string
-}
-
-interface ICompany {
-  title: string
-  logo: string
-  logo2x: string
-  url: string
-}
+import mvideoImg from '../../assets/img/companies/mvideo.png'
+import mvideoImg2x from '../../assets/img/companies/mvideo@2x.png'
+import Job from './Job'
+import {Title, Company} from '../../utils/enums'
+import {IJob} from '../../utils/types'
 
 const jobs: IJob[] = [
   {
-    id: 1,
-    occupation: 'Верстальщик',
     company: {
-      title: 'Everpoint',
-      logo: everpointImg,
-      logo2x: everpointImg2x,
-      url: 'https://www.everpoint.ru',
-    },
-    duties: [
-      'Верстка страниц и компонентов интерфейса.',
-      'Кроссбраузерная и адаптивная верстка.',
-      'Оптимизация сушествующей верстки.',
-      'Рефакторинг кода.',
-    ],
-    period: 'июль 2016 - ноябрь 2016',
-  },
-  {
-    id: 2,
-    occupation: 'Разработчик',
-    company: {
-      title: '7 glyphs',
-      logo: sevenGlyphsImg,
-      logo2x: sevenGlyphsImg2x,
-      url: 'https://7glyphs.com',
-    },
-    duties: [
-      'Разработка клиентской бизнес-логики и компонентов систем',
-      'Работа с REST API',
-      'Проектирование архитектуры приложений',
-      'Сопровождение кода',
-      'Верстка страниц и компонентов интерфейса',
-      'Адаптивная и кроссбраузерная верстка',
-      'Учет затраченного времени на выполнение задач',
-    ],
-    period: 'апрель 2017 - настоящее время',
-  },
-  {
-    id: 3,
-    occupation: 'Ведущий разработчик',
-    company: {
-      title: 'Технософт Диджитал',
+      title: Company.TSFTD,
+      color: 'red',
       logo: tsftdImg,
       logo2x: tsftdImg2x,
-      url: 'http://www.tsft.ru',
+      href: 'http://www.tsft.ru',
     },
-    duties: [
-      'Разработка клиентской бизнес-логики и компонентов систем',
-      'Работа с REST API',
-      'Проектирование архитектуры приложений',
-      'Сопровождение кода',
-      'Верстка страниц и компонентов интерфейса',
-      'Адаптивная и кроссбраузерная верстка',
-      'Учет затраченного времени на выполнение задач',
+    positions: [
+      {
+        occupation: 'Тимлид фронтенд-разработки',
+        duties: [
+          'Разработка бизнес-логики приложений.',
+          'Создание архитектуры приложений.',
+          'Кроссбраузерная и адаптивная верстка.',
+          'Работа с REST API.',
+          'Рефакторинг и сопровождение кода.',
+          'Разработка проектов с нуля.',
+          'Поддержка проектов.',
+          'Планирование, декомпозиция и оценка задач команды.',
+          'Управление командой и менторство.',
+          'Проведение код-ревью и собеседований.',
+        ],
+      },
+      {
+        occupation: 'Ведущий фронтенд-разработчик',
+        duties: [
+          'Разработка бизнес-логики приложений.',
+          'Создание архитектуры приложений.',
+          'Кроссбраузерная и адаптивная верстка.',
+          'Работа с REST API.',
+          'Рефакторинг и сопровождение кода.',
+          'Разработка проектов с нуля.',
+          'Поддержка проектов.',
+          'Декомпозиция и оценка задач.',
+        ],
+      },
     ],
-    period: 'апрель 2017 - настоящее время',
+    features: [
+      {label: 'Апрель 2018 - ...', Icon: ScheduleIcon},
+      {label: 'Москва, Россия', Icon: ExploreIcon},
+      {label: 'Офис', Icon: MyLocationIcon},
+    ],
+  },
+  {
+    company: {
+      title: Company.SEVEN_GLYPHS,
+      color: 'default',
+      logo: sevenGlyphsImg,
+      logo2x: sevenGlyphsImg2x,
+      href: 'https://7glyphs.com',
+    },
+    positions: [
+      {
+        occupation: 'Ведущий фронтенд-разработчик',
+        duties: [
+          'Разработка бизнес-логики и сайтов.',
+          'Создание архитектуры проектов.',
+          'Кроссбраузерная и адаптивная верстка.',
+          'Работа с REST API.',
+          'Рефакторинг и сопровождение кода.',
+          'Разработка проектов с нуля.',
+          'Поддержка проектов.',
+          'Декомпозиция и оценка задач.',
+        ],
+      },
+    ],
+    features: [
+      {label: 'Апрель 2017 - апрель 2018', Icon: ScheduleIcon},
+      {label: 'Окленд, Новая Зеландия', Icon: ExploreIcon},
+      {label: 'Удаленно', Icon: MyLocationIcon},
+    ],
+  },
+  {
+    company: {
+      title: Company.EVERPOINT,
+      color: 'grass',
+      logo: everpointImg,
+      logo2x: everpointImg2x,
+      href: 'https://www.everpoint.ru',
+    },
+    positions: [
+      {
+        occupation: 'Фронтенд-разработчик',
+        duties: [
+          'Разработка бизнес-логики компонентов приложения.',
+          'Кроссбраузерная и адаптивная верстка.',
+          'Работа с REST API.',
+          'Рефакторинг и сопровождение кода.',
+        ],
+      },
+      {
+        occupation: 'Верстальщик',
+        duties: [
+          'Верстка страниц и компонентов приложения по макетам.',
+          'Кроссбраузерная и адаптивная верстка.',
+          'Написание логики интерфейсных элементов.',
+          'Рефакторинг и сопровождение кода.',
+        ],
+      },
+    ],
+    features: [
+      {label: 'Июль 2016 - апрель 2017', Icon: ScheduleIcon},
+      {label: 'Москва, Россия', Icon: ExploreIcon},
+      {label: 'Офис', Icon: MyLocationIcon},
+    ],
+  },
+  {
+    company: {
+      title: Company.MVIDEO,
+      color: 'red',
+      logo: mvideoImg,
+      logo2x: mvideoImg2x,
+      href: 'https://www.mvideo.ru',
+    },
+    positions: [
+      {
+        occupation: 'Инженер технической поддержки',
+        duties: [
+          'Регистрация и обработка обращений в системах Service Desk.',
+          'Решение проблем программного обеспечения и периферийного оборудования.',
+          'Установка и настройка программного обеспечения и периферийного оборудования.',
+          'Консультирование сотрудников по техническим вопросам.',
+        ],
+      },
+    ],
+    features: [
+      {label: 'Октябрь 2008 - май 2010', Icon: ScheduleIcon},
+      {
+        label: 'Москва, Россия',
+        Icon: ExploreIcon,
+      },
+      {label: 'Офис', Icon: MyLocationIcon},
+    ],
   },
 ]
 
-const renderJobs = (): JSX.Element[] =>
-  jobs.map(
-    ({id, occupation, company, duties, period}: IJob): JSX.Element => (
-      <li key={id} className="Work-Job">
-        <div className="Work-JobCaption">
-          <Tooltip title={company.title} placement="right">
-            <ButtonBase
-              {...BLANK_LINK_PROPS}
-              focusRipple
-              component="a"
-              href={company.url}
-            >
-              <img
-                height={36}
-                src={company.logo}
-                srcSet={`${company.logo2x} 2x`}
-                alt={company.title}
-              />
-            </ButtonBase>
-          </Tooltip>
-          <h3 className="Subtitle Subtitle_size_small">{occupation}</h3>
-        </div>
-        <ul className="Work-JobList">
-          {duties.map(
-            (duty: string, index: number): JSX.Element => (
-              <li key={index}>{duty}</li>
-            )
-          )}
-        </ul>
-        <p className="Work-JobPeriod">{period}</p>
-      </li>
-    )
-  )
-
 export default function Work(): JSX.Element {
   return (
-    <section className="Work Section">
+    <section className="Section">
       <h1 className="Title Title_color_violet">{Title.EXPERIENCE}</h1>
       <p className="MainText">
         <b>
@@ -131,7 +164,13 @@ export default function Work(): JSX.Element {
           фронтенд-разработкой более 4 лет.
         </b>
       </p>
-      <ul>{renderJobs()}</ul>
+      <ul className="Work">
+        {jobs.map(
+          (job: IJob, index: number): JSX.Element => (
+            <Job key={index} {...job} index={index} />
+          )
+        )}
+      </ul>
     </section>
   )
 }
