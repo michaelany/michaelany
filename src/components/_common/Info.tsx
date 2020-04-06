@@ -27,8 +27,8 @@ export default function Info({
 }: IInfoProps): JSX.Element {
   const [open, toggleOpen] = useState<boolean>(false)
 
-  const handleOpenToggle = (): void => {
-    toggleOpen((open: boolean): boolean => !open)
+  const handleToggle = (): void => {
+    toggleOpen(!open)
   }
 
   return (
@@ -52,7 +52,7 @@ export default function Info({
               })}
             />
           }
-          onClick={handleOpenToggle}
+          onClick={handleToggle}
         >
           Подробнее
         </Button>

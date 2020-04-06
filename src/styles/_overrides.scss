@@ -61,3 +61,32 @@
     color: white;
   }
 }
+
+.MuiTextField {
+  &-root {
+    background-color: white;
+    border-radius: $border-radius;
+  }
+}
+
+.MuiFilledInput {
+  &-root {
+    @include hover {
+      background-color: transparent;
+    }
+    border-radius: $border-radius;
+    &.Mui-error {
+      background-color: rgba($color_red, 0.12);
+    }
+    &,
+    &.Mui-focused:not(.Mui-error) {
+      background-color: transparent;
+    }
+  }
+}
+
+.MuiFormLabel {
+  &-root.Mui-focused:not(.Mui-error) {
+    color: $color_dark-green;
+  }
+}

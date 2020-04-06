@@ -45,5 +45,5 @@ function Map(): JSX.Element {
 
 export default GoogleApiWrapper({
   LoadingContainer,
-  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY as string,
 })(Map)

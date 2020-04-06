@@ -4,6 +4,7 @@ export enum Color {
   BLUE = '#62a5fc',
   TEXT = '#4a4a4a',
   SECOND = '#7b7b7b',
+  DARK_RED = '#e07a58',
 }
 
 // $duration_...
@@ -70,6 +71,11 @@ export default {
       light: Color.GREEN,
       main: Color.GREEN,
       dark: '#2db3a7', // $color_dark-green
+    },
+    error: {
+      light: Color.DARK_RED,
+      main: Color.DARK_RED,
+      dark: Color.DARK_RED,
     },
   },
   transitions: {

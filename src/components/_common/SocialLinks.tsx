@@ -28,7 +28,7 @@ export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
             >
               <Fab
                 {...BLANK_LINK_PROPS}
-                className="SocialLinks-Link"
+                className="Button Button_color_white"
                 component="a"
                 href={href}
                 aria-label={title}

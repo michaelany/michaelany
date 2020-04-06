@@ -143,15 +143,15 @@ const steps: IStep[] = [
 export default function VerticalLinearStepper(): JSX.Element {
   const [step, changeStep] = useState<number>(0)
 
-  const handleStepNext = (): void => {
-    changeStep((step: number): number => step + 1)
+  const handleNext = (): void => {
+    changeStep(step + 1)
   }
 
-  const handleStepBack = (): void => {
-    changeStep((step: number): number => step - 1)
+  const handleBack = (): void => {
+    changeStep(step - 1)
   }
 
-  const handleStepReset = (): void => {
+  const handleReset = (): void => {
     changeStep(0)
   }
 
@@ -168,7 +168,7 @@ export default function VerticalLinearStepper(): JSX.Element {
                   className="Stepper-Button"
                   size="medium"
                   aria-label="Вперед"
-                  onClick={handleStepNext}
+                  onClick={handleNext}
                 >
                   <ArrowForwardIcon className="Stepper-ButtonIcon" />
                 </Fab>
@@ -177,7 +177,7 @@ export default function VerticalLinearStepper(): JSX.Element {
                   size="medium"
                   aria-label="Назад"
                   disabled={step === 0}
-                  onClick={handleStepBack}
+                  onClick={handleBack}
                 >
                   <ArrowBackIcon className="Stepper-ButtonIcon" />
                 </Fab>
@@ -196,7 +196,7 @@ export default function VerticalLinearStepper(): JSX.Element {
             className="Stepper-Button"
             size="medium"
             aria-label="Обновить"
-            onClick={handleStepReset}
+            onClick={handleReset}
           >
             <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />
           </Fab>
