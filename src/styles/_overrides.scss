@@ -90,3 +90,9 @@
     color: $color_dark-green;
   }
 }
+
+.MuiInputAdornment {
+  &-root {
+    color: $color_second-text;
+  }
+}

@@ -8,7 +8,10 @@ import React, {
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
-import {InputProps} from '@material-ui/core'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import {InputProps} from '@material-ui/core/Input'
+import PersonIcon from '@material-ui/icons/PersonTwoTone'
+import MailIcon from '@material-ui/icons/MailTwoTone'
 import SendIcon from '@material-ui/icons/SendRounded'
 
 import './ContactForm.scss'
@@ -22,10 +25,6 @@ enum Field {
 
 const emailRegExp: RegExp = /.+@.+\..+/i
 
-const inputProps: InputProps = {
-  disableUnderline: true,
-}
-
 const initialValues: IMap<string> = {
   [Field.Name]: '',
   [Field.Email]: '',
@@ -36,6 +35,28 @@ const initialErrors: IMap<boolean> = {
   [Field.Name]: false,
   [Field.Email]: false,
   [Field.Message]: false,
+}
+
+const inputProps: IMap<InputProps> = {
+  [Field.Name]: {
+    disableUnderline: true,
+    endAdornment: (
+      <InputAdornment position="end">
+        <MailIcon />
+      </InputAdornment>
+    ),
+  },
+  [Field.Email]: {
+    disableUnderline: true,
+    endAdornment: (
+      <InputAdornment position="end">
+        <PersonIcon />
+      </InputAdornment>
+    ),
+  },
+  [Field.Message]: {
+    disableUnderline: true,
+  },
 }
 
 export default function ContactForm(): JSX.Element {
@@ -100,7 +121,7 @@ export default function ContactForm(): JSX.Element {
             name={Field.Name}
             label="Имя"
             variant="filled"
-            InputProps={inputProps}
+            InputProps={inputProps[Field.Name]}
             inputProps={{ref: fieldElements[Field.Name]}}
             value={values.name}
             error={errors.name}
@@ -114,7 +135,7 @@ export default function ContactForm(): JSX.Element {
             type="email"
             label="Email"
             variant="filled"
-            InputProps={inputProps}
+            InputProps={inputProps[Field.Email]}
             inputProps={{ref: fieldElements[Field.Email]}}
             value={values.email}
             error={errors.email}
@@ -129,7 +150,7 @@ export default function ContactForm(): JSX.Element {
             label="Сообщение"
             rows="5"
             variant="filled"
-            InputProps={inputProps}
+            InputProps={inputProps[Field.Message]}
             inputProps={{ref: fieldElements[Field.Message]}}
             value={values.message}
             error={errors.message}
