@@ -1,4 +1,10 @@
-import React, {useState, useRef, ChangeEvent, SyntheticEvent} from 'react'
+import React, {
+  useState,
+  useRef,
+  ChangeEvent,
+  SyntheticEvent,
+  MutableRefObject,
+} from 'react'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
@@ -35,9 +41,11 @@ const initialErrors: IMap<boolean> = {
 export default function ContactForm(): JSX.Element {
   const [values, changeValues] = useState<IMap<string>>(initialValues)
   const [errors, setErrors] = useState<IMap<boolean>>(initialErrors)
-  const nameEl = useRef<HTMLInputElement>(null!)
-  const emailEl = useRef<HTMLInputElement>(null!)
-  const messageEl = useRef<HTMLInputElement>(null!)
+  const fieldElements: IMap<MutableRefObject<HTMLInputElement>> = {
+    [Field.Name]: useRef<HTMLInputElement>(null!),
+    [Field.Email]: useRef<HTMLInputElement>(null!),
+    [Field.Message]: useRef<HTMLInputElement>(null!),
+  }
 
   const handleSubmit = (e: SyntheticEvent): void => {
     e.preventDefault()
@@ -52,13 +60,13 @@ export default function ContactForm(): JSX.Element {
       }
     })
     if (Object.values(newErrors).includes(true)) {
-      if (newErrors.name) {
-        nameEl.current.focus()
-      } else if (newErrors.email) {
-        emailEl.current.focus()
-      } else {
-        messageEl.current.focus()
-      }
+      Object.keys(newErrors).some((key: string): boolean => {
+        if (newErrors[key]) {
+          fieldElements[key].current.focus()
+          return true
+        }
+        return false
+      })
       setErrors({...errors, ...newErrors})
       return
     }
@@ -85,7 +93,7 @@ export default function ContactForm(): JSX.Element {
 
   return (
     <form noValidate className="ContactForm" onSubmit={handleSubmit}>
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
         <Grid item xs={6}>
           <TextField
             fullWidth
@@ -93,7 +101,7 @@ export default function ContactForm(): JSX.Element {
             label="Имя"
             variant="filled"
             InputProps={inputProps}
-            inputProps={{ref: nameEl}}
+            inputProps={{ref: fieldElements[Field.Name]}}
             value={values.name}
             error={errors.name}
             onChange={handleChange}
@@ -107,7 +115,7 @@ export default function ContactForm(): JSX.Element {
             label="Email"
             variant="filled"
             InputProps={inputProps}
-            inputProps={{ref: emailEl}}
+            inputProps={{ref: fieldElements[Field.Email]}}
             value={values.email}
             error={errors.email}
             onChange={handleChange}
@@ -122,7 +130,7 @@ export default function ContactForm(): JSX.Element {
             rows="5"
             variant="filled"
             InputProps={inputProps}
-            inputProps={{ref: messageEl}}
+            inputProps={{ref: fieldElements[Field.Message]}}
             value={values.message}
             error={errors.message}
             onChange={handleChange}

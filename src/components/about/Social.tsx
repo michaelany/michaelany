@@ -5,10 +5,20 @@ import meImg from '../../assets/img/pictures/me.png'
 import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
-import {SOCIAL_LINKS} from '../../utils/data'
+import {CONTACT_LINKS} from '../../utils/data'
 import {Path} from '../../utils/enums'
+import {ISocialLink} from '../../utils/types'
 
 const imgSize: number = 320
+
+const links: ISocialLink[] = [
+  CONTACT_LINKS.GIT_HUB,
+  CONTACT_LINKS.LINKED_IN,
+  CONTACT_LINKS.SEVEN_GLYPHS,
+  CONTACT_LINKS.INSTAGRAM,
+  CONTACT_LINKS.VK,
+  CONTACT_LINKS.FACEBOOK,
+]
 
 export default function Social(): JSX.Element {
   return (
@@ -24,7 +34,7 @@ export default function Social(): JSX.Element {
             alt="Michael Ananiev | vashstamp"
           />
         </div>
-        <SocialLinks links={SOCIAL_LINKS} />
+        <SocialLinks about links={links} />
       </div>
       <Pagination prevTo={Path.HOME} nextTo={Path.SKILLS} />
     </section>

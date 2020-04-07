@@ -1,9 +1,15 @@
+@import 'styles/variables';
+
 .Sections {
   height: 100%;
 }
 
 .Sections-Map {
-  height: 100%;
+  position: fixed;
+  width: calc(50% - #{$sidebar-width});
+  height: 100vh;
+  right: 0;
+  top: 0;
   & > div {
     position: relative;
     display: flex;

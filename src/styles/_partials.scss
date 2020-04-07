@@ -87,6 +87,14 @@
   }
 }
 
+.Link {
+  color: white;
+  user-select: auto;
+  @include hoverFocus {
+    text-decoration: underline;
+  }
+}
+
 .Actions {
   margin-top: 40px;
   &_center {

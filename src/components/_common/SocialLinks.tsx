@@ -1,4 +1,5 @@
 import React from 'react'
+import cn from 'classnames'
 import Fab from '@material-ui/core/Fab'
 import Tooltip from '@material-ui/core/Tooltip'
 
@@ -8,20 +9,24 @@ import {ISocialLink} from '../../utils/types'
 
 interface ISocialLinksProps {
   links: ISocialLink[]
+  about?: boolean
 }
 
-export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
+export default function SocialLinks({
+  links,
+  about,
+}: ISocialLinksProps): JSX.Element {
   return (
-    <ul className="SocialLinks">
+    <ul className={cn('SocialLinks', {SocialLinks_about: about})}>
       {links.map(
         ({title, href, Icon}: ISocialLink, index: number): JSX.Element => (
           <li key={index} className="SocialLinks-Item">
             <Tooltip
               title={title}
               placement={
-                index === 0
+                about && index === 0
                   ? 'left'
-                  : index === links.length - 1
+                  : about && index === links.length - 1
                   ? 'right'
                   : 'bottom'
               }
@@ -33,7 +38,7 @@ export default function SocialLinks({links}: ISocialLinksProps): JSX.Element {
                 href={href}
                 aria-label={title}
               >
-                <Icon />
+                <Icon className="SocialLinks-ItemIcon" />
               </Fab>
             </Tooltip>
           </li>
