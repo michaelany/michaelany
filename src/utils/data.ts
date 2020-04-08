@@ -1,3 +1,11 @@
+import everpointImg from '../assets/img/companies/everpoint.png'
+import everpointImg2x from '../assets/img/companies/everpoint@2x.png'
+import sevenGlyphsImg from '../assets/img/companies/7glyphs.png'
+import sevenGlyphsImg2x from '../assets/img/companies/7glyphs@2x.png'
+import tsftdImg from '../assets/img/companies/tsftd.png'
+import tsftdImg2x from '../assets/img/companies/tsftd@2x.png'
+import mvideoImg from '../assets/img/companies/mvideo.png'
+import mvideoImg2x from '../assets/img/companies/mvideo@2x.png'
 import {ReactComponent as SevenGlyphsIcon} from '../assets/icons/7glyphs.svg'
 import {ReactComponent as GitHubIcon} from '../assets/icons/github.svg'
 import {ReactComponent as LinkedInIcon} from '../assets/icons/linkedin.svg'
@@ -7,7 +15,7 @@ import {ReactComponent as FacebookIcon} from '../assets/icons/facebook.svg'
 import {ReactComponent as TelegramIcon} from '../assets/icons/telegram.svg'
 import {ReactComponent as SkypeIcon} from '../assets/icons/skype.svg'
 import {Company} from './enums'
-import {ISocialLink, IMap} from './types'
+import {ISocialLink, IMap, ICompany} from './types'
 
 interface IBlankLinkProps {
   target: string
@@ -55,5 +63,28 @@ export const CONTACT_LINKS: IMap<ISocialLink> = {
     title: 'Skype',
     href: 'skype:live:bd80acb1b9083867?chat',
     Icon: SkypeIcon,
+  },
+}
+
+export const COMPANIES: IMap<ICompany> = {
+  TSFTD: {
+    title: Company.TSFTD,
+    logo: tsftdImg,
+    logo2x: tsftdImg2x,
+  },
+  SEVEN_GLYPHS: {
+    title: Company.SEVEN_GLYPHS,
+    logo: sevenGlyphsImg,
+    logo2x: sevenGlyphsImg2x,
+  },
+  EVERPOINT: {
+    title: Company.EVERPOINT,
+    logo: everpointImg,
+    logo2x: everpointImg2x,
+  },
+  MVIDEO: {
+    title: Company.MVIDEO,
+    logo: mvideoImg,
+    logo2x: mvideoImg2x,
   },
 }

@@ -33,8 +33,8 @@ export default function SocialLinks({
             >
               <Fab
                 {...BLANK_LINK_PROPS}
-                className="Button Button_color_white"
                 component="a"
+                className="Button Button_color_white"
                 href={href}
                 aria-label={title}
               >

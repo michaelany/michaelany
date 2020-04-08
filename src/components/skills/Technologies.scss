@@ -10,6 +10,11 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
   'zeplin', 'sketch', 'figma', 'photoshop', 'optim', 'mac', 'node', 'mongo',
   'mysql', 'php';
 
+.Technologies-Title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .Technologies-Item {
   overflow: hidden;
   width: 100%;
@@ -34,7 +39,6 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
       @include retinaImg('../assets/img/technologies/#{$technology}', 'png');
     }
   }
-
   &::before {
     @include pseudo(relative);
     width: 50%;

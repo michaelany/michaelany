@@ -14,6 +14,8 @@ export type Color =
 
 export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'
 
+type ProjectType = 'app' | 'site' | 'admin' | 'landing'
+
 export interface IMap<T> {
   [key: string]: T
 }
@@ -39,10 +41,10 @@ export interface ITechnology {
 
 export interface ICompany {
   title: Company
-  color: Color
+  color?: Color
   logo: string
   logo2x: string
-  href: string
+  href?: string
 }
 
 export interface IPosition {
@@ -54,4 +56,13 @@ export interface IJob {
   company: ICompany
   positions: IPosition[]
   features: IFeature[]
+}
+
+export interface IProject {
+  title: string
+  name: string
+  type: ProjectType
+  color: Color
+  company: ICompany
+  href: string
 }

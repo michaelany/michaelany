@@ -440,8 +440,8 @@ const renderTechnologies = (technologies: ITechnology[]): JSX.Element[] =>
           <ButtonBase
             {...BLANK_LINK_PROPS}
             focusRipple
-            className={`Technologies-Item ColorInteractive ColorInteractive_color_${color}`}
             component="a"
+            className={`Technologies-Item ColorInteractive ColorInteractive_color_${color}`}
             href={href}
             aria-label={label}
             disabled={disabled}
@@ -468,7 +468,7 @@ export default function Technologies(): JSX.Element {
               defaultExpanded={index === 0}
             >
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <h3 className="Subtitle">{title}</h3>
+                <h3 className="Technologies-Title">{title}</h3>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Grid container component="ul">

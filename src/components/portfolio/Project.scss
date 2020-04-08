@@ -1,0 +1,103 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$projects: 'msp', '7glyphs', 'lazyaz', 'lazyazdashboard', 'whiparound',
+  '12saffron', 'fcdc', 'servicepacks';
+
+.Project-Link {
+  @include hoverFocus {
+    .Project-Block {
+      opacity: 1;
+    }
+
+    .Project-Company {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .Project-Title {
+      transform: scale(1);
+    }
+
+    .Project-Label {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  border-radius: $border-radius;
+  overflow: hidden;
+  width: 100%;
+  &::before {
+    display: none;
+  }
+  &::after {
+    @include pseudo(relative);
+    padding-bottom: 75%;
+  }
+}
+
+.Project-Content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @each $project in $projects {
+    &_name_#{$project}::after {
+      @include retinaImg('../assets/img/projects/#{$project}', 'jpg');
+    }
+  }
+  &::after {
+    @include pseudo(relative);
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.Project-Panel {
+  width: 100%;
+  height: auto;
+}
+
+.Project-Block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  background-color: white;
+  border-radius: $border-radius;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity $duration_short $easing_in-out;
+}
+
+.Project-Company {
+  transform: translate3d(0, -20%, 0);
+  transition: transform $duration_short $easing_in-out;
+}
+
+.Project-Title {
+  transform: scale(0.8);
+  font-size: 20px;
+  transition: transform $duration_short $easing_in-out;
+  @each $key, $value, $secondValue in $colors-map {
+    .ColorInteractive_color_#{$key} & {
+      color: $secondValue;
+    }
+  }
+}
+
+.Project-Label {
+  font-weight: 600;
+  color: $color_second-text;
+  transform: translate3d(0, 30%, 0);
+  transition: transform $duration_short $easing_in-out;
+}

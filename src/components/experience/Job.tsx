@@ -22,9 +22,7 @@ const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
 const renderPosition = (positions: IPosition[]): JSX.Element[] =>
   positions.map(({occupation, duties}: IPosition, index: number) => (
     <li key={index} className="Job-Position">
-      <h3 className="Job-Occupation Subtitle Subtitle_size_small">
-        {occupation}
-      </h3>
+      <h3 className="Job-Occupation">{occupation}</h3>
       <ul className="Job-Duties">
         {duties.map(
           (duty: string, index: number): JSX.Element => (
@@ -56,8 +54,8 @@ export default function Job({company, positions, features, index}: IJobProps) {
           <ButtonBase
             {...BLANK_LINK_PROPS}
             focusRipple
-            className={`Job-Company ColorInteractive ColorInteractive_color_${company.color}`}
             component="a"
+            className={`Job-Company ColorInteractive ColorInteractive_color_${company.color}`}
             href={company.href}
             onClick={handleLinkClick}
           >

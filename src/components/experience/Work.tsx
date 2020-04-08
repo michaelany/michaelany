@@ -4,25 +4,16 @@ import ExploreIcon from '@material-ui/icons/ExploreTwoTone'
 import MyLocationIcon from '@material-ui/icons/MyLocationTwoTone'
 
 import './Work.scss'
-import everpointImg from '../../assets/img/companies/everpoint.png'
-import everpointImg2x from '../../assets/img/companies/everpoint@2x.png'
-import sevenGlyphsImg from '../../assets/img/companies/7glyphs.png'
-import sevenGlyphsImg2x from '../../assets/img/companies/7glyphs@2x.png'
-import tsftdImg from '../../assets/img/companies/tsftd.png'
-import tsftdImg2x from '../../assets/img/companies/tsftd@2x.png'
-import mvideoImg from '../../assets/img/companies/mvideo.png'
-import mvideoImg2x from '../../assets/img/companies/mvideo@2x.png'
 import Job from './Job'
-import {Title, Company} from '../../utils/enums'
+import {COMPANIES} from '../../utils/data'
+import {Title} from '../../utils/enums'
 import {IJob} from '../../utils/types'
 
 const jobs: IJob[] = [
   {
     company: {
-      title: Company.TSFTD,
+      ...COMPANIES.TSFTD,
       color: 'red',
-      logo: tsftdImg,
-      logo2x: tsftdImg2x,
       href: 'http://www.tsft.ru',
     },
     positions: [
@@ -63,10 +54,8 @@ const jobs: IJob[] = [
   },
   {
     company: {
-      title: Company.SEVEN_GLYPHS,
+      ...COMPANIES.SEVEN_GLYPHS,
       color: 'default',
-      logo: sevenGlyphsImg,
-      logo2x: sevenGlyphsImg2x,
       href: 'https://7glyphs.com',
     },
     positions: [
@@ -92,10 +81,8 @@ const jobs: IJob[] = [
   },
   {
     company: {
-      title: Company.EVERPOINT,
+      ...COMPANIES.EVERPOINT,
       color: 'grass',
-      logo: everpointImg,
-      logo2x: everpointImg2x,
       href: 'https://www.everpoint.ru',
     },
     positions: [
@@ -126,10 +113,8 @@ const jobs: IJob[] = [
   },
   {
     company: {
-      title: Company.MVIDEO,
+      ...COMPANIES.MVIDEO,
       color: 'red',
-      logo: mvideoImg,
-      logo2x: mvideoImg2x,
       href: 'https://www.mvideo.ru',
     },
     positions: [

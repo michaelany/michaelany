@@ -42,7 +42,7 @@ const inputProps: IMap<InputProps> = {
     disableUnderline: true,
     endAdornment: (
       <InputAdornment position="end">
-        <MailIcon />
+        <PersonIcon />
       </InputAdornment>
     ),
   },
@@ -50,7 +50,7 @@ const inputProps: IMap<InputProps> = {
     disableUnderline: true,
     endAdornment: (
       <InputAdornment position="end">
-        <PersonIcon />
+        <MailIcon />
       </InputAdornment>
     ),
   },

@@ -14,9 +14,9 @@ function Features({items}: IFeaturesProps): JSX.Element {
       {items.map(({label, Icon}: IFeature, index: number) => (
         <Grid
           key={index}
-          className="Features-Item"
           item
           component="li"
+          className="Features-Item"
           xs={6}
           xl={4}
         >
