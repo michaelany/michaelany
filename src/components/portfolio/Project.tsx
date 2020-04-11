@@ -5,13 +5,14 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 import './Project.scss'
 import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
 import {BLANK_LINK_PROPS} from '../../utils/data'
+import {ProjectType} from '../../utils/enums'
 import {IProject as IProjectProps, IMap} from '../../utils/types'
 
-const typesMap: IMap<string> = {
-  app: 'Приложение',
-  site: 'Сайт',
-  admin: 'Админка',
-  landing: 'Лендинг',
+export const projectTypeLabelsMap: IMap<string> = {
+  [ProjectType.APP]: 'Приложение',
+  [ProjectType.SITE]: 'Сайт',
+  [ProjectType.ADMIN]: 'Админка',
+  [ProjectType.LANDING]: 'Лендинг',
 }
 
 export default function Project({
@@ -40,19 +41,21 @@ export default function Project({
         className={`Project-Link ColorInteractive ColorInteractive_color_${color}`}
         href={href}
       >
-        <div className={`Project-Content Project-Content_name_${name}`}>
-          <DesktopSvg className="Project-Panel" />
-          <div className="Project-Block">
-            <img
-              className="Project-Company"
-              height={36}
-              src={company.logo}
-              srcSet={`${company.logo2x} 2x`}
-              alt={company.title}
-            />
-            <h3 className="Project-Title">{title}</h3>
-            <p className="Project-Label">{typesMap[type]}</p>
+        <div className="Project-Content">
+          <div className={`Project-View Project-View_name_${name}`}>
+            <DesktopSvg className="Project-Panel" />
           </div>
+        </div>
+        <div className="Project-Block">
+          <img
+            className="Project-Company"
+            height={36}
+            src={company.logo}
+            srcSet={`${company.logo2x} 2x`}
+            alt={company.title}
+          />
+          <h3 className="Project-Title">{title}</h3>
+          <p className="Project-Label">{projectTypeLabelsMap[type]}</p>
         </div>
       </ButtonBase>
     </Grid>

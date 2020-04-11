@@ -10,6 +10,7 @@ import {Path, Title} from '../../utils/enums'
 import {IMap} from '../../utils/types'
 
 interface IPaginationProps {
+  wide?: boolean
   prevTo?: Path
   nextTo?: Path
 }
@@ -24,13 +25,15 @@ const titlesMap: IMap<Title> = {
 }
 
 export default function Pagination({
+  wide,
   prevTo,
   nextTo,
 }: IPaginationProps): JSX.Element {
+  const xs = wide ? 3 : 6
   return (
     <Grid container className="Pagination Actions" spacing={2} justify="center">
       {prevTo && (
-        <Grid item xs={6}>
+        <Grid item xs={xs}>
           <Button
             fullWidth
             className="Pagination-Link"
@@ -44,7 +47,7 @@ export default function Pagination({
         </Grid>
       )}
       {nextTo && (
-        <Grid item xs={6}>
+        <Grid item xs={xs}>
           <Button
             fullWidth
             className="Pagination-Link"

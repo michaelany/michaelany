@@ -17,6 +17,7 @@ export enum Title {
 }
 
 export enum Company {
+  MA = 'Michael Ananiev',
   MVIDEO = 'М.Видео',
   EVERPOINT = 'Эверпоинт',
   SEVEN_GLYPHS = '7 glyphs Ltd.',
@@ -83,4 +84,11 @@ export enum Technology {
   MYSQL = 'MySQL',
   PHP = 'PHP',
   LARAVEL = 'Laravel',
+}
+
+export enum ProjectType {
+  APP = 'app',
+  SITE = 'site',
+  ADMIN = 'admin',
+  LANDING = 'landing',
 }

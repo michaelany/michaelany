@@ -96,3 +96,21 @@
     color: $color_second-text;
   }
 }
+
+.MuiTabs {
+  &-indicator {
+    background-color: white;
+    height: 4px;
+    border-radius: $border-radius / 4;
+  }
+}
+
+.MuiTab {
+  &-root {
+    color: white;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius / 4;
+    border-bottom-right-radius: $border-radius / 4;
+  }
+}

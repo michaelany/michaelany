@@ -6,6 +6,8 @@ import tsftdImg from '../assets/img/companies/tsftd.png'
 import tsftdImg2x from '../assets/img/companies/tsftd@2x.png'
 import mvideoImg from '../assets/img/companies/mvideo.png'
 import mvideoImg2x from '../assets/img/companies/mvideo@2x.png'
+import maImg from '../assets/img/companies/ma.png'
+import maImg2x from '../assets/img/companies/ma@2x.png'
 import {ReactComponent as SevenGlyphsIcon} from '../assets/icons/7glyphs.svg'
 import {ReactComponent as GitHubIcon} from '../assets/icons/github.svg'
 import {ReactComponent as LinkedInIcon} from '../assets/icons/linkedin.svg'
@@ -67,6 +69,11 @@ export const CONTACT_LINKS: IMap<ISocialLink> = {
 }
 
 export const COMPANIES: IMap<ICompany> = {
+  MA: {
+    title: Company.MA,
+    logo: maImg,
+    logo2x: maImg2x,
+  },
   TSFTD: {
     title: Company.TSFTD,
     logo: tsftdImg,

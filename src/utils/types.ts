@@ -1,7 +1,7 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
-import {Company, Technology} from './enums'
+import {Company, Technology, ProjectType} from './enums'
 
 export type Color =
   | 'default'
@@ -13,8 +13,6 @@ export type Color =
   | 'violet'
 
 export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'
-
-type ProjectType = 'app' | 'site' | 'admin' | 'landing'
 
 export interface IMap<T> {
   [key: string]: T

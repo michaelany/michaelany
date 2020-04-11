@@ -27,9 +27,7 @@ export default function Info({
 }: IInfoProps): JSX.Element {
   const [open, toggleOpen] = useState<boolean>(false)
 
-  const handleToggle = (): void => {
-    toggleOpen(!open)
-  }
+  const handleToggle = (): void => toggleOpen(!open)
 
   return (
     <section className="Info Section">
