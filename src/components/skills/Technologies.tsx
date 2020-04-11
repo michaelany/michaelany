@@ -9,8 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
 import Pagination from '../_common/Pagination'
-import {BLANK_LINK_PROPS} from '../../utils/data'
-import {Path, Technology} from '../../utils/enums'
+import {PATHS, BLANK_LINK_PROPS, TECHNOLOGY_TITLES} from '../../utils/data'
 import {ITechnology} from '../../utils/types'
 
 interface IGroup {
@@ -24,65 +23,65 @@ const groups: IGroup[] = [
     technologies: [
       {
         type: 'js',
-        label: Technology.JS,
+        label: TECHNOLOGY_TITLES.JS,
         color: 'yellow',
         href:
           'https://www.ecma-international.org/publications/standards/Ecma-262.htm',
       },
       {
         type: 'ts',
-        label: Technology.TS,
+        label: TECHNOLOGY_TITLES.TS,
         color: 'blue',
         href: 'https://www.typescriptlang.org',
       },
       {
         type: 'react',
-        label: Technology.REACT,
+        label: TECHNOLOGY_TITLES.REACT,
         color: 'blue',
         href: 'https://reactjs.org',
       },
       {
         type: 'redux',
-        label: Technology.REDUX,
+        label: TECHNOLOGY_TITLES.REDUX,
         color: 'violet',
         href: 'https://redux.js.org',
       },
       {
         type: 'mobx',
-        label: Technology.MOBX,
+        label: TECHNOLOGY_TITLES.MOBX,
         color: 'red',
         href: 'https://mobx.js.org',
       },
       {
         disabled: true,
         type: 'preact',
-        label: Technology.PREACT,
+        label: TECHNOLOGY_TITLES.PREACT,
         color: 'violet',
         href: 'https://preactjs.com',
       },
       {
         type: 'vue',
-        label: Technology.VUE,
+        label: TECHNOLOGY_TITLES.VUE,
         color: 'grass',
         href: 'https://vuejs.org',
       },
       {
         disabled: true,
         type: 'svelte',
-        label: Technology.SVELTE,
+        label: TECHNOLOGY_TITLES.SVELTE,
         color: 'red',
         href: 'https://svelte.dev',
       },
       {
         disabled: true,
         type: 'apollo',
-        label: Technology.APOLLO,
+        label: TECHNOLOGY_TITLES.APOLLO,
         color: 'blue',
         href: 'https://www.apollographql.com/docs/react',
       },
       {
         type: 'jquery',
-        label: Technology.JQUERY,
+        label: TECHNOLOGY_TITLES.JQUERY,
         color: 'blue',
         href: 'https://jquery.com',
       },
@@ -93,43 +92,43 @@ const groups: IGroup[] = [
     technologies: [
       {
         type: 'html',
-        label: Technology.HTML,
+        label: TECHNOLOGY_TITLES.HTML,
         color: 'red',
         href: 'https://html.spec.whatwg.org/multipage',
       },
       {
         type: 'svg',
-        label: Technology.SVG,
+        label: TECHNOLOGY_TITLES.SVG,
         color: 'yellow',
         href: 'https://www.w3.org/Graphics/SVG',
       },
       {
         type: 'react',
-        label: Technology.JSX,
+        label: TECHNOLOGY_TITLES.JSX,
         color: 'blue',
         href: 'https://reactjs.org/docs/introducing-jsx.html',
       },
       {
         type: 'pug',
-        label: Technology.PUG,
+        label: TECHNOLOGY_TITLES.PUG,
         color: 'yellow',
         href: 'https://pugjs.org/api/getting-started.html',
       },
       {
         type: 'handlebars',
-        label: Technology.HANDLEBARS,
+        label: TECHNOLOGY_TITLES.HANDLEBARS,
         color: 'default',
         href: 'https://handlebarsjs.com',
       },
       {
         type: 'markdown',
-        label: Technology.MARKDOWN,
+        label: TECHNOLOGY_TITLES.MARKDOWN,
         color: 'default',
         href: 'https://daringfireball.net/projects/markdown',
       },
       {
         type: 'laravel',
-        label: Technology.BLADE,
+        label: TECHNOLOGY_TITLES.BLADE,
         color: 'red',
         href: 'https://laravel.com/docs/5.6/blade#introduction',
       },
@@ -140,77 +139,77 @@ const groups: IGroup[] = [
     technologies: [
       {
         type: 'css',
-        label: Technology.CSS,
+        label: TECHNOLOGY_TITLES.CSS,
         color: 'blue',
         href: 'https://www.w3.org/style/css',
       },
       {
         type: 'bem',
-        label: Technology.BEM,
+        label: TECHNOLOGY_TITLES.BEM,
         color: 'default',
         href: 'https://bem.info',
       },
       {
         type: 'sass',
-        label: Technology.SASS,
+        label: TECHNOLOGY_TITLES.SASS,
         color: 'red',
         href: 'https://sass-lang.com',
       },
       {
         type: 'mui',
-        label: Technology.MUI,
+        label: TECHNOLOGY_TITLES.MUI,
         color: 'blue',
         href: 'https://material-ui.com',
       },
       {
         disabled: true,
         type: 'modules',
-        label: Technology.MODULES,
+        label: TECHNOLOGY_TITLES.MODULES,
         color: 'default',
         href: 'https://github.com/css-modules/css-modules',
       },
       {
         disabled: true,
         type: 'styled',
-        label: Technology.STYLED,
+        label: TECHNOLOGY_TITLES.STYLED,
         color: 'yellow',
         href: 'https://styled-components.com',
       },
       {
         disabled: true,
         type: 'reactstrap',
-        label: Technology.REACTSTRAP,
+        label: TECHNOLOGY_TITLES.REACTSTRAP,
         color: 'default',
         href: 'https://reactstrap.github.io/',
       },
       {
         disabled: true,
         type: 'ant',
-        label: Technology.ANT,
+        label: TECHNOLOGY_TITLES.ANT,
         color: 'blue',
         href: 'https://ant.design',
       },
       {
         type: 'materialize',
-        label: Technology.MATERIALIZE,
+        label: TECHNOLOGY_TITLES.MATERIALIZE,
         color: 'red',
         href: 'https://materializecss.com',
       },
       {
         type: 'bootstrap',
-        label: Technology.BOOTSTRAP,
+        label: TECHNOLOGY_TITLES.BOOTSTRAP,
         color: 'violet',
         href: 'https://getbootstrap.com',
       },
       {
         type: 'semantic',
-        label: Technology.SEMANTIC,
+        label: TECHNOLOGY_TITLES.SEMANTIC,
         color: 'green',
         href: 'https://semantic-ui.com',
       },
       {
         type: 'emails',
-        label: Technology.EMAILS,
+        label: TECHNOLOGY_TITLES.EMAILS,
         color: 'red',
         href: 'https://get.foundation/emails.html',
       },
@@ -221,59 +220,59 @@ const groups: IGroup[] = [
     technologies: [
       {
         type: 'npm',
-        label: Technology.NPM,
+        label: TECHNOLOGY_TITLES.NPM,
         color: 'red',
         href: 'https://www.npmjs.com',
       },
       {
         type: 'yarn',
-        label: Technology.YARN,
+        label: TECHNOLOGY_TITLES.YARN,
         color: 'blue',
         href: 'https://yarnpkg.com',
       },
       {
         type: 'webpack',
-        label: Technology.WEBPACK,
+        label: TECHNOLOGY_TITLES.WEBPACK,
         color: 'blue',
         href: 'https://webpack.js.org',
       },
       {
         type: 'gulp',
-        label: Technology.GULP,
+        label: TECHNOLOGY_TITLES.GULP,
         color: 'red',
         href: 'https://gulpjs.com',
       },
       {
         disabled: true,
         type: 'parcel',
-        label: Technology.PARCEL,
+        label: TECHNOLOGY_TITLES.PARCEL,
         color: 'yellow',
         href: 'https://parceljs.org',
       },
       {
         type: 'cra',
-        label: Technology.CRA,
+        label: TECHNOLOGY_TITLES.CRA,
         color: 'green',
         href: 'https://create-react-app.dev',
       },
       {
         disabled: true,
         type: 'gatsby',
-        label: Technology.GATSBY,
+        label: TECHNOLOGY_TITLES.GATSBY,
         color: 'violet',
         href: 'https://www.gatsbyjs.org',
       },
       {
         disabled: true,
         type: 'next',
-        label: Technology.NEXT,
+        label: TECHNOLOGY_TITLES.NEXT,
         color: 'default',
         href: 'https://nextjs.org',
       },
       {
         disabled: true,
         type: 'nuxt',
-        label: Technology.NUXT,
+        label: TECHNOLOGY_TITLES.NUXT,
         color: 'grass',
         href: 'https://ru.nuxtjs.org',
       },
@@ -284,40 +283,40 @@ const groups: IGroup[] = [
     technologies: [
       {
         type: 'babel',
-        label: Technology.BABEL,
+        label: TECHNOLOGY_TITLES.BABEL,
         color: 'yellow',
         href: 'https://babeljs.io',
       },
       {
         type: 'prettier',
-        label: Technology.PRETTIER,
+        label: TECHNOLOGY_TITLES.PRETTIER,
         color: 'default',
         href: 'https://prettier.io',
       },
       {
         type: 'eslint',
-        label: Technology.ESLINT,
+        label: TECHNOLOGY_TITLES.ESLINT,
         color: 'violet',
         href: 'https://eslint.org',
       },
       {
         disabled: true,
         type: 'storybook',
-        label: Technology.STORYBOOK,
+        label: TECHNOLOGY_TITLES.STORYBOOK,
         color: 'red',
         href: 'https://storybook.js.org',
       },
       {
         disabled: true,
         type: 'bit',
-        label: Technology.BIT,
+        label: TECHNOLOGY_TITLES.BIT,
         color: 'violet',
         href: 'https://bit.dev',
       },
       {
         disabled: true,
         type: 'jest',
-        label: Technology.JEST,
+        label: TECHNOLOGY_TITLES.JEST,
         color: 'red',
         href: 'https://jestjs.io',
       },
@@ -328,62 +327,62 @@ const groups: IGroup[] = [
     technologies: [
       {
         type: 'vscode',
-        label: Technology.VSCODE,
+        label: TECHNOLOGY_TITLES.VSCODE,
         color: 'blue',
         href: 'https://code.visualstudio.com',
       },
       {
         type: 'iterm',
-        label: Technology.ITERM,
+        label: TECHNOLOGY_TITLES.ITERM,
         color: 'grass',
         href: 'https://iterm2.com',
       },
       {
         type: 'git',
-        label: Technology.GIT,
+        label: TECHNOLOGY_TITLES.GIT,
         color: 'red',
         href: 'https://git-scm.com',
       },
       {
         type: 'devtools',
-        label: Technology.DEVTOOLS,
+        label: TECHNOLOGY_TITLES.DEVTOOLS,
         color: 'default',
         href: 'https://developers.google.com/web/tools/chrome-devtools',
       },
       {
         type: 'zeplin',
-        label: Technology.ZEPLIN,
+        label: TECHNOLOGY_TITLES.ZEPLIN,
         color: 'yellow',
         href: 'https://zeplin.io',
       },
       {
         type: 'sketch',
-        label: Technology.SKETCH,
+        label: TECHNOLOGY_TITLES.SKETCH,
         color: 'yellow',
         href: 'https://www.sketch.com',
       },
       {
         disabled: true,
         type: 'figma',
-        label: Technology.FIGMA,
+        label: TECHNOLOGY_TITLES.FIGMA,
         color: 'red',
         href: 'https://www.figma.com/',
       },
       {
         type: 'photoshop',
-        label: Technology.PHOTOSHOP,
+        label: TECHNOLOGY_TITLES.PHOTOSHOP,
         color: 'blue',
         href: 'https://www.adobe.com/ru/products/photoshop.html',
       },
       {
         type: 'optim',
-        label: Technology.OPTIM,
+        label: TECHNOLOGY_TITLES.OPTIM,
         color: 'default',
         href: 'https://imageoptim.com',
       },
       {
         type: 'mac',
-        label: Technology.MAC,
+        label: TECHNOLOGY_TITLES.MAC,
         color: 'default',
         href: 'https://www.apple.com/macos/catalina',
       },
@@ -395,33 +394,33 @@ const groups: IGroup[] = [
       {
         disabled: true,
         type: 'node',
-        label: Technology.NODE,
+        label: TECHNOLOGY_TITLES.NODE,
         color: 'grass',
         href: 'https://nodejs.org',
       },
       {
         disabled: true,
         type: 'mongo',
-        label: Technology.MONGO,
+        label: TECHNOLOGY_TITLES.MONGO,
         color: 'grass',
         href: 'https://www.mongodb.com',
       },
       {
         disabled: true,
         type: 'mysql',
-        label: Technology.MYSQL,
+        label: TECHNOLOGY_TITLES.MYSQL,
         color: 'blue',
         href: 'https://www.mysql.com',
       },
       {
         type: 'php',
-        label: Technology.PHP,
+        label: TECHNOLOGY_TITLES.PHP,
         color: 'violet',
         href: 'https://www.php.net',
       },
       {
         type: 'laravel',
-        label: Technology.LARAVEL,
+        label: TECHNOLOGY_TITLES.LARAVEL,
         color: 'red',
         href: 'https://laravel.com',
       },
@@ -479,7 +478,7 @@ export default function Technologies(): JSX.Element {
           )
         )}
       </ul>
-      <Pagination prevTo={Path.ABOUT} nextTo={Path.EXPERIENCE} />
+      <Pagination prevTo={PATHS.ABOUT} nextTo={PATHS.EXPERIENCE} />
     </section>
   )
 }

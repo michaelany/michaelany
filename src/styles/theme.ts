@@ -1,31 +1,33 @@
+import {IMap} from '../utils/types'
+
 // $color_...
-export enum Color {
-  GREEN = '#31d0c9',
-  BLUE = '#62a5fc',
-  TEXT = '#4a4a4a',
-  SECOND = '#7b7b7b',
-  DARK_RED = '#e07a58',
+export const COLORS: IMap<string> = {
+  GREEN: '#31d0c9',
+  BLUE: '#62a5fc',
+  TEXT: '#4a4a4a',
+  SECOND: '#7b7b7b',
+  DARK_RED: '#e07a58',
 }
 
 // $duration_...
-export enum Duration {
-  SHORTEST = 150,
-  SHORTER = 200,
-  SHORT = 250,
-  STANDARD = 300,
-  MEDIUM = 500,
-  MEDIUM_LONG = 650,
-  LONG = 800,
-  LONGER = 1000,
-  LONGEST = 2000,
-  LINGERING = 3000,
-  ALTERNATE = 20000,
+export const DURATIONS: IMap<number> = {
+  SHORTEST: 150,
+  SHORTER: 200,
+  SHORT: 250,
+  STANDARD: 300,
+  MEDIUM: 500,
+  MEDIUM_LONG: 650,
+  LONG: 800,
+  LONGER: 1000,
+  LONGEST: 2000,
+  LINGERING: 3000,
+  ALTERNATE: 20000,
 }
 
 // $easing_...
-export enum Easing {
-  IN_OUT = 'cubic-bezier(0.4, 0, 0.2, 1)',
-  OUT = 'cubic-bezier(0, 0, 0.2, 1)',
+export const EASINGS: IMap<string> = {
+  IN_OUT: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  OUT: 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
 export default {
@@ -56,38 +58,38 @@ export default {
   },
   palette: {
     text: {
-      primary: Color.TEXT,
-      secondary: Color.SECOND,
+      primary: COLORS.TEXT,
+      secondary: COLORS.SECOND,
     },
     background: {
       default: '#fff', // $color_background
     },
     primary: {
-      light: Color.BLUE,
-      main: Color.BLUE,
+      light: COLORS.BLUE,
+      main: COLORS.BLUE,
       dark: '#5895e0', // $color_dark-blue
     },
     secondary: {
-      light: Color.GREEN,
-      main: Color.GREEN,
+      light: COLORS.GREEN,
+      main: COLORS.GREEN,
       dark: '#2db3a7', // $color_dark-green
     },
     error: {
-      light: Color.DARK_RED,
-      main: Color.DARK_RED,
-      dark: Color.DARK_RED,
+      light: COLORS.DARK_RED,
+      main: COLORS.DARK_RED,
+      dark: COLORS.DARK_RED,
     },
   },
   transitions: {
     easing: {
-      easeInOut: Easing.IN_OUT,
-      easeOut: Easing.OUT,
+      easeInOut: EASINGS.IN_OUT,
+      easeOut: EASINGS.OUT,
     },
     duration: {
-      shortest: Duration.SHORTEST,
-      shorter: Duration.SHORTER,
-      short: Duration.SHORT,
-      standard: Duration.STANDARD,
+      shortest: DURATIONS.SHORTEST,
+      shorter: DURATIONS.SHORTER,
+      short: DURATIONS.SHORT,
+      standard: DURATIONS.STANDARD,
     },
   },
   shadows: ['none'],
@@ -96,7 +98,7 @@ export default {
   },
   props: {
     MuiTooltip: {
-      enterDelay: Duration.STANDARD,
+      enterDelay: DURATIONS.STANDARD,
     },
     MuiExpansionPanel: {
       elevation: 0,

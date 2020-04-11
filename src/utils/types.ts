@@ -1,7 +1,13 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
-import {Company, Technology, ProjectType} from './enums'
+export type Path =
+  | '/'
+  | '/about'
+  | '/skills'
+  | '/experience'
+  | '/portfolio'
+  | '/contact'
 
 export type Color =
   | 'default'
@@ -12,7 +18,7 @@ export type Color =
   | 'yellow'
   | 'violet'
 
-export type ColorProp = 'BLUE' | 'GREEN' | 'GRASS' | 'RED' | 'YELLOW' | 'VIOLET'
+export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
 
 export interface IMap<T> {
   [key: string]: T
@@ -32,13 +38,13 @@ export interface IFeature {
 export interface ITechnology {
   disabled?: boolean
   type: string
-  label: Technology
+  label: string
   color: Color
   href: string
 }
 
 export interface ICompany {
-  title: Company
+  title: string
   color?: Color
   logo: string
   logo2x: string

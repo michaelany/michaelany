@@ -9,7 +9,7 @@ import Skills from '../skills/Skills'
 import Experience from '../experience/Experience'
 import Portfolio from '../portfolio/Portfolio'
 import Contact from '../contact/Contact'
-import {Path} from '../../utils/enums'
+import {PATHS} from '../../utils/data'
 
 export default function AppContent(): JSX.Element {
   const {pathname} = useLocation()
@@ -18,13 +18,13 @@ export default function AppContent(): JSX.Element {
       <Sidebar />
       <main className="AppContent-Main">
         <Switch>
-          <Route exact path={Path.HOME} component={Home} />
-          <Route exact path={Path.ABOUT} component={About} />
-          <Route exact path={Path.SKILLS} component={Skills} />
-          <Route exact path={Path.EXPERIENCE} component={Experience} />
-          <Route exact path={Path.PORTFOLIO} component={Portfolio} />
-          <Route exact path={Path.CONTACT} component={Contact} />
-          <Redirect to={Path.HOME} />
+          <Route exact path={PATHS.HOME} component={Home} />
+          <Route exact path={PATHS.ABOUT} component={About} />
+          <Route exact path={PATHS.SKILLS} component={Skills} />
+          <Route exact path={PATHS.EXPERIENCE} component={Experience} />
+          <Route exact path={PATHS.PORTFOLIO} component={Portfolio} />
+          <Route exact path={PATHS.CONTACT} component={Contact} />
+          <Redirect to={PATHS.HOME} />
         </Switch>
       </main>
     </div>

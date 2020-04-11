@@ -5,8 +5,7 @@ import MyLocationIcon from '@material-ui/icons/MyLocationTwoTone'
 
 import './Work.scss'
 import Job from './Job'
-import {COMPANIES} from '../../utils/data'
-import {Title} from '../../utils/enums'
+import {TITLES, COMPANIES} from '../../utils/data'
 import {IJob} from '../../utils/types'
 
 const jobs: IJob[] = [
@@ -142,7 +141,7 @@ const jobs: IJob[] = [
 export default function Work(): JSX.Element {
   return (
     <section className="Section">
-      <h1 className="Title Title_color_violet">{Title.EXPERIENCE}</h1>
+      <h1 className="Title Title_color_violet">{TITLES.EXPERIENCE}</h1>
       <p className="MainText">
         <b>
           Живу и работаю в Москве. Профессионально занимаюсь

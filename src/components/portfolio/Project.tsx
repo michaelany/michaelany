@@ -4,15 +4,14 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './Project.scss'
 import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
-import {BLANK_LINK_PROPS} from '../../utils/data'
-import {ProjectType} from '../../utils/enums'
+import {BLANK_LINK_PROPS, PROJECT_TYPES} from '../../utils/data'
 import {IProject as IProjectProps, IMap} from '../../utils/types'
 
-export const projectTypeLabelsMap: IMap<string> = {
-  [ProjectType.APP]: 'Приложение',
-  [ProjectType.SITE]: 'Сайт',
-  [ProjectType.ADMIN]: 'Админка',
-  [ProjectType.LANDING]: 'Лендинг',
+export const projectTypeLabels: IMap<string> = {
+  [PROJECT_TYPES.APP]: 'Приложение',
+  [PROJECT_TYPES.SITE]: 'Сайт',
+  [PROJECT_TYPES.ADMIN]: 'Админка',
+  [PROJECT_TYPES.LANDING]: 'Лендинг',
 }
 
 export default function Project({
@@ -55,7 +54,7 @@ export default function Project({
             alt={company.title}
           />
           <h3 className="Project-Title">{title}</h3>
-          <p className="Project-Label">{projectTypeLabelsMap[type]}</p>
+          <p className="Project-Label">{projectTypeLabels[type]}</p>
         </div>
       </ButtonBase>
     </Grid>

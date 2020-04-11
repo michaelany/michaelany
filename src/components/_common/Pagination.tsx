@@ -6,8 +6,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
 import './Pagination.scss'
-import {Path, Title} from '../../utils/enums'
-import {IMap} from '../../utils/types'
+import {PATHS, TITLES} from '../../utils/data'
+import {Path, IMap} from '../../utils/types'
 
 interface IPaginationProps {
   wide?: boolean
@@ -15,13 +15,13 @@ interface IPaginationProps {
   nextTo?: Path
 }
 
-const titlesMap: IMap<Title> = {
-  [Path.HOME]: Title.HOME,
-  [Path.ABOUT]: Title.ABOUT,
-  [Path.SKILLS]: Title.SKILLS,
-  [Path.EXPERIENCE]: Title.EXPERIENCE,
-  [Path.PORTFOLIO]: Title.PORTFOLIO,
-  [Path.CONTACT]: Title.CONTACT,
+const pathTitles: IMap<string> = {
+  [PATHS.HOME]: TITLES.HOME,
+  [PATHS.ABOUT]: TITLES.ABOUT,
+  [PATHS.SKILLS]: TITLES.SKILLS,
+  [PATHS.EXPERIENCE]: TITLES.EXPERIENCE,
+  [PATHS.PORTFOLIO]: TITLES.PORTFOLIO,
+  [PATHS.CONTACT]: TITLES.CONTACT,
 }
 
 export default function Pagination({
@@ -42,7 +42,7 @@ export default function Pagination({
             variant="outlined"
             startIcon={<ChevronLeftIcon />}
           >
-            {titlesMap[prevTo]}
+            {pathTitles[prevTo]}
           </Button>
         </Grid>
       )}
@@ -56,7 +56,7 @@ export default function Pagination({
             variant="outlined"
             endIcon={<ChevronRightIcon />}
           >
-            {titlesMap[nextTo]}
+            {pathTitles[nextTo]}
           </Button>
         </Grid>
       )}

@@ -1,4 +1,4 @@
-import {Color} from './theme'
+import {COLORS} from './theme'
 
 export default [
   {
@@ -25,7 +25,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: Color.TEXT,
+        color: COLORS.TEXT,
       },
     ],
   },
@@ -43,7 +43,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: Color.SECOND,
+        color: COLORS.SECOND,
       },
       {
         visibility: 'on',
@@ -76,7 +76,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: Color.TEXT,
+        color: COLORS.TEXT,
       },
       {
         visibility: 'on',
@@ -112,7 +112,7 @@ export default [
     elementType: 'labels.text.stroke',
     stylers: [
       {
-        color: Color.GREEN,
+        color: COLORS.GREEN,
       },
       {
         visibility: 'on',
@@ -144,7 +144,7 @@ export default [
     elementType: 'geometry',
     stylers: [
       {
-        color: Color.TEXT,
+        color: COLORS.TEXT,
       },
     ],
   },
@@ -195,7 +195,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: Color.GREEN,
+        color: COLORS.GREEN,
       },
     ],
   },
@@ -231,7 +231,7 @@ export default [
     elementType: 'geometry.fill',
     stylers: [
       {
-        color: Color.GREEN,
+        color: COLORS.GREEN,
       },
       {
         visibility: 'on',
@@ -243,7 +243,7 @@ export default [
     elementType: 'geometry.stroke',
     stylers: [
       {
-        color: Color.GREEN,
+        color: COLORS.GREEN,
       },
       {
         visibility: 'on',
@@ -273,7 +273,7 @@ export default [
     elementType: 'labels.text.stroke',
     stylers: [
       {
-        color: Color.GREEN,
+        color: COLORS.GREEN,
       },
       {
         visibility: 'on',

@@ -6,12 +6,12 @@ import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Greeting.scss'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
-import {Title, Path} from '../../utils/enums'
+import {TITLES, PATHS} from '../../utils/data'
 
 export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
-      <h1 className="VisuallyHidden">{Title.HOME}</h1>
+      <h1 className="VisuallyHidden">{TITLES.HOME}</h1>
       <p className="Greeting-Title Title">
         <b>
           Привет!
@@ -34,22 +34,22 @@ export default function Greeting(): JSX.Element {
         <Button
           className="Button Button_color_blue"
           component={Link}
-          to={Path.PORTFOLIO}
+          to={PATHS.PORTFOLIO}
           variant="contained"
           size="large"
           endIcon={<WebIcon />}
         >
-          {Title.PORTFOLIO}
+          {TITLES.PORTFOLIO}
         </Button>
         <Button
           className="Button Button_color_green"
           component={Link}
-          to={Path.CONTACT}
+          to={PATHS.CONTACT}
           variant="contained"
           size="large"
           endIcon={<MailIcon />}
         >
-          {Title.CONTACT}
+          {TITLES.CONTACT}
         </Button>
       </div>
     </section>

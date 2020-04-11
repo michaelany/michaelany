@@ -4,7 +4,7 @@ import Sections from '../_common/Sections'
 import Pagination from '../_common/Pagination'
 import Work from './Work'
 import Stepper from './Stepper'
-import {Path} from '../../utils/enums'
+import {PATHS} from '../../utils/data'
 
 export default function Experience(): JSX.Element {
   return (
@@ -14,7 +14,7 @@ export default function Experience(): JSX.Element {
         <section className="Section Section_color_violet Section_type_pagination">
           <h2 className="VisuallyHidden">Этапы</h2>
           <Stepper />
-          <Pagination prevTo={Path.SKILLS} nextTo={Path.PORTFOLIO} />
+          <Pagination prevTo={PATHS.SKILLS} nextTo={PATHS.PORTFOLIO} />
         </section>
       }
     />

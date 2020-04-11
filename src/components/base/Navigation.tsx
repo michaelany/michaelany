@@ -11,21 +11,22 @@ import WebIcon from '@material-ui/icons/WebRounded'
 import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
-import {Path, Title} from '../../utils/enums'
+import {PATHS, TITLES} from '../../utils/data'
+import {Path} from '../../utils/types'
 
 interface INavLink {
-  title: Title
+  title: string
   to: Path
   Icon: typeof SvgIcon
 }
 
 const navLinks: INavLink[] = [
-  {title: Title.HOME, to: Path.HOME, Icon: HomeIcon},
-  {title: Title.ABOUT, to: Path.ABOUT, Icon: PersonIcon},
-  {title: Title.SKILLS, to: Path.SKILLS, Icon: SchoolIcon},
-  {title: Title.EXPERIENCE, to: Path.EXPERIENCE, Icon: WorkIcon},
-  {title: Title.PORTFOLIO, to: Path.PORTFOLIO, Icon: WebIcon},
-  {title: Title.CONTACT, to: Path.CONTACT, Icon: MailIcon},
+  {title: TITLES.HOME, to: PATHS.HOME, Icon: HomeIcon},
+  {title: TITLES.ABOUT, to: PATHS.ABOUT, Icon: PersonIcon},
+  {title: TITLES.SKILLS, to: PATHS.SKILLS, Icon: SchoolIcon},
+  {title: TITLES.EXPERIENCE, to: PATHS.EXPERIENCE, Icon: WorkIcon},
+  {title: TITLES.PORTFOLIO, to: PATHS.PORTFOLIO, Icon: WebIcon},
+  {title: TITLES.CONTACT, to: PATHS.CONTACT, Icon: MailIcon},
 ]
 
 export default function Navigation(): JSX.Element {

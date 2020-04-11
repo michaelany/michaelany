@@ -16,17 +16,42 @@ import {ReactComponent as VKIcon} from '../assets/icons/vk.svg'
 import {ReactComponent as FacebookIcon} from '../assets/icons/facebook.svg'
 import {ReactComponent as TelegramIcon} from '../assets/icons/telegram.svg'
 import {ReactComponent as SkypeIcon} from '../assets/icons/skype.svg'
-import {Company} from './enums'
-import {ISocialLink, IMap, ICompany} from './types'
+import {Path, ProjectType, ISocialLink, IMap, ICompany} from './types'
 
 interface IBlankLinkProps {
   target: string
   rel: string
 }
 
+export const PATHS: IMap<Path> = {
+  HOME: '/',
+  ABOUT: '/about',
+  SKILLS: '/skills',
+  EXPERIENCE: '/experience',
+  PORTFOLIO: '/portfolio',
+  CONTACT: '/contact',
+}
+
+export const TITLES: IMap<string> = {
+  HOME: 'Главная',
+  ABOUT: 'Обо мне',
+  SKILLS: 'Навыки',
+  EXPERIENCE: 'Опыт',
+  PORTFOLIO: 'Портфолио',
+  CONTACT: 'Контакты',
+}
+
 export const BLANK_LINK_PROPS: IBlankLinkProps = {
   target: '_blank',
   rel: 'noopener noreferrer',
+}
+
+export const COMPANY_TITLES: IMap<string> = {
+  MA: 'Michael Ananiev',
+  MVIDEO: 'М.Видео',
+  EVERPOINT: 'Эверпоинт',
+  SEVEN_GLYPHS: '7 glyphs Ltd.',
+  TSFTD: 'ТехноСофт Диджитал',
 }
 
 export const CONTACT_LINKS: IMap<ISocialLink> = {
@@ -41,7 +66,7 @@ export const CONTACT_LINKS: IMap<ISocialLink> = {
     Icon: LinkedInIcon,
   },
   SEVEN_GLYPHS: {
-    title: `${Company.SEVEN_GLYPHS} Team`,
+    title: `${COMPANY_TITLES.SEVEN_GLYPHS} Team`,
     href: 'https://7glyphs.com/agency/team',
     Icon: SevenGlyphsIcon,
   },
@@ -70,28 +95,97 @@ export const CONTACT_LINKS: IMap<ISocialLink> = {
 
 export const COMPANIES: IMap<ICompany> = {
   MA: {
-    title: Company.MA,
+    title: COMPANY_TITLES.MA,
     logo: maImg,
     logo2x: maImg2x,
   },
   TSFTD: {
-    title: Company.TSFTD,
+    title: COMPANY_TITLES.TSFTD,
     logo: tsftdImg,
     logo2x: tsftdImg2x,
   },
   SEVEN_GLYPHS: {
-    title: Company.SEVEN_GLYPHS,
+    title: COMPANY_TITLES.SEVEN_GLYPHS,
     logo: sevenGlyphsImg,
     logo2x: sevenGlyphsImg2x,
   },
   EVERPOINT: {
-    title: Company.EVERPOINT,
+    title: COMPANY_TITLES.EVERPOINT,
     logo: everpointImg,
     logo2x: everpointImg2x,
   },
   MVIDEO: {
-    title: Company.MVIDEO,
+    title: COMPANY_TITLES.MVIDEO,
     logo: mvideoImg,
     logo2x: mvideoImg2x,
   },
+}
+
+export const TECHNOLOGY_TITLES: IMap<string> = {
+  JS: 'JavaScript',
+  TS: 'TypeScript',
+  REACT: 'React',
+  REDUX: 'Redux',
+  MOBX: 'MobX',
+  PREACT: 'Preact',
+  VUE: 'Vue.js',
+  SVELTE: 'Svelte',
+  APOLLO: 'Apollo Client',
+  JQUERY: 'jQuery',
+  HTML: 'HTML',
+  SVG: 'SVG',
+  JSX: 'JSX',
+  PUG: 'Pug',
+  HANDLEBARS: 'Handlebars',
+  MARKDOWN: 'Markdown',
+  BLADE: 'Blade',
+  CSS: 'CSS',
+  BEM: 'BEM',
+  SASS: 'Sass',
+  MUI: 'Material-UI',
+  MODULES: 'CSS Modules',
+  STYLED: 'styled-components',
+  REACTSTRAP: 'reactstrap',
+  ANT: 'Ant Design',
+  MATERIALIZE: 'Materialize',
+  BOOTSTRAP: 'Bootstrap',
+  SEMANTIC: 'Semantic UI',
+  EMAILS: 'Foundation for Emails',
+  NPM: 'NPM',
+  YARN: 'Yarn',
+  WEBPACK: 'webpack',
+  GULP: 'Gulp',
+  PARCEL: 'Parcel',
+  CRA: 'Create React App',
+  GATSBY: 'Gatsby',
+  NEXT: 'Next.js',
+  NUXT: 'Nuxt.js',
+  BABEL: 'Babel',
+  PRETTIER: 'Prettier',
+  ESLINT: 'ESLint',
+  STORYBOOK: 'Storybook',
+  BIT: 'Bit',
+  JEST: 'Jest',
+  VSCODE: 'Visual Studio Code',
+  ITERM: 'iTerm2',
+  GIT: 'Git',
+  DEVTOOLS: 'Chrome DevTools',
+  ZEPLIN: 'Zeplin',
+  SKETCH: 'Sketch',
+  FIGMA: 'Figma',
+  PHOTOSHOP: 'Photoshop',
+  OPTIM: 'ImageOptim',
+  MAC: 'macOS Catalina',
+  NODE: 'Node.js',
+  MONGO: 'MongoDB',
+  MYSQL: 'MySQL',
+  PHP: 'PHP',
+  LARAVEL: 'Laravel',
+}
+
+export const PROJECT_TYPES: IMap<ProjectType> = {
+  APP: 'app',
+  SITE: 'site',
+  ADMIN: 'admin',
+  LANDING: 'landing',
 }

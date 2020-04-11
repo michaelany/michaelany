@@ -5,8 +5,7 @@ import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
 import ContactForm from './ContactForm'
 import Map from './Map'
-import {CONTACT_LINKS} from '../../utils/data'
-import {Path, Title} from '../../utils/enums'
+import {PATHS, TITLES, CONTACT_LINKS} from '../../utils/data'
 import {ISocialLink} from '../../utils/types'
 
 const links: ISocialLink[] = [
@@ -23,7 +22,7 @@ export default function Contact(): JSX.Element {
       firstSection={
         <section className="Section Section_type_pagination">
           <div>
-            <h1 className="Title Title_color_white">{Title.CONTACT}</h1>
+            <h1 className="Title Title_color_white">{TITLES.CONTACT}</h1>
             <p className="MainText MainText_light">
               Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
               на{' '}
@@ -35,7 +34,7 @@ export default function Contact(): JSX.Element {
             <ContactForm />
           </div>
           <SocialLinks links={links} />
-          <Pagination prevTo={Path.PORTFOLIO} />
+          <Pagination prevTo={PATHS.PORTFOLIO} />
         </section>
       }
       secondSection={

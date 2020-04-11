@@ -6,13 +6,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
 import Features from './Features'
-import {Title} from '../../utils/enums'
 import {Color, IFeature} from '../../utils/types'
-import {Duration} from '../../styles/theme'
+import {DURATIONS} from '../../styles/theme'
 
 interface IInfoProps {
   color: Color
-  title: Title
+  title: string
   text: string
   features: IFeature[]
   extraContent: string | JSX.Element
@@ -36,7 +35,7 @@ export default function Info({
         <b>{text}</b>
       </p>
       <Features items={features} />
-      <Collapse unmountOnExit in={open} timeout={Duration.LONGER}>
+      <Collapse unmountOnExit in={open} timeout={DURATIONS.LONGER}>
         <div className="Info-Extra">{extraContent}</div>
       </Collapse>
       <div className="Actions Actions_center">

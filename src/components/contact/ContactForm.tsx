@@ -17,28 +17,28 @@ import SendIcon from '@material-ui/icons/SendRounded'
 import './ContactForm.scss'
 import {IMap} from '../../utils/types'
 
-enum Field {
-  Name = 'name',
-  Email = 'email',
-  Message = 'message',
-}
-
 const emailRegExp: RegExp = /.+@.+\..+/i
 
+const fields: IMap<string> = {
+  name: 'name',
+  email: 'email',
+  message: 'message',
+}
+
 const initialValues: IMap<string> = {
-  [Field.Name]: '',
-  [Field.Email]: '',
-  [Field.Message]: '',
+  [fields.name]: '',
+  [fields.email]: '',
+  [fields.message]: '',
 }
 
 const initialErrors: IMap<boolean> = {
-  [Field.Name]: false,
-  [Field.Email]: false,
-  [Field.Message]: false,
+  [fields.name]: false,
+  [fields.email]: false,
+  [fields.message]: false,
 }
 
 const inputProps: IMap<InputProps> = {
-  [Field.Name]: {
+  [fields.name]: {
     disableUnderline: true,
     endAdornment: (
       <InputAdornment position="end">
@@ -46,7 +46,7 @@ const inputProps: IMap<InputProps> = {
       </InputAdornment>
     ),
   },
-  [Field.Email]: {
+  [fields.email]: {
     disableUnderline: true,
     endAdornment: (
       <InputAdornment position="end">
@@ -54,7 +54,7 @@ const inputProps: IMap<InputProps> = {
       </InputAdornment>
     ),
   },
-  [Field.Message]: {
+  [fields.message]: {
     disableUnderline: true,
   },
 }
@@ -63,9 +63,9 @@ export default function ContactForm(): JSX.Element {
   const [values, changeValues] = useState<IMap<string>>(initialValues)
   const [errors, setErrors] = useState<IMap<boolean>>(initialErrors)
   const fieldElements: IMap<MutableRefObject<HTMLInputElement>> = {
-    [Field.Name]: useRef<HTMLInputElement>(null!),
-    [Field.Email]: useRef<HTMLInputElement>(null!),
-    [Field.Message]: useRef<HTMLInputElement>(null!),
+    [fields.name]: useRef<HTMLInputElement>(null!),
+    [fields.email]: useRef<HTMLInputElement>(null!),
+    [fields.message]: useRef<HTMLInputElement>(null!),
   }
 
   const handleSubmit = (e: SyntheticEvent): void => {
@@ -73,9 +73,9 @@ export default function ContactForm(): JSX.Element {
     const newErrors: IMap<boolean> = {}
     Object.keys(values).forEach((name: string): void => {
       if (
-        (name === Field.Email &&
+        (name === fields.email &&
           (!values[name].trim() || !emailRegExp.test(values[name]))) ||
-        (name !== Field.Email && !values[name].trim())
+        (name !== fields.email && !values[name].trim())
       ) {
         newErrors[name] = true
       }
@@ -102,8 +102,8 @@ export default function ContactForm(): JSX.Element {
       [name]: value,
     })
     if (
-      (name === Field.Email && value.trim() && emailRegExp.test(value)) ||
-      (name !== Field.Email && value.trim() && errors[name])
+      (name === fields.email && value.trim() && emailRegExp.test(value)) ||
+      (name !== fields.email && value.trim() && errors[name])
     ) {
       setErrors({
         ...errors,
@@ -118,11 +118,11 @@ export default function ContactForm(): JSX.Element {
         <Grid item xs={6}>
           <TextField
             fullWidth
-            name={Field.Name}
+            name={fields.name}
             label="Имя"
             variant="filled"
-            InputProps={inputProps[Field.Name]}
-            inputProps={{ref: fieldElements[Field.Name]}}
+            InputProps={inputProps[fields.name]}
+            inputProps={{ref: fieldElements[fields.name]}}
             value={values.name}
             error={errors.name}
             onChange={handleChange}
@@ -131,12 +131,12 @@ export default function ContactForm(): JSX.Element {
         <Grid item xs={6}>
           <TextField
             fullWidth
-            name={Field.Email}
+            name={fields.email}
             type="email"
             label="Email"
             variant="filled"
-            InputProps={inputProps[Field.Email]}
-            inputProps={{ref: fieldElements[Field.Email]}}
+            InputProps={inputProps[fields.email]}
+            inputProps={{ref: fieldElements[fields.email]}}
             value={values.email}
             error={errors.email}
             onChange={handleChange}
@@ -146,12 +146,12 @@ export default function ContactForm(): JSX.Element {
           <TextField
             fullWidth
             multiline
-            name={Field.Message}
+            name={fields.message}
             label="Сообщение"
             rows="5"
             variant="filled"
-            InputProps={inputProps[Field.Message]}
-            inputProps={{ref: fieldElements[Field.Message]}}
+            InputProps={inputProps[fields.message]}
+            inputProps={{ref: fieldElements[fields.message]}}
             value={values.message}
             error={errors.message}
             onChange={handleChange}

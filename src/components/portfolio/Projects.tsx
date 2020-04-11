@@ -5,9 +5,8 @@ import Tab from '@material-ui/core/Tab'
 
 import './Projects.scss'
 import Project from './Project'
-import {COMPANIES} from '../../utils/data'
-import {ProjectType} from '../../utils/enums'
-import {IMap, IProject} from '../../utils/types'
+import {COMPANIES, PROJECT_TYPES} from '../../utils/data'
+import {ProjectType, IMap, IProject} from '../../utils/types'
 
 type Filter = 'all' | ProjectType
 
@@ -15,25 +14,25 @@ const FILTER_ALL = 'all'
 
 const filters: Filter[] = [
   FILTER_ALL,
-  ProjectType.APP,
-  ProjectType.SITE,
-  ProjectType.ADMIN,
-  ProjectType.LANDING,
+  PROJECT_TYPES.APP,
+  PROJECT_TYPES.SITE,
+  PROJECT_TYPES.ADMIN,
+  PROJECT_TYPES.LANDING,
 ]
 
-const filterLabelsMap: IMap<string> = {
+const filterLabels: IMap<string> = {
   all: 'Все',
-  [ProjectType.APP]: 'Приложения',
-  [ProjectType.SITE]: 'Сайты',
-  [ProjectType.ADMIN]: 'Админки',
-  [ProjectType.LANDING]: 'Лендинги',
+  [PROJECT_TYPES.APP]: 'Приложения',
+  [PROJECT_TYPES.SITE]: 'Сайты',
+  [PROJECT_TYPES.ADMIN]: 'Админки',
+  [PROJECT_TYPES.LANDING]: 'Лендинги',
 }
 
 const projects: IProject[] = [
   {
     title: 'Michael Ananiev',
     name: 'ma',
-    type: ProjectType.SITE,
+    type: PROJECT_TYPES.SITE,
     color: 'green',
     company: COMPANIES.MA,
     href: '',
@@ -41,7 +40,7 @@ const projects: IProject[] = [
   {
     title: 'АРМА ЕМБП',
     name: 'embp',
-    type: ProjectType.ADMIN,
+    type: PROJECT_TYPES.ADMIN,
     color: 'blue',
     company: COMPANIES.TSFTD,
     href: '',
@@ -49,7 +48,7 @@ const projects: IProject[] = [
   {
     title: 'Proximal Coffee',
     name: 'proximal',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'yellow',
     company: COMPANIES.SEVEN_GLYPHS,
     href: '',
@@ -57,7 +56,7 @@ const projects: IProject[] = [
   {
     title: 'Ted Manson Foundation',
     name: 'tmf',
-    type: ProjectType.SITE,
+    type: PROJECT_TYPES.SITE,
     color: 'blue',
     company: COMPANIES.SEVEN_GLYPHS,
     href: '',
@@ -65,7 +64,7 @@ const projects: IProject[] = [
   {
     title: '7 glyphs Lite',
     name: 'lite',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'grass',
     company: COMPANIES.SEVEN_GLYPHS,
     href: '',
@@ -73,7 +72,7 @@ const projects: IProject[] = [
   {
     title: 'Foodprint Portal',
     name: 'foodportal',
-    type: ProjectType.ADMIN,
+    type: PROJECT_TYPES.ADMIN,
     color: 'default',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
@@ -81,7 +80,7 @@ const projects: IProject[] = [
   {
     title: 'Foodprint',
     name: 'food',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'violet',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
@@ -89,7 +88,7 @@ const projects: IProject[] = [
   {
     title: 'Sales Digital System',
     name: 'sds',
-    type: ProjectType.APP,
+    type: PROJECT_TYPES.APP,
     color: 'grass',
     company: COMPANIES.TSFTD,
     href: '',
@@ -97,7 +96,7 @@ const projects: IProject[] = [
   {
     title: 'Melissa Chalmers',
     name: 'melissa',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'green',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
@@ -105,7 +104,7 @@ const projects: IProject[] = [
   {
     title: 'StrongHer',
     name: 'strong',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'red',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/strongher',
@@ -113,7 +112,7 @@ const projects: IProject[] = [
   {
     title: 'Rogue Travel',
     name: 'rogue',
-    type: ProjectType.SITE,
+    type: PROJECT_TYPES.SITE,
     color: 'red',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
@@ -121,7 +120,7 @@ const projects: IProject[] = [
   {
     title: 'Quarry Trucks',
     name: 'trucks',
-    type: ProjectType.APP,
+    type: PROJECT_TYPES.APP,
     color: 'default',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
@@ -129,7 +128,7 @@ const projects: IProject[] = [
   {
     title: 'Service Packages',
     name: 'services',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'grass',
     company: COMPANIES.SEVEN_GLYPHS,
     href: '',
@@ -137,7 +136,7 @@ const projects: IProject[] = [
   {
     title: 'My Love',
     name: 'love',
-    type: ProjectType.APP,
+    type: PROJECT_TYPES.APP,
     color: 'red',
     company: COMPANIES.MA,
     href: '',
@@ -145,7 +144,7 @@ const projects: IProject[] = [
   {
     title: 'FCDC Dashboard',
     name: 'fcdc',
-    type: ProjectType.ADMIN,
+    type: PROJECT_TYPES.ADMIN,
     color: 'default',
     company: COMPANIES.SEVEN_GLYPHS,
     href: '',
@@ -153,7 +152,7 @@ const projects: IProject[] = [
   {
     title: '12 Saffron',
     name: '12saffron',
-    type: ProjectType.LANDING,
+    type: PROJECT_TYPES.LANDING,
     color: 'yellow',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/12-saffron',
@@ -161,7 +160,7 @@ const projects: IProject[] = [
   {
     title: 'Whip Around',
     name: 'whiparound',
-    type: ProjectType.SITE,
+    type: PROJECT_TYPES.SITE,
     color: 'green',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
@@ -169,7 +168,7 @@ const projects: IProject[] = [
   {
     title: 'LazyAz Dashboard',
     name: 'lazyazdashboard',
-    type: ProjectType.ADMIN,
+    type: PROJECT_TYPES.ADMIN,
     color: 'default',
     company: COMPANIES.SEVEN_GLYPHS,
     href: '',
@@ -177,7 +176,7 @@ const projects: IProject[] = [
   {
     title: 'LazyAz',
     name: 'lazyaz',
-    type: ProjectType.SITE,
+    type: PROJECT_TYPES.SITE,
     color: 'red',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
@@ -185,7 +184,7 @@ const projects: IProject[] = [
   {
     title: 'Сайт 7 glyphs',
     name: '7glyphs',
-    type: ProjectType.SITE,
+    type: PROJECT_TYPES.SITE,
     color: 'grass',
     company: COMPANIES.SEVEN_GLYPHS,
     href: 'https://7glyphs.com',
@@ -193,7 +192,7 @@ const projects: IProject[] = [
   {
     title: 'Бизнес-навигатор МСП',
     name: 'msp',
-    type: ProjectType.APP,
+    type: PROJECT_TYPES.APP,
     color: 'blue',
     company: COMPANIES.EVERPOINT,
     href: 'https://www.everpoint.ru/geomonitoring',
@@ -206,23 +205,23 @@ const getFilteredProjects = (filter: Filter): IProject[] =>
     : projects.filter((project: IProject): boolean => project.type === filter)
 
 export default function Projects(): JSX.Element {
-  const [value, setValue] = useState<Filter>(FILTER_ALL)
+  const [filter, changeFilter] = useState<Filter>(FILTER_ALL)
 
   const handleChange = (e: ChangeEvent<object>, value: ProjectType): void => {
-    setValue(value)
+    changeFilter(value)
   }
 
   return (
     <div className="Projects">
-      <Tabs className="Projects-Filters" value={value} onChange={handleChange}>
+      <Tabs className="Projects-Filters" value={filter} onChange={handleChange}>
         {filters.map(
           (type: Filter): JSX.Element => (
-            <Tab key={type} value={type} label={filterLabelsMap[type]} />
+            <Tab key={type} value={type} label={filterLabels[type]} />
           )
         )}
       </Tabs>
       <Grid container component="ul" spacing={2}>
-        {getFilteredProjects(value).map(
+        {getFilteredProjects(filter).map(
           (project: IProject): JSX.Element => (
             <Project key={project.name} {...project} />
           )

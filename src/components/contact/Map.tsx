@@ -4,7 +4,7 @@ import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 import markerIcon from '../../assets/icons/marker.svg'
-import {Path} from '../../utils/enums'
+import {PATHS} from '../../utils/data'
 import mapTheme from '../../styles/map'
 
 interface IInitialCenter {
@@ -27,7 +27,7 @@ function Map(): JSX.Element {
   const history = useHistory()
 
   const handleMarkerClick = (): void => {
-    history.push(Path.ABOUT)
+    history.push(PATHS.ABOUT)
   }
 
   return (

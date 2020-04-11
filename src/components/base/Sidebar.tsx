@@ -3,12 +3,12 @@ import {Link} from 'react-router-dom'
 
 import './Sidebar.scss'
 import Navigation from './Navigation'
-import {Path} from '../../utils/enums'
+import {PATHS} from '../../utils/data'
 
 function Sidebar(): JSX.Element {
   return (
     <aside className="Sidebar">
-      <Link className="Sidebar-Logo" to={Path.HOME}>
+      <Link className="Sidebar-Logo" to={PATHS.HOME}>
         MA
       </Link>
       <Navigation />

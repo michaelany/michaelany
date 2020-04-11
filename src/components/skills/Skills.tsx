@@ -15,7 +15,7 @@ import ExtensionIcon from '@material-ui/icons/ExtensionTwoTone'
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
 import Technologies from './Technologies'
-import {Title} from '../../utils/enums'
+import {TITLES} from '../../utils/data'
 import {IFeature} from '../../utils/types'
 
 const text: string =
@@ -63,7 +63,7 @@ export default function Skills(): JSX.Element {
       firstSection={
         <Info
           color="blue"
-          title={Title.SKILLS}
+          title={TITLES.SKILLS}
           text={text}
           features={features}
           extraContent={extraContent}

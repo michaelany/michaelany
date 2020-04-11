@@ -17,7 +17,7 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenterTwoTone'
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
 import Social from './Social'
-import {Title} from '../../utils/enums'
+import {TITLES} from '../../utils/data'
 import {IFeature} from '../../utils/types'
 
 const text: string =
@@ -58,7 +58,7 @@ export default function About(): JSX.Element {
       firstSection={
         <Info
           color="green"
-          title={Title.ABOUT}
+          title={TITLES.ABOUT}
           text={text}
           features={features}
           extraContent={extraContent}
