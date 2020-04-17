@@ -4,210 +4,41 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
 import './Projects.scss'
-import Project from './Project'
-import {COMPANIES, PROJECT_TYPES} from '../../utils/data'
-import {ProjectType, IMap, IProject} from '../../utils/types'
+import ProjectLink from './ProjectLink'
+import {PROJECT_TYPES} from '../../utils/constants'
+import {Map, Project, ProjectType} from '../../utils/types'
+import {PROJECT_TYPE_LABELS} from '../../data/common'
+import PROJECTS from '../../data/projects'
 
 type Filter = 'all' | ProjectType
 
-const FILTER_ALL = 'all'
+const filterAll: Filter = 'all'
 
 const filters: Filter[] = [
-  FILTER_ALL,
-  PROJECT_TYPES.APP,
-  PROJECT_TYPES.SITE,
-  PROJECT_TYPES.ADMIN,
+  filterAll,
   PROJECT_TYPES.LANDING,
+  PROJECT_TYPES.SITE,
+  PROJECT_TYPES.APP,
+  PROJECT_TYPES.ADMIN,
 ]
 
-const filterLabels: IMap<string> = {
-  all: 'Все',
-  [PROJECT_TYPES.APP]: 'Приложения',
-  [PROJECT_TYPES.SITE]: 'Сайты',
-  [PROJECT_TYPES.ADMIN]: 'Админки',
-  [PROJECT_TYPES.LANDING]: 'Лендинги',
+const filterLabels: Map<string> = {
+  [filterAll]: 'Все',
+  [PROJECT_TYPES.LANDING]: PROJECT_TYPE_LABELS.LANDING,
+  [PROJECT_TYPES.SITE]: PROJECT_TYPE_LABELS.SITE,
+  [PROJECT_TYPES.APP]: PROJECT_TYPE_LABELS.APP,
+  [PROJECT_TYPES.ADMIN]: PROJECT_TYPE_LABELS.ADMIN,
 }
 
-const projects: IProject[] = [
-  {
-    title: 'Michael Ananiev',
-    name: 'ma',
-    type: PROJECT_TYPES.SITE,
-    color: 'green',
-    company: COMPANIES.MA,
-    href: '',
-  },
-  {
-    title: 'АРМА ЕМБП',
-    name: 'embp',
-    type: PROJECT_TYPES.ADMIN,
-    color: 'blue',
-    company: COMPANIES.TSFTD,
-    href: '',
-  },
-  {
-    title: 'Proximal Coffee',
-    name: 'proximal',
-    type: PROJECT_TYPES.LANDING,
-    color: 'yellow',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: '',
-  },
-  {
-    title: 'Ted Manson Foundation',
-    name: 'tmf',
-    type: PROJECT_TYPES.SITE,
-    color: 'blue',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: '',
-  },
-  {
-    title: '7 glyphs Lite',
-    name: 'lite',
-    type: PROJECT_TYPES.LANDING,
-    color: 'grass',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: '',
-  },
-  {
-    title: 'Foodprint Portal',
-    name: 'foodportal',
-    type: PROJECT_TYPES.ADMIN,
-    color: 'default',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/foodprint',
-  },
-  {
-    title: 'Foodprint',
-    name: 'food',
-    type: PROJECT_TYPES.LANDING,
-    color: 'violet',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/foodprint',
-  },
-  {
-    title: 'Sales Digital System',
-    name: 'sds',
-    type: PROJECT_TYPES.APP,
-    color: 'grass',
-    company: COMPANIES.TSFTD,
-    href: '',
-  },
-  {
-    title: 'Melissa Chalmers',
-    name: 'melissa',
-    type: PROJECT_TYPES.LANDING,
-    color: 'green',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
-  },
-  {
-    title: 'StrongHer',
-    name: 'strong',
-    type: PROJECT_TYPES.LANDING,
-    color: 'red',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/strongher',
-  },
-  {
-    title: 'Rogue Travel',
-    name: 'rogue',
-    type: PROJECT_TYPES.SITE,
-    color: 'red',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
-  },
-  {
-    title: 'Quarry Trucks',
-    name: 'trucks',
-    type: PROJECT_TYPES.APP,
-    color: 'default',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
-  },
-  {
-    title: 'Service Packages',
-    name: 'services',
-    type: PROJECT_TYPES.LANDING,
-    color: 'grass',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: '',
-  },
-  {
-    title: 'My Love',
-    name: 'love',
-    type: PROJECT_TYPES.APP,
-    color: 'red',
-    company: COMPANIES.MA,
-    href: '',
-  },
-  {
-    title: 'FCDC Dashboard',
-    name: 'fcdc',
-    type: PROJECT_TYPES.ADMIN,
-    color: 'default',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: '',
-  },
-  {
-    title: '12 Saffron',
-    name: '12saffron',
-    type: PROJECT_TYPES.LANDING,
-    color: 'yellow',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/12-saffron',
-  },
-  {
-    title: 'Whip Around',
-    name: 'whiparound',
-    type: PROJECT_TYPES.SITE,
-    color: 'green',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/whip-around',
-  },
-  {
-    title: 'LazyAz Dashboard',
-    name: 'lazyazdashboard',
-    type: PROJECT_TYPES.ADMIN,
-    color: 'default',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: '',
-  },
-  {
-    title: 'LazyAz',
-    name: 'lazyaz',
-    type: PROJECT_TYPES.SITE,
-    color: 'red',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com/portfolio/projects/lazyaz',
-  },
-  {
-    title: 'Сайт 7 glyphs',
-    name: '7glyphs',
-    type: PROJECT_TYPES.SITE,
-    color: 'grass',
-    company: COMPANIES.SEVEN_GLYPHS,
-    href: 'https://7glyphs.com',
-  },
-  {
-    title: 'Бизнес-навигатор МСП',
-    name: 'msp',
-    type: PROJECT_TYPES.APP,
-    color: 'blue',
-    company: COMPANIES.EVERPOINT,
-    href: 'https://www.everpoint.ru/geomonitoring',
-  },
-]
-
-const getFilteredProjects = (filter: Filter): IProject[] =>
-  filter === FILTER_ALL
-    ? projects
-    : projects.filter((project: IProject): boolean => project.type === filter)
+const getFilteredProjects = (filter: string): Project[] =>
+  filter === filterAll
+    ? PROJECTS
+    : PROJECTS.filter((project: Project): boolean => project.type === filter)
 
 export default function Projects(): JSX.Element {
-  const [filter, changeFilter] = useState<Filter>(FILTER_ALL)
+  const [filter, changeFilter] = useState<string>(filterAll)
 
-  const handleChange = (e: ChangeEvent<object>, value: ProjectType): void => {
+  const handleChange = (e: ChangeEvent<object>, value: string): void => {
     changeFilter(value)
   }
 
@@ -215,15 +46,23 @@ export default function Projects(): JSX.Element {
     <div className="Projects">
       <Tabs className="Projects-Filters" value={filter} onChange={handleChange}>
         {filters.map(
-          (type: Filter): JSX.Element => (
+          (type: string): JSX.Element => (
             <Tab key={type} value={type} label={filterLabels[type]} />
           )
         )}
       </Tabs>
-      <Grid container component="ul" spacing={2}>
+      <Grid container component="ul" spacing={3}>
         {getFilteredProjects(filter).map(
-          (project: IProject): JSX.Element => (
-            <Project key={project.name} {...project} />
+          ({name, title, type, color, company, path}: Project): JSX.Element => (
+            <ProjectLink
+              key={name}
+              title={title}
+              name={name}
+              type={type}
+              color={color}
+              company={company}
+              path={path}
+            />
           )
         )}
       </Grid>

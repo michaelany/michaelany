@@ -6,16 +6,17 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
 import './Pagination.scss'
-import {PATHS, TITLES} from '../../utils/data'
-import {Path, IMap} from '../../utils/types'
+import {PATHS} from '../../utils/constants'
+import {Path, Map} from '../../utils/types'
+import {TITLES} from '../../data/common'
 
-interface IPaginationProps {
+interface PaginationProps {
   wide?: boolean
   prevTo?: Path
   nextTo?: Path
 }
 
-const pathTitles: IMap<string> = {
+const pathTitles: Map<string> = {
   [PATHS.HOME]: TITLES.HOME,
   [PATHS.ABOUT]: TITLES.ABOUT,
   [PATHS.SKILLS]: TITLES.SKILLS,
@@ -28,7 +29,7 @@ export default function Pagination({
   wide,
   prevTo,
   nextTo,
-}: IPaginationProps): JSX.Element {
+}: PaginationProps): JSX.Element {
   const xs = wide ? 3 : 6
   return (
     <Grid container className="Pagination Actions" spacing={2} justify="center">

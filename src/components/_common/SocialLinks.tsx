@@ -4,22 +4,22 @@ import Fab from '@material-ui/core/Fab'
 import Tooltip from '@material-ui/core/Tooltip'
 
 import './SocialLinks.scss'
-import {BLANK_LINK_PROPS} from '../../utils/data'
-import {ISocialLink} from '../../utils/types'
+import {BLANK_LINK_PROPS} from '../../utils/constants'
+import {SocialLink} from '../../utils/types'
 
-interface ISocialLinksProps {
-  links: ISocialLink[]
+interface SocialLinksProps {
+  links: SocialLink[]
   about?: boolean
 }
 
 export default function SocialLinks({
   links,
   about,
-}: ISocialLinksProps): JSX.Element {
+}: SocialLinksProps): JSX.Element {
   return (
     <ul className={cn('SocialLinks', {SocialLinks_about: about})}>
       {links.map(
-        ({title, href, Icon}: ISocialLink, index: number): JSX.Element => (
+        ({title, href, Icon}: SocialLink, index: number): JSX.Element => (
           <li key={index} className="SocialLinks-Item">
             <Tooltip
               title={title}
@@ -34,11 +34,11 @@ export default function SocialLinks({
               <Fab
                 {...BLANK_LINK_PROPS}
                 component="a"
-                className="Button Button_color_white"
+                className={cn('Button', {Button_color_white: about})}
                 href={href}
                 aria-label={title}
               >
-                <Icon className="SocialLinks-ItemIcon" />
+                <Icon />
               </Fab>
             </Tooltip>
           </li>

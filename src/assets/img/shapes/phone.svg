@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="218px" height="462px" viewBox="0 0 218 462" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>phone</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="phone">
+            <path d="M0,162.247678 L0,145 L0,124 L0,107 L0,85 L0,64 L0,32.0058827 C0,14.3333538 14.3228613,0 31.9910061,0 L146,0 L182,0 L186.008994,0 C203.675354,0 218,14.3295218 218,32.0058827 L218,429.994117 C218,447.666646 203.677139,462 186.008994,462 L31.9910061,462 C14.3246455,462 0,447.670478 0,429.994117 L0,162.247678 Z M14.9944647,64 C13.8929523,64 13,64.9024743 13,66.0096543 L13,396.990346 C13,398.100247 13.8987528,399 14.9944647,399 L203.005535,399 C204.107048,399 205,398.097526 205,396.990346 L205,66.0096543 C205,64.8997529 204.101247,64 203.005535,64 L14.9944647,64 Z" id="Apple-iPhone-5S" fill="#EFEFEF" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#CDCDCD" x="90" y="38" width="37" height="4" rx="1"></rect>
+            <circle id="Oval" fill="#CDCDCD" cx="78" cy="40" r="3"></circle>
+            <circle id="Oval" fill="#CDCDCD" cx="108.5" cy="22.5" r="4.5"></circle>
+            <circle id="Oval" stroke="#CDCDCD" fill="#EFEFEF" cx="109" cy="429" r="16.5"></circle>
+        </g>
+    </g>
+</svg>

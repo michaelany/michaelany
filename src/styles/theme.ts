@@ -1,16 +1,41 @@
-import {IMap} from '../utils/types'
+interface Colors {
+  GREEN: string
+  BLUE: string
+  TEXT: string
+  SECOND_TEXT: string
+  DARK_RED: string
+}
+
+interface Durations {
+  SHORTEST: number
+  SHORTER: number
+  SHORT: number
+  STANDARD: number
+  MEDIUM: number
+  MEDIUM_LONG: number
+  LONG: number
+  LONGER: number
+  LONGEST: number
+  LINGERING: number
+  ALTERNATE: number
+}
+
+interface Easings {
+  IN_OUT: string
+  OUT: string
+}
 
 // $color_...
-export const COLORS: IMap<string> = {
+export const COLORS: Colors = {
   GREEN: '#31d0c9',
   BLUE: '#62a5fc',
   TEXT: '#4a4a4a',
-  SECOND: '#7b7b7b',
+  SECOND_TEXT: '#7b7b7b',
   DARK_RED: '#e07a58',
 }
 
 // $duration_...
-export const DURATIONS: IMap<number> = {
+export const DURATIONS: Durations = {
   SHORTEST: 150,
   SHORTER: 200,
   SHORT: 250,
@@ -25,7 +50,7 @@ export const DURATIONS: IMap<number> = {
 }
 
 // $easing_...
-export const EASINGS: IMap<string> = {
+export const EASINGS: Easings = {
   IN_OUT: 'cubic-bezier(0.4, 0, 0.2, 1)',
   OUT: 'cubic-bezier(0, 0, 0.2, 1)',
 }
@@ -59,7 +84,7 @@ export default {
   palette: {
     text: {
       primary: COLORS.TEXT,
-      secondary: COLORS.SECOND,
+      secondary: COLORS.SECOND_TEXT,
     },
     background: {
       default: '#fff', // $color_background

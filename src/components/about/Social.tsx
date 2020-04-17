@@ -5,13 +5,13 @@ import meImg from '../../assets/img/pictures/me.png'
 import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
-import {CONTACT_LINKS} from '../../utils/data'
-import {PATHS} from '../../utils/data'
-import {ISocialLink} from '../../utils/types'
+import {PATHS} from '../../utils/constants'
+import {SocialLink} from '../../utils/types'
+import {CONTACT_LINKS} from '../../data/common'
 
 const imgSize: number = 320
 
-const links: ISocialLink[] = [
+const links: SocialLink[] = [
   CONTACT_LINKS.GIT_HUB,
   CONTACT_LINKS.LINKED_IN,
   CONTACT_LINKS.SEVEN_GLYPHS,
@@ -22,10 +22,10 @@ const links: ISocialLink[] = [
 
 export default function Social(): JSX.Element {
   return (
-    <section className="Social Section Section_type_pagination Section_color_green">
+    <section className="Social Section Section_pagination Section_colorful">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
-        <div className="Social-Photo">
+        <figure className="Social-Photo">
           <img
             width={imgSize}
             height={imgSize}
@@ -33,7 +33,7 @@ export default function Social(): JSX.Element {
             srcSet={`${meImg2x} 2x`}
             alt="Michael Ananiev | vashstamp"
           />
-        </div>
+        </figure>
         <SocialLinks about links={links} />
       </div>
       <Pagination prevTo={PATHS.HOME} nextTo={PATHS.SKILLS} />

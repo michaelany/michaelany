@@ -6,12 +6,13 @@ import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Greeting.scss'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
-import {TITLES, PATHS} from '../../utils/data'
+import {PATHS} from '../../utils/constants'
+import {TITLES} from '../../data/common'
 
 export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
-      <h1 className="VisuallyHidden">{TITLES.HOME}</h1>
+      <h1 className="VisuallyHidden">Фронтенд разработчик Michael Ananiev</h1>
       <p className="Greeting-Title Title">
         <b>
           Привет!

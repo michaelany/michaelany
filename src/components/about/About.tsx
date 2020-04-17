@@ -10,20 +10,18 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccountTwoTone'
 import AllInclusiveIcon from '@material-ui/icons/AllInclusiveTwoTone'
 import CodeIcon from '@material-ui/icons/CodeTwoTone'
 import SquareFootIcon from '@material-ui/icons/SquareFootTwoTone'
-import BookIcon from '@material-ui/icons/BookTwoTone'
-import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltTwoTone'
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenterTwoTone'
 
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
 import Social from './Social'
-import {TITLES} from '../../utils/data'
-import {IFeature} from '../../utils/types'
+import {TITLES} from '../../data/common'
+import {Feature} from '../../utils/types'
 
 const text: string =
   'Живу и дышу фронтендом. Разрабатываю проекты любой сложности с нуля. Воплощаю в жизнь UI/UX идеи.'
 
-const features: IFeature[] = [
+const features: Feature[] = [
   {label: 'Реализовал большое количество проектов', Icon: AppsIcon},
   {
     label: 'Являюсь ведущим разработчиком и ментором',
@@ -39,12 +37,10 @@ const features: IFeature[] = [
   },
   {label: 'Организованный и автономный', Icon: BusinessCenterIcon},
   {label: 'Склонный к перфекционизму', Icon: SquareFootIcon},
-  {label: 'Дружелюбный и коммуникабельный', Icon: SentimentSatisfiedAltIcon},
   {label: 'Имею два высших образования', Icon: SchoolIcon},
   {label: 'Веду здоровый образ жизни', Icon: EcoIcon},
   {label: 'Занимаюсь спортом', Icon: DirectionsBikeIcon},
   {label: 'Люблю путешествовать', Icon: PublicIcon},
-  {label: 'Люблю читать', Icon: BookIcon},
   {label: 'Счастлив в браке', Icon: FavoriteIcon},
   {label: 'Кофеман', Icon: LocalCafeIcon},
 ]
@@ -57,7 +53,6 @@ export default function About(): JSX.Element {
     <Sections
       firstSection={
         <Info
-          color="green"
           title={TITLES.ABOUT}
           text={text}
           features={features}

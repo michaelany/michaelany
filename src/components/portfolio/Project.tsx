@@ -1,62 +1,54 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
-import ButtonBase from '@material-ui/core/ButtonBase'
+import {RouteChildrenProps} from 'react-router-dom'
 
-import './Project.scss'
-import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
-import {BLANK_LINK_PROPS, PROJECT_TYPES} from '../../utils/data'
-import {IProject as IProjectProps, IMap} from '../../utils/types'
+import Sections from '../_common/Sections'
+import Pagination from '../_common/Pagination'
+import ProjectDetails from './ProjectDetails'
+import Carousel from './Carousel'
+import {PATHS} from '../../utils/constants'
+import {Project as ProjectInterface} from '../../utils/types'
+import PROJECTS from '../../data/projects'
 
-export const projectTypeLabels: IMap<string> = {
-  [PROJECT_TYPES.APP]: 'Приложение',
-  [PROJECT_TYPES.SITE]: 'Сайт',
-  [PROJECT_TYPES.ADMIN]: 'Админка',
-  [PROJECT_TYPES.LANDING]: 'Лендинг',
+interface ProjectParams {
+  project: string
 }
 
 export default function Project({
-  title,
-  name,
-  type,
-  color,
-  company,
-  href,
-}: IProjectProps): JSX.Element {
+  match,
+}: RouteChildrenProps<ProjectParams>): JSX.Element {
+  const project: ProjectInterface = PROJECTS.find(
+    (project: ProjectInterface): boolean =>
+      project.path.slice(1) === match!.params.project
+  )!
   return (
-    <Grid
-      item
-      component="li"
-      className="Project"
-      xs={12}
-      sm={6}
-      md={4}
-      lg={3}
-      xl={2}
-    >
-      <ButtonBase
-        {...BLANK_LINK_PROPS}
-        focusRipple
-        component="a"
-        className={`Project-Link ColorInteractive ColorInteractive_color_${color}`}
-        href={href}
-      >
-        <div className="Project-Content">
-          <div className={`Project-View Project-View_name_${name}`}>
-            <DesktopSvg className="Project-Panel" />
+    <Sections
+      firstSection={
+        <ProjectDetails
+          title={project.title}
+          company={project.company}
+          description={project.description}
+          features={project.features}
+          href={project.href}
+        />
+      }
+      secondSection={
+        <section className="Section Section_pagination Section_colorful">
+          <h2 className="VisuallyHidden">Скриншоты</h2>
+          <div>
+            {project.images.desktop && (
+              <Carousel title={project.title} images={project.images.desktop} />
+            )}
+            {project.images.mobile && (
+              <Carousel
+                mobile
+                title={project.title}
+                images={project.images.mobile}
+              />
+            )}
           </div>
-        </div>
-        <div className="Project-Block">
-          <img
-            className="Project-Company"
-            height={36}
-            src={company.logo}
-            srcSet={`${company.logo2x} 2x`}
-            alt={company.title}
-          />
-          <h3 className="Project-Title">{title}</h3>
-          <p className="Project-Label">{projectTypeLabels[type]}</p>
-        </div>
-      </ButtonBase>
-    </Grid>
+          <Pagination prevTo={PATHS.PORTFOLIO} />
+        </section>
+      }
+    />
   )
 }

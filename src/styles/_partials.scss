@@ -12,17 +12,20 @@
 .Section {
   padding: 80px 10%;
   height: 100%;
-  &_type_single {
+  &_single {
     padding-left: 5%;
     padding-right: 5%;
   }
-  &_type_pagination {
+  &_pagination {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  .App_color_alternate &_colorful {
+    @include animationAlternate(alternateBackgroundColor);
+  }
   @each $key, $value in $colors-map {
-    &_color_#{$key} {
+    .App_color_#{$key} &_colorful {
       background-color: $value;
     }
   }
@@ -33,13 +36,13 @@
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 24px;
+  .App_color_white & {
+    color: white;
+  }
   @each $key, $value in $colors-map {
-    &_color_#{$key} {
+    .App_color_#{$key} & {
       color: $value;
     }
-  }
-  &_color_white {
-    color: white;
   }
 }
 
@@ -49,7 +52,7 @@
   line-height: 1.5;
   margin-bottom: 40px;
   color: $color_second-text;
-  &_light {
+  &_dark {
     color: $color_text;
   }
 }
@@ -59,8 +62,32 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
+  &_color_blue {
+    &.MuiButton-contained {
+      background-color: $color_blue;
+      @include hover {
+        background-color: $color_dark-blue;
+      }
+    }
+  }
+  &_color_green {
+    &.MuiButton-contained {
+      background-color: $color_green;
+      @include hover {
+        background-color: $color_dark-green;
+      }
+    }
+  }
+  &_color_white,
+  .App_color_white & {
+    @include hover {
+      background-color: $color_light-grey;
+    }
+    color: $color_text;
+    background-color: white;
+  }
   @each $key, $value, $second-value in $colors-map {
-    &_color_#{$key} {
+    .App_color_#{$key} & {
       &.MuiButton-contained {
         background-color: $value;
         @include hover {
@@ -72,13 +99,6 @@
         border-color: $second-value;
       }
     }
-  }
-  &_color_white {
-    @include hover {
-      background-color: $color_light-grey;
-    }
-    color: $color_text;
-    background-color: white;
   }
 }
 
@@ -97,7 +117,7 @@
   }
 }
 
-.ColorInteractive {
+.ColorInteract {
   @include hover {
     &::before {
       transform: scale(1);
@@ -106,12 +126,6 @@
   }
   position: relative;
   border-radius: $border-radius;
-  &_color_default {
-    color: $color_second-text;
-    &::before {
-      background-color: rgba($color_second-text, 0.12);
-    }
-  }
   @each $key, $value in $colors-map {
     &_color_#{$key} {
       color: $value;
@@ -135,4 +149,20 @@
   & > .MuiTouchRipple-root {
     z-index: 1;
   }
+}
+
+.SvgPanel {
+  display: flex;
+  & > svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.TooltipIcon {
+  padding: 4px;
+  margin-left: 12px;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
 }

@@ -11,16 +11,17 @@ import WebIcon from '@material-ui/icons/WebRounded'
 import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
-import {PATHS, TITLES} from '../../utils/data'
+import {PATHS} from '../../utils/constants'
 import {Path} from '../../utils/types'
+import {TITLES} from '../../data/common'
 
-interface INavLink {
+interface NavLinkInterface {
   title: string
   to: Path
   Icon: typeof SvgIcon
 }
 
-const navLinks: INavLink[] = [
+const navLinks: NavLinkInterface[] = [
   {title: TITLES.HOME, to: PATHS.HOME, Icon: HomeIcon},
   {title: TITLES.ABOUT, to: PATHS.ABOUT, Icon: PersonIcon},
   {title: TITLES.SKILLS, to: PATHS.SKILLS, Icon: SchoolIcon},
@@ -34,12 +35,12 @@ export default function Navigation(): JSX.Element {
     <nav className="Navigation">
       <ul>
         {navLinks.map(
-          ({title, to, Icon}: INavLink, index: number): JSX.Element => (
+          ({title, to, Icon}: NavLinkInterface, index: number): JSX.Element => (
             <li key={index}>
               <Tooltip title={title} placement="right">
                 <Button
                   fullWidth
-                  exact
+                  exact={to !== PATHS.PORTFOLIO}
                   className="Navigation-Link"
                   activeClassName="Navigation-Link_active"
                   component={NavLink}

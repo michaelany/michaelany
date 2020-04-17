@@ -5,16 +5,12 @@ import MyLocationIcon from '@material-ui/icons/MyLocationTwoTone'
 
 import './Work.scss'
 import Job from './Job'
-import {TITLES, COMPANIES} from '../../utils/data'
-import {IJob} from '../../utils/types'
+import {Job as JobInterface} from '../../utils/types'
+import {TITLES, COMPANIES} from '../../data/common'
 
-const jobs: IJob[] = [
+const jobs: JobInterface[] = [
   {
-    company: {
-      ...COMPANIES.TSFTD,
-      color: 'red',
-      href: 'http://www.tsft.ru',
-    },
+    company: COMPANIES.TSFTD,
     positions: [
       {
         occupation: 'Тимлид фронтенд-разработки',
@@ -52,11 +48,7 @@ const jobs: IJob[] = [
     ],
   },
   {
-    company: {
-      ...COMPANIES.SEVEN_GLYPHS,
-      color: 'default',
-      href: 'https://7glyphs.com',
-    },
+    company: COMPANIES.SEVEN_GLYPHS,
     positions: [
       {
         occupation: 'Ведущий фронтенд-разработчик',
@@ -79,11 +71,7 @@ const jobs: IJob[] = [
     ],
   },
   {
-    company: {
-      ...COMPANIES.EVERPOINT,
-      color: 'grass',
-      href: 'https://www.everpoint.ru',
-    },
+    company: COMPANIES.EVERPOINT,
     positions: [
       {
         occupation: 'Фронтенд-разработчик',
@@ -111,11 +99,7 @@ const jobs: IJob[] = [
     ],
   },
   {
-    company: {
-      ...COMPANIES.MVIDEO,
-      color: 'red',
-      href: 'https://www.mvideo.ru',
-    },
+    company: COMPANIES.MVIDEO,
     positions: [
       {
         occupation: 'Инженер технической поддержки',
@@ -141,7 +125,7 @@ const jobs: IJob[] = [
 export default function Work(): JSX.Element {
   return (
     <section className="Section">
-      <h1 className="Title Title_color_violet">{TITLES.EXPERIENCE}</h1>
+      <h1 className="Title">{TITLES.EXPERIENCE}</h1>
       <p className="MainText">
         <b>
           Живу и работаю в Москве. Профессионально занимаюсь
@@ -150,7 +134,7 @@ export default function Work(): JSX.Element {
       </p>
       <ul className="Work">
         {jobs.map(
-          (job: IJob, index: number): JSX.Element => (
+          (job: JobInterface, index: number): JSX.Element => (
             <Job key={index} {...job} index={index} />
           )
         )}

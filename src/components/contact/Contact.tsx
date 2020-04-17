@@ -5,10 +5,11 @@ import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
 import ContactForm from './ContactForm'
 import Map from './Map'
-import {PATHS, TITLES, CONTACT_LINKS} from '../../utils/data'
-import {ISocialLink} from '../../utils/types'
+import {PATHS} from '../../utils/constants'
+import {SocialLink} from '../../utils/types'
+import {TITLES, CONTACT_LINKS} from '../../data/common'
 
-const links: ISocialLink[] = [
+const links: SocialLink[] = [
   CONTACT_LINKS.TELEGRAM,
   CONTACT_LINKS.SKYPE,
   CONTACT_LINKS.LINKED_IN,
@@ -20,10 +21,10 @@ export default function Contact(): JSX.Element {
   return (
     <Sections
       firstSection={
-        <section className="Section Section_type_pagination">
+        <section className="Section Section_pagination">
           <div>
-            <h1 className="Title Title_color_white">{TITLES.CONTACT}</h1>
-            <p className="MainText MainText_light">
+            <h1 className="Title">{TITLES.CONTACT}</h1>
+            <p className="MainText MainText_dark">
               Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
               на{' '}
               <a className="Link" href="mailto:mclananiev@gmail.com">

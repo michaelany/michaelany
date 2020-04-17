@@ -1,6 +1,4 @@
-import React, {MouseEvent} from 'react'
-import ButtonBase from '@material-ui/core/ButtonBase'
-import Tooltip from '@material-ui/core/Tooltip'
+import React from 'react'
 import Chip from '@material-ui/core/Chip'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
@@ -8,19 +6,15 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Job.scss'
-import {BLANK_LINK_PROPS} from '../../utils/data'
-import {IJob, IFeature, IPosition} from '../../utils/types'
+import CompanyLink from '../_common/CompanyLink'
+import {Job as JobInterface, Feature, Position} from '../../utils/types'
 
-interface IJobProps extends IJob {
+interface JobProps extends JobInterface {
   index: number
 }
 
-const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
-  e.stopPropagation()
-}
-
-const renderPosition = (positions: IPosition[]): JSX.Element[] =>
-  positions.map(({occupation, duties}: IPosition, index: number) => (
+const renderPosition = (positions: Position[]): JSX.Element[] =>
+  positions.map(({occupation, duties}: Position, index: number) => (
     <li key={index} className="Job-Position">
       <h3 className="Job-Occupation">{occupation}</h3>
       <ul className="Job-Duties">
@@ -35,14 +29,14 @@ const renderPosition = (positions: IPosition[]): JSX.Element[] =>
     </li>
   ))
 
-const renderFeatures = (features: IFeature[]): JSX.Element[] =>
+const renderFeatures = (features: Feature[]): JSX.Element[] =>
   features.map(
-    ({label, Icon}: IFeature, index: number): JSX.Element => (
+    ({label, Icon}: Feature, index: number): JSX.Element => (
       <Chip key={index} className="Chip" icon={<Icon />} label={label} />
     )
   )
 
-export default function Job({company, positions, features, index}: IJobProps) {
+export default function Job({company, positions, features, index}: JobProps) {
   return (
     <ExpansionPanel
       component="li"
@@ -50,23 +44,7 @@ export default function Job({company, positions, features, index}: IJobProps) {
       defaultExpanded={index === 0}
     >
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-        <Tooltip title={company.title} placement="right">
-          <ButtonBase
-            {...BLANK_LINK_PROPS}
-            focusRipple
-            component="a"
-            className={`Job-Company ColorInteractive ColorInteractive_color_${company.color}`}
-            href={company.href}
-            onClick={handleLinkClick}
-          >
-            <img
-              height={36}
-              src={company.logo}
-              srcSet={`${company.logo2x} 2x`}
-              alt={company.title}
-            />
-          </ButtonBase>
-        </Tooltip>
+        <CompanyLink {...company} />
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="Job-Content">
         <ul className="Job-Positions">{renderPosition(positions)}</ul>

@@ -10,6 +10,8 @@ export type Path =
   | '/contact'
 
 export type Color =
+  | 'alternate'
+  | 'white'
   | 'default'
   | 'blue'
   | 'green'
@@ -20,53 +22,60 @@ export type Color =
 
 export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
 
-export interface IMap<T> {
+export interface Map<T> {
   [key: string]: T
 }
 
-export interface ISocialLink {
+export interface SocialLink {
   title: string
   href: string
   Icon: FC<SVGProps<SVGSVGElement>>
 }
 
-export interface IFeature {
+export interface Feature {
   label: string
   Icon: (props: SvgIconProps) => JSX.Element
 }
 
-export interface ITechnology {
+export interface Technology {
   disabled?: boolean
-  type: string
+  name: string
   label: string
   color: Color
   href: string
 }
 
-export interface ICompany {
+export interface Company {
   title: string
-  color?: Color
+  color: Color
   logo: string
   logo2x: string
-  href?: string
+  href: string
 }
 
-export interface IPosition {
+export interface Position {
   occupation: string
   duties: string[]
 }
 
-export interface IJob {
-  company: ICompany
-  positions: IPosition[]
-  features: IFeature[]
+export interface Job {
+  company: Company
+  positions: Position[]
+  features: Feature[]
 }
 
-export interface IProject {
+export interface Project {
   title: string
   name: string
+  description: string
   type: ProjectType
   color: Color
-  company: ICompany
-  href: string
+  company: Company
+  path: string
+  href?: string
+  features: Feature[]
+  images: {
+    desktop?: string[][]
+    mobile?: string[][]
+  }
 }

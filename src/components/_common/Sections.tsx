@@ -3,12 +3,15 @@ import Grid from '@material-ui/core/Grid'
 
 import './Sections.scss'
 
-interface ISectionsProps {
+interface SectionsProps {
   firstSection: JSX.Element
   secondSection: JSX.Element
 }
 
-export default function Sections({firstSection, secondSection}: ISectionsProps): JSX.Element {
+export default function Sections({
+  firstSection,
+  secondSection,
+}: SectionsProps): JSX.Element {
   return (
     <Grid container className="Sections" spacing={0}>
       <Grid item xs={12} md={6}>

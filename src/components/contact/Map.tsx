@@ -4,15 +4,15 @@ import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 import markerIcon from '../../assets/icons/marker.svg'
-import {PATHS} from '../../utils/data'
+import {PATHS} from '../../utils/constants'
 import mapTheme from '../../styles/map'
 
-interface IInitialCenter {
+interface InitialCenter {
   lat: number
   lng: number
 }
 
-const initialCenter: IInitialCenter = {
+const initialCenter: InitialCenter = {
   lat: 55.7931056,
   lng: 37.8074463,
 }

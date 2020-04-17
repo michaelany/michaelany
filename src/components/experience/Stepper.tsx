@@ -9,14 +9,14 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBackRounded'
 import RefreshIcon from '@material-ui/icons/RefreshRounded'
 
 import './Stepper.scss'
-import {COMPANY_TITLES, TECHNOLOGY_TITLES} from '../../utils/data'
+import {COMPANY_TITLES, TECHNOLOGY_TITLES} from '../../data/common'
 
-interface IStep {
+interface Step {
   label: string
   text: string | JSX.Element
 }
 
-const steps: IStep[] = [
+const steps: Step[] = [
   {
     label: 'Октябрь 2008 - май 2010',
     text: (
@@ -164,14 +164,14 @@ export default function VerticalLinearStepper(): JSX.Element {
   return (
     <Stepper className="Stepper" activeStep={step} orientation="vertical">
       {steps.map(
-        ({label, text}: IStep, index: number): JSX.Element => (
+        ({label, text}: Step, index: number): JSX.Element => (
           <Step key={index}>
             <StepLabel>{label}</StepLabel>
             <StepContent>
               <p className="Stepper-Text">{text}</p>
               <div className="Stepper-Actions">
                 <Fab
-                  className="Stepper-Button"
+                  className="Button Stepper-Button"
                   size="medium"
                   aria-label="Вперед"
                   onClick={handleNext}
@@ -179,7 +179,7 @@ export default function VerticalLinearStepper(): JSX.Element {
                   <ArrowForwardIcon className="Stepper-ButtonIcon" />
                 </Fab>
                 <Fab
-                  className="Stepper-Button"
+                  className="Button Stepper-Button"
                   size="medium"
                   aria-label="Назад"
                   disabled={step === 0}

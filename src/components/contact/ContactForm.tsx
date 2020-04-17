@@ -15,29 +15,35 @@ import MailIcon from '@material-ui/icons/MailTwoTone'
 import SendIcon from '@material-ui/icons/SendRounded'
 
 import './ContactForm.scss'
-import {IMap} from '../../utils/types'
+import {Map} from '../../utils/types'
+
+interface Fields {
+  name: string
+  email: string
+  message: string
+}
 
 const emailRegExp: RegExp = /.+@.+\..+/i
 
-const fields: IMap<string> = {
+const fields: Fields = {
   name: 'name',
   email: 'email',
   message: 'message',
 }
 
-const initialValues: IMap<string> = {
+const initialValues: Map<string> = {
   [fields.name]: '',
   [fields.email]: '',
   [fields.message]: '',
 }
 
-const initialErrors: IMap<boolean> = {
+const initialErrors: Map<boolean> = {
   [fields.name]: false,
   [fields.email]: false,
   [fields.message]: false,
 }
 
-const inputProps: IMap<InputProps> = {
+const inputProps: Map<InputProps> = {
   [fields.name]: {
     disableUnderline: true,
     endAdornment: (
@@ -60,9 +66,9 @@ const inputProps: IMap<InputProps> = {
 }
 
 export default function ContactForm(): JSX.Element {
-  const [values, changeValues] = useState<IMap<string>>(initialValues)
-  const [errors, setErrors] = useState<IMap<boolean>>(initialErrors)
-  const fieldElements: IMap<MutableRefObject<HTMLInputElement>> = {
+  const [values, changeValues] = useState<typeof initialValues>(initialValues)
+  const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
+  const fieldElements: Map<MutableRefObject<HTMLInputElement>> = {
     [fields.name]: useRef<HTMLInputElement>(null!),
     [fields.email]: useRef<HTMLInputElement>(null!),
     [fields.message]: useRef<HTMLInputElement>(null!),
@@ -70,7 +76,7 @@ export default function ContactForm(): JSX.Element {
 
   const handleSubmit = (e: SyntheticEvent): void => {
     e.preventDefault()
-    const newErrors: IMap<boolean> = {}
+    const newErrors: typeof initialErrors = {}
     Object.keys(values).forEach((name: string): void => {
       if (
         (name === fields.email &&
@@ -160,7 +166,7 @@ export default function ContactForm(): JSX.Element {
       </Grid>
       <Button
         fullWidth
-        className="ContactForm-Submit Button Button_color_white"
+        className="ContactForm-Submit Button"
         type="submit"
         size="large"
         endIcon={<SendIcon />}

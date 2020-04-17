@@ -5,8 +5,8 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
   'apollo', 'jquery', 'html', 'svg', 'pug', 'handlebars', 'markdown', 'laravel',
   'css', 'bem', 'sass', 'mui', 'modules', 'styled', 'reactstrap', 'ant',
   'materialize', 'bootstrap', 'semantic', 'emails', 'npm', 'yarn', 'webpack',
-  'gulp', 'parcel', 'cra', 'gatsby', 'next', 'nuxt', 'babel', 'prettier',
-  'eslint', 'storybook', 'bit', 'jest', 'vscode', 'iterm', 'git', 'devtools',
+  'gulp', 'parcel', 'cra', 'gatsby', 'next', 'nuxt', 'git', 'babel', 'prettier',
+  'eslint', 'storybook', 'bit', 'jest', 'mocha', 'vscode', 'iterm', 'devtools',
   'zeplin', 'sketch', 'figma', 'photoshop', 'optim', 'mac', 'node', 'mongo',
   'mysql', 'php';
 
@@ -16,26 +16,20 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
 }
 
 .Technologies-Item {
+  @include responsiveBlock;
   overflow: hidden;
   width: 100%;
   &.Mui-disabled {
     opacity: 0.1;
   }
-  &::after {
-    @include pseudo(relative);
-    padding-bottom: 100%;
-  }
 }
 
 .Technologies-ItemContent {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   @each $technology in $technologies {
-    &_type_#{$technology}::before {
+    &_name_#{$technology}::before {
       @include retinaImg('../assets/img/technologies/#{$technology}', 'png');
     }
   }

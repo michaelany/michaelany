@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 import './Sidebar.scss'
 import Navigation from './Navigation'
-import {PATHS} from '../../utils/data'
+import {PATHS} from '../../utils/constants'
 
 function Sidebar(): JSX.Element {
   return (

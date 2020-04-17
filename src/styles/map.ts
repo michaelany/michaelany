@@ -43,7 +43,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLORS.SECOND,
+        color: COLORS.SECOND_TEXT,
       },
       {
         visibility: 'on',

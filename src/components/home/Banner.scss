@@ -1,8 +1,4 @@
-@import 'styles/variables';
-@import 'styles/mixins';
-
 .Banner {
-  @include animationAlternate(alternateBackgroundColor);
   display: flex;
   justify-content: center;
   align-items: center;

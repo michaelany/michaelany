@@ -15,13 +15,13 @@ import ExtensionIcon from '@material-ui/icons/ExtensionTwoTone'
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
 import Technologies from './Technologies'
-import {TITLES} from '../../utils/data'
-import {IFeature} from '../../utils/types'
+import {TITLES} from '../../data/common'
+import {Feature} from '../../utils/types'
 
 const text: string =
   'Создаю веб-приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux.'
 
-const features: IFeature[] = [
+const features: Feature[] = [
   {label: 'Пишу современный и быстро работающий код', Icon: SpeedIcon},
   {
     label: 'Выбираю простой и эффективный способ решения задачи',
@@ -29,7 +29,7 @@ const features: IFeature[] = [
   },
   {
     label: 'Имею в арсенале большое количество паттернов и приемов',
-    Icon: BuildIcon,
+    Icon: ExtensionIcon,
   },
   {
     label: 'Создаю модульную и оптимальную архитектуру для каждого проекта',
@@ -37,10 +37,10 @@ const features: IFeature[] = [
   },
   {
     label: 'Использую актуальные фреймворки, библиотеки и инструменты',
-    Icon: ExtensionIcon,
+    Icon: BuildIcon,
   },
   {
-    label: 'Строго соблюдаю единый стиль написания чистого кода',
+    label: 'Строго соблюдаю единый стиль написания кода',
     Icon: BrushIcon,
   },
   {
@@ -62,7 +62,6 @@ export default function Skills(): JSX.Element {
     <Sections
       firstSection={
         <Info
-          color="blue"
           title={TITLES.SKILLS}
           text={text}
           features={features}

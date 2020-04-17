@@ -8,18 +8,30 @@ $color_background: white;
 $color_text: #4a4a4a;
 $color_second-text: #7b7b7b;
 $color_light-grey: #e6e6e6;
-$color_red: #fa8861;
-$color_dark-red: #e07a58;
-$color_yellow: #f7bc3f;
+$color_default: hsl(0, 0%, 65%);
+$color_dark-default: hsl(0, 0%, 57%);
+$color_red: #fa8761;
+$color_dark-red: #e07957;
+$color_yellow: #f7bd40;
 $color_dark-yellow: #dba539;
-$color_grass: #6ed486;
-$color_dark-grass: #61ba76;
-$color_green: #31d0c9;
-$color_dark-green: #2db3a7;
-$color_blue: #62a5fc;
-$color_dark-blue: #5895e0;
-$color_violet: #9170fb;
-$color_dark-violet: #8265e0;
+$color_grass: #6ed485;
+$color_dark-grass: #5fb974;
+$color_green: #2fd0c8;
+$color_dark-green: #2db4a8;
+$color_blue: #64a6fc;
+$color_dark-blue: #5795e0;
+$color_violet: #967bef;
+$color_dark-violet: #7f64d8;
+
+$colors-map: (
+  'default' $color_default $color_dark-default,
+  'blue' $color_blue $color_dark-blue,
+  'green' $color_green $color_dark-green,
+  'grass' $color_grass $color_dark-grass,
+  'red' $color_red $color_dark-red,
+  'yellow' $color_yellow $color_dark-yellow,
+  'violet' $color_violet $color_dark-violet
+);
 
 $duration_shortest: 150ms;
 $duration_shorter: 200ms;
@@ -35,15 +47,6 @@ $duration_alternate: 20s;
 
 $easing_in-out: cubic-bezier(0.4, 0, 0.2, 1);
 $easing_out: cubic-bezier(0, 0, 0.2, 1);
-
-$colors-map: (
-  'blue' $color_blue $color_dark-blue,
-  'green' $color_green $color_dark-green,
-  'grass' $color_grass $color_dark-grass,
-  'red' $color_red $color_dark-red,
-  'yellow' $color_yellow $color_dark-yellow,
-  'violet' $color_violet $color_dark-violet
-);
 
 /* $breakpoint_xs: 599px;
 $breakpoint_sm: 959px;

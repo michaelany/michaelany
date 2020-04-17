@@ -6,31 +6,29 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
 import Features from './Features'
-import {Color, IFeature} from '../../utils/types'
+import {Feature} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 
-interface IInfoProps {
-  color: Color
+interface InfoProps {
   title: string
   text: string
-  features: IFeature[]
+  features: Feature[]
   extraContent: string | JSX.Element
 }
 
 export default function Info({
-  color,
   title,
   text,
   features,
   extraContent,
-}: IInfoProps): JSX.Element {
+}: InfoProps): JSX.Element {
   const [open, toggleOpen] = useState<boolean>(false)
 
   const handleToggle = (): void => toggleOpen(!open)
 
   return (
     <section className="Info Section">
-      <h1 className={`Title Title_color_${color}`}>{title}</h1>
+      <h1 className="Title">{title}</h1>
       <p className="MainText">
         <b>{text}</b>
       </p>
@@ -40,7 +38,7 @@ export default function Info({
       </Collapse>
       <div className="Actions Actions_center">
         <Button
-          className={`Button Button_color_${color}`}
+          className="Button"
           variant={open ? 'outlined' : 'contained'}
           endIcon={
             <ExpandMoreIcon

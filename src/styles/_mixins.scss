@@ -11,6 +11,19 @@
   }
 }
 
+@mixin responsiveBlock($percent: 100%) {
+  position: relative;
+  &::after {
+    @include pseudo(relative);
+    padding-bottom: $percent;
+  }
+  & > *:first-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 @mixin animationAlternate($animation: alternateColor) {
   animation: $animation $duration_alternate linear infinite;
 }
