@@ -44,6 +44,11 @@
       color: $value;
     }
   }
+
+  @include md {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
 }
 
 .MainText {
@@ -54,6 +59,11 @@
   color: $color_second-text;
   &_dark {
     color: $color_text;
+  }
+
+  @include md {
+    font-size: 26px;
+    margin-bottom: 34px;
   }
 }
 
@@ -157,12 +167,4 @@
     width: 100%;
     height: auto;
   }
-}
-
-.TooltipIcon {
-  padding: 4px;
-  margin-left: 12px;
-  width: 40px;
-  height: 40px;
-  font-size: 32px;
 }

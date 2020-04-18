@@ -6,6 +6,10 @@
   }
   &-containedSizeLarge {
     font-size: 18px;
+
+    @include md {
+      font-size: 16px;
+    }
   }
 }
 
@@ -49,6 +53,8 @@
     font-size: 24px;
   }
   &-text {
+    font-size: 12px;
+    font-weight: bold;
     fill: white;
   }
   &-completed {
@@ -93,7 +99,7 @@
 
 .MuiInputAdornment {
   &-root {
-    color: $color_second-text;
+    color: $color_default;
   }
 }
 

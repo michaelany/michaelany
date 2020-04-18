@@ -27,7 +27,13 @@ export default function CompanyLink({
         href={href}
         onClick={handleLinkClick}
       >
-        <img height={36} src={logo} srcSet={`${logo2x} 2x`} alt={title} />
+        <img
+          className="CompanyLink-Img"
+          height={36}
+          src={logo}
+          srcSet={`${logo2x} 2x`}
+          alt={title}
+        />
       </ButtonBase>
     </Tooltip>
   )

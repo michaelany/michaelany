@@ -45,7 +45,7 @@
   }
 }
 
-/* @mixin xs {
+@mixin xs {
   @media (max-width: $breakpoint_xs) {
     @content;
   }
@@ -62,4 +62,3 @@
     @content;
   }
 }
- */

@@ -41,12 +41,20 @@
   font-size: 18px;
   margin-bottom: 16px;
   font-weight: bold;
+
+  @include md {
+    font-size: 16px;
+  }
 }
 
 .Job-Duties {
   list-style: disc;
   padding-left: 18px;
-  font-size: 17px;
+  font-size: 18px;
+
+  @include md {
+    font-size: 16px;
+  }
 }
 
 .Job-Duty {

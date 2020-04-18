@@ -52,6 +52,10 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyazd', 'whip', '12saffron', 'fcdc',
   transition: opacity $duration_short $easing_in-out;
 }
 
+.ProjectLink-Company {
+  height: 32px;
+}
+
 .ProjectLink-Title {
   padding-top: 4px;
   font-size: 20px;

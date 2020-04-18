@@ -25,6 +25,13 @@ interface Easings {
   OUT: string
 }
 
+interface Breakpoints {
+  XS: number
+  SM: number
+  MD: number
+  LG: number
+}
+
 // $color_...
 export const COLORS: Colors = {
   GREEN: '#31d0c9',
@@ -55,6 +62,14 @@ export const EASINGS: Easings = {
   OUT: 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
+// $breakpoint_...
+export const BREAKPOINTS: Breakpoints = {
+  XS: 599,
+  SM: 959,
+  MD: 1279,
+  LG: 1919,
+}
+
 export default {
   typography: {
     fontFamily: [
@@ -79,6 +94,15 @@ export default {
       letterSpacing: 1,
       fontWeight: 600,
       textTransform: 'normal',
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: BREAKPOINTS.XS + 1,
+      md: BREAKPOINTS.SM + 1,
+      lg: BREAKPOINTS.MD + 1,
+      xl: BREAKPOINTS.LG + 1,
     },
   },
   palette: {

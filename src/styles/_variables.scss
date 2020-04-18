@@ -23,16 +23,6 @@ $color_dark-blue: #5795e0;
 $color_violet: #967bef;
 $color_dark-violet: #7f64d8;
 
-$colors-map: (
-  'default' $color_default $color_dark-default,
-  'blue' $color_blue $color_dark-blue,
-  'green' $color_green $color_dark-green,
-  'grass' $color_grass $color_dark-grass,
-  'red' $color_red $color_dark-red,
-  'yellow' $color_yellow $color_dark-yellow,
-  'violet' $color_violet $color_dark-violet
-);
-
 $duration_shortest: 150ms;
 $duration_shorter: 200ms;
 $duration_short: 250ms;
@@ -48,6 +38,17 @@ $duration_alternate: 20s;
 $easing_in-out: cubic-bezier(0.4, 0, 0.2, 1);
 $easing_out: cubic-bezier(0, 0, 0.2, 1);
 
-/* $breakpoint_xs: 599px;
+$breakpoint_xs: 599px;
 $breakpoint_sm: 959px;
-$breakpoint_md: 1279px; */
+$breakpoint_md: 1279px;
+$breakpoint_lg: 1919px;
+
+$colors-map: (
+  'default' $color_default $color_dark-default,
+  'blue' $color_blue $color_dark-blue,
+  'green' $color_green $color_dark-green,
+  'grass' $color_grass $color_dark-grass,
+  'red' $color_red $color_dark-red,
+  'yellow' $color_yellow $color_dark-yellow,
+  'violet' $color_violet $color_dark-violet
+);

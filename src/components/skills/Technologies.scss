@@ -13,6 +13,10 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
 .Technologies-Title {
   font-size: 20px;
   font-weight: bold;
+
+  @include md {
+    font-size: 18px;
+  }
 }
 
 .Technologies-Item {

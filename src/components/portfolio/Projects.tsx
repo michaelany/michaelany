@@ -51,7 +51,7 @@ export default function Projects(): JSX.Element {
           )
         )}
       </Tabs>
-      <Grid container component="ul" spacing={3}>
+      <Grid container component="ul" spacing={2}>
         {getFilteredProjects(filter).map(
           ({name, title, type, color, company, path}: Project): JSX.Element => (
             <ProjectLink

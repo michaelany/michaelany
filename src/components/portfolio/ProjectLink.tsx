@@ -57,6 +57,7 @@ export default function ProjectLink({
         </div>
         <div className="ProjectLink-Content">
           <img
+            className="ProjectLink-Company"
             height={36}
             src={company.logo}
             srcSet={`${company.logo2x} 2x`}

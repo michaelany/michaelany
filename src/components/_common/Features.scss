@@ -1,15 +1,24 @@
 @import 'styles/variables';
+@import 'styles/mixins';
 
 .Features:last-child {
-  margin-top: 16;
+  margin-top: 16px;
 }
 
 .Features-Item {
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
+
+  @include md {
+    font-size: 16px;
+  }
 }
 
 .Features-Icon {
-  font-size: 32px;
+  font-size: 36px;
   color: $color_second-text;
+
+  @include md {
+    font-size: 32px;
+  }
 }
