@@ -1,0 +1,66 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  border-bottom: 3px solid $color_green;
+  background-color: rgba(white, 0.9);
+  z-index: 100;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: color $duration_short $easing_in-out,
+    background-color $duration_standard $easing_in-out;
+  .App_color_alternate & {
+    @include animationAlternate(alternateBorderColor);
+  }
+  .App_color_white & {
+    border-color: white;
+  }
+  @each $key, $value in $colors-map {
+    .App_color_#{$key} & {
+      border-color: $value;
+    }
+  }
+  .App_background_blue & {
+    background-color: rgba($color_blue, 0.9);
+  }
+  .App_background_green & {
+    background-color: rgba($color_green, 0.9);
+  }
+}
+
+.Header-Button {
+  .App_color_alternate & {
+    @include animationAlternate;
+  }
+  .App_color_white & {
+    color: white;
+  }
+  @each $key, $value in $colors-map {
+    .App_color_#{$key} & {
+      color: $value;
+    }
+  }
+}
+
+.Header-Icon {
+  width: 32px;
+  height: 32px;
+}
+
+.Header-Drawer {
+  padding-top: 9px;
+  height: 100%;
+  transition: background-color $duration_standard$easing_in-out;
+  .App_background_blue & {
+    background-color: $color_blue;
+  }
+  .App_background_green & {
+    background-color: $color_green;
+  }
+}

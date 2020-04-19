@@ -121,7 +121,7 @@ export default function ContactForm(): JSX.Element {
   return (
     <form noValidate className="ContactForm" onSubmit={handleSubmit}>
       <Grid container spacing={2}>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} md={6} lg={12} xl={6}>
           <TextField
             fullWidth
             name={fields.name}
@@ -134,7 +134,7 @@ export default function ContactForm(): JSX.Element {
             onChange={handleChange}
           />
         </Grid>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} md={6} lg={12} xl={6}>
           <TextField
             fullWidth
             name={fields.email}

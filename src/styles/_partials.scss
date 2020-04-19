@@ -29,13 +29,27 @@
       background-color: $value;
     }
   }
+
+  @include lg {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @include md {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+
+  @include sm {
+    padding: 56px 24px;
+  }
 }
 
 .Title {
   font-size: 52px;
   font-weight: 900;
   line-height: 1.2;
-  margin-bottom: 24px;
+  margin-bottom: 0.5em;
   .App_color_white & {
     color: white;
   }
@@ -45,9 +59,12 @@
     }
   }
 
-  @include md {
+  @include lg {
     font-size: 44px;
-    margin-bottom: 20px;
+  }
+
+  @include sm {
+    font-size: 36px;
   }
 }
 
@@ -55,15 +72,18 @@
   font-size: 30px;
   font-weight: 300;
   line-height: 1.5;
-  margin-bottom: 40px;
+  margin-bottom: 1.4em;
   color: $color_second-text;
   &_dark {
     color: $color_text;
   }
 
-  @include md {
+  @include lg {
     font-size: 26px;
-    margin-bottom: 34px;
+  }
+
+  @include sm {
+    font-size: 22px;
   }
 }
 

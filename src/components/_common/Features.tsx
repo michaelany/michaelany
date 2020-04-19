@@ -17,8 +17,8 @@ function Features({items}: FeaturesProps): JSX.Element {
           item
           component="li"
           className="Features-Item"
-          xs={6}
-          xl={4}
+          xs={12}
+          sm={6}
         >
           <Icon className="Features-Icon" />
           <p>{label}</p>

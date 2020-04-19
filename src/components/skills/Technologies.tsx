@@ -442,7 +442,7 @@ const renderTechnologies = (technologies: Technology[]): JSX.Element[] =>
       {label, name, color, href, disabled}: Technology,
       index: number
     ): JSX.Element => (
-      <Grid key={index} item component="li" xs={6} sm={3} md={4} lg={3}>
+      <Grid key={index} item component="li" xs={6} sm={4} md={3} lg={4} xl={3}>
         <Tooltip title={label}>
           <ButtonBase
             {...BLANK_LINK_PROPS}

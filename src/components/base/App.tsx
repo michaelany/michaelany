@@ -1,9 +1,11 @@
 import React from 'react'
 import {Switch, Route, Redirect, useLocation} from 'react-router-dom'
 import cn from 'classnames'
+import Hidden from '@material-ui/core/Hidden'
 
 import './App.scss'
 import Sidebar from './Sidebar'
+import Header from './Header'
 import Home from '../home/Home'
 import About from '../about/About'
 import Skills from '../skills/Skills'
@@ -27,7 +29,12 @@ export default function App(): JSX.Element {
 
   return (
     <div className={AppClassName}>
-      <Sidebar />
+      <Hidden mdDown>
+        <Sidebar />
+      </Hidden>
+      <Hidden lgUp>
+        <Header />
+      </Hidden>
       <main className="App-Main">
         <Switch>
           <Route exact path={PATHS.HOME} component={Home} />

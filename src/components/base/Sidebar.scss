@@ -1,37 +1,7 @@
 @import 'styles/variables';
-@import 'styles/mixins';
 
 .Sidebar {
-  width: $sidebar-width;
   position: fixed;
   height: 100%;
-  padding: 5px 0;
-}
-
-.Sidebar-Logo {
-  @include hoverFocus {
-    transform: scale(1.2) rotate(-15deg);
-  }
-  font-size: 40px;
-  letter-spacing: -6px;
-  font-weight: 900;
-  line-height: 0.8;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 64px;
-  text-align: center;
-  display: block;
-  transition: transform $duration_standard $easing_in-out,
-    color $duration_short $easing_in-out;
-  .App_color_alternate & {
-    @include animationAlternate;
-  }
-  .App_color_white & {
-    color: white;
-  }
-  @each $key, $value in $colors-map {
-    .App_color_#{$key} & {
-      color: $value;
-    }
-  }
+  padding: 6px 0;
 }

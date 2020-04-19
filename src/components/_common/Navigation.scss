@@ -5,6 +5,7 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'contact';
 
 .Navigation {
   position: relative;
+  width: $sidebar-width;
   &::after {
     @include pseudo;
     top: 0;

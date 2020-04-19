@@ -1,19 +1,14 @@
-import React, {memo} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
 
 import './Sidebar.scss'
-import Navigation from './Navigation'
-import {PATHS} from '../../utils/constants'
+import Logo from '../_common/Logo'
+import Navigation from '../_common/Navigation'
 
-function Sidebar(): JSX.Element {
+export default function Sidebar(): JSX.Element {
   return (
     <aside className="Sidebar">
-      <Link className="Sidebar-Logo" to={PATHS.HOME}>
-        MA
-      </Link>
+      <Logo />
       <Navigation />
     </aside>
   )
 }
-
-export default memo(Sidebar)

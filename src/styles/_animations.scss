@@ -46,6 +46,54 @@
   }
 }
 
+@keyframes alternateBackgroundOpacityColor {
+  from {
+    background-color: rgba($color_blue, $backdrop_opacity);
+  }
+  16.66% {
+    background-color: rgba($color_green, $backdrop_opacity);
+  }
+  33.33% {
+    background-color: rgba($color_grass, $backdrop_opacity);
+  }
+  50% {
+    background-color: rgba($color_red, $backdrop_opacity);
+  }
+  66.66% {
+    background-color: rgba($color_yellow, $backdrop_opacity);
+  }
+  83.33% {
+    background-color: rgba($color_violet, $backdrop_opacity);
+  }
+  to {
+    background-color: rgba($color_blue, $backdrop_opacity);
+  }
+}
+
+@keyframes alternateBorderColor {
+  from {
+    border-color: $color_blue;
+  }
+  16.66% {
+    border-color: $color_green;
+  }
+  33.33% {
+    border-color: $color_grass;
+  }
+  50% {
+    border-color: $color_red;
+  }
+  66.66% {
+    border-color: $color_yellow;
+  }
+  83.33% {
+    border-color: $color_violet;
+  }
+  to {
+    border-color: $color_blue;
+  }
+}
+
 @keyframes hello {
   from {
     transform: rotate(8deg) translate3d(2px, 0, 0);

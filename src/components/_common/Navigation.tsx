@@ -15,6 +15,10 @@ import {PATHS} from '../../utils/constants'
 import {Path} from '../../utils/types'
 import {TITLES} from '../../data/common'
 
+interface NavigationProps {
+  onClose?: () => void
+}
+
 interface NavLinkInterface {
   title: string
   to: Path
@@ -30,7 +34,7 @@ const navLinks: NavLinkInterface[] = [
   {title: TITLES.CONTACT, to: PATHS.CONTACT, Icon: MailIcon},
 ]
 
-export default function Navigation(): JSX.Element {
+export default function Navigation({onClose}: NavigationProps): JSX.Element {
   return (
     <nav className="Navigation">
       <ul>
@@ -46,6 +50,7 @@ export default function Navigation(): JSX.Element {
                   component={NavLink}
                   to={to}
                   aria-label={title}
+                  onClick={onClose}
                 >
                   <Icon fontSize="inherit" />
                 </Button>

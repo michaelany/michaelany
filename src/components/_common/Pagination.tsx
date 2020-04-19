@@ -11,7 +11,6 @@ import {Path, Map} from '../../utils/types'
 import {TITLES} from '../../data/common'
 
 interface PaginationProps {
-  wide?: boolean
   prevTo?: Path
   nextTo?: Path
 }
@@ -26,15 +25,13 @@ const pathTitles: Map<string> = {
 }
 
 export default function Pagination({
-  wide,
   prevTo,
   nextTo,
 }: PaginationProps): JSX.Element {
-  const xs = wide ? 3 : 6
   return (
     <Grid container className="Pagination Actions" spacing={2} justify="center">
       {prevTo && (
-        <Grid item xs={xs}>
+        <Grid item xs={6}>
           <Button
             fullWidth
             className="Pagination-Link"
@@ -48,7 +45,7 @@ export default function Pagination({
         </Grid>
       )}
       {nextTo && (
-        <Grid item xs={xs}>
+        <Grid item xs={6}>
           <Button
             fullWidth
             className="Pagination-Link"

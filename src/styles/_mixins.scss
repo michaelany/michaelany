@@ -62,3 +62,9 @@
     @content;
   }
 }
+
+@mixin lg {
+  @media (max-width: $breakpoint_lg) {
+    @content;
+  }
+}

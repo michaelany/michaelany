@@ -7,7 +7,7 @@
   &-containedSizeLarge {
     font-size: 18px;
 
-    @include md {
+    @include lg {
       font-size: 16px;
     }
   }
@@ -45,6 +45,12 @@
 .MuiStepper {
   &-root {
     border-radius: $border-radius;
+  }
+}
+
+.MuiStepLabel {
+  &-label {
+    font-size: 1rem;
   }
 }
 
@@ -118,5 +124,21 @@
     border-top-right-radius: $border-radius;
     border-bottom-left-radius: $border-radius / 4;
     border-bottom-right-radius: $border-radius / 4;
+  }
+}
+
+.MuiBackdrop {
+  &-root {
+    .App_color_alternate & {
+      @include animationAlternate(alternateBackgroundOpacityColor);
+    }
+    .App_color_white & {
+      background-color: rgba(white, $backdrop_opacity);
+    }
+    @each $key, $value in $colors-map {
+      .App_color_#{$key} & {
+        background-color: rgba($value, $backdrop_opacity);
+      }
+    }
   }
 }

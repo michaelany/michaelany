@@ -1,3 +1,19 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Pagination {
+  .App_background_blue & {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include md {
+    .App_background_blue & {
+      width: 100%;
+    }
+  }
+}
+
 .Pagination-Link {
   color: white;
   border-color: white;

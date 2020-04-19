@@ -1,0 +1,41 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Logo {
+  @include hoverFocus {
+    transform: scale(1.15) rotate(-10deg);
+  }
+  font-size: 40px;
+  letter-spacing: -6px;
+  font-weight: 900;
+  line-height: 0.8;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-bottom: 64px;
+  text-align: center;
+  display: block;
+  transition: transform $duration_standard $easing_in-out,
+    color $duration_short $easing_in-out;
+  .App_color_alternate & {
+    @include animationAlternate;
+  }
+  .App_color_white & {
+    color: white;
+  }
+  @each $key, $value in $colors-map {
+    .App_color_#{$key} & {
+      color: $value;
+    }
+  }
+
+  @include md {
+    font-size: 36px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 0;
+    margin-right: 14px;
+    @include hoverFocus {
+      transform: scale(1.15) rotate(10deg);
+    }
+  }
+}

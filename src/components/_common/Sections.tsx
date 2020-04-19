@@ -14,10 +14,10 @@ export default function Sections({
 }: SectionsProps): JSX.Element {
   return (
     <Grid container className="Sections" spacing={0}>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} lg={6}>
         {firstSection}
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} lg={6}>
         {secondSection}
       </Grid>
     </Grid>

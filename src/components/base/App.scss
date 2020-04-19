@@ -1,8 +1,9 @@
 @import 'styles/variables';
+@import 'styles/mixins';
 
 .App {
   display: flex;
-  transition: background-color $duration_medium $easing_in-out;
+  transition: background-color $duration_standard $easing_in-out;
   &_background_blue {
     background-color: $color_blue;
   }
@@ -15,4 +16,9 @@
   min-height: 100vh;
   width: 100%;
   padding-left: $sidebar-width;
+
+  @include md {
+    padding-top: $header-height / 2;
+    padding-left: 0;
+  }
 }

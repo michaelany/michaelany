@@ -38,28 +38,20 @@
 }
 
 .Job-Occupation {
-  font-size: 18px;
-  margin-bottom: 16px;
+  font-size: 1.125rem;
+  margin-bottom: 1em;
   font-weight: bold;
-
-  @include md {
-    font-size: 16px;
-  }
 }
 
 .Job-Duties {
   list-style: disc;
   padding-left: 18px;
-  font-size: 18px;
-
-  @include md {
-    font-size: 16px;
-  }
+  font-size: 1.125rem;
 }
 
 .Job-Duty {
   &:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: 0.35em;
   }
 }
 

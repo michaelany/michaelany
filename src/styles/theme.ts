@@ -64,10 +64,10 @@ export const EASINGS: Easings = {
 
 // $breakpoint_...
 export const BREAKPOINTS: Breakpoints = {
-  XS: 599,
-  SM: 959,
-  MD: 1279,
-  LG: 1919,
+  XS: 399,
+  SM: 599,
+  MD: 959,
+  LG: 1279,
 }
 
 export default {
@@ -84,8 +84,8 @@ export default {
       'Droid Sans',
       'Helvetica Neue',
       'sans-serif',
-    ].join(','), // $font-family
-    fontSize: 16,
+    ].join(','),
+    fontSize: 16, // $font-size_base
     body2: {
       lineHeight: 1.5,
     },

@@ -12,7 +12,7 @@ export default function Portfolio(): JSX.Element {
         <h1 className="Title">{TITLES.PORTFOLIO}</h1>
         <Projects />
       </div>
-      <Pagination wide prevTo={PATHS.EXPERIENCE} nextTo={PATHS.CONTACT} />
+      <Pagination prevTo={PATHS.EXPERIENCE} nextTo={PATHS.CONTACT} />
     </section>
   )
 }
