@@ -30,6 +30,7 @@ export interface SocialLink {
   title: string
   href: string
   Icon: FC<SVGProps<SVGSVGElement>>
+  size: 'xs' | 'sm' | 'md' | 'lg'
 }
 
 export interface Feature {

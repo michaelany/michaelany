@@ -29,35 +29,37 @@ export default function Pagination({
   nextTo,
 }: PaginationProps): JSX.Element {
   return (
-    <Grid container className="Pagination Actions" spacing={2} justify="center">
-      {prevTo && (
-        <Grid item xs={6}>
-          <Button
-            fullWidth
-            className="Pagination-Link"
-            component={Link}
-            to={prevTo}
-            variant="outlined"
-            startIcon={<ChevronLeftIcon />}
-          >
-            {pathTitles[prevTo]}
-          </Button>
-        </Grid>
-      )}
-      {nextTo && (
-        <Grid item xs={6}>
-          <Button
-            fullWidth
-            className="Pagination-Link"
-            component={Link}
-            to={nextTo}
-            variant="outlined"
-            endIcon={<ChevronRightIcon />}
-          >
-            {pathTitles[nextTo]}
-          </Button>
-        </Grid>
-      )}
-    </Grid>
+    <div className="Pagination Actions">
+      <Grid container spacing={2} justify="center">
+        {prevTo && (
+          <Grid item xs={6}>
+            <Button
+              fullWidth
+              className="Pagination-Link"
+              component={Link}
+              to={prevTo}
+              variant="outlined"
+              startIcon={<ChevronLeftIcon />}
+            >
+              {pathTitles[prevTo]}
+            </Button>
+          </Grid>
+        )}
+        {nextTo && (
+          <Grid item xs={6}>
+            <Button
+              fullWidth
+              className="Pagination-Link"
+              component={Link}
+              to={nextTo}
+              variant="outlined"
+              endIcon={<ChevronRightIcon />}
+            >
+              {pathTitles[nextTo]}
+            </Button>
+          </Grid>
+        )}
+      </Grid>
+    </div>
   )
 }

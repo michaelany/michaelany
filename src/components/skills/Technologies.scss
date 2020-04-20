@@ -11,20 +11,8 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
   'mysql', 'php';
 
 .Technologies-Title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-
-  @include lg {
-    font-size: 18px;
-  }
-
-  @include md {
-    font-size: 20px;
-  }
-
-  @include sm {
-    font-size: 18px;
-  }
 }
 
 .Technologies-Item {

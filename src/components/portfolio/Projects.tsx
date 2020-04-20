@@ -44,7 +44,12 @@ export default function Projects(): JSX.Element {
 
   return (
     <div className="Projects">
-      <Tabs className="Projects-Filters" value={filter} onChange={handleChange}>
+      <Tabs
+        className="Projects-Filters"
+        value={filter}
+        variant="scrollable"
+        onChange={handleChange}
+      >
         {filters.map(
           (type: string): JSX.Element => (
             <Tab key={type} value={type} label={filterLabels[type]} />

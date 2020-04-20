@@ -19,7 +19,7 @@ export default function SocialLinks({
   return (
     <ul className={cn('SocialLinks', {SocialLinks_about: about})}>
       {links.map(
-        ({title, href, Icon}: SocialLink, index: number): JSX.Element => (
+        ({title, href, Icon, size}: SocialLink, index: number): JSX.Element => (
           <li key={index} className="SocialLinks-Item">
             <Tooltip
               title={title}
@@ -38,7 +38,9 @@ export default function SocialLinks({
                 href={href}
                 aria-label={title}
               >
-                <Icon />
+                <Icon
+                  className={`SocialLinks-Icon SocialLinks-Icon_size_${size}`}
+                />
               </Fab>
             </Tooltip>
           </li>

@@ -22,6 +22,8 @@
       }
     }
   }
+  color: white;
+  background-color: $color_violet;
   &:focus {
     .Stepper-ButtonIcon {
       transform: rotate(90deg);
@@ -30,8 +32,6 @@
       }
     }
   }
-  color: white;
-  background-color: $color_violet;
   &:not(:first-child) {
     margin-right: 8px;
   }

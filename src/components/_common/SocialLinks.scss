@@ -1,6 +1,11 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
+$size_xs: 1.25rem;
+$size_sm: 1.375rem;
+$size_md: 1.5rem;
+$size_lg: 1.75rem;
+
 .SocialLinks {
   display: flex;
   justify-content: center;
@@ -13,11 +18,40 @@
     position: relative;
     &:first-child,
     &:last-child {
-      bottom: 64px;
+      margin-left: 0;
+      margin-right: 0;
+      bottom: 62px;
+
+      @include lg {
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
+      @include md {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @include sm {
+        margin-left: 2px;
+        margin-right: 2px;
+      }
     }
     &:nth-child(2),
     &:nth-child(5) {
       bottom: 20px;
+
+      @include lg {
+        bottom: 28px;
+      }
+
+      @include md {
+        bottom: 20px;
+      }
+
+      @include sm {
+        bottom: 28px;
+      }
     }
     &:nth-child(2) {
       margin-left: 4px;
@@ -31,6 +65,37 @@
     &:nth-child(4) {
       margin-left: 8px;
       margin-right: 8px;
+
+      @include lg {
+        bottom: 8px;
+      }
+
+      @include md {
+        bottom: 0;
+      }
+
+      @include sm {
+        bottom: 8px;
+      }
     }
+  }
+}
+
+.SocialLinks-Icon {
+  &_size_xs {
+    width: $size_xs;
+    height: $size_xs;
+  }
+  &_size_sm {
+    width: $size_sm;
+    height: $size_sm;
+  }
+  &_size_md {
+    width: $size_md;
+    height: $size_md;
+  }
+  &_size_lg {
+    width: $size_lg;
+    height: $size_lg;
   }
 }

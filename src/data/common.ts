@@ -141,37 +141,49 @@ export const CONTACT_LINKS: ContactLinks = {
     title: 'GitHub',
     href: 'https://github.com/vashstamp',
     Icon: GitHubIcon,
+    size: 'lg',
   },
   LINKED_IN: {
     title: 'LinkedIn',
     href: 'https://www.linkedin.com/mclananiev',
     Icon: LinkedInIcon,
+    size: 'sm',
   },
   SEVEN_GLYPHS: {
     title: `${COMPANY_TITLES.SEVEN_GLYPHS} Team`,
     href: 'https://7glyphs.com/agency/team',
     Icon: SevenGlyphsIcon,
+    size: 'xs',
   },
   INSTAGRAM: {
     title: 'Instagram',
     href: 'https://www.instagram.com/mclananiev/',
     Icon: InstagramIcon,
+    size: 'md',
   },
-  VK: {title: 'VK', href: 'https://vk.com/mclananiev', Icon: VKIcon},
+  VK: {
+    title: 'VK',
+    href: 'https://vk.com/mclananiev',
+    Icon: VKIcon,
+    size: 'md',
+  },
   FACEBOOK: {
     title: 'Facebook',
     href: 'https://www.facebook.com/mclananiev',
     Icon: FacebookIcon,
+    size: 'sm',
   },
   TELEGRAM: {
     title: 'Telegram',
     href: 'https://t.me/mclananiev',
     Icon: TelegramIcon,
+    size: 'md',
   },
   SKYPE: {
     title: 'Skype',
     href: 'skype:live:bd80acb1b9083867?chat',
     Icon: SkypeIcon,
+    size: 'md',
   },
 }
 

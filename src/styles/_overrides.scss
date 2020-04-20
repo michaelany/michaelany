@@ -1,14 +1,36 @@
+$fab-size_base: 56px;
+$fab-size_mobile: 48px;
+
 .MuiButton {
   &-root {
     transition: color $duration_short $easing_in-out,
       background-color $duration_short $easing_in-out,
       border $duration_short $easing_in-out;
   }
+
   &-containedSizeLarge {
-    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+.MuiFab {
+  &-root:not(.MuiFab-sizeMedium) {
+    width: $fab-size_base;
+    height: $fab-size_base;
 
     @include lg {
-      font-size: 16px;
+      width: $fab-size_mobile;
+      height: $fab-size_mobile;
+    }
+
+    @include md {
+      width: $fab-size_base;
+      height: $fab-size_base;
+    }
+
+    @include sm {
+      width: $fab-size_mobile;
+      height: $fab-size_mobile;
     }
   }
 }
@@ -36,6 +58,7 @@
     color: $color_text;
     margin: 4px;
   }
+
   &-icon {
     color: $color_second-text;
     font-size: 24px;
@@ -58,11 +81,13 @@
   &-root {
     font-size: 24px;
   }
+
   &-text {
     font-size: 12px;
     font-weight: bold;
     fill: white;
   }
+
   &-completed {
     fill: $color_grass;
   }
@@ -119,11 +144,16 @@
 
 .MuiTab {
   &-root {
+    font-size: $font-size_base;
     color: white;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     border-bottom-left-radius: $border-radius / 4;
     border-bottom-right-radius: $border-radius / 4;
+
+    @include sm {
+      font-size: $font-size_mobile;
+    }
   }
 }
 

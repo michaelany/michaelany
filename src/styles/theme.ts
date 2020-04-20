@@ -90,7 +90,6 @@ export default {
       lineHeight: 1.5,
     },
     button: {
-      fontSize: 16,
       letterSpacing: 1,
       fontWeight: 600,
       textTransform: 'normal',

@@ -67,6 +67,7 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyazd', 'whip', '12saffron', 'fcdc',
 }
 
 .ProjectLink-Label {
+  font-size: $font-size_base;
   font-weight: 600;
   color: $color_second-text;
 }

@@ -141,9 +141,17 @@
 }
 
 .Actions {
-  margin-top: 40px;
+  margin-top: 56px;
   &_center {
     text-align: center;
+  }
+
+  @include md {
+    margin-top: 48px;
+  }
+
+  @include sm {
+    margin-top: 40px;
   }
 }
 
