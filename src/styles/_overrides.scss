@@ -37,7 +37,7 @@ $fab-size_mobile: 48px;
 
 .MuiTooltip {
   &-tooltip {
-    font-size: 14px;
+    font-size: $font-size_mobile;
     color: $color_text;
     background-color: white;
     border: 1px solid $color_text;
@@ -52,7 +52,7 @@ $fab-size_mobile: 48px;
 
 .MuiChip {
   &-root {
-    font-size: 14px;
+    font-size: $font-size_mobile;
     font-weight: 500;
     background-color: rgba($color_second-text, 0.12);
     color: $color_text;
@@ -140,6 +140,11 @@ $fab-size_mobile: 48px;
     height: 4px;
     border-radius: $border-radius / 4;
   }
+
+  &-scrollButtons {
+    color: white;
+    border-radius: $border-radius;
+  }
 }
 
 .MuiTab {
@@ -151,8 +156,13 @@ $fab-size_mobile: 48px;
     border-bottom-left-radius: $border-radius / 4;
     border-bottom-right-radius: $border-radius / 4;
 
+    @include md {
+      min-width: 100px;
+    }
+
     @include sm {
       font-size: $font-size_mobile;
+      min-width: auto;
     }
   }
 }

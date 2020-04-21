@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import IconButton from '@material-ui/core/IconButton'
 import Drawer from '@material-ui/core/Drawer'
-import MenuIcon from '@material-ui/icons/MenuRounded'
 
 import './Header.scss'
 import Logo from '../_common/Logo'
 import Navigation from '../_common/Navigation'
+import Hamburger from './Hamburger'
 
 export default function Header(): JSX.Element {
   const [open, toggleOpen] = useState<boolean>(false)
@@ -16,13 +15,7 @@ export default function Header(): JSX.Element {
 
   return (
     <header className="Header">
-      <IconButton
-        className="Header-Button"
-        aria-label="Открыть меню"
-        onClick={handleOpen}
-      >
-        <MenuIcon className="Header-Icon" />
-      </IconButton>
+      <Hamburger open={open} onOpen={handleOpen} onClose={handleClose} />
       <Logo />
       <Drawer
         keepMounted

@@ -1,13 +1,12 @@
 import React from 'react'
 import Tilt from 'react-tilt'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
 import Pagination from '../_common/Pagination'
 import {PATHS} from '../../utils/constants'
-import {DURATIONS, EASINGS, BREAKPOINTS} from '../../styles/theme'
+import {DURATIONS, EASINGS} from '../../styles/theme'
 
 interface TiltOptions {
   max: number
@@ -24,11 +23,8 @@ const tiltOptions: TiltOptions = {
 }
 
 export default function Banner(): JSX.Element {
-  // matches for key to responsive alternate animation reset
-  const matches: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.SM}px)`)
-
   return (
-    <section key={String(matches)} className="Banner Section Section_colorful">
+    <section className="Banner Section Section_colorful">
       <h2 className="VisuallyHidden">Баннер</h2>
       <div className="Banner-Content">
         <Tilt options={tiltOptions} easing={EASINGS.IN_OUT}>

@@ -48,6 +48,7 @@ export default function Projects(): JSX.Element {
         className="Projects-Filters"
         value={filter}
         variant="scrollable"
+        scrollButtons="off"
         onChange={handleChange}
       >
         {filters.map(

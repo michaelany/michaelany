@@ -1,0 +1,96 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$hamburger-size: 56px;
+
+.Hamburger {
+  width: $hamburger-size;
+  height: $hamburger-size;
+  z-index: 100000;
+  transition: transform $duration_shorter $easing_out,
+    background-color $duration_short $easing_out;
+  &_active {
+    transform: translate3d(
+      ($sidebar-width - $hamburger-size) / 2 - $header-padding,
+      0,
+      0
+    );
+  }
+  .App_color_alternate & {
+    @include animationAlternate;
+  }
+  .App_color_white & {
+    color: white;
+  }
+  @each $key, $value in $colors-map {
+    .App_color_#{$key} & {
+      color: $value;
+    }
+  }
+}
+
+.Hamburger-Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.Hamburger-Box {
+  width: 28px;
+  height: 22px;
+  display: block;
+  position: relative;
+}
+
+.Hamburger-Inner {
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  top: 2px;
+  .Hamburger_active & {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+  &::before,
+  &::after {
+    @include pseudo;
+  }
+  &,
+  &::before,
+  &::after {
+    width: 28px;
+    height: 4px;
+    background-color: $color_text;
+    border-radius: $border-radius / 2;
+    transition: transform $duration_shortest $easing_out;
+    .App_color_alternate & {
+      @include animationAlternate(alternateBackgroundColor);
+    }
+    .App_color_white & {
+      background-color: white;
+    }
+    @each $key, $value in $colors-map {
+      .App_color_#{$key} & {
+        background-color: $value;
+      }
+    }
+  }
+  &::before {
+    top: 9px;
+    transition-property: transform, opacity;
+    transition-timing-function: $easing_out;
+    transition-duration: $duration_shortest;
+    .Hamburger_active & {
+      transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+      opacity: 0;
+    }
+  }
+  &::after {
+    top: 18px;
+    .Hamburger_active & {
+      transform: translate3d(0, -18px, 0) rotate(-90deg);
+    }
+  }
+}

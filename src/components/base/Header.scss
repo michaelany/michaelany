@@ -11,8 +11,8 @@
   border-bottom: 3px solid $color_green;
   background-color: rgba(white, 0.9);
   z-index: 100;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: $header-padding;
+  padding-right: $header-padding;
   transition: color $duration_short $easing_in-out,
     background-color $duration_standard $easing_in-out;
   .App_color_alternate & {
@@ -34,27 +34,8 @@
   }
 }
 
-.Header-Button {
-  .App_color_alternate & {
-    @include animationAlternate;
-  }
-  .App_color_white & {
-    color: white;
-  }
-  @each $key, $value in $colors-map {
-    .App_color_#{$key} & {
-      color: $value;
-    }
-  }
-}
-
-.Header-Icon {
-  width: 32px;
-  height: 32px;
-}
-
 .Header-Drawer {
-  padding-top: 9px;
+  padding-top: $header-height;
   height: 100%;
   transition: background-color $duration_standard$easing_in-out;
   .App_background_blue & {

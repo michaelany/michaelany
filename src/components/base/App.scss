@@ -3,6 +3,7 @@
 
 .App {
   display: flex;
+  min-width: 320px;
   transition: background-color $duration_standard $easing_in-out;
   &_background_blue {
     background-color: $color_blue;

@@ -5,7 +5,7 @@ import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
 import ContactForm from './ContactForm'
 import Map from './Map'
-import {PATHS} from '../../utils/constants'
+import {BLANK_LINK_PROPS, PATHS} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
 import {TITLES, CONTACT_LINKS} from '../../data/common'
 
@@ -27,7 +27,11 @@ export default function Contact(): JSX.Element {
             <p className="MainText MainText_dark">
               Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
               на{' '}
-              <a className="Link" href="mailto:mclananiev@gmail.com">
+              <a
+                {...BLANK_LINK_PROPS}
+                className="Link"
+                href="mailto:mclananiev@gmail.com"
+              >
                 mclananiev@gmail.com
               </a>{' '}
               или воспользуйтесь формой ниже.
