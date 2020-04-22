@@ -23,7 +23,7 @@
   @include md {
     position: relative;
     width: 100%;
-    height: calc(100vh - #{$header-height});
+    height: calc(100vh - #{$header_height});
     right: auto;
     top: auto;
   }

@@ -46,7 +46,7 @@ export default function Navigation({onClose}: NavigationProps): JSX.Element {
                   fullWidth
                   exact={to !== PATHS.PORTFOLIO}
                   className="Navigation-Link"
-                  activeClassName="Navigation-Link_active"
+                  activeClassName="Colorful"
                   component={NavLink}
                   to={to}
                   aria-label={title}

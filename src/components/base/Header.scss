@@ -9,12 +9,12 @@ $background-opacity: 0.95;
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  height: $header-height;
-  border-bottom: 3px solid $color_green;
+  height: $header_height;
+  border-bottom: $header_border-width solid $color_green;
   background-color: rgba(white, $background-opacity);
   z-index: 100;
-  padding-left: $header-padding;
-  padding-right: $header-padding;
+  padding-left: 8px;
+  padding-right: 8px;
   transition: color $duration_short $easing_in-out,
     background-color $duration_standard $easing_in-out;
   .App_color_alternate & {
@@ -33,17 +33,5 @@ $background-opacity: 0.95;
   }
   .App_background_green & {
     background-color: rgba($color_green, $background-opacity);
-  }
-}
-
-.Header-Drawer {
-  padding-top: $header-height;
-  height: 100%;
-  transition: background-color $duration_standard$easing_in-out;
-  .App_background_blue & {
-    background-color: $color_blue;
-  }
-  .App_background_green & {
-    background-color: $color_green;
   }
 }

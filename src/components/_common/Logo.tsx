@@ -6,7 +6,7 @@ import {PATHS} from '../../utils/constants'
 
 export default function Logo(): JSX.Element {
   return (
-    <Link className="Logo" to={PATHS.HOME}>
+    <Link className="Logo Colorful" to={PATHS.HOME}>
       MA
     </Link>
   )

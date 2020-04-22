@@ -46,6 +46,9 @@ $fab-size_mobile: 48px;
 
 .MuiIconButton {
   &-root {
+    @include hover {
+      background-color: rgba($color_text, 0.04);
+    }
     color: $color_second-text;
   }
 }
@@ -173,11 +176,11 @@ $fab-size_mobile: 48px;
       @include animationAlternate(alternateBackgroundOpacityColor);
     }
     .App_color_white & {
-      background-color: rgba(white, $backdrop_opacity);
+      background-color: rgba(white, $backdrop-opacity);
     }
     @each $key, $value in $colors-map {
       .App_color_#{$key} & {
-        background-color: rgba($value, $backdrop_opacity);
+        background-color: rgba($value, $backdrop-opacity);
       }
     }
   }
@@ -186,5 +189,11 @@ $fab-size_mobile: 48px;
 .MuiExpansionPanelDetails {
   &-root {
     padding-top: 0;
+  }
+}
+
+.MuiDrawer {
+  &-paper {
+    overflow: visible;
   }
 }

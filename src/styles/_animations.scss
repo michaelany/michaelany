@@ -48,25 +48,25 @@
 
 @keyframes alternateBackgroundOpacityColor {
   from {
-    background-color: rgba($color_blue, $backdrop_opacity);
+    background-color: rgba($color_blue, $backdrop-opacity);
   }
   16.66% {
-    background-color: rgba($color_green, $backdrop_opacity);
+    background-color: rgba($color_green, $backdrop-opacity);
   }
   33.33% {
-    background-color: rgba($color_grass, $backdrop_opacity);
+    background-color: rgba($color_grass, $backdrop-opacity);
   }
   50% {
-    background-color: rgba($color_red, $backdrop_opacity);
+    background-color: rgba($color_red, $backdrop-opacity);
   }
   66.66% {
-    background-color: rgba($color_yellow, $backdrop_opacity);
+    background-color: rgba($color_yellow, $backdrop-opacity);
   }
   83.33% {
-    background-color: rgba($color_violet, $backdrop_opacity);
+    background-color: rgba($color_violet, $backdrop-opacity);
   }
   to {
-    background-color: rgba($color_blue, $backdrop_opacity);
+    background-color: rgba($color_blue, $backdrop-opacity);
   }
 }
 

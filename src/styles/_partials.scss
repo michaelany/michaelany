@@ -45,6 +45,20 @@
   }
 }
 
+.Colorful {
+  .App_color_alternate & {
+    @include animationAlternate;
+  }
+  .App_color_white & {
+    color: white;
+  }
+  @each $key, $value in $colors-map {
+    .App_color_#{$key} & {
+      color: $value;
+    }
+  }
+}
+
 .Title {
   font-size: 52px;
   font-weight: 900;
@@ -203,4 +217,8 @@
     width: 100%;
     height: auto;
   }
+}
+
+.ButtonIcon {
+  font-size: 32px;
 }

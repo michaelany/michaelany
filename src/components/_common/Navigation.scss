@@ -33,22 +33,12 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'contact';
       }
     }
   }
+  .Header-Drawer > & {
+    padding-bottom: 24px;
+  }
 }
 
 .Navigation-Link {
   font-size: 32px;
   height: 54px;
-  &_active {
-    .App_color_alternate & {
-      @include animationAlternate;
-    }
-    .App_color_white & {
-      color: white;
-    }
-    @each $key, $value in $colors-map {
-      .App_color_#{$key} & {
-        color: $value;
-      }
-    }
-  }
 }
