@@ -80,3 +80,11 @@ export interface Project {
     mobile?: string[][]
   }
 }
+
+export interface TiltOptions {
+  reverse?: boolean
+  reset?: boolean
+  max?: number
+  scale?: number
+  speed?: number
+}

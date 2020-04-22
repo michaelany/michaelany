@@ -2,33 +2,33 @@ import React, {MouseEvent} from 'react'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import Tooltip from '@material-ui/core/Tooltip'
 
-import './CompanyLink.scss'
+import './Company.scss'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Company as CompanyLinkProps} from '../../utils/types'
+import {Company as CompanyProps} from '../../utils/types'
 
 const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
   e.stopPropagation()
 }
 
-export default function CompanyLink({
+export default function Company({
   title,
   color,
   href,
   logo,
   logo2x,
-}: CompanyLinkProps): JSX.Element {
+}: CompanyProps): JSX.Element {
   return (
-    <Tooltip title={title} placement="right">
+    <Tooltip title={title}>
       <ButtonBase
         {...BLANK_LINK_PROPS}
         focusRipple
         component="a"
-        className={`CompanyLink ColorInteract ColorInteract_color_${color}`}
+        className={`Company ColorInteract ColorInteract_color_${color}`}
         href={href}
         onClick={handleLinkClick}
       >
         <img
-          className="CompanyLink-Img"
+          className="Company-Img"
           height={36}
           src={logo}
           srcSet={`${logo2x} 2x`}

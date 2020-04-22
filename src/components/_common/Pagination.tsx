@@ -30,9 +30,9 @@ export default function Pagination({
 }: PaginationProps): JSX.Element {
   return (
     <div className="Pagination Actions">
-      <Grid container spacing={2} justify="center">
+      <Grid container className="Pagination-Links" spacing={2} justify="center">
         {prevTo && (
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Button
               fullWidth
               className="Pagination-Link"
@@ -46,7 +46,7 @@ export default function Pagination({
           </Grid>
         )}
         {nextTo && (
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Button
               fullWidth
               className="Pagination-Link"

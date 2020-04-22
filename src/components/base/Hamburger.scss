@@ -6,7 +6,7 @@ $hamburger-size: 56px;
 .Hamburger {
   width: $hamburger-size;
   height: $hamburger-size;
-  z-index: 100000;
+  z-index: 10000;
   transition: transform $duration_shorter $easing_out,
     background-color $duration_short $easing_out;
   &_active {
@@ -80,7 +80,7 @@ $hamburger-size: 56px;
   &::before {
     top: 9px;
     transition-property: transform, opacity;
-    transition-timing-function: $easing_out;
+    transition-timing-function: $easing_in-out;
     transition-duration: $duration_shortest;
     .Hamburger_active & {
       transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);

@@ -1,6 +1,8 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
+$background-opacity: 0.95;
+
 .Header {
   display: flex;
   align-items: center;
@@ -9,7 +11,7 @@
   width: 100%;
   height: $header-height;
   border-bottom: 3px solid $color_green;
-  background-color: rgba(white, 0.9);
+  background-color: rgba(white, $background-opacity);
   z-index: 100;
   padding-left: $header-padding;
   padding-right: $header-padding;
@@ -27,10 +29,10 @@
     }
   }
   .App_background_blue & {
-    background-color: rgba($color_blue, 0.9);
+    background-color: rgba($color_blue, $background-opacity);
   }
   .App_background_green & {
-    background-color: rgba($color_green, 0.9);
+    background-color: rgba($color_green, $background-opacity);
   }
 }
 

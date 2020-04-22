@@ -5,7 +5,12 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyazd', 'whip', '12saffron', 'fcdc',
   'services', 'trucks', 'rogue', 'strong', 'sds', 'food', 'foodp', 'melissa',
   'lite', 'tmf', 'proximal', 'embp';
 
-.ProjectLink-Link {
+.ProjectLink-Tilt {
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
+.ProjectLink-Item {
   @include responsiveBlock(70.35%);
   @include hoverFocus {
     .ProjectLink-Content {

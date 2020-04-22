@@ -14,6 +14,12 @@
   }
 }
 
+.Pagination-Links {
+  @include xs {
+    flex-direction: column-reverse;
+  }
+}
+
 .Pagination-Link {
   color: white;
   border-color: white;

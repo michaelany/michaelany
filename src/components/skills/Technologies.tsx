@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
 import Pagination from '../_common/Pagination'
+
 import {PATHS, BLANK_LINK_PROPS} from '../../utils/constants'
 import {Technology} from '../../utils/types'
 import {TECHNOLOGY_TITLES} from '../../data/common'

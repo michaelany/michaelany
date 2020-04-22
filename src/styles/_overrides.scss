@@ -182,3 +182,9 @@ $fab-size_mobile: 48px;
     }
   }
 }
+
+.MuiExpansionPanelDetails {
+  &-root {
+    padding-top: 0;
+  }
+}

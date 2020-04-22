@@ -5,11 +5,18 @@ import meImg from '../../assets/img/pictures/me.png'
 import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
+import Tilt from '../_common/Tilt'
 import {PATHS} from '../../utils/constants'
-import {SocialLink} from '../../utils/types'
+import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
+import {DURATIONS} from '../../styles/theme'
 
 const imgSize: number = 320
+
+const tiltOptions: TiltOptions = {
+  scale: 1.05,
+  speed: DURATIONS.LONGEST,
+}
 
 const links: SocialLink[] = [
   CONTACT_LINKS.GIT_HUB,
@@ -25,15 +32,16 @@ export default function Social(): JSX.Element {
     <section className="Social Section Section_pagination Section_colorful">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
-        <figure className="Social-Photo">
+        <Tilt component="figure" className="Social-Photo" options={tiltOptions}>
           <img
+            className="Social-Img"
             width={imgSize}
             height={imgSize}
             src={meImg}
             srcSet={`${meImg2x} 2x`}
             alt="Michael Ananiev | vashstamp"
           />
-        </figure>
+        </Tilt>
         <SocialLinks about links={links} />
       </div>
       <Pagination prevTo={PATHS.HOME} nextTo={PATHS.SKILLS} />

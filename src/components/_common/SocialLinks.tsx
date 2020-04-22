@@ -21,16 +21,7 @@ export default function SocialLinks({
       {links.map(
         ({title, href, Icon, size}: SocialLink, index: number): JSX.Element => (
           <li key={index} className="SocialLinks-Item">
-            <Tooltip
-              title={title}
-              placement={
-                about && index === 0
-                  ? 'left'
-                  : about && index === links.length - 1
-                  ? 'right'
-                  : 'bottom'
-              }
-            >
+            <Tooltip title={title}>
               <Fab
                 {...BLANK_LINK_PROPS}
                 component="a"

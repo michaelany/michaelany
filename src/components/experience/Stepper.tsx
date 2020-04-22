@@ -171,7 +171,7 @@ export default function VerticalLinearStepper(): JSX.Element {
               <p className="Stepper-Text">{text}</p>
               <div className="Stepper-Actions">
                 <Fab
-                  className="Button Stepper-Button"
+                  className="Stepper-Button"
                   size="medium"
                   aria-label="Вперед"
                   onClick={handleNext}
@@ -179,7 +179,7 @@ export default function VerticalLinearStepper(): JSX.Element {
                   <ArrowForwardIcon className="Stepper-ButtonIcon" />
                 </Fab>
                 <Fab
-                  className="Button Stepper-Button"
+                  className="Stepper-Button"
                   size="medium"
                   aria-label="Назад"
                   disabled={step === 0}

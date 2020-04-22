@@ -6,7 +6,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Job.scss'
-import CompanyLink from '../_common/CompanyLink'
+import Company from '../_common/Company'
 import {Job as JobInterface, Feature, Position} from '../../utils/types'
 
 interface JobProps extends JobInterface {
@@ -44,7 +44,7 @@ export default function Job({company, positions, features, index}: JobProps) {
       defaultExpanded={index === 0}
     >
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-        <CompanyLink {...company} />
+        <Company {...company} />
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="Job-Content">
         <ul className="Job-Positions">{renderPosition(positions)}</ul>

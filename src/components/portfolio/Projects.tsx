@@ -12,6 +12,8 @@ import PROJECTS from '../../data/projects'
 
 type Filter = 'all' | ProjectType
 
+const storageProp: string = 'filter'
+
 const filterAll: Filter = 'all'
 
 const filters: Filter[] = [
@@ -36,9 +38,12 @@ const getFilteredProjects = (filter: string): Project[] =>
     : PROJECTS.filter((project: Project): boolean => project.type === filter)
 
 export default function Projects(): JSX.Element {
-  const [filter, changeFilter] = useState<string>(filterAll)
+  const [filter, changeFilter] = useState<string>(
+    localStorage.getItem(storageProp) || filterAll
+  )
 
   const handleChange = (e: ChangeEvent<object>, value: string): void => {
+    localStorage.setItem(storageProp, value)
     changeFilter(value)
   }
 

@@ -1,3 +1,6 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
 .Social-Content {
   display: flex;
   flex-direction: column;
@@ -5,10 +8,22 @@
 }
 
 .Social-Photo {
-  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  @include xs {
+    margin-bottom: 24px;
+  }
+}
+
+.Social-Img {
   border-radius: 50%;
   width: 320px;
   height: 320px;
-  overflow: hidden;
-  margin-bottom: 40px;
+
+  @include xs {
+    width: 100%;
+    height: auto;
+  }
 }

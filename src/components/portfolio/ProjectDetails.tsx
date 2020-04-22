@@ -4,13 +4,13 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
 import Features from '../_common/Features'
-import CompanyLink from '../_common/CompanyLink'
+import Company from '../_common/Company'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Feature, Company} from '../../utils/types'
+import {Feature, Company as CompanyInterface} from '../../utils/types'
 
 interface ProjectDetailsProps {
   title: string
-  company: Company
+  company: CompanyInterface
   description: string
   features: Feature[]
   href?: string
@@ -27,7 +27,7 @@ export default function ProjectDetails({
     <section className="ProjectDetails Section">
       <div className="ProjectDetails-Block">
         <h1 className="ProjectDetails-Title Title">{title}</h1>
-        <CompanyLink {...company} />
+        <Company {...company} />
       </div>
       <p className="MainText">
         <b>

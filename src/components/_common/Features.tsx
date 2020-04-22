@@ -1,8 +1,8 @@
 import React, {memo} from 'react'
 import Grid from '@material-ui/core/Grid'
-import {Feature} from '../../utils/types'
 
 import './Features.scss'
+import {Feature} from '../../utils/types'
 
 interface FeaturesProps {
   items: Feature[]

@@ -4,9 +4,11 @@ import Grid from '@material-ui/core/Grid'
 import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './ProjectLink.scss'
+import Tilt from '../_common/Tilt'
 import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
 import {PATHS, PROJECT_TYPES} from '../../utils/constants'
-import {Color, Company} from '../../utils/types'
+import {Color, Company, TiltOptions} from '../../utils/types'
+import {DURATIONS} from '../../styles/theme'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
 
 interface ProjectLinkProps {
@@ -16,6 +18,12 @@ interface ProjectLinkProps {
   color: Color
   company: Company
   path: string
+}
+
+const tiltOptions: TiltOptions = {
+  max: 20,
+  scale: 1.05,
+  speed: DURATIONS.LONGEST,
 }
 
 export const projectTypeLabels = {
@@ -43,29 +51,31 @@ export default function ProjectLink({
       lg={4}
       xl={3}
     >
-      <ButtonBase
-        focusRipple
-        component={Link}
-        className={`ProjectLink-Link ColorInteract ColorInteract_color_${color}`}
-        to={`${PATHS.PORTFOLIO}${path}`}
-      >
-        <div className={`ProjectLink-View ProjectLink-View_name_${name}`}>
-          <div className="SvgPanel">
-            <DesktopSvg />
+      <Tilt className="ProjectLink-Tilt" options={tiltOptions}>
+        <ButtonBase
+          focusRipple
+          component={Link}
+          className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
+          to={`${PATHS.PORTFOLIO}${path}`}
+        >
+          <div className={`ProjectLink-View ProjectLink-View_name_${name}`}>
+            <div className="SvgPanel">
+              <DesktopSvg />
+            </div>
           </div>
-        </div>
-        <div className="ProjectLink-Content">
-          <img
-            className="ProjectLink-Company"
-            height={36}
-            src={company.logo}
-            srcSet={`${company.logo2x} 2x`}
-            alt={company.title}
-          />
-          <h3 className="ProjectLink-Title">{title}</h3>
-          <p className="ProjectLink-Label">{projectTypeLabels[type]}</p>
-        </div>
-      </ButtonBase>
+          <div className="ProjectLink-Content">
+            <img
+              className="ProjectLink-Company"
+              height={36}
+              src={company.logo}
+              srcSet={`${company.logo2x} 2x`}
+              alt={company.title}
+            />
+            <h3 className="ProjectLink-Title">{title}</h3>
+            <p className="ProjectLink-Label">{projectTypeLabels[type]}</p>
+          </div>
+        </ButtonBase>
+      </Tilt>
     </Grid>
   )
 }
