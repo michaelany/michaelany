@@ -23,7 +23,11 @@ export default function Drawer({open, onClose}: DrawerProps): JSX.Element {
     >
       <div className="Drawer-Content">
         <div className="Drawer-Block">
-          <IconButton className="Colorful" onClick={onClose}>
+          <IconButton
+            className="Colorful"
+            aria-label="Скрыть"
+            onClick={onClose}
+          >
             <ArrowBackIcon className="ButtonIcon" />
           </IconButton>
         </div>

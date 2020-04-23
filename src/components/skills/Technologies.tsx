@@ -4,12 +4,11 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 import ButtonBase from '@material-ui/core/ButtonBase'
-import Tooltip from '@material-ui/core/Tooltip'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
 import Pagination from '../_common/Pagination'
-
+import Tooltip from '../_common/Tooltip'
 import {PATHS, BLANK_LINK_PROPS} from '../../utils/constants'
 import {Technology} from '../../utils/types'
 import {TECHNOLOGY_TITLES} from '../../data/common'

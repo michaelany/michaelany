@@ -147,8 +147,6 @@ export default {
   props: {
     MuiTooltip: {
       enterDelay: DURATIONS.STANDARD,
-      enterTouchDelay: DURATIONS.STANDARD,
-      leaveTouchDelay: 0,
     },
     MuiExpansionPanel: {
       elevation: 0,

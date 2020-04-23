@@ -17,7 +17,11 @@ export default function Header(): JSX.Element {
   return (
     <>
       <header className="Header">
-        <IconButton className="Colorful" onClick={handleOpen}>
+        <IconButton
+          className="Colorful"
+          aria-label="Показать"
+          onClick={handleOpen}
+        >
           <MenuIcon className="ButtonIcon" />
         </IconButton>
         <Logo />

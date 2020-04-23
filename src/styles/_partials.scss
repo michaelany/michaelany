@@ -124,11 +124,14 @@
   }
   &_color_white,
   .App_color_white & {
+    &,
+    &:hover {
+      background-color: white;
+    }
     @include hover {
       background-color: $color_light-grey;
     }
     color: $color_text;
-    background-color: white;
   }
   @each $key, $value, $second-value in $colors-map {
     .App_color_#{$key} & {

@@ -3,5 +3,7 @@
 .Sidebar {
   position: fixed;
   height: 100%;
-  padding: 6px 0;
+  padding-top: 6px;
+  padding-bottom: 24px;
+  overflow-y: auto;
 }

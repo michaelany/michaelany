@@ -1,8 +1,8 @@
 import React, {MouseEvent} from 'react'
 import ButtonBase from '@material-ui/core/ButtonBase'
-import Tooltip from '@material-ui/core/Tooltip'
 
 import './Company.scss'
+import Tooltip from '../_common/Tooltip'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {Company as CompanyProps} from '../../utils/types'
 

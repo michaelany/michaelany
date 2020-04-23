@@ -1,9 +1,9 @@
 import React from 'react'
 import cn from 'classnames'
 import Fab from '@material-ui/core/Fab'
-import Tooltip from '@material-ui/core/Tooltip'
 
 import './SocialLinks.scss'
+import Tooltip from '../_common/Tooltip'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
 
