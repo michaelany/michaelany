@@ -142,6 +142,7 @@ $fab-size_mobile: 48px;
     background-color: white;
     height: 4px;
     border-radius: $border-radius / 4;
+    transition: all $duration_medium-long $easing_out;
   }
 
   &-scrollButtons {

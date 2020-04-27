@@ -1,4 +1,5 @@
 import React from 'react'
+import {isSafari} from 'react-device-detect'
 import {Link} from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
 import ButtonBase from '@material-ui/core/ButtonBase'
@@ -6,7 +7,7 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 import './ProjectLink.scss'
 import Tilt from '../_common/Tilt'
 import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
-import {PATHS, PROJECT_TYPES} from '../../utils/constants'
+import {PATHS, PROJECT_TYPES, TILT_SCALE} from '../../utils/constants'
 import {Color, Company, TiltOptions} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
@@ -21,8 +22,8 @@ interface ProjectLinkProps {
 }
 
 const tiltOptions: TiltOptions = {
-  max: 20,
-  scale: 1.05,
+  max: isSafari ? 0 : 20,
+  scale: TILT_SCALE,
   speed: DURATIONS.LONGEST,
 }
 

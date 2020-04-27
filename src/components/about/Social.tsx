@@ -1,4 +1,5 @@
 import React from 'react'
+import {isSafari} from 'react-device-detect'
 
 import './Social.scss'
 import meImg from '../../assets/img/pictures/me.png'
@@ -6,7 +7,7 @@ import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
 import Tilt from '../_common/Tilt'
-import {PATHS} from '../../utils/constants'
+import {PATHS, TILT_SCALE} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
 import {DURATIONS} from '../../styles/theme'
@@ -14,7 +15,8 @@ import {DURATIONS} from '../../styles/theme'
 const imgSize: number = 320
 
 const tiltOptions: TiltOptions = {
-  scale: 1.05,
+  max: isSafari ? 0 : 35,
+  scale: TILT_SCALE,
   speed: DURATIONS.LONGEST,
 }
 

@@ -1,18 +1,19 @@
 import React from 'react'
+import {isSafari} from 'react-device-detect'
 
 import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
 import Pagination from '../_common/Pagination'
 import Tilt from '../_common/Tilt'
-import {PATHS} from '../../utils/constants'
+import {PATHS, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  reset: false,
-  max: 60,
-  scale: 1,
+  reset: isSafari,
+  max: isSafari ? 0 : 50,
+  scale: isSafari ? TILT_SCALE : 1,
   speed: DURATIONS.LINGERING,
 }
 

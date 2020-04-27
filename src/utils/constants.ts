@@ -58,6 +58,8 @@ interface BlankLinkProps {
   rel: string
 }
 
+export const TILT_SCALE: number = 1.05
+
 export const COLORS: Colors = {
   ALTERNATE: 'alternate',
   WHITE: 'white',

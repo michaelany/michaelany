@@ -12,13 +12,17 @@
   overflow: hidden;
   margin-bottom: 40px;
 
+  & > figure {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
   @include xs {
     margin-bottom: 24px;
   }
 }
 
 .Social-Img {
-  border-radius: 50%;
   width: 320px;
   height: 320px;
   background-color: white;
