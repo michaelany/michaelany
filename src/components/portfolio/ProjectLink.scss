@@ -27,8 +27,6 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyazd', 'whip', '12saffron', 'fcdc',
 }
 
 .ProjectLink-View {
-  display: flex;
-  flex-direction: column;
   @each $project in $projects {
     &_name_#{$project}::after {
       @include retinaImg('../assets/img/projects/#{$project}', 'jpg');

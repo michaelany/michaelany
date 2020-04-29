@@ -214,14 +214,6 @@
   }
 }
 
-.SvgPanel {
-  display: flex;
-  & > svg {
-    width: 100%;
-    height: auto;
-  }
-}
-
 .ButtonIcon {
   font-size: 32px;
 }

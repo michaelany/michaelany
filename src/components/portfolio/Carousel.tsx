@@ -1,9 +1,9 @@
 import React from 'react'
 import Swiper from 'react-id-swiper'
-import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 
 import './Carousel.scss'
+import SvgPanel from '../_common/SvgPanel'
 import {SWIPER_OPTIONS} from '../../utils/constants'
 
 interface CarouselProps {
@@ -23,7 +23,6 @@ const renderSwiper = ({
     }экрана проекта "${title}"`
     return (
       <figure key={image[0]}>
-        <figcaption className="VisuallyHidden">{caption}</figcaption>
         <img
           className="Carousel-Img"
           src={image[0]}
@@ -53,12 +52,9 @@ export default function Carousel(props: CarouselProps): JSX.Element {
     )
   return (
     <div className="Carousel Carousel_type_desktop">
-      <div className="Carousel-Content">
-        <div className="SvgPanel">
-          <DesktopSvg />
-        </div>
+      <SvgPanel classes="Carousel-Content">
         <div className="Carousel-Block">{renderSwiper(props)}</div>
-      </div>
+      </SvgPanel>
     </div>
   )
 }

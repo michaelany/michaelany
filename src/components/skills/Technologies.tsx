@@ -163,18 +163,17 @@ const groups: IGroup[] = [
         href: 'https://material-ui.com',
       },
       {
+        name: 'styled',
+        label: TECHNOLOGY_TITLES.STYLED,
+        color: 'yellow',
+        href: 'https://styled-components.com',
+      },
+      {
         disabled: true,
         name: 'modules',
         label: TECHNOLOGY_TITLES.MODULES,
         color: 'default',
         href: 'https://github.com/css-modules/css-modules',
-      },
-      {
-        disabled: true,
-        name: 'styled',
-        label: TECHNOLOGY_TITLES.STYLED,
-        color: 'yellow',
-        href: 'https://styled-components.com',
       },
       {
         disabled: true,

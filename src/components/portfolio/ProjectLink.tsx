@@ -6,7 +6,7 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './ProjectLink.scss'
 import Tilt from '../_common/Tilt'
-import {ReactComponent as DesktopSvg} from '../../assets/img/shapes/desktop.svg'
+import SvgPanel from '../_common/SvgPanel'
 import {PATHS, PROJECT_TYPES, TILT_SCALE} from '../../utils/constants'
 import {Color, Company, TiltOptions} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
@@ -59,11 +59,9 @@ export default function ProjectLink({
           className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
           to={`${PATHS.PORTFOLIO}${path}`}
         >
-          <div className={`ProjectLink-View ProjectLink-View_name_${name}`}>
-            <div className="SvgPanel">
-              <DesktopSvg />
-            </div>
-          </div>
+          <SvgPanel
+            classes={`ProjectLink-View ProjectLink-View_name_${name}`}
+          />
           <div className="ProjectLink-Content">
             <img
               className="ProjectLink-Company"
