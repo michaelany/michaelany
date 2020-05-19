@@ -51,10 +51,12 @@
   }
   .App_color_white & {
     color: white;
+    outline-color: white;
   }
   @each $key, $value in $colors-map {
     .App_color_#{$key} & {
       color: $value;
+      outline-color: $value;
     }
   }
 }
@@ -158,10 +160,19 @@
 }
 
 .Link {
-  color: white;
   user-select: auto;
   @include hover {
     text-decoration: underline;
+  }
+  .App_color_white & {
+    color: white;
+    outline-color: white;
+  }
+  @each $key, $value in $colors-map {
+    .App_color_#{$key} & {
+      color: $value;
+      outline-color: $value;
+    }
   }
 }
 

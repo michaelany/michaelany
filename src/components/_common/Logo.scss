@@ -6,11 +6,13 @@
     transform: scale(1.15) rotate(-10deg);
   }
   font-size: 40px;
-  letter-spacing: -6px;
+  letter-spacing: -0.15em;
   font-weight: 900;
   line-height: 0.8;
   padding-top: 14px;
   padding-bottom: 14px;
+  margin-right: 8px;
+  margin-left: 8px;
   margin-bottom: 64px;
   text-align: center;
   display: block;
@@ -19,10 +21,12 @@
 
   @include md {
     font-size: 36px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 8px 6px;
+    margin-left: 0;
     margin-bottom: 0;
     margin-right: 14px;
+    text-indent: -0.15em;
+    width: 66px;
     @include hover {
       transform: scale(1.15) rotate(10deg);
     }

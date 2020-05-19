@@ -1,24 +1,31 @@
 @keyframes alternateColor {
   from {
     color: $color_blue;
+    outline-color: $color_blue;
   }
   16.66% {
     color: $color_green;
+    outline-color: $color_green;
   }
   33.33% {
     color: $color_grass;
+    outline-color: $color_grass;
   }
   50% {
     color: $color_red;
+    outline-color: $color_red;
   }
   66.66% {
     color: $color_yellow;
+    outline-color: $color_yellow;
   }
   83.33% {
     color: $color_violet;
+    outline-color: $color_violet;
   }
   to {
     color: $color_blue;
+    outline-color: $color_blue;
   }
 }
 
