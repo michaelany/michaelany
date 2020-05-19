@@ -437,10 +437,7 @@ const groups: IGroup[] = [
 
 const renderTechnologies = (technologies: Technology[]): JSX.Element[] =>
   technologies.map(
-    (
-      {label, name, color, href, disabled}: Technology,
-      index: number
-    ): JSX.Element => (
+    ({label, name, color, href, disabled}: Technology, index: number) => (
       <Grid key={index} item component="li" xs={6} sm={4} md={3} lg={4} xl={3}>
         <Tooltip title={label}>
           <ButtonBase
@@ -466,24 +463,22 @@ export default function Technologies(): JSX.Element {
     <section className="Technologies Section Section_pagination Section_colorful">
       <h2 className="VisuallyHidden">Технологии</h2>
       <ul>
-        {groups.map(
-          ({title, technologies}: IGroup, index: number): JSX.Element => (
-            <ExpansionPanel
-              key={index}
-              component="li"
-              defaultExpanded={index === 0}
-            >
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <h3 className="Technologies-Title">{title}</h3>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Grid container component="ul">
-                  {renderTechnologies(technologies)}
-                </Grid>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-          )
-        )}
+        {groups.map(({title, technologies}: IGroup, index: number) => (
+          <ExpansionPanel
+            key={index}
+            component="li"
+            defaultExpanded={index === 0}
+          >
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <h3 className="Technologies-Title">{title}</h3>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Grid container component="ul">
+                {renderTechnologies(technologies)}
+              </Grid>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        ))}
       </ul>
       <Pagination prevTo={PATHS.ABOUT} nextTo={PATHS.EXPERIENCE} />
     </section>

@@ -17,7 +17,7 @@ const renderSwiper = ({
   title,
   images,
 }: CarouselProps): JSX.Element | JSX.Element[] => {
-  const imageElements = images.map(image => {
+  const imageElements: JSX.Element[] = images.map((image: string[]) => {
     const caption = `Скриншот ${
       mobile ? 'мобильного ' : ''
     }экрана проекта "${title}"`

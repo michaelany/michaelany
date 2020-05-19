@@ -12,7 +12,7 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyazd', 'whip', '12saffron', 'fcdc',
 
 .ProjectLink-Item {
   @include responsiveBlock(70.35%);
-  @include hoverFocus {
+  @include hover {
     .ProjectLink-Content {
       opacity: 1;
     }

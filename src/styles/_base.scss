@@ -2,7 +2,7 @@ html {
   font-size: $font-size_base;
 
   @include lg {
-    font-size: $font-size_mobile;
+    font-size: $font-size_smaller;
   }
 
   @include md {
@@ -10,7 +10,7 @@ html {
   }
 
   @include sm {
-    font-size: $font-size_mobile;
+    font-size: $font-size_smaller;
   }
 }
 
@@ -18,13 +18,7 @@ body {
   overflow-y: scroll;
 }
 
-p {
-  margin: 0;
-  & > b {
-    font-weight: inherit;
-  }
-}
-
+p,
 h1,
 h2,
 h3,
@@ -33,6 +27,10 @@ h5,
 h6,
 ul {
   margin: 0;
+}
+
+b {
+  font-weight: inherit;
 }
 
 a {

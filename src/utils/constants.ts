@@ -31,7 +31,7 @@ interface ProjectTypes {
   LANDING: ProjectType
 }
 
-interface PROJECT_PATHS {
+interface ProjectPaths {
   PROXIMAL: string
   EMBP: string
   TMF: string
@@ -93,7 +93,7 @@ export const PROJECT_TYPES: ProjectTypes = {
   LANDING: 'landing',
 }
 
-export const PROJECT_PATHS: PROJECT_PATHS = {
+export const PROJECT_PATHS: ProjectPaths = {
   PROXIMAL: '/proximal-coffee',
   EMBP: '/arma-embp',
   TMF: '/tmf',

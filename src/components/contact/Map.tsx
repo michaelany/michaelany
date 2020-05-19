@@ -13,8 +13,8 @@ interface InitialCenter {
 }
 
 const initialCenter: InitialCenter = {
-  lat: 55.7931056,
-  lng: 37.8074463,
+  lat: 55.819456,
+  lng: 37.802932,
 }
 
 const LoadingContainer = (): JSX.Element => (

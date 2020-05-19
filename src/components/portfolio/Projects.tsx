@@ -56,15 +56,13 @@ export default function Projects(): JSX.Element {
         scrollButtons="off"
         onChange={handleChange}
       >
-        {filters.map(
-          (type: string): JSX.Element => (
-            <Tab key={type} value={type} label={filterLabels[type]} />
-          )
-        )}
+        {filters.map((type: string) => (
+          <Tab key={type} value={type} label={filterLabels[type]} />
+        ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>
         {getFilteredProjects(filter).map(
-          ({name, title, type, color, company, path}: Project): JSX.Element => (
+          ({name, title, type, color, company, path}: Project) => (
             <ProjectLink
               key={name}
               title={title}

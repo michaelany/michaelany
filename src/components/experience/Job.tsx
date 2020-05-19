@@ -18,25 +18,26 @@ const renderPosition = (positions: Position[]): JSX.Element[] =>
     <li key={index} className="Job-Position">
       <h3 className="Job-Occupation">{occupation}</h3>
       <ul className="Job-Duties">
-        {duties.map(
-          (duty: string, index: number): JSX.Element => (
-            <li key={index} className="Job-Duty">
-              {duty}
-            </li>
-          )
-        )}
+        {duties.map((duty: string, index: number) => (
+          <li key={index} className="Job-Duty">
+            {duty}
+          </li>
+        ))}
       </ul>
     </li>
   ))
 
 const renderFeatures = (features: Feature[]): JSX.Element[] =>
-  features.map(
-    ({label, Icon}: Feature, index: number): JSX.Element => (
-      <Chip key={index} className="Chip" icon={<Icon />} label={label} />
-    )
-  )
+  features.map(({label, Icon}: Feature, index: number) => (
+    <Chip key={index} className="Chip" icon={<Icon />} label={label} />
+  ))
 
-export default function Job({company, positions, features, index}: JobProps) {
+export default function Job({
+  company,
+  positions,
+  features,
+  index,
+}: JobProps): JSX.Element {
   return (
     <ExpansionPanel
       component="li"

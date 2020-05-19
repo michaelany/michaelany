@@ -160,7 +160,7 @@
 .Link {
   color: white;
   user-select: auto;
-  @include hoverFocus {
+  @include hover {
     text-decoration: underline;
   }
 }

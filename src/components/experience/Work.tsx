@@ -133,11 +133,9 @@ export default function Work(): JSX.Element {
         </b>
       </p>
       <ul className="Work">
-        {jobs.map(
-          (job: JobInterface, index: number): JSX.Element => (
-            <Job key={index} {...job} index={index} />
-          )
-        )}
+        {jobs.map((job: JobInterface, index: number) => (
+          <Job key={index} {...job} index={index} />
+        ))}
       </ul>
     </section>
   )

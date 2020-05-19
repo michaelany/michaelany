@@ -163,35 +163,33 @@ export default function VerticalLinearStepper(): JSX.Element {
 
   return (
     <Stepper className="Stepper" activeStep={step} orientation="vertical">
-      {steps.map(
-        ({label, text}: Step, index: number): JSX.Element => (
-          <Step key={index}>
-            <StepLabel>{label}</StepLabel>
-            <StepContent>
-              <p className="Stepper-Text">{text}</p>
-              <div className="Stepper-Actions">
-                <Fab
-                  className="Stepper-Button"
-                  size="medium"
-                  aria-label="Вперед"
-                  onClick={handleNext}
-                >
-                  <ArrowForwardIcon className="Stepper-ButtonIcon" />
-                </Fab>
-                <Fab
-                  className="Stepper-Button"
-                  size="medium"
-                  aria-label="Назад"
-                  disabled={step === 0}
-                  onClick={handleBack}
-                >
-                  <ArrowBackIcon className="Stepper-ButtonIcon" />
-                </Fab>
-              </div>
-            </StepContent>
-          </Step>
-        )
-      )}
+      {steps.map(({label, text}: Step, index: number) => (
+        <Step key={index}>
+          <StepLabel>{label}</StepLabel>
+          <StepContent>
+            <p className="Stepper-Text">{text}</p>
+            <div className="Stepper-Actions">
+              <Fab
+                className="Stepper-Button"
+                size="medium"
+                aria-label="Вперед"
+                onClick={handleNext}
+              >
+                <ArrowForwardIcon className="Stepper-ButtonIcon" />
+              </Fab>
+              <Fab
+                className="Stepper-Button"
+                size="medium"
+                aria-label="Назад"
+                disabled={step === 0}
+                onClick={handleBack}
+              >
+                <ArrowBackIcon className="Stepper-ButtonIcon" />
+              </Fab>
+            </div>
+          </StepContent>
+        </Step>
+      ))}
       {step === steps.length && (
         <>
           <p className="Stepper-Text">

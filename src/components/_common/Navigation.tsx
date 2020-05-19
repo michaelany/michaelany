@@ -38,26 +38,24 @@ export default function Navigation({onClose}: NavigationProps): JSX.Element {
   return (
     <nav className="Navigation">
       <ul>
-        {navLinks.map(
-          ({title, to, Icon}: NavLinkInterface, index: number): JSX.Element => (
-            <li key={index}>
-              <Tooltip title={title} placement="right">
-                <Button
-                  fullWidth
-                  exact={to !== PATHS.PORTFOLIO}
-                  className="Navigation-Link"
-                  activeClassName="Colorful"
-                  component={NavLink}
-                  to={to}
-                  aria-label={title}
-                  onClick={onClose}
-                >
-                  <Icon fontSize="inherit" />
-                </Button>
-              </Tooltip>
-            </li>
-          )
-        )}
+        {navLinks.map(({title, to, Icon}: NavLinkInterface, index: number) => (
+          <li key={index}>
+            <Tooltip title={title} placement="right">
+              <Button
+                fullWidth
+                exact={to !== PATHS.PORTFOLIO}
+                className="Navigation-Link"
+                activeClassName="Colorful"
+                component={NavLink}
+                to={to}
+                aria-label={title}
+                onClick={onClose}
+              >
+                <Icon fontSize="inherit" />
+              </Button>
+            </Tooltip>
+          </li>
+        ))}
       </ul>
     </nav>
   )

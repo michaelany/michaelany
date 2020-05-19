@@ -18,15 +18,15 @@ import {unregister as unregisterServiceWorker} from './utils/serviceWorker'
 const theme: Theme = createMuiTheme(THEME as object)
 
 ReactDOM.render(
-  <BrowserRouter>
-    <StylesProvider injectFirst>
-      <ThemeProvider theme={theme}>
+  <StylesProvider injectFirst>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
         <CssBaseline />
         <ScrollToTop />
         <App />
-      </ThemeProvider>
-    </StylesProvider>
-  </BrowserRouter>,
+      </BrowserRouter>
+    </ThemeProvider>
+  </StylesProvider>,
   document.getElementById('root')
 )
 

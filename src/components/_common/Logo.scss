@@ -2,7 +2,7 @@
 @import 'styles/mixins';
 
 .Logo {
-  @include hoverFocus {
+  @include hover {
     transform: scale(1.15) rotate(-10deg);
   }
   font-size: 40px;
@@ -23,7 +23,7 @@
     padding-bottom: 12px;
     margin-bottom: 0;
     margin-right: 14px;
-    @include hoverFocus {
+    @include hover {
       transform: scale(1.15) rotate(10deg);
     }
   }

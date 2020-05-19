@@ -19,6 +19,8 @@
   }
   & > *:first-child {
     position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
   }
@@ -26,15 +28,6 @@
 
 @mixin animationAlternate($animation: alternateColor) {
   animation: $animation $duration_alternate linear infinite;
-}
-
-@mixin hoverFocus {
-  @media (hover: hover) {
-    &:hover,
-    &:focus {
-      @content;
-    }
-  }
 }
 
 @mixin hover {

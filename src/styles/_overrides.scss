@@ -1,6 +1,3 @@
-$fab-size_base: 56px;
-$fab-size_mobile: 48px;
-
 .MuiButton {
   &-root {
     transition: color $duration_short $easing_in-out,
@@ -37,7 +34,7 @@ $fab-size_mobile: 48px;
 
 .MuiTooltip {
   &-tooltip {
-    font-size: $font-size_mobile;
+    font-size: $font-size_smaller;
     color: $color_text;
     background-color: white;
     border: 1px solid $color_text;
@@ -55,7 +52,7 @@ $fab-size_mobile: 48px;
 
 .MuiChip {
   &-root {
-    font-size: $font-size_mobile;
+    font-size: $font-size_smaller;
     font-weight: 500;
     background-color: rgba($color_second-text, 0.12);
     color: $color_text;
@@ -165,7 +162,7 @@ $fab-size_mobile: 48px;
     }
 
     @include sm {
-      font-size: $font-size_mobile;
+      font-size: $font-size_smaller;
       min-width: auto;
     }
   }
