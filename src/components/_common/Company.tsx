@@ -29,7 +29,6 @@ export default function Company({
       >
         <img
           className="Company-Img"
-          height={36}
           src={logo}
           srcSet={`${logo2x} 2x`}
           alt={title}

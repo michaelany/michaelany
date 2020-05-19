@@ -27,7 +27,6 @@ const renderSwiper = ({
           className="Carousel-Img"
           src={image[0]}
           srcSet={`${image[1]} 2x`}
-          width={800}
           alt={caption}
         />
       </figure>
