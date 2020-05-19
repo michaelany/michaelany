@@ -49,8 +49,7 @@ export interface Technology {
 export interface Company {
   title: string
   color: Color
-  logo: string
-  logo2x: string
+  images: string[]
   href: string
 }
 

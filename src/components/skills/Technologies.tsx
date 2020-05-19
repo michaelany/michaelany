@@ -54,7 +54,6 @@ const groups: IGroup[] = [
         href: 'https://mobx.js.org',
       },
       {
-        disabled: true,
         name: 'preact',
         label: TECHNOLOGY_TITLES.PREACT,
         color: 'violet',

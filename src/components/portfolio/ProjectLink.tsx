@@ -65,8 +65,8 @@ export default function ProjectLink({
           <div className="ProjectLink-Content">
             <img
               className="ProjectLink-Company"
-              src={company.logo}
-              srcSet={`${company.logo2x} 2x`}
+              src={company.images[0]}
+              srcSet={`${company.images[1]} 2x`}
               alt={company.title}
             />
             <h3 className="ProjectLink-Title">{title}</h3>

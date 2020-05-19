@@ -14,8 +14,7 @@ export default function Company({
   title,
   color,
   href,
-  logo,
-  logo2x,
+  images,
 }: CompanyProps): JSX.Element {
   return (
     <Tooltip title={title}>
@@ -29,8 +28,8 @@ export default function Company({
       >
         <img
           className="Company-Img"
-          src={logo}
-          srcSet={`${logo2x} 2x`}
+          src={images[0]}
+          srcSet={`${images[1]} 2x`}
           alt={title}
         />
       </ButtonBase>

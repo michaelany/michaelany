@@ -54,7 +54,7 @@ const features: Feature[] = [
   {label: 'Есть опыт проведения собеседований', Icon: PersonAddIcon},
 ]
 
-const extraContent: string =
+const extra: string =
   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, dolores quae vitae sit sunt quasi facilis. Exercitationem provident, nulla laudantium earum aut quo non quisquam. Consequatur illo commodi deleniti, perspiciatis doloremque mollitia tempora, excepturi magni nisi similique nobis! Fugit, in architecto tempora quidem doloribus, commodi consequatur temporibus vel error voluptatem, porro iste minus? Dolor totam ipsum aspernatur quidem voluptas quis quo magnam veniam unde harum inventore dignissimos tenetur, odio id, tempora deserunt quos cupiditate ad earum. Et magnam deserunt laborum nostrum, itaque debitis. Quo laudantium ipsam placeat repudiandae sed provident deserunt nemo recusandae, praesentium, aliquam sit minima illum velit commodi.'
 
 export default function Skills(): JSX.Element {
@@ -65,7 +65,7 @@ export default function Skills(): JSX.Element {
           title={TITLES.SKILLS}
           text={text}
           features={features}
-          extraContent={extraContent}
+          extra={extra}
         />
       }
       secondSection={<Technologies />}

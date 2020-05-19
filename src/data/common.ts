@@ -1,11 +1,3 @@
-import everpointImg from '../assets/img/companies/everpoint.png'
-import everpointImg2x from '../assets/img/companies/everpoint@2x.png'
-import sevenGlyphsImg from '../assets/img/companies/7glyphs.png'
-import sevenGlyphsImg2x from '../assets/img/companies/7glyphs@2x.png'
-import tsftdImg from '../assets/img/companies/tsftd.png'
-import tsftdImg2x from '../assets/img/companies/tsftd@2x.png'
-import mvideoImg from '../assets/img/companies/mvideo.png'
-import mvideoImg2x from '../assets/img/companies/mvideo@2x.png'
 import {ReactComponent as SevenGlyphsIcon} from '../assets/icons/7glyphs.svg'
 import {ReactComponent as GitHubIcon} from '../assets/icons/github.svg'
 import {ReactComponent as LinkedInIcon} from '../assets/icons/linkedin.svg'
@@ -190,29 +182,37 @@ export const CONTACT_LINKS: ContactLinks = {
 export const COMPANIES: Companies = {
   TSFTD: {
     title: COMPANY_TITLES.TSFTD,
-    logo: tsftdImg,
-    logo2x: tsftdImg2x,
+    images: [
+      require('../assets/img/companies/tsftd.png'),
+      require('../assets/img/companies/tsftd@2x.png'),
+    ],
     color: 'red',
     href: 'http://www.tsft.ru',
   },
   SEVEN_GLYPHS: {
     title: COMPANY_TITLES.SEVEN_GLYPHS,
-    logo: sevenGlyphsImg,
-    logo2x: sevenGlyphsImg2x,
+    images: [
+      require('../assets/img/companies/7glyphs.png'),
+      require('../assets/img/companies/7glyphs@2x.png'),
+    ],
     color: 'default',
     href: 'https://7glyphs.com',
   },
   EVERPOINT: {
     title: COMPANY_TITLES.EVERPOINT,
-    logo: everpointImg,
-    logo2x: everpointImg2x,
+    images: [
+      require('../assets/img/companies/everpoint.png'),
+      require('../assets/img/companies/everpoint@2x.png'),
+    ],
     color: 'grass',
     href: 'https://www.everpoint.ru',
   },
   MVIDEO: {
     title: COMPANY_TITLES.MVIDEO,
-    logo: mvideoImg,
-    logo2x: mvideoImg2x,
+    images: [
+      require('../assets/img/companies/mvideo.png'),
+      require('../assets/img/companies/mvideo@2x.png'),
+    ],
     color: 'red',
     href: 'https://www.mvideo.ru',
   },
