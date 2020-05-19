@@ -12,8 +12,6 @@ import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
 import {DURATIONS} from '../../styles/theme'
 
-const imgSize: number = 320
-
 const tiltOptions: TiltOptions = {
   max: isSafari ? 0 : 35,
   scale: TILT_SCALE,
@@ -37,8 +35,6 @@ export default function Social(): JSX.Element {
         <Tilt component="figure" className="Social-Photo" options={tiltOptions}>
           <img
             className="Social-Img"
-            width={imgSize}
-            height={imgSize}
             src={meImg}
             srcSet={`${meImg2x} 2x`}
             alt="Michael Ananiev | vashstamp"
