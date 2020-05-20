@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Pagination from '../_common/Pagination'
+import Copyright from '../_common/Copyright'
 import Projects from './Projects'
 import {PATHS} from '../../utils/constants'
 import {TITLES} from '../../data/common'
@@ -13,6 +14,7 @@ export default function Portfolio(): JSX.Element {
         <Projects />
       </div>
       <Pagination prevTo={PATHS.EXPERIENCE} nextTo={PATHS.CONTACT} />
+      <Copyright />
     </section>
   )
 }

@@ -20,7 +20,7 @@ function Features({items}: FeaturesProps): JSX.Element {
           xs={12}
           sm={6}
         >
-          <Icon className="Features-Icon" />
+          <Icon className="Features-Icon Colorful Colorful_dark" />
           <p>{label}</p>
         </Grid>
       ))}

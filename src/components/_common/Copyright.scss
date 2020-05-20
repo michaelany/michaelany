@@ -1,0 +1,35 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.Copyright {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 12px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  @include sm {
+    bottom: 10px;
+  }
+}
+
+.Copyright-Icon {
+  position: relative;
+  top: 2px;
+  font-size: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  &:last-child {
+    margin-left: 0;
+  }
+}
+
+.Copyright-Link {
+  @include hover {
+    text-decoration: underline;
+  }
+  font-weight: 500;
+  color: white;
+  outline-color: white;
+}

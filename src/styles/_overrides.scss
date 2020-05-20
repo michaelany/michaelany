@@ -4,7 +4,6 @@
       background-color $duration_short $easing_in-out,
       border $duration_short $easing_in-out;
   }
-
   &-containedSizeLarge {
     font-size: 1.125rem;
   }
@@ -14,17 +13,14 @@
   &-root:not(.MuiFab-sizeMedium) {
     width: $fab-size_base;
     height: $fab-size_base;
-
     @include lg {
       width: $fab-size_mobile;
       height: $fab-size_mobile;
     }
-
     @include md {
       width: $fab-size_base;
       height: $fab-size_base;
     }
-
     @include sm {
       width: $fab-size_mobile;
       height: $fab-size_mobile;
@@ -58,7 +54,6 @@
     color: $color_text;
     margin: 4px;
   }
-
   &-icon {
     color: $color_second-text;
     font-size: 24px;
@@ -81,13 +76,11 @@
   &-root {
     font-size: 24px;
   }
-
   &-text {
     font-size: 12px;
     font-weight: bold;
     fill: white;
   }
-
   &-completed {
     fill: $color_grass;
   }
@@ -141,7 +134,6 @@
     border-radius: $border-radius / 4;
     transition: all $duration_medium-long $easing_out;
   }
-
   &-scrollButtons {
     color: white;
     border-radius: $border-radius;
@@ -156,11 +148,9 @@
     border-top-right-radius: $border-radius;
     border-bottom-left-radius: $border-radius / 4;
     border-bottom-right-radius: $border-radius / 4;
-
     @include md {
       min-width: 100px;
     }
-
     @include sm {
       font-size: $font-size_smaller;
       min-width: auto;

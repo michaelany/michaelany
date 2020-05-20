@@ -2,6 +2,7 @@
 @import 'styles/mixins';
 
 .Pagination {
+  position: relative;
   .App_background_blue & {
     width: 50%;
     margin-left: auto;

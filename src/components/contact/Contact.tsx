@@ -3,6 +3,7 @@ import React from 'react'
 import Sections from '../_common/Sections'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
+import Copyright from '../_common/Copyright'
 import ContactForm from './ContactForm'
 import Map from './Map'
 import {BLANK_LINK_PROPS, PATHS} from '../../utils/constants'
@@ -40,6 +41,7 @@ export default function Contact(): JSX.Element {
           </div>
           <SocialLinks links={links} />
           <Pagination prevTo={PATHS.PORTFOLIO} />
+          <Copyright />
         </section>
       }
       secondSection={

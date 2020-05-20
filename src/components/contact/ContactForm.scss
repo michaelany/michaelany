@@ -4,11 +4,9 @@
 .ContactForm-Submit {
   margin-top: 24px;
   margin-bottom: 80px;
-
   @include md {
     margin-bottom: 64px;
   }
-
   @include sm {
     margin-bottom: 56px;
   }

@@ -1,11 +1,11 @@
-import CodeIcon from '@material-ui/icons/CodeTwoTone'
-import EventIcon from '@material-ui/icons/EventTwoTone'
-import PaletteIcon from '@material-ui/icons/PaletteTwoTone'
-import WebIcon from '@material-ui/icons/WebTwoTone'
-import GroupWorkIcon from '@material-ui/icons/GroupWorkTwoTone'
-import BuildIcon from '@material-ui/icons/BuildTwoTone'
-import StarIcon from '@material-ui/icons/StarTwoTone'
-import CheckCircleIcon from '@material-ui/icons/CheckCircleTwoTone'
+import CodeIcon from '@material-ui/icons/CodeRounded'
+import EventIcon from '@material-ui/icons/EventRounded'
+import PaletteIcon from '@material-ui/icons/PaletteRounded'
+import WebIcon from '@material-ui/icons/WebRounded'
+import GroupWorkIcon from '@material-ui/icons/GroupWorkRounded'
+import BuildIcon from '@material-ui/icons/BuildRounded'
+import StarIcon from '@material-ui/icons/StarRounded'
+import CheckCircleIcon from '@material-ui/icons/CheckCircleRounded'
 
 import {COMPANIES, TECHNOLOGY_TITLES, PROJECT_TYPE_LABELS} from './common'
 import {PROJECT_TYPES, PATH_COLORS, PROJECT_PATHS} from '../utils/constants'
@@ -103,7 +103,7 @@ const PROJECTS: Project[] = [
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}`,
+        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.STYLED}`,
         Icon: PaletteIcon,
       },
       {
@@ -482,7 +482,7 @@ const PROJECTS: Project[] = [
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}`,
+        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.STYLED}`,
         Icon: PaletteIcon,
       },
       {

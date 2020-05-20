@@ -18,7 +18,6 @@
   display: block;
   transition: transform $duration_standard $easing_in-out,
     color $duration_short $easing_in-out;
-
   @include md {
     font-size: 36px;
     padding: 8px 6px;

@@ -7,10 +7,6 @@
   justify-content: center;
 }
 
-.Greeting-Title {
-  margin-bottom: 8px;
-}
-
 .Greeting-Icon {
   position: relative;
   top: 6px;
@@ -18,14 +14,12 @@
   width: 60px;
   height: 60px;
   animation: hello $duration_lingering $easing_in-out infinite;
-
   @include lg {
     top: 5px;
     width: 50px;
     height: 50px;
     margin-left: 16px;
   }
-
   @include sm {
     top: 4px;
     width: 42px;

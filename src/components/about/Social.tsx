@@ -6,6 +6,7 @@ import meImg from '../../assets/img/pictures/me.png'
 import meImg2x from '../../assets/img/pictures/me@2x.png'
 import SocialLinks from '../_common/SocialLinks'
 import Pagination from '../_common/Pagination'
+import Copyright from '../_common/Copyright'
 import Tilt from '../_common/Tilt'
 import {PATHS, TILT_SCALE} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
@@ -43,6 +44,7 @@ export default function Social(): JSX.Element {
         <SocialLinks about links={links} />
       </div>
       <Pagination prevTo={PATHS.HOME} nextTo={PATHS.SKILLS} />
+      <Copyright />
     </section>
   )
 }

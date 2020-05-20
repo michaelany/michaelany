@@ -10,7 +10,6 @@ $xs-margin: 0 8px 16px 8px;
 .SocialLinks {
   display: flex;
   justify-content: center;
-
   @include xs {
     flex-wrap: wrap;
     padding-left: 14.5%;
@@ -30,22 +29,18 @@ $xs-margin: 0 8px 16px 8px;
       margin-left: 0;
       margin-right: 0;
       bottom: 62px;
-
       @include lg {
         margin-left: 2px;
         margin-right: 2px;
       }
-
       @include md {
         margin-left: 0;
         margin-right: 0;
       }
-
       @include sm {
         margin-left: 2px;
         margin-right: 2px;
       }
-
       @include xs {
         bottom: auto;
         margin: $xs-margin;
@@ -54,19 +49,15 @@ $xs-margin: 0 8px 16px 8px;
     &:nth-child(2),
     &:nth-child(5) {
       bottom: 20px;
-
       @include lg {
         bottom: 26px;
       }
-
       @include md {
         bottom: 20px;
       }
-
       @include sm {
         bottom: 26px;
       }
-
       @include xs {
         bottom: auto;
       }
@@ -82,7 +73,6 @@ $xs-margin: 0 8px 16px 8px;
     &:nth-child(5) {
       margin-right: 4px;
       margin-left: 6px;
-
       @include xs {
         margin: $xs-margin;
       }
@@ -91,26 +81,21 @@ $xs-margin: 0 8px 16px 8px;
     &:nth-child(4) {
       margin-left: 8px;
       margin-right: 8px;
-
       @include lg {
         bottom: 8px;
       }
-
       @include md {
         bottom: 0;
       }
-
       @include sm {
         bottom: 8px;
       }
-
       @include xs {
         margin: $xs-margin;
         bottom: auto;
       }
     }
   }
-
   @include xs {
     margin-bottom: 16px;
   }

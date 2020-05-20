@@ -16,7 +16,6 @@
     border-radius: 50%;
     overflow: hidden;
   }
-
   @include xs {
     margin-bottom: 24px;
   }
@@ -26,7 +25,6 @@
   width: 320px;
   height: 320px;
   background-color: white;
-
   @include xs {
     width: 100%;
     height: auto;

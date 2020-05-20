@@ -13,7 +13,7 @@ export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
       <h1 className="VisuallyHidden">Фронтенд разработчик Michael Ananiev</h1>
-      <p className="Greeting-Title Title">
+      <p className="Greeting-Text Title">
         <b>
           Привет!
           <HelloIcon className="Greeting-Icon" />

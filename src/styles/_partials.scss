@@ -10,6 +10,7 @@
 }
 
 .Section {
+  position: relative;
   padding: 80px 10%;
   height: 100%;
   &_single {
@@ -53,10 +54,12 @@
     color: white;
     outline-color: white;
   }
-  @each $key, $value in $colors-map {
+  @each $key, $value, $second-value in $colors-map {
     .App_color_#{$key} & {
       color: $value;
-      outline-color: $value;
+    }
+    .App_color_#{$key} &_dark {
+      color: $second-value;
     }
   }
 }
@@ -74,11 +77,9 @@
       color: $value;
     }
   }
-
   @include lg {
     font-size: 44px;
   }
-
   @include sm {
     font-size: 36px;
   }
@@ -93,11 +94,9 @@
   &_dark {
     color: $color_text;
   }
-
   @include lg {
     font-size: 26px;
   }
-
   @include sm {
     font-size: 22px;
   }
@@ -149,7 +148,6 @@
       }
     }
   }
-
   @include xs {
     width: 100%;
     margin-right: 0;
@@ -181,11 +179,9 @@
   &_center {
     text-align: center;
   }
-
   @include md {
     margin-top: 48px;
   }
-
   @include sm {
     margin-top: 40px;
   }

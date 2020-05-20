@@ -1,16 +1,16 @@
 import React from 'react'
-import ThumbUpIcon from '@material-ui/icons/CheckCircleTwoTone'
-import SpeedIcon from '@material-ui/icons/SpeedTwoTone'
-import BuildIcon from '@material-ui/icons/BuildTwoTone'
-import AccountTreeIcon from '@material-ui/icons/AccountTreeTwoTone'
-import BrushIcon from '@material-ui/icons/BrushTwoTone'
-import DevicesOtherIcon from '@material-ui/icons/DevicesOtherTwoTone'
-import PersonAddIcon from '@material-ui/icons/PersonAddTwoTone'
-import ChildFriendlyIcon from '@material-ui/icons/ChildFriendlyTwoTone'
-import ListAltIcon from '@material-ui/icons/ListAltTwoTone'
-import LoopIcon from '@material-ui/icons/LoopTwoTone'
-import PaletteIcon from '@material-ui/icons/PaletteTwoTone'
-import ExtensionIcon from '@material-ui/icons/ExtensionTwoTone'
+import CheckCircleIcon from '@material-ui/icons/CheckCircleRounded'
+import SpeedIcon from '@material-ui/icons/SpeedRounded'
+import BuildIcon from '@material-ui/icons/BuildRounded'
+import AccountTreeIcon from '@material-ui/icons/AccountTreeRounded'
+import BrushIcon from '@material-ui/icons/BrushRounded'
+import DevicesOtherIcon from '@material-ui/icons/DevicesOtherRounded'
+import PersonAddIcon from '@material-ui/icons/PersonAddRounded'
+import ChildFriendlyIcon from '@material-ui/icons/ChildFriendlyRounded'
+import ListAltIcon from '@material-ui/icons/ListAltRounded'
+import LoopIcon from '@material-ui/icons/LoopRounded'
+import PaletteIcon from '@material-ui/icons/PaletteRounded'
+import ExtensionIcon from '@material-ui/icons/ExtensionRounded'
 
 import Sections from '../_common/Sections'
 import Info from '../_common/Info'
@@ -25,7 +25,7 @@ const features: Feature[] = [
   {label: 'Пишу современный и быстро работающий код', Icon: SpeedIcon},
   {
     label: 'Выбираю простой и эффективный способ решения задачи',
-    Icon: ThumbUpIcon,
+    Icon: CheckCircleIcon,
   },
   {
     label: 'Имею в арсенале большое количество паттернов и приемов',

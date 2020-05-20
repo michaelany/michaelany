@@ -11,19 +11,16 @@ $img-height_sm: 32px;
   padding: $padding_st;
   margin-left: -$padding_st;
   margin-right: -$padding_st;
-
   @include lg {
     padding: $padding_sm;
     margin-left: -$padding_sm;
     margin-right: -$padding_sm;
   }
-
   @include md {
     padding: $padding_st;
     margin-left: -$padding_st;
     margin-right: -$padding_st;
   }
-
   @include sm {
     padding: $padding_sm;
     margin-left: -$padding_sm;
@@ -33,15 +30,12 @@ $img-height_sm: 32px;
 
 .Company-Img {
   height: $img-height_st;
-
   @include lg {
     height: $img-height_sm;
   }
-
   @include md {
     height: $img-height_st;
   }
-
   @include sm {
     height: $img-height_sm;
   }

@@ -5,6 +5,7 @@ import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
 import Pagination from '../_common/Pagination'
+import Copyright from '../_common/Copyright'
 import Tilt from '../_common/Tilt'
 import {PATHS, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
@@ -31,6 +32,7 @@ export default function Banner(): JSX.Element {
           />
         </Tilt>
         <Pagination nextTo={PATHS.ABOUT} />
+        <Copyright />
       </div>
     </section>
   )

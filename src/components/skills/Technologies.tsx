@@ -8,6 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
 import Pagination from '../_common/Pagination'
+import Copyright from '../_common/Copyright'
 import Tooltip from '../_common/Tooltip'
 import {PATHS, BLANK_LINK_PROPS} from '../../utils/constants'
 import {Technology} from '../../utils/types'
@@ -480,6 +481,7 @@ export default function Technologies(): JSX.Element {
         ))}
       </ul>
       <Pagination prevTo={PATHS.ABOUT} nextTo={PATHS.EXPERIENCE} />
+      <Copyright />
     </section>
   )
 }
