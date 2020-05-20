@@ -34,11 +34,11 @@ interface Breakpoints {
 
 // $color_...
 export const COLORS: Colors = {
-  GREEN: '#31d0c9',
-  BLUE: '#62a5fc',
+  GREEN: '#2fd0c8',
+  BLUE: '#64a6fc',
   TEXT: '#4a4a4a',
   SECOND_TEXT: '#7b7b7b',
-  DARK_RED: '#e07a58',
+  DARK_RED: '#cf7e63',
 }
 
 // $duration_...
@@ -115,12 +115,12 @@ export default {
     primary: {
       light: COLORS.BLUE,
       main: COLORS.BLUE,
-      dark: '#5895e0', // $color_dark-blue
+      dark: '#568bd0', // $color_dark-blue
     },
     secondary: {
       light: COLORS.GREEN,
       main: COLORS.GREEN,
-      dark: '#2db3a7', // $color_dark-green
+      dark: '#2caca6', // $color_dark-green
     },
     error: {
       light: COLORS.DARK_RED,

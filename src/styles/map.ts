@@ -5,7 +5,7 @@ export default [
     elementType: 'geometry',
     stylers: [
       {
-        hue: '#ff7700',
+        hue: '#fb9674',
       },
       {
         visibility: 'simplified',
@@ -174,7 +174,7 @@ export default [
     elementType: 'labels',
     stylers: [
       {
-        color: '#ff0000',
+        color: '#f8c24f',
       },
       {
         visibility: 'on',
