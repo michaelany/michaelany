@@ -28,8 +28,13 @@ const renderPosition = (positions: Position[]): JSX.Element[] =>
   ))
 
 const renderFeatures = (features: Feature[]): JSX.Element[] =>
-  features.map(({label, Icon}: Feature, index: number) => (
-    <Chip key={index} className="Chip" icon={<Icon />} label={label} />
+  features.map(({label, Icon, time}: Feature, index: number) => (
+    <Chip
+      key={index}
+      className="Chip"
+      icon={<Icon />}
+      label={time ? <time>{label}</time> : label}
+    />
   ))
 
 export default function Job({

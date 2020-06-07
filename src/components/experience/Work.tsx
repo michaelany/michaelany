@@ -42,7 +42,7 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Апрель 2018 - ...', Icon: ScheduleIcon},
+      {label: 'Апрель 2018 - ...', Icon: ScheduleIcon, time: true},
       {label: 'Москва, Россия', Icon: ExploreIcon},
       {label: 'Офис', Icon: MyLocationIcon},
     ],
@@ -65,7 +65,7 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Апрель 2017 - апрель 2018', Icon: ScheduleIcon},
+      {label: 'Апрель 2017 - апрель 2018', Icon: ScheduleIcon, time: true},
       {label: 'Окленд, Новая Зеландия', Icon: ExploreIcon},
       {label: 'Удаленно', Icon: MyLocationIcon},
     ],
@@ -93,7 +93,7 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Июль 2016 - апрель 2017', Icon: ScheduleIcon},
+      {label: 'Июль 2016 - апрель 2017', Icon: ScheduleIcon, time: true},
       {label: 'Москва, Россия', Icon: ExploreIcon},
       {label: 'Офис', Icon: MyLocationIcon},
     ],
@@ -112,7 +112,7 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Октябрь 2008 - май 2010', Icon: ScheduleIcon},
+      {label: 'Октябрь 2008 - май 2010', Icon: ScheduleIcon, time: true},
       {
         label: 'Москва, Россия',
         Icon: ExploreIcon,

@@ -47,7 +47,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Декабрь 2019', Icon: EventIcon},
+      {label: 'Декабрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -115,7 +115,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
-      {label: 'Июль 2019', Icon: EventIcon},
+      {label: 'Июль 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -169,7 +169,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
-      {label: 'Октябрь 2019', Icon: EventIcon},
+      {label: 'Октябрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -237,7 +237,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Сентябрь 2019', Icon: EventIcon},
+      {label: 'Сентябрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -305,7 +305,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Сентябрь 2019', Icon: EventIcon},
+      {label: 'Сентябрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -373,7 +373,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
-      {label: 'Июнь 2019', Icon: EventIcon},
+      {label: 'Июнь 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -427,7 +427,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Июнь 2019', Icon: EventIcon},
+      {label: 'Июнь 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -494,7 +494,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.APP, Icon: WebIcon},
-      {label: '-', Icon: EventIcon},
+      {label: '-', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -548,7 +548,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Февраль 2019', Icon: EventIcon},
+      {label: 'Февраль 2019', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -617,7 +617,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
-      {label: 'Ноябрь 2018', Icon: EventIcon},
+      {label: 'Ноябрь 2018', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -671,7 +671,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.APP, Icon: WebIcon},
-      {label: 'Май 2018', Icon: EventIcon},
+      {label: 'Май 2018', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -722,7 +722,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Февраль 2018', Icon: EventIcon},
+      {label: 'Февраль 2018', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -786,7 +786,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
-      {label: 'Январь 2018', Icon: EventIcon},
+      {label: 'Январь 2018', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -837,7 +837,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
-      {label: 'Август 2017', Icon: EventIcon},
+      {label: 'Август 2017', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -902,7 +902,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
-      {label: 'Сентябрь 2017', Icon: EventIcon},
+      {label: 'Сентябрь 2017', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -951,7 +951,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
-      {label: 'Май 2017', Icon: EventIcon},
+      {label: 'Май 2017', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -1003,7 +1003,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
-      {label: 'Март 2017', Icon: EventIcon},
+      {label: 'Март 2017', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -1071,7 +1071,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
-      {label: 'Январь 2017', Icon: EventIcon},
+      {label: 'Январь 2017', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [
@@ -1137,7 +1137,7 @@ const PROJECTS: Project[] = [
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.APP, Icon: WebIcon},
-      {label: 'Август 2016', Icon: EventIcon},
+      {label: 'Август 2016', Icon: EventIcon, time: true},
     ],
     images: {
       desktop: [

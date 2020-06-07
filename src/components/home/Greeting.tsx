@@ -12,25 +12,18 @@ import {TITLES} from '../../data/common'
 export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
-      <h1 className="VisuallyHidden">Фронтенд разработчик Michael Ananiev</h1>
-      <p className="Greeting-Text Title">
+      <p className="Greeting-Text Greeting-Text_thick Title">
         <b>
           Привет!
           <HelloIcon className="Greeting-Icon" />
         </b>
       </p>
-      <p className="Greeting-Text Title">
-        <b>Меня зовут</b>
-      </p>
-      <p className="Greeting-Text Title">
-        <b>
-          <span className="Greeting-Letter">M</span>ichael{' '}
-          <span className="Greeting-Letter">A</span>naniev,
-        </b>
-      </p>
-      <p className="Greeting-Text Title">
-        <b>я фронтенд-разработчик</b>
-      </p>
+      <p className="Greeting-Text Title">Меня зовут</p>
+      <h1 className="Greeting-Text Title">
+        <span className="Greeting-Letter">M</span>ichael{' '}
+        <span className="Greeting-Letter">A</span>naniev,
+        <br />я фронтенд-разработчик
+      </h1>
       <div className="Actions">
         <Button
           className="Button Button_color_blue"

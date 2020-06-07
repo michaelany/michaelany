@@ -13,7 +13,7 @@ export default function Copyright() {
   return (
     <p className="Copyright">
       <CopyrightIcon className="Copyright-Icon" />
-      {year},<BuildIcon className="Copyright-Icon" />+
+      <time>{year}</time>,<BuildIcon className="Copyright-Icon" />+
       <FavoriteIcon className="Copyright-Icon" />
       by{' '}
       <Link className="Copyright-Link" to={PATHS.HOME}>

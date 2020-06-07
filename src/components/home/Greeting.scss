@@ -31,6 +31,9 @@
 .Greeting-Text {
   font-weight: 300;
   margin-bottom: 0;
+  &_thick {
+    font-weight: 900;
+  }
 }
 
 .Greeting-Letter {

@@ -2,7 +2,7 @@
   "name": "mclananiev",
   "version": "2.0.0",
   "author": "Michael Ananiev <mclananiev@gmail.com> (https://github.com/vashstamp)",
-  "homepage": "TODO:",
+  "homepage": "http://mclananiev.com",
   "description": "Portfolio project",
   "keywords": [
     "mclananiev",
@@ -13,11 +13,11 @@
   "bugs": "https://github.com/vashstamp/mclananiev/issues",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "4.9.14",
+    "@material-ui/core": "4.10.1",
     "@material-ui/icons": "4.9.1",
     "@types/classnames": "2.2.10",
-    "@types/google-maps-react": "2.0.5",
-    "@types/node": "14.0.3",
+    "@types/google-maps-react": "2.0.4",
+    "@types/node": "14.0.11",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
     "@types/react-router-dom": "5.1.5",
@@ -25,7 +25,7 @@
     "classnames": "2.2.6",
     "google-maps-react": "2.0.6",
     "husky": "4.2.5",
-    "lint-staged": "10.2.4",
+    "lint-staged": "10.2.9",
     "node-sass": "4.14.1",
     "prettier": "2.0.5",
     "react": "16.13.1",
@@ -35,8 +35,9 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
     "react-tilt": "0.1.4",
-    "swiper": "5.4.0",
-    "typescript": "3.9.2"
+    "react-waypoint": "9.0.2",
+    "swiper": "5.4.2",
+    "typescript": "3.9.5"
   },
   "husky": {
     "hooks": {
@@ -44,7 +45,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "src/**/*.{ts,tsx,json,scss,md}": [
       "prettier --write"
     ]
   },

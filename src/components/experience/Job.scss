@@ -6,11 +6,9 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
   &::before {
     display: none;
   }
-
   &:not(:last-child)::after {
     @include pseudo;
     bottom: 0;

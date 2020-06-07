@@ -11,7 +11,7 @@ interface FeaturesProps {
 function Features({items}: FeaturesProps): JSX.Element {
   return (
     <Grid container className="Features" component="ul" spacing={4}>
-      {items.map(({label, Icon}: Feature, index: number) => (
+      {items.map(({label, Icon, time}: Feature, index: number) => (
         <Grid
           key={index}
           item
@@ -21,7 +21,7 @@ function Features({items}: FeaturesProps): JSX.Element {
           sm={6}
         >
           <Icon className="Features-Icon Colorful Colorful_dark" />
-          <p>{label}</p>
+          <p>{time ? <time>{label}</time> : label}</p>
         </Grid>
       ))}
     </Grid>
