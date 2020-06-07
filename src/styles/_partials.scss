@@ -57,6 +57,7 @@
   @each $key, $value, $second-value in $colors-map {
     .App_color_#{$key} & {
       color: $value;
+      outline-color: $value;
     }
     .App_color_#{$key} &_dark {
       color: $second-value;
@@ -111,7 +112,9 @@
     &.MuiButton-contained {
       background-color: $color_blue;
       @include hover {
-        background-color: $color_dark-blue;
+        &:hover {
+          background-color: $color_dark-blue;
+        }
       }
     }
   }
@@ -119,27 +122,33 @@
     &.MuiButton-contained {
       background-color: $color_green;
       @include hover {
-        background-color: $color_dark-green;
+        &:hover {
+          background-color: $color_dark-green;
+        }
       }
     }
   }
   &_color_white,
   .App_color_white & {
+    color: $color_text;
     &,
     &:hover {
       background-color: white;
     }
     @include hover {
-      background-color: $color_light-grey;
+      &:hover {
+        background-color: $color_light-grey;
+      }
     }
-    color: $color_text;
   }
   @each $key, $value, $second-value in $colors-map {
     .App_color_#{$key} & {
       &.MuiButton-contained {
         background-color: $value;
         @include hover {
-          background-color: $second-value;
+          &:hover {
+            background-color: $second-value;
+          }
         }
       }
       &.MuiButton-outlined {
@@ -159,9 +168,6 @@
 
 .Link {
   user-select: auto;
-  @include hover {
-    text-decoration: underline;
-  }
   .App_color_white & {
     color: white;
     outline-color: white;
@@ -170,6 +176,11 @@
     .App_color_#{$key} & {
       color: $value;
       outline-color: $value;
+    }
+  }
+  @include hover {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
@@ -188,12 +199,6 @@
 }
 
 .ColorInteract {
-  @include hover {
-    &::before {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
   position: relative;
   border-radius: $border-radius;
   @each $key, $value in $colors-map {
@@ -215,9 +220,16 @@
     transition: transform $duration_short $easing_in-out,
       opacity $duration_short $easing_in-out;
   }
-
   & > .MuiTouchRipple-root {
     z-index: 1;
+  }
+  @include hover {
+    &:hover {
+      &::before {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
   }
 }
 

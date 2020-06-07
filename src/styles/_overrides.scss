@@ -39,10 +39,12 @@
 
 .MuiIconButton {
   &-root {
-    @include hover {
-      background-color: rgba($color_text, 0.04);
-    }
     color: $color_second-text;
+    @include hover {
+      &:hover {
+        background-color: rgba($color_text, 0.04);
+      }
+    }
   }
 }
 
@@ -101,9 +103,6 @@
 
 .MuiFilledInput {
   &-root {
-    @include hover {
-      background-color: transparent;
-    }
     border-radius: $border-radius;
     &.Mui-error {
       background-color: rgba($color_red, 0.12);
@@ -111,6 +110,11 @@
     &,
     &.Mui-focused:not(.Mui-error) {
       background-color: transparent;
+    }
+    @include hover {
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 }

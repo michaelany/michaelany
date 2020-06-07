@@ -26,10 +26,12 @@
 }
 
 .Copyright-Link {
-  @include hover {
-    text-decoration: underline;
-  }
   font-weight: 500;
   color: white;
   outline-color: white;
+  @include hover {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

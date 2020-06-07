@@ -28,75 +28,89 @@ $xs-margin: 0 8px 16px 8px;
       margin-left: 0;
       margin-right: 0;
       bottom: 62px;
-      @include lg {
-        margin-left: 2px;
-        margin-right: 2px;
-      }
-      @include md {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      @include sm {
-        margin-left: 2px;
-        margin-right: 2px;
-      }
-      @include xs {
-        bottom: auto;
-        margin: $xs-margin;
-      }
     }
     &:nth-child(2),
     &:nth-child(5) {
       bottom: 20px;
-      @include lg {
-        bottom: 26px;
-      }
-      @include md {
-        bottom: 20px;
-      }
-      @include sm {
-        bottom: 26px;
-      }
-      @include xs {
-        bottom: auto;
-      }
     }
     &:nth-child(2) {
       margin-left: 4px;
       margin-right: 6px;
-
-      @include xs {
-        margin: $xs-margin;
-      }
     }
     &:nth-child(5) {
       margin-right: 4px;
       margin-left: 6px;
-      @include xs {
-        margin: $xs-margin;
-      }
     }
     &:nth-child(3),
     &:nth-child(4) {
       margin-left: 8px;
       margin-right: 8px;
-      @include lg {
+    }
+  }
+  @include lg {
+    .SocialLinks_about > & {
+      &:first-child,
+      &:last-child {
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        bottom: 26px;
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
         bottom: 8px;
       }
-      @include md {
+    }
+  }
+  @include md {
+    .SocialLinks_about > & {
+      &:first-child,
+      &:last-child {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        bottom: 20px;
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
         bottom: 0;
       }
-      @include sm {
-        bottom: 8px;
+    }
+  }
+  @include sm {
+    .SocialLinks_about > & {
+      &:first-child,
+      &:last-child {
+        margin-left: 2px;
+        margin-right: 2px;
       }
-      @include xs {
-        margin: $xs-margin;
-        bottom: auto;
+      &:nth-child(2),
+      &:nth-child(5) {
+        bottom: 26px;
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
+        bottom: 8px;
       }
     }
   }
   @include xs {
     margin-bottom: 16px;
+    .SocialLinks_about > & {
+      &:first-child,
+      &:last-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        margin: $xs-margin;
+        bottom: auto;
+      }
+    }
   }
 }
 
