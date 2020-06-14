@@ -4,7 +4,7 @@ import IconButton from '@material-ui/core/IconButton'
 import ArrowBackIcon from '@material-ui/icons/ArrowBackRounded'
 
 import './Drawer.scss'
-import Navigation from '../_common/Navigation'
+import Navigation from '../common/Navigation'
 
 interface DrawerProps {
   open: boolean

@@ -3,7 +3,7 @@ import Swiper from 'react-id-swiper'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 
 import './Carousel.scss'
-import SvgPanel from '../_common/SvgPanel'
+import SvgPanel from '../common/SvgPanel'
 import {SWIPER_OPTIONS} from '../../utils/constants'
 
 interface CarouselProps {

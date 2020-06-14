@@ -6,7 +6,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Job.scss'
-import Company from '../_common/Company'
+import Company from '../common/Company'
 import {Job as JobInterface, Feature, Position} from '../../utils/types'
 
 interface JobProps extends JobInterface {

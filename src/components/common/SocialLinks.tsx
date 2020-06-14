@@ -3,7 +3,7 @@ import cn from 'classnames'
 import Fab from '@material-ui/core/Fab'
 
 import './SocialLinks.scss'
-import Tooltip from '../_common/Tooltip'
+import Tooltip from './Tooltip'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
 

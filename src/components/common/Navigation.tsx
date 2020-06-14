@@ -10,7 +10,7 @@ import WebIcon from '@material-ui/icons/WebRounded'
 import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
-import Tooltip from '../_common/Tooltip'
+import Tooltip from './Tooltip'
 import {PATHS} from '../../utils/constants'
 import {Path} from '../../utils/types'
 import {TITLES} from '../../data/common'

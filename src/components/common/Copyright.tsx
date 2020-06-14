@@ -12,13 +12,12 @@ const year: number = new Date().getFullYear()
 export default function Copyright() {
   return (
     <p className="Copyright">
-      <CopyrightIcon className="Copyright-Icon" />
-      <time>{year}</time>,<BuildIcon className="Copyright-Icon" />+
-      <FavoriteIcon className="Copyright-Icon" />
-      by{' '}
+      <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
+      <BuildIcon className="Copyright-Icon" /> by{' '}
       <Link className="Copyright-Link" to={PATHS.HOME}>
         Michael Ananiev
-      </Link>
+      </Link>{' '}
+      with <FavoriteIcon className="Copyright-Icon" />
     </p>
   )
 }

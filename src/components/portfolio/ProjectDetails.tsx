@@ -3,8 +3,8 @@ import Button from '@material-ui/core/Button'
 import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
-import Features from '../_common/Features'
-import Company from '../_common/Company'
+import Features from '../common/Features'
+import Company from '../common/Company'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {Feature, Company as CompanyInterface} from '../../utils/types'
 

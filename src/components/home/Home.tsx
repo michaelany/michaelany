@@ -1,7 +1,7 @@
 import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import Sections from '../_common/Sections'
+import Sections from '../common/Sections'
 import Greeting from './Greeting'
 import Banner from './Banner'
 import {BREAKPOINTS} from '../../styles/theme'

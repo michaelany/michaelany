@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Pagination from '../_common/Pagination'
-import Copyright from '../_common/Copyright'
+import Pagination from '../common/Pagination'
+import Copyright from '../common/Copyright'
 import Projects from './Projects'
 import {PATHS} from '../../utils/constants'
 import {TITLES} from '../../data/common'
