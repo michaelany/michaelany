@@ -8,11 +8,11 @@ import {BREAKPOINTS} from '../../styles/theme'
 
 export default function Home(): JSX.Element {
   // matches for key to responsive alternate animations reset
-  const matches: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.MD}px)`)
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.MD}px)`)
 
   return (
     <Sections
-      key={String(matches)}
+      key={String(md)}
       firstSection={<Greeting />}
       secondSection={<Banner />}
     />

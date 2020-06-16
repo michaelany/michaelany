@@ -30,17 +30,14 @@
       background-color: $value;
     }
   }
-
   @include lg {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-
   @include md {
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
-
   @include sm {
     padding: 56px 24px;
   }
@@ -58,9 +55,6 @@
     .App_color_#{$key} & {
       color: $value;
       outline-color: $value;
-    }
-    .App_color_#{$key} &_dark {
-      color: $second-value;
     }
   }
 }

@@ -3,7 +3,7 @@ import Swiper from 'react-id-swiper'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 
 import './Carousel.scss'
-import SvgPanel from '../common/SvgPanel'
+import Panel from '../common/Panel'
 import {SWIPER_OPTIONS} from '../../utils/constants'
 
 interface CarouselProps {
@@ -51,9 +51,9 @@ export default function Carousel(props: CarouselProps): JSX.Element {
     )
   return (
     <div className="Carousel Carousel_type_desktop">
-      <SvgPanel classes="Carousel-Content">
+      <Panel classes="Carousel-Content">
         <div className="Carousel-Block">{renderSwiper(props)}</div>
-      </SvgPanel>
+      </Panel>
     </div>
   )
 }

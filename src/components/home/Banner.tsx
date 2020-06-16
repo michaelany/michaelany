@@ -1,5 +1,4 @@
 import React from 'react'
-import {isSafari} from 'react-device-detect'
 
 import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
@@ -7,14 +6,14 @@ import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
-import {PATHS, TILT_SCALE} from '../../utils/constants'
+import {DETECTED, PATHS, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  reset: isSafari,
-  max: isSafari ? 0 : 50,
-  scale: isSafari ? TILT_SCALE : 1,
+  reset: DETECTED.SAFARI,
+  max: DETECTED.SAFARI ? 0 : 50,
+  scale: DETECTED.SAFARI ? TILT_SCALE : 1,
   speed: DURATIONS.LINGERING,
 }
 

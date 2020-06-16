@@ -1,13 +1,12 @@
 import React from 'react'
-import {isSafari} from 'react-device-detect'
 import {Link} from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
 import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './ProjectLink.scss'
 import Tilt from '../common/Tilt'
-import SvgPanel from '../common/SvgPanel'
-import {PATHS, PROJECT_TYPES, TILT_SCALE} from '../../utils/constants'
+import Panel from '../common/Panel'
+import {DETECTED, PATHS, PROJECT_TYPES, TILT_SCALE} from '../../utils/constants'
 import {Color, Company, TiltOptions} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
@@ -22,7 +21,7 @@ interface ProjectLinkProps {
 }
 
 const tiltOptions: TiltOptions = {
-  max: isSafari ? 0 : 20,
+  max: DETECTED.SAFARI ? 0 : 20,
   scale: TILT_SCALE,
   speed: DURATIONS.LONGEST,
 }
@@ -59,9 +58,7 @@ export default function ProjectLink({
           className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
           to={`${PATHS.PORTFOLIO}${path}`}
         >
-          <SvgPanel
-            classes={`ProjectLink-View ProjectLink-View_name_${name}`}
-          />
+          <Panel classes={`ProjectLink-View ProjectLink-View_name_${name}`} />
           <div className="ProjectLink-Content">
             <img
               className="ProjectLink-Company"

@@ -1,7 +1,7 @@
 import React from 'react'
-import {isMobile} from 'react-device-detect'
 import ReactTilt from 'react-tilt'
 
+import {DETECTED} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {EASINGS} from '../../styles/theme'
 
@@ -20,13 +20,13 @@ export default function ITilt({
 }: TiltProps): JSX.Element {
   const Component: any = component
   const content: JSX.Element = component ? (
-    <Component className={isMobile ? className : undefined}>
+    <Component className={DETECTED.MOBILE ? className : undefined}>
       {children}
     </Component>
   ) : (
     children
   )
-  return isMobile ? (
+  return DETECTED.MOBILE ? (
     content
   ) : (
     <ReactTilt className={className} options={options} easing={EASINGS.IN_OUT}>

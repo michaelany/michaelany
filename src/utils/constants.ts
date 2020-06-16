@@ -3,6 +3,11 @@ import {SwiperOptions} from 'swiper'
 import {Path, Color, ProjectType, Map} from './types'
 import {DURATIONS} from '../styles/theme'
 
+interface Detected {
+  MOBILE: boolean
+  SAFARI: boolean
+}
+
 interface Colors {
   ALTERNATE: Color
   WHITE: Color
@@ -56,6 +61,19 @@ interface ProjectPaths {
 interface BlankLinkProps {
   target: string
   rel: string
+}
+
+export const DETECTED: Detected = {
+  MOBILE: [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i,
+  ].some((device: RegExp) => navigator.userAgent.match(device)),
+  SAFARI: /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
 }
 
 export const TILT_SCALE: number = 1.05

@@ -3,6 +3,7 @@ import {RouteChildrenProps} from 'react-router-dom'
 
 import Sections from '../common/Sections'
 import Pagination from '../common/Pagination'
+import Copyright from '../common/Copyright'
 import ProjectDetails from './ProjectDetails'
 import Carousel from './Carousel'
 import {PATHS} from '../../utils/constants'
@@ -47,6 +48,7 @@ export default function Project({
             )}
           </div>
           <Pagination prevTo={PATHS.PORTFOLIO} />
+          <Copyright />
         </section>
       }
     />

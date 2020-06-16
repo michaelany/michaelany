@@ -1,10 +1,15 @@
 import React from 'react'
-import {isMobile} from 'react-device-detect'
 import MuiTooltip, {TooltipProps} from '@material-ui/core/Tooltip'
+
+import {DETECTED} from '../../utils/constants'
 
 export default function Tooltip({
   children,
   ...props
 }: TooltipProps): JSX.Element {
-  return isMobile ? children : <MuiTooltip {...props}>{children}</MuiTooltip>
+  return DETECTED.MOBILE ? (
+    children
+  ) : (
+    <MuiTooltip {...props}>{children}</MuiTooltip>
+  )
 }

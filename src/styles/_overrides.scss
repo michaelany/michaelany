@@ -57,7 +57,7 @@
     margin: 4px;
   }
   &-icon {
-    color: $color_second-text;
+    color: rgba($color_second-text, 0.8);
     font-size: 24px;
   }
 }
