@@ -55,6 +55,9 @@
     .App_color_#{$key} & {
       color: $value;
       outline-color: $value;
+      &_dark {
+        color: rgba($second-value, $dark-alfa);
+      }
     }
   }
 }

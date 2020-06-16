@@ -3,27 +3,9 @@
 
 .Sections {
   height: 100%;
+  overflow: hidden;
 }
 
-.Sections-Map {
-  position: fixed;
-  width: calc(50% - #{$sidebar-width} / 2);
-  height: 100vh;
-  right: 0;
-  top: 0;
-  & > div {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-  @include md {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - #{$header_height});
-    right: auto;
-    top: auto;
-  }
+.Sections-Animated {
+  @include animationFadeInRightSm;
 }

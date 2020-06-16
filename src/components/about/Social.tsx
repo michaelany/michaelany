@@ -29,7 +29,7 @@ const links: SocialLink[] = [
 
 export default function Social(): JSX.Element {
   return (
-    <section className="Social Section Section_pagination Section_colorful">
+    <section className="Social Section Section_pagination Section_colorful FadeInRight">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
         <Tilt component="figure" className="Social-Photo" options={tiltOptions}>

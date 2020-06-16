@@ -6,6 +6,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
 import Features from './Features'
+import Animate, {EFFECTS} from './Animate'
 import {Feature} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 
@@ -36,7 +37,7 @@ export default function Info({
       <Collapse unmountOnExit in={open} timeout={DURATIONS.longer}>
         <p className="Info-Extra">{extra}</p>
       </Collapse>
-      <div className="Actions Actions_center">
+      <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
         <Button
           className="Button"
           variant={open ? 'outlined' : 'contained'}
@@ -51,7 +52,7 @@ export default function Info({
         >
           Подробнее
         </Button>
-      </div>
+      </Animate>
     </section>
   )
 }

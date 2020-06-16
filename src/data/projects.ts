@@ -756,7 +756,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'fcdc Dashboard',
+    title: 'FCDC Dashboard',
     name: 'fcdc',
     description: 'Админка сервиса управления мероприятиями.',
     type: PROJECT_TYPES.admin,

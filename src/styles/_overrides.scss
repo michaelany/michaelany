@@ -1,10 +1,12 @@
 .MuiButton {
   &-root {
+    padding: 8px 24px;
     transition: color $duration_short $easing_in-out,
       background-color $duration_short $easing_in-out,
       border $duration_short $easing_in-out;
   }
   &-containedSizeLarge {
+    padding: 12px 24px;
     font-size: 1.125rem;
   }
 }
@@ -52,12 +54,13 @@
   &-root {
     font-size: $font-size_smaller;
     font-weight: 500;
-    background-color: rgba($color_second-text, 0.12);
+    background-color: transparent;
+    border: 1px solid rgba($color_dark-violet, $dark-alfa);
     color: $color_text;
     margin: 4px;
   }
   &-icon {
-    color: rgba($color_second-text, 0.8);
+    color: rgba($color_dark-violet, $dark-alfa);
     font-size: 24px;
   }
 }
@@ -77,6 +80,7 @@
 .MuiStepIcon {
   &-root {
     font-size: 24px;
+    color: $color_default;
   }
   &-text {
     font-size: 12px;

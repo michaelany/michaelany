@@ -17,6 +17,8 @@ $color_dark-blue: #568bd0;
 $color_violet: #a189f0;
 $color_dark-violet: #8774c6;
 
+$dark-alfa: 0.75;
+
 $sidebar-width: 100px;
 $border-radius: 8px;
 $backdrop-opacity: 0.33;
@@ -49,6 +51,9 @@ $breakpoint_xs: 399px;
 $breakpoint_sm: 599px;
 $breakpoint_md: 959px;
 $breakpoint_lg: 1279px;
+
+$effect_delta: 25%;
+$effect_delta-sm: 5%;
 
 $colors-map: (
   'default' $color_default $color_dark-default,

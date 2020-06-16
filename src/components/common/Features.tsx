@@ -4,12 +4,15 @@ import Grid from '@material-ui/core/Grid'
 
 import './Features.scss'
 import Animate, {EFFECTS} from '../common/Animate'
-import {BREAKPOINTS} from '../../styles/theme'
+import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
 import {Feature} from '../../utils/types'
 
 interface FeaturesProps {
   items: Feature[]
 }
+
+const getEffect = (xs: boolean, index: number): string =>
+  xs ? EFFECTS.bottom : index % 2 ? EFFECTS.rightSm : EFFECTS.leftSm
 
 function Features({items}: FeaturesProps): JSX.Element {
   const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.xs}px)`)
@@ -25,10 +28,8 @@ function Features({items}: FeaturesProps): JSX.Element {
           xs={12}
           sm={6}
         >
-          <Animate
-            effect={xs ? EFFECTS.BOTTOM : EFFECTS[index % 2 ? 'RIGHT' : 'LEFT']}
-          >
-            <Icon className="Features-Icon" />
+          <Animate effect={getEffect(xs, index)} duration={DURATIONS.long}>
+            <Icon className="Features-Icon Colorful Colorful_dark" />
             <p>{time ? <time>{label}</time> : label}</p>
           </Animate>
         </Grid>

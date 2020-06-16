@@ -15,21 +15,33 @@ interface AnimateProps extends HTMLAttributes<HTMLElement> {
 }
 
 interface Effects {
-  TOP: string
-  RIGHT: string
-  BOTTOM: string
-  LEFT: string
-  IN: string
-  OUT: string
+  top: string
+  topSm: string
+  right: string
+  rightSm: string
+  bottom: string
+  bottomSm: string
+  left: string
+  leftSm: string
+  in: string
+  inSm: string
+  out: string
+  outSm: string
 }
 
 export const EFFECTS: Effects = {
-  TOP: 'fadeInTop',
-  RIGHT: 'fadeInRight',
-  BOTTOM: 'fadeInBottom',
-  LEFT: 'fadeInLeft',
-  IN: 'fadeInZoomIn',
-  OUT: 'fadeInZoomOut',
+  top: 'fadeInTop',
+  topSm: 'fadeInTopSm',
+  right: 'fadeInRight',
+  rightSm: 'fadeInRightSm',
+  bottom: 'fadeInBottom',
+  bottomSm: 'fadeInBottomSm',
+  left: 'fadeInLeft',
+  leftSm: 'fadeInLeftSm',
+  in: 'fadeInZoomIn',
+  inSm: 'fadeInZoomInSm',
+  out: 'fadeInZoomOut',
+  outSm: 'fadeInZoomOutSm',
 }
 
 export default function Animate({
@@ -49,7 +61,7 @@ export default function Animate({
   }
 
   return (
-    <Waypoint bottomOffset="5%" onEnter={onWaypointEnter}>
+    <Waypoint onEnter={onWaypointEnter}>
       <Element
         {...props}
         className={cn(className, 'Animate')}

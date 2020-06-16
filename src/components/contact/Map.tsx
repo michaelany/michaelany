@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom'
 import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
+import './Map.scss'
 import markerIcon from '../../assets/icons/marker.svg'
 import {PATHS} from '../../utils/constants'
 import mapTheme from '../../styles/map'
@@ -31,15 +32,17 @@ function Map(): JSX.Element {
   }
 
   return (
-    <GoogleMap
-      disableDefaultUI
-      google={window.google}
-      initialCenter={initialCenter}
-      zoom={10}
-      styles={mapTheme as any}
-    >
-      <Marker icon={markerIcon} onClick={handleMarkerClick} />
-    </GoogleMap>
+    <div className="Map">
+      <GoogleMap
+        disableDefaultUI
+        google={window.google}
+        initialCenter={initialCenter}
+        zoom={10}
+        styles={mapTheme as any}
+      >
+        <Marker icon={markerIcon} onClick={handleMarkerClick} />
+      </GoogleMap>
+    </div>
   )
 }
 

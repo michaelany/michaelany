@@ -165,6 +165,7 @@ export const SWIPER_OPTIONS: SwiperOptions = {
   grabCursor: true,
   loop: true,
   speed: DURATIONS.longer,
+  loopedSlides: 3,
   autoplay: {
     delay: DURATIONS.lingering,
     disableOnInteraction: false,

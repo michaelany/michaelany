@@ -21,6 +21,7 @@ const links: SocialLink[] = [
 export default function Contact(): JSX.Element {
   return (
     <Sections
+      contact
       firstSection={
         <section className="Section Section_pagination">
           <div>
@@ -44,11 +45,7 @@ export default function Contact(): JSX.Element {
           <Copyright />
         </section>
       }
-      secondSection={
-        <div className="Sections-Map">
-          <Map />
-        </div>
-      }
+      secondSection={<Map />}
     />
   )
 }

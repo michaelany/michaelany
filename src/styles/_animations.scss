@@ -1,6 +1,17 @@
 @keyframes fadeInTop {
   from {
-    transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -$effect_delta, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTopSm {
+  from {
+    transform: translate3d(0, -$effect_delta-sm, 0);
     opacity: 0;
   }
   to {
@@ -11,7 +22,18 @@
 
 @keyframes fadeInRight {
   from {
-    transform: translate3d(5%, 0, 0);
+    transform: translate3d($effect_delta, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRightSm {
+  from {
+    transform: translate3d($effect_delta-sm, 0, 0);
     opacity: 0;
   }
   to {
@@ -22,7 +44,18 @@
 
 @keyframes fadeInBottom {
   from {
-    transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, $effect_delta, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottomSm {
+  from {
+    transform: translate3d(0, $effect_delta-sm, 0);
     opacity: 0;
   }
   to {
@@ -33,7 +66,18 @@
 
 @keyframes fadeInLeft {
   from {
-    transform: translate3d(-5%, 0, 0);
+    transform: translate3d(-$effect_delta, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeftSm {
+  from {
+    transform: translate3d(-$effect_delta-sm, 0, 0);
     opacity: 0;
   }
   to {
@@ -43,6 +87,17 @@
 }
 
 @keyframes fadeInZoomIn {
+  from {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInZoomInSm {
   from {
     transform: scale(0.95);
     opacity: 0;
@@ -54,6 +109,17 @@
 }
 
 @keyframes fadeInZoomOut {
+  from {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInZoomOutSm {
   from {
     transform: scale(1.05);
     opacity: 0;
