@@ -53,7 +53,7 @@ export default function About(): JSX.Element {
     <Sections
       firstSection={
         <Info
-          title={TITLES.ABOUT}
+          title={TITLES.about}
           text={text}
           features={features}
           extra={extra}

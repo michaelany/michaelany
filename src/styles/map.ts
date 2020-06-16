@@ -25,7 +25,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLORS.TEXT,
+        color: COLORS.text,
       },
     ],
   },
@@ -43,7 +43,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLORS.SECOND_TEXT,
+        color: COLORS.secondText,
       },
       {
         visibility: 'on',
@@ -76,7 +76,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLORS.TEXT,
+        color: COLORS.text,
       },
       {
         visibility: 'on',
@@ -112,7 +112,7 @@ export default [
     elementType: 'labels.text.stroke',
     stylers: [
       {
-        color: COLORS.GREEN,
+        color: COLORS.green,
       },
       {
         visibility: 'on',
@@ -144,7 +144,7 @@ export default [
     elementType: 'geometry',
     stylers: [
       {
-        color: COLORS.TEXT,
+        color: COLORS.text,
       },
     ],
   },
@@ -195,7 +195,7 @@ export default [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLORS.GREEN,
+        color: COLORS.green,
       },
     ],
   },
@@ -231,7 +231,7 @@ export default [
     elementType: 'geometry.fill',
     stylers: [
       {
-        color: COLORS.GREEN,
+        color: COLORS.green,
       },
       {
         visibility: 'on',
@@ -243,7 +243,7 @@ export default [
     elementType: 'geometry.stroke',
     stylers: [
       {
-        color: COLORS.GREEN,
+        color: COLORS.green,
       },
       {
         visibility: 'on',
@@ -273,7 +273,7 @@ export default [
     elementType: 'labels.text.stroke',
     stylers: [
       {
-        color: COLORS.GREEN,
+        color: COLORS.green,
       },
       {
         visibility: 'on',

@@ -26,12 +26,12 @@ interface NavLinkInterface {
 }
 
 const navLinks: NavLinkInterface[] = [
-  {title: TITLES.HOME, to: PATHS.HOME, Icon: HomeIcon},
-  {title: TITLES.ABOUT, to: PATHS.ABOUT, Icon: PersonIcon},
-  {title: TITLES.SKILLS, to: PATHS.SKILLS, Icon: SchoolIcon},
-  {title: TITLES.EXPERIENCE, to: PATHS.EXPERIENCE, Icon: WorkIcon},
-  {title: TITLES.PORTFOLIO, to: PATHS.PORTFOLIO, Icon: WebIcon},
-  {title: TITLES.CONTACT, to: PATHS.CONTACT, Icon: MailIcon},
+  {title: TITLES.home, to: PATHS.home, Icon: HomeIcon},
+  {title: TITLES.about, to: PATHS.about, Icon: PersonIcon},
+  {title: TITLES.skills, to: PATHS.skills, Icon: SchoolIcon},
+  {title: TITLES.experience, to: PATHS.experience, Icon: WorkIcon},
+  {title: TITLES.portfolio, to: PATHS.portfolio, Icon: WebIcon},
+  {title: TITLES.contact, to: PATHS.contact, Icon: MailIcon},
 ]
 
 export default function Navigation({onClose}: NavigationProps): JSX.Element {
@@ -43,7 +43,7 @@ export default function Navigation({onClose}: NavigationProps): JSX.Element {
             <Tooltip title={title} placement="right">
               <Button
                 fullWidth
-                exact={to !== PATHS.PORTFOLIO}
+                exact={to !== PATHS.portfolio}
                 className="Navigation-Link"
                 activeClassName="Colorful"
                 component={NavLink}

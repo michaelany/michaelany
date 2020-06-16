@@ -13,18 +13,18 @@ import {CONTACT_LINKS} from '../../data/common'
 import {DURATIONS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  max: DETECTED.SAFARI ? 0 : 35,
+  max: DETECTED.safari ? 0 : 35,
   scale: TILT_SCALE,
-  speed: DURATIONS.LONGEST,
+  speed: DURATIONS.longest,
 }
 
 const links: SocialLink[] = [
-  CONTACT_LINKS.GIT_HUB,
-  CONTACT_LINKS.LINKED_IN,
-  CONTACT_LINKS.SEVEN_GLYPHS,
-  CONTACT_LINKS.INSTAGRAM,
-  CONTACT_LINKS.VK,
-  CONTACT_LINKS.FACEBOOK,
+  CONTACT_LINKS.gitHub,
+  CONTACT_LINKS.linkedIn,
+  CONTACT_LINKS.sevenGlyphs,
+  CONTACT_LINKS.instagram,
+  CONTACT_LINKS.vk,
+  CONTACT_LINKS.facebook,
 ]
 
 export default function Social(): JSX.Element {
@@ -42,7 +42,7 @@ export default function Social(): JSX.Element {
         </Tilt>
         <SocialLinks about links={links} />
       </div>
-      <Pagination prevTo={PATHS.HOME} nextTo={PATHS.SKILLS} />
+      <Pagination prevTo={PATHS.home} nextTo={PATHS.skills} />
       <Copyright />
     </section>
   )

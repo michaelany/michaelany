@@ -21,16 +21,16 @@ interface ProjectLinkProps {
 }
 
 const tiltOptions: TiltOptions = {
-  max: DETECTED.SAFARI ? 0 : 20,
+  max: DETECTED.safari ? 0 : 20,
   scale: TILT_SCALE,
-  speed: DURATIONS.LONGEST,
+  speed: DURATIONS.longest,
 }
 
 export const projectTypeLabels = {
-  [PROJECT_TYPES.APP]: [PROJECT_TYPE_LABELS.APP],
-  [PROJECT_TYPES.SITE]: [PROJECT_TYPE_LABELS.SITE],
-  [PROJECT_TYPES.ADMIN]: [PROJECT_TYPE_LABELS.ADMIN],
-  [PROJECT_TYPES.LANDING]: [PROJECT_TYPE_LABELS.LANDING],
+  [PROJECT_TYPES.app]: [PROJECT_TYPE_LABELS.app],
+  [PROJECT_TYPES.site]: [PROJECT_TYPE_LABELS.site],
+  [PROJECT_TYPES.admin]: [PROJECT_TYPE_LABELS.admin],
+  [PROJECT_TYPES.landing]: [PROJECT_TYPE_LABELS.landing],
 }
 
 export default function ProjectLink({
@@ -56,7 +56,7 @@ export default function ProjectLink({
           focusRipple
           component={Link}
           className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
-          to={`${PATHS.PORTFOLIO}${path}`}
+          to={`${PATHS.portfolio}${path}`}
         >
           <Panel classes={`ProjectLink-View ProjectLink-View_name_${name}`} />
           <div className="ProjectLink-Content">

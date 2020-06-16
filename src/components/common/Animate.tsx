@@ -37,9 +37,9 @@ export default function Animate({
   el: Element = 'div',
   className,
   effect,
-  duration = DURATIONS.LONGER,
+  duration = DURATIONS.longer,
   delay = 0,
-  easing = EASINGS.IN_OUT,
+  easing = EASINGS.inOut,
   ...props
 }: AnimateProps): JSX.Element {
   const [reached, setReached] = useState<boolean>(false)

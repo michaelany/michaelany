@@ -12,7 +12,7 @@ interface FeaturesProps {
 }
 
 function Features({items}: FeaturesProps): JSX.Element {
-  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.XS}px)`)
+  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.xs}px)`)
 
   return (
     <Grid container className="Features" component="ul" spacing={4}>

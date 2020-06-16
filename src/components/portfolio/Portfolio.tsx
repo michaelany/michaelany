@@ -10,10 +10,10 @@ export default function Portfolio(): JSX.Element {
   return (
     <section className="Section Section_single Section_pagination">
       <div>
-        <h1 className="Title">{TITLES.PORTFOLIO}</h1>
+        <h1 className="Title">{TITLES.portfolio}</h1>
         <Projects />
       </div>
-      <Pagination prevTo={PATHS.EXPERIENCE} nextTo={PATHS.CONTACT} />
+      <Pagination prevTo={PATHS.experience} nextTo={PATHS.contact} />
       <Copyright />
     </section>
   )

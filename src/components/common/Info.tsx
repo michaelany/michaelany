@@ -33,7 +33,7 @@ export default function Info({
         <b>{text}</b>
       </p>
       <Features items={features} />
-      <Collapse unmountOnExit in={open} timeout={DURATIONS.LONGER}>
+      <Collapse unmountOnExit in={open} timeout={DURATIONS.longer}>
         <p className="Info-Extra">{extra}</p>
       </Collapse>
       <div className="Actions Actions_center">

@@ -47,7 +47,7 @@ export default function Project({
               />
             )}
           </div>
-          <Pagination prevTo={PATHS.PORTFOLIO} />
+          <Pagination prevTo={PATHS.portfolio} />
           <Copyright />
         </section>
       }

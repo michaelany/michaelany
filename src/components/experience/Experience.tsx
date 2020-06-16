@@ -15,7 +15,7 @@ export default function Experience(): JSX.Element {
         <section className="Section Section_pagination Section_colorful">
           <h2 className="VisuallyHidden">Этапы</h2>
           <Stepper />
-          <Pagination prevTo={PATHS.SKILLS} nextTo={PATHS.PORTFOLIO} />
+          <Pagination prevTo={PATHS.skills} nextTo={PATHS.portfolio} />
           <Copyright />
         </section>
       }

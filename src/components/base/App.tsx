@@ -19,11 +19,12 @@ export default function App(): JSX.Element {
   const {pathname} = useLocation()
   const lastSlashIndex: number = pathname.lastIndexOf('/')
   const AppClassName: string = cn(
-    `App App_page_${pathname.slice(1, lastSlashIndex || undefined) ||
-      'home'} App_color_${PATH_COLORS[pathname.slice(lastSlashIndex)]}`,
+    `App App_page_${
+      pathname.slice(1, lastSlashIndex || undefined) || 'home'
+    } App_color_${PATH_COLORS[pathname.slice(lastSlashIndex)]}`,
     {
-      App_background_blue: pathname === PATHS.PORTFOLIO,
-      App_background_green: pathname === PATHS.CONTACT,
+      App_background_blue: pathname === PATHS.portfolio,
+      App_background_green: pathname === PATHS.contact,
     }
   )
 
@@ -37,18 +38,18 @@ export default function App(): JSX.Element {
       </Hidden>
       <main className="App-Main">
         <Switch>
-          <Route exact path={PATHS.HOME} component={Home} />
-          <Route exact path={PATHS.ABOUT} component={About} />
-          <Route exact path={PATHS.SKILLS} component={Skills} />
-          <Route exact path={PATHS.EXPERIENCE} component={Experience} />
-          <Route exact path={PATHS.PORTFOLIO} component={Portfolio} />
+          <Route exact path={PATHS.home} component={Home} />
+          <Route exact path={PATHS.about} component={About} />
+          <Route exact path={PATHS.skills} component={Skills} />
+          <Route exact path={PATHS.experience} component={Experience} />
+          <Route exact path={PATHS.portfolio} component={Portfolio} />
           <Route
             exact
-            path={`${PATHS.PORTFOLIO}/:project`}
+            path={`${PATHS.portfolio}/:project`}
             component={Project}
           />
-          <Route exact path={PATHS.CONTACT} component={Contact} />
-          <Redirect to={PATHS.HOME} />
+          <Route exact path={PATHS.contact} component={Contact} />
+          <Redirect to={PATHS.home} />
         </Switch>
       </main>
     </div>

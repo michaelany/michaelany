@@ -11,10 +11,10 @@ import {TiltOptions} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  reset: DETECTED.SAFARI,
-  max: DETECTED.SAFARI ? 0 : 50,
-  scale: DETECTED.SAFARI ? TILT_SCALE : 1,
-  speed: DURATIONS.LINGERING,
+  reset: DETECTED.safari,
+  max: DETECTED.safari ? 0 : 50,
+  scale: DETECTED.safari ? TILT_SCALE : 1,
+  speed: DURATIONS.lingering,
 }
 
 export default function Banner(): JSX.Element {
@@ -30,7 +30,7 @@ export default function Banner(): JSX.Element {
             alt="MacBook Pro Mid 2015"
           />
         </Tilt>
-        <Pagination nextTo={PATHS.ABOUT} />
+        <Pagination nextTo={PATHS.about} />
         <Copyright />
       </div>
     </section>

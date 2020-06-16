@@ -1,73 +1,73 @@
 interface Colors {
-  GREEN: string
-  BLUE: string
-  TEXT: string
-  SECOND_TEXT: string
-  DARK_RED: string
+  green: string
+  blue: string
+  text: string
+  secondText: string
+  darkRed: string
 }
 
 interface Durations {
-  SHORTEST: number
-  SHORTER: number
-  SHORT: number
-  STANDARD: number
-  MEDIUM: number
-  MEDIUM_LONG: number
-  LONG: number
-  LONGER: number
-  LONGEST: number
-  LINGERING: number
-  ALTERNATE: number
+  shortest: number
+  shorter: number
+  short: number
+  standard: number
+  medium: number
+  mediumLong: number
+  long: number
+  longer: number
+  longest: number
+  lingering: number
+  alternate: number
 }
 
 interface Easings {
-  IN_OUT: string
-  OUT: string
+  inOut: string
+  out: string
 }
 
 interface Breakpoints {
-  XS: number
-  SM: number
-  MD: number
-  LG: number
+  xs: number
+  sm: number
+  md: number
+  lg: number
 }
 
 // $color_...
 export const COLORS: Colors = {
-  GREEN: '#2fd0c8',
-  BLUE: '#64a6fc',
-  TEXT: '#4a4a4a',
-  SECOND_TEXT: '#7b7b7b',
-  DARK_RED: '#cf7e63',
+  green: '#2fd0c8',
+  blue: '#64a6fc',
+  text: '#4a4a4a',
+  secondText: '#7b7b7b',
+  darkRed: '#cf7e63',
 }
 
 // $duration_...
 export const DURATIONS: Durations = {
-  SHORTEST: 150,
-  SHORTER: 200,
-  SHORT: 250,
-  STANDARD: 300,
-  MEDIUM: 500,
-  MEDIUM_LONG: 650,
-  LONG: 800,
-  LONGER: 1000,
-  LONGEST: 2000,
-  LINGERING: 3000,
-  ALTERNATE: 20000,
+  shortest: 150,
+  shorter: 200,
+  short: 250,
+  standard: 300,
+  medium: 500,
+  mediumLong: 650,
+  long: 800,
+  longer: 1000,
+  longest: 2000,
+  lingering: 3000,
+  alternate: 20000,
 }
 
 // $easing_...
 export const EASINGS: Easings = {
-  IN_OUT: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  OUT: 'cubic-bezier(0, 0, 0.2, 1)',
+  inOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  out: 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
 // $breakpoint_...
 export const BREAKPOINTS: Breakpoints = {
-  XS: 399,
-  SM: 599,
-  MD: 959,
-  LG: 1279,
+  xs: 399,
+  sm: 599,
+  md: 959,
+  lg: 1279,
 }
 
 export default {
@@ -98,46 +98,46 @@ export default {
   breakpoints: {
     values: {
       xs: 0,
-      sm: BREAKPOINTS.XS + 1,
-      md: BREAKPOINTS.SM + 1,
-      lg: BREAKPOINTS.MD + 1,
-      xl: BREAKPOINTS.LG + 1,
+      sm: BREAKPOINTS.xs + 1,
+      md: BREAKPOINTS.sm + 1,
+      lg: BREAKPOINTS.md + 1,
+      xl: BREAKPOINTS.lg + 1,
     },
   },
   palette: {
     text: {
-      primary: COLORS.TEXT,
-      secondary: COLORS.SECOND_TEXT,
+      primary: COLORS.text,
+      secondary: COLORS.secondText,
     },
     background: {
       default: '#fff', // $color_background
     },
     primary: {
-      light: COLORS.BLUE,
-      main: COLORS.BLUE,
+      light: COLORS.blue,
+      main: COLORS.blue,
       dark: '#568bd0', // $color_dark-blue
     },
     secondary: {
-      light: COLORS.GREEN,
-      main: COLORS.GREEN,
+      light: COLORS.green,
+      main: COLORS.green,
       dark: '#2caca6', // $color_dark-green
     },
     error: {
-      light: COLORS.DARK_RED,
-      main: COLORS.DARK_RED,
-      dark: COLORS.DARK_RED,
+      light: COLORS.darkRed,
+      main: COLORS.darkRed,
+      dark: COLORS.darkRed,
     },
   },
   transitions: {
     easing: {
-      easeInOut: EASINGS.IN_OUT,
-      easeOut: EASINGS.OUT,
+      easeInOut: EASINGS.inOut,
+      easeOut: EASINGS.out,
     },
     duration: {
-      shortest: DURATIONS.SHORTEST,
-      shorter: DURATIONS.SHORTER,
-      short: DURATIONS.SHORT,
-      standard: DURATIONS.STANDARD,
+      shortest: DURATIONS.shortest,
+      shorter: DURATIONS.shorter,
+      short: DURATIONS.short,
+      standard: DURATIONS.standard,
     },
   },
   shadows: ['none'],
@@ -146,7 +146,7 @@ export default {
   },
   props: {
     MuiTooltip: {
-      enterDelay: DURATIONS.STANDARD,
+      enterDelay: DURATIONS.standard,
     },
     MuiExpansionPanel: {
       elevation: 0,

@@ -20,16 +20,16 @@ export default function ITilt({
 }: TiltProps): JSX.Element {
   const Component: any = component
   const content: JSX.Element = component ? (
-    <Component className={DETECTED.MOBILE ? className : undefined}>
+    <Component className={DETECTED.mobile ? className : undefined}>
       {children}
     </Component>
   ) : (
     children
   )
-  return DETECTED.MOBILE ? (
+  return DETECTED.mobile ? (
     content
   ) : (
-    <ReactTilt className={className} options={options} easing={EASINGS.IN_OUT}>
+    <ReactTilt className={className} options={options} easing={EASINGS.inOut}>
       {content}
     </ReactTilt>
   )

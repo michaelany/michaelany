@@ -16,10 +16,10 @@ const PROJECTS: Project[] = [
     title: 'Proximal Coffee',
     name: 'proximal',
     description: 'Лендинг австралийской кофейни.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.PROXIMAL],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.PROXIMAL,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.proximal],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.proximal,
     href: 'https://www.proximalcoffee.com.au',
     features: [
       {
@@ -31,22 +31,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.PUG}, ${TECHNOLOGY_TITLES.JS}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.pug}, ${TECHNOLOGY_TITLES.js}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.GULP}, ${TECHNOLOGY_TITLES.ZEPLIN}, ${TECHNOLOGY_TITLES.SKETCH}`,
+        label: `${TECHNOLOGY_TITLES.gulp}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Декабрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -85,10 +85,10 @@ const PROJECTS: Project[] = [
     title: 'АРМА ЕМБП',
     name: 'embp',
     description: 'Админка биометрической платформы.',
-    type: PROJECT_TYPES.ADMIN,
-    color: PATH_COLORS[PROJECT_PATHS.EMBP],
-    company: COMPANIES.TSFTD,
-    path: PROJECT_PATHS.EMBP,
+    type: PROJECT_TYPES.admin,
+    color: PATH_COLORS[PROJECT_PATHS.embp],
+    company: COMPANIES.tsftd,
+    path: PROJECT_PATHS.embp,
     features: [
       {
         label: 'Разработка с нуля, развитие и поддержка проекта',
@@ -99,22 +99,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.TS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.ts}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.STYLED}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.styled}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.WEBPACK}, ${TECHNOLOGY_TITLES.JEST}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.jest}`,
         Icon: BuildIcon,
       },
       {
         label: 'Обширная бизнес-логика, темная тема',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.admin, Icon: WebIcon},
       {label: 'Июль 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -138,10 +138,10 @@ const PROJECTS: Project[] = [
     title: 'Ted Manson Foundation',
     name: 'tmf',
     description: 'Многостраничный сайт новозеландской строительной компании.',
-    type: PROJECT_TYPES.SITE,
-    color: PATH_COLORS[PROJECT_PATHS.TMF],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.TMF,
+    type: PROJECT_TYPES.site,
+    color: PATH_COLORS[PROJECT_PATHS.tmf],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.tmf,
     href: 'https://www.tmfoundation.co.nz',
     features: [
       {
@@ -153,22 +153,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.PUG}, ${TECHNOLOGY_TITLES.JS}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.pug}, ${TECHNOLOGY_TITLES.js}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.GULP}, ${TECHNOLOGY_TITLES.PHOTOSHOP}`,
+        label: `${TECHNOLOGY_TITLES.gulp}, ${TECHNOLOGY_TITLES.photoshop}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.site, Icon: WebIcon},
       {label: 'Октябрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -206,10 +206,10 @@ const PROJECTS: Project[] = [
     title: '7 glyphs Lite',
     name: 'lite',
     description: 'Лендинг сервиса новозеландской ИТ компании.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.LITE],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.LITE,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.lite],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.lite,
     href: 'https://lite.7glyphs.com',
     features: [
       {
@@ -221,22 +221,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.CRA}, ${TECHNOLOGY_TITLES.ZEPLIN}, ${TECHNOLOGY_TITLES.SKETCH}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Сентябрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -274,10 +274,10 @@ const PROJECTS: Project[] = [
     title: 'Melissa Chalmers',
     name: 'melissa',
     description: 'Лендинг фитнес-блога.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.MELISSA],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.MELISSA,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.mellissa],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.mellissa,
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
       {
@@ -289,22 +289,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.CRA}, ${TECHNOLOGY_TITLES.ZEPLIN}, ${TECHNOLOGY_TITLES.SKETCH}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Сентябрь 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -342,10 +342,10 @@ const PROJECTS: Project[] = [
     title: 'Foodprint Portal',
     name: 'foodp',
     description: 'Админка новозеландского сервиса заказа еды в ресторанах.',
-    type: PROJECT_TYPES.ADMIN,
-    color: PATH_COLORS[PROJECT_PATHS.FOODP],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.FOODP,
+    type: PROJECT_TYPES.admin,
+    color: PATH_COLORS[PROJECT_PATHS.foodp],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.foodp,
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
@@ -357,22 +357,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.sass}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.WEBPACK}, ${TECHNOLOGY_TITLES.ZEPLIN}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
         label: 'Крупный проект с обширной бизнес-логикой',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.admin, Icon: WebIcon},
       {label: 'Июнь 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -396,10 +396,10 @@ const PROJECTS: Project[] = [
     title: 'Foodprint',
     name: 'food',
     description: 'Лендинг новозеландского сервиса заказа еды в ресторанах.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.FOOD],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.FOOD,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.food],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.food,
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
@@ -411,22 +411,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.CRA}, ${TECHNOLOGY_TITLES.ZEPLIN}, ${TECHNOLOGY_TITLES.SKETCH}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Июнь 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -464,10 +464,10 @@ const PROJECTS: Project[] = [
     title: 'Sales Digital System',
     name: 'sds',
     description: 'Единый кабинет для работы сотрудников и партнеров компании.',
-    type: PROJECT_TYPES.APP,
-    color: PATH_COLORS[PROJECT_PATHS.SDS],
-    company: COMPANIES.TSFTD,
-    path: PROJECT_PATHS.SDS,
+    type: PROJECT_TYPES.app,
+    color: PATH_COLORS[PROJECT_PATHS.sds],
+    company: COMPANIES.tsftd,
+    path: PROJECT_PATHS.sds,
     features: [
       {
         label: 'Разработка с нуля, развитие и поддержка проекта',
@@ -478,22 +478,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.STYLED}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.styled}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, Keycloak, ${TECHNOLOGY_TITLES.CRA}`,
+        label: `REST API, Keycloak, ${TECHNOLOGY_TITLES.cra}`,
         Icon: BuildIcon,
       },
       {
         label: 'Поработал с Keycloak',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.APP, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.app, Icon: WebIcon},
       {label: '-', Icon: EventIcon, time: true},
     ],
     images: {
@@ -517,10 +517,10 @@ const PROJECTS: Project[] = [
     title: 'StrongHer',
     name: 'strong',
     description: 'Лендинг мобильного фитнес-приложения.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.STRONG],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.STRONG,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.strong],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.strong,
     href: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
       {
@@ -532,22 +532,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, Stripe, ${TECHNOLOGY_TITLES.CRA}, ${TECHNOLOGY_TITLES.ZEPLIN}, ${TECHNOLOGY_TITLES.SKETCH}`,
+        label: `REST API, Stripe, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Февраль 2019', Icon: EventIcon, time: true},
     ],
     images: {
@@ -586,10 +586,10 @@ const PROJECTS: Project[] = [
     name: 'rogue',
     description:
       'Новозеландский сервис группового бронирования авиабилетов и отелей.',
-    type: PROJECT_TYPES.SITE,
-    color: PATH_COLORS[PROJECT_PATHS.ROGUE],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.ROGUE,
+    type: PROJECT_TYPES.site,
+    color: PATH_COLORS[PROJECT_PATHS.rogue],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.rogue,
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
       {
@@ -601,22 +601,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.SASS}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.sass}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, Stripe, ${TECHNOLOGY_TITLES.WEBPACK}, ${TECHNOLOGY_TITLES.ZEPLIN}, ${TECHNOLOGY_TITLES.SKETCH}`,
+        label: `REST API, Stripe, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
         label: 'Крупный проект с обширной бизнес-логикой',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.site, Icon: WebIcon},
       {label: 'Ноябрь 2018', Icon: EventIcon, time: true},
     ],
     images: {
@@ -640,10 +640,10 @@ const PROJECTS: Project[] = [
     title: 'Quarry Trucks',
     name: 'trucks',
     description: 'Новозеландский сервис мониторинга передвижения грузовиков.',
-    type: PROJECT_TYPES.APP,
-    color: PATH_COLORS[PROJECT_PATHS.TRUCKS],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.TRUCKS,
+    type: PROJECT_TYPES.app,
+    color: PATH_COLORS[PROJECT_PATHS.trucks],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.trucks,
     href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
     features: [
       {
@@ -655,22 +655,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.MOBX}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.mobx}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.ZEPLIN}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
-        label: `Поработал с ${TECHNOLOGY_TITLES.MOBX} и графиками`,
+        label: `Поработал с ${TECHNOLOGY_TITLES.mobx} и графиками`,
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.APP, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.app, Icon: WebIcon},
       {label: 'Май 2018', Icon: EventIcon, time: true},
     ],
     images: {
@@ -694,10 +694,10 @@ const PROJECTS: Project[] = [
     title: 'Service Packages',
     name: 'services',
     description: 'Лендинг описания услуг новозеландской ИТ компании.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.SERVICES],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.SERVICES,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.services],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.services,
     href: 'https://7glyphs.com/approach/packages',
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
@@ -706,22 +706,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс, анимации`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс, анимации`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.CRA}, ${TECHNOLOGY_TITLES.ZEPLIN}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
         label: 'Анимации',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Февраль 2018', Icon: EventIcon, time: true},
     ],
     images: {
@@ -756,13 +756,13 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'FCDC Dashboard',
+    title: 'fcdc Dashboard',
     name: 'fcdc',
     description: 'Админка сервиса управления мероприятиями.',
-    type: PROJECT_TYPES.ADMIN,
-    color: PATH_COLORS[PROJECT_PATHS.FCDC],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.FCDC,
+    type: PROJECT_TYPES.admin,
+    color: PATH_COLORS[PROJECT_PATHS.fcdc],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.fcdc,
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
       {
@@ -770,22 +770,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MUI}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.mui}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.CRA}, ${TECHNOLOGY_TITLES.PHOTOSHOP}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.photoshop}`,
         Icon: BuildIcon,
       },
       {
         label: 'Большое количество форм и таблиц',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.admin, Icon: WebIcon},
       {label: 'Январь 2018', Icon: EventIcon, time: true},
     ],
     images: {
@@ -809,10 +809,10 @@ const PROJECTS: Project[] = [
     title: '12 Saffron',
     name: '12saffron',
     description: 'Целевая страница для продажи дома в Новой Зеландии.',
-    type: PROJECT_TYPES.LANDING,
-    color: PATH_COLORS[PROJECT_PATHS.SAFFRON],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.SAFFRON,
+    type: PROJECT_TYPES.landing,
+    color: PATH_COLORS[PROJECT_PATHS.saffron],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.saffron,
     href: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
@@ -821,22 +821,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.PUG}, ${TECHNOLOGY_TITLES.JS}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.pug}, ${TECHNOLOGY_TITLES.js}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс`,
         Icon: PaletteIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.GULP}, ${TECHNOLOGY_TITLES.ZEPLIN}`,
+        label: `${TECHNOLOGY_TITLES.gulp}, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
         label: 'Дом успешно продали',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.LANDING, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
       {label: 'Август 2017', Icon: EventIcon, time: true},
     ],
     images: {
@@ -874,10 +874,10 @@ const PROJECTS: Project[] = [
     title: 'Whip Around',
     name: 'whip',
     description: 'Новозеландский сервис техосмотра автомобилей.',
-    type: PROJECT_TYPES.SITE,
-    color: PATH_COLORS[PROJECT_PATHS.WHIP],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.WHIP,
+    type: PROJECT_TYPES.site,
+    color: PATH_COLORS[PROJECT_PATHS.whip],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.whip,
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
       {label: 'Развитие и поддержка проекта', Icon: CheckCircleIcon},
@@ -886,22 +886,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.PHP}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.JQUERY}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.php}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.jquery}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BOOTSTRAP}, адаптивный интерфейс`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bootstrap}, адаптивный интерфейс`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.LARAVEL}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.laravel}`,
         Icon: BuildIcon,
       },
       {
-        label: `Поработал с ${TECHNOLOGY_TITLES.PHP}, ${TECHNOLOGY_TITLES.LARAVEL} и ${TECHNOLOGY_TITLES.BLADE}`,
+        label: `Поработал с ${TECHNOLOGY_TITLES.php}, ${TECHNOLOGY_TITLES.laravel} и ${TECHNOLOGY_TITLES.blade}`,
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.site, Icon: WebIcon},
       {label: 'Сентябрь 2017', Icon: EventIcon, time: true},
     ],
     images: {
@@ -923,10 +923,10 @@ const PROJECTS: Project[] = [
     title: 'LazyAz Dashboard',
     name: 'lazyazd',
     description: 'Админка новозеландского сервиса доставки.',
-    type: PROJECT_TYPES.ADMIN,
-    color: PATH_COLORS[PROJECT_PATHS.LAZYAZD],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.LAZYAZD,
+    type: PROJECT_TYPES.admin,
+    color: PATH_COLORS[PROJECT_PATHS.lazyazd],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.lazyazd,
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
@@ -935,22 +935,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.PHP}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.JQUERY}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.php}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.jquery}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BOOTSTRAP}, адаптивный интерфейс`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bootstrap}, адаптивный интерфейс`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.LARAVEL}, ${TECHNOLOGY_TITLES.ZEPLIN}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.laravel}, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
-        label: `Поработал с ${TECHNOLOGY_TITLES.PHP}, ${TECHNOLOGY_TITLES.LARAVEL} и ${TECHNOLOGY_TITLES.BLADE}`,
+        label: `Поработал с ${TECHNOLOGY_TITLES.php}, ${TECHNOLOGY_TITLES.laravel} и ${TECHNOLOGY_TITLES.blade}`,
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.ADMIN, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.admin, Icon: WebIcon},
       {label: 'Май 2017', Icon: EventIcon, time: true},
     ],
     images: {
@@ -972,10 +972,10 @@ const PROJECTS: Project[] = [
     title: 'LazyAz',
     name: 'lazyaz',
     description: 'Веб-платформа новозеландского сервиса доставки.',
-    type: PROJECT_TYPES.SITE,
-    color: PATH_COLORS[PROJECT_PATHS.LAZYAZ],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.LAZYAZ,
+    type: PROJECT_TYPES.site,
+    color: PATH_COLORS[PROJECT_PATHS.lazyaz],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.lazyaz,
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {
@@ -987,22 +987,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}, ${TECHNOLOGY_TITLES.JQUERY}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}, ${TECHNOLOGY_TITLES.jquery}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.BEM}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.bem}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.GULP}, ${TECHNOLOGY_TITLES.WEBPACK}, ${TECHNOLOGY_TITLES.ZEPLIN}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.gulp}, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
         label: 'Первый коммерческий проект, написанный с нуля',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.site, Icon: WebIcon},
       {label: 'Март 2017', Icon: EventIcon, time: true},
     ],
     images: {
@@ -1040,14 +1040,14 @@ const PROJECTS: Project[] = [
     title: 'Сайт 7 glyphs',
     name: '7glyphs',
     description: `Сайт новозеландской ИТ компании.`,
-    type: PROJECT_TYPES.SITE,
-    color: PATH_COLORS[PROJECT_PATHS.GLYPHS],
-    company: COMPANIES.SEVEN_GLYPHS,
-    path: PROJECT_PATHS.GLYPHS,
-    href: COMPANIES.SEVEN_GLYPHS.href,
+    type: PROJECT_TYPES.site,
+    color: PATH_COLORS[PROJECT_PATHS.glyphs],
+    company: COMPANIES.sevenGlyphs,
+    path: PROJECT_PATHS.glyphs,
+    href: COMPANIES.sevenGlyphs.href,
     features: [
       {
-        label: `Переписывание кодовой базы с ${TECHNOLOGY_TITLES.JQUERY} на ${TECHNOLOGY_TITLES.REACT}`,
+        label: `Переписывание кодовой базы с ${TECHNOLOGY_TITLES.jquery} на ${TECHNOLOGY_TITLES.react}`,
         Icon: CheckCircleIcon,
       },
       {
@@ -1055,22 +1055,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.JQUERY}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.jquery}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.SASS}, адаптивный интерфейс`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.sass}, адаптивный интерфейс`,
         Icon: PaletteIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.GULP}, ${TECHNOLOGY_TITLES.WEBPACK}`,
+        label: `${TECHNOLOGY_TITLES.gulp}, ${TECHNOLOGY_TITLES.webpack}`,
         Icon: BuildIcon,
       },
       {
         label: 'Превратил сайт в SPA',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.SITE, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.site, Icon: WebIcon},
       {label: 'Январь 2017', Icon: EventIcon, time: true},
     ],
     images: {
@@ -1109,10 +1109,10 @@ const PROJECTS: Project[] = [
     name: 'msp',
     description:
       'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес.',
-    type: PROJECT_TYPES.APP,
-    color: PATH_COLORS[PROJECT_PATHS.MSP],
-    company: COMPANIES.EVERPOINT,
-    path: PROJECT_PATHS.MSP,
+    type: PROJECT_TYPES.app,
+    color: PATH_COLORS[PROJECT_PATHS.msp],
+    company: COMPANIES.everpoint,
+    path: PROJECT_PATHS.msp,
     href: 'https://www.everpoint.ru/msp',
     features: [
       {label: 'Развитие и поддержка проекта', Icon: CheckCircleIcon},
@@ -1121,22 +1121,22 @@ const PROJECTS: Project[] = [
         Icon: GroupWorkIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.HTML}, ${TECHNOLOGY_TITLES.JS}, ${TECHNOLOGY_TITLES.REACT}, ${TECHNOLOGY_TITLES.REDUX}, ${TECHNOLOGY_TITLES.HANDLEBARS}, ${TECHNOLOGY_TITLES.JQUERY}`,
+        label: `${TECHNOLOGY_TITLES.html}, ${TECHNOLOGY_TITLES.js}, ${TECHNOLOGY_TITLES.react}, ${TECHNOLOGY_TITLES.redux}, ${TECHNOLOGY_TITLES.handlebars}, ${TECHNOLOGY_TITLES.jquery}`,
         Icon: CodeIcon,
       },
       {
-        label: `${TECHNOLOGY_TITLES.CSS}, ${TECHNOLOGY_TITLES.MODULES}, ${TECHNOLOGY_TITLES.SASS}, ${TECHNOLOGY_TITLES.SEMANTIC}`,
+        label: `${TECHNOLOGY_TITLES.css}, ${TECHNOLOGY_TITLES.modules}, ${TECHNOLOGY_TITLES.sass}, ${TECHNOLOGY_TITLES.semantic}`,
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.WEBPACK}, ${TECHNOLOGY_TITLES.PHOTOSHOP}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.photoshop}`,
         Icon: BuildIcon,
       },
       {
         label: 'Первый коммерческий проект',
         Icon: StarIcon,
       },
-      {label: PROJECT_TYPE_LABELS.APP, Icon: WebIcon},
+      {label: PROJECT_TYPE_LABELS.app, Icon: WebIcon},
       {label: 'Август 2016', Icon: EventIcon, time: true},
     ],
     images: {

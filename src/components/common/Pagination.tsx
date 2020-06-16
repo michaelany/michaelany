@@ -16,12 +16,12 @@ interface PaginationProps {
 }
 
 const pathTitles: Map<string> = {
-  [PATHS.HOME]: TITLES.HOME,
-  [PATHS.ABOUT]: TITLES.ABOUT,
-  [PATHS.SKILLS]: TITLES.SKILLS,
-  [PATHS.EXPERIENCE]: TITLES.EXPERIENCE,
-  [PATHS.PORTFOLIO]: TITLES.PORTFOLIO,
-  [PATHS.CONTACT]: TITLES.CONTACT,
+  [PATHS.home]: TITLES.home,
+  [PATHS.about]: TITLES.about,
+  [PATHS.skills]: TITLES.skills,
+  [PATHS.experience]: TITLES.experience,
+  [PATHS.portfolio]: TITLES.portfolio,
+  [PATHS.contact]: TITLES.contact,
 }
 
 export default function Pagination({

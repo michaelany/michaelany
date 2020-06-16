@@ -27,7 +27,7 @@ function Map(): JSX.Element {
   const history = useHistory()
 
   const handleMarkerClick = (): void => {
-    history.push(PATHS.ABOUT)
+    history.push(PATHS.about)
   }
 
   return (

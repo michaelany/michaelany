@@ -9,169 +9,169 @@ import {ReactComponent as SkypeIcon} from '../assets/icons/skype.svg'
 import {SocialLink, Company} from '../utils/types'
 
 interface Titles {
-  HOME: string
-  ABOUT: string
-  SKILLS: string
-  EXPERIENCE: string
-  PORTFOLIO: string
-  CONTACT: string
+  home: string
+  about: string
+  skills: string
+  experience: string
+  portfolio: string
+  contact: string
 }
 
 interface CompanyTitles {
-  MVIDEO: string
-  EVERPOINT: string
-  SEVEN_GLYPHS: string
-  TSFTD: string
+  mvideo: string
+  everpoint: string
+  sevenGlyphs: string
+  tsftd: string
 }
 
 interface ContactLinks {
-  GIT_HUB: SocialLink
-  LINKED_IN: SocialLink
-  SEVEN_GLYPHS: SocialLink
-  INSTAGRAM: SocialLink
-  VK: SocialLink
-  FACEBOOK: SocialLink
-  TELEGRAM: SocialLink
-  SKYPE: SocialLink
+  gitHub: SocialLink
+  linkedIn: SocialLink
+  sevenGlyphs: SocialLink
+  instagram: SocialLink
+  vk: SocialLink
+  facebook: SocialLink
+  telegram: SocialLink
+  skype: SocialLink
 }
 
 interface Companies {
-  TSFTD: Company
-  SEVEN_GLYPHS: Company
-  EVERPOINT: Company
-  MVIDEO: Company
+  tsftd: Company
+  sevenGlyphs: Company
+  everpoint: Company
+  mvideo: Company
 }
 
 interface TechnologyTitles {
-  JS: string
-  TS: string
-  REACT: string
-  REDUX: string
-  MOBX: string
-  PREACT: string
-  VUE: string
-  SVELTE: string
-  APOLLO: string
-  JQUERY: string
-  HTML: string
-  SVG: string
-  JSX: string
-  PUG: string
-  HANDLEBARS: string
-  MARKDOWN: string
-  BLADE: string
-  CSS: string
-  BEM: string
-  SASS: string
-  MUI: string
-  MODULES: string
-  STYLED: string
-  REACTSTRAP: string
-  ANT: string
-  MATERIALIZE: string
-  BOOTSTRAP: string
-  SEMANTIC: string
-  EMAILS: string
-  NPM: string
-  YARN: string
-  WEBPACK: string
-  GULP: string
-  PARCEL: string
-  CRA: string
-  GATSBY: string
-  NEXT: string
-  NUXT: string
-  GIT: string
-  BABEL: string
-  PRETTIER: string
-  ESLINT: string
-  STORYBOOK: string
-  BIT: string
-  JEST: string
-  MOCHA: string
-  VSCODE: string
-  ITERM: string
-  DEVTOOLS: string
-  ZEPLIN: string
-  SKETCH: string
-  FIGMA: string
-  PHOTOSHOP: string
-  OPTIM: string
-  MAC: string
-  NODE: string
-  MONGO: string
-  MYSQL: string
-  PHP: string
-  LARAVEL: string
+  js: string
+  ts: string
+  react: string
+  redux: string
+  mobx: string
+  preact: string
+  vue: string
+  svelte: string
+  apollo: string
+  jquery: string
+  html: string
+  svg: string
+  jsx: string
+  pug: string
+  handlebars: string
+  markdown: string
+  blade: string
+  css: string
+  bem: string
+  sass: string
+  mui: string
+  modules: string
+  styled: string
+  reactstrap: string
+  ant: string
+  materialize: string
+  bootstrap: string
+  semantic: string
+  emails: string
+  npm: string
+  yarn: string
+  webpack: string
+  gulp: string
+  parcel: string
+  cra: string
+  gatsby: string
+  next: string
+  nuxt: string
+  git: string
+  babel: string
+  prettier: string
+  eslint: string
+  storybook: string
+  bit: string
+  jest: string
+  mocha: string
+  vscode: string
+  item: string
+  devtools: string
+  zeplin: string
+  sketch: string
+  figma: string
+  photoshop: string
+  optim: string
+  mac: string
+  node: string
+  mongo: string
+  mysql: string
+  php: string
+  laravel: string
 }
 
 interface ProjectTypeLabels {
-  APP: string
-  SITE: string
-  ADMIN: string
-  LANDING: string
+  app: string
+  site: string
+  admin: string
+  landing: string
 }
 
 export const TITLES: Titles = {
-  HOME: 'Главная',
-  ABOUT: 'Обо мне',
-  SKILLS: 'Навыки',
-  EXPERIENCE: 'Опыт',
-  PORTFOLIO: 'Портфолио',
-  CONTACT: 'Контакты',
+  home: 'Главная',
+  about: 'Обо мне',
+  skills: 'Навыки',
+  experience: 'Опыт',
+  portfolio: 'Портфолио',
+  contact: 'Контакты',
 }
 
 export const COMPANY_TITLES: CompanyTitles = {
-  MVIDEO: 'М.Видео',
-  EVERPOINT: 'Эверпоинт',
-  SEVEN_GLYPHS: '7 glyphs Ltd.',
-  TSFTD: 'ТехноСофт Диджитал',
+  mvideo: 'М.Видео',
+  everpoint: 'Эверпоинт',
+  sevenGlyphs: '7 glyphs Ltd.',
+  tsftd: 'ТехноСофт Диджитал',
 }
 
 export const CONTACT_LINKS: ContactLinks = {
-  GIT_HUB: {
+  gitHub: {
     title: 'GitHub',
     href: 'https://github.com/vashstamp',
     Icon: GitHubIcon,
     size: 'lg',
   },
-  LINKED_IN: {
+  linkedIn: {
     title: 'LinkedIn',
     href: 'https://www.linkedin.com/mclananiev',
     Icon: LinkedInIcon,
     size: 'sm',
   },
-  SEVEN_GLYPHS: {
-    title: `${COMPANY_TITLES.SEVEN_GLYPHS} Team`,
+  sevenGlyphs: {
+    title: `${COMPANY_TITLES.sevenGlyphs} Team`,
     href: 'https://7glyphs.com/agency/team',
     Icon: SevenGlyphsIcon,
     size: 'xs',
   },
-  INSTAGRAM: {
+  instagram: {
     title: 'Instagram',
     href: 'https://www.instagram.com/mclananiev/',
     Icon: InstagramIcon,
     size: 'md',
   },
-  VK: {
-    title: 'VK',
+  vk: {
+    title: 'vk',
     href: 'https://vk.com/mclananiev',
     Icon: VKIcon,
     size: 'md',
   },
-  FACEBOOK: {
+  facebook: {
     title: 'Facebook',
     href: 'https://www.facebook.com/mclananiev',
     Icon: FacebookIcon,
     size: 'sm',
   },
-  TELEGRAM: {
+  telegram: {
     title: 'Telegram',
     href: 'https://t.me/mclananiev',
     Icon: TelegramIcon,
     size: 'md',
   },
-  SKYPE: {
+  skype: {
     title: 'Skype',
     href: 'skype:live:bd80acb1b9083867?chat',
     Icon: SkypeIcon,
@@ -180,8 +180,8 @@ export const CONTACT_LINKS: ContactLinks = {
 }
 
 export const COMPANIES: Companies = {
-  TSFTD: {
-    title: COMPANY_TITLES.TSFTD,
+  tsftd: {
+    title: COMPANY_TITLES.tsftd,
     images: [
       require('../assets/img/companies/tsftd.png'),
       require('../assets/img/companies/tsftd@2x.png'),
@@ -189,8 +189,8 @@ export const COMPANIES: Companies = {
     color: 'red',
     href: 'http://www.tsft.ru',
   },
-  SEVEN_GLYPHS: {
-    title: COMPANY_TITLES.SEVEN_GLYPHS,
+  sevenGlyphs: {
+    title: COMPANY_TITLES.sevenGlyphs,
     images: [
       require('../assets/img/companies/7glyphs.png'),
       require('../assets/img/companies/7glyphs@2x.png'),
@@ -198,8 +198,8 @@ export const COMPANIES: Companies = {
     color: 'default',
     href: 'https://7glyphs.com',
   },
-  EVERPOINT: {
-    title: COMPANY_TITLES.EVERPOINT,
+  everpoint: {
+    title: COMPANY_TITLES.everpoint,
     images: [
       require('../assets/img/companies/everpoint.png'),
       require('../assets/img/companies/everpoint@2x.png'),
@@ -207,8 +207,8 @@ export const COMPANIES: Companies = {
     color: 'grass',
     href: 'https://www.everpoint.ru',
   },
-  MVIDEO: {
-    title: COMPANY_TITLES.MVIDEO,
+  mvideo: {
+    title: COMPANY_TITLES.mvideo,
     images: [
       require('../assets/img/companies/mvideo.png'),
       require('../assets/img/companies/mvideo@2x.png'),
@@ -219,71 +219,71 @@ export const COMPANIES: Companies = {
 }
 
 export const TECHNOLOGY_TITLES: TechnologyTitles = {
-  JS: 'JavaScript',
-  TS: 'TypeScript',
-  REACT: 'React',
-  REDUX: 'Redux',
-  MOBX: 'MobX',
-  PREACT: 'Preact',
-  VUE: 'Vue.js',
-  SVELTE: 'Svelte',
-  APOLLO: 'Apollo Client',
-  JQUERY: 'jQuery',
-  HTML: 'HTML',
-  SVG: 'SVG',
-  JSX: 'JSX',
-  PUG: 'Pug',
-  HANDLEBARS: 'Handlebars',
-  MARKDOWN: 'Markdown',
-  BLADE: 'Blade',
-  CSS: 'CSS',
-  BEM: 'BEM',
-  SASS: 'Sass',
-  MUI: 'Material-UI',
-  MODULES: 'CSS Modules',
-  STYLED: 'styled-components',
-  REACTSTRAP: 'reactstrap',
-  ANT: 'Ant Design',
-  MATERIALIZE: 'Materialize',
-  BOOTSTRAP: 'Bootstrap',
-  SEMANTIC: 'Semantic UI',
-  EMAILS: 'Foundation for Emails',
-  NPM: 'NPM',
-  YARN: 'Yarn',
-  WEBPACK: 'webpack',
-  GULP: 'Gulp',
-  PARCEL: 'Parcel',
-  CRA: 'Create React App',
-  GATSBY: 'Gatsby',
-  NEXT: 'Next.js',
-  NUXT: 'Nuxt.js',
-  GIT: 'Git',
-  BABEL: 'Babel',
-  PRETTIER: 'Prettier',
-  ESLINT: 'ESLint',
-  STORYBOOK: 'Storybook',
-  BIT: 'Bit',
-  JEST: 'Jest',
-  MOCHA: 'Mocha',
-  VSCODE: 'Visual Studio Code',
-  ITERM: 'iTerm2',
-  DEVTOOLS: 'Chrome DevTools',
-  ZEPLIN: 'Zeplin',
-  SKETCH: 'Sketch',
-  FIGMA: 'Figma',
-  PHOTOSHOP: 'Photoshop',
-  OPTIM: 'ImageOptim',
-  MAC: 'macOS Catalina',
-  NODE: 'Node.js',
-  MONGO: 'MongoDB',
-  MYSQL: 'MySQL',
-  PHP: 'PHP',
-  LARAVEL: 'Laravel',
+  js: 'JavaScript',
+  ts: 'TypeScript',
+  react: 'React',
+  redux: 'Redux',
+  mobx: 'MobX',
+  preact: 'Preact',
+  vue: 'Vue.js',
+  svelte: 'Svelte',
+  apollo: 'Apollo Client',
+  jquery: 'jQuery',
+  html: 'html',
+  svg: 'svg',
+  jsx: 'jsx',
+  pug: 'Pug',
+  handlebars: 'Handlebars',
+  markdown: 'Markdown',
+  blade: 'Blade',
+  css: 'css',
+  bem: 'bem',
+  sass: 'Sass',
+  mui: 'Material-UI',
+  modules: 'css Modules',
+  styled: 'styled-components',
+  reactstrap: 'reactstrap',
+  ant: 'Ant Design',
+  materialize: 'Materialize',
+  bootstrap: 'Bootstrap',
+  semantic: 'Semantic UI',
+  emails: 'Foundation for Emails',
+  npm: 'npm',
+  yarn: 'Yarn',
+  webpack: 'webpack',
+  gulp: 'Gulp',
+  parcel: 'Parcel',
+  cra: 'Create React App',
+  gatsby: 'Gatsby',
+  next: 'Next.js',
+  nuxt: 'Nuxt.js',
+  git: 'Git',
+  babel: 'Babel',
+  prettier: 'Prettier',
+  eslint: 'ESLint',
+  storybook: 'Storybook',
+  bit: 'Bit',
+  jest: 'Jest',
+  mocha: 'Mocha',
+  vscode: 'Visual Studio Code',
+  item: 'iTerm2',
+  devtools: 'Chrome DevTools',
+  zeplin: 'Zeplin',
+  sketch: 'Sketch',
+  figma: 'Figma',
+  photoshop: 'Photoshop',
+  optim: 'ImageOptim',
+  mac: 'macOS Catalina',
+  node: 'Node.js',
+  mongo: 'MongoDB',
+  mysql: 'MySQL',
+  php: 'php',
+  laravel: 'Laravel',
 }
 
 export const PROJECT_TYPE_LABELS: ProjectTypeLabels = {
-  APP: 'Приложение',
-  SITE: 'Сайт',
-  ADMIN: 'Админка',
-  LANDING: 'Лендинг',
+  app: 'Приложение',
+  site: 'Сайт',
+  admin: 'Админка',
+  landing: 'Лендинг',
 }

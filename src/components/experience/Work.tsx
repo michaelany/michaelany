@@ -10,7 +10,7 @@ import {TITLES, COMPANIES} from '../../data/common'
 
 const jobs: JobInterface[] = [
   {
-    company: COMPANIES.TSFTD,
+    company: COMPANIES.tsftd,
     positions: [
       {
         occupation: 'Тимлид фронтенд-разработки',
@@ -48,7 +48,7 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    company: COMPANIES.SEVEN_GLYPHS,
+    company: COMPANIES.sevenGlyphs,
     positions: [
       {
         occupation: 'Ведущий фронтенд-разработчик',
@@ -71,7 +71,7 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    company: COMPANIES.EVERPOINT,
+    company: COMPANIES.everpoint,
     positions: [
       {
         occupation: 'Фронтенд-разработчик',
@@ -99,7 +99,7 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    company: COMPANIES.MVIDEO,
+    company: COMPANIES.mvideo,
     positions: [
       {
         occupation: 'Инженер технической поддержки',
@@ -125,7 +125,7 @@ const jobs: JobInterface[] = [
 export default function Work(): JSX.Element {
   return (
     <section className="Section">
-      <h1 className="Title">{TITLES.EXPERIENCE}</h1>
+      <h1 className="Title">{TITLES.experience}</h1>
       <p className="MainText">
         <b>
           Живу и работаю в Москве. Профессионально занимаюсь

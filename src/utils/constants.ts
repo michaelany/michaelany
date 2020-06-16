@@ -4,58 +4,58 @@ import {Path, Color, ProjectType, Map} from './types'
 import {DURATIONS} from '../styles/theme'
 
 interface Detected {
-  MOBILE: boolean
-  SAFARI: boolean
+  mobile: boolean
+  safari: boolean
 }
 
 interface Colors {
-  ALTERNATE: Color
-  WHITE: Color
-  DEFAULT: Color
-  BLUE: Color
-  GREEN: Color
-  GRASS: Color
-  RED: Color
-  YELLOW: Color
-  VIOLET: Color
+  alternate: Color
+  white: Color
+  default: Color
+  blue: Color
+  green: Color
+  grass: Color
+  red: Color
+  yellow: Color
+  violet: Color
 }
 
 interface Paths {
-  HOME: Path
-  ABOUT: Path
-  SKILLS: Path
-  EXPERIENCE: Path
-  PORTFOLIO: Path
-  CONTACT: Path
+  home: Path
+  about: Path
+  skills: Path
+  experience: Path
+  portfolio: Path
+  contact: Path
 }
 
 interface ProjectTypes {
-  APP: ProjectType
-  SITE: ProjectType
-  ADMIN: ProjectType
-  LANDING: ProjectType
+  app: ProjectType
+  site: ProjectType
+  admin: ProjectType
+  landing: ProjectType
 }
 
 interface ProjectPaths {
-  PROXIMAL: string
-  EMBP: string
-  TMF: string
-  LITE: string
-  MELISSA: string
-  FOODP: string
-  FOOD: string
-  SDS: string
-  STRONG: string
-  ROGUE: string
-  TRUCKS: string
-  SERVICES: string
-  FCDC: string
-  SAFFRON: string
-  WHIP: string
-  LAZYAZD: string
-  LAZYAZ: string
-  GLYPHS: string
-  MSP: string
+  proximal: string
+  embp: string
+  tmf: string
+  lite: string
+  mellissa: string
+  foodp: string
+  food: string
+  sds: string
+  strong: string
+  rogue: string
+  trucks: string
+  services: string
+  fcdc: string
+  saffron: string
+  whip: string
+  lazyazd: string
+  lazyaz: string
+  glyphs: string
+  msp: string
 }
 
 interface BlankLinkProps {
@@ -64,7 +64,7 @@ interface BlankLinkProps {
 }
 
 export const DETECTED: Detected = {
-  MOBILE: [
+  mobile: [
     /Android/i,
     /webOS/i,
     /iPhone/i,
@@ -73,30 +73,30 @@ export const DETECTED: Detected = {
     /BlackBerry/i,
     /Windows Phone/i,
   ].some((device: RegExp) => navigator.userAgent.match(device)),
-  SAFARI: /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
+  safari: /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
 }
 
 export const TILT_SCALE: number = 1.05
 
 export const COLORS: Colors = {
-  ALTERNATE: 'alternate',
-  WHITE: 'white',
-  DEFAULT: 'default',
-  BLUE: 'blue',
-  GREEN: 'green',
-  GRASS: 'grass',
-  RED: 'red',
-  YELLOW: 'yellow',
-  VIOLET: 'violet',
+  alternate: 'alternate',
+  white: 'white',
+  default: 'default',
+  blue: 'blue',
+  green: 'green',
+  grass: 'grass',
+  red: 'red',
+  yellow: 'yellow',
+  violet: 'violet',
 }
 
 export const PATHS: Paths = {
-  HOME: '/',
-  ABOUT: '/about',
-  SKILLS: '/skills',
-  EXPERIENCE: '/experience',
-  PORTFOLIO: '/portfolio',
-  CONTACT: '/contact',
+  home: '/',
+  about: '/about',
+  skills: '/skills',
+  experience: '/experience',
+  portfolio: '/portfolio',
+  contact: '/contact',
 }
 
 export const BLANK_LINK_PROPS: BlankLinkProps = {
@@ -105,68 +105,68 @@ export const BLANK_LINK_PROPS: BlankLinkProps = {
 }
 
 export const PROJECT_TYPES: ProjectTypes = {
-  APP: 'app',
-  SITE: 'site',
-  ADMIN: 'admin',
-  LANDING: 'landing',
+  app: 'app',
+  site: 'site',
+  admin: 'admin',
+  landing: 'landing',
 }
 
 export const PROJECT_PATHS: ProjectPaths = {
-  PROXIMAL: '/proximal-coffee',
-  EMBP: '/arma-embp',
-  TMF: '/tmf',
-  LITE: '/7glyphs-lite',
-  MELISSA: '/melissa-chalmers',
-  FOODP: '/foodprint-portal',
-  FOOD: '/foodprint',
-  SDS: '/sds',
-  STRONG: '/strongher',
-  ROGUE: '/rogue-travel',
-  TRUCKS: '/quarry-trucks',
-  SERVICES: '/service-packages',
-  FCDC: '/fcdc-dashboard',
-  SAFFRON: '/12-saffron',
-  WHIP: '/whip-around',
-  LAZYAZD: '/lazyaz-dashboard',
-  LAZYAZ: '/lazyaz',
-  GLYPHS: '/7glyphs',
-  MSP: '/msp',
+  proximal: '/proximal-coffee',
+  embp: '/arma-embp',
+  tmf: '/tmf',
+  lite: '/7glyphs-lite',
+  mellissa: '/melissa-chalmers',
+  foodp: '/foodprint-portal',
+  food: '/foodprint',
+  sds: '/sds',
+  strong: '/strongher',
+  rogue: '/rogue-travel',
+  trucks: '/quarry-trucks',
+  services: '/service-packages',
+  fcdc: '/fcdc-dashboard',
+  saffron: '/12-saffron',
+  whip: '/whip-around',
+  lazyazd: '/lazyaz-dashboard',
+  lazyaz: '/lazyaz',
+  glyphs: '/7glyphs',
+  msp: '/msp',
 }
 
 export const PATH_COLORS: Map<Color> = {
-  [PATHS.HOME]: COLORS.ALTERNATE,
-  [PATHS.ABOUT]: COLORS.GREEN,
-  [PATHS.SKILLS]: COLORS.BLUE,
-  [PATHS.EXPERIENCE]: COLORS.VIOLET,
-  [PATHS.PORTFOLIO]: COLORS.WHITE,
-  [PATHS.CONTACT]: COLORS.WHITE,
-  [PROJECT_PATHS.EMBP]: COLORS.BLUE,
-  [PROJECT_PATHS.PROXIMAL]: COLORS.YELLOW,
-  [PROJECT_PATHS.TMF]: COLORS.BLUE,
-  [PROJECT_PATHS.LITE]: COLORS.GRASS,
-  [PROJECT_PATHS.MELISSA]: COLORS.GREEN,
-  [PROJECT_PATHS.FOODP]: COLORS.BLUE,
-  [PROJECT_PATHS.FOOD]: COLORS.VIOLET,
-  [PROJECT_PATHS.SDS]: COLORS.GRASS,
-  [PROJECT_PATHS.STRONG]: COLORS.RED,
-  [PROJECT_PATHS.ROGUE]: COLORS.VIOLET,
-  [PROJECT_PATHS.TRUCKS]: COLORS.DEFAULT,
-  [PROJECT_PATHS.SERVICES]: COLORS.GRASS,
-  [PROJECT_PATHS.FCDC]: COLORS.DEFAULT,
-  [PROJECT_PATHS.SAFFRON]: COLORS.YELLOW,
-  [PROJECT_PATHS.WHIP]: COLORS.DEFAULT,
-  [PROJECT_PATHS.LAZYAZD]: COLORS.DEFAULT,
-  [PROJECT_PATHS.LAZYAZ]: COLORS.RED,
-  [PROJECT_PATHS.GLYPHS]: COLORS.GRASS,
-  [PROJECT_PATHS.MSP]: COLORS.BLUE,
+  [PATHS.home]: COLORS.alternate,
+  [PATHS.about]: COLORS.green,
+  [PATHS.skills]: COLORS.blue,
+  [PATHS.experience]: COLORS.violet,
+  [PATHS.portfolio]: COLORS.white,
+  [PATHS.contact]: COLORS.white,
+  [PROJECT_PATHS.embp]: COLORS.blue,
+  [PROJECT_PATHS.proximal]: COLORS.yellow,
+  [PROJECT_PATHS.tmf]: COLORS.blue,
+  [PROJECT_PATHS.lite]: COLORS.grass,
+  [PROJECT_PATHS.mellissa]: COLORS.green,
+  [PROJECT_PATHS.foodp]: COLORS.blue,
+  [PROJECT_PATHS.food]: COLORS.violet,
+  [PROJECT_PATHS.sds]: COLORS.grass,
+  [PROJECT_PATHS.strong]: COLORS.red,
+  [PROJECT_PATHS.rogue]: COLORS.violet,
+  [PROJECT_PATHS.trucks]: COLORS.default,
+  [PROJECT_PATHS.services]: COLORS.grass,
+  [PROJECT_PATHS.fcdc]: COLORS.default,
+  [PROJECT_PATHS.saffron]: COLORS.yellow,
+  [PROJECT_PATHS.whip]: COLORS.default,
+  [PROJECT_PATHS.lazyazd]: COLORS.default,
+  [PROJECT_PATHS.lazyaz]: COLORS.red,
+  [PROJECT_PATHS.glyphs]: COLORS.grass,
+  [PROJECT_PATHS.msp]: COLORS.blue,
 }
 
 export const SWIPER_OPTIONS: SwiperOptions = {
   grabCursor: true,
   loop: true,
-  speed: DURATIONS.LONGER,
+  speed: DURATIONS.longer,
   autoplay: {
-    delay: DURATIONS.LINGERING,
+    delay: DURATIONS.lingering,
     disableOnInteraction: false,
   },
 }

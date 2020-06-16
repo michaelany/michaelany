@@ -7,7 +7,7 @@ export default function Tooltip({
   children,
   ...props
 }: TooltipProps): JSX.Element {
-  return DETECTED.MOBILE ? (
+  return DETECTED.mobile ? (
     children
   ) : (
     <MuiTooltip {...props}>{children}</MuiTooltip>

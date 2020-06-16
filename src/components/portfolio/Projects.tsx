@@ -18,18 +18,18 @@ const filterAll: Filter = 'all'
 
 const filters: Filter[] = [
   filterAll,
-  PROJECT_TYPES.LANDING,
-  PROJECT_TYPES.SITE,
-  PROJECT_TYPES.APP,
-  PROJECT_TYPES.ADMIN,
+  PROJECT_TYPES.landing,
+  PROJECT_TYPES.site,
+  PROJECT_TYPES.app,
+  PROJECT_TYPES.admin,
 ]
 
 const filterLabels: Map<string> = {
   [filterAll]: 'Все',
-  [PROJECT_TYPES.LANDING]: PROJECT_TYPE_LABELS.LANDING,
-  [PROJECT_TYPES.SITE]: PROJECT_TYPE_LABELS.SITE,
-  [PROJECT_TYPES.APP]: PROJECT_TYPE_LABELS.APP,
-  [PROJECT_TYPES.ADMIN]: PROJECT_TYPE_LABELS.ADMIN,
+  [PROJECT_TYPES.landing]: PROJECT_TYPE_LABELS.landing,
+  [PROJECT_TYPES.site]: PROJECT_TYPE_LABELS.site,
+  [PROJECT_TYPES.app]: PROJECT_TYPE_LABELS.app,
+  [PROJECT_TYPES.admin]: PROJECT_TYPE_LABELS.admin,
 }
 
 const getFilteredProjects = (filter: string): Project[] =>

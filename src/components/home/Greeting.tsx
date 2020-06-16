@@ -28,22 +28,22 @@ export default function Greeting(): JSX.Element {
         <Button
           className="Button Button_color_blue"
           component={Link}
-          to={PATHS.PORTFOLIO}
+          to={PATHS.portfolio}
           variant="contained"
           size="large"
           endIcon={<WebIcon />}
         >
-          {TITLES.PORTFOLIO}
+          {TITLES.portfolio}
         </Button>
         <Button
           className="Button Button_color_green"
           component={Link}
-          to={PATHS.CONTACT}
+          to={PATHS.contact}
           variant="contained"
           size="large"
           endIcon={<MailIcon />}
         >
-          {TITLES.CONTACT}
+          {TITLES.contact}
         </Button>
       </div>
     </section>

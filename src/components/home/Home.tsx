@@ -8,7 +8,7 @@ import {BREAKPOINTS} from '../../styles/theme'
 
 export default function Home(): JSX.Element {
   // matches for key to responsive alternate animations reset
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.MD}px)`)
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
 
   return (
     <Sections
