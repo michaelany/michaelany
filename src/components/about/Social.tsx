@@ -3,6 +3,7 @@ import React from 'react'
 import './Social.scss'
 import meImg from '../../assets/img/pictures/me.png'
 import meImg2x from '../../assets/img/pictures/me@2x.png'
+import Animate, {EFFECTS} from '../common/Animate'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
@@ -10,7 +11,7 @@ import Tilt from '../common/Tilt'
 import {DETECTED, PATHS, TILT_SCALE} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
-import {DURATIONS} from '../../styles/theme'
+import {DURATIONS, EASINGS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
   max: DETECTED.safari ? 0 : 35,
@@ -32,14 +33,24 @@ export default function Social(): JSX.Element {
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
-        <Tilt component="figure" className="Social-Photo" options={tiltOptions}>
-          <img
-            className="Social-Img"
-            src={meImg}
-            srcSet={`${meImg2x} 2x`}
-            alt="Michael Ananiev | vashstamp"
-          />
-        </Tilt>
+        <Animate
+          effect={EFFECTS.zoomOut}
+          duration={DURATIONS.longer}
+          easing={EASINGS.out}
+        >
+          <Tilt
+            component="figure"
+            className="Social-Photo"
+            options={tiltOptions}
+          >
+            <img
+              className="Social-Img"
+              src={meImg}
+              srcSet={`${meImg2x} 2x`}
+              alt="Michael Ananiev | vashstamp"
+            />
+          </Tilt>
+        </Animate>
         <SocialLinks about links={links} />
       </div>
       <Pagination prevTo={PATHS.home} nextTo={PATHS.skills} />

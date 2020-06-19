@@ -19,7 +19,7 @@ const initialCenter: InitialCenter = {
 }
 
 const LoadingContainer = (): JSX.Element => (
-  <div>
+  <div className="Map Map_loading">
     <CircularProgress />
   </div>
 )

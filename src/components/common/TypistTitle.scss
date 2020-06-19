@@ -1,0 +1,6 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.TypistTitle {
+  @include animation(fadeIn);
+}

@@ -1,4 +1,5 @@
 import {SwiperOptions} from 'swiper'
+import {TypistProps} from 'react-typist'
 
 import {Path, Color, ProjectType, Map} from './types'
 import {DURATIONS} from '../styles/theme'
@@ -169,5 +170,13 @@ export const SWIPER_OPTIONS: SwiperOptions = {
   autoplay: {
     delay: DURATIONS.lingering,
     disableOnInteraction: false,
+  },
+}
+
+export const TYPIST_PROPS: TypistProps = {
+  avgTypingDelay: 70,
+  stdTypingDelay: 25,
+  cursor: {
+    show: false,
   },
 }

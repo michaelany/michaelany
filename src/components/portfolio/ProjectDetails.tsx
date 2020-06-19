@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
+import TypistTitle from '../common/TypistTitle'
 import Features from '../common/Features'
 import Company from '../common/Company'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
@@ -26,7 +27,7 @@ export default function ProjectDetails({
   return (
     <section className="ProjectDetails Section">
       <div className="ProjectDetails-Block">
-        <h1 className="ProjectDetails-Title Title">{title}</h1>
+        <TypistTitle smallIndent title={title} />
         <Company {...company} />
       </div>
       <p className="MainText">

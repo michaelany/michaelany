@@ -37,7 +37,11 @@ export default function Info({
       <Collapse unmountOnExit in={open} timeout={DURATIONS.longer}>
         <p className="Info-Extra">{extra}</p>
       </Collapse>
-      <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
+      <Animate
+        className="Actions Actions_center"
+        effect={EFFECTS.bottom}
+        duration={DURATIONS.longer}
+      >
         <Button
           className="Button"
           variant={open ? 'outlined' : 'contained'}

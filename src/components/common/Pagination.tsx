@@ -6,11 +6,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
 import './Pagination.scss'
-import Animate, {EFFECTS} from './Animate'
 import {PATHS} from '../../utils/constants'
 import {Path, Map} from '../../utils/types'
 import {TITLES} from '../../data/common'
-import {DURATIONS} from '../../styles/theme'
 
 interface PaginationProps {
   prevTo?: Path
@@ -35,37 +33,30 @@ export default function Pagination({
       <Grid container className="Pagination-Links" spacing={2} justify="center">
         {prevTo && (
           <Grid item xs={12} sm={6}>
-            <Animate
-              effect={EFFECTS.rightSm}
-              delay={nextTo ? DURATIONS.short : undefined}
+            <Button
+              fullWidth
+              className="Pagination-Link"
+              component={Link}
+              to={prevTo}
+              variant="outlined"
+              startIcon={<ChevronLeftIcon />}
             >
-              <Button
-                fullWidth
-                className="Pagination-Link"
-                component={Link}
-                to={prevTo}
-                variant="outlined"
-                startIcon={<ChevronLeftIcon />}
-              >
-                {pathTitles[prevTo]}
-              </Button>
-            </Animate>
+              {pathTitles[prevTo]}
+            </Button>
           </Grid>
         )}
         {nextTo && (
           <Grid item xs={12} sm={6}>
-            <Animate effect={EFFECTS.leftSm}>
-              <Button
-                fullWidth
-                className="Pagination-Link"
-                component={Link}
-                to={nextTo}
-                variant="outlined"
-                endIcon={<ChevronRightIcon />}
-              >
-                {pathTitles[nextTo]}
-              </Button>
-            </Animate>
+            <Button
+              fullWidth
+              className="Pagination-Link"
+              component={Link}
+              to={nextTo}
+              variant="outlined"
+              endIcon={<ChevronRightIcon />}
+            >
+              {pathTitles[nextTo]}
+            </Button>
           </Grid>
         )}
       </Grid>

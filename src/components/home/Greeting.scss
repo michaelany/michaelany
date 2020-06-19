@@ -7,21 +7,26 @@
   justify-content: center;
 }
 
+.Greeting-Ceil {
+  display: flex;
+  align-items: center;
+}
+
 .Greeting-Icon {
   position: relative;
-  top: 6px;
+  bottom: 6px;
   margin-left: 18px;
   width: 60px;
   height: 60px;
   animation: hello $duration_lingering $easing_in-out infinite;
   @include lg {
-    top: 5px;
+    bottom: 4px;
     width: 50px;
     height: 50px;
     margin-left: 16px;
   }
   @include sm {
-    top: 4px;
+    bottom: 2px;
     width: 42px;
     height: 42px;
     margin-left: 14px;
@@ -36,7 +41,45 @@
   }
 }
 
+.Greeting-Part {
+  display: inline-block;
+}
+
 .Greeting-Letter {
   @include animationAlternate;
   font-weight: 900;
+}
+
+.Greeting-First {
+  @include animation(fadeIn);
+}
+
+.Greeting-Second {
+  @include animation(fadeInZoomIn, 400ms);
+}
+
+.Greeting-Third {
+  @include animation(fadeInBottomSm, 1250ms);
+  &_order_second {
+    animation-delay: 1750ms;
+  }
+  &_order_third {
+    animation-delay: 2000ms;
+  }
+}
+
+.Greeting-Fourth {
+  @include animation(fadeInTopSm, 2250ms);
+}
+
+.Greeting-Fifth {
+  @include animation(fadeInRightSm, 3000ms);
+}
+
+.Greeting-Sixth {
+  @include animation(fadeInBottom, 3500ms);
+}
+
+.Greeting-Seventh {
+  @include animation(fadeInBottom, 3600ms);
 }

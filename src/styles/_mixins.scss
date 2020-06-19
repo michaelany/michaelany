@@ -26,14 +26,6 @@
   }
 }
 
-@mixin animationAlternate($animation: alternateColor) {
-  animation: $animation $duration_alternate linear infinite;
-}
-
-@mixin animationFadeInRightSm {
-  animation: fadeInRightSm $duration_longer $easing_in-out both;
-}
-
 @mixin hover {
   @media (hover: hover) {
     @content;
@@ -62,4 +54,12 @@
   @media (max-width: $breakpoint_lg) {
     @content;
   }
+}
+
+@mixin animation($animation, $delay: 0ms) {
+  animation: $animation $duration_long $easing_in-out $delay both;
+}
+
+@mixin animationAlternate($animation: alternateColor) {
+  animation: $animation $duration_alternate linear infinite;
 }

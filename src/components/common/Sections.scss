@@ -7,5 +7,5 @@
 }
 
 .Sections-Animated {
-  @include animationFadeInRightSm;
+  @include animation(fadeInRightSm);
 }

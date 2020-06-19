@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 
 import './Features.scss'
 import Animate, {EFFECTS} from '../common/Animate'
-import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
+import {BREAKPOINTS} from '../../styles/theme'
 import {Feature} from '../../utils/types'
 
 interface FeaturesProps {
@@ -28,7 +28,7 @@ function Features({items}: FeaturesProps): JSX.Element {
           xs={12}
           sm={6}
         >
-          <Animate effect={getEffect(xs, index)} duration={DURATIONS.long}>
+          <Animate effect={getEffect(xs, index)}>
             <Icon className="Features-Icon Colorful Colorful_dark" />
             <p>{time ? <time>{label}</time> : label}</p>
           </Animate>

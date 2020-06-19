@@ -67,6 +67,9 @@
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 0.5em;
+  &_smallIndent {
+    margin-bottom: 0.16em;
+  }
   .App_color_white & {
     color: white;
   }

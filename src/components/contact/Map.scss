@@ -2,19 +2,16 @@
 @import 'styles/mixins';
 
 .Map {
-  @include animationFadeInRightSm;
+  @include animation(fadeInRightSm);
   position: fixed;
   width: calc(50% - #{$sidebar-width} / 2);
   height: 100vh;
   right: 0;
   top: 0;
-  & > div {
-    position: relative;
+  &_loading {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
   }
   @include md {
     position: relative;

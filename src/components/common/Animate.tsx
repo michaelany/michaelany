@@ -23,10 +23,10 @@ interface Effects {
   bottomSm: string
   left: string
   leftSm: string
-  in: string
-  inSm: string
-  out: string
-  outSm: string
+  zoomIn: string
+  zoomInSm: string
+  zoomOut: string
+  zoomOutSm: string
 }
 
 export const EFFECTS: Effects = {
@@ -38,10 +38,10 @@ export const EFFECTS: Effects = {
   bottomSm: 'fadeInBottomSm',
   left: 'fadeInLeft',
   leftSm: 'fadeInLeftSm',
-  in: 'fadeInZoomIn',
-  inSm: 'fadeInZoomInSm',
-  out: 'fadeInZoomOut',
-  outSm: 'fadeInZoomOutSm',
+  zoomIn: 'fadeInZoomIn',
+  zoomInSm: 'fadeInZoomInSm',
+  zoomOut: 'fadeInZoomOut',
+  zoomOutSm: 'fadeInZoomOutSm',
 }
 
 export default function Animate({
@@ -49,7 +49,7 @@ export default function Animate({
   el: Element = 'div',
   className,
   effect,
-  duration = DURATIONS.longer,
+  duration = DURATIONS.long,
   delay = 0,
   easing = EASINGS.inOut,
   ...props
