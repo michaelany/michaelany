@@ -1,11 +1,12 @@
-import React, {useState, ReactNode, HTMLAttributes} from 'react'
+import React, {useState, ReactNode, AllHTMLAttributes} from 'react'
 import cn from 'classnames'
 import {Waypoint} from 'react-waypoint'
 
 import './Animate.scss'
+import {Effect} from '../../utils/types'
 import {DURATIONS, EASINGS} from '../../styles/theme'
 
-interface AnimateProps extends HTMLAttributes<HTMLElement> {
+interface AnimateProps extends AllHTMLAttributes<HTMLElement> {
   children: ReactNode
   el?: any
   effect: string
@@ -15,18 +16,18 @@ interface AnimateProps extends HTMLAttributes<HTMLElement> {
 }
 
 interface Effects {
-  top: string
-  topSm: string
-  right: string
-  rightSm: string
-  bottom: string
-  bottomSm: string
-  left: string
-  leftSm: string
-  zoomIn: string
-  zoomInSm: string
-  zoomOut: string
-  zoomOutSm: string
+  top: Effect
+  topSm: Effect
+  right: Effect
+  rightSm: Effect
+  bottom: Effect
+  bottomSm: Effect
+  left: Effect
+  leftSm: Effect
+  zoomIn: Effect
+  zoomInSm: Effect
+  zoomOut: Effect
+  zoomOutSm: Effect
 }
 
 export const EFFECTS: Effects = {

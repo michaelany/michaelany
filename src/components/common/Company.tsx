@@ -1,16 +1,22 @@
 import React, {MouseEvent} from 'react'
+import cn from 'classnames'
 import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './Company.scss'
 import Tooltip from './Tooltip'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Company as CompanyProps} from '../../utils/types'
+import {Company as CompanyInterface} from '../../utils/types'
+
+interface CompanyProps extends CompanyInterface {
+  animated?: boolean
+}
 
 const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
   e.stopPropagation()
 }
 
 export default function Company({
+  animated,
   title,
   color,
   href,
@@ -22,7 +28,11 @@ export default function Company({
         {...BLANK_LINK_PROPS}
         focusRipple
         component="a"
-        className={`Company ColorInteract ColorInteract_color_${color}`}
+        className={cn(
+          'Company',
+          {Company_animated: animated},
+          `ColorInteract ColorInteract_color_${color}`
+        )}
         href={href}
         onClick={handleLinkClick}
       >

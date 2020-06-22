@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
+import TypistTitle from '../common/TypistTitle'
 import Features from './Features'
 import Animate, {EFFECTS} from './Animate'
 import {Feature} from '../../utils/types'
@@ -29,7 +30,7 @@ export default function Info({
 
   return (
     <section className="Info Section">
-      <h1 className="Title">{title}</h1>
+      <TypistTitle title={title} />
       <p className="MainText">
         <b>{text}</b>
       </p>
@@ -37,11 +38,7 @@ export default function Info({
       <Collapse unmountOnExit in={open} timeout={DURATIONS.longer}>
         <p className="Info-Extra">{extra}</p>
       </Collapse>
-      <Animate
-        className="Actions Actions_center"
-        effect={EFFECTS.bottom}
-        duration={DURATIONS.longer}
-      >
+      <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
         <Button
           className="Button"
           variant={open ? 'outlined' : 'contained'}

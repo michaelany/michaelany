@@ -4,6 +4,8 @@ import ExploreIcon from '@material-ui/icons/ExploreRounded'
 import MyLocationIcon from '@material-ui/icons/MyLocationRounded'
 
 import './Work.scss'
+import TypistTitle from '../common/TypistTitle'
+import Animate, {EFFECTS} from '../common/Animate'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
 import {TITLES, COMPANIES} from '../../data/common'
@@ -53,7 +55,7 @@ const jobs: JobInterface[] = [
       {
         occupation: 'Ведущий фронтенд-разработчик',
         duties: [
-          'Разработка бизнес-логики и сайтов.',
+          'Разработка бизнес-логики приложений и сайтов.',
           'Создание архитектуры проектов.',
           'Кроссбраузерная и адаптивная верстка.',
           'Работа с REST API.',
@@ -125,18 +127,18 @@ const jobs: JobInterface[] = [
 export default function Work(): JSX.Element {
   return (
     <section className="Section">
-      <h1 className="Title">{TITLES.experience}</h1>
+      <TypistTitle title={TITLES.experience} />
       <p className="MainText">
         <b>
           Живу и работаю в Москве. Профессионально занимаюсь
           фронтенд-разработкой более 4 лет.
         </b>
       </p>
-      <ul className="Work">
+      <Animate el="ul" className="Work" effect={EFFECTS.bottomSm}>
         {jobs.map((job: JobInterface, index: number) => (
           <Job key={index} {...job} index={index} />
         ))}
-      </ul>
+      </Animate>
     </section>
   )
 }

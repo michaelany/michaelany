@@ -1,4 +1,5 @@
 import React from 'react'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import './Social.scss'
 import meImg from '../../assets/img/pictures/me.png'
@@ -11,7 +12,7 @@ import Tilt from '../common/Tilt'
 import {DETECTED, PATHS, TILT_SCALE} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
-import {DURATIONS, EASINGS} from '../../styles/theme'
+import {DURATIONS, BREAKPOINTS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
   max: DETECTED.safari ? 0 : 35,
@@ -29,20 +30,17 @@ const links: SocialLink[] = [
 ]
 
 export default function Social(): JSX.Element {
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
+
   return (
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
         <Animate
-          effect={EFFECTS.zoomOut}
-          duration={DURATIONS.longer}
-          easing={EASINGS.out}
+          effect={md ? EFFECTS.bottomSm : EFFECTS.zoomOut}
+          duration={md ? undefined : DURATIONS.longer}
         >
-          <Tilt
-            component="figure"
-            className="Social-Photo"
-            options={tiltOptions}
-          >
+          <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
             <img
               className="Social-Img"
               src={meImg}

@@ -4,6 +4,7 @@ import Sections from '../common/Sections'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
+import TypistTitle from '../common/TypistTitle'
 import ContactForm from './ContactForm'
 import Map from './Map'
 import {BLANK_LINK_PROPS, PATHS} from '../../utils/constants'
@@ -18,6 +19,8 @@ const links: SocialLink[] = [
   CONTACT_LINKS.facebook,
 ]
 
+const email: string = 'mclananiev@gmail.com'
+
 export default function Contact(): JSX.Element {
   return (
     <Sections
@@ -25,18 +28,18 @@ export default function Contact(): JSX.Element {
       firstSection={
         <section className="Section Section_pagination">
           <div>
-            <h1 className="Title">{TITLES.contact}</h1>
+            <TypistTitle title={TITLES.contact} />
             <p className="MainText MainText_dark">
               Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
               на{' '}
               <a
                 {...BLANK_LINK_PROPS}
                 className="Link"
-                href="mailto:mclananiev@gmail.com"
+                href={`mailto:${email}`}
               >
-                mclananiev@gmail.com
+                {email}
               </a>{' '}
-              или воспользуйтесь формой ниже.
+              или воспользуйтесь формой:
             </p>
             <ContactForm />
           </div>

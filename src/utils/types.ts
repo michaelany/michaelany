@@ -20,6 +20,20 @@ export type Color =
   | 'yellow'
   | 'violet'
 
+export type Effect =
+  | 'fadeInTop'
+  | 'fadeInTopSm'
+  | 'fadeInRight'
+  | 'fadeInRightSm'
+  | 'fadeInBottom'
+  | 'fadeInBottomSm'
+  | 'fadeInLeft'
+  | 'fadeInLeftSm'
+  | 'fadeInZoomIn'
+  | 'fadeInZoomInSm'
+  | 'fadeInZoomOut'
+  | 'fadeInZoomOutSm'
+
 export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
 
 export interface Map<T> {
@@ -87,4 +101,10 @@ export interface TiltOptions {
   max?: number
   scale?: number
   speed?: number
+}
+
+export interface Width {
+  lg: boolean
+  md: boolean
+  sm: boolean
 }

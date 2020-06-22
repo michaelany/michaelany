@@ -8,4 +8,7 @@
 
 .Sections-Animated {
   @include animation(fadeInRightSm);
+  @include md {
+    animation: none;
+  }
 }

@@ -5,6 +5,11 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyazd', 'whip', '12saffron', 'fcdc',
   'services', 'trucks', 'rogue', 'strong', 'sds', 'food', 'foodp', 'melissa',
   'lite', 'tmf', 'proximal', 'embp';
 
+.ProjectLink-Animate {
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
 .ProjectLink-Tilt {
   overflow: hidden;
   border-radius: $border-radius;

@@ -1,4 +1,5 @@
 import React from 'react'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid from '@material-ui/core/Grid'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
@@ -7,12 +8,14 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
+import Animate, {EFFECTS} from '../common/Animate'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tooltip from '../common/Tooltip'
 import {PATHS, BLANK_LINK_PROPS} from '../../utils/constants'
 import {Technology} from '../../utils/types'
 import {TECHNOLOGY_TITLES} from '../../data/common'
+import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
 
 interface IGroup {
   title: string
@@ -459,10 +462,16 @@ const renderTechnologies = (technologies: Technology[]): JSX.Element[] =>
   )
 
 export default function Technologies(): JSX.Element {
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
+
   return (
     <section className="Technologies Section Section_pagination Section_colorful">
       <h2 className="VisuallyHidden">Технологии</h2>
-      <ul>
+      <Animate
+        el="ul"
+        effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
+        duration={md ? undefined : DURATIONS.longer}
+      >
         {groups.map(({title, technologies}: IGroup, index: number) => (
           <ExpansionPanel
             key={index}
@@ -479,7 +488,7 @@ export default function Technologies(): JSX.Element {
             </ExpansionPanelDetails>
           </ExpansionPanel>
         ))}
-      </ul>
+      </Animate>
       <Pagination prevTo={PATHS.about} nextTo={PATHS.experience} />
       <Copyright />
     </section>

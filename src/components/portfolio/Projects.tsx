@@ -1,4 +1,5 @@
-import React, {useState, ChangeEvent} from 'react'
+import React, {memo, useState, ChangeEvent} from 'react'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid from '@material-ui/core/Grid'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -6,9 +7,10 @@ import Tab from '@material-ui/core/Tab'
 import './Projects.scss'
 import ProjectLink from './ProjectLink'
 import {PROJECT_TYPES} from '../../utils/constants'
-import {Map, Project, ProjectType} from '../../utils/types'
+import {Map, Project, ProjectType, Width} from '../../utils/types'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
 import PROJECTS from '../../data/projects'
+import {BREAKPOINTS} from '../../styles/theme'
 
 type Filter = 'all' | ProjectType
 
@@ -37,10 +39,15 @@ const getFilteredProjects = (filter: string): Project[] =>
     ? PROJECTS
     : PROJECTS.filter((project: Project): boolean => project.type === filter)
 
-export default function Projects(): JSX.Element {
+function Projects(): JSX.Element {
   const [filter, changeFilter] = useState<string>(
     localStorage.getItem(storageProp) || filterAll
   )
+  const width: Width = {
+    lg: useMediaQuery(`(max-width: ${BREAKPOINTS.lg}px)`),
+    md: useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`),
+    sm: useMediaQuery(`(max-width: ${BREAKPOINTS.sm}px)`),
+  }
 
   const handleChange = (e: ChangeEvent<object>, value: string): void => {
     localStorage.setItem(storageProp, value)
@@ -62,9 +69,14 @@ export default function Projects(): JSX.Element {
       </Tabs>
       <Grid container component="ul" spacing={2}>
         {getFilteredProjects(filter).map(
-          ({name, title, type, color, company, path}: Project) => (
+          (
+            {name, title, type, color, company, path}: Project,
+            index: number
+          ) => (
             <ProjectLink
-              key={name}
+              key={`${name}-${filter}`}
+              width={width}
+              index={index}
               title={title}
               name={name}
               type={type}
@@ -78,3 +90,6 @@ export default function Projects(): JSX.Element {
     </div>
   )
 }
+
+// it's avoiding reanimation items if several times click on the navlink
+export default memo(Projects)

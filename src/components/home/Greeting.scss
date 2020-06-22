@@ -64,7 +64,7 @@
     animation-delay: 1750ms;
   }
   &_order_third {
-    animation-delay: 2000ms;
+    animation-delay: 1900ms;
   }
 }
 
@@ -73,13 +73,13 @@
 }
 
 .Greeting-Fifth {
-  @include animation(fadeInRightSm, 3000ms);
+  @include animation(fadeInRightSm, 2750ms);
 }
 
 .Greeting-Sixth {
-  @include animation(fadeInBottom, 3500ms);
+  @include animation(fadeInBottom, 3250ms);
 }
 
 .Greeting-Seventh {
-  @include animation(fadeInBottom, 3600ms);
+  @include animation(fadeInBottom, 3400ms);
 }

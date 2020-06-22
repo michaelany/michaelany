@@ -30,16 +30,13 @@
       background-color: $value;
     }
   }
-  @include lg {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
   @include md {
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
   @include sm {
-    padding: 56px 24px;
+    padding: 64px 24px;
+    padding-right: 24px;
   }
 }
 
@@ -87,6 +84,7 @@
 }
 
 .MainText {
+  @include animation(fadeInBottomSm);
   font-size: 30px;
   font-weight: 300;
   line-height: 1.5;

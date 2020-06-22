@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
+import Animate, {EFFECTS} from '../common/Animate'
 import TypistTitle from '../common/TypistTitle'
 import Features from '../common/Features'
 import Company from '../common/Company'
@@ -28,7 +29,7 @@ export default function ProjectDetails({
     <section className="ProjectDetails Section">
       <div className="ProjectDetails-Block">
         <TypistTitle smallIndent title={title} />
-        <Company {...company} />
+        <Company animated {...company} />
       </div>
       <p className="MainText">
         <b>
@@ -37,7 +38,7 @@ export default function ProjectDetails({
       </p>
       <Features items={features} />
       {href && (
-        <div className="Actions Actions_center">
+        <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
           <Button
             {...BLANK_LINK_PROPS}
             className="Button"
@@ -48,7 +49,7 @@ export default function ProjectDetails({
           >
             Подробнее
           </Button>
-        </div>
+        </Animate>
       )}
     </section>
   )
