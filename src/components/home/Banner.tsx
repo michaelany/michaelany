@@ -30,6 +30,7 @@ export default function Banner(): JSX.Element {
         >
           <Tilt el="figure" className="Banner-Figure" options={tiltOptions}>
             <img
+              className="Banner-Image"
               src={macbookImg}
               srcSet={`${macbookImg2x} 2x`}
               alt="MacBook Pro Mid 2015"

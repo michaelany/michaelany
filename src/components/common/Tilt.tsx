@@ -7,19 +7,18 @@ import {EASINGS} from '../../styles/theme'
 
 interface TiltProps {
   children: JSX.Element
-  el?: string
+  el?: any
   className?: string
   options?: TiltOptions
 }
 
-export default function ITilt({
+export default function Tilt({
   children,
-  el,
+  el: Element,
   className,
   options,
 }: TiltProps): JSX.Element {
-  const Element: any = el
-  const content: JSX.Element = el ? (
+  const content: JSX.Element = Element ? (
     <Element className={DETECTED.mobile ? className : undefined}>
       {children}
     </Element>

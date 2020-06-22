@@ -7,15 +7,20 @@ import BuildIcon from '@material-ui/icons/BuildRounded'
 import StarIcon from '@material-ui/icons/StarRounded'
 import CheckCircleIcon from '@material-ui/icons/CheckCircleRounded'
 
-import {COMPANIES, TECHNOLOGY_TITLES, PROJECT_TYPE_LABELS} from './common'
+import {
+  COMPANIES,
+  COMPANY_TITLES,
+  TECHNOLOGY_TITLES,
+  PROJECT_TYPE_LABELS,
+} from './common'
 import {PROJECT_TYPES, PATH_COLORS, PROJECT_PATHS} from '../utils/constants'
 import {Project} from '../utils/types'
 
 const PROJECTS: Project[] = [
   {
-    title: 'Proximal Coffee',
+    title: 'Proximal',
     name: 'proximal',
-    description: 'Лендинг австралийской кофейни.',
+    description: 'Лендинг австралийской кофейни "Proximal Coffee".',
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.proximal],
     company: COMPANIES.sevenGlyphs,
@@ -84,7 +89,7 @@ const PROJECTS: Project[] = [
   {
     title: 'АРМА ЕМБП',
     name: 'embp',
-    description: 'Админка биометрической платформы.',
+    description: 'Админка биометрической платформы для банка "ВТБ".',
     type: PROJECT_TYPES.admin,
     color: PATH_COLORS[PROJECT_PATHS.embp],
     company: COMPANIES.tsftd,
@@ -135,9 +140,10 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Ted Manson Foundation',
+    title: 'TMF',
     name: 'tmf',
-    description: 'Многостраничный сайт новозеландской строительной компании.',
+    description:
+      'Многостраничный сайт новозеландской строительной компании "Ted Manson Foundation".',
     type: PROJECT_TYPES.site,
     color: PATH_COLORS[PROJECT_PATHS.tmf],
     company: COMPANIES.sevenGlyphs,
@@ -205,7 +211,7 @@ const PROJECTS: Project[] = [
   {
     title: '7 glyphs Lite',
     name: 'lite',
-    description: 'Лендинг сервиса новозеландской ИТ компании.',
+    description: `Лендинг сервиса новозеландского диджитал-агентства "${COMPANY_TITLES.sevenGlyphs}".`,
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.lite],
     company: COMPANIES.sevenGlyphs,
@@ -271,9 +277,9 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Melissa Chalmers',
+    title: 'Melissa',
     name: 'melissa',
-    description: 'Лендинг фитнес-блога.',
+    description: 'Лендинг фитнес-блогера Melissa Chalmers.',
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.mellissa],
     company: COMPANIES.sevenGlyphs,
@@ -339,9 +345,10 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Foodprint Portal',
+    title: 'Foodprint',
     name: 'foodp',
-    description: 'Админка новозеландского сервиса заказа еды в ресторанах.',
+    description:
+      'Админка новозеландского сервиса заказа еды в ресторанах "Foodprint".',
     type: PROJECT_TYPES.admin,
     color: PATH_COLORS[PROJECT_PATHS.foodp],
     company: COMPANIES.sevenGlyphs,
@@ -395,7 +402,8 @@ const PROJECTS: Project[] = [
   {
     title: 'Foodprint',
     name: 'food',
-    description: 'Лендинг новозеландского сервиса заказа еды в ресторанах.',
+    description:
+      'Лендинг новозеландского сервиса заказа еды в ресторанах "Foodprint".',
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.food],
     company: COMPANIES.sevenGlyphs,
@@ -461,9 +469,10 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Sales Digital System',
+    title: 'SDS',
     name: 'sds',
-    description: 'Единый кабинет для работы сотрудников и партнеров компании.',
+    description:
+      'Единый кабинет для работы сотрудников и партнеров компании "Vaillant".',
     type: PROJECT_TYPES.app,
     color: PATH_COLORS[PROJECT_PATHS.sds],
     company: COMPANIES.tsftd,
@@ -516,7 +525,7 @@ const PROJECTS: Project[] = [
   {
     title: 'StrongHer',
     name: 'strong',
-    description: 'Лендинг мобильного фитнес-приложения.',
+    description: 'Лендинг мобильного фитнес-приложения "StrongHer".',
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.strong],
     company: COMPANIES.sevenGlyphs,
@@ -585,7 +594,7 @@ const PROJECTS: Project[] = [
     title: 'Rogue Travel',
     name: 'rogue',
     description:
-      'Новозеландский сервис группового бронирования авиабилетов и отелей.',
+      'Новозеландский сервис группового бронирования авиабилетов и отелей "Rogue Travel".',
     type: PROJECT_TYPES.site,
     color: PATH_COLORS[PROJECT_PATHS.rogue],
     company: COMPANIES.sevenGlyphs,
@@ -639,7 +648,8 @@ const PROJECTS: Project[] = [
   {
     title: 'Quarry Trucks',
     name: 'trucks',
-    description: 'Новозеландский сервис мониторинга передвижения грузовиков.',
+    description:
+      'Новозеландский сервис мониторинга передвижения грузовиков "Quarry Trucks".',
     type: PROJECT_TYPES.app,
     color: PATH_COLORS[PROJECT_PATHS.trucks],
     company: COMPANIES.sevenGlyphs,
@@ -691,9 +701,9 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Service Packages',
+    title: 'Services',
     name: 'services',
-    description: 'Лендинг описания услуг новозеландской ИТ компании.',
+    description: `Лендинг описания услуг новозеландского диджитал-агентства "${COMPANY_TITLES.sevenGlyphs}".`,
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.services],
     company: COMPANIES.sevenGlyphs,
@@ -756,9 +766,9 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'FCDC Dashboard',
+    title: 'FCDC',
     name: 'fcdc',
-    description: 'Админка сервиса управления мероприятиями.',
+    description: 'Админка сервиса управления мероприятиями "FCDC".',
     type: PROJECT_TYPES.admin,
     color: PATH_COLORS[PROJECT_PATHS.fcdc],
     company: COMPANIES.sevenGlyphs,
@@ -808,7 +818,7 @@ const PROJECTS: Project[] = [
   {
     title: '12 Saffron',
     name: '12saffron',
-    description: 'Целевая страница для продажи дома в Новой Зеландии.',
+    description: 'Целевая страница для продажи частного дома в Новой Зеландии.',
     type: PROJECT_TYPES.landing,
     color: PATH_COLORS[PROJECT_PATHS.saffron],
     company: COMPANIES.sevenGlyphs,
@@ -833,7 +843,7 @@ const PROJECTS: Project[] = [
         Icon: BuildIcon,
       },
       {
-        label: 'Дом успешно продали',
+        label: 'Дом успешно продан',
         Icon: StarIcon,
       },
       {label: PROJECT_TYPE_LABELS.landing, Icon: WebIcon},
@@ -873,7 +883,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Whip Around',
     name: 'whip',
-    description: 'Новозеландский сервис техосмотра автомобилей.',
+    description: 'Новозеландский сервис техосмотра автомобилей "Whip Around".',
     type: PROJECT_TYPES.site,
     color: PATH_COLORS[PROJECT_PATHS.whip],
     company: COMPANIES.sevenGlyphs,
@@ -920,9 +930,9 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'LazyAz Dashboard',
+    title: 'LazyAz',
     name: 'lazyazd',
-    description: 'Админка новозеландского сервиса доставки.',
+    description: 'Админка новозеландского сервиса доставки "LazyAz".',
     type: PROJECT_TYPES.admin,
     color: PATH_COLORS[PROJECT_PATHS.lazyazd],
     company: COMPANIES.sevenGlyphs,
@@ -971,7 +981,7 @@ const PROJECTS: Project[] = [
   {
     title: 'LazyAz',
     name: 'lazyaz',
-    description: 'Веб-платформа новозеландского сервиса доставки.',
+    description: 'Веб-платформа новозеландского сервиса доставки "LazyAz".',
     type: PROJECT_TYPES.site,
     color: PATH_COLORS[PROJECT_PATHS.lazyaz],
     company: COMPANIES.sevenGlyphs,
@@ -1039,7 +1049,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Сайт 7 glyphs',
     name: '7glyphs',
-    description: `Сайт новозеландской ИТ компании.`,
+    description: `Сайт новозеландского диджитал-агентства "${COMPANY_TITLES.sevenGlyphs}".`,
     type: PROJECT_TYPES.site,
     color: PATH_COLORS[PROJECT_PATHS.glyphs],
     company: COMPANIES.sevenGlyphs,
@@ -1105,7 +1115,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Бизнес-навигатор МСП',
+    title: 'МСП',
     name: 'msp',
     description:
       'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес.',
