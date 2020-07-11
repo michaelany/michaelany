@@ -166,14 +166,15 @@
 
 .Link {
   user-select: auto;
+  font-weight: 500;
   .App_color_white & {
     color: white;
     outline-color: white;
   }
-  @each $key, $value in $colors-map {
+  @each $key, $value, $second-value in $colors-map {
     .App_color_#{$key} & {
-      color: $value;
-      outline-color: $value;
+      color: $second-value;
+      outline-color: $second-value;
     }
   }
   @include hover {

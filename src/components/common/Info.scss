@@ -1,7 +1,12 @@
 @import 'styles/variables';
 
 .Info-Extra {
-  margin-top: 40px;
+  &:first-child {
+    margin-top: 48px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
 .Info-DropdownIcon {

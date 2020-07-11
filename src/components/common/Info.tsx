@@ -15,7 +15,7 @@ interface InfoProps {
   title: string
   text: string
   features: Feature[]
-  extra: string
+  extra: Array<JSX.Element | string>
 }
 
 export default function Info({
@@ -24,7 +24,7 @@ export default function Info({
   features,
   extra,
 }: InfoProps): JSX.Element {
-  const [open, toggleOpen] = useState<boolean>(false)
+  const [open, toggleOpen] = useState<boolean>(true)
 
   const handleToggle = (): void => toggleOpen(!open)
 
@@ -36,7 +36,11 @@ export default function Info({
       </p>
       <Features items={features} />
       <Collapse unmountOnExit in={open} timeout={DURATIONS.longer}>
-        <p className="Info-Extra">{extra}</p>
+        {extra.map((text: JSX.Element | string, index: number) => (
+          <p key={index} className="Info-Extra">
+            {text}
+          </p>
+        ))}
       </Collapse>
       <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
         <Button
