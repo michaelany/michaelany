@@ -13,7 +13,7 @@ interface JobProps extends JobInterface {
   index: number
 }
 
-const renderPosition = (positions: Position[]): JSX.Element[] =>
+const renderPositions = (positions: Position[]): JSX.Element[] =>
   positions.map(({occupation, duties}: Position, index: number) => (
     <li key={index} className="Job-Position">
       <h3 className="Job-Occupation">{occupation}</h3>
@@ -49,7 +49,7 @@ export default function Job({
         <Company {...company} />
       </AccordionSummary>
       <AccordionDetails className="Job-Content">
-        <ul className="Job-Positions">{renderPosition(positions)}</ul>
+        <ul className="Job-Positions">{renderPositions(positions)}</ul>
         <div className="Job-Features">{renderFeatures(features)}</div>
       </AccordionDetails>
     </Accordion>
