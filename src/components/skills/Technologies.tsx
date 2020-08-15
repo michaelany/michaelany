@@ -1,9 +1,9 @@
 import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid from '@material-ui/core/Grid'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel'
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
@@ -469,24 +469,21 @@ export default function Technologies(): JSX.Element {
       <h2 className="VisuallyHidden">Технологии</h2>
       <Animate
         el="ul"
+        className="Technologies-List"
         effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
         duration={md ? undefined : DURATIONS.longer}
       >
         {groups.map(({title, technologies}: IGroup, index: number) => (
-          <ExpansionPanel
-            key={index}
-            component="li"
-            defaultExpanded={index === 0}
-          >
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Accordion key={index} component="li" defaultExpanded={index === 0}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <h3 className="Technologies-Title">{title}</h3>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Grid container component="ul">
                 {renderTechnologies(technologies)}
               </Grid>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+            </AccordionDetails>
+          </Accordion>
         ))}
       </Animate>
       <Pagination prevTo={PATHS.about} nextTo={PATHS.experience} />

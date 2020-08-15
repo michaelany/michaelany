@@ -148,7 +148,7 @@ export default {
     MuiTooltip: {
       enterDelay: DURATIONS.standard,
     },
-    MuiExpansionPanel: {
+    MuiAccordion: {
       elevation: 0,
       TransitionProps: {unmountOnExit: true},
     },

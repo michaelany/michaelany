@@ -182,7 +182,12 @@
   }
 }
 
-.MuiExpansionPanelDetails {
+.MuiAccordion {
+  &-root {
+  }
+}
+
+.MuiAccordionDetails {
   &-root {
     padding-top: 0;
   }

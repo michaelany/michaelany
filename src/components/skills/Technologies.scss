@@ -15,6 +15,11 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
   font-weight: bold;
 }
 
+.Technologies-List {
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
 .Technologies-Item {
   @include responsiveBlock;
   overflow: hidden;

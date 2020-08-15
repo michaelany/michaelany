@@ -1,8 +1,8 @@
 import React from 'react'
 import Chip from '@material-ui/core/Chip'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel'
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Job.scss'
@@ -44,18 +44,14 @@ export default function Job({
   index,
 }: JobProps): JSX.Element {
   return (
-    <ExpansionPanel
-      component="li"
-      className="Job"
-      defaultExpanded={index === 0}
-    >
-      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+    <Accordion component="li" className="Job" defaultExpanded={index === 0}>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Company {...company} />
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails className="Job-Content">
+      </AccordionSummary>
+      <AccordionDetails className="Job-Content">
         <ul className="Job-Positions">{renderPosition(positions)}</ul>
         <div className="Job-Features">{renderFeatures(features)}</div>
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
+      </AccordionDetails>
+    </Accordion>
   )
 }
