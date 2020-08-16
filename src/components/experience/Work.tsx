@@ -9,6 +9,7 @@ import Animate, {EFFECTS} from '../common/Animate'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
 import {TITLES, COMPANIES} from '../../data/common'
+import {YEARS_OF_EXPERIENCE, CAREER_START_STRING} from '../../utils/constants'
 
 const jobs: JobInterface[] = [
   {
@@ -44,9 +45,9 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Апрель 2018 - ...', Icon: ScheduleIcon, time: true},
+      {label: 'апрель 2018 - ...', Icon: ScheduleIcon, time: true},
       {label: 'Москва, Россия', Icon: ExploreIcon},
-      {label: 'Офис', Icon: MyLocationIcon},
+      {label: 'офис', Icon: MyLocationIcon},
     ],
   },
   {
@@ -67,9 +68,9 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Апрель 2017 - апрель 2018', Icon: ScheduleIcon, time: true},
+      {label: 'апрель 2017 - апрель 2018', Icon: ScheduleIcon, time: true},
       {label: 'Окленд, Новая Зеландия', Icon: ExploreIcon},
-      {label: 'Удаленно', Icon: MyLocationIcon},
+      {label: 'удаленно', Icon: MyLocationIcon},
     ],
   },
   {
@@ -95,9 +96,13 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Июль 2016 - апрель 2017', Icon: ScheduleIcon, time: true},
+      {
+        label: `${CAREER_START_STRING} - апрель 2017`,
+        Icon: ScheduleIcon,
+        time: true,
+      },
       {label: 'Москва, Россия', Icon: ExploreIcon},
-      {label: 'Офис', Icon: MyLocationIcon},
+      {label: 'офис', Icon: MyLocationIcon},
     ],
   },
   {
@@ -114,12 +119,12 @@ const jobs: JobInterface[] = [
       },
     ],
     features: [
-      {label: 'Октябрь 2008 - май 2010', Icon: ScheduleIcon, time: true},
+      {label: 'октябрь 2008 - май 2010', Icon: ScheduleIcon, time: true},
       {
         label: 'Москва, Россия',
         Icon: ExploreIcon,
       },
-      {label: 'Офис', Icon: MyLocationIcon},
+      {label: 'офис', Icon: MyLocationIcon},
     ],
   },
 ]
@@ -131,7 +136,7 @@ export default function Work(): JSX.Element {
       <p className="MainText">
         <b>
           Живу и работаю в Москве. Профессионально занимаюсь
-          фронтенд-разработкой более 4 лет.
+          фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.
         </b>
       </p>
       <Animate el="ul" className="Work" effect={EFFECTS.bottomSm}>

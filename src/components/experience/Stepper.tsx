@@ -10,6 +10,7 @@ import RefreshIcon from '@material-ui/icons/RefreshRounded'
 
 import './Stepper.scss'
 import {COMPANY_TITLES, TECHNOLOGY_TITLES} from '../../data/common'
+import {CAREER_START_STRING} from '../../utils/constants'
 
 interface Step {
   label: string
@@ -31,12 +32,12 @@ const steps: Step[] = [
     text: 'Вел деятельность не связанную с информационными технологиями.',
   },
   {
-    label: 'Июнь 2014 - июль 2016',
+    label: `Июнь 2014 - ${CAREER_START_STRING}`,
     text:
       'Параллельно с учебой в институте создавал пет-проекты в процессе обучения веб-разработке.',
   },
   {
-    label: 'Июль 2016',
+    label: CAREER_START_STRING,
     text: (
       <span>
         Выполнил тестовое задание для интервью (написал таймер на{' '}
@@ -49,7 +50,7 @@ const steps: Step[] = [
     ),
   },
   {
-    label: 'Июль 2016 - ноябрь 2016',
+    label: `${CAREER_START_STRING} - ноябрь 2016`,
     text: (
       <span>
         Работал <strong>верстальщиком</strong> в компании "
@@ -166,7 +167,7 @@ export default function VerticalLinearStepper(): JSX.Element {
       {steps.map(({label, text}: Step, index: number) => (
         <Step key={index}>
           <StepLabel>
-            <time>{label}</time>
+            <time className="Stepper-Time">{label}</time>
           </StepLabel>
           <StepContent>
             <p className="Stepper-Text">{text}</p>

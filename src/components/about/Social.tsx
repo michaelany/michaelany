@@ -2,8 +2,8 @@ import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import './Social.scss'
-import meImg from '../../assets/img/pictures/me.png'
-import meImg2x from '../../assets/img/pictures/me@2x.png'
+import meNormalImg from '../../assets/img/pictures/me-normal.png'
+import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.png'
 import Animate, {EFFECTS} from '../common/Animate'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
@@ -43,8 +43,8 @@ export default function Social(): JSX.Element {
           <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
             <img
               className="Social-Img"
-              src={meImg}
-              srcSet={`${meImg2x} 2x`}
+              src={meNormalImg}
+              srcSet={`${meNormalImg2x} 2x`}
               alt="Michael Ananiev | vashstamp"
             />
           </Tilt>

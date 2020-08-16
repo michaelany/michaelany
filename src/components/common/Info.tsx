@@ -15,7 +15,7 @@ interface InfoProps {
   title: string
   text: string
   features: Feature[]
-  extra: Array<JSX.Element | string>
+  extra: JSX.Element
 }
 
 export default function Info({
@@ -36,11 +36,7 @@ export default function Info({
       </p>
       <Features items={features} />
       <Collapse unmountOnExit in={open} timeout={DURATIONS.longer}>
-        {extra.map((text: JSX.Element | string, index: number) => (
-          <p key={index} className="Info-Extra">
-            {text}
-          </p>
-        ))}
+        {extra}
       </Collapse>
       <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
         <Button

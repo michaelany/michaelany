@@ -77,7 +77,6 @@ interface TechnologyTitles {
   webpack: string
   gulp: string
   parcel: string
-  cra: string
   gatsby: string
   next: string
   nuxt: string
@@ -85,10 +84,7 @@ interface TechnologyTitles {
   babel: string
   prettier: string
   eslint: string
-  storybook: string
-  bit: string
   jest: string
-  mocha: string
   vscode: string
   item: string
   devtools: string
@@ -253,7 +249,6 @@ export const TECHNOLOGY_TITLES: TechnologyTitles = {
   webpack: 'webpack',
   gulp: 'Gulp',
   parcel: 'Parcel',
-  cra: 'Create React App',
   gatsby: 'Gatsby',
   next: 'Next.js',
   nuxt: 'Nuxt.js',
@@ -261,10 +256,7 @@ export const TECHNOLOGY_TITLES: TechnologyTitles = {
   babel: 'Babel',
   prettier: 'Prettier',
   eslint: 'ESLint',
-  storybook: 'Storybook',
-  bit: 'Bit',
   jest: 'Jest',
-  mocha: 'Mocha',
   vscode: 'Visual Studio Code',
   item: 'iTerm2',
   devtools: 'Chrome DevTools',

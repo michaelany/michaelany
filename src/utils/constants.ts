@@ -1,5 +1,7 @@
 import {SwiperOptions} from 'swiper'
 import {TypistProps} from 'react-typist'
+import {differenceInYears, format} from 'date-fns'
+import locale from 'date-fns/locale/ru'
 
 import {Path, Color, ProjectType, Map} from './types'
 import {DURATIONS} from '../styles/theme'
@@ -78,6 +80,19 @@ export const DETECTED: Detected = {
 }
 
 export const TILT_SCALE: number = 1.05
+
+export const CAREER_START_DATE: Date = new Date(2016, 6)
+
+export const CAREER_START_STRING = format(CAREER_START_DATE, 'LLLL yyyy', {
+  locale,
+})
+
+console.log(CAREER_START_STRING)
+
+export const YEARS_OF_EXPERIENCE: number = differenceInYears(
+  new Date(),
+  CAREER_START_DATE
+)
 
 export const COLORS: Colors = {
   alternate: 'alternate',

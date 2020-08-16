@@ -235,7 +235,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
@@ -303,7 +303,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
@@ -427,7 +427,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
@@ -495,7 +495,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, Keycloak, ${TECHNOLOGY_TITLES.cra}`,
+        label: `REST API, Keycloak, ${TECHNOLOGY_TITLES.webpack}`,
         Icon: BuildIcon,
       },
       {
@@ -549,7 +549,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, Stripe, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
+        label: `REST API, Stripe, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}, ${TECHNOLOGY_TITLES.sketch}`,
         Icon: BuildIcon,
       },
       {
@@ -724,7 +724,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.zeplin}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.zeplin}`,
         Icon: BuildIcon,
       },
       {
@@ -788,7 +788,7 @@ const PROJECTS: Project[] = [
         Icon: PaletteIcon,
       },
       {
-        label: `REST API, ${TECHNOLOGY_TITLES.cra}, ${TECHNOLOGY_TITLES.photoshop}`,
+        label: `REST API, ${TECHNOLOGY_TITLES.webpack}, ${TECHNOLOGY_TITLES.photoshop}`,
         Icon: BuildIcon,
       },
       {

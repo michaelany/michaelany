@@ -219,8 +219,14 @@ const groups: IGroup[] = [
     ],
   },
   {
-    title: 'Сборка',
+    title: 'Утилиты',
     technologies: [
+      {
+        name: 'git',
+        label: TECHNOLOGY_TITLES.git,
+        color: 'red',
+        href: 'https://git-scm.com',
+      },
       {
         name: 'npm',
         label: TECHNOLOGY_TITLES.npm,
@@ -253,44 +259,6 @@ const groups: IGroup[] = [
         href: 'https://parceljs.org',
       },
       {
-        name: 'cra',
-        label: TECHNOLOGY_TITLES.cra,
-        color: 'green',
-        href: 'https://create-react-app.dev',
-      },
-      {
-        disabled: true,
-        name: 'gatsby',
-        label: TECHNOLOGY_TITLES.gatsby,
-        color: 'violet',
-        href: 'https://www.gatsbyjs.org',
-      },
-      {
-        disabled: true,
-        name: 'next',
-        label: TECHNOLOGY_TITLES.next,
-        color: 'default',
-        href: 'https://nextjs.org',
-      },
-      {
-        disabled: true,
-        name: 'nuxt',
-        label: TECHNOLOGY_TITLES.nuxt,
-        color: 'grass',
-        href: 'https://ru.nuxtjs.org',
-      },
-    ],
-  },
-  {
-    title: 'Утилиты',
-    technologies: [
-      {
-        name: 'git',
-        label: TECHNOLOGY_TITLES.git,
-        color: 'red',
-        href: 'https://git-scm.com',
-      },
-      {
         name: 'babel',
         label: TECHNOLOGY_TITLES.babel,
         color: 'yellow',
@@ -310,17 +278,17 @@ const groups: IGroup[] = [
       },
       {
         disabled: true,
-        name: 'storybook',
-        label: TECHNOLOGY_TITLES.storybook,
-        color: 'red',
-        href: 'https://storybook.js.org',
+        name: 'next',
+        label: TECHNOLOGY_TITLES.next,
+        color: 'default',
+        href: 'https://nextjs.org',
       },
       {
         disabled: true,
-        name: 'bit',
-        label: TECHNOLOGY_TITLES.bit,
+        name: 'gatsby',
+        label: TECHNOLOGY_TITLES.gatsby,
         color: 'violet',
-        href: 'https://bit.dev',
+        href: 'https://www.gatsbyjs.org',
       },
       {
         disabled: true,
@@ -331,10 +299,10 @@ const groups: IGroup[] = [
       },
       {
         disabled: true,
-        name: 'mocha',
-        label: TECHNOLOGY_TITLES.mocha,
-        color: 'yellow',
-        href: 'https://mochajs.org',
+        name: 'nuxt',
+        label: TECHNOLOGY_TITLES.nuxt,
+        color: 'grass',
+        href: 'https://ru.nuxtjs.org',
       },
     ],
   },

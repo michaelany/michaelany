@@ -1,14 +1,5 @@
 @import 'styles/variables';
 
-.Info-Extra {
-  &:first-child {
-    margin-top: 48px;
-  }
-  &:not(:last-child) {
-    margin-bottom: 24px;
-  }
-}
-
 .Info-DropdownIcon {
   transition: transform $duration_short $easing_in-out;
   &_open {
