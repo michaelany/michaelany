@@ -87,8 +87,6 @@ export const CAREER_START_STRING = format(CAREER_START_DATE, 'LLLL yyyy', {
   locale,
 })
 
-console.log(CAREER_START_STRING)
-
 export const YEARS_OF_EXPERIENCE: number = differenceInYears(
   new Date(),
   CAREER_START_DATE
