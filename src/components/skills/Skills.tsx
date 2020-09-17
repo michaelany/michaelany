@@ -22,7 +22,10 @@ const text: string =
   'Создаю веб-приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux.'
 
 const features: Feature[] = [
-  {label: 'Пишу современный и быстро работающий код', Icon: SpeedIcon},
+  {
+    label: 'Пишу современный и быстро работающий код',
+    Icon: SpeedIcon,
+  },
   {
     label: 'Выбираю простой и эффективный способ решения задачи',
     Icon: CheckCircleIcon,
@@ -58,12 +61,7 @@ export default function Skills(): JSX.Element {
   return (
     <Sections
       firstSection={
-        <Info
-          title={TITLES.skills}
-          text={text}
-          features={features}
-          extra={<p>!!!</p>}
-        />
+        <Info title={TITLES.skills} text={text} features={features} />
       }
       secondSection={<Technologies />}
     />

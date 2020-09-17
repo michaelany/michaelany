@@ -6,9 +6,17 @@
 
 .Features-Item {
   text-align: center;
-  font-size: 1.125rem;
 }
 
 .Features-Icon {
   font-size: 2.25rem;
+}
+
+.Features-Label {
+  font-size: 1.125rem;
+}
+
+.Features-Description {
+  padding-top: 8px;
+  color: $color_second-text;
 }

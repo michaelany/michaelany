@@ -50,6 +50,7 @@ export interface SocialLink {
 export interface Feature {
   label: string
   time?: boolean
+  description?: string
   Icon: (props: SvgIconProps) => JSX.Element
 }
 
