@@ -4,6 +4,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import './Social.scss'
 import meNormalImg from '../../assets/img/pictures/me-normal.png'
 import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.png'
+import meExcitedImg from '../../assets/img/pictures/me-excited.png'
+import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.png'
 import Animate, {EFFECTS} from '../common/Animate'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
@@ -29,6 +31,8 @@ const links: SocialLink[] = [
   CONTACT_LINKS.facebook,
 ]
 
+const myName = 'Michael Ananiev | vashstamp'
+
 export default function Social(): JSX.Element {
   const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
 
@@ -41,12 +45,20 @@ export default function Social(): JSX.Element {
           duration={md ? undefined : DURATIONS.longer}
         >
           <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
-            <img
-              className="Social-Img"
-              src={meNormalImg}
-              srcSet={`${meNormalImg2x} 2x`}
-              alt="Michael Ananiev | vashstamp"
-            />
+            <>
+              <img
+                className="Social-Img"
+                src={meNormalImg}
+                srcSet={`${meNormalImg2x} 2x`}
+                alt={myName}
+              />
+              <img
+                className="Social-Img Social-Img_hidden"
+                src={meExcitedImg}
+                srcSet={`${meExcitedImg2x} 2x`}
+                alt={myName}
+              />
+            </>
           </Tilt>
         </Animate>
         <SocialLinks about links={links} />

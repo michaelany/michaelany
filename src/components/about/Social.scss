@@ -8,6 +8,7 @@
 }
 
 .Social-Photo {
+  position: relative;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 48px;
@@ -24,6 +25,16 @@
   width: 320px;
   height: 320px;
   background-color: white;
+  &_hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity $duration_standard $easing_in-out;
+    .Social-Photo:hover & {
+      opacity: 1;
+    }
+  }
   @include xs {
     width: 100%;
     height: auto;

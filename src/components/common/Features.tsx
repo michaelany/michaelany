@@ -36,8 +36,8 @@ function Features({items, extra}: FeaturesProps): JSX.Element {
               {time ? <time>{label}</time> : label}
             </p>
             {description && (
-              <Collapse unmountOnExit in={extra} timeout={DURATIONS.longer}>
-                <p className="Features-Description">{description}</p>
+              <Collapse unmountOnExit in={extra} timeout={DURATIONS.long}>
+                <p className="Features-Description FadeIn">{description}</p>
               </Collapse>
             )}
           </Animate>

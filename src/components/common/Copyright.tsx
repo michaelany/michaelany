@@ -5,9 +5,9 @@ import BuildIcon from '@material-ui/icons/BuildRounded'
 import FavoriteIcon from '@material-ui/icons/FavoriteRounded'
 
 import './Copyright.scss'
-import {PATHS} from '../../utils/constants'
+import {PATHS, TODAY} from '../../utils/constants'
 
-const year: number = new Date().getFullYear()
+const year: number = TODAY.getFullYear()
 
 export default function Copyright() {
   return (

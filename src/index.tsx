@@ -12,6 +12,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import './styles/index.scss'
 import ScrollToTop from './components/base/ScrollToTop'
 import App from './components/base/App'
+import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
 import {unregister as unregisterServiceWorker} from './utils/serviceWorker'
 
@@ -27,7 +28,7 @@ ReactDOM.render(
       </BrowserRouter>
     </ThemeProvider>
   </StylesProvider>,
-  document.getElementById('root')
+  ROOT
 )
 
 unregisterServiceWorker()

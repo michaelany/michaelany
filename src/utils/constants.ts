@@ -66,6 +66,8 @@ interface BlankLinkProps {
   rel: string
 }
 
+export const ROOT: HTMLElement = document.getElementById('root') as HTMLElement
+
 export const DETECTED: Detected = {
   mobile: [
     /Android/i,
@@ -87,8 +89,10 @@ export const CAREER_START_STRING = format(CAREER_START_DATE, 'LLLL yyyy', {
   locale,
 })
 
+export const TODAY: Date = new Date()
+
 export const YEARS_OF_EXPERIENCE: number = differenceInYears(
-  new Date(),
+  TODAY,
   CAREER_START_DATE
 )
 

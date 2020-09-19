@@ -61,7 +61,12 @@ export default function Skills(): JSX.Element {
   return (
     <Sections
       firstSection={
-        <Info title={TITLES.skills} text={text} features={features} />
+        <Info
+          type="skills"
+          title={TITLES.skills}
+          text={text}
+          features={features}
+        />
       }
       secondSection={<Technologies />}
     />

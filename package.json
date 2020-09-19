@@ -38,6 +38,7 @@
     "react-tilt": "0.1.4",
     "react-typist": "2.0.5",
     "react-waypoint": "9.0.3",
+    "smooth-scroll-into-view-if-needed": "1.1.29",
     "swiper": "6.1.1",
     "typescript": "3.9.7"
   },

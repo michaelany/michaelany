@@ -1,4 +1,6 @@
 import React from 'react'
+import {differenceInYears} from 'date-fns'
+import {Link} from 'react-router-dom'
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBikeRounded'
 import SchoolIcon from '@material-ui/icons/SchoolRounded'
 import LocalCafeIcon from '@material-ui/icons/LocalCafeRounded'
@@ -15,8 +17,14 @@ import ExploreIcon from '@material-ui/icons/ExploreRounded'
 import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Social from './Social'
-import {TITLES} from '../../data/common'
-import {YEARS_OF_EXPERIENCE} from '../../utils/constants'
+import PROJECTS from '../../data/projects'
+import {TECHNOLOGY_TITLES, TITLES} from '../../data/common'
+import {
+  YEARS_OF_EXPERIENCE,
+  TODAY,
+  PATHS,
+  BLANK_LINK_PROPS,
+} from '../../utils/constants'
 import {Feature} from '../../utils/types'
 
 const text: string =
@@ -26,51 +34,125 @@ const features: Feature[] = [
   {
     label: 'Реализовал большое количество проектов',
     Icon: AppsIcon,
-    description:
-      'В моем послужном списке около 30(??) зарубежных и отечественных коммерческих проектов - от лендингов до крупных веб-приложений. Некоторые из них представлены в Портфолио(??).',
+    description: (
+      <>
+        В моем послужном списке около {PROJECTS.length + 3} зарубежных и
+        отечественных коммерческих проектов - от лендингов до крупных
+        веб-приложений. Некоторые из них представлены в{' '}
+        <Link className="Link" to={PATHS.portfolio}>
+          {TITLES.portfolio}
+        </Link>
+        .
+      </>
+    ),
   },
   {
     label: `Профессиональный опыт разработки ${YEARS_OF_EXPERIENCE}+ лет`,
     Icon: BusinessCenterIcon,
-    description: `Первый сайт сделал в 13 лет. Менее чем за ${
-      YEARS_OF_EXPERIENCE + 1
-    } лет прошел путь от верстальщика до тимлида фронтед-разработки. Более подробно с моим опытом работы можно ознакомится на странице Опыт(??)`,
+    description: (
+      <>
+        Первый сайт сделал в 13 лет. Прошел путь от верстальщика до тимлида
+        фронтед-разработки. Более подробно с моим опытом работы можно
+        ознакомится на странице{' '}
+        <Link className="Link" to={PATHS.experience}>
+          {TITLES.experience}
+        </Link>
+        .
+      </>
+    ),
   },
   {
     label: 'Ведущий разработчик и ментор',
     Icon: SupervisorAccountIcon,
-    description:
-      'Разрабатываю проекты с нуля, проектирую архитектуру, пишу бизнес-логику, верстаю, рефакторю и поддерживаю код. Планирую и оцениваю задачи команды, провожу код-ревью и обучаю.',
+    description: (
+      <>
+        Разрабатываю проекты с нуля, пишу бизнес-логику, верстаю, оптимизирую и
+        поддерживаю код. Планирую и оцениваю задачи, провожу код-ревью и обучаю.
+        Более подробно в{' '}
+        <Link className="Link" to={PATHS.skills}>
+          {TITLES.skills}
+        </Link>
+        .
+      </>
+    ),
   },
   {
     label: 'Организованный и автономный',
     Icon: GroupWorkIcon,
     description:
-      'Большинство проектов сделаны мною самостоятельно. Мне нравится брать на себя всю фронтенд часть проекта от обсуждения концепции до финальной реализации и поддержки на продакшне.',
+      'Большинство проектов я сделал самостоятельно. Мне нравится брать на себя всю фронтенд часть проекта от обсуждения концепции до финальной реализации и поддержки на продакшне.',
   },
   {
     label: 'Интересуюсь веб-разработкой и программированием',
     Icon: CodeIcon,
-    description:
-      'Сейчас почти все время я посвящаю разработке проектов и попутному изучению веб-технологий. В свободное время планирую выпустить несколько библиотек и запустить блог.',
+    description: `Я люблю программирование, а фронтенд является моим основным хобби. В ближайшем будущем планирую выпустить несколько ${TECHNOLOGY_TITLES.js}-библиотек и начать вести собственный блог по фронтенду.`,
   },
   {
     label: 'Нахожусь в состоянии постоянного обучения и развития',
     Icon: AllInclusiveIcon,
+    description:
+      'Регулярно "затачиваю пилу", изучаю документации, статьи, курсы, книги и доклады по веб-разработке. В постоянном поиске новых методов и инструментов повышения эффективности.',
   },
-  {label: 'Склонный к перфекционизму', Icon: SquareFootIcon},
-  {label: 'Два высших образования', Icon: SchoolIcon},
-  {label: 'Занимаюсь спортом', Icon: DirectionsBikeIcon},
-  {label: 'Люблю путешествовать', Icon: ExploreIcon},
-  {label: 'Счастливый муж', Icon: FavoriteIcon},
-  {label: 'Кофеман', Icon: LocalCafeIcon},
+  {
+    label: 'Склонный к перфекционизму',
+    Icon: SquareFootIcon,
+    description:
+      'Высокое качество - мой главный принцип. В каждый проект я вкладываю всего себя. Однако, сила дедлайна и опыт помогают мне сосредоточиться на скорости и конечном результате.',
+  },
+  {
+    label: 'Два высших образования',
+    Icon: SchoolIcon,
+    description:
+      'Окончил "Российский технологический университет" и "Всероссийский государственный институт кинематографии". Учеба в последнем очень хорошо прокачала мои гибкие навыки.',
+  },
+  {
+    label: 'Занимаюсь спортом',
+    Icon: DirectionsBikeIcon,
+    description:
+      'Физические нагрузки особенно актуальны для разработчика. Каждый день я посвящаю время бегу, калистенике или катанию на велосипеде. Этим летом также увлекся сапсерфингом.',
+  },
+  {
+    label: 'Люблю путешествовать',
+    Icon: ExploreIcon,
+    description:
+      'Посетили с любимой более 15 стран. Больше всего поразили Япония и Новая Зеландия. Совершил туристический поход на "Перевал Дятлова" и остался жив после встречи с уральским медведем...',
+  },
+  {
+    label: 'Счастливый муж',
+    Icon: FavoriteIcon,
+    description: (
+      <>
+        <a
+          {...BLANK_LINK_PROPS}
+          className="Link"
+          href="https://www.instagram.com/kate_watermelon"
+        >
+          Она
+        </a>{' '}
+        - мой главный источник вдохновения и лучший друг. Мы вместе уже более{' '}
+        {differenceInYears(TODAY, new Date(2013, 1))} лет. Кстати, когда-то я
+        разработал мобильное веб-приложение для предложения ей руки и сердца ☺
+      </>
+    ),
+  },
+  {
+    label: 'Кофеман',
+    Icon: LocalCafeIcon,
+    description:
+      'Известно, что "программист - это человек, превращающий кофе в код". Свой рабочий день я начинаю с кружечки ароматного кофе. Также после поездки в Японию полюбил чай матчу.',
+  },
 ]
 
 export default function About(): JSX.Element {
   return (
     <Sections
       firstSection={
-        <Info title={TITLES.about} text={text} features={features} />
+        <Info
+          type="about"
+          title={TITLES.about}
+          text={text}
+          features={features}
+        />
       }
       secondSection={<Social />}
     />
