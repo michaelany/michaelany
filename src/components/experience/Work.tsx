@@ -135,8 +135,8 @@ export default function Work(): JSX.Element {
       <TypistTitle title={TITLES.experience} />
       <p className="MainText">
         <b>
-          Живу и работаю в Москве. Профессионально занимаюсь
-          фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.
+          Живу в Москве. Работаю преимущественно удаленно. Профессионально
+          занимаюсь фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.
         </b>
       </p>
       <Animate el="ul" className="Work" effect={EFFECTS.bottomSm}>

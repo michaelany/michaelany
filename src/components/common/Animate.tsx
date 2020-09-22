@@ -1,5 +1,5 @@
 import React, {useState, ReactNode, AllHTMLAttributes} from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import {Waypoint} from 'react-waypoint'
 
 import './Animate.scss'

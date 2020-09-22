@@ -1,5 +1,5 @@
 import React, {MouseEvent} from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './Company.scss'
@@ -30,7 +30,7 @@ export default function Company({
         component="a"
         className={cn(
           'Company',
-          {Company_animated: animated},
+          animated && 'Company_animated',
           `ColorInteract ColorInteract_color_${color}`
         )}
         href={href}

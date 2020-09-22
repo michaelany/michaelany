@@ -91,10 +91,8 @@ export const CAREER_START_STRING = format(CAREER_START_DATE, 'LLLL yyyy', {
 
 export const TODAY: Date = new Date()
 
-export const YEARS_OF_EXPERIENCE: number = differenceInYears(
-  TODAY,
-  CAREER_START_DATE
-)
+export const YEARS_OF_EXPERIENCE: number =
+  differenceInYears(TODAY, CAREER_START_DATE) + 1
 
 export const COLORS: Colors = {
   alternate: 'alternate',

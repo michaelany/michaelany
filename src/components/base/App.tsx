@@ -1,6 +1,6 @@
 import React from 'react'
 import {Switch, Route, Redirect, useLocation} from 'react-router-dom'
-import cn from 'classnames'
+import cn from 'clsx'
 import Hidden from '@material-ui/core/Hidden'
 
 import './App.scss'
@@ -22,10 +22,8 @@ export default function App(): JSX.Element {
     `App App_page_${
       pathname.slice(1, lastSlashIndex || undefined) || 'home'
     } App_color_${PATH_COLORS[pathname.slice(lastSlashIndex)]}`,
-    {
-      App_background_blue: pathname === PATHS.portfolio,
-      App_background_green: pathname === PATHS.contact,
-    }
+    pathname === PATHS.portfolio && 'App_background_blue',
+    pathname === PATHS.contact && 'App_background_green'
   )
 
   return (

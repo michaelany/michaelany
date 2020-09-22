@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import Button from '@material-ui/core/Button'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
@@ -53,9 +53,10 @@ export default function Info({
           variant={open ? 'outlined' : 'contained'}
           endIcon={
             <ExpandMoreIcon
-              className={cn('Info-DropdownIcon', {
-                'Info-DropdownIcon_open': open,
-              })}
+              className={cn(
+                'Info-DropdownIcon',
+                open && 'Info-DropdownIcon_open'
+              )}
             />
           }
           onClick={handleToggle}

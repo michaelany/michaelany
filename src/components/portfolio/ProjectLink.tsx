@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import {Link} from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
 import ButtonBase from '@material-ui/core/ButtonBase'
@@ -72,7 +72,7 @@ export default function ProjectLink({
       xl={3}
     >
       <Animate
-        className={cn({'ProjectLink-Tilt': DETECTED.mobile})}
+        className={cn(DETECTED.mobile && 'ProjectLink-Tilt')}
         effect={
           width.sm
             ? EFFECTS.bottomSm

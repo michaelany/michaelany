@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames'
+import cn from 'clsx'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Fab from '@material-ui/core/Fab'
 
@@ -23,7 +23,7 @@ export default function SocialLinks({
   const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.xs}px)`)
 
   return (
-    <ul className={cn('SocialLinks', {SocialLinks_about: about})}>
+    <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>
       {links.map(({title, href, Icon, size}: SocialLink, index: number) => (
         <Animate
           key={index}
@@ -36,7 +36,7 @@ export default function SocialLinks({
             <Fab
               {...BLANK_LINK_PROPS}
               component="a"
-              className={cn('Button', {Button_color_white: about})}
+              className={cn('Button', about && 'Button_color_white')}
               href={href}
               aria-label={title}
             >
