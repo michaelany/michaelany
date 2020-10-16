@@ -63,9 +63,9 @@ interface TechnologyTitles {
   css: string
   bem: string
   sass: string
-  mui: string
   modules: string
   styled: string
+  mui: string
   reactstrap: string
   ant: string
   materialize: string
@@ -93,6 +93,8 @@ interface TechnologyTitles {
   figma: string
   photoshop: string
   optim: string
+  flow: string
+  parallels: string
   mac: string
   node: string
   mongo: string
@@ -235,9 +237,9 @@ export const TECHNOLOGY_TITLES: TechnologyTitles = {
   css: 'CSS',
   bem: 'BEM',
   sass: 'Sass',
-  mui: 'Material-UI',
   modules: 'CSS Modules',
   styled: 'styled-components',
+  mui: 'Material-UI',
   reactstrap: 'reactstrap',
   ant: 'Ant Design',
   materialize: 'Materialize',
@@ -265,6 +267,8 @@ export const TECHNOLOGY_TITLES: TechnologyTitles = {
   figma: 'Figma',
   photoshop: 'Photoshop',
   optim: 'ImageOptim',
+  flow: 'Flow',
+  parallels: 'Parallels Desktop',
   mac: 'macOS Catalina',
   node: 'Node.js',
   mongo: 'MongoDB',
