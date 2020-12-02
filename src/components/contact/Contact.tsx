@@ -9,7 +9,7 @@ import ContactForm from './ContactForm'
 import Map from './Map'
 import {BLANK_LINK_PROPS, ROUTE} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
-import {TITLES, CONTACT_LINK} from '../../data/common'
+import {TITLE, CONTACT_LINK} from '../../data/common'
 
 const links: SocialLink[] = [
   CONTACT_LINK.telegram,
@@ -28,7 +28,7 @@ export default function Contact(): JSX.Element {
       firstSection={
         <section className="Section Section_pagination">
           <div>
-            <TypistTitle title={TITLES.contact} />
+            <TypistTitle title={TITLE.contact} />
             <p className="MainText MainText_dark">
               Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
               на{' '}

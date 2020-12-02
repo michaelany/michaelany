@@ -23,7 +23,7 @@ export default function SocialLinks({
 
   return (
     <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>
-      {links.map(({title, href, Icon, size}: SocialLink, index: number) => (
+      {links.map(({Icon, ...link}: SocialLink, index: number) => (
         <Animate
           key={index}
           el="li"
@@ -31,16 +31,16 @@ export default function SocialLinks({
           effect={EFFECT.zoomIn}
           delay={xs ? undefined : getListDelay(index)}
         >
-          <Tooltip title={title}>
+          <Tooltip title={link.title}>
             <Fab
               {...BLANK_LINK_PROPS}
               component="a"
               className={cn('Button', about && 'Button_color_white')}
-              href={href}
-              aria-label={title}
+              href={link.href}
+              aria-label={link.title}
             >
               <Icon
-                className={`SocialLinks-Icon SocialLinks-Icon_size_${size}`}
+                className={`SocialLinks-Icon SocialLinks-Icon_size_${link.size}`}
               />
             </Fab>
           </Tooltip>

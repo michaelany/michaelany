@@ -22,7 +22,7 @@ function Features({items, extra}: FeaturesProps): JSX.Element {
 
   return (
     <Grid container className="Features" component="ul" spacing={4}>
-      {items.map(({label, Icon, time, description}: Feature, index: number) => (
+      {items.map(({Icon, ...item}: Feature, index: number) => (
         <Grid
           key={index}
           item
@@ -34,11 +34,13 @@ function Features({items, extra}: FeaturesProps): JSX.Element {
           <Animate effect={getEffect(xs, index)}>
             <Icon className="Features-Icon Colorful Colorful_dark" />
             <p className="Features-Label">
-              {time ? <time>{label}</time> : label}
+              {item.time ? <time>{item.label}</time> : item.label}
             </p>
-            {description && (
+            {item.description && (
               <Collapse unmountOnExit in={extra} timeout={DURATION.long}>
-                <p className="Features-Description FadeIn">{description}</p>
+                <p className="Features-Description FadeIn">
+                  {item.description}
+                </p>
               </Collapse>
             )}
           </Animate>

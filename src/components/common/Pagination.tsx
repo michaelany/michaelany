@@ -8,7 +8,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 import './Pagination.scss'
 import {ROUTE} from '../../utils/constants'
 import {Route, Map} from '../../utils/types'
-import {TITLES} from '../../data/common'
+import {TITLE} from '../../data/common'
 
 interface PaginationProps {
   prevTo?: Route
@@ -16,12 +16,12 @@ interface PaginationProps {
 }
 
 const pathTitles: Map<string> = {
-  [ROUTE.home]: TITLES.home,
-  [ROUTE.about]: TITLES.about,
-  [ROUTE.skills]: TITLES.skills,
-  [ROUTE.experience]: TITLES.experience,
-  [ROUTE.portfolio]: TITLES.portfolio,
-  [ROUTE.contact]: TITLES.contact,
+  [ROUTE.home]: TITLE.home,
+  [ROUTE.about]: TITLE.about,
+  [ROUTE.skills]: TITLE.skills,
+  [ROUTE.experience]: TITLE.experience,
+  [ROUTE.portfolio]: TITLE.portfolio,
+  [ROUTE.contact]: TITLE.contact,
 }
 
 export default function Pagination({

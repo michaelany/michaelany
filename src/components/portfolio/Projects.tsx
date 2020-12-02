@@ -67,24 +67,19 @@ function Projects(): JSX.Element {
         ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>
-        {getFilteredProjects(filter).map(
-          (
-            {name, title, type, color, company, path}: Project,
-            index: number
-          ) => (
-            <ProjectLink
-              key={`${name}-${filter}`}
-              width={width}
-              index={index}
-              title={title}
-              name={name}
-              type={type}
-              color={color}
-              company={company}
-              path={path}
-            />
-          )
-        )}
+        {getFilteredProjects(filter).map((project: Project, index: number) => (
+          <ProjectLink
+            key={`${project.name}-${filter}`}
+            width={width}
+            index={index}
+            title={project.title}
+            name={project.name}
+            type={project.type}
+            color={project.color}
+            company={project.company}
+            path={project.path}
+          />
+        ))}
       </Grid>
     </div>
   )

@@ -18,7 +18,7 @@ import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Social from './Social'
 import PROJECTS from '../../data/projects'
-import {TECHNOLOGY_TITLE, TITLES} from '../../data/common'
+import {TECHNOLOGY_TITLE, TITLE} from '../../data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
@@ -37,7 +37,7 @@ const features: Feature[] = [
         отечественных коммерческих проектов - от лендингов до крупных
         веб-приложений. Некоторые из них представлены в{' '}
         <Link className="Link" to={ROUTE.portfolio}>
-          {TITLES.portfolio}
+          {TITLE.portfolio}
         </Link>
         .
       </>
@@ -52,7 +52,7 @@ const features: Feature[] = [
         фронтенд-разработки. Работаю в крупной отечественной и новозеландской ИТ
         компаниях. Подробнее на странице{' '}
         <Link className="Link" to={ROUTE.experience}>
-          {TITLES.experience}
+          {TITLE.experience}
         </Link>
         .
       </>
@@ -67,7 +67,7 @@ const features: Feature[] = [
         поддерживаю код. Планирую и оцениваю задачи, провожу код-ревью и обучаю.
         Более подробно в{' '}
         <Link className="Link" to={ROUTE.skills}>
-          {TITLES.skills}
+          {TITLE.skills}
         </Link>
         .
       </>
@@ -146,7 +146,7 @@ export default function About(): JSX.Element {
       firstSection={
         <Info
           type="about"
-          title={TITLES.about}
+          title={TITLE.about}
           text="Занимаюсь фронтенд-разработкой. Создаю проекты любой сложности с нуля. Воплощаю в жизнь UI/UX идеи."
           features={features}
         />

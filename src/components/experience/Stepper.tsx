@@ -164,13 +164,13 @@ export default function VerticalLinearStepper(): JSX.Element {
 
   return (
     <Stepper className="Stepper" activeStep={step} orientation="vertical">
-      {steps.map(({label, text}: Step, index: number) => (
+      {steps.map((item: Step, index: number) => (
         <Step key={index}>
           <StepLabel>
-            <time className="Stepper-Time">{label}</time>
+            <time className="Stepper-Time">{item.label}</time>
           </StepLabel>
           <StepContent>
-            <p className="Stepper-Text">{text}</p>
+            <p className="Stepper-Text">{item.text}</p>
             <div className="Stepper-Actions">
               <Fab
                 className="Stepper-Button"

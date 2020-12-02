@@ -8,7 +8,7 @@ import MailIcon from '@material-ui/icons/MailRounded'
 import './Greeting.scss'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
 import {ROUTE, TYPIST_PROPS} from '../../utils/constants'
-import {TITLES} from '../../data/common'
+import {TITLE} from '../../data/common'
 
 export default function Greeting(): JSX.Element {
   return (
@@ -44,7 +44,7 @@ export default function Greeting(): JSX.Element {
           size="large"
           endIcon={<WebIcon />}
         >
-          {TITLES.portfolio}
+          {TITLE.portfolio}
         </Button>
         <Button
           className="Greeting-Seventh Button Button_color_green"
@@ -54,7 +54,7 @@ export default function Greeting(): JSX.Element {
           size="large"
           endIcon={<MailIcon />}
         >
-          {TITLES.contact}
+          {TITLE.contact}
         </Button>
       </div>
     </section>

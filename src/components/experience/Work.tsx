@@ -8,7 +8,7 @@ import TypistTitle from '../common/TypistTitle'
 import Animate, {EFFECT} from '../common/Animate'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
-import {TITLES, COMPANY} from '../../data/common'
+import {TITLE, COMPANY} from '../../data/common'
 import {YEARS_OF_EXPERIENCE, CAREER_START_STRING} from '../../utils/constants'
 
 const jobs: JobInterface[] = [
@@ -132,7 +132,7 @@ const jobs: JobInterface[] = [
 export default function Work(): JSX.Element {
   return (
     <section className="Section">
-      <TypistTitle title={TITLES.experience} />
+      <TypistTitle title={TITLE.experience} />
       <p className="MainText">
         Живу в Москве. Работаю преимущественно удаленно. Профессионально
         занимаюсь фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.

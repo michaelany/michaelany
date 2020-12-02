@@ -457,14 +457,14 @@ export default function Technologies(): JSX.Element {
         effect={md ? EFFECT.bottomSm : EFFECT.rightSm}
         duration={md ? undefined : DURATION.longer}
       >
-        {groups.map(({title, technologies}: IGroup, index: number) => (
+        {groups.map((group: IGroup, index: number) => (
           <Accordion key={index} component="li" defaultExpanded={index === 0}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <h3 className="Technologies-Title">{title}</h3>
+              <h3 className="Technologies-Title">{group.title}</h3>
             </AccordionSummary>
             <AccordionDetails>
               <Grid container component="ul">
-                {renderTechnologies(technologies)}
+                {renderTechnologies(group.technologies)}
               </Grid>
             </AccordionDetails>
           </Accordion>

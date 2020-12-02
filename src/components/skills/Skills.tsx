@@ -15,7 +15,7 @@ import ExtensionIcon from '@material-ui/icons/ExtensionRounded'
 import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Technologies from './Technologies'
-import {TECHNOLOGY_TITLE, TITLES} from '../../data/common'
+import {TECHNOLOGY_TITLE, TITLE} from '../../data/common'
 import {Feature} from '../../utils/types'
 
 const features: Feature[] = [
@@ -68,7 +68,7 @@ export default function Skills(): JSX.Element {
       firstSection={
         <Info
           type="skills"
-          title={TITLES.skills}
+          title={TITLE.skills}
           text="Разрабатываю веб-приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux."
           features={features}
         />
