@@ -46,6 +46,7 @@ export default function Social(): JSX.Element {
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
         <Animate
+          className="Social-PhotoWrapper"
           effect={md ? EFFECT.bottomSm : EFFECT.zoomOut}
           duration={md ? undefined : DURATION.longer}
         >

@@ -11,6 +11,24 @@
   &_background_green {
     background-color: $color_green;
   }
+  &_background_blue,
+  &_background_green {
+    ::selection {
+      background-color: rgba(white, 0.4);
+    }
+  }
+  &_color_alternate {
+    ::selection {
+      background-color: rgba($color_default, 0.4);
+    }
+  }
+  @each $key, $value in $colors-map {
+    &_color_#{$key} {
+      ::selection {
+        background-color: rgba($value, 0.4);
+      }
+    }
+  }
 }
 
 .App-Main {

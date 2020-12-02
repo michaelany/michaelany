@@ -7,17 +7,32 @@
   align-items: center;
 }
 
+.Social-PhotoWrapper {
+  position: relative;
+  margin-bottom: 48px;
+  &::after {
+    @include pseudo;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    animation: ripple $duration_longest $easing_in-out infinite;
+  }
+  @include xs {
+    margin-bottom: 36px;
+  }
+}
+
 .Social-Photo {
+  z-index: 1;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 48px;
   & > figure {
     border-radius: 50%;
     overflow: hidden;
-  }
-  @include xs {
-    margin-bottom: 24px;
   }
 }
 
