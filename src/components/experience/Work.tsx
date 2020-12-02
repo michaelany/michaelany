@@ -8,12 +8,12 @@ import TypistTitle from '../common/TypistTitle'
 import Animate, {EFFECT} from '../common/Animate'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
-import {TITLES, COMPANIES} from '../../data/common'
+import {TITLES, COMPANY} from '../../data/common'
 import {YEARS_OF_EXPERIENCE, CAREER_START_STRING} from '../../utils/constants'
 
 const jobs: JobInterface[] = [
   {
-    company: COMPANIES.tsftd,
+    company: COMPANY.tsftd,
     positions: [
       {
         occupation: 'Тимлид фронтенд-разработки',
@@ -51,7 +51,7 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    company: COMPANIES.sevenGlyphs,
+    company: COMPANY.sevenGlyphs,
     positions: [
       {
         occupation: 'Ведущий фронтенд-разработчик',
@@ -74,7 +74,7 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    company: COMPANIES.everpoint,
+    company: COMPANY.everpoint,
     positions: [
       {
         occupation: 'Фронтенд-разработчик',
@@ -106,7 +106,7 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    company: COMPANIES.mvideo,
+    company: COMPANY.mvideo,
     positions: [
       {
         occupation: 'Инженер технической поддержки',

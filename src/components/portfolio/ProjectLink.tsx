@@ -12,7 +12,7 @@ import {getListDelay} from '../../utils/helpers'
 import {DETECT, ROUTE, PROJECT_TYPE, TILT_SCALE} from '../../utils/constants'
 import {Color, Effect, Company, TiltOptions, Width} from '../../utils/types'
 import {DURATION} from '../../styles/theme'
-import {PROJECT_TYPE_LABELS} from '../../data/common'
+import {PROJECT_TYPE_LABEL} from '../../data/common'
 
 interface ProjectLinkProps {
   index: number
@@ -32,10 +32,10 @@ const tiltOptions: TiltOptions = {
 }
 
 export const projectTypeLabels = {
-  [PROJECT_TYPE.app]: [PROJECT_TYPE_LABELS.app],
-  [PROJECT_TYPE.site]: [PROJECT_TYPE_LABELS.site],
-  [PROJECT_TYPE.admin]: [PROJECT_TYPE_LABELS.admin],
-  [PROJECT_TYPE.landing]: [PROJECT_TYPE_LABELS.landing],
+  [PROJECT_TYPE.app]: [PROJECT_TYPE_LABEL.app],
+  [PROJECT_TYPE.site]: [PROJECT_TYPE_LABEL.site],
+  [PROJECT_TYPE.admin]: [PROJECT_TYPE_LABEL.admin],
+  [PROJECT_TYPE.landing]: [PROJECT_TYPE_LABEL.landing],
 }
 
 const randomEffects: Effect[] = [

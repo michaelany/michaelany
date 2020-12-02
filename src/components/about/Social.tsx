@@ -18,7 +18,7 @@ import {
   QUERY_BREAKPOINT,
 } from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
-import {CONTACT_LINKS} from '../../data/common'
+import {CONTACT_LINK} from '../../data/common'
 import {DURATION} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
@@ -28,12 +28,12 @@ const tiltOptions: TiltOptions = {
 }
 
 const links: SocialLink[] = [
-  CONTACT_LINKS.gitHub,
-  CONTACT_LINKS.linkedIn,
-  CONTACT_LINKS.sevenGlyphs,
-  CONTACT_LINKS.instagram,
-  CONTACT_LINKS.vk,
-  CONTACT_LINKS.facebook,
+  CONTACT_LINK.gitHub,
+  CONTACT_LINK.linkedIn,
+  CONTACT_LINK.sevenGlyphs,
+  CONTACT_LINK.instagram,
+  CONTACT_LINK.vk,
+  CONTACT_LINK.facebook,
 ]
 
 const myName = 'Michael Ananiev | vashstamp'

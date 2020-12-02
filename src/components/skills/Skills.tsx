@@ -15,7 +15,7 @@ import ExtensionIcon from '@material-ui/icons/ExtensionRounded'
 import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Technologies from './Technologies'
-import {TECHNOLOGY_TITLES, TITLES} from '../../data/common'
+import {TECHNOLOGY_TITLE, TITLES} from '../../data/common'
 import {Feature} from '../../utils/types'
 
 const features: Feature[] = [
@@ -28,7 +28,7 @@ const features: Feature[] = [
   {
     label: 'Пишу современный и производительный код',
     Icon: SpeedIcon,
-    description: `Использую стандарты ES6-ES11 + ${TECHNOLOGY_TITLES.babel}, ${TECHNOLOGY_TITLES.ts} 4, ${TECHNOLOGY_TITLES.react} Hooks. Оптимизирую тяжелые вычисления. Избегаю лишних операций и утечек памяти. Применяю техники повышения производительности.`,
+    description: `Использую стандарты ES6-ES11 + ${TECHNOLOGY_TITLE.babel}, ${TECHNOLOGY_TITLE.ts} 4, ${TECHNOLOGY_TITLE.react} Hooks. Оптимизирую тяжелые вычисления. Избегаю лишних операций и утечек памяти. Применяю техники повышения производительности.`,
   },
   {
     label: 'Выбираю простой и эффективный способ решения задачи',

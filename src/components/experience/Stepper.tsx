@@ -9,7 +9,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBackRounded'
 import RefreshIcon from '@material-ui/icons/RefreshRounded'
 
 import './Stepper.scss'
-import {COMPANY_TITLES, TECHNOLOGY_TITLES} from '../../data/common'
+import {COMPANY_TITLE, TECHNOLOGY_TITLE} from '../../data/common'
 import {CAREER_START_STRING} from '../../utils/constants'
 
 interface Step {
@@ -23,7 +23,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работал <strong>инженером технической поддержки</strong> в компании "
-        {COMPANY_TITLES.mvideo}".
+        {COMPANY_TITLE.mvideo}".
       </span>
     ),
   },
@@ -41,11 +41,11 @@ const steps: Step[] = [
     text: (
       <span>
         Выполнил тестовое задание для интервью (написал таймер на{' '}
-        {TECHNOLOGY_TITLES.js} + ООП + {TECHNOLOGY_TITLES.css}). Прошел
-        интервью. Выполнил заключительное задание (сверстал адаптивную страницу
-        по макету, используя {TECHNOLOGY_TITLES.sass} +{' '}
-        {TECHNOLOGY_TITLES.handlebars}). Был приглашен на работу{' '}
-        <strong>верстальщиком</strong> в компанию "{COMPANY_TITLES.everpoint}".
+        {TECHNOLOGY_TITLE.js} + ООП + {TECHNOLOGY_TITLE.css}). Прошел интервью.
+        Выполнил заключительное задание (сверстал адаптивную страницу по макету,
+        используя {TECHNOLOGY_TITLE.sass} + {TECHNOLOGY_TITLE.handlebars}). Был
+        приглашен на работу <strong>верстальщиком</strong> в компанию "
+        {COMPANY_TITLE.everpoint}".
       </span>
     ),
   },
@@ -54,7 +54,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работал <strong>верстальщиком</strong> в компании "
-        {COMPANY_TITLES.everpoint}
+        {COMPANY_TITLE.everpoint}
         ".
       </span>
     ),
@@ -65,7 +65,7 @@ const steps: Step[] = [
       <span>
         В результате успешной работы получил повышение до{' '}
         <strong>фронтенд-разработчика</strong> в компании "
-        {COMPANY_TITLES.everpoint}
+        {COMPANY_TITLE.everpoint}
         ".
       </span>
     ),
@@ -75,9 +75,9 @@ const steps: Step[] = [
     text: (
       <span>
         Работал <strong>фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLES.everpoint}". В свободное время делал коммерческий проект
-        (переписывал сайт c {TECHNOLOGY_TITLES.jquery} на{' '}
-        {TECHNOLOGY_TITLES.react}) для компании "{COMPANY_TITLES.sevenGlyphs}".
+        {COMPANY_TITLE.everpoint}". В свободное время делал коммерческий проект
+        (переписывал сайт c {TECHNOLOGY_TITLE.jquery} на{' '}
+        {TECHNOLOGY_TITLE.react}) для компании "{COMPANY_TITLE.sevenGlyphs}".
       </span>
     ),
   },
@@ -86,10 +86,10 @@ const steps: Step[] = [
     text: (
       <span>
         В результате успешной реализации проекта был приглашен в компанию "
-        {COMPANY_TITLES.sevenGlyphs}" на должность{' '}
+        {COMPANY_TITLE.sevenGlyphs}" на должность{' '}
         <strong>ведущего фронтенд-разработчика</strong> на более выгодных
-        условиях. Принял решение перейти из "{COMPANY_TITLES.everpoint}" в "
-        {COMPANY_TITLES.sevenGlyphs}".
+        условиях. Принял решение перейти из "{COMPANY_TITLE.everpoint}" в "
+        {COMPANY_TITLE.sevenGlyphs}".
       </span>
     ),
   },
@@ -98,7 +98,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работал удаленно <strong>ведущим фронтенд-разработчиком</strong> в
-        компании "{COMPANY_TITLES.sevenGlyphs}".
+        компании "{COMPANY_TITLE.sevenGlyphs}".
       </span>
     ),
   },
@@ -107,9 +107,9 @@ const steps: Step[] = [
     text: (
       <span>
         Захотелось сменить удаленный режим работы. Договорился с "
-        {COMPANY_TITLES.sevenGlyphs}" о продолжении сотрудничества по проектам в
+        {COMPANY_TITLE.sevenGlyphs}" о продолжении сотрудничества по проектам в
         режиме неполного рабочего дня. Прошел собеседование и устроился в
-        компанию "{COMPANY_TITLES.tsftd}" на должность{' '}
+        компанию "{COMPANY_TITLE.tsftd}" на должность{' '}
         <strong>ведущего фронтенд-разработчика</strong>.
       </span>
     ),
@@ -119,8 +119,8 @@ const steps: Step[] = [
     text: (
       <span>
         Работал <strong>ведущим фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLES.tsftd}". В свободное время продолжаю сотрудничество по
-        проектам с "{COMPANY_TITLES.sevenGlyphs}"
+        {COMPANY_TITLE.tsftd}". В свободное время продолжаю сотрудничество по
+        проектам с "{COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -130,7 +130,7 @@ const steps: Step[] = [
       <span>
         В результате успешной работы получил повышение до{' '}
         <strong>тимлида фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLES.tsftd}
+        {COMPANY_TITLE.tsftd}
         ". Проводил собеседования, разработал стажерскую программу, сформировал
         команду из трех человек.
       </span>
@@ -141,7 +141,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работаю <strong>тимлидом фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLES.tsftd}".
+        {COMPANY_TITLE.tsftd}".
       </span>
     ),
   },

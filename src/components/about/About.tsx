@@ -18,7 +18,7 @@ import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Social from './Social'
 import PROJECTS from '../../data/projects'
-import {TECHNOLOGY_TITLES, TITLES} from '../../data/common'
+import {TECHNOLOGY_TITLE, TITLES} from '../../data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
@@ -82,7 +82,7 @@ const features: Feature[] = [
   {
     label: 'Интересуюсь веб-разработкой и программированием',
     Icon: CodeIcon,
-    description: `Я люблю программирование, а фронтенд является моим основным хобби. В свободное время планирую выпустить несколько ${TECHNOLOGY_TITLES.js}-библиотек и запустить собственный блог по фронтенду.`,
+    description: `Я люблю программирование, а фронтенд является моим основным хобби. В свободное время планирую выпустить несколько ${TECHNOLOGY_TITLE.js}-библиотек и запустить собственный блог по фронтенду.`,
   },
   {
     label: 'Нахожусь в состоянии постоянного обучения и развития',

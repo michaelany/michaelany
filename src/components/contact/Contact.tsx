@@ -9,14 +9,14 @@ import ContactForm from './ContactForm'
 import Map from './Map'
 import {BLANK_LINK_PROPS, ROUTE} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
-import {TITLES, CONTACT_LINKS} from '../../data/common'
+import {TITLES, CONTACT_LINK} from '../../data/common'
 
 const links: SocialLink[] = [
-  CONTACT_LINKS.telegram,
-  CONTACT_LINKS.skype,
-  CONTACT_LINKS.linkedIn,
-  CONTACT_LINKS.vk,
-  CONTACT_LINKS.facebook,
+  CONTACT_LINK.telegram,
+  CONTACT_LINK.skype,
+  CONTACT_LINK.linkedIn,
+  CONTACT_LINK.vk,
+  CONTACT_LINK.facebook,
 ]
 
 const email: string = 'mclananiev@gmail.com'

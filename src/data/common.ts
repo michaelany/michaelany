@@ -8,7 +8,7 @@ import {ReactComponent as TelegramIcon} from '../assets/icons/telegram.svg'
 import {ReactComponent as SkypeIcon} from '../assets/icons/skype.svg'
 import {SocialLink, Company} from '../utils/types'
 
-interface Titles {
+interface Title {
   home: string
   about: string
   skills: string
@@ -17,14 +17,14 @@ interface Titles {
   contact: string
 }
 
-interface CompanyTitles {
+interface CompanyTitle {
   mvideo: string
   everpoint: string
   sevenGlyphs: string
   tsftd: string
 }
 
-interface ContactLinks {
+interface ContactLink {
   gitHub: SocialLink
   linkedIn: SocialLink
   sevenGlyphs: SocialLink
@@ -35,82 +35,21 @@ interface ContactLinks {
   skype: SocialLink
 }
 
-interface Companies {
+interface CompanyInterface {
   tsftd: Company
   sevenGlyphs: Company
   everpoint: Company
   mvideo: Company
 }
 
-interface TechnologyTitles {
-  js: string
-  ts: string
-  react: string
-  redux: string
-  mobx: string
-  preact: string
-  vue: string
-  svelte: string
-  apollo: string
-  jquery: string
-  html: string
-  svg: string
-  jsx: string
-  pug: string
-  handlebars: string
-  markdown: string
-  blade: string
-  css: string
-  bem: string
-  sass: string
-  modules: string
-  styled: string
-  mui: string
-  reactstrap: string
-  ant: string
-  materialize: string
-  bootstrap: string
-  semantic: string
-  emails: string
-  npm: string
-  yarn: string
-  webpack: string
-  gulp: string
-  parcel: string
-  gatsby: string
-  next: string
-  nuxt: string
-  git: string
-  babel: string
-  prettier: string
-  eslint: string
-  jest: string
-  vscode: string
-  item: string
-  devtools: string
-  zeplin: string
-  sketch: string
-  figma: string
-  photoshop: string
-  optim: string
-  flow: string
-  parallels: string
-  mac: string
-  node: string
-  mongo: string
-  mysql: string
-  php: string
-  laravel: string
-}
-
-interface ProjectTypeLabels {
+interface ProjectTypeLabel {
   app: string
   site: string
   admin: string
   landing: string
 }
 
-export const TITLES: Titles = {
+export const TITLES: Title = {
   home: 'Главная',
   about: 'Обо мне',
   skills: 'Навыки',
@@ -119,14 +58,14 @@ export const TITLES: Titles = {
   contact: 'Контакты',
 }
 
-export const COMPANY_TITLES: CompanyTitles = {
+export const COMPANY_TITLE: CompanyTitle = {
   mvideo: 'М.Видео',
   everpoint: 'Эверпоинт',
   sevenGlyphs: '7 glyphs Ltd.',
   tsftd: 'ТехноСофт Диджитал',
 }
 
-export const CONTACT_LINKS: ContactLinks = {
+export const CONTACT_LINK: ContactLink = {
   gitHub: {
     title: 'GitHub',
     href: 'https://github.com/vashstamp',
@@ -140,7 +79,7 @@ export const CONTACT_LINKS: ContactLinks = {
     size: 'sm',
   },
   sevenGlyphs: {
-    title: `${COMPANY_TITLES.sevenGlyphs} Team`,
+    title: `${COMPANY_TITLE.sevenGlyphs} Team`,
     href: 'https://7glyphs.com/agency/team',
     Icon: SevenGlyphsIcon,
     size: 'xs',
@@ -177,9 +116,9 @@ export const CONTACT_LINKS: ContactLinks = {
   },
 }
 
-export const COMPANIES: Companies = {
+export const COMPANY: CompanyInterface = {
   tsftd: {
-    title: COMPANY_TITLES.tsftd,
+    title: COMPANY_TITLE.tsftd,
     images: [
       require('../assets/img/companies/tsftd.png'),
       require('../assets/img/companies/tsftd@2x.png'),
@@ -188,7 +127,7 @@ export const COMPANIES: Companies = {
     href: 'http://www.tsft.ru',
   },
   sevenGlyphs: {
-    title: COMPANY_TITLES.sevenGlyphs,
+    title: COMPANY_TITLE.sevenGlyphs,
     images: [
       require('../assets/img/companies/7glyphs.png'),
       require('../assets/img/companies/7glyphs@2x.png'),
@@ -197,7 +136,7 @@ export const COMPANIES: Companies = {
     href: 'https://7glyphs.com',
   },
   everpoint: {
-    title: COMPANY_TITLES.everpoint,
+    title: COMPANY_TITLE.everpoint,
     images: [
       require('../assets/img/companies/everpoint.png'),
       require('../assets/img/companies/everpoint@2x.png'),
@@ -206,7 +145,7 @@ export const COMPANIES: Companies = {
     href: 'https://www.everpoint.ru',
   },
   mvideo: {
-    title: COMPANY_TITLES.mvideo,
+    title: COMPANY_TITLE.mvideo,
     images: [
       require('../assets/img/companies/mvideo.png'),
       require('../assets/img/companies/mvideo@2x.png'),
@@ -216,7 +155,14 @@ export const COMPANIES: Companies = {
   },
 }
 
-export const TECHNOLOGY_TITLES: TechnologyTitles = {
+export const PROJECT_TYPE_LABEL: ProjectTypeLabel = {
+  app: 'Приложение',
+  site: 'Сайт',
+  admin: 'Админка',
+  landing: 'Лендинг',
+}
+
+export const TECHNOLOGY_TITLE = {
   js: 'JavaScript',
   ts: 'TypeScript',
   react: 'React',
@@ -275,11 +221,4 @@ export const TECHNOLOGY_TITLES: TechnologyTitles = {
   mysql: 'MySQL',
   php: 'PHP',
   laravel: 'Laravel',
-}
-
-export const PROJECT_TYPE_LABELS: ProjectTypeLabels = {
-  app: 'Приложение',
-  site: 'Сайт',
-  admin: 'Админка',
-  landing: 'Лендинг',
 }
