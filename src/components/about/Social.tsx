@@ -6,15 +6,20 @@ import meNormalImg from '../../assets/img/pictures/me-normal.png'
 import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.png'
 import meExcitedImg from '../../assets/img/pictures/me-excited.png'
 import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.png'
-import Animate, {EFFECTS} from '../common/Animate'
+import Animate, {EFFECT} from '../common/Animate'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
-import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
+import {
+  DETECT,
+  ROUTE,
+  TILT_SCALE,
+  QUERY_BREAKPOINT,
+} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
-import {DURATION, BREAKPOINT} from '../../styles/theme'
+import {DURATION} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
   max: DETECT.safari ? 0 : 35,
@@ -34,14 +39,14 @@ const links: SocialLink[] = [
 const myName = 'Michael Ananiev | vashstamp'
 
 export default function Social(): JSX.Element {
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
+  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
         <Animate
-          effect={md ? EFFECTS.bottomSm : EFFECTS.zoomOut}
+          effect={md ? EFFECT.bottomSm : EFFECT.zoomOut}
           duration={md ? undefined : DURATION.longer}
         >
           <Tilt el="figure" className="Social-Photo" options={tiltOptions}>

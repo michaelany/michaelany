@@ -5,7 +5,7 @@ import MyLocationIcon from '@material-ui/icons/MyLocationRounded'
 
 import './Work.scss'
 import TypistTitle from '../common/TypistTitle'
-import Animate, {EFFECTS} from '../common/Animate'
+import Animate, {EFFECT} from '../common/Animate'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
 import {TITLES, COMPANIES} from '../../data/common'
@@ -137,7 +137,7 @@ export default function Work(): JSX.Element {
         Живу в Москве. Работаю преимущественно удаленно. Профессионально
         занимаюсь фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.
       </p>
-      <Animate el="ul" className="Work" effect={EFFECTS.bottomSm}>
+      <Animate el="ul" className="Work" effect={EFFECT.bottomSm}>
         {jobs.map((job: JobInterface, index: number) => (
           <Job key={index} {...job} index={index} />
         ))}

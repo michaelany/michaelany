@@ -15,7 +15,7 @@ import MailIcon from '@material-ui/icons/MailRounded'
 import SendIcon from '@material-ui/icons/SendRounded'
 
 import './ContactForm.scss'
-import Animate, {EFFECTS} from '../common/Animate'
+import Animate, {EFFECT} from '../common/Animate'
 import {Map} from '../../utils/types'
 
 interface Field {
@@ -119,7 +119,7 @@ export default function ContactForm(): JSX.Element {
       noValidate
       el="form"
       className="ContactForm"
-      effect={EFFECTS.bottomSm}
+      effect={EFFECT.bottomSm}
       onSubmit={handleSubmit}
     >
       <Grid container spacing={2}>

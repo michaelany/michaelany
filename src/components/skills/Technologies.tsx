@@ -8,14 +8,19 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
-import Animate, {EFFECTS} from '../common/Animate'
+import Animate, {EFFECT} from '../common/Animate'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tooltip from '../common/Tooltip'
-import {ROUTE, BLANK_LINK_PROPS, COLOR} from '../../utils/constants'
+import {
+  ROUTE,
+  BLANK_LINK_PROPS,
+  COLOR,
+  QUERY_BREAKPOINT,
+} from '../../utils/constants'
 import {Technology} from '../../utils/types'
 import {TECHNOLOGY_TITLES} from '../../data/common'
-import {BREAKPOINT, DURATION} from '../../styles/theme'
+import {DURATION} from '../../styles/theme'
 
 interface IGroup {
   title: string
@@ -441,7 +446,7 @@ const renderTechnologies = (technologies: Technology[]): JSX.Element[] =>
   )
 
 export default function Technologies(): JSX.Element {
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
+  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
     <section className="Technologies Section Section_pagination Section_colorful">
@@ -449,7 +454,7 @@ export default function Technologies(): JSX.Element {
       <Animate
         el="ul"
         className="Technologies-List"
-        effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
+        effect={md ? EFFECT.bottomSm : EFFECT.rightSm}
         duration={md ? undefined : DURATION.longer}
       >
         {groups.map(({title, technologies}: IGroup, index: number) => (

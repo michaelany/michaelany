@@ -3,7 +3,7 @@ import React from 'react'
 import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
-import Animate, {EFFECTS} from '../common/Animate'
+import Animate, {EFFECT} from '../common/Animate'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
@@ -24,7 +24,7 @@ export default function Banner(): JSX.Element {
       <h2 className="VisuallyHidden">Баннер</h2>
       <div className="Banner-Content">
         <Animate
-          effect={EFFECTS.zoomIn}
+          effect={EFFECT.zoomIn}
           duration={DURATION.longest}
           easing={EASING.out}
         >

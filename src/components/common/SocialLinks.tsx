@@ -4,12 +4,11 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Fab from '@material-ui/core/Fab'
 
 import './SocialLinks.scss'
-import Animate, {EFFECTS} from './Animate'
+import Animate, {EFFECT} from './Animate'
 import Tooltip from './Tooltip'
 import {getListDelay} from '../../utils/helpers'
-import {BLANK_LINK_PROPS} from '../../utils/constants'
+import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
-import {BREAKPOINT} from '../../styles/theme'
 
 interface SocialLinksProps {
   links: SocialLink[]
@@ -20,7 +19,7 @@ export default function SocialLinks({
   links,
   about,
 }: SocialLinksProps): JSX.Element {
-  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.xs}px)`)
+  const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
     <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>
@@ -29,7 +28,7 @@ export default function SocialLinks({
           key={index}
           el="li"
           className="SocialLinks-Item"
-          effect={EFFECTS.zoomIn}
+          effect={EFFECT.zoomIn}
           delay={xs ? undefined : getListDelay(index)}
         >
           <Tooltip title={title}>

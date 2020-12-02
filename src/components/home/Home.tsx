@@ -4,11 +4,11 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Sections from '../common/Sections'
 import Greeting from './Greeting'
 import Banner from './Banner'
-import {BREAKPOINT} from '../../styles/theme'
+import {QUERY_BREAKPOINT} from '../../utils/constants'
 
 export default function Home(): JSX.Element {
   // matches for key to responsive alternate animations reset
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
+  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
     <Sections

@@ -4,7 +4,7 @@ import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/ru'
 
 import {Route, Color, ProjectType, Map} from './types'
-import {DURATION} from '../styles/theme'
+import {DURATION, BREAKPOINT} from '../styles/theme'
 
 interface Detect {
   mobile: boolean
@@ -30,6 +30,13 @@ interface RouteInterface {
   experience: Route
   portfolio: Route
   contact: Route
+}
+
+interface QueryBreakpoint {
+  xs: string
+  sm: string
+  md: string
+  lg: string
 }
 
 interface ProjectTypeInterface {
@@ -113,6 +120,13 @@ export const ROUTE: RouteInterface = {
   experience: '/experience',
   portfolio: '/portfolio',
   contact: '/contact',
+}
+
+export const QUERY_BREAKPOINT: QueryBreakpoint = {
+  xs: `(max-width: ${BREAKPOINT.xs}px)`,
+  sm: `(max-width: ${BREAKPOINT.sm}px)`,
+  md: `(max-width: ${BREAKPOINT.md}px)`,
+  lg: `(max-width: ${BREAKPOINT.lg}px)`,
 }
 
 export const PROJECT_TYPE: ProjectTypeInterface = {

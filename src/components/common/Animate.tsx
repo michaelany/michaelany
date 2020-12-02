@@ -15,7 +15,7 @@ interface AnimateProps extends AllHTMLAttributes<HTMLElement> {
   easing?: string
 }
 
-interface Effects {
+interface EffectInterface {
   top: Effect
   topSm: Effect
   right: Effect
@@ -30,7 +30,7 @@ interface Effects {
   zoomOutSm: Effect
 }
 
-export const EFFECTS: Effects = {
+export const EFFECT: EffectInterface = {
   top: 'fadeInTop',
   topSm: 'fadeInTopSm',
   right: 'fadeInRight',

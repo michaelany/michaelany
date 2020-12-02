@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 import './Info.scss'
 import TypistTitle from '../common/TypistTitle'
 import Features from './Features'
-import Animate, {EFFECTS} from './Animate'
+import Animate, {EFFECT} from './Animate'
 import {ROOT} from '../../utils/constants'
 import {Feature} from '../../utils/types'
 
@@ -45,7 +45,7 @@ export default function Info({
       <TypistTitle title={title} />
       <p className="MainText">{text}</p>
       <Features extra={open} items={features} />
-      <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
+      <Animate className="Actions Actions_center" effect={EFFECT.bottom}>
         <Button
           className="Button"
           variant={open ? 'outlined' : 'contained'}
