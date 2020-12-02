@@ -6,7 +6,7 @@ import Tab from '@material-ui/core/Tab'
 
 import './Projects.scss'
 import ProjectLink from './ProjectLink'
-import {PROJECT_TYPES} from '../../utils/constants'
+import {PROJECT_TYPE} from '../../utils/constants'
 import {Map, Project, ProjectType, Width} from '../../utils/types'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
 import PROJECTS from '../../data/projects'
@@ -20,18 +20,18 @@ const filterAll: Filter = 'all'
 
 const filters: Filter[] = [
   filterAll,
-  PROJECT_TYPES.landing,
-  PROJECT_TYPES.site,
-  PROJECT_TYPES.app,
-  PROJECT_TYPES.admin,
+  PROJECT_TYPE.landing,
+  PROJECT_TYPE.site,
+  PROJECT_TYPE.app,
+  PROJECT_TYPE.admin,
 ]
 
 const filterLabel: Map<string> = {
   [filterAll]: 'Все',
-  [PROJECT_TYPES.landing]: PROJECT_TYPE_LABELS.landing,
-  [PROJECT_TYPES.site]: PROJECT_TYPE_LABELS.site,
-  [PROJECT_TYPES.app]: PROJECT_TYPE_LABELS.app,
-  [PROJECT_TYPES.admin]: PROJECT_TYPE_LABELS.admin,
+  [PROJECT_TYPE.landing]: PROJECT_TYPE_LABELS.landing,
+  [PROJECT_TYPE.site]: PROJECT_TYPE_LABELS.site,
+  [PROJECT_TYPE.app]: PROJECT_TYPE_LABELS.app,
+  [PROJECT_TYPE.admin]: PROJECT_TYPE_LABELS.admin,
 }
 
 const getFilteredProjects = (filter: string): Project[] =>

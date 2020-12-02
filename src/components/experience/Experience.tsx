@@ -7,7 +7,7 @@ import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Work from './Work'
 import Stepper from './Stepper'
-import {PATHS} from '../../utils/constants'
+import {ROUTE} from '../../utils/constants'
 import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
 
 export default function Experience(): JSX.Element {
@@ -25,7 +25,7 @@ export default function Experience(): JSX.Element {
           >
             <Stepper />
           </Animate>
-          <Pagination prevTo={PATHS.skills} nextTo={PATHS.portfolio} />
+          <Pagination prevTo={ROUTE.skills} nextTo={ROUTE.portfolio} />
           <Copyright />
         </section>
       }

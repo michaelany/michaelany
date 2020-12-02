@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactTilt from 'react-tilt'
 
-import {DETECTED} from '../../utils/constants'
+import {DETECT} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {EASINGS} from '../../styles/theme'
 
@@ -19,13 +19,13 @@ export default function Tilt({
   options,
 }: TiltProps): JSX.Element {
   const content: JSX.Element = Element ? (
-    <Element className={DETECTED.mobile ? className : undefined}>
+    <Element className={DETECT.mobile ? className : undefined}>
       {children}
     </Element>
   ) : (
     children
   )
-  return DETECTED.mobile ? (
+  return DETECT.mobile ? (
     content
   ) : (
     <ReactTilt className={className} options={options} easing={EASINGS.inOut}>

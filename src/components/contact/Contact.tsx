@@ -7,7 +7,7 @@ import Copyright from '../common/Copyright'
 import TypistTitle from '../common/TypistTitle'
 import ContactForm from './ContactForm'
 import Map from './Map'
-import {BLANK_LINK_PROPS, PATHS} from '../../utils/constants'
+import {BLANK_LINK_PROPS, ROUTE} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
 import {TITLES, CONTACT_LINKS} from '../../data/common'
 
@@ -44,7 +44,7 @@ export default function Contact(): JSX.Element {
             <ContactForm />
           </div>
           <SocialLinks links={links} />
-          <Pagination prevTo={PATHS.portfolio} />
+          <Pagination prevTo={ROUTE.portfolio} />
           <Copyright />
         </section>
       }

@@ -9,7 +9,7 @@ import Animate, {EFFECTS} from '../common/Animate'
 import Tilt from '../common/Tilt'
 import Panel from '../common/Panel'
 import {getListDelay} from '../../utils/helpers'
-import {DETECTED, PATHS, PROJECT_TYPES, TILT_SCALE} from '../../utils/constants'
+import {DETECT, ROUTE, PROJECT_TYPE, TILT_SCALE} from '../../utils/constants'
 import {Color, Effect, Company, TiltOptions, Width} from '../../utils/types'
 import {DURATIONS} from '../../styles/theme'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
@@ -26,16 +26,16 @@ interface ProjectLinkProps {
 }
 
 const tiltOptions: TiltOptions = {
-  max: DETECTED.safari ? 0 : 20,
+  max: DETECT.safari ? 0 : 20,
   scale: TILT_SCALE,
   speed: DURATIONS.longest,
 }
 
 export const projectTypeLabels = {
-  [PROJECT_TYPES.app]: [PROJECT_TYPE_LABELS.app],
-  [PROJECT_TYPES.site]: [PROJECT_TYPE_LABELS.site],
-  [PROJECT_TYPES.admin]: [PROJECT_TYPE_LABELS.admin],
-  [PROJECT_TYPES.landing]: [PROJECT_TYPE_LABELS.landing],
+  [PROJECT_TYPE.app]: [PROJECT_TYPE_LABELS.app],
+  [PROJECT_TYPE.site]: [PROJECT_TYPE_LABELS.site],
+  [PROJECT_TYPE.admin]: [PROJECT_TYPE_LABELS.admin],
+  [PROJECT_TYPE.landing]: [PROJECT_TYPE_LABELS.landing],
 }
 
 const randomEffects: Effect[] = [
@@ -72,7 +72,7 @@ export default function ProjectLink({
       xl={3}
     >
       <Animate
-        className={cn(DETECTED.mobile && 'ProjectLink-Tilt')}
+        className={cn(DETECT.mobile && 'ProjectLink-Tilt')}
         effect={
           width.sm
             ? EFFECTS.bottomSm
@@ -85,7 +85,7 @@ export default function ProjectLink({
             focusRipple
             component={Link}
             className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
-            to={`${PATHS.portfolio}${path}`}
+            to={`${ROUTE.portfolio}${path}`}
           >
             <Panel
               className={`ProjectLink-View ProjectLink-View_name_${name}`}

@@ -3,15 +3,15 @@ import {TypistProps} from 'react-typist'
 import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/ru'
 
-import {Path, Color, ProjectType, Map} from './types'
+import {Route, Color, ProjectType, Map} from './types'
 import {DURATIONS} from '../styles/theme'
 
-interface Detected {
+interface Detect {
   mobile: boolean
   safari: boolean
 }
 
-interface Colors {
+interface ColorInterface {
   alternate: Color
   white: Color
   default: Color
@@ -23,23 +23,23 @@ interface Colors {
   violet: Color
 }
 
-interface Paths {
-  home: Path
-  about: Path
-  skills: Path
-  experience: Path
-  portfolio: Path
-  contact: Path
+interface RouteInterface {
+  home: Route
+  about: Route
+  skills: Route
+  experience: Route
+  portfolio: Route
+  contact: Route
 }
 
-interface ProjectTypes {
+interface ProjectTypeInterface {
   app: ProjectType
   site: ProjectType
   admin: ProjectType
   landing: ProjectType
 }
 
-interface ProjectPaths {
+interface ProjectRoute {
   proximal: string
   embp: string
   tmf: string
@@ -68,7 +68,7 @@ interface BlankLinkProps {
 
 export const ROOT: HTMLElement = document.getElementById('root') as HTMLElement
 
-export const DETECTED: Detected = {
+export const DETECT: Detect = {
   mobile: [
     /Android/i,
     /webOS/i,
@@ -94,7 +94,7 @@ export const TODAY: Date = new Date()
 export const YEARS_OF_EXPERIENCE: number =
   differenceInYears(TODAY, CAREER_START_DATE) + 1
 
-export const COLORS: Colors = {
+export const COLOR: ColorInterface = {
   alternate: 'alternate',
   white: 'white',
   default: 'default',
@@ -106,7 +106,7 @@ export const COLORS: Colors = {
   violet: 'violet',
 }
 
-export const PATHS: Paths = {
+export const ROUTE: RouteInterface = {
   home: '/',
   about: '/about',
   skills: '/skills',
@@ -115,19 +115,14 @@ export const PATHS: Paths = {
   contact: '/contact',
 }
 
-export const BLANK_LINK_PROPS: BlankLinkProps = {
-  target: '_blank',
-  rel: 'noopener noreferrer',
-}
-
-export const PROJECT_TYPES: ProjectTypes = {
+export const PROJECT_TYPE: ProjectTypeInterface = {
   app: 'app',
   site: 'site',
   admin: 'admin',
   landing: 'landing',
 }
 
-export const PROJECT_PATHS: ProjectPaths = {
+export const PROJECT_ROUTE: ProjectRoute = {
   proximal: '/proximal-coffee',
   embp: '/arma-embp',
   tmf: '/tmf',
@@ -149,32 +144,37 @@ export const PROJECT_PATHS: ProjectPaths = {
   msp: '/msp',
 }
 
-export const PATH_COLORS: Map<Color> = {
-  [PATHS.home]: COLORS.alternate,
-  [PATHS.about]: COLORS.green,
-  [PATHS.skills]: COLORS.blue,
-  [PATHS.experience]: COLORS.violet,
-  [PATHS.portfolio]: COLORS.white,
-  [PATHS.contact]: COLORS.white,
-  [PROJECT_PATHS.embp]: COLORS.blue,
-  [PROJECT_PATHS.proximal]: COLORS.yellow,
-  [PROJECT_PATHS.tmf]: COLORS.blue,
-  [PROJECT_PATHS.lite]: COLORS.grass,
-  [PROJECT_PATHS.mellissa]: COLORS.green,
-  [PROJECT_PATHS.foodp]: COLORS.blue,
-  [PROJECT_PATHS.food]: COLORS.violet,
-  [PROJECT_PATHS.sds]: COLORS.grass,
-  [PROJECT_PATHS.strong]: COLORS.red,
-  [PROJECT_PATHS.rogue]: COLORS.violet,
-  [PROJECT_PATHS.trucks]: COLORS.default,
-  [PROJECT_PATHS.services]: COLORS.grass,
-  [PROJECT_PATHS.fcdc]: COLORS.default,
-  [PROJECT_PATHS.saffron]: COLORS.yellow,
-  [PROJECT_PATHS.whip]: COLORS.default,
-  [PROJECT_PATHS.lazyazd]: COLORS.default,
-  [PROJECT_PATHS.lazyaz]: COLORS.red,
-  [PROJECT_PATHS.glyphs]: COLORS.grass,
-  [PROJECT_PATHS.msp]: COLORS.blue,
+export const PATH_COLOR: Map<Color> = {
+  [ROUTE.home]: COLOR.alternate,
+  [ROUTE.about]: COLOR.green,
+  [ROUTE.skills]: COLOR.blue,
+  [ROUTE.experience]: COLOR.violet,
+  [ROUTE.portfolio]: COLOR.white,
+  [ROUTE.contact]: COLOR.white,
+  [PROJECT_ROUTE.embp]: COLOR.blue,
+  [PROJECT_ROUTE.proximal]: COLOR.yellow,
+  [PROJECT_ROUTE.tmf]: COLOR.blue,
+  [PROJECT_ROUTE.lite]: COLOR.grass,
+  [PROJECT_ROUTE.mellissa]: COLOR.green,
+  [PROJECT_ROUTE.foodp]: COLOR.blue,
+  [PROJECT_ROUTE.food]: COLOR.violet,
+  [PROJECT_ROUTE.sds]: COLOR.grass,
+  [PROJECT_ROUTE.strong]: COLOR.red,
+  [PROJECT_ROUTE.rogue]: COLOR.violet,
+  [PROJECT_ROUTE.trucks]: COLOR.default,
+  [PROJECT_ROUTE.services]: COLOR.grass,
+  [PROJECT_ROUTE.fcdc]: COLOR.default,
+  [PROJECT_ROUTE.saffron]: COLOR.yellow,
+  [PROJECT_ROUTE.whip]: COLOR.default,
+  [PROJECT_ROUTE.lazyazd]: COLOR.default,
+  [PROJECT_ROUTE.lazyaz]: COLOR.red,
+  [PROJECT_ROUTE.glyphs]: COLOR.grass,
+  [PROJECT_ROUTE.msp]: COLOR.blue,
+}
+
+export const BLANK_LINK_PROPS: BlankLinkProps = {
+  target: '_blank',
+  rel: 'noopener noreferrer',
 }
 
 export const SWIPER_OPTIONS: SwiperOptions = {

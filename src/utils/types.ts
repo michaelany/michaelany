@@ -1,7 +1,7 @@
 import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core/SvgIcon'
 
-export type Path =
+export type Route =
   | '/'
   | '/about'
   | '/skills'

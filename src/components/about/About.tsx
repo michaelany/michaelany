@@ -22,7 +22,7 @@ import {TECHNOLOGY_TITLES, TITLES} from '../../data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
-  PATHS,
+  ROUTE,
   BLANK_LINK_PROPS,
 } from '../../utils/constants'
 import {Feature} from '../../utils/types'
@@ -36,7 +36,7 @@ const features: Feature[] = [
         В моем послужном списке около {PROJECTS.length + 3} зарубежных и
         отечественных коммерческих проектов - от лендингов до крупных
         веб-приложений. Некоторые из них представлены в{' '}
-        <Link className="Link" to={PATHS.portfolio}>
+        <Link className="Link" to={ROUTE.portfolio}>
           {TITLES.portfolio}
         </Link>
         .
@@ -51,7 +51,7 @@ const features: Feature[] = [
         Первый сайт сделал в 13 лет. Прошел путь от верстальщика до тимлида
         фронтенд-разработки. Работаю в крупной отечественной и новозеландской ИТ
         компаниях. Подробнее на странице{' '}
-        <Link className="Link" to={PATHS.experience}>
+        <Link className="Link" to={ROUTE.experience}>
           {TITLES.experience}
         </Link>
         .
@@ -66,7 +66,7 @@ const features: Feature[] = [
         Разрабатываю проекты с нуля, пишу бизнес-логику, верстаю, оптимизирую и
         поддерживаю код. Планирую и оцениваю задачи, провожу код-ревью и обучаю.
         Более подробно в{' '}
-        <Link className="Link" to={PATHS.skills}>
+        <Link className="Link" to={ROUTE.skills}>
           {TITLES.skills}
         </Link>
         .

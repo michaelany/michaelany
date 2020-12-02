@@ -5,7 +5,7 @@ import BuildIcon from '@material-ui/icons/BuildRounded'
 import FavoriteIcon from '@material-ui/icons/FavoriteRounded'
 
 import './Copyright.scss'
-import {PATHS, TODAY} from '../../utils/constants'
+import {ROUTE, TODAY} from '../../utils/constants'
 
 const year: number = TODAY.getFullYear()
 
@@ -14,7 +14,7 @@ export default function Copyright() {
     <p className="Copyright">
       <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
       <BuildIcon className="Copyright-Icon" /> by{' '}
-      <Link className="Copyright-Link" to={PATHS.home}>
+      <Link className="Copyright-Link" to={ROUTE.home}>
         Michael Ananiev
       </Link>{' '}
       with <FavoriteIcon className="Copyright-Icon" />

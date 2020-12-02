@@ -6,7 +6,7 @@ import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import ProjectDetails from './ProjectDetails'
 import Carousel from './Carousel'
-import {PATHS} from '../../utils/constants'
+import {ROUTE} from '../../utils/constants'
 import {Project as ProjectInterface} from '../../utils/types'
 import PROJECTS from '../../data/projects'
 
@@ -47,7 +47,7 @@ export default function Project({
               />
             )}
           </div>
-          <Pagination prevTo={PATHS.portfolio} />
+          <Pagination prevTo={ROUTE.portfolio} />
           <Copyright />
         </section>
       }

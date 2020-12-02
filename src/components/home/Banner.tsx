@@ -7,14 +7,14 @@ import Animate, {EFFECTS} from '../common/Animate'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
-import {DETECTED, PATHS, TILT_SCALE} from '../../utils/constants'
+import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {DURATIONS, EASINGS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  reset: DETECTED.safari,
-  max: DETECTED.safari ? 0 : 50,
-  scale: DETECTED.safari ? TILT_SCALE : 1,
+  reset: DETECT.safari,
+  max: DETECT.safari ? 0 : 50,
+  scale: DETECT.safari ? TILT_SCALE : 1,
   speed: DURATIONS.lingering,
 }
 
@@ -37,7 +37,7 @@ export default function Banner(): JSX.Element {
             />
           </Tilt>
         </Animate>
-        <Pagination nextTo={PATHS.about} />
+        <Pagination nextTo={ROUTE.about} />
         <Copyright />
       </div>
     </section>

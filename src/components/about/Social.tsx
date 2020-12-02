@@ -11,13 +11,13 @@ import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
-import {DETECTED, PATHS, TILT_SCALE} from '../../utils/constants'
+import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
 import {DURATIONS, BREAKPOINTS} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  max: DETECTED.safari ? 0 : 35,
+  max: DETECT.safari ? 0 : 35,
   scale: TILT_SCALE,
   speed: DURATIONS.longest,
 }
@@ -63,7 +63,7 @@ export default function Social(): JSX.Element {
         </Animate>
         <SocialLinks about links={links} />
       </div>
-      <Pagination prevTo={PATHS.home} nextTo={PATHS.skills} />
+      <Pagination prevTo={ROUTE.home} nextTo={ROUTE.skills} />
       <Copyright />
     </section>
   )

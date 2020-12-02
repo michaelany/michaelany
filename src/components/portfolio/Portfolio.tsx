@@ -4,7 +4,7 @@ import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import TypistTitle from '../common/TypistTitle'
 import Projects from './Projects'
-import {PATHS} from '../../utils/constants'
+import {ROUTE} from '../../utils/constants'
 import {TITLES} from '../../data/common'
 
 export default function Portfolio(): JSX.Element {
@@ -14,7 +14,7 @@ export default function Portfolio(): JSX.Element {
         <TypistTitle title={TITLES.portfolio} />
         <Projects />
       </div>
-      <Pagination prevTo={PATHS.experience} nextTo={PATHS.contact} />
+      <Pagination prevTo={ROUTE.experience} nextTo={ROUTE.contact} />
       <Copyright />
     </section>
   )

@@ -11,8 +11,8 @@ import MailIcon from '@material-ui/icons/MailRounded'
 
 import './Navigation.scss'
 import Tooltip from './Tooltip'
-import {PATHS} from '../../utils/constants'
-import {Path} from '../../utils/types'
+import {ROUTE} from '../../utils/constants'
+import {Route} from '../../utils/types'
 import {TITLES} from '../../data/common'
 
 interface NavigationProps {
@@ -21,17 +21,17 @@ interface NavigationProps {
 
 interface NavLinkInterface {
   title: string
-  to: Path
+  to: Route
   Icon: typeof SvgIcon
 }
 
 const navLinks: NavLinkInterface[] = [
-  {title: TITLES.home, to: PATHS.home, Icon: HomeIcon},
-  {title: TITLES.about, to: PATHS.about, Icon: PersonIcon},
-  {title: TITLES.skills, to: PATHS.skills, Icon: SchoolIcon},
-  {title: TITLES.experience, to: PATHS.experience, Icon: WorkIcon},
-  {title: TITLES.portfolio, to: PATHS.portfolio, Icon: WebIcon},
-  {title: TITLES.contact, to: PATHS.contact, Icon: MailIcon},
+  {title: TITLES.home, to: ROUTE.home, Icon: HomeIcon},
+  {title: TITLES.about, to: ROUTE.about, Icon: PersonIcon},
+  {title: TITLES.skills, to: ROUTE.skills, Icon: SchoolIcon},
+  {title: TITLES.experience, to: ROUTE.experience, Icon: WorkIcon},
+  {title: TITLES.portfolio, to: ROUTE.portfolio, Icon: WebIcon},
+  {title: TITLES.contact, to: ROUTE.contact, Icon: MailIcon},
 ]
 
 export default function Navigation({onClose}: NavigationProps): JSX.Element {
@@ -43,7 +43,7 @@ export default function Navigation({onClose}: NavigationProps): JSX.Element {
             <Tooltip title={title} placement="right">
               <Button
                 fullWidth
-                exact={to !== PATHS.portfolio}
+                exact={to !== ROUTE.portfolio}
                 className="Navigation-Link"
                 activeClassName="Colorful"
                 component={NavLink}

@@ -13,7 +13,7 @@ import {
   TECHNOLOGY_TITLES,
   PROJECT_TYPE_LABELS,
 } from './common'
-import {PROJECT_TYPES, PATH_COLORS, PROJECT_PATHS} from '../utils/constants'
+import {PROJECT_TYPE, PATH_COLOR, PROJECT_ROUTE} from '../utils/constants'
 import {Project} from '../utils/types'
 
 const PROJECTS: Project[] = [
@@ -21,10 +21,10 @@ const PROJECTS: Project[] = [
     title: 'Proximal',
     name: 'proximal',
     description: 'Лендинг австралийской кофейни "Proximal Coffee".',
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.proximal],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.proximal],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.proximal,
+    path: PROJECT_ROUTE.proximal,
     href: 'https://www.proximalcoffee.com.au',
     features: [
       {
@@ -90,10 +90,10 @@ const PROJECTS: Project[] = [
     title: 'АРМА ЕМБП',
     name: 'embp',
     description: 'Админка биометрической платформы для банка "ВТБ".',
-    type: PROJECT_TYPES.admin,
-    color: PATH_COLORS[PROJECT_PATHS.embp],
+    type: PROJECT_TYPE.admin,
+    color: PATH_COLOR[PROJECT_ROUTE.embp],
     company: COMPANIES.tsftd,
-    path: PROJECT_PATHS.embp,
+    path: PROJECT_ROUTE.embp,
     features: [
       {
         label: 'Разработка с нуля, развитие и поддержка проекта',
@@ -144,10 +144,10 @@ const PROJECTS: Project[] = [
     name: 'tmf',
     description:
       'Многостраничный сайт новозеландской строительной компании "Ted Manson Foundation".',
-    type: PROJECT_TYPES.site,
-    color: PATH_COLORS[PROJECT_PATHS.tmf],
+    type: PROJECT_TYPE.site,
+    color: PATH_COLOR[PROJECT_ROUTE.tmf],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.tmf,
+    path: PROJECT_ROUTE.tmf,
     href: 'https://www.tmfoundation.co.nz',
     features: [
       {
@@ -212,10 +212,10 @@ const PROJECTS: Project[] = [
     title: '7 glyphs Lite',
     name: 'lite',
     description: `Лендинг сервиса новозеландского диджитал-агентства "${COMPANY_TITLES.sevenGlyphs}".`,
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.lite],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.lite],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.lite,
+    path: PROJECT_ROUTE.lite,
     href: 'https://lite.7glyphs.com',
     features: [
       {
@@ -280,10 +280,10 @@ const PROJECTS: Project[] = [
     title: 'Melissa',
     name: 'melissa',
     description: 'Лендинг фитнес-блогера Melissa Chalmers.',
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.mellissa],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.mellissa],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.mellissa,
+    path: PROJECT_ROUTE.mellissa,
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
       {
@@ -349,10 +349,10 @@ const PROJECTS: Project[] = [
     name: 'foodp',
     description:
       'Админка новозеландского сервиса заказа еды в ресторанах "Foodprint".',
-    type: PROJECT_TYPES.admin,
-    color: PATH_COLORS[PROJECT_PATHS.foodp],
+    type: PROJECT_TYPE.admin,
+    color: PATH_COLOR[PROJECT_ROUTE.foodp],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.foodp,
+    path: PROJECT_ROUTE.foodp,
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
@@ -404,10 +404,10 @@ const PROJECTS: Project[] = [
     name: 'food',
     description:
       'Лендинг новозеландского сервиса заказа еды в ресторанах "Foodprint".',
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.food],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.food],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.food,
+    path: PROJECT_ROUTE.food,
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
@@ -473,10 +473,10 @@ const PROJECTS: Project[] = [
     name: 'sds',
     description:
       'Единый кабинет для работы сотрудников и партнеров компании "Vaillant".',
-    type: PROJECT_TYPES.app,
-    color: PATH_COLORS[PROJECT_PATHS.sds],
+    type: PROJECT_TYPE.app,
+    color: PATH_COLOR[PROJECT_ROUTE.sds],
     company: COMPANIES.tsftd,
-    path: PROJECT_PATHS.sds,
+    path: PROJECT_ROUTE.sds,
     features: [
       {
         label: 'Разработка с нуля, развитие и поддержка проекта',
@@ -526,10 +526,10 @@ const PROJECTS: Project[] = [
     title: 'StrongHer',
     name: 'strong',
     description: 'Лендинг мобильного фитнес-приложения "StrongHer".',
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.strong],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.strong],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.strong,
+    path: PROJECT_ROUTE.strong,
     href: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
       {
@@ -595,10 +595,10 @@ const PROJECTS: Project[] = [
     name: 'rogue',
     description:
       'Новозеландский сервис группового бронирования авиабилетов и отелей "Rogue Travel".',
-    type: PROJECT_TYPES.site,
-    color: PATH_COLORS[PROJECT_PATHS.rogue],
+    type: PROJECT_TYPE.site,
+    color: PATH_COLOR[PROJECT_ROUTE.rogue],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.rogue,
+    path: PROJECT_ROUTE.rogue,
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
       {
@@ -650,10 +650,10 @@ const PROJECTS: Project[] = [
     name: 'trucks',
     description:
       'Новозеландский сервис мониторинга передвижения грузовиков "Quarry Trucks".',
-    type: PROJECT_TYPES.app,
-    color: PATH_COLORS[PROJECT_PATHS.trucks],
+    type: PROJECT_TYPE.app,
+    color: PATH_COLOR[PROJECT_ROUTE.trucks],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.trucks,
+    path: PROJECT_ROUTE.trucks,
     href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
     features: [
       {
@@ -704,10 +704,10 @@ const PROJECTS: Project[] = [
     title: 'Services',
     name: 'services',
     description: `Лендинг описания услуг новозеландского диджитал-агентства "${COMPANY_TITLES.sevenGlyphs}".`,
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.services],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.services],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.services,
+    path: PROJECT_ROUTE.services,
     href: 'https://7glyphs.com/approach/packages',
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
@@ -769,10 +769,10 @@ const PROJECTS: Project[] = [
     title: 'FCDC',
     name: 'fcdc',
     description: 'Админка сервиса управления мероприятиями "FCDC".',
-    type: PROJECT_TYPES.admin,
-    color: PATH_COLORS[PROJECT_PATHS.fcdc],
+    type: PROJECT_TYPE.admin,
+    color: PATH_COLOR[PROJECT_ROUTE.fcdc],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.fcdc,
+    path: PROJECT_ROUTE.fcdc,
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
       {
@@ -819,10 +819,10 @@ const PROJECTS: Project[] = [
     title: '12 Saffron',
     name: '12saffron',
     description: 'Целевая страница для продажи частного дома в Новой Зеландии.',
-    type: PROJECT_TYPES.landing,
-    color: PATH_COLORS[PROJECT_PATHS.saffron],
+    type: PROJECT_TYPE.landing,
+    color: PATH_COLOR[PROJECT_ROUTE.saffron],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.saffron,
+    path: PROJECT_ROUTE.saffron,
     href: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
@@ -884,10 +884,10 @@ const PROJECTS: Project[] = [
     title: 'Whip Around',
     name: 'whip',
     description: 'Новозеландский сервис техосмотра автомобилей "Whip Around".',
-    type: PROJECT_TYPES.site,
-    color: PATH_COLORS[PROJECT_PATHS.whip],
+    type: PROJECT_TYPE.site,
+    color: PATH_COLOR[PROJECT_ROUTE.whip],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.whip,
+    path: PROJECT_ROUTE.whip,
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
       {label: 'Развитие и поддержка проекта', Icon: CheckCircleIcon},
@@ -933,10 +933,10 @@ const PROJECTS: Project[] = [
     title: 'LazyAz',
     name: 'lazyazd',
     description: 'Админка новозеландского сервиса доставки "LazyAz".',
-    type: PROJECT_TYPES.admin,
-    color: PATH_COLORS[PROJECT_PATHS.lazyazd],
+    type: PROJECT_TYPE.admin,
+    color: PATH_COLOR[PROJECT_ROUTE.lazyazd],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.lazyazd,
+    path: PROJECT_ROUTE.lazyazd,
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
@@ -982,10 +982,10 @@ const PROJECTS: Project[] = [
     title: 'LazyAz',
     name: 'lazyaz',
     description: 'Веб-платформа новозеландского сервиса доставки "LazyAz".',
-    type: PROJECT_TYPES.site,
-    color: PATH_COLORS[PROJECT_PATHS.lazyaz],
+    type: PROJECT_TYPE.site,
+    color: PATH_COLOR[PROJECT_ROUTE.lazyaz],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.lazyaz,
+    path: PROJECT_ROUTE.lazyaz,
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {
@@ -1050,10 +1050,10 @@ const PROJECTS: Project[] = [
     title: 'Сайт 7 glyphs',
     name: '7glyphs',
     description: `Сайт новозеландского диджитал-агентства "${COMPANY_TITLES.sevenGlyphs}".`,
-    type: PROJECT_TYPES.site,
-    color: PATH_COLORS[PROJECT_PATHS.glyphs],
+    type: PROJECT_TYPE.site,
+    color: PATH_COLOR[PROJECT_ROUTE.glyphs],
     company: COMPANIES.sevenGlyphs,
-    path: PROJECT_PATHS.glyphs,
+    path: PROJECT_ROUTE.glyphs,
     href: COMPANIES.sevenGlyphs.href,
     features: [
       {
@@ -1119,10 +1119,10 @@ const PROJECTS: Project[] = [
     name: 'msp',
     description:
       'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес.',
-    type: PROJECT_TYPES.app,
-    color: PATH_COLORS[PROJECT_PATHS.msp],
+    type: PROJECT_TYPE.app,
+    color: PATH_COLOR[PROJECT_ROUTE.msp],
     company: COMPANIES.everpoint,
-    path: PROJECT_PATHS.msp,
+    path: PROJECT_ROUTE.msp,
     href: 'https://www.everpoint.ru/msp',
     features: [
       {label: 'Развитие и поддержка проекта', Icon: CheckCircleIcon},

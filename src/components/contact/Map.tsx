@@ -5,7 +5,7 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 
 import './Map.scss'
 import markerIcon from '../../assets/icons/marker.svg'
-import {PATHS} from '../../utils/constants'
+import {ROUTE} from '../../utils/constants'
 import mapTheme from '../../styles/map'
 
 interface InitialCenter {
@@ -28,7 +28,7 @@ function Map(): JSX.Element {
   const history = useHistory()
 
   const handleMarkerClick = (): void => {
-    history.push(PATHS.about)
+    history.push(ROUTE.about)
   }
 
   return (

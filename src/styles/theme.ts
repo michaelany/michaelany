@@ -33,7 +33,7 @@ interface Breakpoints {
 }
 
 // $color_...
-export const COLORS: Colors = {
+export const COLOR: Colors = {
   green: '#2fd0c8',
   blue: '#64a6fc',
   text: '#4a4a4a',
@@ -106,26 +106,26 @@ export default {
   },
   palette: {
     text: {
-      primary: COLORS.text,
-      secondary: COLORS.secondText,
+      primary: COLOR.text,
+      secondary: COLOR.secondText,
     },
     background: {
       default: '#fff', // $color_background
     },
     primary: {
-      light: COLORS.blue,
-      main: COLORS.blue,
+      light: COLOR.blue,
+      main: COLOR.blue,
       dark: '#568bd0', // $color_dark-blue
     },
     secondary: {
-      light: COLORS.green,
-      main: COLORS.green,
+      light: COLOR.green,
+      main: COLOR.green,
       dark: '#2caca6', // $color_dark-green
     },
     error: {
-      light: COLORS.darkRed,
-      main: COLORS.darkRed,
-      dark: COLORS.darkRed,
+      light: COLOR.darkRed,
+      main: COLOR.darkRed,
+      dark: COLOR.darkRed,
     },
   },
   transitions: {

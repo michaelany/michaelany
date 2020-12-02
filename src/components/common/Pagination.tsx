@@ -6,22 +6,22 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
 import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
 
 import './Pagination.scss'
-import {PATHS} from '../../utils/constants'
-import {Path, Map} from '../../utils/types'
+import {ROUTE} from '../../utils/constants'
+import {Route, Map} from '../../utils/types'
 import {TITLES} from '../../data/common'
 
 interface PaginationProps {
-  prevTo?: Path
-  nextTo?: Path
+  prevTo?: Route
+  nextTo?: Route
 }
 
 const pathTitles: Map<string> = {
-  [PATHS.home]: TITLES.home,
-  [PATHS.about]: TITLES.about,
-  [PATHS.skills]: TITLES.skills,
-  [PATHS.experience]: TITLES.experience,
-  [PATHS.portfolio]: TITLES.portfolio,
-  [PATHS.contact]: TITLES.contact,
+  [ROUTE.home]: TITLES.home,
+  [ROUTE.about]: TITLES.about,
+  [ROUTE.skills]: TITLES.skills,
+  [ROUTE.experience]: TITLES.experience,
+  [ROUTE.portfolio]: TITLES.portfolio,
+  [ROUTE.contact]: TITLES.contact,
 }
 
 export default function Pagination({
