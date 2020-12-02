@@ -15,7 +15,7 @@ import Tooltip from '../common/Tooltip'
 import {ROUTE, BLANK_LINK_PROPS, COLOR} from '../../utils/constants'
 import {Technology} from '../../utils/types'
 import {TECHNOLOGY_TITLES} from '../../data/common'
-import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
+import {BREAKPOINT, DURATION} from '../../styles/theme'
 
 interface IGroup {
   title: string
@@ -441,7 +441,7 @@ const renderTechnologies = (technologies: Technology[]): JSX.Element[] =>
   )
 
 export default function Technologies(): JSX.Element {
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
 
   return (
     <section className="Technologies Section Section_pagination Section_colorful">
@@ -450,7 +450,7 @@ export default function Technologies(): JSX.Element {
         el="ul"
         className="Technologies-List"
         effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
-        duration={md ? undefined : DURATIONS.longer}
+        duration={md ? undefined : DURATION.longer}
       >
         {groups.map(({title, technologies}: IGroup, index: number) => (
           <Accordion key={index} component="li" defaultExpanded={index === 0}>

@@ -8,10 +8,10 @@ import Copyright from '../common/Copyright'
 import Work from './Work'
 import Stepper from './Stepper'
 import {ROUTE} from '../../utils/constants'
-import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
+import {BREAKPOINT, DURATION} from '../../styles/theme'
 
 export default function Experience(): JSX.Element {
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
 
   return (
     <Sections
@@ -21,7 +21,7 @@ export default function Experience(): JSX.Element {
           <h2 className="VisuallyHidden">Этапы</h2>
           <Animate
             effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
-            duration={md ? undefined : DURATIONS.longer}
+            duration={md ? undefined : DURATION.longer}
           >
             <Stepper />
           </Animate>

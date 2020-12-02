@@ -14,12 +14,12 @@ import Tilt from '../common/Tilt'
 import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
 import {CONTACT_LINKS} from '../../data/common'
-import {DURATIONS, BREAKPOINTS} from '../../styles/theme'
+import {DURATION, BREAKPOINT} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
   max: DETECT.safari ? 0 : 35,
   scale: TILT_SCALE,
-  speed: DURATIONS.longest,
+  speed: DURATION.longest,
 }
 
 const links: SocialLink[] = [
@@ -34,7 +34,7 @@ const links: SocialLink[] = [
 const myName = 'Michael Ananiev | vashstamp'
 
 export default function Social(): JSX.Element {
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
 
   return (
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
@@ -42,7 +42,7 @@ export default function Social(): JSX.Element {
       <div className="Social-Content">
         <Animate
           effect={md ? EFFECTS.bottomSm : EFFECTS.zoomOut}
-          duration={md ? undefined : DURATIONS.longer}
+          duration={md ? undefined : DURATION.longer}
         >
           <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
             <>

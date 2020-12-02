@@ -1,4 +1,4 @@
-import {DURATIONS} from '../styles/theme'
+import {DURATION} from '../styles/theme'
 
 export const getListDelay = (order: number): number =>
-  (order * DURATIONS.shorter) / 2
+  (order * DURATION.shorter) / 2

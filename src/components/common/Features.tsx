@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 
 import './Features.scss'
 import Animate, {EFFECTS} from '../common/Animate'
-import {BREAKPOINTS, DURATIONS} from '../../styles/theme'
+import {BREAKPOINT, DURATION} from '../../styles/theme'
 import {Feature} from '../../utils/types'
 
 interface FeaturesProps {
@@ -17,7 +17,7 @@ const getEffect = (xs: boolean, index: number): string =>
   xs ? EFFECTS.bottom : index % 2 ? EFFECTS.rightSm : EFFECTS.leftSm
 
 function Features({items, extra}: FeaturesProps): JSX.Element {
-  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.xs}px)`)
+  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.xs}px)`)
 
   return (
     <Grid container className="Features" component="ul" spacing={4}>
@@ -36,7 +36,7 @@ function Features({items, extra}: FeaturesProps): JSX.Element {
               {time ? <time>{label}</time> : label}
             </p>
             {description && (
-              <Collapse unmountOnExit in={extra} timeout={DURATIONS.long}>
+              <Collapse unmountOnExit in={extra} timeout={DURATION.long}>
                 <p className="Features-Description FadeIn">{description}</p>
               </Collapse>
             )}

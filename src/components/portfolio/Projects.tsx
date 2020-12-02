@@ -10,7 +10,7 @@ import {PROJECT_TYPE} from '../../utils/constants'
 import {Map, Project, ProjectType, Width} from '../../utils/types'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
 import PROJECTS from '../../data/projects'
-import {BREAKPOINTS} from '../../styles/theme'
+import {BREAKPOINT} from '../../styles/theme'
 
 type Filter = 'all' | ProjectType
 
@@ -44,9 +44,9 @@ function Projects(): JSX.Element {
     localStorage.getItem(storageProp) || filterAll
   )
   const width: Width = {
-    lg: useMediaQuery(`(max-width: ${BREAKPOINTS.lg}px)`),
-    md: useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`),
-    sm: useMediaQuery(`(max-width: ${BREAKPOINTS.sm}px)`),
+    lg: useMediaQuery(`(max-width: ${BREAKPOINT.lg}px)`),
+    md: useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`),
+    sm: useMediaQuery(`(max-width: ${BREAKPOINT.sm}px)`),
   }
 
   const handleChange = (e: ChangeEvent<object>, value: string): void => {

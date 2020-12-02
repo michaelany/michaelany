@@ -7,7 +7,7 @@ import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 import Animate, {EFFECTS} from '../common/Animate'
 import Panel from '../common/Panel'
 import {SWIPER_OPTIONS} from '../../utils/constants'
-import {DURATIONS, BREAKPOINTS} from '../../styles/theme'
+import {DURATION, BREAKPOINT} from '../../styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
@@ -45,7 +45,7 @@ const renderSwiper = ({
 }
 
 export default function Carousel(props: CarouselProps): JSX.Element {
-  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.md}px)`)
+  const md: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.md}px)`)
 
   if (props.mobile)
     return (
@@ -62,7 +62,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
     <Animate
       className="Carousel Carousel_type_desktop"
       effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
-      duration={md ? undefined : DURATIONS.longer}
+      duration={md ? undefined : DURATION.longer}
     >
       <Panel className="Carousel-Content">
         <div className="Carousel-Block">{renderSwiper(props)}</div>

@@ -1,4 +1,4 @@
-interface Colors {
+interface Color {
   green: string
   blue: string
   text: string
@@ -6,7 +6,7 @@ interface Colors {
   darkRed: string
 }
 
-interface Durations {
+interface Duration {
   shortest: number
   shorter: number
   short: number
@@ -20,12 +20,12 @@ interface Durations {
   alternate: number
 }
 
-interface Easings {
+interface Easing {
   inOut: string
   out: string
 }
 
-interface Breakpoints {
+interface Breakpoint {
   xs: number
   sm: number
   md: number
@@ -33,7 +33,7 @@ interface Breakpoints {
 }
 
 // $color_...
-export const COLOR: Colors = {
+export const COLOR: Color = {
   green: '#2fd0c8',
   blue: '#64a6fc',
   text: '#4a4a4a',
@@ -42,7 +42,7 @@ export const COLOR: Colors = {
 }
 
 // $duration_...
-export const DURATIONS: Durations = {
+export const DURATION: Duration = {
   shortest: 150,
   shorter: 200,
   short: 250,
@@ -57,13 +57,13 @@ export const DURATIONS: Durations = {
 }
 
 // $easing_...
-export const EASINGS: Easings = {
+export const EASING: Easing = {
   inOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
   out: 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
 // $breakpoint_...
-export const BREAKPOINTS: Breakpoints = {
+export const BREAKPOINT: Breakpoint = {
   xs: 399,
   sm: 599,
   md: 959,
@@ -98,10 +98,10 @@ export default {
   breakpoints: {
     values: {
       xs: 0,
-      sm: BREAKPOINTS.xs + 1,
-      md: BREAKPOINTS.sm + 1,
-      lg: BREAKPOINTS.md + 1,
-      xl: BREAKPOINTS.lg + 1,
+      sm: BREAKPOINT.xs + 1,
+      md: BREAKPOINT.sm + 1,
+      lg: BREAKPOINT.md + 1,
+      xl: BREAKPOINT.lg + 1,
     },
   },
   palette: {
@@ -110,7 +110,7 @@ export default {
       secondary: COLOR.secondText,
     },
     background: {
-      default: '#fff', // $color_background
+      default: '#fff',
     },
     primary: {
       light: COLOR.blue,
@@ -130,14 +130,14 @@ export default {
   },
   transitions: {
     easing: {
-      easeInOut: EASINGS.inOut,
-      easeOut: EASINGS.out,
+      easeInOut: EASING.inOut,
+      easeOut: EASING.out,
     },
     duration: {
-      shortest: DURATIONS.shortest,
-      shorter: DURATIONS.shorter,
-      short: DURATIONS.short,
-      standard: DURATIONS.standard,
+      shortest: DURATION.shortest,
+      shorter: DURATION.shorter,
+      short: DURATION.short,
+      standard: DURATION.standard,
     },
   },
   shadows: ['none'],
@@ -146,7 +146,7 @@ export default {
   },
   props: {
     MuiTooltip: {
-      enterDelay: DURATIONS.standard,
+      enterDelay: DURATION.standard,
     },
     MuiAccordion: {
       elevation: 0,

@@ -4,7 +4,7 @@ import {Waypoint} from 'react-waypoint'
 
 import './Animate.scss'
 import {Effect} from '../../utils/types'
-import {DURATIONS, EASINGS} from '../../styles/theme'
+import {DURATION, EASING} from '../../styles/theme'
 
 interface AnimateProps extends AllHTMLAttributes<HTMLElement> {
   children: ReactNode
@@ -50,9 +50,9 @@ export default function Animate({
   el: Element = 'div',
   className,
   effect,
-  duration = DURATIONS.long,
+  duration = DURATION.long,
   delay = 0,
-  easing = EASINGS.inOut,
+  easing = EASING.inOut,
   ...props
 }: AnimateProps): JSX.Element {
   const [reached, setReached] = useState<boolean>(false)

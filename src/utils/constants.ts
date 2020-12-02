@@ -4,7 +4,7 @@ import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/ru'
 
 import {Route, Color, ProjectType, Map} from './types'
-import {DURATIONS} from '../styles/theme'
+import {DURATION} from '../styles/theme'
 
 interface Detect {
   mobile: boolean
@@ -180,10 +180,10 @@ export const BLANK_LINK_PROPS: BlankLinkProps = {
 export const SWIPER_OPTIONS: SwiperOptions = {
   grabCursor: true,
   loop: true,
-  speed: DURATIONS.longer,
+  speed: DURATION.longer,
   loopedSlides: 3,
   autoplay: {
-    delay: DURATIONS.lingering,
+    delay: DURATION.lingering,
     disableOnInteraction: false,
   },
 }

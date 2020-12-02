@@ -11,7 +11,7 @@ import Panel from '../common/Panel'
 import {getListDelay} from '../../utils/helpers'
 import {DETECT, ROUTE, PROJECT_TYPE, TILT_SCALE} from '../../utils/constants'
 import {Color, Effect, Company, TiltOptions, Width} from '../../utils/types'
-import {DURATIONS} from '../../styles/theme'
+import {DURATION} from '../../styles/theme'
 import {PROJECT_TYPE_LABELS} from '../../data/common'
 
 interface ProjectLinkProps {
@@ -28,7 +28,7 @@ interface ProjectLinkProps {
 const tiltOptions: TiltOptions = {
   max: DETECT.safari ? 0 : 20,
   scale: TILT_SCALE,
-  speed: DURATIONS.longest,
+  speed: DURATION.longest,
 }
 
 export const projectTypeLabels = {

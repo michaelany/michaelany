@@ -9,13 +9,13 @@ import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
 import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
-import {DURATIONS, EASINGS} from '../../styles/theme'
+import {DURATION, EASING} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
   reset: DETECT.safari,
   max: DETECT.safari ? 0 : 50,
   scale: DETECT.safari ? TILT_SCALE : 1,
-  speed: DURATIONS.lingering,
+  speed: DURATION.lingering,
 }
 
 export default function Banner(): JSX.Element {
@@ -25,8 +25,8 @@ export default function Banner(): JSX.Element {
       <div className="Banner-Content">
         <Animate
           effect={EFFECTS.zoomIn}
-          duration={DURATIONS.longest}
-          easing={EASINGS.out}
+          duration={DURATION.longest}
+          easing={EASING.out}
         >
           <Tilt el="figure" className="Banner-Figure" options={tiltOptions}>
             <img

@@ -9,7 +9,7 @@ import Tooltip from './Tooltip'
 import {getListDelay} from '../../utils/helpers'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {SocialLink} from '../../utils/types'
-import {BREAKPOINTS} from '../../styles/theme'
+import {BREAKPOINT} from '../../styles/theme'
 
 interface SocialLinksProps {
   links: SocialLink[]
@@ -20,7 +20,7 @@ export default function SocialLinks({
   links,
   about,
 }: SocialLinksProps): JSX.Element {
-  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINTS.xs}px)`)
+  const xs: boolean = useMediaQuery(`(max-width: ${BREAKPOINT.xs}px)`)
 
   return (
     <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>
