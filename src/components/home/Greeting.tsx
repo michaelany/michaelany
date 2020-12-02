@@ -15,9 +15,7 @@ export default function Greeting(): JSX.Element {
     <section className="Greeting Section">
       <div className="Greeting-Ceil">
         <Typist {...TYPIST_PROPS} className="Greeting-First">
-          <p className="Greeting-Text Greeting-Text_thick Title">
-            <b>Привет!</b>
-          </p>
+          <p className="Greeting-Text Greeting-Text_thick Title">Привет!</p>
         </Typist>
         <div className="Greeting-Second">
           <HelloIcon className="Greeting-Icon" />

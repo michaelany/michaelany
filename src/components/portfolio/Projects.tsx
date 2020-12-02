@@ -26,7 +26,7 @@ const filters: Filter[] = [
   PROJECT_TYPES.admin,
 ]
 
-const filterLabels: Map<string> = {
+const filterLabel: Map<string> = {
   [filterAll]: 'Все',
   [PROJECT_TYPES.landing]: PROJECT_TYPE_LABELS.landing,
   [PROJECT_TYPES.site]: PROJECT_TYPE_LABELS.site,
@@ -64,7 +64,7 @@ function Projects(): JSX.Element {
         onChange={handleChange}
       >
         {filters.map((type: string) => (
-          <Tab key={type} value={type} label={filterLabels[type]} />
+          <Tab key={type} value={type} label={filterLabel[type]} />
         ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>

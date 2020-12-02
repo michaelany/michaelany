@@ -18,7 +18,7 @@ import './ContactForm.scss'
 import Animate, {EFFECTS} from '../common/Animate'
 import {Map} from '../../utils/types'
 
-interface Fields {
+interface Field {
   name: string
   email: string
   message: string
@@ -26,26 +26,21 @@ interface Fields {
 
 const emailRegExp: RegExp = /.+@.+\..+/i
 
-const fields: Fields = {
+const field: Field = {
   name: 'name',
   email: 'email',
   message: 'message',
 }
 
-const initialValues: Map<string> = {
-  [fields.name]: '',
-  [fields.email]: '',
-  [fields.message]: '',
-}
+const getInitialData = (value: any): Map<any> =>
+  Object.fromEntries(Object.entries(field).map(([key]) => [key, value]))
 
-const initialErrors: Map<boolean> = {
-  [fields.name]: false,
-  [fields.email]: false,
-  [fields.message]: false,
-}
+const initialValues: Map<string> = getInitialData('')
+
+const initialErrors: Map<boolean> = getInitialData(false)
 
 const inputProps: Map<InputProps> = {
-  [fields.name]: {
+  [field.name]: {
     disableUnderline: true,
     endAdornment: (
       <InputAdornment position="end">
@@ -53,7 +48,7 @@ const inputProps: Map<InputProps> = {
       </InputAdornment>
     ),
   },
-  [fields.email]: {
+  [field.email]: {
     disableUnderline: true,
     endAdornment: (
       <InputAdornment position="end">
@@ -61,7 +56,7 @@ const inputProps: Map<InputProps> = {
       </InputAdornment>
     ),
   },
-  [fields.message]: {
+  [field.message]: {
     disableUnderline: true,
   },
 }
@@ -70,9 +65,9 @@ export default function ContactForm(): JSX.Element {
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
   const fieldElements: Map<MutableRefObject<HTMLInputElement>> = {
-    [fields.name]: useRef<HTMLInputElement>(null!),
-    [fields.email]: useRef<HTMLInputElement>(null!),
-    [fields.message]: useRef<HTMLInputElement>(null!),
+    [field.name]: useRef<HTMLInputElement>(null!),
+    [field.email]: useRef<HTMLInputElement>(null!),
+    [field.message]: useRef<HTMLInputElement>(null!),
   }
 
   const handleSubmit = (e: SyntheticEvent): void => {
@@ -80,9 +75,9 @@ export default function ContactForm(): JSX.Element {
     const newErrors: typeof initialErrors = {}
     Object.keys(values).forEach((name: string): void => {
       if (
-        (name === fields.email &&
+        (name === field.email &&
           (!values[name].trim() || !emailRegExp.test(values[name]))) ||
-        (name !== fields.email && !values[name].trim())
+        (name !== field.email && !values[name].trim())
       ) {
         newErrors[name] = true
       }
@@ -109,8 +104,8 @@ export default function ContactForm(): JSX.Element {
       [name]: value,
     })
     if (
-      (name === fields.email && value.trim() && emailRegExp.test(value)) ||
-      (name !== fields.email && value.trim() && errors[name])
+      (name === field.email && value.trim() && emailRegExp.test(value)) ||
+      (name !== field.email && value.trim() && errors[name])
     ) {
       setErrors({
         ...errors,
@@ -131,11 +126,11 @@ export default function ContactForm(): JSX.Element {
         <Grid item xs={12} md={6} lg={12} xl={6}>
           <TextField
             fullWidth
-            name={fields.name}
+            name={field.name}
             label="Имя"
             variant="filled"
-            InputProps={inputProps[fields.name]}
-            inputProps={{ref: fieldElements[fields.name]}}
+            InputProps={inputProps[field.name]}
+            inputProps={{ref: fieldElements[field.name]}}
             value={values.name}
             error={errors.name}
             onChange={handleChange}
@@ -144,12 +139,12 @@ export default function ContactForm(): JSX.Element {
         <Grid item xs={12} md={6} lg={12} xl={6}>
           <TextField
             fullWidth
-            name={fields.email}
+            name={field.email}
             type="email"
             label="Email"
             variant="filled"
-            InputProps={inputProps[fields.email]}
-            inputProps={{ref: fieldElements[fields.email]}}
+            InputProps={inputProps[field.email]}
+            inputProps={{ref: fieldElements[field.email]}}
             value={values.email}
             error={errors.email}
             onChange={handleChange}
@@ -159,12 +154,12 @@ export default function ContactForm(): JSX.Element {
           <TextField
             fullWidth
             multiline
-            name={fields.message}
+            name={field.message}
             label="Сообщение"
             rows="5"
             variant="filled"
-            InputProps={inputProps[fields.message]}
-            inputProps={{ref: fieldElements[fields.message]}}
+            InputProps={inputProps[field.message]}
+            inputProps={{ref: fieldElements[field.message]}}
             value={values.message}
             error={errors.message}
             onChange={handleChange}

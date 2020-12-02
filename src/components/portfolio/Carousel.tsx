@@ -64,7 +64,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
       effect={md ? EFFECTS.bottomSm : EFFECTS.rightSm}
       duration={md ? undefined : DURATIONS.longer}
     >
-      <Panel classes="Carousel-Content">
+      <Panel className="Carousel-Content">
         <div className="Carousel-Block">{renderSwiper(props)}</div>
       </Panel>
     </Animate>

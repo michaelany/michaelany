@@ -17,7 +17,7 @@
     @include pseudo(relative);
     padding-bottom: $percent;
   }
-  & > *:first-child {
+  & > :first-child {
     position: absolute;
     top: 0;
     left: 0;

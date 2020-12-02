@@ -18,9 +18,6 @@ import Technologies from './Technologies'
 import {TECHNOLOGY_TITLES, TITLES} from '../../data/common'
 import {Feature} from '../../utils/types'
 
-const text: string =
-  'Разрабатываю веб-приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux.'
-
 const features: Feature[] = [
   {
     label: 'Создаю надежный и правильно работающий интерфейс',
@@ -72,7 +69,7 @@ export default function Skills(): JSX.Element {
         <Info
           type="skills"
           title={TITLES.skills}
-          text={text}
+          text="Разрабатываю веб-приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux."
           features={features}
         />
       }

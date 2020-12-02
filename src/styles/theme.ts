@@ -152,5 +152,6 @@ export default {
       elevation: 0,
       TransitionProps: {unmountOnExit: true},
     },
+    MuiDrawer: {keepMounted: true, disablePortal: true, elevation: 0},
   },
 }

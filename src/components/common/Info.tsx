@@ -43,9 +43,7 @@ export default function Info({
   return (
     <section className="Info Section">
       <TypistTitle title={title} />
-      <p className="MainText">
-        <b>{text}</b>
-      </p>
+      <p className="MainText">{text}</p>
       <Features extra={open} items={features} />
       <Animate className="Actions Actions_center" effect={EFFECTS.bottom}>
         <Button

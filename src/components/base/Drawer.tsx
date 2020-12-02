@@ -13,14 +13,7 @@ interface DrawerProps {
 
 export default function Drawer({open, onClose}: DrawerProps): JSX.Element {
   return (
-    <MuiDrawer
-      keepMounted
-      disablePortal
-      className="Drawer"
-      open={open}
-      elevation={0}
-      onClose={onClose}
-    >
+    <MuiDrawer className="Drawer" open={open} onClose={onClose}>
       <div className="Drawer-Content">
         <div className="Drawer-Block">
           <IconButton

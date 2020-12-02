@@ -134,10 +134,8 @@ export default function Work(): JSX.Element {
     <section className="Section">
       <TypistTitle title={TITLES.experience} />
       <p className="MainText">
-        <b>
-          Живу в Москве. Работаю преимущественно удаленно. Профессионально
-          занимаюсь фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.
-        </b>
+        Живу в Москве. Работаю преимущественно удаленно. Профессионально
+        занимаюсь фронтенд-разработкой более {YEARS_OF_EXPERIENCE} лет.
       </p>
       <Animate el="ul" className="Work" effect={EFFECTS.bottomSm}>
         {jobs.map((job: JobInterface, index: number) => (

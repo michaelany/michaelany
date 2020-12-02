@@ -32,9 +32,7 @@ export default function ProjectDetails({
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        <b>
-          {description} Разработано в компании "{company.title}".
-        </b>
+        {description} Разработано в компании "{company.title}".
       </p>
       <Features items={features} />
       {href && (

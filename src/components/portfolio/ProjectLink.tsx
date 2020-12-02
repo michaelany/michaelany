@@ -87,7 +87,9 @@ export default function ProjectLink({
             className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
             to={`${PATHS.portfolio}${path}`}
           >
-            <Panel classes={`ProjectLink-View ProjectLink-View_name_${name}`} />
+            <Panel
+              className={`ProjectLink-View ProjectLink-View_name_${name}`}
+            />
             <div className="ProjectLink-Content">
               <img
                 className="ProjectLink-Company"

@@ -27,9 +27,6 @@ import {
 } from '../../utils/constants'
 import {Feature} from '../../utils/types'
 
-const text: string =
-  'Занимаюсь фронтенд-разработкой. Создаю проекты любой сложности с нуля. Воплощаю в жизнь UI/UX идеи.'
-
 const features: Feature[] = [
   {
     label: 'Реализовал большое количество проектов',
@@ -150,7 +147,7 @@ export default function About(): JSX.Element {
         <Info
           type="about"
           title={TITLES.about}
-          text={text}
+          text="Занимаюсь фронтенд-разработкой. Создаю проекты любой сложности с нуля. Воплощаю в жизнь UI/UX идеи."
           features={features}
         />
       }

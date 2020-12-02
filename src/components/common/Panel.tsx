@@ -5,12 +5,12 @@ import desktopSvg from '../../assets/img/shapes/desktop.svg'
 
 interface PanelProps {
   children?: JSX.Element
-  classes?: string
+  className?: string
 }
 
-export default function Panel({children, classes}: PanelProps): JSX.Element {
+export default function Panel({children, className}: PanelProps): JSX.Element {
   return (
-    <div className={`${classes} Panel`}>
+    <div className={`${className} Panel`}>
       <img
         className="Panel-Svg"
         src={desktopSvg}
