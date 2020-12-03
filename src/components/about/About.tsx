@@ -13,6 +13,7 @@ import SquareFootIcon from '@material-ui/icons/SquareFootRounded'
 import GroupWorkIcon from '@material-ui/icons/GroupWorkRounded'
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenterRounded'
 import ExploreIcon from '@material-ui/icons/ExploreRounded'
+import MenuBookIcon from '@material-ui/icons/MenuBook'
 
 import Sections from '../common/Sections'
 import Info from '../common/Info'
@@ -113,6 +114,12 @@ const features: Feature[] = [
     Icon: ExploreIcon,
     description:
       'Посетил более 15 стран. В восторге от Японии и Новой Зеландии. Был в Хоббитоне, покорил вершину Фудзиямы и остался жив после встречи с уральским медведем на Перевале Дятлова ☺.',
+  },
+  {
+    label: 'Люблю читать',
+    Icon: MenuBookIcon,
+    description:
+      'Помимо технической литературы увлекаюсь чтением книг по психологии, финансам и продуктивности. Мое любимое художественное произведение - "Маленький принц".',
   },
   {
     label: 'Счастливый муж',
