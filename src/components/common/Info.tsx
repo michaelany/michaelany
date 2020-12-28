@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, memo} from 'react'
 import cn from 'clsx'
-import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import Button from '@material-ui/core/Button'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
@@ -8,6 +7,7 @@ import './Info.scss'
 import TypistTitle from '../common/TypistTitle'
 import Features from './Features'
 import Animate, {EFFECT} from './Animate'
+import {scrollToView} from '../../utils/helpers'
 import {ROOT} from '../../utils/constants'
 import {Feature} from '../../utils/types'
 
@@ -18,12 +18,7 @@ interface InfoProps {
   features: Feature[]
 }
 
-export default function Info({
-  type,
-  title,
-  text,
-  features,
-}: InfoProps): JSX.Element {
+function Info({type, title, text, features}: InfoProps): JSX.Element {
   const storageProp: string = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(
     localStorage[storageProp] ? JSON.parse(localStorage[storageProp]) : false
@@ -34,10 +29,7 @@ export default function Info({
     localStorage.setItem(storageProp, JSON.stringify(value))
     toggleOpen(value)
     if (open) return
-    scrollIntoView(ROOT, {
-      behavior: 'smooth',
-      block: 'start',
-    })
+    scrollToView(ROOT)
   }
 
   return (
@@ -65,3 +57,5 @@ export default function Info({
     </section>
   )
 }
+
+export default memo(Info)

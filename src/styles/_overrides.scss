@@ -182,11 +182,6 @@
   }
 }
 
-.MuiAccordion {
-  &-root {
-  }
-}
-
 .MuiAccordionDetails {
   &-root {
     padding-top: 0;
@@ -196,5 +191,12 @@
 .MuiDrawer {
   &-paper {
     overflow: visible;
+  }
+}
+
+.MuiLink {
+  &-button {
+    display: inline;
+    vertical-align: inherit;
   }
 }

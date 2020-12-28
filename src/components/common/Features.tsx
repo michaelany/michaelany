@@ -21,7 +21,7 @@ function Features({items, extra}: FeaturesProps): JSX.Element {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
-    <Grid container className="Features" component="ul" spacing={4}>
+    <Grid container className="Features" component="ul" spacing={6}>
       {items.map(({Icon, ...item}: Feature, index: number) => (
         <Grid
           key={index}

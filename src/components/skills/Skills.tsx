@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState, useRef, useMemo} from 'react'
+import Link from '@material-ui/core/Link'
+import {ButtonBaseActions} from '@material-ui/core/ButtonBase'
 import ThumbUpIcon from '@material-ui/icons/ThumbUpRounded'
 import SpeedIcon from '@material-ui/icons/SpeedRounded'
 import BuildIcon from '@material-ui/icons/BuildRounded'
@@ -15,56 +17,107 @@ import ExtensionIcon from '@material-ui/icons/ExtensionRounded'
 import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Technologies from './Technologies'
-import {TECHNOLOGY_TITLE, TITLE} from '../../data/common'
-import {Feature} from '../../utils/types'
+import {scrollToView} from '../../utils/helpers'
+import {TECHNOLOGY_TITLE, TITLE, TECHNOLOGY_GROUPS} from '../../data/common'
+import {Feature, TechnologyGroup} from '../../utils/types'
 
-const features: Feature[] = [
-  {
-    label: 'Создаю надежный и правильно работающий интерфейс',
-    Icon: VerifiedUserIcon,
-    description:
-      'Реализую систему всех возможных элементов интерфейса с удобным взаимодействием и продуманной бизнес-логикой. Забочусь о кроссбраузерности, безопасности и обрабатываю возможные ошибки.',
-  },
-  {
-    label: 'Пишу современный и производительный код',
-    Icon: SpeedIcon,
-    description: `Использую стандарты ES6-ES11 + ${TECHNOLOGY_TITLE.babel}, ${TECHNOLOGY_TITLE.ts} 4, ${TECHNOLOGY_TITLE.react} Hooks... Оптимизирую тяжелые вычисления. Избегаю лишних операций и утечек памяти. Применяю техники повышения производительности.`,
-  },
-  {
-    label: 'Выбираю простой и эффективный способ решения задачи',
-    Icon: ThumbUpIcon,
-    description:
-      'Для любой задачи стараюсь найти оптимальное и понятное решение. Знаю в каких случаях стоит использовать тот или иной метод, паттерн, библиотеку или инструмент.',
-  },
-  {
-    label: 'Имею в арсенале большое количество паттернов и приемов',
-    Icon: ExtensionIcon,
-    description:
-      'Модуль, фабрика, синглтон, наблюдатель, примесь, декоратор, каррирование, мемоизация, делегирование, виртуализация, ленивая загрузка, деструктуризация, async / await...',
-  },
-  {
-    label: 'Создаю модульную и удобную архитектуру для каждого проекта',
-    Icon: AccountTreeIcon,
-  },
-  {
-    label: 'Использую актуальные фреймворки, библиотеки и инструменты',
-    Icon: BuildIcon,
-  },
-  {
-    label: 'Соблюдаю единый стиль написания кода',
-    Icon: BrushIcon,
-  },
-  {
-    label: 'Верстаю семантично, доступно, кроссбраузерно и pixel-perfect',
-    Icon: PaletteIcon,
-  },
-  {label: 'Реализую адаптивный интерфейс и анимации', Icon: DevicesOtherIcon},
-  {label: 'Рефакторю, оптимизирую и тестирую', Icon: LoopIcon},
-  {label: 'Анализирую, планирую и декомпозирую', Icon: ListAltIcon},
-  {label: 'Провожу код-ревью и занимаюсь обучением', Icon: ChildFriendlyIcon},
-]
+const initialExpanded = [TECHNOLOGY_GROUPS[0].title]
 
 export default function Skills(): JSX.Element {
+  const [expanded, setExpanded] = useState<string[]>(initialExpanded)
+  const sectionRef = useRef<HTMLElement>(null)
+  const firstTechnologyActionRef = useRef<ButtonBaseActions>(null)
+
+  const features: Feature[] = useMemo(
+    () => [
+      {
+        label: 'Создаю надежный и правильно работающий интерфейс',
+        Icon: VerifiedUserIcon,
+        description:
+          'Реализую систему всех возможных элементов интерфейса с удобным взаимодействием и продуманной бизнес-логикой. Забочусь о кроссбраузерности, безопасности и обрабатываю возможные ошибки.',
+      },
+      {
+        label: 'Пишу современный и производительный код',
+        Icon: SpeedIcon,
+        description: `Использую стандарты ES6-ES11, ${TECHNOLOGY_TITLE.ts} 4, ${TECHNOLOGY_TITLE.react} Hooks, CSS Grid... Оптимизирую тяжелые вычисления. Избегаю лишних операций и утечек памяти. Применяю техники повышения производительности.`,
+      },
+      {
+        label: 'Выбираю простой и эффективный способ решения задачи',
+        Icon: ThumbUpIcon,
+        description:
+          'Для любой задачи стараюсь найти оптимальное и понятное решение. Понимаю в каких случаях стоит использовать тот или иной метод, паттерн, библиотеку или инструмент.',
+      },
+      {
+        label: 'Имею в арсенале большое количество паттернов и приемов',
+        Icon: ExtensionIcon,
+        description:
+          'Мемоизация, виртуализация, ленивая загрузка, деструктуризация, декоратор, каррирование, делегирование, модуль, фабрика, наблюдатель, наследование, композиция, примесь, async/await...',
+      },
+      {
+        label: 'Создаю модульную и удобную архитектуру для каждого проекта',
+        Icon: AccountTreeIcon,
+        description:
+          'Избегаю чрезмерной вложенности, следую принципу разделения ответственности, DRY и KISS. Каждый модуль / класс / компонент отвечает за один набор функций. Конфигурирую систему сборки проекта.',
+      },
+      {
+        label: 'Использую актуальные фреймворки, библиотеки и инструменты',
+        Icon: BuildIcon,
+        description: (
+          <>
+            Регулярно слежу за обновлениями используемых технологий и в
+            постоянном поиске новых. Помимо{' '}
+            <Link
+              component="button"
+              className="Link"
+              onClick={(): void => {
+                setExpanded(
+                  TECHNOLOGY_GROUPS.map((group: TechnologyGroup) => group.title)
+                )
+                scrollToView(sectionRef.current as HTMLElement)
+                firstTechnologyActionRef.current?.focusVisible()
+              }}
+            >
+              основных
+            </Link>{' '}
+            использую большое количество вспомогательных {TECHNOLOGY_TITLE.npm}
+            -библиотек и инструментов.
+          </>
+        ),
+      },
+      {
+        label: 'Соблюдаю единый стиль написания понятного кода',
+        Icon: BrushIcon,
+        description:
+          'Стараюсь писать декларативно. Читаемый код важнее быстрого. . . В армии грязно, зато единообразно',
+      },
+      {
+        label: 'Верстаю семантично, доступно, кроссбраузерно и pixel-perfect',
+        Icon: PaletteIcon,
+        description: '',
+      },
+      {
+        label: 'Реализую адаптивный интерфейс и анимации',
+        Icon: DevicesOtherIcon,
+        description: '',
+      },
+      {
+        label: 'Рефакторю, оптимизирую и тестирую',
+        Icon: LoopIcon,
+        description: '',
+      },
+      {
+        label: 'Анализирую, планирую и декомпозирую',
+        Icon: ListAltIcon,
+        description: '',
+      },
+      {
+        label: 'Провожу код-ревью и занимаюсь обучением',
+        Icon: ChildFriendlyIcon,
+        description: '',
+      },
+    ],
+    []
+  )
   return (
     <Sections
       firstSection={
@@ -75,7 +128,14 @@ export default function Skills(): JSX.Element {
           features={features}
         />
       }
-      secondSection={<Technologies />}
+      secondSection={
+        <Technologies
+          expanded={expanded}
+          sectionRef={sectionRef}
+          firstTechnologyActionRef={firstTechnologyActionRef}
+          setExpanded={setExpanded}
+        />
+      }
     />
   )
 }

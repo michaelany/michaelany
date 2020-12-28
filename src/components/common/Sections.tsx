@@ -6,7 +6,7 @@ import './Sections.scss'
 
 interface SectionsProps {
   contact?: boolean
-  firstSection: JSX.Element
+  firstSection: any
   secondSection: JSX.Element
 }
 

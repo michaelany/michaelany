@@ -62,6 +62,11 @@ export interface Technology {
   href: string
 }
 
+export interface TechnologyGroup {
+  title: string
+  technologies: Technology[]
+}
+
 export interface Company {
   title: string
   color: Color
