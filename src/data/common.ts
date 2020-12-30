@@ -215,6 +215,7 @@ export const TECHNOLOGY_TITLE = {
   photoshop: 'Photoshop',
   optim: 'ImageOptim',
   flow: 'Flow',
+  trello: 'Trello',
   parallels: 'Parallels Desktop',
   mac: 'macOS Catalina',
   node: 'Node.js',
