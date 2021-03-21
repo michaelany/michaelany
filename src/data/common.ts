@@ -206,9 +206,9 @@ export const TECHNOLOGY_TITLE = {
   prettier: 'Prettier',
   eslint: 'ESLint',
   jest: 'Jest',
+  item: 'iTerm2',
   vscode: 'Visual Studio Code',
   phpstorm: 'PhpStorm',
-  item: 'iTerm2',
   devtools: 'Chrome DevTools',
   zeplin: 'Zeplin',
   sketch: 'Sketch',
@@ -218,6 +218,7 @@ export const TECHNOLOGY_TITLE = {
   trello: 'Trello',
   flow: 'Flow',
   mac: 'macOS Big Sur',
+  reactnative: 'React Native',
   node: 'Node.js',
   mongo: 'MongoDB',
   mysql: 'MySQL',
@@ -512,6 +513,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     title: 'Инструменты',
     technologies: [
       {
+        name: 'iterm',
+        label: TECHNOLOGY_TITLE.item,
+        color: COLOR.grass,
+        href: 'https://iterm2.com',
+      },
+      {
         name: 'vscode',
         label: TECHNOLOGY_TITLE.vscode,
         color: COLOR.blue,
@@ -522,12 +529,6 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.phpstorm,
         color: COLOR.violet,
         href: 'https://www.jetbrains.com/phpstorm',
-      },
-      {
-        name: 'iterm',
-        label: TECHNOLOGY_TITLE.item,
-        color: COLOR.grass,
-        href: 'https://iterm2.com',
       },
       {
         name: 'devtools',
@@ -587,8 +588,14 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     ],
   },
   {
-    title: 'Бэкенд',
+    title: 'Другое',
     technologies: [
+      {
+        name: 'react',
+        label: TECHNOLOGY_TITLE.reactnative,
+        color: COLOR.blue,
+        href: 'https://reactnative.dev',
+      },
       {
         disabled: true,
         name: 'node',
