@@ -22,6 +22,11 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  &_colorful {
+    &::before {
+      @include pseudoGradient;
+    }
+  }
   .App_color_alternate &_colorful {
     @include animationAlternate(alternateBackgroundColor);
   }

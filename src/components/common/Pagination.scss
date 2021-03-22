@@ -23,10 +23,10 @@
 
 .Pagination-Link {
   color: white;
-  background-color: rgba(black, 0.05);
+  background-color: rgba(white, 0.1);
   @include hover {
     &:hover {
-      background-color: rgba(black, 0.1);
+      background-color: rgba(white, 0.2);
     }
   }
 }
