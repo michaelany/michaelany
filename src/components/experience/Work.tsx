@@ -58,7 +58,7 @@ const jobs: JobInterface[] = [
   {
     current: true,
     company: COMPANY.sevenGlyphs,
-    occupations: [occupation.senior],
+    occupations: [occupation.senior, occupation.middle],
     duties: [
       'Разработка бизнес-логики приложений и сайтов',
       'Создание архитектуры проектов',

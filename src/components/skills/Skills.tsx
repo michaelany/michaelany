@@ -18,8 +18,8 @@ import Sections from '../common/Sections'
 import Info from '../common/Info'
 import Technologies from './Technologies'
 import {scrollToView} from '../../utils/helpers'
-import {TECHNOLOGY_TITLE, TITLE, TECHNOLOGY_GROUPS} from '../../data/common'
 import {Feature, TechnologyGroup} from '../../utils/types'
+import {TECHNOLOGY_TITLE, TITLE, TECHNOLOGY_GROUPS} from '../../data/common'
 
 const initialExpanded = [TECHNOLOGY_GROUPS[0].title]
 
@@ -120,6 +120,7 @@ export default function Skills(): JSX.Element {
     ],
     []
   )
+
   return (
     <Sections
       firstSection={

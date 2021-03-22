@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import Stepper from '@material-ui/core/Stepper'
+import React, {useState, RefObject} from 'react'
+import MuiStepper from '@material-ui/core/Stepper'
 import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import StepContent from '@material-ui/core/StepContent'
@@ -9,8 +9,13 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBackRounded'
 import RefreshIcon from '@material-ui/icons/RefreshRounded'
 
 import './Stepper.scss'
-import {COMPANY_TITLE, TECHNOLOGY_TITLE} from '../../data/common'
+import {scrollToView} from '../../utils/helpers'
 import {CAREER_START_STRING} from '../../utils/constants'
+import {COMPANY_TITLE} from '../../data/common'
+
+interface StepperProps {
+  sectionRef: RefObject<HTMLElement>
+}
 
 interface Step {
   label: string
@@ -29,7 +34,7 @@ const steps: Step[] = [
   },
   {
     label: 'Май 2010 - июнь 2014',
-    text: 'Вел деятельность не связанную с информационными технологиями',
+    text: 'Вел деятельность не связанную с ИТ',
   },
   {
     label: `Июнь 2014 - ${CAREER_START_STRING}`,
@@ -40,12 +45,8 @@ const steps: Step[] = [
     label: CAREER_START_STRING,
     text: (
       <span>
-        Выполнил тестовое задание для интервью (написал таймер на{' '}
-        {TECHNOLOGY_TITLE.js} + ООП + {TECHNOLOGY_TITLE.css}). Прошел интервью.
-        Выполнил заключительное задание (сверстал адаптивную страницу по макету,
-        используя {TECHNOLOGY_TITLE.sass} + {TECHNOLOGY_TITLE.handlebars}). Был
-        приглашен на работу <strong>верстальщиком</strong> в компанию "
-        {COMPANY_TITLE.everpoint}"
+        Прошел интервью. Выполнил тестовые задания и был приглашен на работу{' '}
+        <strong>верстальщиком</strong> в компанию "{COMPANY_TITLE.everpoint}"
       </span>
     ),
   },
@@ -75,8 +76,7 @@ const steps: Step[] = [
       <span>
         Работал <strong>фронтенд-разработчиком</strong> в компании "
         {COMPANY_TITLE.everpoint}". В свободное время делал коммерческий проект
-        (переписывал сайт c {TECHNOLOGY_TITLE.jquery} на{' '}
-        {TECHNOLOGY_TITLE.react}) для компании "{COMPANY_TITLE.sevenGlyphs}"
+        для компании "{COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -84,11 +84,10 @@ const steps: Step[] = [
     label: 'Апрель 2017',
     text: (
       <span>
-        В результате успешной реализации проекта был приглашен в компанию "
+        В результате успешного завершения проекта был приглашен в компанию "
         {COMPANY_TITLE.sevenGlyphs}" на должность{' '}
-        <strong>ведущего фронтенд-разработчика</strong> на более выгодных
-        условиях. Принял решение перейти из "{COMPANY_TITLE.everpoint}" в "
-        {COMPANY_TITLE.sevenGlyphs}"
+        <strong>фронтенд-разработчика</strong>. Принял решение перейти из "
+        {COMPANY_TITLE.everpoint}" в "{COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -96,8 +95,8 @@ const steps: Step[] = [
     label: 'Апрель 2017 - апрель 2018',
     text: (
       <span>
-        Работал удаленно <strong>ведущим фронтенд-разработчиком</strong> в
-        компании "{COMPANY_TITLE.sevenGlyphs}"
+        Работал удаленно <strong>фронтенд-разработчиком</strong> в компании "
+        {COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -105,21 +104,39 @@ const steps: Step[] = [
     label: 'Апрель 2018',
     text: (
       <span>
-        Захотелось сменить удаленный режим работы. Договорился с "
-        {COMPANY_TITLE.sevenGlyphs}" о продолжении сотрудничества по проектам в
-        режиме неполного рабочего дня. Прошел собеседование и устроился в
-        компанию "{COMPANY_TITLE.tsftd}" на должность{' '}
-        <strong>ведущего фронтенд-разработчика</strong>
+        Договорился с "{COMPANY_TITLE.sevenGlyphs}" о продолжении сотрудничества
+        по проектам в режиме частичной занятости. Прошел собеседование и
+        устроился в компанию "{COMPANY_TITLE.tsftd}" на должность{' '}
+        <strong>фронтенд-разработчика</strong>
       </span>
     ),
   },
   {
-    label: 'Апрель 2018 - январь 2019',
+    label: 'Апрель 2018 - август 2018',
+    text: (
+      <span>
+        Работал <strong>фронтенд-разработчиком</strong> в компании "
+        {COMPANY_TITLE.tsftd}".
+      </span>
+    ),
+  },
+  {
+    label: 'Август 2018',
+    text: (
+      <span>
+        В результате успешной работы получил повышение до{' '}
+        <strong>ведущего фронтенд-разработчика</strong> в компании "
+        {COMPANY_TITLE.tsftd}
+        ".
+      </span>
+    ),
+  },
+  {
+    label: 'Август 2018 - январь 2019',
     text: (
       <span>
         Работал <strong>ведущим фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLE.tsftd}". В свободное время продолжаю сотрудничество по
-        проектам с "{COMPANY_TITLE.sevenGlyphs}"
+        {COMPANY_TITLE.tsftd}".
       </span>
     ),
   },
@@ -127,11 +144,8 @@ const steps: Step[] = [
     label: 'Январь 2019',
     text: (
       <span>
-        В результате успешной работы получил повышение до{' '}
-        <strong>тимлида фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLE.tsftd}
-        ". Проводил собеседования, разработал стажерскую программу, сформировал
-        команду из трех человек
+        Получил повышение до <strong>тимлида фронтенд-разработки</strong> в
+        компании "{COMPANY_TITLE.tsftd}".
       </span>
     ),
   },
@@ -140,13 +154,14 @@ const steps: Step[] = [
     text: (
       <span>
         Работаю <strong>тимлидом фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLE.tsftd}"
+        {COMPANY_TITLE.tsftd}". Продолжаю сотрудничество по проектам с "
+        {COMPANY_TITLE.sevenGlyphs}".
       </span>
     ),
   },
 ]
 
-export default function VerticalLinearStepper(): JSX.Element {
+export default function Stepper({sectionRef}: StepperProps): JSX.Element {
   const [step, changeStep] = useState<number>(0)
 
   const handleNext = (): void => {
@@ -159,10 +174,11 @@ export default function VerticalLinearStepper(): JSX.Element {
 
   const handleReset = (): void => {
     changeStep(0)
+    scrollToView(sectionRef.current as HTMLElement)
   }
 
   return (
-    <Stepper className="Stepper" activeStep={step} orientation="vertical">
+    <MuiStepper className="Stepper" activeStep={step} orientation="vertical">
       {steps.map((item: Step, index: number) => (
         <Step key={index}>
           <StepLabel>
@@ -194,10 +210,7 @@ export default function VerticalLinearStepper(): JSX.Element {
       ))}
       {step === steps.length && (
         <>
-          <p className="Stepper-Text">
-            Продолжение следует... Таков мой <strong>опыт работы</strong> в
-            ключевых этапах на данный момент.
-          </p>
+          <p className="Stepper-Text">Продолжение следует...</p>
           <Fab
             className="Stepper-Button"
             size="medium"
@@ -208,6 +221,6 @@ export default function VerticalLinearStepper(): JSX.Element {
           </Fab>
         </>
       )}
-    </Stepper>
+    </MuiStepper>
   )
 }
