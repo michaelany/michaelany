@@ -279,3 +279,14 @@
     opacity: 0;
   }
 }
+
+@keyframes rippleSmall {
+  from {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

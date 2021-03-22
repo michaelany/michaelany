@@ -23,18 +23,18 @@ const steps: Step[] = [
     text: (
       <span>
         Работал <strong>инженером технической поддержки</strong> в компании "
-        {COMPANY_TITLE.mvideo}".
+        {COMPANY_TITLE.mvideo}"
       </span>
     ),
   },
   {
     label: 'Май 2010 - июнь 2014',
-    text: 'Вел деятельность не связанную с информационными технологиями.',
+    text: 'Вел деятельность не связанную с информационными технологиями',
   },
   {
     label: `Июнь 2014 - ${CAREER_START_STRING}`,
     text:
-      'Параллельно с учебой в институте создавал пет-проекты в процессе обучения веб-разработке.',
+      'Параллельно с учебой в институте создавал пет-проекты в процессе обучения веб-разработке',
   },
   {
     label: CAREER_START_STRING,
@@ -45,7 +45,7 @@ const steps: Step[] = [
         Выполнил заключительное задание (сверстал адаптивную страницу по макету,
         используя {TECHNOLOGY_TITLE.sass} + {TECHNOLOGY_TITLE.handlebars}). Был
         приглашен на работу <strong>верстальщиком</strong> в компанию "
-        {COMPANY_TITLE.everpoint}".
+        {COMPANY_TITLE.everpoint}"
       </span>
     ),
   },
@@ -54,8 +54,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работал <strong>верстальщиком</strong> в компании "
-        {COMPANY_TITLE.everpoint}
-        ".
+        {COMPANY_TITLE.everpoint}"
       </span>
     ),
   },
@@ -77,7 +76,7 @@ const steps: Step[] = [
         Работал <strong>фронтенд-разработчиком</strong> в компании "
         {COMPANY_TITLE.everpoint}". В свободное время делал коммерческий проект
         (переписывал сайт c {TECHNOLOGY_TITLE.jquery} на{' '}
-        {TECHNOLOGY_TITLE.react}) для компании "{COMPANY_TITLE.sevenGlyphs}".
+        {TECHNOLOGY_TITLE.react}) для компании "{COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -89,7 +88,7 @@ const steps: Step[] = [
         {COMPANY_TITLE.sevenGlyphs}" на должность{' '}
         <strong>ведущего фронтенд-разработчика</strong> на более выгодных
         условиях. Принял решение перейти из "{COMPANY_TITLE.everpoint}" в "
-        {COMPANY_TITLE.sevenGlyphs}".
+        {COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -98,7 +97,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работал удаленно <strong>ведущим фронтенд-разработчиком</strong> в
-        компании "{COMPANY_TITLE.sevenGlyphs}".
+        компании "{COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -110,7 +109,7 @@ const steps: Step[] = [
         {COMPANY_TITLE.sevenGlyphs}" о продолжении сотрудничества по проектам в
         режиме неполного рабочего дня. Прошел собеседование и устроился в
         компанию "{COMPANY_TITLE.tsftd}" на должность{' '}
-        <strong>ведущего фронтенд-разработчика</strong>.
+        <strong>ведущего фронтенд-разработчика</strong>
       </span>
     ),
   },
@@ -132,7 +131,7 @@ const steps: Step[] = [
         <strong>тимлида фронтенд-разработки</strong> в компании "
         {COMPANY_TITLE.tsftd}
         ". Проводил собеседования, разработал стажерскую программу, сформировал
-        команду из трех человек.
+        команду из трех человек
       </span>
     ),
   },
@@ -141,7 +140,7 @@ const steps: Step[] = [
     text: (
       <span>
         Работаю <strong>тимлидом фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLE.tsftd}".
+        {COMPANY_TITLE.tsftd}"
       </span>
     ),
   },

@@ -74,14 +74,12 @@ export interface Company {
   href: string
 }
 
-export interface Position {
-  occupation: string
-  duties: string[]
-}
-
 export interface Job {
+  current?: boolean
   company: Company
-  positions: Position[]
+  occupations: string[]
+  duties: string[]
+  achievements: string[]
   features: Feature[]
 }
 
