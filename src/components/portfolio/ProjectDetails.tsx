@@ -4,7 +4,6 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
 import Animate, {EFFECT} from '../common/Animate'
-import TypistTitle from '../common/TypistTitle'
 import Features from '../common/Features'
 import Company from '../common/Company'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
@@ -28,7 +27,7 @@ export default function ProjectDetails({
   return (
     <section className="ProjectDetails Section">
       <div className="ProjectDetails-Block">
-        <TypistTitle smallIndent title={title} />
+        <h1 className="Title Title_smallIndent">{title}</h1>
         <Company animated {...company} />
       </div>
       <p className="MainText">

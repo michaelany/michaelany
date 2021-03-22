@@ -20,17 +20,14 @@
 }
 
 .Stepper-Button {
-  color: white;
-  background-color: $color_violet;
+  color: $color_dark-violet;
+  background-color: rgba($color_violet, 0.2);
   &:not(:first-child) {
     margin-right: 8px;
   }
-  &:hover {
-    background-color: $color_violet;
-  }
   @include hover {
     &:hover {
-      background-color: $color_dark-violet;
+      background-color: rgba($color_violet, 0.4);
       .Stepper-ButtonIcon {
         transform: rotate(90deg);
         &_refresh {

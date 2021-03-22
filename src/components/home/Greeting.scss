@@ -55,31 +55,31 @@
 }
 
 .Greeting-Second {
-  @include animation(fadeInZoomIn, 400ms);
+  @include animation(fadeInZoomIn, 200ms);
 }
 
 .Greeting-Third {
-  @include animation(fadeInBottomSm, 1250ms);
+  @include animation(fadeInBottomSm, 1000ms);
   &_order_second {
-    animation-delay: 1750ms;
+    animation-delay: 1550ms;
   }
   &_order_third {
-    animation-delay: 1900ms;
+    animation-delay: 1750ms;
   }
 }
 
 .Greeting-Fourth {
-  @include animation(fadeInTopSm, 2250ms);
+  @include animation(fadeInTopSm, 2000ms);
 }
 
 .Greeting-Fifth {
-  @include animation(fadeInRightSm, 2750ms);
+  @include animation(fadeInRightSm, 2500ms);
 }
 
 .Greeting-Sixth {
-  @include animation(fadeInBottom, 3250ms);
+  @include animation(fadeInBottom, 3000ms);
 }
 
 .Greeting-Seventh {
-  @include animation(fadeInBottom, 3400ms);
+  @include animation(fadeInBottom, 3200ms);
 }

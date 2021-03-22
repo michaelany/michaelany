@@ -5,7 +5,6 @@ import MyLocationIcon from '@material-ui/icons/MyLocationRounded'
 import DateRangeIcon from '@material-ui/icons/DateRangeRounded'
 
 import './Work.scss'
-import TypistTitle from '../common/TypistTitle'
 import Animate, {EFFECT} from '../common/Animate'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
@@ -140,7 +139,7 @@ const jobs: JobInterface[] = [
 export default function Work(): JSX.Element {
   return (
     <section className="Section">
-      <TypistTitle title={TITLE.experience} />
+      <h1 className="Title">{TITLE.experience}</h1>
       <p className="MainText">
         Профессионально занимаюсь фронтенд-разработкой более{' '}
         {YEARS_OF_EXPERIENCE} лет. Работаю преимущественно удаленно.

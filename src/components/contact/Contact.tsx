@@ -4,7 +4,6 @@ import Sections from '../common/Sections'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
-import TypistTitle from '../common/TypistTitle'
 import ContactForm from './ContactForm'
 import Map from './Map'
 import {BLANK_LINK_PROPS, ROUTE} from '../../utils/constants'
@@ -28,7 +27,7 @@ export default function Contact(): JSX.Element {
       firstSection={
         <section className="Section Section_pagination">
           <div>
-            <TypistTitle title={TITLE.contact} />
+            <h1 className="Title">{TITLE.contact}</h1>
             <p className="MainText MainText_dark">
               Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
               на{' '}

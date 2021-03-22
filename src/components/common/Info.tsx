@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
-import TypistTitle from '../common/TypistTitle'
 import Features from './Features'
 import Animate, {EFFECT} from './Animate'
 import {scrollToView} from '../../utils/helpers'
@@ -34,7 +33,7 @@ function Info({type, title, text, features}: InfoProps): JSX.Element {
 
   return (
     <section className="Info Section">
-      <TypistTitle title={title} />
+      <h1 className="Title">{title}</h1>
       <p className="MainText">{text}</p>
       <Features extra={open} items={features} />
       <Animate className="Actions Actions_center" effect={EFFECT.bottom}>

@@ -12,6 +12,11 @@
 }
 
 .MuiFab {
+  &-root {
+    &.Mui-disabled {
+      background-color: rgba(black, 0.04);
+    }
+  }
   &-root:not(.MuiFab-sizeMedium) {
     width: $fab-size_base;
     height: $fab-size_base;

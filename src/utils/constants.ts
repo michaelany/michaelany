@@ -1,5 +1,4 @@
 import {SwiperOptions} from 'swiper'
-import {TypistProps} from 'react-typist'
 import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/ru'
 
@@ -199,13 +198,5 @@ export const SWIPER_OPTIONS: SwiperOptions = {
   autoplay: {
     delay: DURATION.lingering,
     disableOnInteraction: false,
-  },
-}
-
-export const TYPIST_PROPS: TypistProps = {
-  avgTypingDelay: 70,
-  stdTypingDelay: 25,
-  cursor: {
-    show: false,
   },
 }
