@@ -107,21 +107,23 @@
     margin-right: 16px;
   }
   &_color_blue {
-    &.MuiButton-contained {
-      background-color: $color_blue;
+    &.MuiButton-text {
+      color: $color_dark-blue;
+      background-color: rgba($color_blue, 0.2);
       @include hover {
         &:hover {
-          background-color: $color_dark-blue;
+          background-color: rgba($color_blue, 0.4);
         }
       }
     }
   }
   &_color_green {
-    &.MuiButton-contained {
-      background-color: $color_green;
+    &.MuiButton-text {
+      color: $color_dark-green;
+      background-color: rgba($color_green, 0.2);
       @include hover {
         &:hover {
-          background-color: $color_dark-green;
+          background-color: rgba($color_green, 0.4);
         }
       }
     }
@@ -141,17 +143,14 @@
   }
   @each $key, $value, $second-value in $colors-map {
     .App_color_#{$key} & {
-      &.MuiButton-contained {
-        background-color: $value;
+      &.MuiButton-text {
+        color: $second-value;
+        background-color: rgba($value, 0.2);
         @include hover {
           &:hover {
-            background-color: $second-value;
+            background-color: rgba($value, 0.4);
           }
         }
-      }
-      &.MuiButton-outlined {
-        color: $second-value;
-        border-color: $second-value;
       }
     }
   }

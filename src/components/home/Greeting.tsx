@@ -40,7 +40,6 @@ export default function Greeting(): JSX.Element {
           className="Greeting-Sixth Button Button_color_blue"
           component={Link}
           to={ROUTE.portfolio}
-          variant="contained"
           size="large"
           endIcon={<WebIcon />}
         >
@@ -50,7 +49,6 @@ export default function Greeting(): JSX.Element {
           className="Greeting-Seventh Button Button_color_green"
           component={Link}
           to={ROUTE.contact}
-          variant="contained"
           size="large"
           endIcon={<MailIcon />}
         >

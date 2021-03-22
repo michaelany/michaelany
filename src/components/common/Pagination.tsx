@@ -38,7 +38,6 @@ export default function Pagination({
               className="Pagination-Link"
               component={Link}
               to={prevTo}
-              variant="outlined"
               startIcon={<ChevronLeftIcon />}
             >
               {pathTitles[prevTo]}
@@ -52,7 +51,6 @@ export default function Pagination({
               className="Pagination-Link"
               component={Link}
               to={nextTo}
-              variant="outlined"
               endIcon={<ChevronRightIcon />}
             >
               {pathTitles[nextTo]}

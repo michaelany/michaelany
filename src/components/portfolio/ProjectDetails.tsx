@@ -41,7 +41,6 @@ export default function ProjectDetails({
             {...BLANK_LINK_PROPS}
             className="Button"
             component="a"
-            variant="contained"
             endIcon={<OpenInNewIcon />}
             href={href}
           >

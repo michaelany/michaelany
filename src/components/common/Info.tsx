@@ -40,7 +40,6 @@ function Info({type, title, text, features}: InfoProps): JSX.Element {
       <Animate className="Actions Actions_center" effect={EFFECT.bottom}>
         <Button
           className="Button"
-          variant={open ? 'outlined' : 'contained'}
           endIcon={
             <ExpandMoreIcon
               className={cn(
