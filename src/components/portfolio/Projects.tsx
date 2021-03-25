@@ -3,7 +3,7 @@ import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
 
 import './Projects.scss'
 import ProjectLink from './ProjectLink'
-import {PROJECT_TYPE, QUERY_BREAKPOINT} from '../../utils/constants'
+import {QUERY_BREAKPOINT} from '../../utils/constants'
 import {Map, Project, ProjectType, Width} from '../../utils/types'
 import {PROJECT_TYPE_LABEL} from '../../data/common'
 import PROJECTS from '../../data/projects'
@@ -12,32 +12,24 @@ type Filter = 'all' | ProjectType
 
 const storageProp: string = 'filter'
 
-const filterAll: Filter = 'all'
-
-const filters: Filter[] = [
-  filterAll,
-  PROJECT_TYPE.landing,
-  PROJECT_TYPE.site,
-  PROJECT_TYPE.app,
-  PROJECT_TYPE.admin,
-]
+const filters: Filter[] = ['all', 'landing', 'site', 'app', 'admin']
 
 const filterLabel: Map<string> = {
-  [filterAll]: 'Все',
-  [PROJECT_TYPE.landing]: PROJECT_TYPE_LABEL.landing,
-  [PROJECT_TYPE.site]: PROJECT_TYPE_LABEL.site,
-  [PROJECT_TYPE.app]: PROJECT_TYPE_LABEL.app,
-  [PROJECT_TYPE.admin]: PROJECT_TYPE_LABEL.admin,
+  all: 'Все',
+  landing: PROJECT_TYPE_LABEL.landing,
+  site: PROJECT_TYPE_LABEL.site,
+  app: PROJECT_TYPE_LABEL.app,
+  admin: PROJECT_TYPE_LABEL.admin,
 }
 
 const getFilteredProjects = (filter: string): Project[] =>
-  filter === filterAll
+  filter === 'all'
     ? PROJECTS
     : PROJECTS.filter((project: Project): boolean => project.type === filter)
 
 function Projects(): JSX.Element {
   const [filter, changeFilter] = useState<string>(
-    localStorage.getItem(storageProp) || filterAll
+    localStorage.getItem(storageProp) || 'all'
   )
   const width: Width = {
     lg: useMediaQuery(QUERY_BREAKPOINT.lg),

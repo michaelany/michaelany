@@ -2,7 +2,7 @@ import {SwiperOptions} from 'swiper'
 import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/ru'
 
-import {Route, Color, ProjectType, Map} from './types'
+import {Route, Color, Map} from './types'
 import {DURATION, BREAKPOINT} from '../styles/theme'
 
 interface Detect {
@@ -24,13 +24,6 @@ interface QueryBreakpoint {
   sm: string
   md: string
   lg: string
-}
-
-interface ProjectTypeInterface {
-  app: ProjectType
-  site: ProjectType
-  admin: ProjectType
-  landing: ProjectType
 }
 
 interface ProjectRoute {
@@ -102,13 +95,6 @@ export const QUERY_BREAKPOINT: QueryBreakpoint = {
   sm: `(max-width: ${BREAKPOINT.sm}px)`,
   md: `(max-width: ${BREAKPOINT.md}px)`,
   lg: `(max-width: ${BREAKPOINT.lg}px)`,
-}
-
-export const PROJECT_TYPE: ProjectTypeInterface = {
-  app: 'app',
-  site: 'site',
-  admin: 'admin',
-  landing: 'landing',
 }
 
 export const PROJECT_ROUTE: ProjectRoute = {

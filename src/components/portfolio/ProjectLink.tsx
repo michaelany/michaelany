@@ -6,7 +6,7 @@ import {Grid, ButtonBase} from '@material-ui/core'
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'
 import {getListDelay} from '../../utils/helpers'
-import {DETECT, ROUTE, PROJECT_TYPE, TILT_SCALE} from '../../utils/constants'
+import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
 import {Color, Effect, Company, TiltOptions, Width} from '../../utils/types'
 import {DURATION} from '../../styles/theme'
 import {PROJECT_TYPE_LABEL} from '../../data/common'
@@ -16,7 +16,7 @@ interface ProjectLinkProps {
   width: Width
   title: string
   name: string
-  type: string
+  type: keyof typeof PROJECT_TYPE_LABEL
   color: Color
   company: Company
   path: string
@@ -26,13 +26,6 @@ const tiltOptions: TiltOptions = {
   max: DETECT.safari ? 0 : 20,
   scale: TILT_SCALE,
   speed: DURATION.longest,
-}
-
-export const projectTypeLabels = {
-  [PROJECT_TYPE.app]: [PROJECT_TYPE_LABEL.app],
-  [PROJECT_TYPE.site]: [PROJECT_TYPE_LABEL.site],
-  [PROJECT_TYPE.admin]: [PROJECT_TYPE_LABEL.admin],
-  [PROJECT_TYPE.landing]: [PROJECT_TYPE_LABEL.landing],
 }
 
 const randomEffects: Effect[] = ['topSm', 'rightSm', 'bottomSm', 'leftSm']
@@ -88,7 +81,7 @@ export default function ProjectLink({
                 alt={company.title}
               />
               <h3 className="ProjectLink-Title">{title}</h3>
-              <p className="ProjectLink-Label">{projectTypeLabels[type]}</p>
+              <p className="ProjectLink-Label">{PROJECT_TYPE_LABEL[type]}</p>
             </div>
           </ButtonBase>
         </Tilt>
