@@ -10,18 +10,6 @@ interface Detect {
   safari: boolean
 }
 
-interface ColorInterface {
-  alternate: Color
-  white: Color
-  default: Color
-  blue: Color
-  green: Color
-  grass: Color
-  red: Color
-  yellow: Color
-  violet: Color
-}
-
 interface RouteInterface {
   home: Route
   about: Route
@@ -100,18 +88,6 @@ export const TODAY: Date = new Date()
 export const YEARS_OF_EXPERIENCE: number =
   differenceInYears(TODAY, CAREER_START_DATE) + 1
 
-export const COLOR: ColorInterface = {
-  alternate: 'alternate',
-  white: 'white',
-  default: 'default',
-  blue: 'blue',
-  green: 'green',
-  grass: 'grass',
-  red: 'red',
-  yellow: 'yellow',
-  violet: 'violet',
-}
-
 export const ROUTE: RouteInterface = {
   home: '/',
   about: '/about',
@@ -158,31 +134,31 @@ export const PROJECT_ROUTE: ProjectRoute = {
 }
 
 export const PATH_COLOR: Map<Color> = {
-  [ROUTE.home]: COLOR.alternate,
-  [ROUTE.about]: COLOR.green,
-  [ROUTE.skills]: COLOR.blue,
-  [ROUTE.experience]: COLOR.violet,
-  [ROUTE.portfolio]: COLOR.white,
-  [ROUTE.contact]: COLOR.white,
-  [PROJECT_ROUTE.embp]: COLOR.blue,
-  [PROJECT_ROUTE.proximal]: COLOR.yellow,
-  [PROJECT_ROUTE.tmf]: COLOR.blue,
-  [PROJECT_ROUTE.lite]: COLOR.grass,
-  [PROJECT_ROUTE.mellissa]: COLOR.green,
-  [PROJECT_ROUTE.foodp]: COLOR.blue,
-  [PROJECT_ROUTE.food]: COLOR.violet,
-  [PROJECT_ROUTE.sds]: COLOR.grass,
-  [PROJECT_ROUTE.strong]: COLOR.red,
-  [PROJECT_ROUTE.rogue]: COLOR.violet,
-  [PROJECT_ROUTE.trucks]: COLOR.default,
-  [PROJECT_ROUTE.services]: COLOR.grass,
-  [PROJECT_ROUTE.fcdc]: COLOR.default,
-  [PROJECT_ROUTE.saffron]: COLOR.yellow,
-  [PROJECT_ROUTE.whip]: COLOR.default,
-  [PROJECT_ROUTE.lazyazd]: COLOR.default,
-  [PROJECT_ROUTE.lazyaz]: COLOR.red,
-  [PROJECT_ROUTE.glyphs]: COLOR.grass,
-  [PROJECT_ROUTE.msp]: COLOR.blue,
+  [ROUTE.home]: 'alternate',
+  [ROUTE.about]: 'green',
+  [ROUTE.skills]: 'blue',
+  [ROUTE.experience]: 'violet',
+  [ROUTE.portfolio]: 'white',
+  [ROUTE.contact]: 'white',
+  [PROJECT_ROUTE.embp]: 'blue',
+  [PROJECT_ROUTE.proximal]: 'yellow',
+  [PROJECT_ROUTE.tmf]: 'blue',
+  [PROJECT_ROUTE.lite]: 'grass',
+  [PROJECT_ROUTE.mellissa]: 'green',
+  [PROJECT_ROUTE.foodp]: 'blue',
+  [PROJECT_ROUTE.food]: 'violet',
+  [PROJECT_ROUTE.sds]: 'grass',
+  [PROJECT_ROUTE.strong]: 'red',
+  [PROJECT_ROUTE.rogue]: 'violet',
+  [PROJECT_ROUTE.trucks]: 'default',
+  [PROJECT_ROUTE.services]: 'grass',
+  [PROJECT_ROUTE.fcdc]: 'default',
+  [PROJECT_ROUTE.saffron]: 'yellow',
+  [PROJECT_ROUTE.whip]: 'default',
+  [PROJECT_ROUTE.lazyazd]: 'default',
+  [PROJECT_ROUTE.lazyaz]: 'red',
+  [PROJECT_ROUTE.glyphs]: 'grass',
+  [PROJECT_ROUTE.msp]: 'blue',
 }
 
 export const BLANK_LINK_PROPS: BlankLinkProps = {
