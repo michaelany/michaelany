@@ -1,9 +1,7 @@
 import React from 'react'
 import {RouteChildrenProps} from 'react-router-dom'
 
-import Sections from '../common/Sections'
-import Pagination from '../common/Pagination'
-import Copyright from '../common/Copyright'
+import {Sections, Pagination, Copyright} from '../common'
 import ProjectDetails from './ProjectDetails'
 import Carousel from './Carousel'
 import {ROUTE} from '../../utils/constants'

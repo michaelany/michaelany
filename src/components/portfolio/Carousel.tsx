@@ -4,8 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import './Carousel.scss'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
-import {Animate} from '../common'
-import Panel from '../common/Panel'
+import {Animate, Panel} from '../common'
 import {SWIPER_OPTIONS, QUERY_BREAKPOINT} from '../../utils/constants'
 
 interface CarouselProps {

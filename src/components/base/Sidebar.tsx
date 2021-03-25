@@ -1,8 +1,7 @@
 import React from 'react'
 
 import './Sidebar.scss'
-import Logo from '../common/Logo'
-import Navigation from '../common/Navigation'
+import {Logo, Navigation} from '../common'
 
 export default function Sidebar(): JSX.Element {
   return (

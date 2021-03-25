@@ -1,9 +1,6 @@
 import React from 'react'
 
-import Sections from '../common/Sections'
-import SocialLinks from '../common/SocialLinks'
-import Pagination from '../common/Pagination'
-import Copyright from '../common/Copyright'
+import {Sections, SocialLinks, Pagination, Copyright} from '../common'
 import ContactForm from './ContactForm'
 import Map from './Map'
 import {BLANK_LINK_PROPS, ROUTE} from '../../utils/constants'

@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Pagination from '../common/Pagination'
-import Copyright from '../common/Copyright'
+import {Pagination, Copyright} from '../common'
 import Projects from './Projects'
 import {ROUTE} from '../../utils/constants'
 import {TITLE} from '../../data/common'

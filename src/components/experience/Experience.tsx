@@ -1,10 +1,7 @@
 import React, {useRef} from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import {Animate} from '../common'
-import Sections from '../common/Sections'
-import Pagination from '../common/Pagination'
-import Copyright from '../common/Copyright'
+import {Animate, Sections, Pagination, Copyright} from '../common'
 import Work from './Work'
 import Stepper from './Stepper'
 import {ROUTE, QUERY_BREAKPOINT} from '../../utils/constants'

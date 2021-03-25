@@ -10,8 +10,7 @@ import WorkIcon from '@material-ui/icons/WorkRounded'
 import StarIcon from '@material-ui/icons/StarRounded'
 
 import './Job.scss'
-import Tooltip from '../common/Tooltip'
-import Company from '../common/Company'
+import {Tooltip, Company} from '../common'
 import {Job as JobInterface, Feature} from '../../utils/types'
 
 interface JobProps extends JobInterface {

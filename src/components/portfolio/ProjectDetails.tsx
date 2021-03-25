@@ -3,9 +3,7 @@ import Button from '@material-ui/core/Button'
 import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
-import {Animate} from '../common'
-import Features from '../common/Features'
-import Company from '../common/Company'
+import {Animate, Features, Company} from '../common'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {Feature, Company as CompanyInterface} from '../../utils/types'
 

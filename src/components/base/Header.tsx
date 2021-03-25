@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/MenuRounded'
 
 import './Header.scss'
-import Logo from '../common/Logo'
+import {Logo} from '../common'
 import Drawer from './Drawer'
 
 export default function Header(): JSX.Element {

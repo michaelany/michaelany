@@ -6,11 +6,7 @@ import meNormalImg from '../../assets/img/pictures/me-normal.png'
 import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.png'
 import meExcitedImg from '../../assets/img/pictures/me-excited.png'
 import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.png'
-import {Animate} from '../common'
-import SocialLinks from '../common/SocialLinks'
-import Pagination from '../common/Pagination'
-import Copyright from '../common/Copyright'
-import Tilt from '../common/Tilt'
+import {Animate, SocialLinks, Pagination, Copyright, Tilt} from '../common'
 import {
   DETECT,
   ROUTE,
