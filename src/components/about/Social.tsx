@@ -1,5 +1,5 @@
 import React from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import {useMediaQuery} from '@material-ui/core'
 
 import './Social.scss'
 import meNormalImg from '../../assets/img/pictures/me-normal.png'

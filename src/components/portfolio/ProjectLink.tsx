@@ -1,8 +1,7 @@
 import React from 'react'
 import cn from 'clsx'
 import {Link} from 'react-router-dom'
-import Grid from '@material-ui/core/Grid'
-import ButtonBase from '@material-ui/core/ButtonBase'
+import {Grid, ButtonBase} from '@material-ui/core'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'

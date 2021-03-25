@@ -1,5 +1,5 @@
 import {SVGProps, FC} from 'react'
-import {SvgIconProps} from '@material-ui/core/SvgIcon'
+import {SvgIconProps} from '@material-ui/core'
 
 export type Route =
   | '/'

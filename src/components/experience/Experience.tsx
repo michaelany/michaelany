@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import {useMediaQuery} from '@material-ui/core'
 
 import {Animate, Sections, Pagination, Copyright} from '../common'
 import Work from './Work'

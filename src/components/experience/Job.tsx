@@ -1,13 +1,17 @@
 import React, {Fragment} from 'react'
 import cn from 'clsx'
-import Chip from '@material-ui/core/Chip'
-import Accordion from '@material-ui/core/Accordion'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
-import ForwardIcon from '@material-ui/icons/ForwardRounded'
-import WorkIcon from '@material-ui/icons/WorkRounded'
-import StarIcon from '@material-ui/icons/StarRounded'
+import {
+  Chip,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from '@material-ui/core'
+import {
+  ExpandMoreRounded as ExpandMoreIcon,
+  ForwardRounded as ForwardIcon,
+  WorkRounded as WorkIcon,
+  StarRounded as StarIcon,
+} from '@material-ui/icons'
 
 import './Job.scss'
 import {Tooltip, Company} from '../common'

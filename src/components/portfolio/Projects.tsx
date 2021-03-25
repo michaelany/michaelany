@@ -1,8 +1,5 @@
 import React, {memo, useState, ChangeEvent} from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Grid from '@material-ui/core/Grid'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
+import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
 
 import './Projects.scss'
 import ProjectLink from './ProjectLink'

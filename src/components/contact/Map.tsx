@@ -1,7 +1,7 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom'
 import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
-import CircularProgress from '@material-ui/core/CircularProgress'
+import {CircularProgress} from '@material-ui/core'
 
 import './Map.scss'
 import markerIcon from '../../assets/icons/marker.svg'

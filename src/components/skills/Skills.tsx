@@ -1,18 +1,19 @@
 import React, {useState, useRef, useMemo} from 'react'
-import Link from '@material-ui/core/Link'
-import {ButtonBaseActions} from '@material-ui/core/ButtonBase'
-import ThumbUpIcon from '@material-ui/icons/ThumbUpRounded'
-import SpeedIcon from '@material-ui/icons/SpeedRounded'
-import BuildIcon from '@material-ui/icons/BuildRounded'
-import AccountTreeIcon from '@material-ui/icons/AccountTreeRounded'
-import BrushIcon from '@material-ui/icons/BrushRounded'
-import DevicesOtherIcon from '@material-ui/icons/DevicesOtherRounded'
-import VerifiedUserIcon from '@material-ui/icons/VerifiedUserRounded'
-import ChildFriendlyIcon from '@material-ui/icons/ChildFriendlyRounded'
-import ListAltIcon from '@material-ui/icons/ListAltRounded'
-import LoopIcon from '@material-ui/icons/LoopRounded'
-import PaletteIcon from '@material-ui/icons/PaletteRounded'
-import ExtensionIcon from '@material-ui/icons/ExtensionRounded'
+import {Link, ButtonBaseActions} from '@material-ui/core'
+import {
+  ThumbUpRounded as ThumbUpIcon,
+  SpeedRounded as SpeedIcon,
+  BuildRounded as BuildIcon,
+  AccountTreeRounded as AccountTreeIcon,
+  DevicesOtherRounded as DevicesOtherIcon,
+  BrushRounded as BrushIcon,
+  VerifiedUserRounded as VerifiedUserIcon,
+  ChildFriendlyRounded as ChildFriendlyIcon,
+  ListAltRounded as ListAltIcon,
+  LoopRounded as LoopIcon,
+  PaletteRounded as PaletteIcon,
+  ExtensionRounded as ExtensionIcon,
+} from '@material-ui/icons'
 
 import {Sections, Info} from '../common'
 import Technologies from './Technologies'

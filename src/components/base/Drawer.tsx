@@ -1,7 +1,6 @@
 import React from 'react'
-import MuiDrawer from '@material-ui/core/Drawer'
-import IconButton from '@material-ui/core/IconButton'
-import ArrowBackIcon from '@material-ui/icons/ArrowBackRounded'
+import {Drawer as MuiDrawer, IconButton} from '@material-ui/core'
+import {ArrowBackRounded as ArrowBackIcon} from '@material-ui/icons'
 
 import './Drawer.scss'
 import {Navigation} from '../common'

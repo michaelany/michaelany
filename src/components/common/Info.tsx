@@ -1,7 +1,7 @@
 import React, {useState, memo} from 'react'
 import cn from 'clsx'
-import Button from '@material-ui/core/Button'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
+import {Button} from '@material-ui/core'
+import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
 
 import './Info.scss'
 import Features from './Features'

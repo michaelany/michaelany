@@ -1,7 +1,6 @@
 import React from 'react'
 import cn from 'clsx'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Fab from '@material-ui/core/Fab'
+import {useMediaQuery, Fab} from '@material-ui/core'
 
 import './SocialLinks.scss'
 import Animate from './Animate'

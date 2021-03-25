@@ -5,14 +5,18 @@ import React, {
   SyntheticEvent,
   MutableRefObject,
 } from 'react'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
-import InputAdornment from '@material-ui/core/InputAdornment'
-import {InputProps} from '@material-ui/core/Input'
-import PersonIcon from '@material-ui/icons/PersonRounded'
-import MailIcon from '@material-ui/icons/MailRounded'
-import SendIcon from '@material-ui/icons/SendRounded'
+import {
+  TextField,
+  Button,
+  Grid,
+  InputAdornment,
+  InputProps,
+} from '@material-ui/core'
+import {
+  PersonRounded as PersonIcon,
+  MailRounded as MailIcon,
+  SendRounded as SendIcon,
+} from '@material-ui/icons'
 
 import './ContactForm.scss'
 import {Animate} from '../common'

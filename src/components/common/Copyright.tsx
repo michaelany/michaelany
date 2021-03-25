@@ -1,8 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import CopyrightIcon from '@material-ui/icons/CopyrightRounded'
-import BuildIcon from '@material-ui/icons/BuildRounded'
-import FavoriteIcon from '@material-ui/icons/FavoriteRounded'
+import {
+  CopyrightRounded as CopyrightIcon,
+  BuildRounded as BuildIcon,
+  FavoriteRounded as FavoriteIcon,
+} from '@material-ui/icons'
 
 import './Copyright.scss'
 import {ROUTE, TODAY} from '../../utils/constants'

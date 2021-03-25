@@ -1,6 +1,6 @@
 import React, {MouseEvent} from 'react'
 import cn from 'clsx'
-import ButtonBase from '@material-ui/core/ButtonBase'
+import {ButtonBase} from '@material-ui/core'
 
 import './Company.scss'
 import Tooltip from './Tooltip'

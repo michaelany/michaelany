@@ -1,11 +1,14 @@
 import React, {Dispatch, SetStateAction, RefObject} from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Grid from '@material-ui/core/Grid'
-import Accordion from '@material-ui/core/Accordion'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import ButtonBase, {ButtonBaseActions} from '@material-ui/core/ButtonBase'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
+import {
+  useMediaQuery,
+  Grid,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  ButtonBase,
+  ButtonBaseActions,
+} from '@material-ui/core'
+import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
 
 import './Technologies.scss'
 import {Animate, Pagination, Copyright, Tooltip} from '../common'

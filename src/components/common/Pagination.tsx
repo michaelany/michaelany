@@ -1,9 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeftRounded'
-import ChevronRightIcon from '@material-ui/icons/ChevronRightRounded'
+import {Grid, Button} from '@material-ui/core'
+import {
+  ChevronLeftRounded as ChevronLeftIcon,
+  ChevronRightRounded as ChevronRightIcon,
+} from '@material-ui/icons'
 
 import './Pagination.scss'
 import {ROUTE} from '../../utils/constants'

@@ -1,12 +1,16 @@
 import React, {useState, RefObject} from 'react'
-import MuiStepper from '@material-ui/core/Stepper'
-import Step from '@material-ui/core/Step'
-import StepLabel from '@material-ui/core/StepLabel'
-import StepContent from '@material-ui/core/StepContent'
-import Fab from '@material-ui/core/Fab'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForwardRounded'
-import ArrowBackIcon from '@material-ui/icons/ArrowBackRounded'
-import RefreshIcon from '@material-ui/icons/RefreshRounded'
+import {
+  Stepper as MuiStepper,
+  Step,
+  StepLabel,
+  StepContent,
+  Fab,
+} from '@material-ui/core'
+import {
+  ArrowForwardRounded as ArrowForwardIcon,
+  ArrowBackRounded as ArrowBackIcon,
+  RefreshRounded as RefreshIcon,
+} from '@material-ui/icons'
 
 import './Stepper.scss'
 import {scrollToView} from '../../utils/helpers'

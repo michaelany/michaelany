@@ -1,5 +1,5 @@
 import React from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import {useMediaQuery} from '@material-ui/core'
 
 import {Sections} from '../common'
 import Greeting from './Greeting'

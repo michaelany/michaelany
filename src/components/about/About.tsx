@@ -1,18 +1,20 @@
 import React from 'react'
 import {differenceInYears} from 'date-fns'
 import {Link} from 'react-router-dom'
-import DirectionsBikeIcon from '@material-ui/icons/DirectionsBikeRounded'
-import SchoolIcon from '@material-ui/icons/SchoolRounded'
-import LocalCafeIcon from '@material-ui/icons/LocalCafeRounded'
-import FavoriteIcon from '@material-ui/icons/FavoriteRounded'
-import AppsIcon from '@material-ui/icons/AppsRounded'
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccountRounded'
-import AllInclusiveIcon from '@material-ui/icons/AllInclusiveRounded'
-import CodeIcon from '@material-ui/icons/CodeRounded'
-import SquareFootIcon from '@material-ui/icons/SquareFootRounded'
-import GroupWorkIcon from '@material-ui/icons/GroupWorkRounded'
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenterRounded'
-import ExploreIcon from '@material-ui/icons/ExploreRounded'
+import {
+  DirectionsBikeRounded as DirectionsBikeIcon,
+  SchoolRounded as SchoolIcon,
+  LocalCafeRounded as LocalCafeIcon,
+  FavoriteRounded as FavoriteIcon,
+  AppsRounded as AppsIcon,
+  SupervisorAccountRounded as SupervisorAccountIcon,
+  AllInclusiveRounded as AllInclusiveIcon,
+  CodeRounded as CodeIcon,
+  SquareFootRounded as SquareFootIcon,
+  GroupWorkRounded as GroupWorkIcon,
+  BusinessCenterRounded as BusinessCenterIcon,
+  ExploreRounded as ExploreIcon,
+} from '@material-ui/icons'
 
 import {Sections, Info} from '../common'
 import Social from './Social'

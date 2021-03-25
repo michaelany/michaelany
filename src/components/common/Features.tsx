@@ -1,7 +1,5 @@
 import React, {memo} from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Collapse from '@material-ui/core/Collapse'
-import Grid from '@material-ui/core/Grid'
+import {useMediaQuery, Collapse, Grid} from '@material-ui/core'
 
 import './Features.scss'
 import {Animate} from '../common'

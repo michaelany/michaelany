@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from 'clsx'
-import Grid from '@material-ui/core/Grid'
+import {Grid} from '@material-ui/core'
 
 import './Sections.scss'
 

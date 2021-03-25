@@ -1,13 +1,14 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import Button from '@material-ui/core/Button'
-import SvgIcon from '@material-ui/core/SvgIcon'
-import HomeIcon from '@material-ui/icons/HomeRounded'
-import PersonIcon from '@material-ui/icons/PersonRounded'
-import SchoolIcon from '@material-ui/icons/SchoolRounded'
-import WorkIcon from '@material-ui/icons/WorkRounded'
-import WebIcon from '@material-ui/icons/WebRounded'
-import MailIcon from '@material-ui/icons/MailRounded'
+import {Button, SvgIcon} from '@material-ui/core'
+import {
+  HomeRounded as HomeIcon,
+  PersonRounded as PersonIcon,
+  SchoolRounded as SchoolIcon,
+  WorkRounded as WorkIcon,
+  WebRounded as WebIcon,
+  MailRounded as MailIcon,
+} from '@material-ui/icons'
 
 import './Navigation.scss'
 import Tooltip from './Tooltip'

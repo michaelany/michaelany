@@ -7,7 +7,7 @@ import {
   ThemeProvider,
   Theme,
 } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
+import {CssBaseline} from '@material-ui/core'
 
 import './styles/index.scss'
 import ScrollToTop from './components/base/ScrollToTop'

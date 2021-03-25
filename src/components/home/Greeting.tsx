@@ -1,8 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Button from '@material-ui/core/Button'
-import WebIcon from '@material-ui/icons/WebRounded'
-import MailIcon from '@material-ui/icons/MailRounded'
+import {Button} from '@material-ui/core'
+import {
+  WebRounded as WebIcon,
+  MailRounded as MailIcon,
+} from '@material-ui/icons'
 
 import './Greeting.scss'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'

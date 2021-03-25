@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
+import {Button} from '@material-ui/core'
+import {OpenInNewRounded as OpenInNewIcon} from '@material-ui/icons'
 
 import './ProjectDetails.scss'
 import {Animate, Features, Company} from '../common'

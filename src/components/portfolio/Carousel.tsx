@@ -1,6 +1,6 @@
 import React from 'react'
 import Swiper from 'react-id-swiper'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import {useMediaQuery} from '@material-ui/core'
 
 import './Carousel.scss'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
