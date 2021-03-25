@@ -3,13 +3,13 @@ import React from 'react'
 import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tilt from '../common/Tilt'
 import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
-import {DURATION, EASING} from '../../styles/theme'
+import {DURATION} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
   reset: DETECT.safari,
@@ -23,11 +23,7 @@ export default function Banner(): JSX.Element {
     <section className="Banner Section Section_colorful">
       <h2 className="VisuallyHidden">Баннер</h2>
       <div className="Banner-Content">
-        <Animate
-          effect={EFFECT.zoomIn}
-          duration={DURATION.longest}
-          easing={EASING.out}
-        >
+        <Animate effect="zoomIn" duration="longest" easing="out">
           <Tilt el="figure" className="Banner-Figure" options={tiltOptions}>
             <img
               className="Banner-Image"

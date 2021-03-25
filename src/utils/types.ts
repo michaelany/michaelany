@@ -21,18 +21,18 @@ export type Color =
   | 'violet'
 
 export type Effect =
-  | 'fadeInTop'
-  | 'fadeInTopSm'
-  | 'fadeInRight'
-  | 'fadeInRightSm'
-  | 'fadeInBottom'
-  | 'fadeInBottomSm'
-  | 'fadeInLeft'
-  | 'fadeInLeftSm'
-  | 'fadeInZoomIn'
-  | 'fadeInZoomInSm'
-  | 'fadeInZoomOut'
-  | 'fadeInZoomOutSm'
+  | 'top'
+  | 'topSm'
+  | 'right'
+  | 'rightSm'
+  | 'bottom'
+  | 'bottomSm'
+  | 'left'
+  | 'leftSm'
+  | 'zoomIn'
+  | 'zoomInSm'
+  | 'zoomOut'
+  | 'zoomOutSm'
 
 export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
 
@@ -52,6 +52,7 @@ export interface Feature {
   time?: boolean
   description?: string | JSX.Element
   Icon: (props: SvgIconProps) => JSX.Element
+  disabled?: boolean
 }
 
 export interface Technology {

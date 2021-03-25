@@ -4,18 +4,18 @@ import Collapse from '@material-ui/core/Collapse'
 import Grid from '@material-ui/core/Grid'
 
 import './Features.scss'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import {QUERY_BREAKPOINT} from '../../utils/constants'
 import {DURATION} from '../../styles/theme'
-import {Feature} from '../../utils/types'
+import {Feature, Effect} from '../../utils/types'
 
 interface FeaturesProps {
   items: Feature[]
   extra?: boolean
 }
 
-const getEffect = (xs: boolean, index: number): string =>
-  xs ? EFFECT.bottom : index % 2 ? EFFECT.rightSm : EFFECT.leftSm
+const getEffect = (xs: boolean, index: number): Effect =>
+  xs ? 'bottom' : index % 2 ? 'rightSm' : 'leftSm'
 
 function Features({items, extra}: FeaturesProps): JSX.Element {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)

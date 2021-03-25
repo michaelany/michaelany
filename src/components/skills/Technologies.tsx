@@ -8,14 +8,13 @@ import ButtonBase, {ButtonBaseActions} from '@material-ui/core/ButtonBase'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Technologies.scss'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Tooltip from '../common/Tooltip'
 import {TECHNOLOGY_GROUPS} from '../../data/common'
 import {ROUTE, BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '../../utils/constants'
 import {Technology, TechnologyGroup} from '../../utils/types'
-import {DURATION} from '../../styles/theme'
 
 interface TechnologiesProps {
   expanded: string[]
@@ -92,8 +91,8 @@ export default function Technologies({
       <Animate
         el="ul"
         className="Technologies-List"
-        effect={md ? EFFECT.bottomSm : EFFECT.rightSm}
-        duration={md ? undefined : DURATION.longer}
+        effect={md ? undefined : 'rightSm'}
+        duration={md ? undefined : 'longer'}
       >
         {TECHNOLOGY_GROUPS.map((group: TechnologyGroup, index: number) => (
           <Accordion

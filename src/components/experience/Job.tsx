@@ -10,6 +10,7 @@ import WorkIcon from '@material-ui/icons/WorkRounded'
 import StarIcon from '@material-ui/icons/StarRounded'
 
 import './Job.scss'
+import Tooltip from '../common/Tooltip'
 import Company from '../common/Company'
 import {Job as JobInterface, Feature} from '../../utils/types'
 
@@ -37,7 +38,11 @@ const renderOccupations = (
             >
               <span>
                 {occupation}
-                {lastCurrent && <span className="Job-Badge" />}
+                {lastCurrent && (
+                  <Tooltip title="Текущая должность">
+                    <span className="Job-Badge" />
+                  </Tooltip>
+                )}
               </span>
             </h3>
             {index < occupations.length - 1 && (
@@ -87,14 +92,17 @@ export default function Job({
         {renderBlock(duties, true)}
         {renderBlock(achievements)}
         <div className="Job-Features">
-          {features.map(({label, Icon, time}: Feature, index: number) => (
-            <Chip
-              key={index}
-              className="Chip"
-              icon={<Icon />}
-              label={time ? <time>{label}</time> : label}
-            />
-          ))}
+          {features.map(
+            ({label, Icon, time, disabled}: Feature, index: number) => (
+              <Chip
+                key={index}
+                className="Chip"
+                icon={<Icon />}
+                label={time ? <time>{label}</time> : label}
+                disabled={disabled}
+              />
+            )
+          )}
         </div>
       </AccordionDetails>
     </Accordion>

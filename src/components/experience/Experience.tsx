@@ -1,14 +1,13 @@
 import React, {useRef} from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Sections from '../common/Sections'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
 import Work from './Work'
 import Stepper from './Stepper'
 import {ROUTE, QUERY_BREAKPOINT} from '../../utils/constants'
-import {DURATION} from '../../styles/theme'
 
 export default function Experience(): JSX.Element {
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
@@ -24,8 +23,8 @@ export default function Experience(): JSX.Element {
         >
           <h2 className="VisuallyHidden">Этапы</h2>
           <Animate
-            effect={md ? EFFECT.bottomSm : EFFECT.rightSm}
-            duration={md ? undefined : DURATION.longer}
+            effect={md ? undefined : 'rightSm'}
+            duration={md ? undefined : 'longer'}
           >
             <Stepper sectionRef={sectionRef} />
           </Animate>

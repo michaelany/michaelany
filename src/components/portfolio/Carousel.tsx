@@ -4,10 +4,9 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import './Carousel.scss'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Panel from '../common/Panel'
 import {SWIPER_OPTIONS, QUERY_BREAKPOINT} from '../../utils/constants'
-import {DURATION} from '../../styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
@@ -49,10 +48,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
 
   if (props.mobile)
     return (
-      <Animate
-        className="Carousel Carousel_type_mobile"
-        effect={EFFECT.bottomSm}
-      >
+      <Animate className="Carousel Carousel_type_mobile">
         <div className="Carousel-Block">{renderSwiper(props)}</div>
         <PhoneSvg className="Carousel-Svg" />
       </Animate>
@@ -61,8 +57,8 @@ export default function Carousel(props: CarouselProps): JSX.Element {
   return (
     <Animate
       className="Carousel Carousel_type_desktop"
-      effect={md ? EFFECT.bottomSm : EFFECT.rightSm}
-      duration={md ? undefined : DURATION.longer}
+      effect={md ? 'bottomSm' : 'rightSm'}
+      duration={md ? undefined : 'longer'}
     >
       <Panel className="Carousel-Content">
         <div className="Carousel-Block">{renderSwiper(props)}</div>

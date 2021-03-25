@@ -6,7 +6,7 @@ import meNormalImg from '../../assets/img/pictures/me-normal.png'
 import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.png'
 import meExcitedImg from '../../assets/img/pictures/me-excited.png'
 import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.png'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import SocialLinks from '../common/SocialLinks'
 import Pagination from '../common/Pagination'
 import Copyright from '../common/Copyright'
@@ -47,8 +47,8 @@ export default function Social(): JSX.Element {
       <div className="Social-Content">
         <Animate
           className="Social-PhotoWrapper"
-          effect={md ? EFFECT.bottomSm : EFFECT.zoomOut}
-          duration={md ? undefined : DURATION.longer}
+          effect={md ? undefined : 'zoomOut'}
+          duration={md ? undefined : 'longer'}
         >
           <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
             <>

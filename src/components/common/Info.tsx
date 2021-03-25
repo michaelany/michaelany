@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMoreRounded'
 
 import './Info.scss'
 import Features from './Features'
-import Animate, {EFFECT} from './Animate'
+import Animate from './Animate'
 import {scrollToView} from '../../utils/helpers'
 import {ROOT} from '../../utils/constants'
 import {Feature} from '../../utils/types'
@@ -36,7 +36,7 @@ function Info({type, title, text, features}: InfoProps): JSX.Element {
       <h1 className="Title">{title}</h1>
       <p className="MainText">{text}</p>
       <Features extra={open} items={features} />
-      <Animate className="Actions Actions_center" effect={EFFECT.bottom}>
+      <Animate className="Actions Actions_center" effect="bottom">
         <Button
           className="Button"
           endIcon={

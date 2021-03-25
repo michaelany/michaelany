@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import ButtonBase from '@material-ui/core/ButtonBase'
 
 import './ProjectLink.scss'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Tilt from '../common/Tilt'
 import Panel from '../common/Panel'
 import {getListDelay} from '../../utils/helpers'
@@ -38,12 +38,7 @@ export const projectTypeLabels = {
   [PROJECT_TYPE.landing]: [PROJECT_TYPE_LABEL.landing],
 }
 
-const randomEffects: Effect[] = [
-  EFFECT.topSm,
-  EFFECT.rightSm,
-  EFFECT.bottomSm,
-  EFFECT.leftSm,
-]
+const randomEffects: Effect[] = ['topSm', 'rightSm', 'bottomSm', 'leftSm']
 
 const getDelay = (index: number, width: Width): number => {
   if (width.sm) return 0
@@ -74,9 +69,7 @@ export default function ProjectLink({
       <Animate
         className={cn(DETECT.mobile && 'ProjectLink-Tilt')}
         effect={
-          width.sm
-            ? EFFECT.bottomSm
-            : randomEffects[Math.floor(Math.random() * 4)]
+          width.sm ? undefined : randomEffects[Math.floor(Math.random() * 4)]
         }
         delay={getDelay(index, width)}
       >

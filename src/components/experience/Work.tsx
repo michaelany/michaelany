@@ -5,7 +5,7 @@ import MyLocationIcon from '@material-ui/icons/MyLocationRounded'
 import DateRangeIcon from '@material-ui/icons/DateRangeRounded'
 
 import './Work.scss'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
 import {TITLE, COMPANY, TECHNOLOGY_TITLE} from '../../data/common'
@@ -39,7 +39,6 @@ const jobs: JobInterface[] = [
     achievements: [
       'Успешно реализовал несколько масштабных проектов для крупных заказчиков',
       'Прошел путь от рядового разработчика до тимлида',
-      'Изучил и применил на практике множество технологий и библиотек',
       `Помимо веб-приложений разрабатываю мобильное корпоративное приложение на ${TECHNOLOGY_TITLE.reactnative}`,
       'Периодически занимаюсь дизайном и прототипированием',
       'Разработал корпоративную программу стажировки',
@@ -48,10 +47,10 @@ const jobs: JobInterface[] = [
     ],
     features: [
       {label: 'апрель 2018 - ...', Icon: DateRangeIcon, time: true},
-      {label: 'Москва, Россия', Icon: ExploreIcon},
-      {label: 'офис', Icon: MyLocationIcon},
-      {label: 'удаленно', Icon: MyLocationIcon},
       {label: 'полная занятость', Icon: ScheduleIcon},
+      {label: 'удаленно', Icon: MyLocationIcon},
+      {label: 'офис', Icon: MyLocationIcon, disabled: true},
+      {label: 'Москва, Россия', Icon: ExploreIcon},
     ],
   },
   {
@@ -78,9 +77,10 @@ const jobs: JobInterface[] = [
     ],
     features: [
       {label: 'апрель 2017 - ..', Icon: DateRangeIcon, time: true},
-      {label: 'Окленд, Новая Зеландия', Icon: ExploreIcon},
-      {label: 'удаленно', Icon: MyLocationIcon},
       {label: 'частичная занятость', Icon: ScheduleIcon},
+      {label: 'полная занятость', Icon: ScheduleIcon, disabled: true},
+      {label: 'удаленно', Icon: MyLocationIcon},
+      {label: 'Окленд, Новая Зеландия', Icon: ExploreIcon},
     ],
   },
   {
@@ -104,9 +104,9 @@ const jobs: JobInterface[] = [
         Icon: DateRangeIcon,
         time: true,
       },
-      {label: 'Москва, Россия', Icon: ExploreIcon},
-      {label: 'офис', Icon: MyLocationIcon},
       {label: 'полная занятость', Icon: ScheduleIcon},
+      {label: 'офис', Icon: MyLocationIcon},
+      {label: 'Москва, Россия', Icon: ExploreIcon},
     ],
   },
   {
@@ -125,12 +125,12 @@ const jobs: JobInterface[] = [
     ],
     features: [
       {label: 'октябрь 2008 - май 2010', Icon: DateRangeIcon, time: true},
+      {label: 'полная занятость', Icon: ScheduleIcon},
+      {label: 'офис', Icon: MyLocationIcon},
       {
         label: 'Москва, Россия',
         Icon: ExploreIcon,
       },
-      {label: 'офис', Icon: MyLocationIcon},
-      {label: 'полная занятость', Icon: ScheduleIcon},
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function Work(): JSX.Element {
         Профессионально занимаюсь фронтенд-разработкой более{' '}
         {YEARS_OF_EXPERIENCE} лет. Работаю преимущественно удаленно.
       </p>
-      <Animate el="ul" className="Work" effect={EFFECT.bottomSm}>
+      <Animate el="ul" className="Work">
         {jobs.map((job: JobInterface, index: number) => (
           <Job key={index} {...job} index={index} />
         ))}

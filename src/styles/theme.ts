@@ -1,39 +1,5 @@
-interface Color {
-  green: string
-  blue: string
-  text: string
-  secondText: string
-  darkRed: string
-}
-
-interface Duration {
-  shortest: number
-  shorter: number
-  short: number
-  standard: number
-  medium: number
-  mediumLong: number
-  long: number
-  longer: number
-  longest: number
-  lingering: number
-  alternate: number
-}
-
-interface Easing {
-  inOut: string
-  out: string
-}
-
-interface Breakpoint {
-  xs: number
-  sm: number
-  md: number
-  lg: number
-}
-
 // $color_...
-export const COLOR: Color = {
+export const COLOR = {
   green: '#2fd0c8',
   blue: '#64a6fc',
   text: '#4a4a4a',
@@ -42,7 +8,7 @@ export const COLOR: Color = {
 }
 
 // $duration_...
-export const DURATION: Duration = {
+export const DURATION = {
   shortest: 150,
   shorter: 200,
   short: 250,
@@ -57,13 +23,13 @@ export const DURATION: Duration = {
 }
 
 // $easing_...
-export const EASING: Easing = {
+export const EASING = {
   inOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
   out: 'cubic-bezier(0, 0, 0.2, 1)',
 }
 
 // $breakpoint_...
-export const BREAKPOINT: Breakpoint = {
+export const BREAKPOINT = {
   xs: 399,
   sm: 599,
   md: 959,

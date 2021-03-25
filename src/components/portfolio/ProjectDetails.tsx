@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button'
 import OpenInNewIcon from '@material-ui/icons/OpenInNewRounded'
 
 import './ProjectDetails.scss'
-import Animate, {EFFECT} from '../common/Animate'
+import {Animate} from '../common'
 import Features from '../common/Features'
 import Company from '../common/Company'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
@@ -35,7 +35,7 @@ export default function ProjectDetails({
       </p>
       <Features items={features} />
       {href && (
-        <Animate className="Actions Actions_center" effect={EFFECT.bottom}>
+        <Animate className="Actions Actions_center" effect="bottom">
           <Button
             {...BLANK_LINK_PROPS}
             className="Button"

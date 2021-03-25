@@ -4,7 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Fab from '@material-ui/core/Fab'
 
 import './SocialLinks.scss'
-import Animate, {EFFECT} from './Animate'
+import Animate from './Animate'
 import Tooltip from './Tooltip'
 import {getListDelay} from '../../utils/helpers'
 import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '../../utils/constants'
@@ -28,7 +28,7 @@ export default function SocialLinks({
           key={index}
           el="li"
           className="SocialLinks-Item"
-          effect={EFFECT.zoomIn}
+          effect="zoomIn"
           delay={xs ? undefined : getListDelay(index)}
         >
           <Tooltip title={link.title}>
