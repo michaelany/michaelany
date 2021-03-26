@@ -90,13 +90,6 @@ export const ROUTE: RouteInterface = {
   contact: '/contact',
 }
 
-export const QUERY_BREAKPOINT: QueryBreakpoint = {
-  xs: `(max-width: ${BREAKPOINT.xs}px)`,
-  sm: `(max-width: ${BREAKPOINT.sm}px)`,
-  md: `(max-width: ${BREAKPOINT.md}px)`,
-  lg: `(max-width: ${BREAKPOINT.lg}px)`,
-}
-
 export const PROJECT_ROUTE: ProjectRoute = {
   proximal: '/proximal-coffee',
   embp: '/arma-embp',
@@ -145,6 +138,13 @@ export const PATH_COLOR: Map<Color> = {
   [PROJECT_ROUTE.lazyaz]: 'red',
   [PROJECT_ROUTE.glyphs]: 'grass',
   [PROJECT_ROUTE.msp]: 'blue',
+}
+
+export const QUERY_BREAKPOINT: QueryBreakpoint = {
+  xs: `(max-width: ${BREAKPOINT.xs}px)`,
+  sm: `(max-width: ${BREAKPOINT.sm}px)`,
+  md: `(max-width: ${BREAKPOINT.md}px)`,
+  lg: `(max-width: ${BREAKPOINT.lg}px)`,
 }
 
 export const BLANK_LINK_PROPS: BlankLinkProps = {

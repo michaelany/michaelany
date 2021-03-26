@@ -4,7 +4,7 @@ import {RouteChildrenProps} from 'react-router-dom'
 import {Sections, Pagination, Copyright} from '../common'
 import ProjectDetails from './ProjectDetails'
 import Carousel from './Carousel'
-import {ROUTE} from '../../utils/constants'
+import {ROUTE, PROJECT_ROUTE} from '../../utils/constants'
 import {Project as ProjectInterface} from '../../utils/types'
 import PROJECTS from '../../data/projects'
 
@@ -17,14 +17,15 @@ export default function Project({
 }: RouteChildrenProps<ProjectParams>): JSX.Element {
   const project: ProjectInterface = PROJECTS.find(
     (project: ProjectInterface): boolean =>
-      project.path.slice(1) === match!.params.project
+      PROJECT_ROUTE[project.name].slice(1) === match!.params.project
   )!
+
   return (
     <Sections
       firstSection={
         <ProjectDetails
           title={project.title}
-          company={project.company}
+          companyName={project.companyName}
           description={project.description}
           features={project.features}
           href={project.href}

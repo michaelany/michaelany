@@ -64,9 +64,7 @@ function Projects(): JSX.Element {
             title={project.title}
             name={project.name}
             type={project.type}
-            color={project.color}
-            company={project.company}
-            path={project.path}
+            companyName={project.companyName}
           />
         ))}
       </Grid>

@@ -1,20 +1,15 @@
-import CodeIcon from '@material-ui/icons/CodeRounded'
-import EventIcon from '@material-ui/icons/EventRounded'
-import PaletteIcon from '@material-ui/icons/PaletteRounded'
-import WebIcon from '@material-ui/icons/WebRounded'
-import GroupWorkIcon from '@material-ui/icons/GroupWorkRounded'
-import BuildIcon from '@material-ui/icons/BuildRounded'
-import StarIcon from '@material-ui/icons/StarRounded'
-import CheckCircleIcon from '@material-ui/icons/CheckCircleRounded'
-
-import {
-  COMPANY,
-  COMPANY_TITLE,
-  TECHNOLOGY_TITLE,
-  PROJECT_TYPE_LABEL,
-} from './common'
-import {PATH_COLOR, PROJECT_ROUTE} from '../utils/constants'
+import {COMPANY_TITLE, TECHNOLOGY_TITLE, PROJECT_TYPE_LABEL} from './common'
 import {Project} from '../utils/types'
+
+const featureText = {
+  wholeDevelopment: 'Разработка с нуля, развитие и поддержка проекта',
+  scratchGrowthDevelopment: 'Разработка с нуля и поддержка проекта',
+  scratchDevelopment: 'Разработка проекта с нуля',
+  growthSupportDevelopment: 'Развитие и поддержка проекта',
+  leadWork: 'Тимлид команды фронтенд разработки',
+  teamWork: 'Член команды фронтенд разработки',
+  soloWork: 'Самостоятельная фронтенд разработка',
+}
 
 const PROJECTS: Project[] = [
   {
@@ -22,37 +17,17 @@ const PROJECTS: Project[] = [
     name: 'proximal',
     description: 'Лендинг австралийской кофейни "Proximal Coffee".',
     type: 'landing',
-    color: PATH_COLOR[PROJECT_ROUTE.proximal],
-    company: COMPANY.sevenGlyphs,
-    path: PROJECT_ROUTE.proximal,
+    companyName: 'sevenGlyphs',
     href: 'https://www.proximalcoffee.com.au',
     features: [
-      {
-        label: 'Разработка проекта с нуля',
-        Icon: CheckCircleIcon,
-      },
-      {
-        label: 'Самостоятельная фронтенд разработка',
-        Icon: GroupWorkIcon,
-      },
-      {
-        label: `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.js}`,
-        Icon: CodeIcon,
-      },
-      {
-        label: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.sass}, адаптивный интерфейс, анимации`,
-        Icon: PaletteIcon,
-      },
-      {
-        label: `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-        Icon: BuildIcon,
-      },
-      {
-        label: 'Анимации',
-        Icon: StarIcon,
-      },
-      {label: PROJECT_TYPE_LABEL.landing, Icon: WebIcon},
-      {label: 'Декабрь 2019', Icon: EventIcon, time: true},
+      featureText.scratchDevelopment,
+      featureText.soloWork,
+      `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.js}`,
+      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.sass}, адаптивный интерфейс, анимации`,
+      `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      'Анимации',
+      PROJECT_TYPE_LABEL.landing,
+      'Декабрь 2019',
     ],
     images: {
       desktop: [
@@ -86,7 +61,9 @@ const PROJECTS: Project[] = [
       ],
     },
   },
-  {
+]
+
+/* {
     title: 'АРМА ЕМБП',
     name: 'embp',
     description: 'Админка биометрической платформы для банка "ВТБ".',
@@ -96,11 +73,11 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.embp,
     features: [
       {
-        label: 'Разработка с нуля, развитие и поддержка проекта',
+        label: featureText.wholeDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Управление командой из двух фронтенд разработчиков',
+        label: featureText.leadWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -151,11 +128,11 @@ const PROJECTS: Project[] = [
     href: 'https://www.tmfoundation.co.nz',
     features: [
       {
-        label: 'Разработка проекта с нуля',
+        label: featureText.scratchDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -219,11 +196,11 @@ const PROJECTS: Project[] = [
     href: 'https://lite.7glyphs.com',
     features: [
       {
-        label: 'Разработка проекта с нуля',
+        label: featureText.scratchDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -287,11 +264,11 @@ const PROJECTS: Project[] = [
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
       {
-        label: 'Разработка проекта с нуля',
+        label: featureText.scratchDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -356,11 +333,11 @@ const PROJECTS: Project[] = [
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
-        label: 'Разработка с нуля, развитие и поддержка проекта',
+        label: featureText.wholeDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -411,11 +388,11 @@ const PROJECTS: Project[] = [
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
-        label: 'Разработка проекта с нуля',
+        label: featureText.scratchDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -479,11 +456,11 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.sds,
     features: [
       {
-        label: 'Разработка с нуля, развитие и поддержка проекта',
+        label: featureText.wholeDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Разработка в команде с фронтенд разработчиком',
+        label: featureText.leadWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -533,11 +510,11 @@ const PROJECTS: Project[] = [
     href: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
       {
-        label: 'Разработка с нуля, развитие и поддержка проекта',
+        label: featureText.wholeDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -602,11 +579,11 @@ const PROJECTS: Project[] = [
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
       {
-        label: 'Разработка с нуля и поддержка проекта',
+        label: featureText.scratchGrowthDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -661,7 +638,7 @@ const PROJECTS: Project[] = [
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Разработка в команде с фронтенд разработчиком',
+        label: featureText.teamWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -710,9 +687,9 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.services,
     href: 'https://7glyphs.com/approach/packages',
     features: [
-      {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
+      {label: featureText.scratchDevelopment, Icon: CheckCircleIcon},
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -774,9 +751,9 @@ const PROJECTS: Project[] = [
     company: COMPANY.sevenGlyphs,
     path: PROJECT_ROUTE.fcdc,
     features: [
-      {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
+      {label: featureText.scratchDevelopment, Icon: CheckCircleIcon},
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -825,9 +802,9 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.saffron,
     href: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
-      {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
+      {label: featureText.scratchDevelopment, Icon: CheckCircleIcon},
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -890,9 +867,9 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.whip,
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
-      {label: 'Развитие и поддержка проекта', Icon: CheckCircleIcon},
+      {label: featureText.growthSupportDevelopment, Icon: CheckCircleIcon},
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -939,9 +916,9 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.lazyazd,
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
-      {label: 'Разработка проекта с нуля', Icon: CheckCircleIcon},
+      {label: featureText.scratchDevelopment, Icon: CheckCircleIcon},
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -989,11 +966,11 @@ const PROJECTS: Project[] = [
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {
-        label: 'Разработка с нуля, развитие и поддержка проекта',
+        label: featureText.wholeDevelopment,
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -1061,7 +1038,7 @@ const PROJECTS: Project[] = [
         Icon: CheckCircleIcon,
       },
       {
-        label: 'Самостоятельная фронтенд разработка',
+        label: featureText.soloWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -1125,9 +1102,9 @@ const PROJECTS: Project[] = [
     path: PROJECT_ROUTE.msp,
     href: 'https://www.everpoint.ru/msp',
     features: [
-      {label: 'Развитие и поддержка проекта', Icon: CheckCircleIcon},
+      {label: featureText.growthSupportDevelopment, Icon: CheckCircleIcon},
       {
-        label: 'Член команды фронтенд разработки',
+        label: featureText.teamWork,
         Icon: GroupWorkIcon,
       },
       {
@@ -1165,7 +1142,6 @@ const PROJECTS: Project[] = [
         ],
       ],
     },
-  },
-]
+  }, */
 
 export default PROJECTS

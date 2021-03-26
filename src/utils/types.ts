@@ -34,7 +34,30 @@ export type Effect =
   | 'zoomOut'
   | 'zoomOutSm'
 
+export type CompanyName = 'tsftd' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
+
 export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
+
+export type ProjectName =
+  | 'proximal'
+  | 'embp'
+  | 'tmf'
+  | 'lite'
+  | 'mellissa'
+  | 'foodp'
+  | 'food'
+  | 'sds'
+  | 'strong'
+  | 'rogue'
+  | 'trucks'
+  | 'services'
+  | 'fcdc'
+  | 'saffron'
+  | 'whip'
+  | 'lazyazd'
+  | 'lazyaz'
+  | 'glyphs'
+  | 'msp'
 
 export interface Map<T> {
   [key: string]: T
@@ -86,14 +109,12 @@ export interface Job {
 
 export interface Project {
   title: string
-  name: string
+  name: ProjectName
   description: string
   type: ProjectType
-  color: Color
-  company: Company
-  path: string
+  companyName: CompanyName
   href?: string
-  features: Feature[]
+  features: string[]
   images: {
     desktop?: string[][]
     mobile?: string[][]

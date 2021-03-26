@@ -6,20 +6,31 @@ import {Grid, ButtonBase} from '@material-ui/core'
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'
 import {getListDelay} from '../../utils/helpers'
-import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
-import {Color, Effect, Company, TiltOptions, Width} from '../../utils/types'
+import {
+  DETECT,
+  ROUTE,
+  TILT_SCALE,
+  PROJECT_ROUTE,
+  PATH_COLOR,
+} from '../../utils/constants'
+import {
+  Effect,
+  ProjectName,
+  ProjectType,
+  CompanyName,
+  TiltOptions,
+  Width,
+} from '../../utils/types'
 import {DURATION} from '../../styles/theme'
-import {PROJECT_TYPE_LABEL} from '../../data/common'
+import {COMPANY, PROJECT_TYPE_LABEL} from '../../data/common'
 
 interface ProjectLinkProps {
   index: number
   width: Width
   title: string
-  name: string
-  type: keyof typeof PROJECT_TYPE_LABEL
-  color: Color
-  company: Company
-  path: string
+  name: ProjectName
+  type: ProjectType
+  companyName: CompanyName
 }
 
 const tiltOptions: TiltOptions = {
@@ -42,10 +53,11 @@ export default function ProjectLink({
   title,
   name,
   type,
-  color,
-  company,
-  path,
+  companyName,
 }: ProjectLinkProps): JSX.Element {
+  const path = PROJECT_ROUTE[name]
+  const company = COMPANY[companyName]
+
   return (
     <Grid
       item
@@ -67,7 +79,7 @@ export default function ProjectLink({
           <ButtonBase
             focusRipple
             component={Link}
-            className={`ProjectLink-Item ColorInteract ColorInteract_color_${color}`}
+            className={`ProjectLink-Item ColorInteract ColorInteract_color_${PATH_COLOR[path]}`}
             to={`${ROUTE.portfolio}${path}`}
           >
             <Panel
