@@ -1,16 +1,29 @@
 import React from 'react'
-import Swiper from 'react-id-swiper'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {SwiperOptions} from 'swiper'
 import {useMediaQuery} from '@material-ui/core'
 
 import './Carousel.scss'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 import {Animate, Panel} from '../common'
-import {SWIPER_OPTIONS, QUERY_BREAKPOINT} from '../../utils/constants'
+import {QUERY_BREAKPOINT} from '../../utils/constants'
+import {DURATION} from '../../styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
   title: string
   images: string[][]
+}
+
+export const swiperOptions: SwiperOptions = {
+  grabCursor: true,
+  loop: true,
+  speed: DURATION.longer,
+  loopedSlides: 3,
+  autoplay: {
+    delay: DURATION.lingering,
+    disableOnInteraction: false,
+  },
 }
 
 const renderSwiper = ({
@@ -23,20 +36,18 @@ const renderSwiper = ({
       mobile ? 'мобильного ' : ''
     }экрана проекта "${title}"`
     return (
-      <figure key={image[0]}>
+      <SwiperSlide key={image[0]} tag="figure">
         <img
           className="Carousel-Img"
           src={image[0]}
           srcSet={`${image[1]} 2x`}
           alt={caption}
         />
-      </figure>
+      </SwiperSlide>
     )
   })
   return imageElements.length > 1 ? (
-    <Swiper {...SWIPER_OPTIONS} containerClass="Carousel-Swiper">
-      {imageElements}
-    </Swiper>
+    <Swiper {...swiperOptions}>{imageElements}</Swiper>
   ) : (
     imageElements
   )

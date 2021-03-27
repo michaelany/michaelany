@@ -1,9 +1,8 @@
-import {SwiperOptions} from 'swiper'
 import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/ru'
 
 import {Route, Color, Map} from './types'
-import {DURATION, BREAKPOINT} from '../styles/theme'
+import {BREAKPOINT} from '../styles/theme'
 
 interface Detect {
   mobile: boolean
@@ -150,15 +149,4 @@ export const QUERY_BREAKPOINT: QueryBreakpoint = {
 export const BLANK_LINK_PROPS: BlankLinkProps = {
   target: '_blank',
   rel: 'noopener noreferrer',
-}
-
-export const SWIPER_OPTIONS: SwiperOptions = {
-  grabCursor: true,
-  loop: true,
-  speed: DURATION.longer,
-  loopedSlides: 3,
-  autoplay: {
-    delay: DURATION.lingering,
-    disableOnInteraction: false,
-  },
 }

@@ -27,7 +27,7 @@ export default function Project({
           title={project.title}
           companyName={project.companyName}
           description={project.description}
-          type={project.type}
+          types={project.types}
           features={project.features}
           href={project.href}
         />

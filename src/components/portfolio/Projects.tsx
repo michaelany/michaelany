@@ -25,7 +25,9 @@ const filterLabel: Map<string> = {
 const getFilteredProjects = (filter: string): Project[] =>
   filter === 'all'
     ? PROJECTS
-    : PROJECTS.filter((project: Project): boolean => project.type === filter)
+    : PROJECTS.filter((project: Project): boolean =>
+        project.types.includes(filter as ProjectType)
+      )
 
 function Projects(): JSX.Element {
   const [filter, changeFilter] = useState<string>(
@@ -63,7 +65,7 @@ function Projects(): JSX.Element {
             index={index}
             title={project.title}
             name={project.name}
-            type={project.type}
+            types={project.types}
             companyName={project.companyName}
           />
         ))}

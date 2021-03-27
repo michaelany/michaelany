@@ -5,7 +5,7 @@ import {Grid, ButtonBase} from '@material-ui/core'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'
-import {getListDelay} from '../../utils/helpers'
+import {getListDelay, getProjectTypesString} from '../../utils/helpers'
 import {
   DETECT,
   ROUTE,
@@ -22,14 +22,14 @@ import {
   Width,
 } from '../../utils/types'
 import {DURATION} from '../../styles/theme'
-import {COMPANY, PROJECT_TYPE_LABEL} from '../../data/common'
+import {COMPANY} from '../../data/common'
 
 interface ProjectLinkProps {
   index: number
   width: Width
   title: string
   name: ProjectName
-  type: ProjectType
+  types: ProjectType[]
   companyName: CompanyName
 }
 
@@ -52,7 +52,7 @@ export default function ProjectLink({
   width,
   title,
   name,
-  type,
+  types,
   companyName,
 }: ProjectLinkProps): JSX.Element {
   const path = PROJECT_ROUTE[name]
@@ -93,7 +93,9 @@ export default function ProjectLink({
                 alt={company.title}
               />
               <h3 className="ProjectLink-Title">{title}</h3>
-              <p className="ProjectLink-Label">{PROJECT_TYPE_LABEL[type]}</p>
+              <p className="ProjectLink-Label">
+                {getProjectTypesString(types)}
+              </p>
             </div>
           </ButtonBase>
         </Tilt>

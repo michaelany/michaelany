@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
     title: 'Proximal',
     name: 'proximal',
     description: 'Лендинг австралийской кофейни "Proximal Coffee".',
-    type: 'landing',
+    types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://www.proximalcoffee.com.au',
     features: [
@@ -68,7 +68,7 @@ const PROJECTS: Project[] = [
     title: 'АРМА ЕМБП',
     name: 'embp',
     description: 'Админка биометрической платформы для банка "ВТБ".',
-    type: 'admin',
+    types: ['admin', 'app'],
     companyName: 'tsftd',
     features: [
       featureText.wholeDevelopment,
@@ -100,8 +100,8 @@ const PROJECTS: Project[] = [
     title: 'TMF',
     name: 'tmf',
     description:
-      'Многостраничный сайт новозеландской строительной компании "Ted Manson Foundation".',
-    type: 'site',
+      'Многостраничный лендинг новозеландской строительной компании "Ted Manson Foundation".',
+    types: ['site', 'landing'],
     companyName: 'sevenGlyphs',
     href: 'https://www.tmfoundation.co.nz',
     features: [
@@ -148,7 +148,7 @@ const PROJECTS: Project[] = [
     title: '7 glyphs Lite',
     name: 'lite',
     description: `Лендинг сервиса новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}".`,
-    type: 'landing',
+    types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://lite.7glyphs.com',
     features: [
@@ -195,7 +195,7 @@ const PROJECTS: Project[] = [
     title: 'Melissa',
     name: 'melissa',
     description: 'Лендинг фитнес-блогера Melissa Chalmers.',
-    type: 'landing',
+    types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
@@ -243,7 +243,7 @@ const PROJECTS: Project[] = [
     name: 'foodp',
     description:
       'Админка новозеландского сервиса заказа еды в ресторанах "Foodprint".',
-    type: 'admin',
+    types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
@@ -277,7 +277,7 @@ const PROJECTS: Project[] = [
     name: 'food',
     description:
       'Лендинг новозеландского сервиса заказа еды в ресторанах "Foodprint".',
-    type: 'landing',
+    types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
@@ -325,7 +325,7 @@ const PROJECTS: Project[] = [
     name: 'sds',
     description:
       'Единый кабинет для работы сотрудников и партнеров компании "Vaillant".',
-    type: 'app',
+    types: ['app'],
     companyName: 'tsftd',
     features: [
       featureText.wholeDevelopment,
@@ -357,7 +357,7 @@ const PROJECTS: Project[] = [
     title: 'StrongHer',
     name: 'strong',
     description: 'Лендинг мобильного фитнес-приложения "StrongHer".',
-    type: 'landing',
+    types: ['landing', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
@@ -407,7 +407,7 @@ const PROJECTS: Project[] = [
     name: 'rogue',
     description:
       'Новозеландский сервис группового бронирования авиабилетов и отелей "Rogue Travel".',
-    type: 'site',
+    types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
@@ -441,7 +441,7 @@ const PROJECTS: Project[] = [
     name: 'trucks',
     description:
       'Новозеландский сервис мониторинга передвижения грузовиков "Quarry Trucks".',
-    type: 'app',
+    types: ['app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
     features: [
@@ -474,7 +474,7 @@ const PROJECTS: Project[] = [
     title: 'Services',
     name: 'services',
     description: `Лендинг описания услуг новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}".`,
-    type: 'landing',
+    types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/approach/packages',
     features: [
@@ -521,7 +521,7 @@ const PROJECTS: Project[] = [
     title: 'FCDC',
     name: 'fcdc',
     description: 'Админка сервиса управления мероприятиями "FCDC".',
-    type: 'admin',
+    types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     features: [
       featureText.scratchDevelopment,
@@ -553,7 +553,7 @@ const PROJECTS: Project[] = [
     title: '12 Saffron',
     name: 'saffron',
     description: 'Целевая страница для продажи частного дома в Новой Зеландии.',
-    type: 'landing',
+    types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
@@ -600,7 +600,7 @@ const PROJECTS: Project[] = [
     title: 'Whip Around',
     name: 'whip',
     description: 'Новозеландский сервис техосмотра автомобилей "Whip Around".',
-    type: 'site',
+    types: ['site'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
@@ -631,7 +631,7 @@ const PROJECTS: Project[] = [
     title: 'LazyAz',
     name: 'lazyazd',
     description: 'Админка новозеландского сервиса доставки "LazyAz".',
-    type: 'admin',
+    types: ['admin'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
@@ -662,7 +662,7 @@ const PROJECTS: Project[] = [
     title: 'LazyAz',
     name: 'lazyaz',
     description: 'Веб-платформа новозеландского сервиса доставки "LazyAz".',
-    type: 'site',
+    types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
@@ -708,8 +708,8 @@ const PROJECTS: Project[] = [
   {
     title: 'Сайт 7 glyphs',
     name: 'glyphs',
-    description: `Сайт новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}".`,
-    type: 'site',
+    description: `Домашний сайт новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}".`,
+    types: ['site', 'landing'],
     companyName: 'sevenGlyphs',
     href: COMPANY.sevenGlyphs.href,
     features: [
@@ -757,7 +757,7 @@ const PROJECTS: Project[] = [
     name: 'msp',
     description:
       'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес.',
-    type: 'app',
+    types: ['app', 'site'],
     companyName: 'everpoint',
     href: 'https://www.everpoint.ru/msp',
     features: [

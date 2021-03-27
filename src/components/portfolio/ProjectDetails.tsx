@@ -14,15 +14,16 @@ import {
 
 import './ProjectDetails.scss'
 import {Animate, Features, Company} from '../common'
+import {getProjectTypesString} from '../../utils/helpers'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {Feature, ProjectType, CompanyName} from '../../utils/types'
-import {COMPANY, PROJECT_TYPE_LABEL} from '../../data/common'
+import {COMPANY} from '../../data/common'
 
 interface ProjectDetailsProps {
   title: string
   companyName: CompanyName
   description: string
-  type: ProjectType
+  types: ProjectType[]
   features: string[]
   href?: string
 }
@@ -41,7 +42,7 @@ export default function ProjectDetails({
   title,
   companyName,
   description,
-  type,
+  types,
   features,
   href,
 }: ProjectDetailsProps): JSX.Element {
@@ -52,7 +53,10 @@ export default function ProjectDetails({
       time: index === features.length - 1,
     })
   )
-  featureItems.push({label: PROJECT_TYPE_LABEL[type], Icon: WebIcon})
+  featureItems.push({
+    label: getProjectTypesString(types),
+    Icon: WebIcon,
+  })
   const company = COMPANY[companyName]
 
   return (
@@ -62,7 +66,7 @@ export default function ProjectDetails({
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {description} Разработано в компании "{company.title}".
+        {description} Разработано в сотрудничестве с "{company.title}".
       </p>
       <Features items={featureItems} />
       {href && (

@@ -111,7 +111,7 @@ export interface Project {
   title: string
   name: ProjectName
   description: string
-  type: ProjectType
+  types: ProjectType[]
   companyName: CompanyName
   href?: string
   features: string[]
