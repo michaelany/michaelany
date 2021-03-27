@@ -5,23 +5,24 @@ import {
   CodeRounded as CodeIcon,
   EventRounded as EventIcon,
   PaletteRounded as PaletteIcon,
-  WebRounded as WebIcon,
   GroupWorkRounded as GroupWorkIcon,
   BuildRounded as BuildIcon,
   StarRounded as StarIcon,
   CheckCircleRounded as CheckCircleIcon,
+  WebRounded as WebIcon,
 } from '@material-ui/icons'
 
 import './ProjectDetails.scss'
 import {Animate, Features, Company} from '../common'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Feature, CompanyName} from '../../utils/types'
-import {COMPANY} from '../../data/common'
+import {Feature, ProjectType, CompanyName} from '../../utils/types'
+import {COMPANY, PROJECT_TYPE_LABEL} from '../../data/common'
 
 interface ProjectDetailsProps {
   title: string
   companyName: CompanyName
   description: string
+  type: ProjectType
   features: string[]
   href?: string
 }
@@ -33,7 +34,6 @@ const featureIcons = [
   PaletteIcon,
   BuildIcon,
   StarIcon,
-  WebIcon,
   EventIcon,
 ]
 
@@ -41,6 +41,7 @@ export default function ProjectDetails({
   title,
   companyName,
   description,
+  type,
   features,
   href,
 }: ProjectDetailsProps): JSX.Element {
@@ -51,6 +52,7 @@ export default function ProjectDetails({
       time: index === features.length - 1,
     })
   )
+  featureItems.push({label: PROJECT_TYPE_LABEL[type], Icon: WebIcon})
   const company = COMPANY[companyName]
 
   return (

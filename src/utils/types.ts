@@ -43,7 +43,7 @@ export type ProjectName =
   | 'embp'
   | 'tmf'
   | 'lite'
-  | 'mellissa'
+  | 'melissa'
   | 'foodp'
   | 'food'
   | 'sds'

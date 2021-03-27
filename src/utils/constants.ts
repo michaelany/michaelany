@@ -31,7 +31,7 @@ interface ProjectRoute {
   embp: string
   tmf: string
   lite: string
-  mellissa: string
+  melissa: string
   foodp: string
   food: string
   sds: string
@@ -95,7 +95,7 @@ export const PROJECT_ROUTE: ProjectRoute = {
   embp: '/arma-embp',
   tmf: '/tmf',
   lite: '/7glyphs-lite',
-  mellissa: '/melissa-chalmers',
+  melissa: '/melissa-chalmers',
   foodp: '/foodprint-portal',
   food: '/foodprint',
   sds: '/sds',
@@ -104,7 +104,7 @@ export const PROJECT_ROUTE: ProjectRoute = {
   trucks: '/quarry-trucks',
   services: '/service-packages',
   fcdc: '/fcdc-dashboard',
-  saffron: '/12-saffron',
+  saffron: '/saffron',
   whip: '/whip-around',
   lazyazd: '/lazyaz-dashboard',
   lazyaz: '/lazyaz',
@@ -123,18 +123,18 @@ export const PATH_COLOR: Map<Color> = {
   [PROJECT_ROUTE.proximal]: 'yellow',
   [PROJECT_ROUTE.tmf]: 'blue',
   [PROJECT_ROUTE.lite]: 'grass',
-  [PROJECT_ROUTE.mellissa]: 'green',
-  [PROJECT_ROUTE.foodp]: 'blue',
+  [PROJECT_ROUTE.melissa]: 'green',
+  [PROJECT_ROUTE.foodp]: 'violet',
   [PROJECT_ROUTE.food]: 'violet',
-  [PROJECT_ROUTE.sds]: 'grass',
+  [PROJECT_ROUTE.sds]: 'green',
   [PROJECT_ROUTE.strong]: 'red',
   [PROJECT_ROUTE.rogue]: 'violet',
-  [PROJECT_ROUTE.trucks]: 'default',
+  [PROJECT_ROUTE.trucks]: 'yellow',
   [PROJECT_ROUTE.services]: 'grass',
-  [PROJECT_ROUTE.fcdc]: 'default',
+  [PROJECT_ROUTE.fcdc]: 'blue',
   [PROJECT_ROUTE.saffron]: 'yellow',
-  [PROJECT_ROUTE.whip]: 'default',
-  [PROJECT_ROUTE.lazyazd]: 'default',
+  [PROJECT_ROUTE.whip]: 'green',
+  [PROJECT_ROUTE.lazyazd]: 'red',
   [PROJECT_ROUTE.lazyaz]: 'red',
   [PROJECT_ROUTE.glyphs]: 'grass',
   [PROJECT_ROUTE.msp]: 'blue',
