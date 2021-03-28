@@ -8,14 +8,11 @@ import {SocialLink} from '../../utils/types'
 import {TITLE, CONTACT_LINK} from '../../data/common'
 
 const links: SocialLink[] = [
+  CONTACT_LINK.email,
   CONTACT_LINK.telegram,
-  CONTACT_LINK.skype,
   CONTACT_LINK.linkedIn,
-  CONTACT_LINK.vk,
-  CONTACT_LINK.facebook,
+  CONTACT_LINK.skype,
 ]
-
-const email: string = 'mclananiev@gmail.com'
 
 export default function Contact(): JSX.Element {
   return (
@@ -26,16 +23,15 @@ export default function Contact(): JSX.Element {
           <div>
             <h1 className="Title">{TITLE.contact}</h1>
             <p className="MainText MainText_dark">
-              Вам нужна моя помощь или у вас есть ко мне вопросы? Напишите мне
-              на{' '}
+              Нужна моя помощь или есть ко мне вопросы? Пишите на{' '}
               <a
                 {...BLANK_LINK_PROPS}
                 className="Link"
-                href={`mailto:${email}`}
+                href={CONTACT_LINK.email.href}
               >
-                {email}
+                mclananiev@gmail.com
               </a>{' '}
-              или воспользуйтесь формой:
+              или отправьте сообщение через форму:
             </p>
             <ContactForm />
           </div>

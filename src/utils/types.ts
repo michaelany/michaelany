@@ -66,7 +66,7 @@ export interface Map<T> {
 export interface SocialLink {
   title: string
   href: string
-  Icon: FC<SVGProps<SVGSVGElement>>
+  Icon: any
   size: 'xs' | 'sm' | 'md' | 'lg'
 }
 

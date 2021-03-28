@@ -2,17 +2,18 @@ import {COMPANY, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
 const featureText = {
-  wholeDevelopment: 'Разработка с нуля, развитие и поддержка проекта',
-  scratchGrowthDevelopment: 'Разработка с нуля и поддержка проекта',
-  scratchDevelopment: 'Разработка проекта с нуля',
-  growthSupportDevelopment: 'Развитие и поддержка проекта',
-  leadWork: 'Тимлид команды фронтенд разработки',
-  teamWork: 'Член команды фронтенд разработки',
-  soloWork: 'Самостоятельная фронтенд разработка',
+  wholeDevelopment: 'Разработка с нуля, развитие, поддержка',
+  scratchGrowthDevelopment: 'Разработка с нуля, поддержка',
+  scratchDevelopment: 'Разработка с нуля',
+  growthSupportDevelopment: 'Развитие, поддержка',
+  leadWork: 'Тимлид команды разработки',
+  teamWork: 'Член команды разработки',
+  soloWork: 'Самостоятельная разработка',
   responsive: 'Адаптивный интерфейс',
   animations: 'Анимации',
   rest: 'Rest API',
   stripe: 'Stripe',
+  businessLogic: 'Обширная бизнес-логика',
 }
 
 const PROJECTS: Project[] = [
@@ -76,7 +77,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.mui}, ${TECHNOLOGY_TITLE.styled}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
-      'Обширная бизнес-логика, темная тема',
+      'Реализовал темную тему',
       'Июль 2019',
     ],
     images: {
@@ -252,7 +253,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${TECHNOLOGY_TITLE.sass}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      'Крупный проект с обширной бизнес-логикой',
+      featureText.businessLogic,
       'Июнь 2019',
     ],
     images: {
@@ -416,7 +417,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${TECHNOLOGY_TITLE.sass}`,
       `${featureText.rest}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      'Крупный проект с обширной бизнес-логикой',
+      featureText.businessLogic,
       'Ноябрь 2018',
     ],
     images: {
@@ -529,7 +530,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.mui}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.sass}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      'Большое количество форм и таблиц',
+      'Много форм и таблиц',
       'Январь 2018',
     ],
     images: {
@@ -766,7 +767,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.html}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.handlebars}, ${TECHNOLOGY_TITLE.jquery}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.semantic}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      `Крупный проект, реализовал внутренний проект на чистом ${TECHNOLOGY_TITLE.js}`,
+      `Первый коммерческий проект`,
       'Август 2016',
     ],
     images: {

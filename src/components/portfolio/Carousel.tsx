@@ -1,6 +1,6 @@
 import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import {SwiperOptions} from 'swiper'
+import SwiperCore, {Autoplay, SwiperOptions} from 'swiper'
 import {useMediaQuery} from '@material-ui/core'
 
 import './Carousel.scss'
@@ -15,14 +15,16 @@ interface CarouselProps {
   images: string[][]
 }
 
+SwiperCore.use([Autoplay])
+
 export const swiperOptions: SwiperOptions = {
+  zoom: true,
   grabCursor: true,
   loop: true,
   speed: DURATION.longer,
   loopedSlides: 3,
   autoplay: {
     delay: DURATION.lingering,
-    disableOnInteraction: false,
   },
 }
 

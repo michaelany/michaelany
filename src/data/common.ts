@@ -1,3 +1,5 @@
+import {AlternateEmailRounded as AlternateEmailIcon} from '@material-ui/icons'
+
 import {ReactComponent as SevenGlyphsIcon} from '../assets/icons/7glyphs.svg'
 import {ReactComponent as GitHubIcon} from '../assets/icons/github.svg'
 import {ReactComponent as LinkedInIcon} from '../assets/icons/linkedin.svg'
@@ -31,6 +33,7 @@ interface ContactLink {
   instagram: SocialLink
   vk: SocialLink
   facebook: SocialLink
+  email: SocialLink
   telegram: SocialLink
   skype: SocialLink
 }
@@ -101,6 +104,12 @@ export const CONTACT_LINK: ContactLink = {
     href: 'https://www.facebook.com/mclananiev',
     Icon: FacebookIcon,
     size: 'sm',
+  },
+  email: {
+    title: 'Email',
+    href: 'mailto:mclananiev@gmail.com',
+    Icon: AlternateEmailIcon,
+    size: 'lg',
   },
   telegram: {
     title: 'Telegram',
@@ -196,7 +205,6 @@ export const TECHNOLOGY_TITLE = {
   yarn: 'Yarn',
   webpack: 'webpack',
   gulp: 'Gulp',
-  parcel: 'Parcel',
   gatsby: 'Gatsby',
   next: 'Next.js',
   nuxt: 'Nuxt.js',
@@ -214,8 +222,6 @@ export const TECHNOLOGY_TITLE = {
   figma: 'Figma',
   photoshop: 'Photoshop',
   optim: 'ImageOptim',
-  trello: 'Trello',
-  flow: 'Flow',
   mac: 'macOS Big Sur',
   reactnative: 'React Native',
   node: 'Node.js',
@@ -454,13 +460,6 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         href: 'https://gulpjs.com',
       },
       {
-        disabled: true,
-        name: 'parcel',
-        label: TECHNOLOGY_TITLE.parcel,
-        color: 'yellow',
-        href: 'https://parceljs.org',
-      },
-      {
         name: 'babel',
         label: TECHNOLOGY_TITLE.babel,
         color: 'yellow',
@@ -565,18 +564,6 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.optim,
         color: 'default',
         href: 'https://imageoptim.com',
-      },
-      {
-        name: 'trello',
-        label: TECHNOLOGY_TITLE.trello,
-        color: 'blue',
-        href: 'https://www.trello.com',
-      },
-      {
-        name: 'flow',
-        label: TECHNOLOGY_TITLE.flow,
-        color: 'blue',
-        href: 'https://www.getflow.com',
       },
       {
         name: 'mac',
