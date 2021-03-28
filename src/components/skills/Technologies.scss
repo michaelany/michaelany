@@ -3,15 +3,15 @@
 
 $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
   'apollo', 'jquery', 'html', 'svg', 'pug', 'handlebars', 'markdown', 'laravel',
-  'css', 'bem', 'sass', 'mui', 'styled', 'modules', 'reactstrap', 'ant',
+  'css', 'sass', 'bem', 'mui', 'styled', 'modules', 'reactstrap', 'ant',
   'materialize', 'bootstrap', 'semantic', 'emails', 'npm', 'yarn', 'webpack',
   'gulp', 'gatsby', 'next', 'nuxt', 'git', 'babel', 'prettier', 'eslint', 'jest',
   'iterm', 'vscode', 'phpstorm', 'devtools', 'zeplin', 'sketch', 'figma',
   'photoshop', 'optim', 'mac', 'node', 'mongo', 'mysql', 'php';
 
 .Technologies-Title {
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .Technologies-List {
@@ -23,9 +23,6 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
   @include responsiveBlock;
   overflow: hidden;
   width: 100%;
-  &.Mui-disabled {
-    opacity: 0.1;
-  }
 }
 
 .Technologies-ItemContent {
@@ -45,5 +42,8 @@ $technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
+  }
+  .Technologies-Item_disabled > & {
+    opacity: 0.15;
   }
 }

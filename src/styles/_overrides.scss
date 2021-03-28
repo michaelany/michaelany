@@ -38,6 +38,7 @@
 .MuiTooltip {
   &-tooltip {
     font-size: $font-size_smaller;
+    font-weight: 500;
     color: $color_text;
     background-color: white;
     border: 1px solid $color_text;

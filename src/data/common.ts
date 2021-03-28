@@ -190,8 +190,8 @@ export const TECHNOLOGY_TITLE = {
   markdown: 'Markdown',
   blade: 'Blade',
   css: 'CSS',
-  bem: 'BEM',
   sass: 'Sass',
+  bem: 'BEM',
   modules: 'CSS Modules',
   styled: 'styled-components',
   mui: 'Material-UI',
@@ -357,16 +357,16 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         href: 'https://www.w3.org/style/css',
       },
       {
-        name: 'bem',
-        label: TECHNOLOGY_TITLE.bem,
-        color: 'default',
-        href: 'https://bem.info',
-      },
-      {
         name: 'sass',
         label: TECHNOLOGY_TITLE.sass,
         color: 'red',
         href: 'https://sass-lang.com',
+      },
+      {
+        name: 'bem',
+        label: TECHNOLOGY_TITLE.bem,
+        color: 'default',
+        href: 'https://bem.info',
       },
       {
         name: 'modules',

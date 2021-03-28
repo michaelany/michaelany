@@ -99,7 +99,7 @@ const steps: Step[] = [
     label: 'Апрель 2017 - апрель 2018',
     text: (
       <span>
-        Работал удаленно <strong>фронтенд-разработчиком</strong> в компании "
+        Работал <strong>фронтенд-разработчиком</strong> в компании "
         {COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
@@ -214,7 +214,9 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
       ))}
       {step === steps.length && (
         <>
-          <p className="Stepper-Text">Продолжение следует...</p>
+          <p className="Stepper-Text Stepper-Text_last">
+            Кто знает, что там впереди?
+          </p>
           <Fab
             className="Stepper-Button"
             size="medium"

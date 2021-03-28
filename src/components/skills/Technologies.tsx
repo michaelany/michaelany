@@ -1,4 +1,5 @@
 import React, {Dispatch, SetStateAction, RefObject} from 'react'
+import cn from 'clsx'
 import {
   useMediaQuery,
   Grid,
@@ -45,16 +46,18 @@ const TechnologyList = ({
           lg={4}
           xl={3}
         >
-          <Tooltip title={label}>
+          <Tooltip title={`${disabled ? 'Изучаю ' : ''}${label}`}>
             <ButtonBase
               {...BLANK_LINK_PROPS}
               focusRipple
               component="a"
-              className={`Technologies-Item ColorInteract ColorInteract_color_${color}`}
+              className={cn(
+                `Technologies-Item ColorInteract ColorInteract_color_${color}`,
+                disabled && 'Technologies-Item_disabled'
+              )}
               href={href}
               aria-label={label}
               action={index === 0 ? firstTechnologyActionRef : undefined}
-              disabled={disabled}
             >
               <div
                 className={`Technologies-ItemContent Technologies-ItemContent_name_${name}`}

@@ -23,7 +23,7 @@ export default function Contact(): JSX.Element {
           <div>
             <h1 className="Title">{TITLE.contact}</h1>
             <p className="MainText MainText_dark">
-              Нужна моя помощь или есть ко мне вопросы? Пишите на{' '}
+              Нужна моя помощь или у вас есть ко мне вопросы? Пишите на почту{' '}
               <a
                 {...BLANK_LINK_PROPS}
                 className="Link"
@@ -31,7 +31,7 @@ export default function Contact(): JSX.Element {
               >
                 mclananiev@gmail.com
               </a>{' '}
-              или отправьте сообщение через форму:
+              или воспользуйтесь формой:
             </p>
             <ContactForm />
           </div>

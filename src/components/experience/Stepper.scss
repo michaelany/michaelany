@@ -9,8 +9,11 @@
 }
 
 .Stepper-Text {
-  margin-top: 8px;
+  padding-top: 8px;
   margin-bottom: 24px;
+  &_last {
+    padding-top: 16px;
+  }
 }
 
 .Stepper-Actions {
