@@ -21,44 +21,49 @@ interface JobProps extends JobInterface {
   index: number
 }
 
-const renderOccupations = (
-  occupations: string[],
+interface OccupationsProps {
   current?: boolean
-): JSX.Element => {
-  return (
-    <div className="Job-Occupations">
-      {occupations.map((occupation: string, index: number) => {
-        const last: boolean = index === 0
-        const lastCurrent: boolean | undefined = last && current
-        return (
-          <Fragment key={index}>
-            <h3
-              className={cn(
-                'Job-Occupation',
-                last && 'Job-Occupation_last',
-                lastCurrent && 'Job-Occupation_current'
-              )}
-            >
-              <span>
-                {occupation}
-                {lastCurrent && (
-                  <Tooltip title="Текущая должность">
-                    <span className="Job-Badge" />
-                  </Tooltip>
-                )}
-              </span>
-            </h3>
-            {index < occupations.length - 1 && (
-              <ForwardIcon className="Job-UpIcon" />
-            )}
-          </Fragment>
-        )
-      })}
-    </div>
-  )
+  occupations: string[]
 }
 
-const renderBlock = (items: string[], isDuties?: boolean): JSX.Element => (
+interface BlockProps {
+  isDuties?: boolean
+  items: string[]
+}
+
+const Occupations = ({current, occupations}: OccupationsProps): JSX.Element => (
+  <div className="Job-Occupations">
+    {occupations.map((occupation: string, index: number) => {
+      const last: boolean = index === 0
+      const lastCurrent: boolean | undefined = last && current
+      return (
+        <Fragment key={index}>
+          <h3
+            className={cn(
+              'Job-Occupation',
+              last && 'Job-Occupation_last',
+              lastCurrent && 'Job-Occupation_current'
+            )}
+          >
+            <span>
+              {occupation}
+              {lastCurrent && (
+                <Tooltip title="Текущая должность">
+                  <span className="Job-Badge" />
+                </Tooltip>
+              )}
+            </span>
+          </h3>
+          {index < occupations.length - 1 && (
+            <ForwardIcon className="Job-UpIcon" />
+          )}
+        </Fragment>
+      )
+    })}
+  </div>
+)
+
+const Block = ({isDuties, items}: BlockProps): JSX.Element => (
   <div className="Job-Block">
     <h4 className="Job-SubTitle">
       {isDuties ? <WorkIcon /> : <StarIcon />}
@@ -91,9 +96,9 @@ export default function Job({
         </div>
       </AccordionSummary>
       <AccordionDetails className="Job-Content">
-        {renderOccupations(occupations, current)}
-        {renderBlock(duties, true)}
-        {renderBlock(achievements)}
+        <Occupations current={current} occupations={occupations} />
+        <Block isDuties items={duties} />
+        <Block items={achievements} />
         <div className="Job-Features">
           {features.map(
             ({label, Icon, time, disabled}: Feature, index: number) => (

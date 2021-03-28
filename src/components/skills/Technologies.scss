@@ -1,49 +1,11 @@
 @import 'styles/variables';
-@import 'styles/mixins';
-
-$technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
-  'apollo', 'jquery', 'html', 'svg', 'pug', 'handlebars', 'markdown', 'laravel',
-  'css', 'sass', 'bem', 'mui', 'styled', 'modules', 'reactstrap', 'ant',
-  'materialize', 'bootstrap', 'semantic', 'emails', 'npm', 'yarn', 'webpack',
-  'gulp', 'gatsby', 'next', 'nuxt', 'git', 'babel', 'prettier', 'eslint', 'jest',
-  'iterm', 'vscode', 'phpstorm', 'devtools', 'zeplin', 'sketch', 'figma',
-  'photoshop', 'optim', 'mac', 'node', 'mongo', 'mysql', 'php';
 
 .Technologies-Title {
   font-size: 1.125rem;
   font-weight: 500;
 }
 
-.Technologies-List {
+.Technologies-Groups {
   overflow: hidden;
   border-radius: $border-radius;
-}
-
-.Technologies-Item {
-  @include responsiveBlock;
-  overflow: hidden;
-  width: 100%;
-}
-
-.Technologies-ItemContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @each $technology in $technologies {
-    &_name_#{$technology}::before {
-      @include retinaImg('../assets/img/technologies/#{$technology}', 'png');
-    }
-  }
-  &::before {
-    @include pseudo(relative);
-    width: 50%;
-    height: 50%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
-  .Technologies-Item_disabled > & {
-    opacity: 0.15;
-  }
 }

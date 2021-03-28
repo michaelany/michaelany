@@ -28,7 +28,7 @@ export const swiperOptions: SwiperOptions = {
   },
 }
 
-const renderSwiper = ({
+const renderContent = ({
   mobile,
   title,
   images,
@@ -61,7 +61,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
   if (props.mobile)
     return (
       <Animate className="Carousel Carousel_type_mobile">
-        <div className="Carousel-Block">{renderSwiper(props)}</div>
+        <div className="Carousel-Block">{renderContent(props)}</div>
         <PhoneSvg className="Carousel-Svg" />
       </Animate>
     )
@@ -73,7 +73,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
       duration={md ? undefined : 'longer'}
     >
       <Panel className="Carousel-Content">
-        <div className="Carousel-Block">{renderSwiper(props)}</div>
+        <div className="Carousel-Block">{renderContent(props)}</div>
       </Panel>
     </Animate>
   )
