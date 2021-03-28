@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Sidebar.scss'
 import {Logo, Navigation} from '../common'
 

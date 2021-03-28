@@ -1,4 +1,3 @@
-import React from 'react'
 import cn from 'clsx'
 import {useMediaQuery, Fab} from '@material-ui/core'
 

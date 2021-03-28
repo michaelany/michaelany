@@ -1,4 +1,4 @@
-import React, {MouseEvent} from 'react'
+import {MouseEvent} from 'react'
 import cn from 'clsx'
 import {ButtonBase} from '@material-ui/core'
 

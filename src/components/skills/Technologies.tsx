@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, RefObject} from 'react'
+import {Dispatch, SetStateAction, RefObject} from 'react'
 
 import {
   useMediaQuery,

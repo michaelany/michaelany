@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Panel.scss'
 import desktopSvg from '../../assets/img/shapes/desktop.svg'
 

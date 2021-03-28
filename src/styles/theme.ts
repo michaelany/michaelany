@@ -36,7 +36,7 @@ export const BREAKPOINT = {
   lg: 1279,
 }
 
-export default {
+const THEME = {
   typography: {
     fontFamily: [
       '-apple-system',
@@ -121,3 +121,5 @@ export default {
     MuiDrawer: {keepMounted: true, disablePortal: true, elevation: 0},
   },
 }
+
+export default THEME

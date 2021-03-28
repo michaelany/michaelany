@@ -1,4 +1,3 @@
-import React from 'react'
 import {RouteChildrenProps} from 'react-router-dom'
 
 import {Sections, Pagination, Copyright} from '../common'

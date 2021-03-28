@@ -1,4 +1,4 @@
-import React, {memo, useState, ChangeEvent} from 'react'
+import {memo, useState, ChangeEvent} from 'react'
 import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
 
 import './Projects.scss'

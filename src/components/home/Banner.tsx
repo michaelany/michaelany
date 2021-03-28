@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Banner.scss'
 import macbookImg from '../../assets/img/pictures/macbook.png'
 import macbookImg2x from '../../assets/img/pictures/macbook@2x.png'

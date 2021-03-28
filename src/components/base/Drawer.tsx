@@ -1,4 +1,3 @@
-import React from 'react'
 import {Drawer as MuiDrawer, IconButton} from '@material-ui/core'
 import {ArrowBackRounded as ArrowBackIcon} from '@material-ui/icons'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactTilt from 'react-tilt'
 
 import {DETECT} from '../../utils/constants'

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import {Sections, SocialLinks, Pagination, Copyright} from '../common'
 import ContactForm from './ContactForm'
 import Map from './Map'

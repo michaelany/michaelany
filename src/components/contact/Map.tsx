@@ -1,4 +1,3 @@
-import React from 'react'
 import {useHistory} from 'react-router-dom'
 import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import {CircularProgress} from '@material-ui/core'
@@ -6,7 +5,7 @@ import {CircularProgress} from '@material-ui/core'
 import './Map.scss'
 import markerIcon from '../../assets/icons/marker.svg'
 import {ROUTE} from '../../utils/constants'
-import mapTheme from '../../styles/map'
+import STYLES from '../../styles/map'
 
 interface InitialCenter {
   lat: number
@@ -38,7 +37,7 @@ function Map(): JSX.Element {
         google={window.google}
         initialCenter={initialCenter}
         zoom={10}
-        styles={mapTheme as any}
+        styles={STYLES as any}
       >
         <Marker icon={markerIcon} onClick={handleMarkerClick} />
       </GoogleMap>

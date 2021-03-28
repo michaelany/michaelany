@@ -1,4 +1,4 @@
-import React, {useState, ReactNode, AllHTMLAttributes} from 'react'
+import {useState, ReactNode, AllHTMLAttributes} from 'react'
 import cn from 'clsx'
 import {Waypoint} from 'react-waypoint'
 

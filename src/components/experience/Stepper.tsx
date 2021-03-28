@@ -1,4 +1,4 @@
-import React, {useState, RefObject} from 'react'
+import {useState, RefObject} from 'react'
 import {
   Stepper as MuiStepper,
   Step,
@@ -21,12 +21,12 @@ interface StepperProps {
   sectionRef: RefObject<HTMLElement>
 }
 
-interface Step {
+interface StepInterface {
   label: string
   text: string | JSX.Element
 }
 
-const steps: Step[] = [
+const steps: StepInterface[] = [
   {
     label: 'Октябрь 2008 - май 2010',
     text: (
@@ -183,7 +183,7 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
 
   return (
     <MuiStepper className="Stepper" activeStep={step} orientation="vertical">
-      {steps.map((item: Step, index: number) => (
+      {steps.map((item: StepInterface, index: number) => (
         <Step key={index}>
           <StepLabel>
             <time className="Stepper-Time">{item.label}</time>

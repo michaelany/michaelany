@@ -1,4 +1,3 @@
-import React from 'react'
 import {Tooltip as MuiTooltip, TooltipProps} from '@material-ui/core'
 
 import {DETECT} from '../../utils/constants'

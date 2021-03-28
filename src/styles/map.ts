@@ -1,6 +1,6 @@
 import {COLOR} from './theme'
 
-export default [
+const STYLES = [
   {
     elementType: 'geometry',
     stylers: [
@@ -325,3 +325,5 @@ export default [
     ],
   },
 ]
+
+export default STYLES

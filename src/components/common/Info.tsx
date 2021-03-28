@@ -1,4 +1,4 @@
-import React, {useState, memo} from 'react'
+import {useState, memo} from 'react'
 import cn from 'clsx'
 import {Button} from '@material-ui/core'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'

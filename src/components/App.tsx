@@ -1,4 +1,3 @@
-import React from 'react'
 import {Switch, Route, Redirect, useLocation} from 'react-router-dom'
 import cn from 'clsx'
 import {Hidden} from '@material-ui/core'

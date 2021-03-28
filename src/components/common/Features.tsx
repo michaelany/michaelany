@@ -1,4 +1,4 @@
-import React, {memo} from 'react'
+import {memo} from 'react'
 import {useMediaQuery, Collapse, Grid} from '@material-ui/core'
 
 import './Features.scss'

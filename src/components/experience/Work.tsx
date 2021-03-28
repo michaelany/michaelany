@@ -1,4 +1,3 @@
-import React from 'react'
 import ScheduleIcon from '@material-ui/icons/ScheduleRounded'
 import ExploreIcon from '@material-ui/icons/ExploreRounded'
 import MyLocationIcon from '@material-ui/icons/MyLocationRounded'

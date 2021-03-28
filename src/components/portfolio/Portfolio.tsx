@@ -1,5 +1,3 @@
-import React from 'react'
-
 import {Pagination, Copyright} from '../common'
 import Projects from './Projects'
 import {ROUTE} from '../../utils/constants'

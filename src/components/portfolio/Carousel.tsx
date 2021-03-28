@@ -1,4 +1,3 @@
-import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Autoplay, SwiperOptions} from 'swiper'
 import {useMediaQuery} from '@material-ui/core'
