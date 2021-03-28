@@ -18,31 +18,9 @@
   }
 }
 
-@keyframes fadeInTopSm {
-  from {
-    transform: translate3d(0, -$effect_delta-sm, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInRight {
   from {
     transform: translate3d($effect_delta, 0, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRightSm {
-  from {
-    transform: translate3d($effect_delta-sm, 0, 0);
     opacity: 0;
   }
   to {
@@ -62,31 +40,9 @@
   }
 }
 
-@keyframes fadeInBottomSm {
-  from {
-    transform: translate3d(0, $effect_delta-sm, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInLeft {
   from {
     transform: translate3d(-$effect_delta, 0, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInLeftSm {
-  from {
-    transform: translate3d(-$effect_delta-sm, 0, 0);
     opacity: 0;
   }
   to {

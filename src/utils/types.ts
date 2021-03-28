@@ -1,4 +1,3 @@
-import {SVGProps, FC} from 'react'
 import {SvgIconProps} from '@material-ui/core'
 
 export type Route =
@@ -22,13 +21,9 @@ export type Color =
 
 export type Effect =
   | 'top'
-  | 'topSm'
   | 'right'
-  | 'rightSm'
   | 'bottom'
-  | 'bottomSm'
   | 'left'
-  | 'leftSm'
   | 'zoomIn'
   | 'zoomInSm'
   | 'zoomOut'

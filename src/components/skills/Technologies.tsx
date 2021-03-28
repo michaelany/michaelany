@@ -47,7 +47,7 @@ export default function Technologies({
       <Animate
         el="ul"
         className="Technologies-Groups"
-        effect={md ? undefined : 'rightSm'}
+        effect={md ? undefined : 'right'}
         duration={md ? undefined : 'longer'}
       >
         {TECHNOLOGY_GROUPS.map((group: TechnologyGroup, index: number) => (

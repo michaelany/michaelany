@@ -90,7 +90,7 @@
 }
 
 .MainText {
-  @include animation(fadeInBottomSm);
+  @include animation(fadeInBottom);
   font-size: 30px;
   font-weight: 300;
   line-height: 1.5;

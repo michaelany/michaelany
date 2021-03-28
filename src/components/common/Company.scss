@@ -10,7 +10,7 @@ $img-height_sm: 32px;
 .Company {
   padding: $padding_st;
   &_animated {
-    @include animation(fadeInTopSm);
+    @include animation(fadeInTop);
     margin-left: -$padding_st;
     margin-right: -$padding_st;
   }

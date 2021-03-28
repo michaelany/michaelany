@@ -13,7 +13,7 @@ interface FeaturesProps {
 }
 
 const getEffect = (xs: boolean, index: number): Effect =>
-  xs ? 'bottom' : index % 2 ? 'rightSm' : 'leftSm'
+  xs ? 'bottom' : index % 2 ? 'right' : 'left'
 
 function Features({items, extra}: FeaturesProps): JSX.Element {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)

@@ -7,7 +7,7 @@
 }
 
 .Sections-Animated {
-  @include animation(fadeInRightSm);
+  @include animation(fadeInRight);
   @include md {
     animation: none;
   }

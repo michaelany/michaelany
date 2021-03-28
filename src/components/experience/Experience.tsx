@@ -20,7 +20,7 @@ export default function Experience(): JSX.Element {
         >
           <h2 className="VisuallyHidden">Этапы</h2>
           <Animate
-            effect={md ? undefined : 'rightSm'}
+            effect={md ? undefined : 'right'}
             duration={md ? undefined : 'longer'}
           >
             <Stepper sectionRef={sectionRef} />

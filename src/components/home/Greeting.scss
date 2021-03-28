@@ -59,7 +59,7 @@
 }
 
 .Greeting-Third {
-  @include animation(fadeInBottomSm, 1000ms);
+  @include animation(fadeInBottom, 1000ms);
   &_order_second {
     animation-delay: 1550ms;
   }
@@ -69,11 +69,11 @@
 }
 
 .Greeting-Fourth {
-  @include animation(fadeInTopSm, 2000ms);
+  @include animation(fadeInTop, 2000ms);
 }
 
 .Greeting-Fifth {
-  @include animation(fadeInRightSm, 2500ms);
+  @include animation(fadeInRight, 2500ms);
 }
 
 .Greeting-Sixth {

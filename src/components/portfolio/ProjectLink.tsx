@@ -38,7 +38,7 @@ const tiltOptions: TiltOptions = {
   speed: DURATION.longest,
 }
 
-const randomEffects: Effect[] = ['topSm', 'rightSm', 'bottomSm', 'leftSm']
+const randomEffects: Effect[] = ['top', 'right', 'bottom', 'left']
 
 const getDelay = (index: number, width: Width): number => {
   if (width.sm) return 0

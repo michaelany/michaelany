@@ -2,7 +2,7 @@
 @import 'styles/mixins';
 
 .Map {
-  @include animation(fadeInRightSm);
+  @include animation(fadeInRight);
   position: fixed;
   width: calc(50% - #{$sidebar-width} / 2);
   height: 100vh;

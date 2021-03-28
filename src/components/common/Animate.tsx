@@ -22,7 +22,7 @@ export default function Animate({
   children,
   el: Element = 'div',
   className,
-  effect = 'bottomSm',
+  effect = 'bottom',
   duration = 'long',
   delay = 0,
   easing = 'inOut',
@@ -35,7 +35,7 @@ export default function Animate({
   }
 
   return (
-    <Waypoint onEnter={onWaypointEnter}>
+    <Waypoint bottomOffset="5%" onEnter={onWaypointEnter}>
       <Element
         {...props}
         className={cn(className, 'Animate')}

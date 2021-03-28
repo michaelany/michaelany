@@ -68,7 +68,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
   return (
     <Animate
       className="Carousel Carousel_type_desktop"
-      effect={md ? 'bottomSm' : 'rightSm'}
+      effect={md ? 'bottom' : 'right'}
       duration={md ? undefined : 'longer'}
     >
       <Panel className="Carousel-Content">

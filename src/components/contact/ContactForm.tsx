@@ -123,7 +123,7 @@ export default function ContactForm(): JSX.Element {
       noValidate
       el="form"
       className="ContactForm"
-      effect="bottomSm"
+      effect="bottom"
       onSubmit={handleSubmit}
     >
       <Grid container spacing={2}>
