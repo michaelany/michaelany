@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import {Switch, Route, Redirect, useLocation} from 'react-router-dom'
 import cn from 'clsx'
 import {Hidden} from '@material-ui/core'
@@ -14,8 +15,20 @@ import Project from './portfolio/Project'
 import Contact from './contact/Contact'
 import {ROUTE, PATH_COLOR} from '../utils/constants'
 
+const handleLoaded = (): void => {
+  const preloader: HTMLElement = document.getElementById('preloader')!
+  preloader.classList.remove('Preloader_show')
+  document.body.style.overflow = 'auto'
+  setTimeout(() => preloader.remove(), 1000)
+}
+
 export default function App(): JSX.Element {
   const {pathname} = useLocation()
+
+  useEffect(() => {
+    window.addEventListener('load', handleLoaded)
+  }, [])
+
   const lastSlashIndex: number = pathname.lastIndexOf('/')
   const AppClassName: string = cn(
     `App App_page_${

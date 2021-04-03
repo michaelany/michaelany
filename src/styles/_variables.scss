@@ -47,9 +47,9 @@ $duration_standard: 300ms;
 $duration_medium: 500ms;
 $duration_medium-long: 650ms;
 $duration_long: 800ms;
-$duration_longer: 1000ms;
-$duration_longest: 2000ms;
-$duration_lingering: 3000ms;
+$duration_longer: 1s;
+$duration_longest: 2s;
+$duration_lingering: 3s;
 $duration_alternate: 20s;
 
 $easing_in-out: cubic-bezier(0.4, 0, 0.2, 1);
