@@ -76,7 +76,7 @@ const PROJECTS: Project[] = [
     name: 'embp',
     description: 'Админка биометрической платформы для банка "ВТБ".',
     types: ['admin', 'app'],
-    companyName: 'tsftd',
+    companyName: 'tsc',
     features: [
       featureText.wholeDevelopment,
       featureText.leadWork,
@@ -337,7 +337,7 @@ const PROJECTS: Project[] = [
     description:
       'Единый кабинет для работы сотрудников и партнеров компании "Vaillant".',
     types: ['app'],
-    companyName: 'tsftd',
+    companyName: 'tsc',
     features: [
       featureText.wholeDevelopment,
       featureText.leadWork,

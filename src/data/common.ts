@@ -23,7 +23,7 @@ interface CompanyTitle {
   mvideo: string
   everpoint: string
   sevenGlyphs: string
-  tsftd: string
+  tsc: string
 }
 
 interface ContactLink {
@@ -39,7 +39,7 @@ interface ContactLink {
 }
 
 interface CompanyInterface {
-  tsftd: Company
+  tsc: Company
   sevenGlyphs: Company
   everpoint: Company
   mvideo: Company
@@ -65,7 +65,7 @@ export const COMPANY_TITLE: CompanyTitle = {
   mvideo: 'М.Видео',
   everpoint: 'Эверпоинт',
   sevenGlyphs: '7 glyphs Ltd.',
-  tsftd: 'ТехноСофт Диджитал',
+  tsc: 'Техносерв Консалтинг',
 }
 
 export const CONTACT_LINK: ContactLink = {
@@ -126,14 +126,14 @@ export const CONTACT_LINK: ContactLink = {
 }
 
 export const COMPANY: CompanyInterface = {
-  tsftd: {
-    title: COMPANY_TITLE.tsftd,
+  tsc: {
+    title: COMPANY_TITLE.tsc,
     images: [
-      require('../assets/img/companies/tsftd.png').default,
-      require('../assets/img/companies/tsftd@2x.png').default,
+      require('../assets/img/companies/tsc.png').default,
+      require('../assets/img/companies/tsc@2x.png').default,
     ],
-    color: 'red',
-    href: 'http://www.tsft.ru',
+    color: 'blue',
+    href: 'http://www.tsconsulting.com',
   },
   sevenGlyphs: {
     title: COMPANY_TITLE.sevenGlyphs,

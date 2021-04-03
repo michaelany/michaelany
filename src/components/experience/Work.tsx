@@ -21,8 +21,8 @@ const occupation = {
 const jobs: JobInterface[] = [
   {
     current: true,
-    company: COMPANY.tsftd,
-    occupations: [occupation.lead, occupation.senior, occupation.middle],
+    company: COMPANY.tsc,
+    occupations: [occupation.lead, occupation.senior],
     duties: [
       'Разработка бизнес-логики приложений',
       'Создание архитектуры приложений',

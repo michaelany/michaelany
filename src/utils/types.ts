@@ -29,7 +29,7 @@ export type Effect =
   | 'zoomOut'
   | 'zoomOutSm'
 
-export type CompanyName = 'tsftd' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
+export type CompanyName = 'tsc' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 
 export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
 

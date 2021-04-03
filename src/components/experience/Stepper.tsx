@@ -109,38 +109,18 @@ const steps: StepInterface[] = [
     text: (
       <span>
         Договорился с "{COMPANY_TITLE.sevenGlyphs}" о продолжении сотрудничества
-        по проектам в режиме частичной занятости. Прошел собеседование и
-        устроился в компанию "{COMPANY_TITLE.tsftd}" на должность{' '}
-        <strong>фронтенд-разработчика</strong>
+        по проектам в режиме частичной занятости. Получил несколько офферов на
+        позицию <strong>ведущего фронтенд-разработчика</strong>, выбрал компанию
+        "{COMPANY_TITLE.tsc}"
       </span>
     ),
   },
   {
-    label: 'Апрель 2018 - август 2018',
-    text: (
-      <span>
-        Работал <strong>фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLE.tsftd}".
-      </span>
-    ),
-  },
-  {
-    label: 'Август 2018',
-    text: (
-      <span>
-        В результате успешной работы получил повышение до{' '}
-        <strong>ведущего фронтенд-разработчика</strong> в компании "
-        {COMPANY_TITLE.tsftd}
-        ".
-      </span>
-    ),
-  },
-  {
-    label: 'Август 2018 - январь 2019',
+    label: 'Апрель 2018 - январь 2019',
     text: (
       <span>
         Работал <strong>ведущим фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLE.tsftd}".
+        {COMPANY_TITLE.tsc}"
       </span>
     ),
   },
@@ -148,8 +128,10 @@ const steps: StepInterface[] = [
     label: 'Январь 2019',
     text: (
       <span>
-        Получил повышение до <strong>тимлида фронтенд-разработки</strong> в
-        компании "{COMPANY_TITLE.tsftd}".
+        В результате успешной реализации нескольких проектов и расширения зоны
+        ответственности получил повышение до{' '}
+        <strong>тимлида фронтенд-разработки</strong> в компании "
+        {COMPANY_TITLE.tsc}"
       </span>
     ),
   },
@@ -158,8 +140,8 @@ const steps: StepInterface[] = [
     text: (
       <span>
         Работаю <strong>тимлидом фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLE.tsftd}". Продолжаю сотрудничество по проектам с "
-        {COMPANY_TITLE.sevenGlyphs}".
+        {COMPANY_TITLE.tsc}". Продолжаю сотрудничество по проектам с "
+        {COMPANY_TITLE.sevenGlyphs}"
       </span>
     ),
   },
@@ -215,7 +197,7 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
       {step === steps.length && (
         <>
           <p className="Stepper-Text Stepper-Text_last">
-            Кто знает, что там впереди?
+            Продолжение следует...
           </p>
           <Fab
             className="Stepper-Button"
