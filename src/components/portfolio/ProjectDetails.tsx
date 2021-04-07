@@ -65,7 +65,7 @@ export default function ProjectDetails({
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {description} Разработано в сотрудничестве с "{company.title}".
+        {description}. Разработано в сотрудничестве с "{company.title}"
       </p>
       <Features items={featureItems} />
       {href && (

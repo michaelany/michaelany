@@ -141,7 +141,7 @@ export default function Work(): JSX.Element {
       <p className="MainText">
         Профессионально занимаюсь фронтенд-разработкой более{' '}
         {YEARS_OF_EXPERIENCE} лет. Тимлид и ведущий разработчик. Работаю
-        удаленно.
+        удаленно
       </p>
       <Animate el="ul" className="Work">
         {jobs.map((job: JobInterface, index: number) => (

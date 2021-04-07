@@ -21,7 +21,6 @@ export const swiperOptions: SwiperOptions = {
   grabCursor: true,
   loop: true,
   speed: DURATION.longer,
-  loopedSlides: 3,
   autoplay: {
     delay: DURATION.lingering,
   },
@@ -41,7 +40,7 @@ const renderContent = ({
         <img
           className="Carousel-Img"
           src={image[0]}
-          srcSet={`${image[1]} 2x`}
+          srcSet={image[1] && `${image[1]} 2x`}
           alt={caption}
         />
       </SwiperSlide>

@@ -127,7 +127,7 @@ export default function Skills(): JSX.Element {
         <Info
           type="skills"
           title={TITLE.skills}
-          text="Разрабатываю приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux."
+          text="Разрабатываю приложения, лендинги, многостраничные сайты и админки. Основной стек - React + TypeScript + Redux"
           features={features}
         />
       }

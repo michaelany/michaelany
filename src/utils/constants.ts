@@ -26,6 +26,16 @@ interface QueryBreakpoint {
 }
 
 interface ProjectRoute {
+  ninjal: string
+  ninja: string
+  celebration: string
+  ally: string
+  presentmep: string
+  presentme: string
+  presentmel: string
+  dropdrone: string
+  hatched: string
+  uls: string
   proximal: string
   embp: string
   tmf: string
@@ -90,6 +100,16 @@ export const ROUTE: RouteInterface = {
 }
 
 export const PROJECT_ROUTE: ProjectRoute = {
+  ninjal: '/road-ninja',
+  ninja: '/road-ninja',
+  celebration: '/celebration',
+  ally: '/ally',
+  presentmel: '/present-me-landing',
+  presentmep: '/present-me-portal',
+  presentme: '/present-me',
+  dropdrone: '/dropdrone',
+  hatched: '/just-hatched',
+  uls: '/uls',
   proximal: '/proximal-coffee',
   embp: '/arma-embp',
   tmf: '/tmf',
@@ -118,8 +138,18 @@ export const PATH_COLOR: Map<Color> = {
   [ROUTE.experience]: 'violet',
   [ROUTE.portfolio]: 'white',
   [ROUTE.contact]: 'white',
-  [PROJECT_ROUTE.embp]: 'blue',
+  [PROJECT_ROUTE.ninjal]: 'red',
+  [PROJECT_ROUTE.ninja]: 'red',
+  [PROJECT_ROUTE.celebration]: 'violet',
+  [PROJECT_ROUTE.ally]: 'default',
+  [PROJECT_ROUTE.presentmel]: 'yellow',
+  [PROJECT_ROUTE.presentmep]: 'yellow',
+  [PROJECT_ROUTE.presentme]: 'yellow',
+  [PROJECT_ROUTE.dropdrone]: 'default',
+  [PROJECT_ROUTE.hatched]: 'yellow',
+  [PROJECT_ROUTE.uls]: 'default',
   [PROJECT_ROUTE.proximal]: 'yellow',
+  [PROJECT_ROUTE.embp]: 'blue',
   [PROJECT_ROUTE.tmf]: 'blue',
   [PROJECT_ROUTE.lite]: 'grass',
   [PROJECT_ROUTE.melissa]: 'green',
