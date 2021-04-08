@@ -25,7 +25,7 @@ export default function Greeting(): JSX.Element {
           <span className="Greeting-Letter">M</span>ichael{' '}
         </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_third">
-          <span className="Greeting-Letter">A</span>naniev
+          <span className="Greeting-Letter">A</span>ny
         </span>
         <span className="Greeting-Part Greeting-Fourth">,</span>
         <br />
