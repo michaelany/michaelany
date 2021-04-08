@@ -11,6 +11,7 @@ const featureText = {
   soloWork: 'Самостоятельная фронтенд-разработка',
   responsive: 'адаптивный интерфейс',
   emails: 'верстка писем',
+  design: 'прототипирование и дизайн',
   animations: 'Анимации',
   rest: 'Rest API',
   stripe: 'Stripe',
@@ -625,11 +626,10 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'TMF',
+    title: 'Ted Manson Foundation',
     name: 'tmf',
-    description:
-      'Многостраничный лендинг новозеландской строительной компании "Ted Manson Foundation"',
-    types: ['site', 'landing'],
+    description: 'Сайт новозеландской строительной компании',
+    types: ['site'],
     companyName: 'sevenGlyphs',
     href: 'https://www.tmfoundation.co.nz',
     features: [
@@ -655,6 +655,14 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/tmf-desktop-third.jpg').default,
           require('../assets/img/projects/tmf-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/tmf-desktop-fourth.jpg').default,
+          require('../assets/img/projects/tmf-desktop-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/tmf-desktop-fifth.jpg').default,
+          require('../assets/img/projects/tmf-desktop-fifth@2x.jpg').default,
+        ],
       ],
       mobile: [
         [
@@ -669,13 +677,21 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/tmf-mobile-third.jpg').default,
           require('../assets/img/projects/tmf-mobile-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/tmf-mobile-fourth.jpg').default,
+          require('../assets/img/projects/tmf-mobile-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/tmf-mobile-fifth.jpg').default,
+          require('../assets/img/projects/tmf-mobile-fifth@2x.jpg').default,
+        ],
       ],
     },
   },
   {
     title: '7 glyphs Lite',
     name: 'lite',
-    description: `Лендинг сервиса новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}"`,
+    description: `Лендинг сервиса новозеландского диджитал-агентства`,
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://lite.7glyphs.com',
@@ -684,7 +700,7 @@ const PROJECTS: Project[] = [
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       featureText.animations,
       'Сентябрь 2019',
     ],
@@ -702,6 +718,10 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/lite-desktop-third.jpg').default,
           require('../assets/img/projects/lite-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/lite-desktop-fourth.jpg').default,
+          require('../assets/img/projects/lite-desktop-fourth@2x.jpg').default,
+        ],
       ],
       mobile: [
         [
@@ -716,13 +736,17 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/lite-mobile-third.jpg').default,
           require('../assets/img/projects/lite-mobile-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/lite-mobile-fourth.jpg').default,
+          require('../assets/img/projects/lite-mobile-fourth@2x.jpg').default,
+        ],
       ],
     },
   },
   {
-    title: 'Melissa',
+    title: 'Melissa Chalmers',
     name: 'melissa',
-    description: 'Лендинг фитнес-блогера Melissa Chalmers',
+    description: 'Лендинг фитнес-блогера',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
@@ -730,7 +754,7 @@ const PROJECTS: Project[] = [
       featureText.scratchDevelopment,
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
+      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       featureText.animations,
       'Сентябрь 2019',
@@ -774,15 +798,15 @@ const PROJECTS: Project[] = [
     title: 'Foodprint',
     name: 'foodp',
     description:
-      'Админка новозеландского сервиса заказа еды в ресторанах "Foodprint"',
-    types: ['admin', 'app'],
+      'Портал новозеландского сервиса заказа дисконтной еды в ресторанах',
+    types: ['site', 'app', 'admin'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       featureText.wholeDevelopment,
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.emails}`,
+      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       featureText.businessLogic,
       'Июнь 2019',
@@ -801,6 +825,14 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/foodp-desktop-third.jpg').default,
           require('../assets/img/projects/foodp-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/foodp-desktop-fourth.jpg').default,
+          require('../assets/img/projects/foodp-desktop-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/foodp-desktop-fifth.jpg').default,
+          require('../assets/img/projects/foodp-desktop-fifth@2x.jpg').default,
+        ],
       ],
     },
   },
@@ -808,16 +840,16 @@ const PROJECTS: Project[] = [
     title: 'Foodprint',
     name: 'food',
     description:
-      'Лендинг новозеландского сервиса заказа еды в ресторанах "Foodprint"',
+      'Лендинг новозеландского сервиса заказа дисконтной еды в ресторанах',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
-      featureText.scratchDevelopment,
+      featureText.wholeDevelopment,
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}, ${featureText.emails}`,
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
       featureText.animations,
       'Июнь 2019',
     ],
@@ -835,6 +867,10 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/food-desktop-third.jpg').default,
           require('../assets/img/projects/food-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/food-desktop-fourth.jpg').default,
+          require('../assets/img/projects/food-desktop-fourth@2x.jpg').default,
+        ],
       ],
       mobile: [
         [
@@ -849,22 +885,26 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/food-mobile-third.jpg').default,
           require('../assets/img/projects/food-mobile-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/food-mobile-fourth.jpg').default,
+          require('../assets/img/projects/food-mobile-fourth@2x.jpg').default,
+        ],
       ],
     },
   },
   {
-    title: 'SDS',
+    title: 'Sales Digital System',
     name: 'sds',
     description:
-      'Единый кабинет для работы сотрудников и партнеров компании "Vaillant"',
+      'Корпоративный сервис для работы с документооборотом компании "Vaillant Group"',
     types: ['app'],
     companyName: 'tsc',
     features: [
-      featureText.wholeDevelopment,
+      `${featureText.wholeDevelopment}, ${featureText.design}`,
       featureText.leadWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, Keycloak, ${TECHNOLOGY_TITLE.webpack}`,
+      `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
+      `${featureText.rest}, Keycloak, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
       featureText.businessLogic,
       'Апрель 2019',
     ],
@@ -882,14 +922,18 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/sds-desktop-third.jpg').default,
           require('../assets/img/projects/sds-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/sds-desktop-fourth.jpg').default,
+          require('../assets/img/projects/sds-desktop-fourth@2x.jpg').default,
+        ],
       ],
     },
   },
   {
     title: 'StrongHer',
     name: 'strong',
-    description: 'Лендинг мобильного фитнес-приложения "StrongHer"',
-    types: ['landing', 'site', 'app'],
+    description: 'Сайт мобильного фитнес-приложения',
+    types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
@@ -897,10 +941,8 @@ const PROJECTS: Project[] = [
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}, ${featureText.emails}`,
-      `${featureText.rest}, ${featureText.stripe.toLowerCase()}, ${
-        TECHNOLOGY_TITLE.webpack
-      }, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.animations,
+      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${featureText.animations}`,
       'Февраль 2019',
     ],
     images: {
@@ -918,6 +960,15 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/strong-desktop-third.jpg').default,
           require('../assets/img/projects/strong-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/strong-desktop-fourth.jpg').default,
+          require('../assets/img/projects/strong-desktop-fourth@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/strong-desktop-fifth.jpg').default,
+          require('../assets/img/projects/strong-desktop-fifth@2x.jpg').default,
+        ],
       ],
       mobile: [
         [
@@ -932,6 +983,14 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/strong-mobile-third.jpg').default,
           require('../assets/img/projects/strong-mobile-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/strong-mobile-fourth.jpg').default,
+          require('../assets/img/projects/strong-mobile-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/strong-mobile-fifth.jpg').default,
+          require('../assets/img/projects/strong-mobile-fifth@2x.jpg').default,
+        ],
       ],
     },
   },
@@ -939,7 +998,7 @@ const PROJECTS: Project[] = [
     title: 'Rogue Travel',
     name: 'rogue',
     description:
-      'Новозеландский сервис группового бронирования авиабилетов и отелей "Rogue Travel"',
+      'Новозеландский сервис группового бронирования авиабилетов и отелей',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
@@ -947,8 +1006,8 @@ const PROJECTS: Project[] = [
       featureText.scratchGrowthDevelopment,
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       featureText.businessLogic,
       'Ноябрь 2018',
     ],
@@ -972,8 +1031,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Quarry Trucks',
     name: 'trucks',
-    description:
-      'Новозеландский сервис мониторинга передвижения грузовиков "Quarry Trucks"',
+    description: 'Новозеландский сервис мониторинга передвижения грузовиков',
     types: ['app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
@@ -1005,7 +1063,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Services',
+    title: 'Service Packages',
     name: 'services',
     description: `Лендинг описания услуг новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}"`,
     types: ['landing'],
@@ -1060,7 +1118,7 @@ const PROJECTS: Project[] = [
   {
     title: 'FCDC',
     name: 'fcdc',
-    description: 'Админка сервиса управления мероприятиями "FCDC"',
+    description: 'Админка сервиса управления мероприятиями',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     features: [
@@ -1143,7 +1201,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Whip Around',
     name: 'whip',
-    description: 'Новозеландский сервис техосмотра автомобилей "Whip Around"',
+    description: 'Новозеландский сервис техосмотра автомобилей',
     types: ['site'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
@@ -1174,7 +1232,7 @@ const PROJECTS: Project[] = [
   {
     title: 'LazyAz',
     name: 'lazyazd',
-    description: 'Админка новозеландского сервиса доставки "LazyAz"',
+    description: 'Админка новозеландского сервиса доставки товаров',
     types: ['admin'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
@@ -1205,7 +1263,7 @@ const PROJECTS: Project[] = [
   {
     title: 'LazyAz',
     name: 'lazyaz',
-    description: 'Веб-платформа новозеландского сервиса доставки "LazyAz"',
+    description: 'Веб-платформа новозеландского сервиса доставки товаров',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
@@ -1251,10 +1309,10 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Сайт 7 glyphs',
+    title: '7 glyphs',
     name: 'glyphs',
-    description: `Домашний сайт новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}"`,
-    types: ['site', 'landing'],
+    description: 'Домашний сайт новозеландского диджитал-агентства',
+    types: ['site'],
     companyName: 'sevenGlyphs',
     href: COMPANY.sevenGlyphs.href,
     features: [
@@ -1299,11 +1357,11 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'МСП',
+    title: 'Бизнес-навигатор МСП',
     name: 'msp',
     description:
       'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес',
-    types: ['app', 'site'],
+    types: ['site', 'app'],
     companyName: 'everpoint',
     href: 'https://www.everpoint.ru/msp',
     features: [
