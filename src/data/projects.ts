@@ -22,11 +22,9 @@ const PROJECTS: Project[] = [
   {
     title: 'Road Ninja',
     name: 'ninjal',
-    description:
-      'Лендинг мобильного приложения для интерактивных фигурок Nintendo Amiibo',
+    description: 'Лендинг новозеландского сервиса найма водителей грузовиков',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/ally',
     features: [
       featureText.scratchDevelopment,
       featureText.soloWork,
@@ -34,7 +32,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       `${featureText.animations}`,
-      'Май 2020',
+      'Апрель 2021',
     ],
     images: {
       desktop: [
@@ -88,17 +86,17 @@ const PROJECTS: Project[] = [
   {
     title: 'Road Ninja',
     name: 'ninja',
-    description: 'Новозеландский сервис для найма водителей грузовиков',
+    description: 'Новозеландский сервис найма водителей грузовиков',
     types: ['app', 'site'],
     companyName: 'sevenGlyphs',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}, ${featureText.emails}`,
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `Динамические формы, написал свой роутинг`,
-      'Август 2020',
+      'Верстка компонентов и разработка части бизнес-логики',
+      featureText.teamWork,
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}, ${featureText.emails}`,
+      `${featureText.rest}, WebSocket, ${TECHNOLOGY_TITLE.webpack}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      featureText.businessLogic,
+      'Апрель 2021',
     ],
     images: {
       desktop: [
@@ -114,6 +112,10 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/ninja-desktop-third.jpg').default,
           require('../assets/img/projects/ninja-desktop-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/ninja-desktop-fourth.jpg').default,
+          require('../assets/img/projects/ninja-desktop-fourth@2x.jpg').default,
+        ],
       ],
     },
   },
@@ -121,18 +123,17 @@ const PROJECTS: Project[] = [
     title: 'Сelebration',
     name: 'celebration',
     description:
-      'Лендинг мобильного приложения для интерактивных фигурок Nintendo Amiibo',
-    types: ['landing'],
-    companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/ally',
+      'Новогоднее мини-приложение для поздравления сотрудников компании',
+    types: ['app'],
+    companyName: 'tsc',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      `${featureText.scratchDevelopment}, ${featureText.design}`,
+      featureText.leadWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `${featureText.animations}`,
-      'Май 2020',
+      `${featureText.animations}, PWA`,
+      'Декабрь 2020',
     ],
     images: {
       desktop: [
@@ -185,13 +186,13 @@ const PROJECTS: Project[] = [
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/ally',
     features: [
-      featureText.scratchDevelopment,
+      featureText.wholeDevelopment,
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       `${featureText.animations}`,
-      'Май 2020',
+      'Октябрь 2020',
     ],
     images: {
       desktop: [
@@ -227,8 +228,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Present.me',
     name: 'presentmel',
-    description:
-      'Лендинг новозеландского сервиса создания профиля соискателя "Present.me"',
+    description: 'Лендинг новозеландского сервиса создания профиля соискателя',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/presentme',
@@ -239,7 +239,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       `${featureText.animations}`,
-      'Июль 2020',
+      'Сентябрь 2020',
     ],
     images: {
       desktop: [
@@ -260,6 +260,12 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/presentmel-desktop-third@2x.jpg')
             .default,
         ],
+        [
+          require('../assets/img/projects/presentmel-desktop-fourth.jpg')
+            .default,
+          require('../assets/img/projects/presentmel-desktop-fourth@2x.jpg')
+            .default,
+        ],
       ],
       mobile: [
         [
@@ -278,14 +284,19 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/presentmel-mobile-third@2x.jpg')
             .default,
         ],
+        [
+          require('../assets/img/projects/presentmel-mobile-fourth.jpg')
+            .default,
+          require('../assets/img/projects/presentmel-mobile-fourth@2x.jpg')
+            .default,
+        ],
       ],
     },
   },
   {
     title: 'Present.me',
     name: 'presentmep',
-    description:
-      'Админка новозеландского сервиса создания профиля соискателя "Present.me"',
+    description: 'Админка новозеландского сервиса создания профиля соискателя',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/presentme',
@@ -293,10 +304,10 @@ const PROJECTS: Project[] = [
       featureText.wholeDevelopment,
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.emails}`,
+      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       featureText.businessLogic,
-      'Июнь 2019',
+      'Август 2020',
     ],
     images: {
       desktop: [
@@ -323,9 +334,8 @@ const PROJECTS: Project[] = [
   {
     title: 'Present.me',
     name: 'presentme',
-    description:
-      'Новозеландский сервис создания профиля соискателя "Present.me"',
-    types: ['app', 'site'],
+    description: 'Новозеландский сервис создания профиля соискателя',
+    types: ['app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
@@ -333,8 +343,8 @@ const PROJECTS: Project[] = [
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}, ${featureText.emails}`,
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `Динамические формы, написал свой роутинг`,
+      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `Динамические формы, собственный роутинг`,
       'Август 2020',
     ],
     images: {
@@ -361,6 +371,11 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/presentme-desktop-fourth@2x.jpg')
             .default,
         ],
+        [
+          require('../assets/img/projects/presentme-desktop-fifth.jpg').default,
+          require('../assets/img/projects/presentme-desktop-fifth@2x.jpg')
+            .default,
+        ],
       ],
       mobile: [
         [
@@ -383,14 +398,18 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/presentme-mobile-fourth@2x.jpg')
             .default,
         ],
+        [
+          require('../assets/img/projects/presentme-mobile-fifth.jpg').default,
+          require('../assets/img/projects/presentme-mobile-fifth@2x.jpg')
+            .default,
+        ],
       ],
     },
   },
   {
     title: 'Dropdrone',
     name: 'dropdrone',
-    description:
-      'Лендинг новозеландского сельскохозяйственного стартапа "Dropdrone"',
+    description: 'Лендинг новозеландского сельскохозяйственного стартапа',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     features: [
@@ -421,6 +440,12 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/dropdrone-desktop-third@2x.jpg')
             .default,
         ],
+        [
+          require('../assets/img/projects/dropdrone-desktop-fourth.jpg')
+            .default,
+          require('../assets/img/projects/dropdrone-desktop-fourth@2x.jpg')
+            .default,
+        ],
       ],
       mobile: [
         [
@@ -436,6 +461,11 @@ const PROJECTS: Project[] = [
         [
           require('../assets/img/projects/dropdrone-mobile-third.jpg').default,
           require('../assets/img/projects/dropdrone-mobile-third@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/dropdrone-mobile-fourth.jpg').default,
+          require('../assets/img/projects/dropdrone-mobile-fourth@2x.jpg')
             .default,
         ],
       ],
@@ -475,6 +505,11 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/hatched-desktop-third@2x.jpg')
             .default,
         ],
+        [
+          require('../assets/img/projects/hatched-desktop-fourth.jpg').default,
+          require('../assets/img/projects/hatched-desktop-fourth@2x.jpg')
+            .default,
+        ],
       ],
       mobile: [
         [
@@ -490,11 +525,16 @@ const PROJECTS: Project[] = [
           require('../assets/img/projects/hatched-mobile-third.jpg').default,
           require('../assets/img/projects/hatched-mobile-third@2x.jpg').default,
         ],
+        [
+          require('../assets/img/projects/hatched-mobile-fourth.jpg').default,
+          require('../assets/img/projects/hatched-mobile-fourth@2x.jpg')
+            .default,
+        ],
       ],
     },
   },
   {
-    title: 'ULS',
+    title: 'Unified Login System',
     name: 'uls',
     description: 'Единый кабинет пользователей компании "Vaillant Group"',
     types: ['app'],
@@ -504,7 +544,7 @@ const PROJECTS: Project[] = [
       featureText.soloWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${featureText.responsive}`,
-      `Keycloak, ${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, Docker`,
+      `${TECHNOLOGY_TITLE.webpack}, ${featureText.rest}, Keycloak, Docker`,
       'Поработал с Keycloak и Docker',
       'Февраль 2020',
     ],
@@ -540,9 +580,9 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Proximal',
+    title: 'Proximal Coffee',
     name: 'proximal',
-    description: 'Лендинг австралийской кофейни "Proximal Coffee"',
+    description: 'Лендинг австралийской кофейни',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://www.proximalcoffee.com.au',
@@ -600,10 +640,10 @@ const PROJECTS: Project[] = [
     types: ['admin', 'app'],
     companyName: 'tsc',
     features: [
-      featureText.wholeDevelopment,
+      `${featureText.wholeDevelopment}, ${featureText.design}`,
       featureText.leadWork,
       `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.css}`,
+      `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
       'Темная тема',
       'Июль 2019',
@@ -621,6 +661,14 @@ const PROJECTS: Project[] = [
         [
           require('../assets/img/projects/embp-desktop-third.jpg').default,
           require('../assets/img/projects/embp-desktop-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/embp-desktop-fourth.jpg').default,
+          require('../assets/img/projects/embp-desktop-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/embp-desktop-fifth.jpg').default,
+          require('../assets/img/projects/embp-desktop-fifth@2x.jpg').default,
         ],
       ],
     },

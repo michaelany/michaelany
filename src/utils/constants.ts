@@ -100,7 +100,7 @@ export const ROUTE: RouteInterface = {
 }
 
 export const PROJECT_ROUTE: ProjectRoute = {
-  ninjal: '/road-ninja',
+  ninjal: '/road-ninja-landing',
   ninja: '/road-ninja',
   celebration: '/celebration',
   ally: '/ally',

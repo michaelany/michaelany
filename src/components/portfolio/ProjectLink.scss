@@ -69,7 +69,8 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
 
 .ProjectLink-Title {
   padding-top: 4px;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.2;
   @each $key, $value, $secondValue in $colors-map {
     .ColorInteract_color_#{$key} & {
       color: $secondValue;
