@@ -1043,6 +1043,76 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    title: '7 glyphs 2.0',
+    name: 'glyphs2',
+    description: 'Домашний сайт новозеландского диджитал-агентства',
+    types: ['site'],
+    companyName: 'sevenGlyphs',
+    href: COMPANY.sevenGlyphs.href,
+    features: [
+      featureText.growthSupportDevelopment,
+      featureText.teamWork,
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
+      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      featureText.animations,
+      'Январь 2018',
+    ],
+    images: {
+      desktop: [
+        [
+          require('../assets/img/projects/glyphs2@2x.jpg').default,
+          require('../assets/img/projects/glyphs2-desktop-first@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-desktop-second.jpg').default,
+          require('../assets/img/projects/glyphs2-desktop-second@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-desktop-third.jpg').default,
+          require('../assets/img/projects/glyphs2-desktop-third@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-desktop-fourth.jpg').default,
+          require('../assets/img/projects/glyphs2-desktop-fourth@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-desktop-fifth.jpg').default,
+          require('../assets/img/projects/glyphs2-desktop-fifth@2x.jpg')
+            .default,
+        ],
+      ],
+      mobile: [
+        [
+          require('../assets/img/projects/glyphs2-mobile-first.jpg').default,
+          require('../assets/img/projects/glyphs2-mobile-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-mobile-second.jpg').default,
+          require('../assets/img/projects/glyphs2-mobile-second@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-mobile-third.jpg').default,
+          require('../assets/img/projects/glyphs2-mobile-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-mobile-fourth.jpg').default,
+          require('../assets/img/projects/glyphs2-mobile-fourth@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/glyphs2-mobile-fifth.jpg').default,
+          require('../assets/img/projects/glyphs2-mobile-fifth@2x.jpg').default,
+        ],
+      ],
+    },
+  },
+  {
     title: 'Rogue Travel',
     name: 'rogue',
     description:
@@ -1362,7 +1432,6 @@ const PROJECTS: Project[] = [
     description: 'Домашний сайт новозеландского диджитал-агентства',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    href: COMPANY.sevenGlyphs.href,
     features: [
       `Переписывание кодовой базы с ${TECHNOLOGY_TITLE.jquery} на ${TECHNOLOGY_TITLE.react}`,
       featureText.soloWork,

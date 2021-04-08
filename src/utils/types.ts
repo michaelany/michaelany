@@ -53,6 +53,7 @@ export type ProjectName =
   | 'food'
   | 'sds'
   | 'strong'
+  | 'glyphs2'
   | 'rogue'
   | 'trucks'
   | 'services'

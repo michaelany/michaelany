@@ -45,6 +45,7 @@ interface ProjectRoute {
   food: string
   sds: string
   strong: string
+  glyphs2: string
   rogue: string
   trucks: string
   services: string
@@ -119,6 +120,7 @@ export const PROJECT_ROUTE: ProjectRoute = {
   food: '/foodprint',
   sds: '/sds',
   strong: '/strongher',
+  glyphs2: '/7glyphs-2',
   rogue: '/rogue-travel',
   trucks: '/quarry-trucks',
   services: '/service-packages',
@@ -157,6 +159,7 @@ export const PATH_COLOR: Map<Color> = {
   [PROJECT_ROUTE.food]: 'violet',
   [PROJECT_ROUTE.sds]: 'green',
   [PROJECT_ROUTE.strong]: 'red',
+  [PROJECT_ROUTE.glyphs2]: 'default',
   [PROJECT_ROUTE.rogue]: 'violet',
   [PROJECT_ROUTE.trucks]: 'yellow',
   [PROJECT_ROUTE.services]: 'grass',
