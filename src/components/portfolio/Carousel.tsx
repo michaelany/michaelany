@@ -1,5 +1,5 @@
 import {Swiper, SwiperSlide} from 'swiper/react'
-import SwiperCore, {Autoplay, SwiperOptions} from 'swiper'
+import SwiperCore, {Autoplay, SwiperOptions, Controller} from 'swiper'
 import {useMediaQuery} from '@material-ui/core'
 
 import './Carousel.scss'
@@ -12,25 +12,24 @@ interface CarouselProps {
   mobile?: boolean
   title: string
   images: string[][]
+  swiper: any
+  setSwiper: any
 }
 
-SwiperCore.use([Autoplay])
+SwiperCore.use([Autoplay, Controller])
 
 export const swiperOptions: SwiperOptions = {
-  zoom: true,
   grabCursor: true,
   loop: true,
   speed: DURATION.longer,
-  autoplay: {
-    delay: DURATION.lingering,
-  },
 }
 
-const renderContent = ({
-  mobile,
-  title,
-  images,
-}: CarouselProps): JSX.Element | JSX.Element[] => {
+const autoplayOptions = {delay: DURATION.lingering}
+
+const renderContent = (
+  {mobile, title, images, swiper, setSwiper}: CarouselProps,
+  isDesktop?: boolean
+): JSX.Element | JSX.Element[] => {
   const imageElements: JSX.Element[] = images.map((image: string[]) => {
     const caption = `Скриншот ${
       mobile ? 'мобильного ' : ''
@@ -47,7 +46,14 @@ const renderContent = ({
     )
   })
   return imageElements.length > 1 ? (
-    <Swiper {...swiperOptions}>{imageElements}</Swiper>
+    <Swiper
+      {...swiperOptions}
+      autoplay={isDesktop ? autoplayOptions : undefined}
+      controller={{control: swiper}}
+      onSwiper={setSwiper}
+    >
+      {imageElements}
+    </Swiper>
   ) : (
     imageElements
   )
@@ -71,7 +77,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
       duration={md ? undefined : 'longer'}
     >
       <Panel className="Carousel-Content">
-        <div className="Carousel-Block">{renderContent(props)}</div>
+        <div className="Carousel-Block">{renderContent(props, true)}</div>
       </Panel>
     </Animate>
   )

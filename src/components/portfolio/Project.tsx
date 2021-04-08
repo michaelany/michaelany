@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {RouteChildrenProps} from 'react-router-dom'
 
 import {Sections, Pagination, Copyright} from '../common'
@@ -9,6 +10,37 @@ import PROJECTS from '../../data/projects'
 
 interface ProjectParams {
   project: string
+}
+
+interface ScreenshotsProps {
+  project: ProjectInterface
+}
+
+const Screenshots = ({project}: ScreenshotsProps): JSX.Element => {
+  const [firstSwiper, setFirstSwiper] = useState(null)
+  const [secondSwiper, setSecondSwiper] = useState(null)
+
+  return (
+    <div>
+      {project.images.desktop && (
+        <Carousel
+          title={project.title}
+          images={project.images.desktop}
+          swiper={secondSwiper}
+          setSwiper={setFirstSwiper}
+        />
+      )}
+      {project.images.mobile && (
+        <Carousel
+          mobile
+          title={project.title}
+          images={project.images.mobile}
+          swiper={firstSwiper}
+          setSwiper={setSecondSwiper}
+        />
+      )}
+    </div>
+  )
 }
 
 export default function Project({
@@ -34,18 +66,7 @@ export default function Project({
       secondSection={
         <section className="Section Section_pagination Section_colorful">
           <h2 className="VisuallyHidden">Скриншоты</h2>
-          <div>
-            {project.images.desktop && (
-              <Carousel title={project.title} images={project.images.desktop} />
-            )}
-            {project.images.mobile && (
-              <Carousel
-                mobile
-                title={project.title}
-                images={project.images.mobile}
-              />
-            )}
-          </div>
+          <Screenshots project={project} />
           <Pagination prevTo={ROUTE.portfolio} />
           <Copyright />
         </section>
