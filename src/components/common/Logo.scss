@@ -13,7 +13,7 @@
   margin-bottom: 64px;
   text-align: center;
   display: block;
-  transition: transform $duration_standard $easing_in-out,
+  transition: transform $duration_standard $easing_out,
     color $duration_short $easing_in-out;
   @include hover {
     &:hover {

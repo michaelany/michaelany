@@ -11,6 +11,7 @@ import {CssBaseline} from '@material-ui/core'
 import './styles/index.scss'
 import ScrollToTop from './components/base/ScrollToTop'
 import App from './components/App'
+import {logConsoleWelcomeMessage} from './utils/base'
 import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
 import {unregister as unregisterServiceWorker} from './utils/serviceWorker'
@@ -30,4 +31,5 @@ ReactDOM.render(
   ROOT
 )
 
+logConsoleWelcomeMessage()
 unregisterServiceWorker()

@@ -7,30 +7,39 @@ import {
 
 import './Greeting.scss'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
+import {ReactComponent as LaptopIcon} from '../../assets/icons/laptop.svg'
 import {ROUTE} from '../../utils/constants'
 import {TITLE} from '../../data/common'
 
 export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
-      <div className="Greeting-Ceil">
-        <p className="Greeting-Text Greeting-Text_thick Title">Привет!</p>
+      <div className="Greeting-Block">
+        <p className="Greeting-Text Greeting-First Title">Привет!</p>
         <div className="Greeting-Second">
           <HelloIcon className="Greeting-Icon" />
         </div>
       </div>
-      <p className="Greeting-Text Greeting-Third Title">Меня зовут</p>
       <h1 className="Greeting-Text Title">
+        <span className="Greeting-Part Greeting-Text Greeting-Third Title">
+          Я -
+        </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_second">
-          <span className="Greeting-Letter">M</span>ichael{' '}
+          <span className="Greeting-Main Greeting-Main_colorful">Michael</span>
         </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_third">
-          <span className="Greeting-Letter">A</span>ny
+          <span className="Greeting-Main Greeting-Main_colorful">Any</span>
         </span>
         <span className="Greeting-Part Greeting-Fourth">,</span>
         <br />
-        <span className="Greeting-Part Greeting-Fifth">
-          я фронтенд-разработчик
+        <span className="Greeting-Part Greeting-Main Greeting-Fifth">
+          фронтенд-
+          <span className="Greeting-Word">
+            разработчик
+            <Link className="Greeting-Extra" to={ROUTE.skills}>
+              <LaptopIcon className="Greeting-ExtraSvg" />
+            </Link>
+          </span>
         </span>
       </h1>
       <div className="Actions">

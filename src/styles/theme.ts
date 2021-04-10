@@ -18,7 +18,7 @@ export const DURATION = {
   long: 800,
   longer: 1000,
   longest: 2000,
-  lingering: 3000,
+  lingering: 4500,
   alternate: 20000,
 }
 

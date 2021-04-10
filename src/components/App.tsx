@@ -13,20 +13,14 @@ import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
 import Contact from './contact/Contact'
+import {handleAppLoaded} from '../utils/base'
 import {ROUTE, PATH_COLOR} from '../utils/constants'
-
-const handleLoaded = (): void => {
-  const preloader: HTMLElement = document.getElementById('preloader')!
-  preloader.classList.remove('Preloader_show')
-  document.body.style.overflow = 'auto'
-  setTimeout(() => preloader.remove(), 1000)
-}
 
 export default function App(): JSX.Element {
   const {pathname} = useLocation()
 
   useEffect(() => {
-    window.addEventListener('load', handleLoaded)
+    window.addEventListener('load', handleAppLoaded)
   }, [])
 
   const lastSlashIndex: number = pathname.lastIndexOf('/')

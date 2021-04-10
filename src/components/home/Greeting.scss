@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.Greeting-Ceil {
+.Greeting-Block {
   display: flex;
   align-items: center;
 }
@@ -16,8 +16,6 @@
   position: relative;
   bottom: 6px;
   margin-left: 18px;
-  width: 60px;
-  height: 60px;
   animation: hello $duration_lingering $easing_in-out infinite;
   @include lg {
     bottom: 4px;
@@ -36,18 +34,17 @@
 .Greeting-Text {
   font-weight: 300;
   margin-bottom: 0;
-  &_thick {
-    font-weight: 900;
-  }
 }
 
 .Greeting-Part {
   display: inline-block;
 }
 
-.Greeting-Letter {
-  @include animationAlternate;
+.Greeting-Main {
   font-weight: 900;
+  &_colorful {
+    @include animationAlternate;
+  }
 }
 
 .Greeting-First {
@@ -55,7 +52,7 @@
 }
 
 .Greeting-Second {
-  @include animation(fadeInZoomIn, 200ms);
+  @include animation(fadeInZoomIn, 300ms);
 }
 
 .Greeting-Third {
@@ -77,9 +74,36 @@
 }
 
 .Greeting-Sixth {
-  @include animation(fadeInBottom, 3000ms);
+  @include animation(fadeInBottom, 3400ms);
 }
 
 .Greeting-Seventh {
-  @include animation(fadeInBottom, 3200ms);
+  @include animation(fadeInBottom, 3600ms);
+}
+
+.Greeting-Word {
+  display: inline-flex;
+}
+
+.Greeting-Extra {
+  display: flex;
+  position: relative;
+  top: -0.1em;
+  left: -0.1em;
+  width: 0.9em;
+  height: 0.9em;
+  outline-color: $color_yellow;
+  transform: rotate(20deg);
+  transition: transform $duration_standard $easing_out;
+  @include hover {
+    &:hover {
+      transform: rotate(0) scale(1.15);
+    }
+  }
+}
+
+.Greeting-ExtraSvg {
+  width: 100%;
+  height: 100%;
+  @include animation(fadeInZoomOut, 2900ms);
 }
