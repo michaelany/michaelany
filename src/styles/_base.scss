@@ -12,7 +12,10 @@ html {
 }
 
 body {
+  font-family: 'Neutra Text', sans-serif;
   overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
 p,

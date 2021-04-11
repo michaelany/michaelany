@@ -8,7 +8,7 @@
   bottom: 12px;
   color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   @include sm {
     bottom: 10px;
   }
@@ -17,11 +17,11 @@
 .Copyright-Icon {
   position: relative;
   top: 2px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .Copyright-Link {
-  font-weight: 500;
+  font-weight: bold;
   color: white;
   outline-color: white;
   @include hover {

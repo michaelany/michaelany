@@ -1,5 +1,3 @@
-import {COLOR} from '../styles/theme'
-
 export const handleAppLoaded = (): void => {
   const preloader: HTMLElement = document.getElementById('preloader')!
   preloader.classList.remove('Preloader_show')
@@ -10,11 +8,9 @@ export const handleAppLoaded = (): void => {
 export const logConsoleWelcomeMessage = () => {
   const consoleTextStyle = 'font-size: 16px;'
   console.log(
-    `%cПривет! 👋🏻\nЯ - %cMichael%c %cAny%c, фронтенд-разработчик 👨🏻‍💻\nРад тебя видеть! 👀😊\n`,
+    `%cПривет! 👋🏻\nЯ - %cMichael Any%c, фронтенд-разработчик 👨🏻‍💻\nРад тебя видеть! 👀😊\n`,
     consoleTextStyle,
-    `${consoleTextStyle} color: ${COLOR.blue}; font-weight: bold;`,
-    consoleTextStyle,
-    `${consoleTextStyle} color: ${COLOR.green}; font-weight: bold;`,
+    `${consoleTextStyle} font-weight: bold;`,
     consoleTextStyle
   )
 }

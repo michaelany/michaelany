@@ -18,7 +18,7 @@ export const DURATION = {
   long: 800,
   longer: 1000,
   longest: 2000,
-  lingering: 4500,
+  lingering: 4000,
   alternate: 20000,
 }
 
@@ -38,26 +38,14 @@ export const BREAKPOINT = {
 
 const THEME = {
   typography: {
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      'Segoe UI',
-      'Roboto',
-      'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      'sans-serif',
-    ].join(','),
+    fontFamily: 'Neutra Text, sans-serif',
     fontSize: 16, // $font-size_base
     body2: {
       lineHeight: 1.5,
     },
     button: {
-      letterSpacing: 1,
-      fontWeight: 600,
+      letterSpacing: 0.8,
+      fontWeight: 'bold',
       textTransform: 'normal',
     },
   },

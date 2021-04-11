@@ -1,4 +1,4 @@
-import {useState, memo} from 'react'
+import {useState, memo, ReactElement} from 'react'
 import cn from 'clsx'
 import {Button} from '@material-ui/core'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
@@ -13,7 +13,7 @@ import {Feature} from '../../utils/types'
 interface InfoProps {
   type: string
   title: string
-  text: string
+  text: ReactElement
   features: Feature[]
 }
 

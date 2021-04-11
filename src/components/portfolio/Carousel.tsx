@@ -21,7 +21,7 @@ SwiperCore.use([Autoplay, Controller])
 export const swiperOptions: SwiperOptions = {
   grabCursor: true,
   loop: true,
-  speed: DURATION.longer,
+  speed: 1500,
 }
 
 const autoplayOptions = {delay: DURATION.lingering}

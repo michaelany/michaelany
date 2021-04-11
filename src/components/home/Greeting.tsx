@@ -6,8 +6,9 @@ import {
 } from '@material-ui/icons'
 
 import './Greeting.scss'
+import frontEndImg from '../../assets/img/pictures/front-end.png'
+import frontEndImg2x from '../../assets/img/pictures/front-end@2x.png'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
-import {ReactComponent as LaptopIcon} from '../../assets/icons/laptop.svg'
 import {ROUTE} from '../../utils/constants'
 import {TITLE} from '../../data/common'
 
@@ -25,23 +26,31 @@ export default function Greeting(): JSX.Element {
           Я -
         </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_second">
-          <span className="Greeting-Main Greeting-Main_colorful">Michael</span>
+          <span className="Greeting-Main">Michael</span>
         </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_third">
-          <span className="Greeting-Main Greeting-Main_colorful">Any</span>
+          <span className="Greeting-Main">Any</span>
         </span>
         <span className="Greeting-Part Greeting-Fourth">,</span>
-        <br />
-        <span className="Greeting-Part Greeting-Main Greeting-Fifth">
+      </h1>
+      <p className="Greeting-Text Greeting-Fifth Title">
+        <strong>
           фронтенд-
           <span className="Greeting-Word">
             разработчик
             <Link className="Greeting-Extra" to={ROUTE.skills}>
-              <LaptopIcon className="Greeting-ExtraSvg" />
+              <img
+                className="Greeting-ExtraImg"
+                width={60}
+                height={68}
+                src={frontEndImg}
+                srcSet={`${frontEndImg2x} 2x`}
+                alt="Front-End"
+              />
             </Link>
           </span>
-        </span>
-      </h1>
+        </strong>
+      </p>
       <div className="Actions">
         <Button
           className="Greeting-Sixth Button Button_color_blue"

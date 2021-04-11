@@ -140,8 +140,8 @@ export default function Work(): JSX.Element {
       <h1 className="Title">{TITLE.experience}</h1>
       <p className="MainText">
         Профессионально занимаюсь фронтенд-разработкой более{' '}
-        {YEARS_OF_EXPERIENCE} лет. Тимлид и ведущий разработчик. Работаю
-        удаленно
+        {YEARS_OF_EXPERIENCE} лет. <strong>Тимлид</strong> и{' '}
+        <strong>ведущий разработчик</strong>. Работаю удаленно
       </p>
       <Animate el="ul" className="Work">
         {jobs.map((job: JobInterface, index: number) => (

@@ -2,17 +2,13 @@
 @import 'styles/mixins';
 
 .Logo {
-  font-size: 40px;
-  letter-spacing: -0.15em;
-  font-weight: 900;
-  line-height: 0.8;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   margin-right: 8px;
   margin-left: 8px;
   margin-bottom: 64px;
-  text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
   transition: transform $duration_standard $easing_out,
     color $duration_short $easing_in-out;
   @include hover {
@@ -21,12 +17,10 @@
     }
   }
   @include md {
-    font-size: 36px;
     padding: 8px 6px;
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 14px;
-    text-indent: -0.15em;
     width: 66px;
     @include hover {
       &:hover {

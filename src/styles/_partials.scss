@@ -65,10 +65,10 @@
 }
 
 .Title {
-  font-size: 52px;
-  font-weight: 900;
+  font-size: 60px;
+  font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
   @include animation(fadeIn);
   &_smallIndent {
     margin-bottom: 0.16em;
@@ -92,7 +92,6 @@
 .MainText {
   @include animation(fadeInBottom);
   font-size: 30px;
-  font-weight: 300;
   line-height: 1.5;
   margin-bottom: 1.4em;
   color: $color_second-text;
@@ -170,7 +169,7 @@
 }
 
 .Link {
-  font-weight: 500;
+  font-weight: bold;
   user-select: auto;
   .App_color_white & {
     color: white;

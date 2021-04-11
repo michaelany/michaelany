@@ -21,8 +21,8 @@ export default function Contact(): JSX.Element {
           <div>
             <h1 className="Title">{TITLE.contact}</h1>
             <p className="MainText MainText_dark">
-              Нужна моя помощь или у вас есть ко мне предложение? Пишите на
-              почту{' '}
+              Нужна моя <strong>помощь</strong> или есть ко мне интересное{' '}
+              <strong>предложение</strong> ? Пишите на почту{' '}
               <a
                 {...BLANK_LINK_PROPS}
                 className="Link"
