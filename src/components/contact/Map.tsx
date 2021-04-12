@@ -13,8 +13,8 @@ interface InitialCenter {
 }
 
 const initialCenter: InitialCenter = {
-  lat: 55.819456,
-  lng: 37.802932,
+  lat: 43.412428,
+  lng: 39.957504,
 }
 
 const LoadingContainer = (): JSX.Element => (
@@ -36,10 +36,14 @@ function Map(): JSX.Element {
         disableDefaultUI
         google={window.google}
         initialCenter={initialCenter}
-        zoom={10}
+        zoom={6}
         styles={STYLES as any}
       >
-        <Marker icon={markerIcon} onClick={handleMarkerClick} />
+        <Marker
+          title="Сейчас я живу здесь 🏠"
+          icon={markerIcon}
+          onClick={handleMarkerClick}
+        />
       </GoogleMap>
     </div>
   )
