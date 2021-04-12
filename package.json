@@ -1,16 +1,19 @@
 {
-  "name": "mclananiev",
+  "name": "michaelany",
   "version": "2.0.0",
-  "author": "Michael Ananiev <mclananiev@gmail.com> (https://github.com/michaelany)",
-  "homepage": "http://mclananiev.com",
+  "author": "Michael Any <michael.any.dev@gmail.com> (https://github.com/michaelany)",
+  "homepage": "http://michaelany.com",
   "description": "Portfolio project",
   "keywords": [
-    "mclananiev",
-    "front-end",
-    "developer"
+    "michaelany",
+    "ma",
+    "js",
+    "react",
+    "css",
+    "html"
   ],
-  "repository": "github:michaelany/mclananiev",
-  "bugs": "https://github.com/michaelany/mclananiev/issues",
+  "repository": "github:michaelany/michaelany",
+  "bugs": "https://github.com/michaelany/michaelany/issues",
   "private": true,
   "dependencies": {
     "@material-ui/core": "4.11.3",
