@@ -28,7 +28,7 @@ export default function Contact(): JSX.Element {
                 className="Link"
                 href={CONTACT_LINK.email.href}
               >
-                mclananiev@gmail.com
+                michael.any.dev@gmail.com
               </a>{' '}
               или воспользуйтесь формой:
             </p>

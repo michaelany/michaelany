@@ -71,7 +71,7 @@ export const COMPANY_TITLE: CompanyTitle = {
 export const CONTACT_LINK: ContactLink = {
   gitHub: {
     title: 'GitHub',
-    href: 'https://github.com/vashstamp',
+    href: 'https://github.com/michaelany',
     Icon: GitHubIcon,
     size: 'lg',
   },
@@ -107,7 +107,7 @@ export const CONTACT_LINK: ContactLink = {
   },
   email: {
     title: 'Email',
-    href: 'mailto:mclananiev@gmail.com',
+    href: 'mailto:michael.any.dev@gmail.com',
     Icon: AlternateEmailIcon,
     size: 'lg',
   },
