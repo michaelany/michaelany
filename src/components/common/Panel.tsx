@@ -11,6 +11,8 @@ export default function Panel({children, className}: PanelProps): JSX.Element {
     <div className={`${className} Panel`}>
       <img
         className="Panel-Svg"
+        width={474}
+        height={37}
         src={desktopSvg}
         alt="Window panel"
         role="presentation"

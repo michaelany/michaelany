@@ -48,6 +48,8 @@ const MacScreen = (): JSX.Element => {
     <>
       <img
         className="Banner-Image"
+        width={652}
+        height={417}
         src={macbookImg}
         srcSet={`${macbookImg2x} 2x`}
         alt="MacBook Pro"

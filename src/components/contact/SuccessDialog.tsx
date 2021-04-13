@@ -36,6 +36,8 @@ export default function SuccessDialog({
       <div className="SuccessDialog">
         <img
           className="SuccessDialog-Image"
+          width={80}
+          height={80}
           src={messageSentImg}
           alt="Message sent"
         />

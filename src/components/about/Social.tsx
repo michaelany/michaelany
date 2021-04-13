@@ -31,7 +31,8 @@ const links: SocialLink[] = [
   CONTACT_LINK.facebook,
 ]
 
-const myName = 'Michael Ananiev | vashstamp'
+const myName: string = 'Michael Any'
+const imgSize: number = 320
 
 export default function Social(): JSX.Element {
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
@@ -49,12 +50,16 @@ export default function Social(): JSX.Element {
             <>
               <img
                 className="Social-Img"
+                width={imgSize}
+                height={imgSize}
                 src={meNormalImg}
                 srcSet={`${meNormalImg2x} 2x`}
                 alt={myName}
               />
               <img
                 className="Social-Img Social-Img_hidden"
+                width={imgSize}
+                height={imgSize}
                 src={meExcitedImg}
                 srcSet={`${meExcitedImg2x} 2x`}
                 alt={myName}
