@@ -110,6 +110,9 @@ const THEME = {
     MuiDialog: {
       scroll: 'body',
     },
+    MuiCircularProgress: {
+      thickness: 3,
+    },
   },
 }
 
