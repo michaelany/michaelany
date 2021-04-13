@@ -68,7 +68,7 @@
   font-size: 60px;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.6em;
   @include animation(fadeIn);
   &_smallIndent {
     margin-bottom: 0.16em;
@@ -93,7 +93,7 @@
   @include animation(fadeInBottom);
   font-size: 30px;
   line-height: 1.5;
-  margin-bottom: 1.4em;
+  margin-bottom: 2em;
   color: $color_second-text;
   &_dark {
     color: $color_text;
