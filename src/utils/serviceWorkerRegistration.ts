@@ -17,6 +17,7 @@ export function register(config?: Config) {
     if (publicUrl.origin !== window.location.origin) {
       return
     }
+
     window.addEventListener('load', () => {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`
       if (isLocalhost) {
@@ -46,8 +47,7 @@ function registerValidSW(swUrl: string, config?: Config) {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
               console.log(
-                'New content is available and will be used when all ' +
-                  'tabs for this page are closed.'
+                'New content is available and will be used when all tabs for this page are closed.'
               )
               if (config && config.onUpdate) {
                 config.onUpdate(registration)

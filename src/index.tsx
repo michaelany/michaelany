@@ -14,7 +14,7 @@ import App from './components/App'
 import {logConsoleWelcomeMessage} from './utils/base'
 import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
-import {register as registerServiceWorker} from './utils/serviceWorker'
+import {register as registerServiceWorker} from './utils/serviceWorkerRegistration'
 
 const theme: Theme = createMuiTheme(THEME as object)
 
