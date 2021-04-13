@@ -14,7 +14,7 @@ import App from './components/App'
 import {logConsoleWelcomeMessage} from './utils/base'
 import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
-import {unregister as unregisterServiceWorker} from './utils/serviceWorker'
+import {register as registerServiceWorker} from './utils/serviceWorker'
 
 const theme: Theme = createMuiTheme(THEME as object)
 
@@ -32,4 +32,4 @@ ReactDOM.render(
 )
 
 logConsoleWelcomeMessage()
-unregisterServiceWorker()
+registerServiceWorker()
