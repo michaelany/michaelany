@@ -22,7 +22,7 @@ export default function Contact(): JSX.Element {
             <h1 className="Title">{TITLE.contact}</h1>
             <p className="MainText MainText_dark">
               Нужна моя <strong>помощь</strong> или есть ко мне интересное{' '}
-              <strong>предложение</strong> ? Пиши на почту{' '}
+              <strong>предложение</strong> ? Пишите на почту{' '}
               <a
                 {...BLANK_LINK_PROPS}
                 className="Link"
@@ -30,7 +30,7 @@ export default function Contact(): JSX.Element {
               >
                 michael.any.dev@gmail.com
               </a>{' '}
-              или воспользуйся формой:
+              или воспользуйтесь формой:
             </p>
             <ContactForm />
           </div>

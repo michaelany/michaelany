@@ -98,6 +98,9 @@
   &_dark {
     color: $color_text;
   }
+  &_noAnimation {
+    animation: none;
+  }
   @include lg {
     font-size: 26px;
   }

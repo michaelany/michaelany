@@ -11,6 +11,8 @@ import {
   Grid,
   InputAdornment,
   InputProps,
+  Fade,
+  CircularProgress,
 } from '@material-ui/core'
 import {
   PersonRounded as PersonIcon,
@@ -20,6 +22,7 @@ import {
 
 import './ContactForm.scss'
 import {Animate} from '../common'
+import SuccessDialog from './SuccessDialog'
 import {Map} from '../../utils/types'
 
 interface Field {
@@ -66,6 +69,8 @@ const inputProps: Map<InputProps> = {
 }
 
 export default function ContactForm(): JSX.Element {
+  const [successDialog, setsSuccessDialog] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
   const fieldElements: Map<MutableRefObject<HTMLInputElement>> = {
@@ -76,6 +81,7 @@ export default function ContactForm(): JSX.Element {
 
   const handleSubmit = (e: SyntheticEvent): void => {
     e.preventDefault()
+    // validation
     const newErrors: typeof initialErrors = {}
     Object.keys(values).forEach((name: string): void => {
       if (
@@ -97,7 +103,13 @@ export default function ContactForm(): JSX.Element {
       setErrors({...errors, ...newErrors})
       return
     }
-    console.log('submit!')
+    // request
+    setLoading(true)
+    setTimeout(() => {
+      setsSuccessDialog(true)
+      changeValues(initialValues)
+      setLoading(false)
+    }, 2000)
   }
 
   const handleChange = ({
@@ -118,67 +130,80 @@ export default function ContactForm(): JSX.Element {
     }
   }
 
+  const handleSuccessDialogClose = (): void => {
+    setsSuccessDialog(false)
+  }
+
   return (
-    <Animate
-      noValidate
-      el="form"
-      className="ContactForm"
-      effect="bottom"
-      onSubmit={handleSubmit}
-    >
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={12} xl={6}>
-          <TextField
-            fullWidth
-            name={field.name}
-            label="Имя"
-            variant="filled"
-            InputProps={inputProps[field.name]}
-            inputProps={{ref: fieldElements[field.name]}}
-            value={values.name}
-            error={errors.name}
-            onChange={handleChange}
-          />
-        </Grid>
-        <Grid item xs={12} md={6} lg={12} xl={6}>
-          <TextField
-            fullWidth
-            name={field.email}
-            type="email"
-            label="Email"
-            variant="filled"
-            InputProps={inputProps[field.email]}
-            inputProps={{ref: fieldElements[field.email]}}
-            value={values.email}
-            error={errors.email}
-            onChange={handleChange}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            fullWidth
-            multiline
-            name={field.message}
-            label="Сообщение"
-            rows="5"
-            variant="filled"
-            InputProps={inputProps[field.message]}
-            inputProps={{ref: fieldElements[field.message]}}
-            value={values.message}
-            error={errors.message}
-            onChange={handleChange}
-          />
-        </Grid>
-      </Grid>
-      <Button
-        fullWidth
-        className="ContactForm-Submit Button"
-        type="submit"
-        size="large"
-        endIcon={<SendIcon />}
+    <>
+      <Animate
+        noValidate
+        el="form"
+        className="ContactForm"
+        effect="bottom"
+        onSubmit={handleSubmit}
       >
-        Отправить
-      </Button>
-    </Animate>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6} lg={12} xl={6}>
+            <TextField
+              fullWidth
+              name={field.name}
+              label="Имя"
+              variant="filled"
+              InputProps={inputProps[field.name]}
+              inputProps={{ref: fieldElements[field.name]}}
+              value={values.name}
+              error={errors.name}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={12} xl={6}>
+            <TextField
+              fullWidth
+              name={field.email}
+              type="email"
+              label="Email"
+              variant="filled"
+              InputProps={inputProps[field.email]}
+              inputProps={{ref: fieldElements[field.email]}}
+              value={values.email}
+              error={errors.email}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              multiline
+              name={field.message}
+              label="Сообщение"
+              rows="5"
+              variant="filled"
+              InputProps={inputProps[field.message]}
+              inputProps={{ref: fieldElements[field.message]}}
+              value={values.message}
+              error={errors.message}
+              onChange={handleChange}
+            />
+          </Grid>
+        </Grid>
+        <Button
+          fullWidth
+          className="ContactForm-Submit Button"
+          type="submit"
+          size="large"
+          endIcon={<SendIcon />}
+          disabled={loading}
+        >
+          <span>Отправить</span>
+          <Fade in={loading}>
+            <div className="ContactForm-Loader">
+              <CircularProgress size={36} className="ContactForm-Progress" />
+            </div>
+          </Fade>
+        </Button>
+      </Animate>
+      <SuccessDialog open={successDialog} onClose={handleSuccessDialogClose} />
+    </>
   )
 }

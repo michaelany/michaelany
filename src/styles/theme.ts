@@ -107,6 +107,9 @@ const THEME = {
       TransitionProps: {unmountOnExit: true},
     },
     MuiDrawer: {keepMounted: true, disablePortal: true, elevation: 0},
+    MuiDialog: {
+      scroll: 'body',
+    },
   },
 }
 
