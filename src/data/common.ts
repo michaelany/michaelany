@@ -77,7 +77,7 @@ export const CONTACT_LINK: ContactLink = {
   },
   linkedIn: {
     title: 'LinkedIn',
-    href: 'https://www.linkedin.com/mclananiev',
+    href: 'https://linkedin.com/mclananiev',
     Icon: LinkedInIcon,
     size: 'sm',
   },
@@ -89,7 +89,7 @@ export const CONTACT_LINK: ContactLink = {
   },
   instagram: {
     title: 'Instagram',
-    href: 'https://www.instagram.com/mclananiev/',
+    href: 'https://instagram.com/mclananiev',
     Icon: InstagramIcon,
     size: 'md',
   },
@@ -101,7 +101,7 @@ export const CONTACT_LINK: ContactLink = {
   },
   facebook: {
     title: 'Facebook',
-    href: 'https://www.facebook.com/mclananiev',
+    href: 'https://facebook.com/mclananiev',
     Icon: FacebookIcon,
     size: 'sm',
   },
