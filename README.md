@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://michaelany.com" rel="noopener" target="_blank">
-    <img width="100" height="148" src="./public/logo.svg" alt="Michael Any logo">
+    <img width="100" src="./public/logo.svg" alt="Michael Any logo">
   </a>
 </p>
 
