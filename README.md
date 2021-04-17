@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://michaelany.com" rel="noopener" target="_blank">
-    <img width="100" src="./public/logo.svg" alt="Michael Any logo">
+    <img width="100" src="./public/logo.svg" alt="Michael Any logo" />
   </a>
 </p>
 
@@ -19,7 +19,7 @@
 - 👨‍🏫 &nbsp;Ведущий разработчик и ментор
 
 <details>
-  <summary>👉 &nbsp;<strong>Подробнее</strong></summary>
+  <summary>🔽 &nbsp;<strong>Подробнее</strong></summary>
 
 - 👔 &nbsp;Организованный и автономный
 - 🤓 &nbsp;Люблю программировать
@@ -35,22 +35,22 @@
 
 <p>
   <a href="https://michaelany.com" rel="noopener" target="_blank">
-    <img src="https://img.shields.io/badge/-michaelany-568bd0?logo=google-chrome&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-michaelany-568bd0?logo=google-chrome&logoColor=white" alt="michaelany" />
   </a>
   <a href="https://linkedin.com/mclananiev" rel="noopener" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="linkedin" />
   </a>
   <a href="https://instagram.com/mclananiev" rel="noopener" target="_blank">
-    <img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="instagram" />
   </a>
   <a href="https://facebook.com/mclananiev" rel="noopener" target="_blank">
-    <img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="facebook" />
   </a>
   <a href="https://vk.com/mclananiev" rel="noopener" target="_blank">
-    <img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />
   </a>
   <a href="https://7glyphs.com/agency/team" rel="noopener" target="_blank">
-    <img src="https://img.shields.io/badge/-7glyphs team-282828?logo=google-chrome&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-7glyphs team-282828?logo=google-chrome&logoColor=white" alt="7glyphs website" />
   </a>
 </p>
 
@@ -63,7 +63,7 @@
 - 🎨 &nbsp;Верстаю семантично, доступно, кроссбраузерно и pixel-perfect
 
 <details>
-  <summary>👉 &nbsp;<strong>Подробнее</strong></summary>
+  <summary>🔽 &nbsp;<strong>Подробнее</strong></summary>
 
 - 🧠 &nbsp;Выбираю простой и эффективный способ решения задачи
 - 🧩 &nbsp;Имею в арсенале большое количество паттернов и приемов
@@ -102,5 +102,5 @@
 
 ## GitHub Stats
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=michaelany&layout=compact&theme=tokyonight"/>
-<img src="https://github-readme-stats.vercel.app/api?username=michaelany&hide=prs,issues,contribs&show_icons=true&theme=tokyonight"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=michaelany&layout=compact&theme=tokyonight" />
+<img src="https://github-readme-stats.vercel.app/api?username=michaelany&hide=prs,issues,contribs&show_icons=true&theme=tokyonight" />
