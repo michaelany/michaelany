@@ -10,8 +10,6 @@
 
 ## Привет! 👋 &nbsp;Я - [Michael Any](https://michaelany.com). Фронтенд-разработчик 👨‍💻
 
----
-
 ## [Обо мне](https://michaelany.com/about)
 
 - 👨‍💻 &nbsp;Занимаюсь фронтенд-разработкой
@@ -56,8 +54,6 @@
   </a>
 </p>
 
----
-
 ## [Навыки](https://michaelany.com/skills)
 
 - 👾 &nbsp;Разрабатываю приложения, лендинги, многостраничные сайты и админки
@@ -100,13 +96,9 @@
 ![Figma](https://img.shields.io/badge/-Figma-282828?style=flat&logo=figma&logoColor=f24e1e)
 ![macOS](https://img.shields.io/badge/-macOS-282828?style=flat&logo=macos&logoColor=white)
 
----
-
 ## [Контакты](https://michaelany.com/contact)
 
 Нужна моя помощь или есть ко мне интересное предложение ? Пишите на почту michael.any.dev@gmail.com
-
----
 
 ## GitHub Stats
 
