@@ -6,6 +6,7 @@ import {
 } from '@material-ui/icons'
 
 import './Copyright.scss'
+import {MY_NAME} from '../../data/common'
 import {ROUTE, TODAY} from '../../utils/constants'
 
 const year: number = TODAY.getFullYear()
@@ -16,7 +17,7 @@ export default function Copyright() {
       <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
       <BuildIcon className="Copyright-Icon" /> by{' '}
       <Link className="Copyright-Link" to={ROUTE.home}>
-        Michael Any
+        {MY_NAME}
       </Link>{' '}
       with <FavoriteIcon className="Copyright-Icon" />
     </p>

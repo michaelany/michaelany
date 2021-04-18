@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://michaelany.com" rel="noopener" target="_blank">
-    <img width="100" src="./public/assets/logo.svg" alt="Michael Any's logo" />
+    <img width="100" src="./public/assets/logo.svg" alt="Logo" />
   </a>
 </p>
 
 <h1 align="center">Michael Any</h1>
 
-![Michael Any's banner](./public/assets/banner.png)
+![Banner](./public/assets/banner.png)
 
 ## Привет! 👋 &nbsp;Я - [Michael Any](website). Фронтенд-разработчик 👨‍💻
 
@@ -34,9 +34,9 @@
 </details>&nbsp;
 
 [<img src="https://img.shields.io/badge/-Michael_Any-568bd0?logo=google-chrome&logoColor=white" alt="Google Chrome" />](website)
-[<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="linkedin" />](linkedIn)
-[<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="instagram" />](instagram)
-[<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="facebook" />](facebook)
+[<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />](linkedIn)
+[<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />](instagram)
+[<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />](facebook)
 [<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />](vk)
 [<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
 
@@ -89,9 +89,9 @@
 [<img src="https://img.shields.io/badge/-Michael_Any_Contact-5eb070?logo=google-chrome&logoColor=white" alt="Google Chrome" />](website)
 [<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michael.any.dev@gmail.com)
 [<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/mclananiev)
-[<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="linkedin" />](linkedIn)
-[<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="instagram" />](instagram)
-[<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="facebook" />](facebook)
+[<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />](linkedIn)
+[<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />](instagram)
+[<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />](facebook)
 [<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />](vk)
 
 ## GitHub Analytics

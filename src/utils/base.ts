@@ -1,3 +1,5 @@
+import {MY_NAME} from '../data/common'
+
 export const handleAppLoaded = (): void => {
   const preloader: HTMLElement = document.getElementById('preloader')!
   preloader.classList.remove('Preloader_show')
@@ -8,7 +10,7 @@ export const handleAppLoaded = (): void => {
 export const logConsoleWelcomeMessage = () => {
   const consoleTextStyle = 'font-size: 16px;'
   console.log(
-    `%cПривет! 👋🏻\nЯ - %cMichael Any%c, фронтенд-разработчик 👨🏻‍💻\nРад тебя видеть! 👀😊\n`,
+    `%cПривет! 👋\nЯ - %c${MY_NAME}%c. Фронтенд-разработчик 👨‍💻\nОписание этого проекта находится здесь 👉 https://github.com/michaelany/michaelany/blob/master/README.md 👈`,
     consoleTextStyle,
     `${consoleTextStyle} font-weight: bold;`,
     consoleTextStyle

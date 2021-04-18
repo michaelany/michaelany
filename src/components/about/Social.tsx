@@ -15,7 +15,7 @@ import {
   QUERY_BREAKPOINT,
 } from '../../utils/constants'
 import {SocialLink, TiltOptions} from '../../utils/types'
-import {CONTACT_LINK} from '../../data/common'
+import {MY_NAME, CONTACT_LINK} from '../../data/common'
 import {DURATION} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
@@ -33,7 +33,6 @@ const links: SocialLink[] = [
   CONTACT_LINK.sevenGlyphs,
 ]
 
-const myName: string = 'Michael Any'
 const imgSize: number = 320
 
 const Photo = () => {
@@ -67,7 +66,7 @@ const Photo = () => {
             height={imgSize}
             src={meNormalImg}
             srcSet={`${meNormalImg2x} 2x`}
-            alt={myName}
+            alt={MY_NAME}
           />
           <img
             className="Social-Img Social-Img_hidden"
@@ -75,7 +74,7 @@ const Photo = () => {
             height={imgSize}
             src={meExcitedImg}
             srcSet={`${meExcitedImg2x} 2x`}
-            alt={myName}
+            alt={MY_NAME}
           />
         </>
       </Tilt>

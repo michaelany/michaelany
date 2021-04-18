@@ -47,6 +47,8 @@ interface ProjectTypeLabel {
   landing: string
 }
 
+export const MY_NAME: string = 'Michael Any'
+
 export const TITLE: Title = {
   home: 'Главная',
   about: 'Обо мне',
