@@ -1,4 +1,6 @@
+import {useState} from 'react'
 import {useMediaQuery} from '@material-ui/core'
+import cn from 'clsx'
 
 import './Social.scss'
 import meNormalImg from '../../assets/img/pictures/me-normal.png'
@@ -34,39 +36,59 @@ const links: SocialLink[] = [
 const myName: string = 'Michael Any'
 const imgSize: number = 320
 
-export default function Social(): JSX.Element {
+const Photo = () => {
+  const [hovered, setHovered] = useState<boolean>(false)
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
+  const handlePhotoOver = (): void => {
+    setHovered(true)
+  }
+
+  const handlePhotoOut = (): void => {
+    setHovered(false)
+  }
+
+  return (
+    <Animate
+      className={cn(
+        'Social-PhotoWrapper',
+        hovered && 'Social-PhotoWrapper_hovered'
+      )}
+      effect={md ? undefined : 'zoomOut'}
+      duration={md ? undefined : 'longer'}
+      onMouseOver={handlePhotoOver}
+      onMouseOut={handlePhotoOut}
+    >
+      <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
+        <>
+          <img
+            className="Social-Img"
+            width={imgSize}
+            height={imgSize}
+            src={meNormalImg}
+            srcSet={`${meNormalImg2x} 2x`}
+            alt={myName}
+          />
+          <img
+            className="Social-Img Social-Img_hidden"
+            width={imgSize}
+            height={imgSize}
+            src={meExcitedImg}
+            srcSet={`${meExcitedImg2x} 2x`}
+            alt={myName}
+          />
+        </>
+      </Tilt>
+    </Animate>
+  )
+}
+
+export default function Social(): JSX.Element {
   return (
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
       <h2 className="VisuallyHidden">Фото и социальные сети</h2>
       <div className="Social-Content">
-        <Animate
-          className="Social-PhotoWrapper"
-          effect={md ? undefined : 'zoomOut'}
-          duration={md ? undefined : 'longer'}
-        >
-          <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
-            <>
-              <img
-                className="Social-Img"
-                width={imgSize}
-                height={imgSize}
-                src={meNormalImg}
-                srcSet={`${meNormalImg2x} 2x`}
-                alt={myName}
-              />
-              <img
-                className="Social-Img Social-Img_hidden"
-                width={imgSize}
-                height={imgSize}
-                src={meExcitedImg}
-                srcSet={`${meExcitedImg2x} 2x`}
-                alt={myName}
-              />
-            </>
-          </Tilt>
-        </Animate>
+        <Photo />
         <SocialLinks about links={links} />
       </div>
       <Pagination prevTo={ROUTE.home} nextTo={ROUTE.skills} />
