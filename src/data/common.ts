@@ -1,5 +1,3 @@
-import {AlternateEmailRounded as AlternateEmailIcon} from '@material-ui/icons'
-
 import {ReactComponent as SevenGlyphsIcon} from '../assets/icons/7glyphs.svg'
 import {ReactComponent as GitHubIcon} from '../assets/icons/github.svg'
 import {ReactComponent as LinkedInIcon} from '../assets/icons/linkedin.svg'
@@ -7,7 +5,6 @@ import {ReactComponent as InstagramIcon} from '../assets/icons/instagram.svg'
 import {ReactComponent as VKIcon} from '../assets/icons/vk.svg'
 import {ReactComponent as FacebookIcon} from '../assets/icons/facebook.svg'
 import {ReactComponent as TelegramIcon} from '../assets/icons/telegram.svg'
-import {ReactComponent as SkypeIcon} from '../assets/icons/skype.svg'
 import {SocialLink, Company, TechnologyGroup} from '../utils/types'
 
 interface Title {
@@ -33,9 +30,7 @@ interface ContactLink {
   instagram: SocialLink
   vk: SocialLink
   facebook: SocialLink
-  email: SocialLink
   telegram: SocialLink
-  skype: SocialLink
 }
 
 interface CompanyInterface {
@@ -105,22 +100,10 @@ export const CONTACT_LINK: ContactLink = {
     Icon: FacebookIcon,
     size: 'sm',
   },
-  email: {
-    title: 'Email',
-    href: 'mailto:michael.any.dev@gmail.com',
-    Icon: AlternateEmailIcon,
-    size: 'lg',
-  },
   telegram: {
     title: 'Telegram',
     href: 'https://t.me/mclananiev',
     Icon: TelegramIcon,
-    size: 'md',
-  },
-  skype: {
-    title: 'Skype',
-    href: 'skype:live:bd80acb1b9083867?chat',
-    Icon: SkypeIcon,
     size: 'md',
   },
 }
@@ -200,6 +183,7 @@ export const TECHNOLOGY_TITLE = {
   reactstrap: 'reactstrap',
   materialize: 'Materialize',
   bootstrap: 'Bootstrap',
+  semantic: 'Semantic UI',
   emails: 'Foundation for Emails',
   npm: 'npm',
   yarn: 'Yarn',
@@ -415,6 +399,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.bootstrap,
         color: 'violet',
         href: 'https://getbootstrap.com',
+      },
+      {
+        name: 'semantic',
+        label: TECHNOLOGY_TITLE.semantic,
+        color: 'green',
+        href: 'https://semantic-ui.com',
       },
       {
         name: 'emails',

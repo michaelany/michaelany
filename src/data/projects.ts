@@ -1485,7 +1485,7 @@ const PROJECTS: Project[] = [
       featureText.growthSupportDevelopment,
       featureText.teamWork,
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.handlebars}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, Semantic UI`,
+      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.semantic}`,
       `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
       `Первый коммерческий проект`,
       'Август 2016',
