@@ -16,7 +16,7 @@ export default function Copyright() {
       <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
       <BuildIcon className="Copyright-Icon" /> by{' '}
       <Link className="Copyright-Link" to={ROUTE.home}>
-        Michael Ananiev
+        Michael Any
       </Link>{' '}
       with <FavoriteIcon className="Copyright-Icon" />
     </p>

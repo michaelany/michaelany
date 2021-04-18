@@ -8,7 +8,7 @@ export default function Portfolio(): JSX.Element {
     <section className="Section Section_single Section_pagination">
       <div>
         <h1 className="Title">{TITLE.portfolio}</h1>
-        <Projects />
+        {/* <Projects /> */}
       </div>
       <Pagination prevTo={ROUTE.experience} nextTo={ROUTE.contact} />
       <Copyright />
