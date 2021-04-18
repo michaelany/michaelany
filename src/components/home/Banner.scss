@@ -18,10 +18,8 @@
   margin: auto;
   &::before {
     @include pseudo;
+    background: center / contain no-repeat;
     @include retinaImg('../assets/img/shapes/reflection', 'png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 33%;
     height: 78%;
     top: 0.5%;
@@ -32,11 +30,12 @@
 
 .Banner-Image {
   width: 100%;
+  height: auto;
 }
 
 .Banner-ScreenImage {
   position: absolute;
-  top: 18%;
+  top: 17%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
