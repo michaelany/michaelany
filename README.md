@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://michaelany.com" rel="noopener" target="_blank">
-    <img width="100" src="./public/logo.svg" alt="Michael Any's logo" />
+    <img width="100" src="./public/assets/logo.svg" alt="Michael Any's logo" />
   </a>
 </p>
 
 <h1 align="center">Michael Any</h1>
 
-![Michael Any's banner](./public/banner.png)
+![Michael Any's banner](./public/assets/banner.png)
 
 ## Привет! 👋 &nbsp;Я - [Michael Any](website). Фронтенд-разработчик 👨‍💻
 
