@@ -171,6 +171,14 @@
   }
 }
 
+.NavigationButton {
+  font-size: 32px;
+  height: 54px;
+  .App_color_white &:not(.Colorful) {
+    color: rgba(white, 0.7);
+  }
+}
+
 .Link {
   font-weight: bold;
   user-select: auto;

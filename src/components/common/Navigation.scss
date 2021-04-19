@@ -6,6 +6,7 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'contact';
 .Navigation {
   position: relative;
   width: $sidebar-width;
+  margin-bottom: 48px;
   &::after {
     @include pseudo;
     top: 0;
@@ -35,13 +36,5 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'contact';
   }
   .Header-Drawer > & {
     padding-bottom: 24px;
-  }
-}
-
-.Navigation-Link {
-  font-size: 32px;
-  height: 54px;
-  .App_color_white &:not(.Colorful) {
-    color: rgba(white, 0.7);
   }
 }

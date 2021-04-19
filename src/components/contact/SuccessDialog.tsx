@@ -1,5 +1,5 @@
 import {forwardRef} from 'react'
-import {Dialog, Button, PaperProps, Grow} from '@material-ui/core'
+import {Dialog, Button, Grow} from '@material-ui/core'
 import {TransitionProps} from '@material-ui/core/transitions'
 import {ThumbUpRounded as ThumbUpIcon} from '@material-ui/icons'
 
@@ -11,8 +11,6 @@ interface SuccessDialogProps {
   open: boolean
   onClose: () => void
 }
-
-const paperProps: PaperProps = {elevation: 0}
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {children?: React.ReactElement<any, any>},
@@ -30,7 +28,6 @@ export default function SuccessDialog({
       open={open}
       maxWidth="lg"
       TransitionComponent={Transition}
-      PaperProps={paperProps}
       onClose={onClose}
     >
       <div className="SuccessDialog">

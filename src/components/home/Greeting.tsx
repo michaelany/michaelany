@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import {useTranslation} from 'react-i18next'
 import {Button} from '@material-ui/core'
 import {
   WebRounded as WebIcon,
@@ -10,20 +11,21 @@ import frontEndImg from '../../assets/img/pictures/front-end.png'
 import frontEndImg2x from '../../assets/img/pictures/front-end@2x.png'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
 import {ROUTE} from '../../utils/constants'
-import {TITLE} from '../../data/common'
 
 export default function Greeting(): JSX.Element {
+  const {t} = useTranslation()
+
   return (
     <section className="Greeting Section">
       <div className="Greeting-Block">
-        <p className="Greeting-Text Greeting-First Title">Привет!</p>
+        <p className="Greeting-Text Greeting-First Title">{t('greeting.hi')}</p>
         <div className="Greeting-Second">
           <HelloIcon className="Greeting-Icon" />
         </div>
       </div>
       <h1 className="Greeting-Text Title">
         <span className="Greeting-Part Greeting-Text Greeting-Third Title">
-          Я -
+          {t('greeting.iam')}
         </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_second">
           <span className="Greeting-Main">Michael</span>
@@ -35,9 +37,10 @@ export default function Greeting(): JSX.Element {
       </h1>
       <p className="Greeting-Text Greeting-Fifth Title">
         <strong>
-          фронтенд-
+          {t('greeting.occupation.part1')}
+          <br />
           <span className="Greeting-Word">
-            разработчик
+            {t('greeting.occupation.part2')}
             <Link className="Greeting-Extra" to={ROUTE.skills}>
               <img
                 className="Greeting-ExtraImg"
@@ -59,7 +62,7 @@ export default function Greeting(): JSX.Element {
           size="large"
           endIcon={<WebIcon />}
         >
-          {TITLE.portfolio}
+          {t('title.portfolio')}
         </Button>
         <Button
           className="Greeting-Seventh Button Button_color_green"
@@ -68,7 +71,7 @@ export default function Greeting(): JSX.Element {
           size="large"
           endIcon={<MailIcon />}
         >
-          {TITLE.contact}
+          {t('title.contact')}
         </Button>
       </div>
     </section>

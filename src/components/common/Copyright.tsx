@@ -1,25 +1,30 @@
-import {Link} from 'react-router-dom'
+import {useTranslation} from 'react-i18next'
 import {
   CopyrightRounded as CopyrightIcon,
-  BuildRounded as BuildIcon,
   FavoriteRounded as FavoriteIcon,
 } from '@material-ui/icons'
 
 import './Copyright.scss'
-import {MY_NAME} from '../../data/common'
-import {ROUTE, TODAY} from '../../utils/constants'
+import {TODAY, BLANK_LINK_PROPS} from '../../utils/constants'
+import {CONTACT_LINK} from '../../data/common'
 
 const year: number = TODAY.getFullYear()
 
 export default function Copyright() {
+  const {t} = useTranslation()
+
   return (
-    <p className="Copyright">
+    <footer className="Copyright">
       <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
-      <BuildIcon className="Copyright-Icon" /> by{' '}
-      <Link className="Copyright-Link" to={ROUTE.home}>
-        {MY_NAME}
-      </Link>{' '}
-      with <FavoriteIcon className="Copyright-Icon" />
-    </p>
+      {t('copyright.crafted')}{' '}
+      <a
+        {...BLANK_LINK_PROPS}
+        className="Copyright-Link"
+        href={CONTACT_LINK.gitHub.href}
+      >
+        {t('copyright.me')}
+      </a>{' '}
+      {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
+    </footer>
   )
 }

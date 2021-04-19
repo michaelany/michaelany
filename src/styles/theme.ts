@@ -109,6 +109,7 @@ const THEME = {
     MuiDrawer: {keepMounted: true, disablePortal: true, elevation: 0},
     MuiDialog: {
       scroll: 'body',
+      PaperProps: {elevation: 0},
     },
     MuiCircularProgress: {
       thickness: 3,

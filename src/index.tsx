@@ -9,6 +9,7 @@ import {
 import {CssBaseline} from '@material-ui/core'
 
 import './styles/index.scss'
+import './utils/i18n'
 import ScrollToTop from './components/base/ScrollToTop'
 import App from './components/App'
 import {logConsoleWelcomeMessage} from './utils/base'

@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import {useTranslation} from 'react-i18next'
 import {Grid, Button} from '@material-ui/core'
 import {
   ChevronLeftRounded as ChevronLeftIcon,
@@ -8,7 +9,6 @@ import {
 import './Pagination.scss'
 import {ROUTE} from '../../utils/constants'
 import {Route, Map} from '../../utils/types'
-import {TITLE} from '../../data/common'
 
 interface PaginationProps {
   prevTo?: Route
@@ -16,18 +16,20 @@ interface PaginationProps {
 }
 
 const pathTitles: Map<string> = {
-  [ROUTE.home]: TITLE.home,
-  [ROUTE.about]: TITLE.about,
-  [ROUTE.skills]: TITLE.skills,
-  [ROUTE.experience]: TITLE.experience,
-  [ROUTE.portfolio]: TITLE.portfolio,
-  [ROUTE.contact]: TITLE.contact,
+  [ROUTE.home]: 'home',
+  [ROUTE.about]: 'about',
+  [ROUTE.skills]: 'skills',
+  [ROUTE.experience]: 'experience',
+  [ROUTE.portfolio]: 'portfolio',
+  [ROUTE.contact]: 'contact',
 }
 
 export default function Pagination({
   prevTo,
   nextTo,
 }: PaginationProps): JSX.Element {
+  const {t} = useTranslation()
+
   return (
     <div className="Pagination Actions">
       <Grid container className="Pagination-Links" spacing={2} justify="center">
@@ -40,7 +42,7 @@ export default function Pagination({
               to={prevTo}
               startIcon={<ChevronLeftIcon />}
             >
-              {pathTitles[prevTo]}
+              {t(`title.${pathTitles[prevTo]}`)}
             </Button>
           </Grid>
         )}
@@ -53,7 +55,7 @@ export default function Pagination({
               to={nextTo}
               endIcon={<ChevronRightIcon />}
             >
-              {pathTitles[nextTo]}
+              {t(`title.${pathTitles[nextTo]}`)}
             </Button>
           </Grid>
         )}

@@ -2,6 +2,9 @@
 
 .Sidebar {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   padding-top: 8px;
   padding-bottom: 24px;

@@ -7,12 +7,12 @@ import {Logo} from '../common'
 import Drawer from './Drawer'
 
 export default function Header(): JSX.Element {
-  const [open, toggleOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState<boolean>(false)
   const trigger: boolean = useScrollTrigger()
 
-  const handleOpen = (): void => toggleOpen(true)
+  const handleOpen = (): void => setOpen(true)
 
-  const handleClose = (): void => toggleOpen(false)
+  const handleClose = (): void => setOpen(false)
 
   return (
     <>
