@@ -1,4 +1,5 @@
 import {Dispatch, SetStateAction, RefObject} from 'react'
+import {useTranslation} from 'react-i18next'
 
 import {
   useMediaQuery,
@@ -29,13 +30,14 @@ export default function Technologies({
   firstTechnologyActionRef,
   setExpanded,
 }: TechnologiesProps): JSX.Element {
+  const {t} = useTranslation()
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
-  const handleExpand = (title: string): (() => void) => () =>
+  const handleExpand = (tKey: string): (() => void) => () =>
     setExpanded((expanded: string[]) =>
-      expanded.includes(title)
-        ? expanded.filter((item) => item !== title)
-        : [...expanded, title]
+      expanded.includes(tKey)
+        ? expanded.filter((item) => item !== tKey)
+        : [...expanded, tKey]
     )
 
   return (
@@ -43,7 +45,7 @@ export default function Technologies({
       className="Technologies Section Section_pagination Section_colorful"
       ref={sectionRef}
     >
-      <h2 className="VisuallyHidden">Технологии</h2>
+      <h2 className="VisuallyHidden">{t('hidden.technologies')}</h2>
       <Animate
         el="ul"
         className="Technologies-Groups"
@@ -52,13 +54,15 @@ export default function Technologies({
       >
         {TECHNOLOGY_GROUPS.map((group: TechnologyGroup, index: number) => (
           <Accordion
-            key={index}
+            key={group.tKey}
             component="li"
-            expanded={expanded.includes(group.title)}
-            onChange={handleExpand(group.title)}
+            expanded={expanded.includes(group.tKey)}
+            onChange={handleExpand(group.tKey)}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <h3 className="Technologies-Title">{group.title}</h3>
+              <h3 className="Technologies-Title">
+                {t(`technologyGroup.${group.tKey}`)}
+              </h3>
             </AccordionSummary>
             <AccordionDetails>
               <TechnologyList

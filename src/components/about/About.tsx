@@ -18,7 +18,7 @@ import {
 import {Sections, Info} from '../common'
 import Social from './Social'
 import PROJECTS from '../../data/projects'
-import {TECHNOLOGY_TITLE, TITLE} from '../../data/common'
+import {TECHNOLOGY_TITLE} from '../../data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,

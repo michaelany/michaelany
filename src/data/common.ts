@@ -218,7 +218,7 @@ export const TECHNOLOGY_TITLE = {
 
 export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
   {
-    title: 'Логика',
+    tKey: 'logic',
     technologies: [
       {
         name: 'js',
@@ -286,7 +286,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     ],
   },
   {
-    title: 'Разметка',
+    tKey: 'markup',
     technologies: [
       {
         name: 'html',
@@ -333,7 +333,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     ],
   },
   {
-    title: 'Стили',
+    tKey: 'styles',
     technologies: [
       {
         name: 'css',
@@ -359,7 +359,6 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         color: 'default',
         href: 'https://github.com/css-modules/css-modules',
       },
-
       {
         name: 'styled',
         label: TECHNOLOGY_TITLE.styled,
@@ -417,7 +416,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     ],
   },
   {
-    title: 'Утилиты',
+    tKey: 'utils',
     technologies: [
       {
         name: 'git',
@@ -491,7 +490,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     ],
   },
   {
-    title: 'Инструменты',
+    tKey: 'tools',
     technologies: [
       {
         name: 'iterm',
@@ -557,7 +556,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
     ],
   },
   {
-    title: 'Другое',
+    tKey: 'other',
     technologies: [
       {
         name: 'react',

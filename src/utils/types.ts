@@ -102,7 +102,7 @@ export interface Technology {
 }
 
 export interface TechnologyGroup {
-  title: string
+  tKey: string
   technologies: Technology[]
 }
 

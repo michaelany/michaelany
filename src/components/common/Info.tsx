@@ -15,12 +15,13 @@ interface InfoProps {
   type: string
   title?: any
   text?: any
+  textValue?: any
   features: Feature[]
 }
 
 const transComponents = {strong: <strong />}
 
-function Info({type, features}: InfoProps): JSX.Element {
+function Info({type, textValue, features}: InfoProps): JSX.Element {
   const {t} = useTranslation()
   const storageProp: string = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(
@@ -39,7 +40,11 @@ function Info({type, features}: InfoProps): JSX.Element {
     <section className="Info Section">
       <h1 className="Title">{t(`title.${type}`)}</h1>
       <p className="MainText">
-        <Trans i18nKey={`${type}.text`} components={transComponents} />
+        <Trans
+          i18nKey={`${type}.text`}
+          values={{value: textValue}}
+          components={transComponents}
+        />
       </p>
       <Features type={type || ''} extra={open} items={features} />
       <Animate className="Actions Actions_center" effect="bottom">
