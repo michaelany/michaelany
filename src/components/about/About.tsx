@@ -29,133 +29,86 @@ import {Feature} from '../../utils/types'
 
 const features: Feature[] = [
   {
-    label: 'Реализовал множество проектов',
+    tKey: 'projects',
     Icon: AppsIcon,
-    description: (
-      <>
-        В моем послужном списке около {PROJECTS.length + 3} зарубежных и
-        отечественных коммерческих проектов - от лендингов до крупных
-        веб-приложений. Некоторые из них представлены в{' '}
-        <Link className="Link" to={ROUTE.portfolio}>
-          {TITLE.portfolio}
-        </Link>
-        .
-      </>
-    ),
+    textValue: PROJECTS.length + 3,
+    link: {
+      tKey: 'title.portfolio',
+      component: <Link className="Link" to={ROUTE.portfolio} />,
+    },
   },
   {
-    label: `Опыт разработки ${YEARS_OF_EXPERIENCE}+ лет`,
+    tKey: 'experience',
     Icon: BusinessCenterIcon,
-    description: (
-      <>
-        Первый сайт сделал в 13 лет. Прошел путь от верстальщика до тимлида
-        фронтенд-разработки. Работаю в отечественной ИТ компании и сотрудничаю с
-        новозеландской студией. Подробнее на странице{' '}
-        <Link className="Link" to={ROUTE.experience}>
-          {TITLE.experience}
-        </Link>
-        .
-      </>
-    ),
+    labelValue: YEARS_OF_EXPERIENCE,
+    link: {
+      tKey: 'title.experience',
+      component: <Link className="Link" to={ROUTE.experience} />,
+    },
   },
   {
-    label: 'Ведущий разработчик и ментор',
+    tKey: 'experience',
     Icon: SupervisorAccountIcon,
-    description: (
-      <>
-        Разрабатываю проекты с нуля, верстаю, пишу бизнес-логику, оптимизирую и
-        поддерживаю код. Планирую и оцениваю задачи, провожу код-ревью и обучаю.
-        Более подробно в{' '}
-        <Link className="Link" to={ROUTE.skills}>
-          {TITLE.skills}
-        </Link>
-        .
-      </>
-    ),
+    link: {
+      tKey: 'title.skills',
+      component: <Link className="Link" to={ROUTE.skills} />,
+    },
   },
   {
-    label: 'Организованный и автономный',
+    tKey: 'organizing',
     Icon: GroupWorkIcon,
-    description:
-      'Большинство проектов разработаны мной самостоятельно. Я люблю брать на себя всю клиентскую часть проекта от обсуждения концепции до финальной реализации и поддержки на продакшне.',
   },
   {
-    label: 'Люблю программировать',
+    tKey: 'programming',
     Icon: CodeIcon,
-    description: `Фронтенд - мое основное хобби. Мне нравится экспериментировать с ${TECHNOLOGY_TITLE.js} и ${TECHNOLOGY_TITLE.css}. Интересуюсь кроссплатформенной и бекенд-разработкой. Планирую запустить собственный блог.`,
+    textValue: `${TECHNOLOGY_TITLE.js} и ${TECHNOLOGY_TITLE.css}`,
   },
   {
-    label: 'Постоянно развиваюсь',
+    tKey: 'growing',
     Icon: AllInclusiveIcon,
-    description:
-      'Регулярно "затачиваю пилу", изучаю документации, статьи, курсы, книги и доклады по разработке. В постоянном поиске новых технологий и инструментов повышения эффективности.',
   },
   {
-    label: 'Склонный к перфекционизму',
+    tKey: 'perfect',
     Icon: SquareFootIcon,
-    description:
-      'Высокое качество - мой главный принцип. В каждый проект я вкладываю всего себя. Однако, сила дедлайна и опыт помогают мне сосредоточиться на скорости и конечном результате.',
   },
   {
-    label: 'Два высших образования',
+    tKey: 'education',
     Icon: SchoolIcon,
-    description:
-      'Окончил "Российский технологический университет" и "Всероссийский государственный институт кинематографии" ☺. Учеба в последнем очень хорошо прокачала мои гибкие навыки.',
   },
   {
-    label: 'Занимаюсь спортом',
+    tKey: 'sport',
     Icon: DirectionsBikeIcon,
-    description:
-      'Физические нагрузки особенно актуальны для разработчика. Каждый день я стараюсь посвящать время спорту (калистеника, велосипед, бег, фитнес). Этим летом открыл для себя сапсерфинг.',
   },
   {
-    label: 'Путешествую',
+    tKey: 'travel',
     Icon: ExploreIcon,
-    description:
-      'Посетил более 15 стран. В восторге от Японии и Новой Зеландии. Был в Хоббитоне, покорил вершину Фудзиямы и остался жив после встречи с уральским медведем на Перевале Дятлова ☺.',
   },
   {
-    label: 'Счастливый муж',
+    tKey: 'love',
     Icon: FavoriteIcon,
-    description: (
-      <>
+    textValue: differenceInYears(TODAY, new Date(2013, 1)),
+    link: {
+      text: 'Она',
+      component: (
+        // eslint-disable-next-line
         <a
           {...BLANK_LINK_PROPS}
           className="Link"
           href="https://www.instagram.com/kate_watermelon"
-        >
-          Она
-        </a>{' '}
-        - мой главный источник вдохновения и лучший друг. Мы вместе уже более{' '}
-        {differenceInYears(TODAY, new Date(2013, 1))} лет. Кстати, когда-то я
-        разработал мобильное веб-приложение для предложения ей руки и сердца ☺.
-      </>
-    ),
+        />
+      ),
+    },
   },
   {
-    label: 'Кофеман',
+    tKey: 'coffee',
     Icon: LocalCafeIcon,
-    description:
-      'Известно, что "программист - это человек, превращающий кофе в код" ☺. Свой рабочий день я начинаю с кружечки ароматного кофе. Также после поездки в Японию полюбил чай матчу.',
   },
 ]
 
 export default function About(): JSX.Element {
   return (
     <Sections
-      firstSection={
-        <Info
-          type="about"
-          title={TITLE.about}
-          text={
-            <>
-              Занимаюсь <strong>фронтенд-разработкой</strong>. Создаю красивые и
-              удобные проекты любой сложности. Воплощаю в жизнь UI/UX идеи
-            </>
-          }
-          features={features}
-        />
-      }
+      firstSection={<Info type="about" features={features} />}
       secondSection={<Social />}
     />
   )

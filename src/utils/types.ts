@@ -1,3 +1,4 @@
+import {ReactNode} from 'react'
 import {SvgIconProps} from '@material-ui/core'
 
 export type Route =
@@ -77,11 +78,19 @@ export interface SocialLink {
 }
 
 export interface Feature {
-  label: string
+  label?: string
   time?: boolean
   description?: string | JSX.Element
   Icon: (props: SvgIconProps) => JSX.Element
   disabled?: boolean
+  tKey?: string
+  labelValue?: string | number
+  textValue?: string | number
+  link?: {
+    tKey?: string
+    text?: string
+    component: ReactNode
+  }
 }
 
 export interface Technology {

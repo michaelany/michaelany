@@ -20,7 +20,7 @@ interface NavigationProps {
 }
 
 interface NavLinkInterface {
-  title: string
+  tKey: string
   to: Route
   Icon: typeof SvgIcon
 }
@@ -29,12 +29,21 @@ interface ItemProps extends NavigationProps, NavLinkInterface {
   t: TFunction
 }
 
-const Item = ({title, to, Icon, t, onClose}: ItemProps): JSX.Element => {
-  const titleStr: string = t(`title.${title}`)!
+const navLinks: NavLinkInterface[] = [
+  {tKey: 'home', to: ROUTE.home, Icon: HomeIcon},
+  {tKey: 'about', to: ROUTE.about, Icon: PersonIcon},
+  {tKey: 'skills', to: ROUTE.skills, Icon: SchoolIcon},
+  {tKey: 'experience', to: ROUTE.experience, Icon: WorkIcon},
+  {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WebIcon},
+  {tKey: 'contact', to: ROUTE.contact, Icon: MailIcon},
+]
+
+const Item = ({tKey, to, Icon, t, onClose}: ItemProps): JSX.Element => {
+  const title: string = t(`title.${tKey}`)!
 
   return (
     <li>
-      <Tooltip title={titleStr} placement="right">
+      <Tooltip title={title} placement="right">
         <Button
           fullWidth
           exact={to !== ROUTE.portfolio}
@@ -42,7 +51,7 @@ const Item = ({title, to, Icon, t, onClose}: ItemProps): JSX.Element => {
           activeClassName="Colorful"
           component={NavLink}
           to={to}
-          aria-label={titleStr}
+          aria-label={title}
           onClick={onClose}
         >
           <Icon fontSize="inherit" />
@@ -55,20 +64,11 @@ const Item = ({title, to, Icon, t, onClose}: ItemProps): JSX.Element => {
 export default function Navigation({onClose}: NavigationProps): JSX.Element {
   const {t} = useTranslation()
 
-  const navLinks: NavLinkInterface[] = [
-    {title: 'home', to: ROUTE.home, Icon: HomeIcon},
-    {title: 'about', to: ROUTE.about, Icon: PersonIcon},
-    {title: 'skills', to: ROUTE.skills, Icon: SchoolIcon},
-    {title: 'experience', to: ROUTE.experience, Icon: WorkIcon},
-    {title: 'portfolio', to: ROUTE.portfolio, Icon: WebIcon},
-    {title: 'contact', to: ROUTE.contact, Icon: MailIcon},
-  ]
-
   return (
     <nav className="Navigation">
       <ul>
-        {navLinks.map((link: NavLinkInterface, index: number) => (
-          <Item key={index} {...link} t={t} onClose={onClose} />
+        {navLinks.map((link: NavLinkInterface) => (
+          <Item key={link.tKey} {...link} t={t} onClose={onClose} />
         ))}
       </ul>
     </nav>

@@ -15,7 +15,7 @@ interface PaginationProps {
   nextTo?: Route
 }
 
-const pathTitles: Map<string> = {
+const pathKeys: Map<string> = {
   [ROUTE.home]: 'home',
   [ROUTE.about]: 'about',
   [ROUTE.skills]: 'skills',
@@ -42,7 +42,7 @@ export default function Pagination({
               to={prevTo}
               startIcon={<ChevronLeftIcon />}
             >
-              {t(`title.${pathTitles[prevTo]}`)}
+              {t(`title.${pathKeys[prevTo]}`)}
             </Button>
           </Grid>
         )}
@@ -55,7 +55,7 @@ export default function Pagination({
               to={nextTo}
               endIcon={<ChevronRightIcon />}
             >
-              {t(`title.${pathTitles[nextTo]}`)}
+              {t(`title.${pathKeys[nextTo]}`)}
             </Button>
           </Grid>
         )}

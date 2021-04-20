@@ -1,4 +1,5 @@
-import {useState, memo, ReactElement} from 'react'
+import {useState, memo} from 'react'
+import {useTranslation, Trans} from 'react-i18next'
 import cn from 'clsx'
 import {Button} from '@material-ui/core'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
@@ -12,12 +13,15 @@ import {Feature} from '../../utils/types'
 
 interface InfoProps {
   type: string
-  title: string
-  text: ReactElement
+  title?: any
+  text?: any
   features: Feature[]
 }
 
-function Info({type, title, text, features}: InfoProps): JSX.Element {
+const transComponents = {strong: <strong />}
+
+function Info({type, features}: InfoProps): JSX.Element {
+  const {t} = useTranslation()
   const storageProp: string = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(
     localStorage[storageProp] ? JSON.parse(localStorage[storageProp]) : false
@@ -33,9 +37,11 @@ function Info({type, title, text, features}: InfoProps): JSX.Element {
 
   return (
     <section className="Info Section">
-      <h1 className="Title">{title}</h1>
-      <p className="MainText">{text}</p>
-      <Features extra={open} items={features} />
+      <h1 className="Title">{t(`title.${type}`)}</h1>
+      <p className="MainText">
+        <Trans i18nKey={`${type}.text`} components={transComponents} />
+      </p>
+      <Features type={type || ''} extra={open} items={features} />
       <Animate className="Actions Actions_center" effect="bottom">
         <Button
           className="Button"
@@ -49,7 +55,7 @@ function Info({type, title, text, features}: InfoProps): JSX.Element {
           }
           onClick={handleToggle}
         >
-          Подробнее
+          {t('common.more')}
         </Button>
       </Animate>
     </section>

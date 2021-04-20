@@ -67,7 +67,7 @@ export default function ProjectDetails({
       <p className="MainText">
         {description}. Разработано в "{company.title}"
       </p>
-      <Features items={featureItems} />
+      <Features type="" items={featureItems} />
       {href && (
         <Animate className="Actions Actions_center" effect="bottom">
           <Button

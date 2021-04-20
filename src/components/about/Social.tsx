@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {useTranslation} from 'react-i18next'
 import {useMediaQuery} from '@material-ui/core'
 import cn from 'clsx'
 
@@ -83,9 +84,11 @@ const Photo = () => {
 }
 
 export default function Social(): JSX.Element {
+  const {t} = useTranslation()
+
   return (
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
-      <h2 className="VisuallyHidden">Фото и социальные сети</h2>
+      <h2 className="VisuallyHidden">{t('hidden.social')}</h2>
       <div className="Social-Content">
         <Photo />
         <SocialLinks about links={links} />

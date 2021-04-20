@@ -31,7 +31,7 @@ const getFilteredProjects = (filter: string): Project[] =>
 
 function Projects(): JSX.Element {
   const [filter, changeFilter] = useState<string>(
-    localStorage.getItem(storageProp) || 'all'
+    localStorage.getItem(storageProp) ?? 'all'
   )
   const width: Width = {
     lg: useMediaQuery(QUERY_BREAKPOINT.lg),
