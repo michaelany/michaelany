@@ -20,7 +20,7 @@ interface CompanyTitle {
   mvideo: string
   everpoint: string
   sevenGlyphs: string
-  tsc: string
+  t1: string
 }
 
 interface ContactLink {
@@ -34,7 +34,7 @@ interface ContactLink {
 }
 
 interface CompanyInterface {
-  tsc: Company
+  t1: Company
   sevenGlyphs: Company
   everpoint: Company
   mvideo: Company
@@ -62,7 +62,7 @@ export const COMPANY_TITLE: CompanyTitle = {
   mvideo: 'M.Видео',
   everpoint: 'Everpoint',
   sevenGlyphs: '7 glyphs Ltd.',
-  tsc: 'Техносерв Консалтинг',
+  t1: 'T1 Консалтинг',
 }
 
 export const CONTACT_LINK: ContactLink = {
@@ -111,14 +111,14 @@ export const CONTACT_LINK: ContactLink = {
 }
 
 export const COMPANY: CompanyInterface = {
-  tsc: {
-    title: COMPANY_TITLE.tsc,
+  t1: {
+    title: COMPANY_TITLE.t1,
     images: [
-      require('../assets/img/companies/tsc.png').default,
-      require('../assets/img/companies/tsc@2x.png').default,
+      require('../assets/img/companies/t1.png').default,
+      require('../assets/img/companies/t1@2x.png').default,
     ],
     color: 'blue',
-    href: 'http://www.tsconsulting.com',
+    href: 'http://www.t1-consulting.ru',
   },
   sevenGlyphs: {
     title: COMPANY_TITLE.sevenGlyphs,

@@ -16,7 +16,7 @@ import {YEARS_OF_EXPERIENCE, CAREER_START_PARTS} from '../../utils/constants'
 const jobs: JobInterface[] = [
   {
     current: true,
-    company: COMPANY.tsc,
+    company: COMPANY.t1,
     occupations: ['lead', 'senior'],
     duties: [
       'logicApps',

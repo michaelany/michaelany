@@ -143,7 +143,7 @@ const steps: StepInterface[] = [
         year: 2018,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.tsc],
+    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
   },
   {
     period: {
@@ -156,7 +156,7 @@ const steps: StepInterface[] = [
         year: 2019,
       },
     },
-    values: [COMPANY_TITLE.tsc],
+    values: [COMPANY_TITLE.t1],
   },
   {
     period: {
@@ -165,7 +165,7 @@ const steps: StepInterface[] = [
         year: 2019,
       },
     },
-    values: [COMPANY_TITLE.tsc],
+    values: [COMPANY_TITLE.t1],
   },
   {
     period: {
@@ -174,7 +174,7 @@ const steps: StepInterface[] = [
         year: 2019,
       },
     },
-    values: [COMPANY_TITLE.tsc, COMPANY_TITLE.sevenGlyphs],
+    values: [COMPANY_TITLE.t1, COMPANY_TITLE.sevenGlyphs],
   },
 ]
 

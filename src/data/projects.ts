@@ -125,7 +125,7 @@ const PROJECTS: Project[] = [
     description:
       'Новогоднее мини-приложение для поздравления сотрудников компании',
     types: ['app'],
-    companyName: 'tsc',
+    companyName: 't1',
     features: [
       `${featureText.scratchDevelopment}, ${featureText.design}`,
       featureText.leadWork,
@@ -538,7 +538,7 @@ const PROJECTS: Project[] = [
     name: 'uls',
     description: 'Единый кабинет пользователей компании "Vaillant Group"',
     types: ['app'],
-    companyName: 'tsc',
+    companyName: 't1',
     features: [
       featureText.wholeDevelopment,
       featureText.soloWork,
@@ -638,7 +638,7 @@ const PROJECTS: Project[] = [
     name: 'embp',
     description: 'Админка биометрической платформы для банка "ВТБ"',
     types: ['admin', 'app'],
-    companyName: 'tsc',
+    companyName: 't1',
     features: [
       `${featureText.wholeDevelopment}, ${featureText.design}`,
       featureText.leadWork,
@@ -946,7 +946,7 @@ const PROJECTS: Project[] = [
     description:
       'Корпоративный сервис для работы с документооборотом компании "Vaillant Group"',
     types: ['app'],
-    companyName: 'tsc',
+    companyName: 't1',
     features: [
       `${featureText.wholeDevelopment}, ${featureText.design}`,
       featureText.leadWork,
