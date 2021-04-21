@@ -8,21 +8,25 @@ const EN = {
     contact: 'Contact',
     language: 'English',
   },
-  greeting: {
+
+  home: {
     hi: 'Hi!',
     iam: "I'm",
     occupation: {
       part1: 'a front‑end ',
       part2: 'developer',
     },
+    subtitle: 'Banner',
   },
+
   copyright: {
     crafted: 'Crafted by',
     me: 'me',
     with: 'with',
   },
-  hidden: {
-    banner: 'Banner',
+
+  common: {
+    more: 'More',
   },
 }
 

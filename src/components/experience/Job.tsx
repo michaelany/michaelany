@@ -1,4 +1,5 @@
 import {Fragment} from 'react'
+import {TFunction, useTranslation} from 'react-i18next'
 import cn from 'clsx'
 import {
   Chip,
@@ -15,25 +16,37 @@ import {
 
 import './Job.scss'
 import {Tooltip, Company} from '../common'
-import {Job as JobInterface, Feature} from '../../utils/types'
+import {tPeriodPart} from '../../utils/helpers'
+import {
+  Job as JobInterface,
+  JobFeature,
+  TKey,
+  TKeyObject,
+} from '../../utils/types'
 
 interface JobProps extends JobInterface {
   index: number
 }
 
 interface OccupationsProps {
+  t: TFunction
   current?: boolean
-  occupations: string[]
+  occupations: TKey[]
 }
 
 interface BlockProps {
+  t: TFunction
   isDuties?: boolean
-  items: string[]
+  items: TKey[]
 }
 
-const Occupations = ({current, occupations}: OccupationsProps): JSX.Element => (
+const Occupations = ({
+  t,
+  current,
+  occupations,
+}: OccupationsProps): JSX.Element => (
   <div className="Job-Occupations">
-    {occupations.map((occupation: string, index: number) => {
+    {occupations.map((occupation: TKey, index: number) => {
       const last: boolean = index === 0
       const lastCurrent: boolean | undefined = last && current
       return (
@@ -46,9 +59,9 @@ const Occupations = ({current, occupations}: OccupationsProps): JSX.Element => (
             )}
           >
             <span>
-              {occupation}
+              {t(`experience.occupation.${occupation}`)}
               {lastCurrent && (
-                <Tooltip title="Текущая должность">
+                <Tooltip title={t('experience.current')!}>
                   <span className="Job-Badge" />
                 </Tooltip>
               )}
@@ -63,16 +76,21 @@ const Occupations = ({current, occupations}: OccupationsProps): JSX.Element => (
   </div>
 )
 
-const Block = ({isDuties, items}: BlockProps): JSX.Element => (
+const Block = ({t, isDuties, items}: BlockProps): JSX.Element => (
   <div className="Job-Block">
     <h4 className="Job-SubTitle">
       {isDuties ? <WorkIcon /> : <StarIcon />}
-      {isDuties ? 'Обязанности' : 'Достижения'}
+      {t(`experience.${isDuties ? 'duties' : 'achievements'}`)}
     </h4>
     <ul className="Job-Items">
-      {items.map((item: string, index: number) => (
+      {items.map((item: TKey, index: number) => (
         <li key={index} className="Job-Item">
-          {item}
+          {t(
+            `experience.job.${isDuties ? 'duty' : 'achievement'}.${
+              (item as TKeyObject).tKey ?? item
+            }`,
+            typeof item === 'object' ? {value: item.value} : undefined
+          )}
         </li>
       ))}
     </ul>
@@ -88,6 +106,8 @@ export default function Job({
   features,
   index,
 }: JobProps): JSX.Element {
+  const {t} = useTranslation()
+
   return (
     <Accordion component="li" className="Job" defaultExpanded={index === 0}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -96,17 +116,26 @@ export default function Job({
         </div>
       </AccordionSummary>
       <AccordionDetails className="Job-Content">
-        <Occupations current={current} occupations={occupations} />
-        <Block isDuties items={duties} />
-        <Block items={achievements} />
+        <Occupations t={t} current={current} occupations={occupations} />
+        <Block t={t} isDuties items={duties} />
+        <Block t={t} items={achievements} />
         <div className="Job-Features">
           {features.map(
-            ({label, Icon, time, disabled}: Feature, index: number) => (
+            ({tKey, period, Icon, disabled}: JobFeature, index: number) => (
               <Chip
                 key={index}
                 className="Chip"
                 icon={<Icon />}
-                label={time ? <time>{label}</time> : label}
+                label={
+                  period ? (
+                    <time>
+                      {tPeriodPart(t, period.from)} -{' '}
+                      {period.to ? tPeriodPart(t, period.to) : '...'}
+                    </time>
+                  ) : (
+                    t(`experience.job.feature.${tKey}`)
+                  )
+                }
                 disabled={disabled}
               />
             )

@@ -25,7 +25,7 @@ const getEffect = (xs: boolean, index: number): Effect =>
   xs ? 'bottom' : index % 2 ? 'right' : 'left'
 
 const Extra = ({type, t, extra, item}: ExtraProps): JSX.Element | null => {
-  const tKey: string = `${type}.features.${item.tKey}.text`
+  const tKey: string = `${type}.feature.${item.tKey}.text`
   const text: string = t(
     tKey,
     item.textValue ? {textValue: item.textValue} : undefined
@@ -73,7 +73,7 @@ function Features({type, items, extra}: FeaturesProps): JSX.Element {
             <Icon className="Features-Icon Colorful Colorful_dark" />
             <p className="Features-Label">
               {t(
-                `${type}.features.${item.tKey}.label`,
+                `${type}.feature.${item.tKey}.label`,
                 item.labelValue ? {labelValue: item.labelValue} : undefined
               )}
               {/* {item.time ? <time>{item.label}</time> : item.label} */}

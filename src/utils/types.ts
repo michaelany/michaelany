@@ -66,6 +66,13 @@ export type ProjectName =
   | 'glyphs'
   | 'msp'
 
+export type TKey = string | TKeyObject
+
+export interface TKeyObject {
+  tKey: string
+  value: string | number
+}
+
 export interface Map<T> {
   [key: string]: T
 }
@@ -83,7 +90,7 @@ export interface Feature {
   description?: string | JSX.Element
   Icon: (props: SvgIconProps) => JSX.Element
   disabled?: boolean
-  tKey?: string
+  tKey?: TKey
   labelValue?: string | number
   textValue?: string | number
   link?: {
@@ -102,7 +109,7 @@ export interface Technology {
 }
 
 export interface TechnologyGroup {
-  tKey: string
+  tKey: TKey
   technologies: Technology[]
 }
 
@@ -113,13 +120,30 @@ export interface Company {
   href: string
 }
 
+export interface PeriodPart {
+  tKey: string
+  year: number | string
+}
+
+export interface Period {
+  from: PeriodPart
+  to?: PeriodPart
+}
+
+export interface JobFeature {
+  tKey?: string
+  period?: Period
+  Icon: (props: SvgIconProps) => JSX.Element
+  disabled?: boolean
+}
+
 export interface Job {
   current?: boolean
   company: Company
-  occupations: string[]
-  duties: string[]
-  achievements: string[]
-  features: Feature[]
+  occupations: TKey[]
+  duties: TKey[]
+  achievements: TKey[]
+  features: JobFeature[]
 }
 
 export interface Project {

@@ -1,147 +1,176 @@
-import ScheduleIcon from '@material-ui/icons/ScheduleRounded'
-import ExploreIcon from '@material-ui/icons/ExploreRounded'
-import MyLocationIcon from '@material-ui/icons/MyLocationRounded'
-import DateRangeIcon from '@material-ui/icons/DateRangeRounded'
+import {useTranslation, Trans} from 'react-i18next'
+import {
+  ScheduleRounded as ScheduleIcon,
+  ExploreRounded as ExploreIcon,
+  MyLocationRounded as MyLocationIcon,
+  DateRangeRounded as DateRangeIcon,
+} from '@material-ui/icons'
 
 import './Work.scss'
 import {Animate} from '../common'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
-import {TITLE, COMPANY, TECHNOLOGY_TITLE} from '../../data/common'
-import {YEARS_OF_EXPERIENCE, CAREER_START_STRING} from '../../utils/constants'
-
-const occupation = {
-  lead: 'Тимлид фронтенд-разработки',
-  senior: 'Ведущий фронтенд-разработчик',
-  middle: 'Фронтенд разработчик',
-  junior: 'Верстальщик',
-  support: 'Инженер технической поддержки',
-}
+import {COMPANY, TECHNOLOGY_TITLE} from '../../data/common'
+import {YEARS_OF_EXPERIENCE, CAREER_START_PARTS} from '../../utils/constants'
 
 const jobs: JobInterface[] = [
   {
     current: true,
     company: COMPANY.tsc,
-    occupations: [occupation.lead, occupation.senior],
+    occupations: ['lead', 'senior'],
     duties: [
-      'Разработка бизнес-логики приложений',
-      'Создание архитектуры приложений',
-      'Кроссбраузерная и адаптивная верстка',
-      'Работа с REST API',
-      'Рефакторинг и сопровождение кода',
-      'Разработка проектов с нуля',
-      'Поддержка проектов',
-      'Планирование, декомпозиция и оценка задач команды',
-      'Управление и развитие команды',
-      'Проведение код-ревью и собеседований',
+      'logicApps',
+      'structureApps',
+      'responsive',
+      'rest',
+      'refactor',
+      'scratch',
+      'support',
+      'tasksTeam',
+      'manage',
+      'review',
     ],
     achievements: [
-      'Успешно реализовал несколько масштабных проектов для крупных заказчиков',
-      'Прошел путь от рядового разработчика до тимлида',
-      `Помимо веб-приложений разрабатываю мобильное корпоративное приложение на ${TECHNOLOGY_TITLE.reactnative}`,
-      'Периодически занимаюсь дизайном и прототипированием',
-      'Разработал корпоративную программу стажировки',
-      'Стал ментором и обучил несколько стажеров',
-      'Провел десятки собеседований',
+      'resultCorporate',
+      'pathLead',
+      'internship',
+      'mentor',
+      {
+        tKey: 'mobile',
+        value: TECHNOLOGY_TITLE.reactnative,
+      },
+      'design',
+      'interview',
     ],
     features: [
-      {label: 'апрель 2018 - ...', Icon: DateRangeIcon, time: true},
-      {label: 'полная занятость', Icon: ScheduleIcon},
-      {label: 'удаленно', Icon: MyLocationIcon},
-      {label: 'офис', Icon: MyLocationIcon, disabled: true},
-      {label: 'Москва, Россия', Icon: ExploreIcon},
+      {
+        period: {
+          from: {
+            tKey: 'april',
+            year: 2018,
+          },
+        },
+        Icon: DateRangeIcon,
+      },
+      {tKey: 'busyFull', Icon: ScheduleIcon},
+      {tKey: 'remote', Icon: MyLocationIcon},
+      {tKey: 'office', Icon: MyLocationIcon, disabled: true},
+      {tKey: 'moscow', Icon: ExploreIcon},
     ],
   },
   {
     current: true,
     company: COMPANY.sevenGlyphs,
-    occupations: [occupation.senior, occupation.middle],
+    occupations: ['senior', 'middle'],
     duties: [
-      'Разработка бизнес-логики приложений и сайтов',
-      'Создание архитектуры проектов',
-      'Кроссбраузерная и адаптивная верстка',
-      'Работа с REST API и WebSocket',
-      'Рефакторинг и сопровождение кода',
-      'Разработка проектов с нуля',
-      'Поддержка проектов',
-      'Декомпозиция и оценка задач',
+      'logicAppsSites',
+      'structureProjects',
+      'responsive',
+      'restSocket',
+      'refactor',
+      'scratch',
+      'support',
+      'tasks',
     ],
     achievements: [
-      'Успешно реализовал с нуля большое количество разноплановых зарубежных проектов',
-      'Изучил и применил на практике множество технологий и библиотек',
-      'Поставил личный рекорд скорости завершения полноценного проекта - 1 день',
-      'Достиг высокого уровня автономности и организованности',
-      'Прокачал английский, сотрудничая с иностранными заказчиками',
-      'Получил множество лестных отзывов от коллег / заказчиков',
+      'resultForeign',
+      'technologies',
+      'speed',
+      'independent',
+      'english',
+      'testimonials',
     ],
     features: [
-      {label: 'апрель 2017 - ..', Icon: DateRangeIcon, time: true},
-      {label: 'частичная занятость', Icon: ScheduleIcon},
-      {label: 'полная занятость', Icon: ScheduleIcon, disabled: true},
-      {label: 'удаленно', Icon: MyLocationIcon},
-      {label: 'Окленд, Новая Зеландия', Icon: ExploreIcon},
+      {
+        period: {
+          from: {
+            tKey: 'april',
+            year: 2017,
+          },
+        },
+        Icon: DateRangeIcon,
+      },
+      {tKey: 'busyPart', Icon: ScheduleIcon},
+      {tKey: 'busyFull', Icon: ScheduleIcon, disabled: true},
+      {tKey: 'remote', Icon: MyLocationIcon},
+      {tKey: 'auckland', Icon: ExploreIcon},
     ],
   },
   {
     company: COMPANY.everpoint,
-    occupations: [occupation.middle, occupation.junior],
-    duties: [
-      'Разработка бизнес-логики компонентов приложения',
-      'Кроссбраузерная и адаптивная верстка',
-      'Работа с REST API',
-      'Рефакторинг и сопровождение кода',
-    ],
+    occupations: ['middle', 'junior'],
+    duties: ['logicModules', 'responsive', 'rest', 'refactor', 'tasks'],
     achievements: [
-      'Успешно реализовал множество компонентов и разделов для крупного приложения',
-      'Вырос от верстальщика до фронтенд-разработчика',
-      `Хорошо прокачал ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react} и ${TECHNOLOGY_TITLE.css}`,
-      'Развил навык работы в команде',
+      'resultApp',
+      'pathFront',
+      {
+        tKey: 'technologiesBase',
+        value: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react} и ${TECHNOLOGY_TITLE.css}`,
+      },
+      'work',
     ],
     features: [
       {
-        label: `${CAREER_START_STRING} - апрель 2017`,
+        period: {
+          from: {
+            tKey: CAREER_START_PARTS[0],
+            year: CAREER_START_PARTS[1],
+          },
+          to: {
+            tKey: 'april',
+            year: 2017,
+          },
+        },
         Icon: DateRangeIcon,
-        time: true,
       },
-      {label: 'полная занятость', Icon: ScheduleIcon},
-      {label: 'офис', Icon: MyLocationIcon},
-      {label: 'Москва, Россия', Icon: ExploreIcon},
+      {tKey: 'busyFull', Icon: ScheduleIcon},
+      {tKey: 'office', Icon: MyLocationIcon},
+      {tKey: 'moscow', Icon: ExploreIcon},
     ],
   },
   {
     company: COMPANY.mvideo,
-    occupations: [occupation.support],
-    duties: [
-      'Регистрация и обработка обращений в системах Service Desk',
-      'Решение проблем программного обеспечения и периферийного оборудования',
-      'Установка и настройка программного обеспечения и периферийного оборудования',
-      'Консультирование сотрудников по техническим вопросам',
-    ],
-    achievements: [
-      'Обработал тысячи заявок',
-      'Приобрел обширный опыт работы с софтом и железом',
-      'Прокачал коммуникативные навыки',
-    ],
+    occupations: ['support'],
+    duties: ['serviceDesk', 'hardwareFix', 'hardwareInstall', 'consult'],
+    achievements: ['orders', 'hardware', 'softSkills'],
     features: [
-      {label: 'октябрь 2008 - май 2010', Icon: DateRangeIcon, time: true},
-      {label: 'полная занятость', Icon: ScheduleIcon},
-      {label: 'офис', Icon: MyLocationIcon},
       {
-        label: 'Москва, Россия',
+        period: {
+          from: {
+            tKey: 'october',
+            year: 2008,
+          },
+          to: {
+            tKey: 'may',
+            year: 2010,
+          },
+        },
+        Icon: DateRangeIcon,
+      },
+      {tKey: 'busyFull', Icon: ScheduleIcon},
+      {tKey: 'office', Icon: MyLocationIcon},
+      {
+        tKey: 'moscow',
         Icon: ExploreIcon,
       },
     ],
   },
 ]
 
+const transComponents = {strong: <strong />}
+
 export default function Work(): JSX.Element {
+  const {t} = useTranslation()
+
   return (
     <section className="Section">
-      <h1 className="Title">{TITLE.experience}</h1>
+      <h1 className="Title">{t('title.experience')}</h1>
       <p className="MainText">
-        Профессионально занимаюсь фронтенд-разработкой более{' '}
-        {YEARS_OF_EXPERIENCE} лет. <strong>Ведущий разработчик</strong> и{' '}
-        <strong>тимлид</strong>. Работаю удаленно
+        <Trans
+          i18nKey={`experience.text`}
+          values={{value: YEARS_OF_EXPERIENCE}}
+          components={transComponents}
+        />
       </p>
       <Animate el="ul" className="Work">
         {jobs.map((job: JobInterface, index: number) => (

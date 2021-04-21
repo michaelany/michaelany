@@ -59,8 +59,8 @@ export const TITLE: Title = {
 }
 
 export const COMPANY_TITLE: CompanyTitle = {
-  mvideo: 'М.Видео',
-  everpoint: 'Эверпоинт',
+  mvideo: 'M.Видео',
+  everpoint: 'Everpoint',
   sevenGlyphs: '7 glyphs Ltd.',
   tsc: 'Техносерв Консалтинг',
 }

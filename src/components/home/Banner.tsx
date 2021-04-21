@@ -78,7 +78,7 @@ export default function Banner(): JSX.Element {
 
   return (
     <section className="Banner Section Section_colorful">
-      <h2 className="VisuallyHidden">{t('hidden.banner')}</h2>
+      <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
       <div className="Banner-Content">
         <Animate effect="zoomIn" duration="longest" easing="out">
           <Tilt el="figure" className="Banner-Figure" options={tiltOptions}>

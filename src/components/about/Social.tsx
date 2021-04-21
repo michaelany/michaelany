@@ -88,7 +88,7 @@ export default function Social(): JSX.Element {
 
   return (
     <section className="Social Section Section_pagination Section_colorful FadeInRight">
-      <h2 className="VisuallyHidden">{t('hidden.social')}</h2>
+      <h2 className="VisuallyHidden">{t('about.subtitle')}</h2>
       <div className="Social-Content">
         <Photo />
         <SocialLinks about links={links} />

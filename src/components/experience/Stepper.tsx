@@ -1,4 +1,5 @@
 import {useState, RefObject} from 'react'
+import {useTranslation, Trans} from 'react-i18next'
 import {
   Stepper as MuiStepper,
   Step,
@@ -13,8 +14,9 @@ import {
 } from '@material-ui/icons'
 
 import './Stepper.scss'
-import {scrollToView} from '../../utils/helpers'
-import {CAREER_START_STRING} from '../../utils/constants'
+import {scrollToView, tPeriodPart} from '../../utils/helpers'
+import {CAREER_START_PARTS} from '../../utils/constants'
+import {Period} from '../../utils/types'
 import {COMPANY_TITLE} from '../../data/common'
 
 interface StepperProps {
@@ -22,132 +24,164 @@ interface StepperProps {
 }
 
 interface StepInterface {
-  label: string
-  text: string | JSX.Element
+  period: Period
+  values?: string[]
 }
 
 const steps: StepInterface[] = [
   {
-    label: 'Октябрь 2008 - май 2010',
-    text: (
-      <span>
-        Работал <strong>инженером технической поддержки</strong> в компании "
-        {COMPANY_TITLE.mvideo}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'october',
+        year: 2008,
+      },
+      to: {
+        tKey: 'may',
+        year: 2010,
+      },
+    },
+    values: [COMPANY_TITLE.mvideo],
   },
   {
-    label: 'Май 2010 - июнь 2014',
-    text: 'Расширял кругозор в других сферах деятельности',
+    period: {
+      from: {
+        tKey: 'may',
+        year: 2010,
+      },
+      to: {
+        tKey: 'june',
+        year: 2014,
+      },
+    },
   },
   {
-    label: `Июнь 2014 - ${CAREER_START_STRING}`,
-    text:
-      'Параллельно с учебой в институте создавал пет-проекты в процессе обучения веб-разработке',
+    period: {
+      from: {
+        tKey: 'june',
+        year: 2014,
+      },
+      to: {
+        tKey: CAREER_START_PARTS[0],
+        year: CAREER_START_PARTS[1],
+      },
+    },
   },
   {
-    label: CAREER_START_STRING,
-    text: (
-      <span>
-        Прошел интервью. Выполнил тестовые задания и был приглашен на работу{' '}
-        <strong>верстальщиком</strong> в компанию "{COMPANY_TITLE.everpoint}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: CAREER_START_PARTS[0],
+        year: CAREER_START_PARTS[1],
+      },
+    },
+    values: [COMPANY_TITLE.everpoint],
   },
   {
-    label: `${CAREER_START_STRING} - ноябрь 2016`,
-    text: (
-      <span>
-        Работал <strong>верстальщиком</strong> в компании "
-        {COMPANY_TITLE.everpoint}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: CAREER_START_PARTS[0],
+        year: CAREER_START_PARTS[1],
+      },
+      to: {
+        tKey: 'november',
+        year: 2016,
+      },
+    },
+    values: [COMPANY_TITLE.everpoint],
   },
   {
-    label: 'Ноябрь 2016',
-    text: (
-      <span>
-        В результате успешной работы получил повышение до{' '}
-        <strong>фронтенд-разработчика</strong> в компании "
-        {COMPANY_TITLE.everpoint}
-        ".
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'november',
+        year: 2016,
+      },
+    },
+    values: [COMPANY_TITLE.everpoint],
   },
   {
-    label: 'Ноябрь 2016 - апрель 2017',
-    text: (
-      <span>
-        Работал <strong>фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLE.everpoint}". В свободное время делал коммерческий проект
-        для компании "{COMPANY_TITLE.sevenGlyphs}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'november',
+        year: 2016,
+      },
+      to: {
+        tKey: 'april',
+        year: 2017,
+      },
+    },
+    values: [COMPANY_TITLE.everpoint, COMPANY_TITLE.sevenGlyphs],
   },
   {
-    label: 'Апрель 2017',
-    text: (
-      <span>
-        В результате успешного завершения проекта был приглашен в компанию "
-        {COMPANY_TITLE.sevenGlyphs}" на должность{' '}
-        <strong>фронтенд-разработчика</strong>. Принял решение перейти из "
-        {COMPANY_TITLE.everpoint}" в "{COMPANY_TITLE.sevenGlyphs}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'april',
+        year: 2017,
+      },
+    },
+    values: [
+      COMPANY_TITLE.sevenGlyphs,
+      COMPANY_TITLE.everpoint,
+      COMPANY_TITLE.sevenGlyphs,
+    ],
   },
   {
-    label: 'Апрель 2017 - апрель 2018',
-    text: (
-      <span>
-        Работал <strong>фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLE.sevenGlyphs}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'april',
+        year: 2017,
+      },
+      to: {
+        tKey: 'april',
+        year: 2018,
+      },
+    },
+    values: [COMPANY_TITLE.sevenGlyphs],
   },
   {
-    label: 'Апрель 2018',
-    text: (
-      <span>
-        Договорился с "{COMPANY_TITLE.sevenGlyphs}" о продолжении сотрудничества
-        по проектам в режиме частичной занятости. Получил несколько офферов на
-        позицию <strong>ведущего фронтенд-разработчика</strong>, выбрал компанию
-        "{COMPANY_TITLE.tsc}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'april',
+        year: 2018,
+      },
+    },
+    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.tsc],
   },
   {
-    label: 'Апрель 2018 - январь 2019',
-    text: (
-      <span>
-        Работал <strong>ведущим фронтенд-разработчиком</strong> в компании "
-        {COMPANY_TITLE.tsc}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'april',
+        year: 2018,
+      },
+      to: {
+        tKey: 'january',
+        year: 2019,
+      },
+    },
+    values: [COMPANY_TITLE.tsc],
   },
   {
-    label: 'Январь 2019',
-    text: (
-      <span>
-        В результате успешной реализации нескольких проектов и расширения зоны
-        ответственности получил повышение до{' '}
-        <strong>тимлида фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLE.tsc}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'january',
+        year: 2019,
+      },
+    },
+    values: [COMPANY_TITLE.tsc],
   },
   {
-    label: 'Январь 2019 - ...',
-    text: (
-      <span>
-        Работаю <strong>тимлидом фронтенд-разработки</strong> в компании "
-        {COMPANY_TITLE.tsc}". Продолжаю сотрудничество по проектам с "
-        {COMPANY_TITLE.sevenGlyphs}"
-      </span>
-    ),
+    period: {
+      from: {
+        tKey: 'january',
+        year: 2019,
+      },
+    },
+    values: [COMPANY_TITLE.tsc, COMPANY_TITLE.sevenGlyphs],
   },
 ]
 
+const transComponents = {strong: <strong />}
+
 export default function Stepper({sectionRef}: StepperProps): JSX.Element {
+  const {t} = useTranslation()
   const [step, changeStep] = useState<number>(0)
 
   const handleNext = (): void => {
@@ -168,15 +202,26 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
       {steps.map((item: StepInterface, index: number) => (
         <Step key={index}>
           <StepLabel>
-            <time className="Stepper-Time">{item.label}</time>
+            <time className="Stepper-Time">
+              {tPeriodPart(t, item.period.from)}
+              {item.period.to
+                ? ` - ${tPeriodPart(t, item.period.to)}`
+                : index === steps.length - 1 && ' - ...'}
+            </time>
           </StepLabel>
           <StepContent>
-            <p className="Stepper-Text">{item.text}</p>
+            <p className="Stepper-Text">
+              <Trans
+                i18nKey={`experience.stepper.step${index + 1}`}
+                values={item.values}
+                components={transComponents}
+              />
+            </p>
             <div className="Stepper-Actions">
               <Fab
                 className="Stepper-Button"
                 size="medium"
-                aria-label="Вперед"
+                aria-label={t('experience.next')}
                 onClick={handleNext}
               >
                 <ArrowForwardIcon className="Stepper-ButtonIcon" />
@@ -184,7 +229,7 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
               <Fab
                 className="Stepper-Button"
                 size="medium"
-                aria-label="Назад"
+                aria-label={t('experience.back')}
                 disabled={step === 0}
                 onClick={handleBack}
               >
@@ -197,12 +242,12 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
       {step === steps.length && (
         <>
           <p className="Stepper-Text Stepper-Text_last">
-            Продолжение следует...
+            {t('experience.continue')}...
           </p>
           <Fab
             className="Stepper-Button"
             size="medium"
-            aria-label="Обновить"
+            aria-label={t('experience.refresh')}
             onClick={handleReset}
           >
             <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />

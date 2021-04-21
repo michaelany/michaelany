@@ -1,5 +1,5 @@
 import {differenceInYears, format} from 'date-fns'
-import locale from 'date-fns/locale/ru'
+import locale from 'date-fns/locale/en-US'
 
 import {Route, Color, Map} from './types'
 import {BREAKPOINT} from '../styles/theme'
@@ -82,9 +82,11 @@ export const TILT_SCALE: number = 1.05
 
 export const CAREER_START_DATE: Date = new Date(2016, 6)
 
-export const CAREER_START_STRING = format(CAREER_START_DATE, 'LLLL yyyy', {
+export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy', {
   locale,
 })
+  .toLowerCase()
+  .split(' ')
 
 export const TODAY: Date = new Date()
 

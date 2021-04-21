@@ -1,8 +1,9 @@
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
+import {TFunction} from 'react-i18next'
 
 import {DURATION} from '../styles/theme'
 import {PROJECT_TYPE_LABEL} from '../data/common'
-import {ProjectType} from './types'
+import {ProjectType, PeriodPart} from './types'
 
 export const getListDelay = (order: number): number =>
   (order * DURATION.shorter) / 2
@@ -14,6 +15,9 @@ export const getProjectTypesString = (types: ProjectType[]): string =>
       return index === 0 ? label : label.toLowerCase()
     })
     .join(', ')
+
+export const tPeriodPart = (t: TFunction, periodPart: PeriodPart) =>
+  `${t(`month.${periodPart.tKey}`)} ${periodPart.year}`
 
 export const scrollToView = (el: HTMLElement): void => {
   scrollIntoView(el, {

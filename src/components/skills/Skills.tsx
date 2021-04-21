@@ -18,13 +18,13 @@ import {
 import {Sections, Info} from '../common'
 import Technologies from './Technologies'
 import {scrollToView} from '../../utils/helpers'
-import {Feature, TechnologyGroup} from '../../utils/types'
+import {Feature, TechnologyGroup, TKey} from '../../utils/types'
 import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '../../data/common'
 
 const initialExpanded = [TECHNOLOGY_GROUPS[0].tKey]
 
 export default function Skills(): JSX.Element {
-  const [expanded, setExpanded] = useState<string[]>(initialExpanded)
+  const [expanded, setExpanded] = useState<TKey[]>(initialExpanded)
   const sectionRef = useRef<HTMLElement>(null)
   const firstTechnologyActionRef = useRef<ButtonBaseActions>(null)
 

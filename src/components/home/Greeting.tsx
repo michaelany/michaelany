@@ -18,14 +18,14 @@ export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
       <div className="Greeting-Block">
-        <p className="Greeting-Text Greeting-First Title">{t('greeting.hi')}</p>
+        <p className="Greeting-Text Greeting-First Title">{t('home.hi')}</p>
         <div className="Greeting-Second">
           <HelloIcon className="Greeting-Icon" />
         </div>
       </div>
       <h1 className="Greeting-Text Title">
         <span className="Greeting-Part Greeting-Text Greeting-Third Title">
-          {t('greeting.iam')}
+          {t('home.iam')}
         </span>{' '}
         <span className="Greeting-Part Greeting-Third Greeting-Third_order_second">
           <span className="Greeting-Main">Michael</span>
@@ -37,10 +37,10 @@ export default function Greeting(): JSX.Element {
       </h1>
       <p className="Greeting-Text Greeting-Fifth Title">
         <strong>
-          {t('greeting.occupation.part1')}
+          {t('home.occupation.part1')}
           <br />
           <span className="Greeting-Word">
-            {t('greeting.occupation.part2')}
+            {t('home.occupation.part2')}
             <Link className="Greeting-Extra" to={ROUTE.skills}>
               <img
                 className="Greeting-ExtraImg"

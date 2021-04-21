@@ -15,13 +15,13 @@ import {Animate, Pagination, Copyright} from '../common'
 import {TECHNOLOGY_GROUPS} from '../../data/common'
 import TechnologyList from './TechnologyList'
 import {ROUTE, QUERY_BREAKPOINT} from '../../utils/constants'
-import {TechnologyGroup} from '../../utils/types'
+import {TechnologyGroup, TKey} from '../../utils/types'
 
 interface TechnologiesProps {
-  expanded: string[]
+  expanded: TKey[]
   sectionRef: RefObject<HTMLElement>
   firstTechnologyActionRef: RefObject<ButtonBaseActions>
-  setExpanded: Dispatch<SetStateAction<string[]>>
+  setExpanded: Dispatch<SetStateAction<TKey[]>>
 }
 
 export default function Technologies({
@@ -33,8 +33,8 @@ export default function Technologies({
   const {t} = useTranslation()
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
-  const handleExpand = (tKey: string): (() => void) => () =>
-    setExpanded((expanded: string[]) =>
+  const handleExpand = (tKey: TKey): (() => void) => () =>
+    setExpanded((expanded: TKey[]) =>
       expanded.includes(tKey)
         ? expanded.filter((item) => item !== tKey)
         : [...expanded, tKey]
@@ -45,7 +45,7 @@ export default function Technologies({
       className="Technologies Section Section_pagination Section_colorful"
       ref={sectionRef}
     >
-      <h2 className="VisuallyHidden">{t('hidden.technologies')}</h2>
+      <h2 className="VisuallyHidden">{t('skills.subtitle')}</h2>
       <Animate
         el="ul"
         className="Technologies-Groups"
@@ -54,14 +54,14 @@ export default function Technologies({
       >
         {TECHNOLOGY_GROUPS.map((group: TechnologyGroup, index: number) => (
           <Accordion
-            key={group.tKey}
+            key={group.tKey as string}
             component="li"
             expanded={expanded.includes(group.tKey)}
             onChange={handleExpand(group.tKey)}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <h3 className="Technologies-Title">
-                {t(`technologyGroup.${group.tKey}`)}
+                {t(`skills.technologyGroup.${group.tKey}`)}
               </h3>
             </AccordionSummary>
             <AccordionDetails>
