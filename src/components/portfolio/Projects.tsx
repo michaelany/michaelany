@@ -57,7 +57,6 @@ function Projects(): JSX.Element {
             t={t}
             width={width}
             index={index}
-            title={project.title}
             name={project.name}
             types={project.types}
             companyName={project.companyName}

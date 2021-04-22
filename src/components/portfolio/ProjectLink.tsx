@@ -28,7 +28,6 @@ interface ProjectLinkProps {
   t: TFunction
   index: number
   width: Width
-  title: string
   name: ProjectName
   types: ProjectType[]
   companyName: CompanyName
@@ -52,7 +51,6 @@ export default function ProjectLink({
   t,
   index,
   width,
-  title,
   name,
   types,
   companyName,
@@ -94,7 +92,9 @@ export default function ProjectLink({
                 srcSet={`${company.images[1]} 2x`}
                 alt={company.title}
               />
-              <h3 className="ProjectLink-Title">{title}</h3>
+              <h3 className="ProjectLink-Title">
+                {t(`portfolio.project.${name}.title`)}
+              </h3>
               <p className="ProjectLink-Label">{tProjectTypes(t, types)}</p>
             </div>
           </ButtonBase>

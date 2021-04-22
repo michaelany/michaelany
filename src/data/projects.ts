@@ -1,25 +1,8 @@
 import {COMPANY, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
-const featureText = {
-  wholeDevelopment: 'Фронтенд-разработка с нуля, развитие, поддержка проекта',
-  scratchGrowthDevelopment: 'Фронтенд-разработка с нуля, поддержка проекта',
-  scratchDevelopment: 'Фронтенд-разработка с нуля',
-  growthSupportDevelopment: 'Развитие, поддержка проекта',
-  leadWork: 'Тимлид команды фронтенд-разработки',
-  teamWork: 'Член команды фронтенд-разработки',
-  soloWork: 'Самостоятельная фронтенд-разработка',
-  responsive: 'адаптивный интерфейс',
-  emails: 'верстка писем',
-  design: 'прототипирование и дизайн',
-  animations: 'Анимации',
-  rest: 'Rest API',
-  stripe: 'Stripe',
-  businessLogic: 'Обширная бизнес-логика',
-}
-
 const PROJECTS: Project[] = [
-  {
+  /* {
     title: 'Road Ninja',
     name: 'ninjal',
     description: 'Лендинг новозеландского сервиса найма водителей грузовиков',
@@ -1472,23 +1455,32 @@ const PROJECTS: Project[] = [
         ],
       ],
     },
-  },
+  }, */
   {
-    title: 'Бизнес-навигатор МСП',
     name: 'msp',
-    description:
-      'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес',
     types: ['site', 'app'],
     companyName: 'everpoint',
     href: 'https://www.everpoint.ru/msp',
     features: [
-      featureText.growthSupportDevelopment,
-      featureText.teamWork,
+      {
+        tKey: 'growthSupportDevelopment',
+      },
+      {
+        tKey: 'teamWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.handlebars}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.semantic}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      `Первый коммерческий проект`,
-      'Август 2016',
+      {
+        tKey: 'rest',
+        value: `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
+      },
+      {
+        tKey: 'firstProject',
+      },
+      {
+        tKey: 'august',
+        value: 2016,
+      },
     ],
     images: {
       desktop: [

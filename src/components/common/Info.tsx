@@ -13,10 +13,8 @@ import {Feature} from '../../utils/types'
 
 interface InfoProps {
   type: string
-  title?: any
-  text?: any
-  textValue?: any
   features: Feature[]
+  textValue?: string
 }
 
 const transComponents = {strong: <strong />}
@@ -46,7 +44,7 @@ function Info({type, textValue, features}: InfoProps): JSX.Element {
           components={transComponents}
         />
       </p>
-      <Features type={type || ''} extra={open} items={features} />
+      <Features t={t} type={type} extra={open} items={features} />
       <Animate className="Actions Actions_center" effect="bottom">
         <Button
           className="Button"

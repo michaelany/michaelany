@@ -1,3 +1,4 @@
+import {Dispatch, SetStateAction} from 'react'
 import {TFunction} from 'react-i18next'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Autoplay, SwiperOptions, Controller} from 'swiper'
@@ -7,15 +8,16 @@ import './Carousel.scss'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 import {Animate, Panel} from '../common'
 import {QUERY_BREAKPOINT} from '../../utils/constants'
+import {ProjectName} from '../../utils/types'
 import {DURATION} from '../../styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
   t: TFunction
-  title: string
+  name: ProjectName
   images: string[][]
-  swiper: any
-  setSwiper: any
+  swiper: SwiperCore | null
+  setSwiper: Dispatch<SetStateAction<SwiperCore | null>>
 }
 
 SwiperCore.use([Autoplay, Controller])
@@ -29,14 +31,14 @@ export const swiperOptions: SwiperOptions = {
 const autoplayOptions = {delay: DURATION.lingering}
 
 const renderContent = (
-  {t, mobile, title, images, swiper, setSwiper}: CarouselProps,
+  {t, mobile, name, images, swiper, setSwiper}: CarouselProps,
   isDesktop?: boolean
 ): JSX.Element | JSX.Element[] => {
   const imageElements: JSX.Element[] = images.map(
     (image: string[], index: number) => {
       const caption = `${t('portfolio.screenshot')} ${
         mobile ? `${t('portfolio.mobile')} ` : ''
-      }${t('portfolio.screen')} "${title}"`
+      }${t('portfolio.screen')} "${t(`portfolio.project.${name}.title`)}"`
       return (
         <SwiperSlide key={image[0]} tag="figure">
           <img
@@ -53,7 +55,7 @@ const renderContent = (
     <Swiper
       {...swiperOptions}
       autoplay={isDesktop ? autoplayOptions : undefined}
-      controller={{control: swiper}}
+      controller={{control: swiper ?? undefined}}
       onSwiper={setSwiper}
     >
       {imageElements}

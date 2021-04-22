@@ -1,4 +1,7 @@
 const EN = {
+  common: {
+    more: 'Details',
+  },
   title: {
     home: 'Home',
     about: 'About',
@@ -23,10 +26,6 @@ const EN = {
     crafted: 'Crafted by',
     me: 'me',
     with: 'with',
-  },
-
-  common: {
-    more: 'More',
   },
 }
 

@@ -19,6 +19,7 @@ const RU = {
     may: 'май',
     june: 'июнь',
     july: 'июль',
+    august: 'август',
   },
   home: {
     hi: 'Привет',
@@ -281,12 +282,38 @@ const RU = {
     },
   },
   portfolio: {
+    developed: 'Разработано в',
     filter: {
       all: 'Все',
       app: 'Приложение',
       site: 'Сайт',
       landing: 'Лендинг',
       admin: 'Админка',
+    },
+    feature: {
+      wholeDevelopment:
+        'Фронтенд-разработка с нуля, развитие, поддержка проекта',
+      scratchGrowthDevelopment: 'Фронтенд-разработка с нуля, поддержка проекта',
+      scratchDevelopment: 'Фронтенд-разработка с нуля',
+      growthSupportDevelopment: 'Развитие, поддержка проекта',
+      leadWork: 'Тимлид команды фронтенд-разработки',
+      teamWork: 'Член команды фронтенд-разработки',
+      soloWork: 'Самостоятельная фронтенд-разработка',
+      responsive: 'адаптивный интерфейс',
+      emails: 'верстка писем',
+      design: 'прототипирование и дизайн',
+      animations: 'Анимации',
+      rest: 'Rest API',
+      stripe: 'Stripe',
+      businessLogic: 'Обширная бизнес-логика',
+      firstProject: 'Первый коммерческий проект',
+    },
+    project: {
+      msp: {
+        title: 'Бизнес-навигатор МСП',
+        text:
+          'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес',
+      },
     },
     subtitle: 'Скриншоты',
     screenshot: 'Скриншот',

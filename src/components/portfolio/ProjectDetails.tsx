@@ -16,15 +16,20 @@ import './ProjectDetails.scss'
 import {Animate, Features, Company} from '../common'
 import {tProjectTypes} from '../../utils/helpers'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Feature, ProjectType, CompanyName} from '../../utils/types'
+import {
+  ProjectName,
+  Feature,
+  ProjectType,
+  CompanyName,
+  TKey,
+} from '../../utils/types'
 import {COMPANY} from '../../data/common'
 
 interface ProjectDetailsProps {
-  title: string
+  name: ProjectName
   companyName: CompanyName
-  description: string
   types: ProjectType[]
-  features: string[]
+  features: TKey[]
   href?: string
 }
 
@@ -39,37 +44,47 @@ const featureIcons = [
 ]
 
 export default function ProjectDetails({
-  title,
+  name,
   companyName,
-  description,
   types,
   features,
   href,
 }: ProjectDetailsProps): JSX.Element {
   const {t} = useTranslation()
+
   const featureItems: Feature[] = features.map(
-    (feature: string, index: number) => ({
-      label: feature,
-      Icon: featureIcons[index],
-      time: index === features.length - 1,
-    })
+    (feature: TKey, index: number) => {
+      const isTime = index === features.length - 1
+      return {
+        label:
+          typeof feature === 'object'
+            ? `${t(
+                `${isTime ? 'month' : 'portfolio.feature'}.${feature.tKey}`
+              )}${feature.value ? `${isTime ? '' : ','} ${feature.value}` : ''}`
+            : feature,
+        Icon: featureIcons[index],
+        time: isTime,
+      }
+    }
   )
   featureItems.push({
     label: tProjectTypes(t, types),
     Icon: WebIcon,
   })
+
+  const tProject = `portfolio.project.${name}`
   const company = COMPANY[companyName]
 
   return (
     <section className="ProjectDetails Section">
       <div className="ProjectDetails-Block">
-        <h1 className="Title Title_smallIndent">{title}</h1>
+        <h1 className="Title Title_smallIndent">{t(`${tProject}.title`)}</h1>
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {description}. Разработано в "{company.title}"
+        {t(`${tProject}.text`)}. {t('portfolio.developed')} "{company.title}"
       </p>
-      <Features type="" items={featureItems} />
+      <Features items={featureItems} />
       {href && (
         <Animate className="Actions Actions_center" effect="bottom">
           <Button
@@ -79,7 +94,7 @@ export default function ProjectDetails({
             endIcon={<OpenInNewIcon />}
             href={href}
           >
-            Подробнее
+            {t('common.more')}
           </Button>
         </Animate>
       )}

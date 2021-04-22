@@ -202,7 +202,7 @@ export default function Stepper({sectionRef}: StepperProps): JSX.Element {
       {steps.map((item: StepInterface, index: number) => (
         <Step key={index}>
           <StepLabel>
-            <time className="Stepper-Time">
+            <time className="Time">
               {tPeriodPart(t, item.period.from)}
               {item.period.to
                 ? ` - ${tPeriodPart(t, item.period.to)}`

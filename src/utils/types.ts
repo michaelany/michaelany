@@ -1,4 +1,4 @@
-import {ReactNode} from 'react'
+import {ReactNode, FunctionComponent, SVGProps} from 'react'
 import {SvgIconProps} from '@material-ui/core'
 
 export type Route =
@@ -66,30 +66,28 @@ export type ProjectName =
   | 'glyphs'
   | 'msp'
 
+export interface Map<T> {
+  [key: string]: T
+}
+
 export type TKey = string | TKeyObject
 
 export interface TKeyObject {
   tKey: string
-  value: string | number
-}
-
-export interface Map<T> {
-  [key: string]: T
+  value?: string | number
 }
 
 export interface SocialLink {
   title: string
   href: string
-  Icon: any
+  Icon: FunctionComponent<SVGProps<SVGSVGElement>>
   size: 'xs' | 'sm' | 'md' | 'lg'
 }
 
 export interface Feature {
+  Icon: (props: SvgIconProps) => JSX.Element
   label?: string
   time?: boolean
-  description?: string | JSX.Element
-  Icon: (props: SvgIconProps) => JSX.Element
-  disabled?: boolean
   tKey?: TKey
   labelValue?: string | number
   textValue?: string | number
@@ -147,13 +145,11 @@ export interface Job {
 }
 
 export interface Project {
-  title: string
   name: ProjectName
-  description: string
   types: ProjectType[]
   companyName: CompanyName
   href?: string
-  features: string[]
+  features: TKey[]
   images: {
     desktop?: string[][]
     mobile?: string[][]

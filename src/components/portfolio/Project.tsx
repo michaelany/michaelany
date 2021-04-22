@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import SwiperCore from 'swiper'
 import {useTranslation, TFunction} from 'react-i18next'
 import {RouteChildrenProps} from 'react-router-dom'
 
@@ -19,15 +20,15 @@ interface ScreenshotsProps {
 }
 
 const Screenshots = ({t, project}: ScreenshotsProps): JSX.Element => {
-  const [firstSwiper, setFirstSwiper] = useState(null)
-  const [secondSwiper, setSecondSwiper] = useState(null)
+  const [firstSwiper, setFirstSwiper] = useState<SwiperCore | null>(null)
+  const [secondSwiper, setSecondSwiper] = useState<SwiperCore | null>(null)
 
   return (
     <div>
       {project.images.desktop && (
         <Carousel
           t={t}
-          title={project.title}
+          name={project.name}
           images={project.images.desktop}
           swiper={secondSwiper}
           setSwiper={setFirstSwiper}
@@ -37,7 +38,7 @@ const Screenshots = ({t, project}: ScreenshotsProps): JSX.Element => {
         <Carousel
           mobile
           t={t}
-          title={project.title}
+          name={project.name}
           images={project.images.mobile}
           swiper={firstSwiper}
           setSwiper={setSecondSwiper}
@@ -60,9 +61,8 @@ export default function Project({
     <Sections
       firstSection={
         <ProjectDetails
-          title={project.title}
+          name={project.name}
           companyName={project.companyName}
-          description={project.description}
           types={project.types}
           features={project.features}
           href={project.href}

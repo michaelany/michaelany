@@ -1,13 +1,6 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
-.Stepper-Time {
-  display: inline-block;
-  &::first-letter {
-    text-transform: uppercase;
-  }
-}
-
 .Stepper-Text {
   padding-top: 8px;
   margin-bottom: 24px;

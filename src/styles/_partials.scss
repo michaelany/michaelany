@@ -250,3 +250,10 @@
 .ButtonIcon {
   font-size: 32px;
 }
+
+.Time {
+  display: inline-block;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
