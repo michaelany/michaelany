@@ -1,5 +1,5 @@
 import {Fragment} from 'react'
-import {TFunction, useTranslation} from 'react-i18next'
+import {TFunction} from 'react-i18next'
 import cn from 'clsx'
 import {
   Chip,
@@ -25,6 +25,7 @@ import {
 } from '../../utils/types'
 
 interface JobProps extends JobInterface {
+  t: TFunction
   index: number
 }
 
@@ -38,6 +39,11 @@ interface BlockProps {
   t: TFunction
   isDuties?: boolean
   items: TKey[]
+}
+
+interface FeaturesProps {
+  t: TFunction
+  features: JobFeature[]
 }
 
 const Occupations = ({
@@ -97,7 +103,35 @@ const Block = ({t, isDuties, items}: BlockProps): JSX.Element => (
   </div>
 )
 
+const Features = ({t, features}: FeaturesProps): JSX.Element => {
+  return (
+    <div className="Job-Features">
+      {features.map(
+        ({tKey, period, Icon, disabled}: JobFeature, index: number) => (
+          <Chip
+            key={index}
+            className="Chip"
+            icon={<Icon />}
+            label={
+              period ? (
+                <time>
+                  {tPeriodPart(t, period.from)} -{' '}
+                  {period.to ? tPeriodPart(t, period.to) : '...'}
+                </time>
+              ) : (
+                t(`experience.job.feature.${tKey}`)
+              )
+            }
+            disabled={disabled}
+          />
+        )
+      )}
+    </div>
+  )
+}
+
 export default function Job({
+  t,
   current,
   company,
   occupations,
@@ -106,8 +140,6 @@ export default function Job({
   features,
   index,
 }: JobProps): JSX.Element {
-  const {t} = useTranslation()
-
   return (
     <Accordion component="li" className="Job" defaultExpanded={index === 0}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -119,28 +151,7 @@ export default function Job({
         <Occupations t={t} current={current} occupations={occupations} />
         <Block t={t} isDuties items={duties} />
         <Block t={t} items={achievements} />
-        <div className="Job-Features">
-          {features.map(
-            ({tKey, period, Icon, disabled}: JobFeature, index: number) => (
-              <Chip
-                key={index}
-                className="Chip"
-                icon={<Icon />}
-                label={
-                  period ? (
-                    <time>
-                      {tPeriodPart(t, period.from)} -{' '}
-                      {period.to ? tPeriodPart(t, period.to) : '...'}
-                    </time>
-                  ) : (
-                    t(`experience.job.feature.${tKey}`)
-                  )
-                }
-                disabled={disabled}
-              />
-            )
-          )}
-        </div>
+        <Features t={t} features={features} />
       </AccordionDetails>
     </Accordion>
   )

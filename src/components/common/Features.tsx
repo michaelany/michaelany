@@ -76,7 +76,6 @@ function Features({type, items, extra}: FeaturesProps): JSX.Element {
                 `${type}.feature.${item.tKey}.label`,
                 item.labelValue ? {labelValue: item.labelValue} : undefined
               )}
-              {/* {item.time ? <time>{item.label}</time> : item.label} */}
             </p>
             <Extra type={type} t={t} extra={extra} item={item} />
           </Animate>

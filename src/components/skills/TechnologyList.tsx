@@ -1,4 +1,5 @@
 import {RefObject} from 'react'
+import {TFunction} from 'react-i18next'
 import cn from 'clsx'
 import {Grid, ButtonBase, ButtonBaseActions} from '@material-ui/core'
 
@@ -8,11 +9,13 @@ import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {Technology} from '../../utils/types'
 
 interface TechnologyListProps {
+  t: TFunction
   technologies: Technology[]
   firstTechnologyActionRef?: RefObject<ButtonBaseActions>
 }
 
 export default function TechnologyList({
+  t,
   technologies,
   firstTechnologyActionRef,
 }: TechnologyListProps) {
@@ -30,7 +33,9 @@ export default function TechnologyList({
             lg={4}
             xl={3}
           >
-            <Tooltip title={`${disabled ? 'Изучаю ' : ''}${label}`}>
+            <Tooltip
+              title={`${disabled ? `${t('skills.learn')} ` : ''}${label}`}
+            >
               <ButtonBase
                 {...BLANK_LINK_PROPS}
                 focusRipple

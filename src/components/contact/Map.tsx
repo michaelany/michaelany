@@ -1,4 +1,5 @@
 import {useHistory} from 'react-router-dom'
+import {useTranslation} from 'react-i18next'
 import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import {CircularProgress} from '@material-ui/core'
 
@@ -24,6 +25,7 @@ const LoadingContainer = (): JSX.Element => (
 )
 
 function Map(): JSX.Element {
+  const {t, i18n} = useTranslation()
   const history = useHistory()
 
   const handleMarkerClick = (): void => {
@@ -40,7 +42,8 @@ function Map(): JSX.Element {
         styles={STYLES as any}
       >
         <Marker
-          title="Сейчас я живу здесь 🏠"
+          key={i18n.language}
+          title={`${t('contact.marker')} 🏠`}
           icon={markerIcon}
           onClick={handleMarkerClick}
         />

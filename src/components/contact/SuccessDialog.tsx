@@ -1,4 +1,5 @@
 import {forwardRef} from 'react'
+import {TFunction} from 'react-i18next'
 import {Dialog, Button, Grow} from '@material-ui/core'
 import {TransitionProps} from '@material-ui/core/transitions'
 import {ThumbUpRounded as ThumbUpIcon} from '@material-ui/icons'
@@ -8,6 +9,7 @@ import messageSentImg from '../../assets/img/pictures/message-sent.svg'
 import {DURATION} from '../../styles/theme'
 
 interface SuccessDialogProps {
+  t: TFunction
   open: boolean
   onClose: () => void
 }
@@ -20,6 +22,7 @@ const Transition = forwardRef(function Transition(
 })
 
 export default function SuccessDialog({
+  t,
   open,
   onClose,
 }: SuccessDialogProps): JSX.Element {
@@ -36,11 +39,11 @@ export default function SuccessDialog({
           width={80}
           height={80}
           src={messageSentImg}
-          alt="Message sent"
+          alt={t('contact.success.sent')}
         />
-        <h2 className="SuccessDialog-Title">Сообщение отправлено. Спасибо!</h2>
+        <h2 className="SuccessDialog-Title">{t('contact.success.thank')}!</h2>
         <p className="MainText MainText_noAnimation">
-          В ближайшее время я свяжусь с вами.
+          {t('contact.success.callback')}.
         </p>
         <Button
           className="Button Button_color_green"
@@ -48,7 +51,7 @@ export default function SuccessDialog({
           endIcon={<ThumbUpIcon />}
           onClick={onClose}
         >
-          Хорошо
+          {t('contact.success.ok')}
         </Button>
       </div>
     </Dialog>

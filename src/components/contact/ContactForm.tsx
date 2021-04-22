@@ -5,6 +5,7 @@ import {
   SyntheticEvent,
   MutableRefObject,
 } from 'react'
+import {useTranslation} from 'react-i18next'
 import {
   TextField,
   Button,
@@ -69,6 +70,7 @@ const inputProps: Map<InputProps> = {
 }
 
 export default function ContactForm(): JSX.Element {
+  const {t} = useTranslation()
   const [successDialog, setsSuccessDialog] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
@@ -148,7 +150,7 @@ export default function ContactForm(): JSX.Element {
             <TextField
               fullWidth
               name={field.name}
-              label="Имя"
+              label={t('contact.form.name')}
               variant="filled"
               InputProps={inputProps[field.name]}
               inputProps={{ref: fieldElements[field.name]}}
@@ -176,7 +178,7 @@ export default function ContactForm(): JSX.Element {
               fullWidth
               multiline
               name={field.message}
-              label="Сообщение"
+              label={t('contact.form.message')}
               rows="5"
               variant="filled"
               InputProps={inputProps[field.message]}
@@ -195,7 +197,7 @@ export default function ContactForm(): JSX.Element {
           endIcon={<SendIcon />}
           disabled={loading}
         >
-          <span>Отправить</span>
+          <span>{t('contact.form.send')}</span>
           <Fade in={loading}>
             <div className="ContactForm-Loader">
               <CircularProgress size={36} className="ContactForm-Progress" />
@@ -203,7 +205,11 @@ export default function ContactForm(): JSX.Element {
           </Fade>
         </Button>
       </Animate>
-      <SuccessDialog open={successDialog} onClose={handleSuccessDialogClose} />
+      <SuccessDialog
+        t={t}
+        open={successDialog}
+        onClose={handleSuccessDialogClose}
+      />
     </>
   )
 }

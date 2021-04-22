@@ -1,10 +1,11 @@
 import cn from 'clsx'
+import {TFunction} from 'react-i18next'
 import {Link} from 'react-router-dom'
 import {Grid, ButtonBase} from '@material-ui/core'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'
-import {getListDelay, getProjectTypesString} from '../../utils/helpers'
+import {getListDelay, tProjectTypes} from '../../utils/helpers'
 import {
   DETECT,
   ROUTE,
@@ -24,6 +25,7 @@ import {DURATION} from '../../styles/theme'
 import {COMPANY} from '../../data/common'
 
 interface ProjectLinkProps {
+  t: TFunction
   index: number
   width: Width
   title: string
@@ -47,6 +49,7 @@ const getDelay = (index: number, width: Width): number => {
 }
 
 export default function ProjectLink({
+  t,
   index,
   width,
   title,
@@ -92,9 +95,7 @@ export default function ProjectLink({
                 alt={company.title}
               />
               <h3 className="ProjectLink-Title">{title}</h3>
-              <p className="ProjectLink-Label">
-                {getProjectTypesString(types)}
-              </p>
+              <p className="ProjectLink-Label">{tProjectTypes(t, types)}</p>
             </div>
           </ButtonBase>
         </Tilt>

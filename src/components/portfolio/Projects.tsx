@@ -1,26 +1,18 @@
 import {memo, useState, ChangeEvent} from 'react'
+import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
 
 import './Projects.scss'
 import ProjectLink from './ProjectLink'
 import {QUERY_BREAKPOINT} from '../../utils/constants'
-import {Map, Project, ProjectType, Width} from '../../utils/types'
-import {PROJECT_TYPE_LABEL} from '../../data/common'
+import {Project, ProjectType, Width} from '../../utils/types'
 import PROJECTS from '../../data/projects'
 
 type Filter = 'all' | ProjectType
 
 const storageProp: string = 'filter'
 
-const filters: Filter[] = ['all', 'landing', 'site', 'app', 'admin']
-
-const filterLabel: Map<string> = {
-  all: 'Все',
-  landing: PROJECT_TYPE_LABEL.landing,
-  site: PROJECT_TYPE_LABEL.site,
-  app: PROJECT_TYPE_LABEL.app,
-  admin: PROJECT_TYPE_LABEL.admin,
-}
+const filters: Filter[] = ['all', 'app', 'site', 'landing', 'admin']
 
 const getFilteredProjects = (filter: string): Project[] =>
   filter === 'all'
@@ -30,6 +22,7 @@ const getFilteredProjects = (filter: string): Project[] =>
       )
 
 function Projects(): JSX.Element {
+  const {t} = useTranslation()
   const [filter, changeFilter] = useState<string>(
     localStorage.getItem(storageProp) ?? 'all'
   )
@@ -54,13 +47,14 @@ function Projects(): JSX.Element {
         onChange={handleChange}
       >
         {filters.map((type: string) => (
-          <Tab key={type} value={type} label={filterLabel[type]} />
+          <Tab key={type} value={type} label={t(`portfolio.filter.${type}`)} />
         ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>
         {getFilteredProjects(filter).map((project: Project, index: number) => (
           <ProjectLink
             key={`${project.name}-${filter}`}
+            t={t}
             width={width}
             index={index}
             title={project.title}

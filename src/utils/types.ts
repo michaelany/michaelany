@@ -32,7 +32,7 @@ export type Effect =
 
 export type CompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 
-export type ProjectType = 'app' | 'site' | 'admin' | 'landing'
+export type ProjectType = 'app' | 'site' | 'landing' | 'admin'
 
 export type ProjectName =
   | 'ninjal'

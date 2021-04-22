@@ -1,3 +1,4 @@
+import {useTranslation} from 'react-i18next'
 import {Button} from '@material-ui/core'
 import {
   OpenInNewRounded as OpenInNewIcon,
@@ -13,7 +14,7 @@ import {
 
 import './ProjectDetails.scss'
 import {Animate, Features, Company} from '../common'
-import {getProjectTypesString} from '../../utils/helpers'
+import {tProjectTypes} from '../../utils/helpers'
 import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {Feature, ProjectType, CompanyName} from '../../utils/types'
 import {COMPANY} from '../../data/common'
@@ -45,6 +46,7 @@ export default function ProjectDetails({
   features,
   href,
 }: ProjectDetailsProps): JSX.Element {
+  const {t} = useTranslation()
   const featureItems: Feature[] = features.map(
     (feature: string, index: number) => ({
       label: feature,
@@ -53,7 +55,7 @@ export default function ProjectDetails({
     })
   )
   featureItems.push({
-    label: getProjectTypesString(types),
+    label: tProjectTypes(t, types),
     Icon: WebIcon,
   })
   const company = COMPANY[companyName]

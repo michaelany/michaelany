@@ -174,7 +174,7 @@ export default function Work(): JSX.Element {
       </p>
       <Animate el="ul" className="Work">
         {jobs.map((job: JobInterface, index: number) => (
-          <Job key={index} {...job} index={index} />
+          <Job key={index} {...job} t={t} index={index} />
         ))}
       </Animate>
     </section>
