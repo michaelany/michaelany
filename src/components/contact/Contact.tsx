@@ -39,6 +39,7 @@ export default function Contact(): JSX.Element {
                 values={{linkText: email}}
                 components={transComponents}
               />
+              :
             </p>
             <ContactForm />
           </div>

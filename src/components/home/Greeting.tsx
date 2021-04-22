@@ -18,7 +18,7 @@ export default function Greeting(): JSX.Element {
   return (
     <section className="Greeting Section">
       <div className="Greeting-Block">
-        <p className="Greeting-Text Greeting-First Title">{t('home.hi')}</p>
+        <p className="Greeting-Text Greeting-First Title">{t('home.hi')}!</p>
         <div className="Greeting-Second">
           <HelloIcon className="Greeting-Icon" />
         </div>

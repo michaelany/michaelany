@@ -10,7 +10,7 @@ const EN = {
   },
 
   home: {
-    hi: 'Hi!',
+    hi: 'Hi',
     iam: "I'm",
     occupation: {
       part1: 'a front‑end ',
