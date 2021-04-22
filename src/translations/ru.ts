@@ -288,6 +288,10 @@ const RU = {
       landing: 'Лендинг',
       admin: 'Админка',
     },
+    subtitle: 'Скриншоты',
+    screenshot: 'Скриншот',
+    mobile: 'мобильного',
+    screen: 'экрана проекта',
   },
   contact: {
     text:

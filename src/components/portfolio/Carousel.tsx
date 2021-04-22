@@ -1,3 +1,4 @@
+import {TFunction} from 'react-i18next'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Autoplay, SwiperOptions, Controller} from 'swiper'
 import {useMediaQuery} from '@material-ui/core'
@@ -10,6 +11,7 @@ import {DURATION} from '../../styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
+  t: TFunction
   title: string
   images: string[][]
   swiper: any
@@ -27,24 +29,26 @@ export const swiperOptions: SwiperOptions = {
 const autoplayOptions = {delay: DURATION.lingering}
 
 const renderContent = (
-  {mobile, title, images, swiper, setSwiper}: CarouselProps,
+  {t, mobile, title, images, swiper, setSwiper}: CarouselProps,
   isDesktop?: boolean
 ): JSX.Element | JSX.Element[] => {
-  const imageElements: JSX.Element[] = images.map((image: string[]) => {
-    const caption = `Скриншот ${
-      mobile ? 'мобильного ' : ''
-    }экрана проекта "${title}"`
-    return (
-      <SwiperSlide key={image[0]} tag="figure">
-        <img
-          className="Carousel-Img"
-          src={image[0]}
-          srcSet={image[1] && `${image[1]} 2x`}
-          alt={caption}
-        />
-      </SwiperSlide>
-    )
-  })
+  const imageElements: JSX.Element[] = images.map(
+    (image: string[], index: number) => {
+      const caption = `${t('portfolio.screenshot')} ${
+        mobile ? `${t('portfolio.mobile')} ` : ''
+      }${t('portfolio.screen')} "${title}"`
+      return (
+        <SwiperSlide key={image[0]} tag="figure">
+          <img
+            className="Carousel-Img"
+            src={image[0]}
+            srcSet={image[1] && `${image[1]} 2x`}
+            alt={`${caption} ${index + 1}`}
+          />
+        </SwiperSlide>
+      )
+    }
+  )
   return imageElements.length > 1 ? (
     <Swiper
       {...swiperOptions}

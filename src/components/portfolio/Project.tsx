@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {useTranslation, TFunction} from 'react-i18next'
 import {RouteChildrenProps} from 'react-router-dom'
 
 import {Sections, Pagination, Copyright} from '../common'
@@ -13,10 +14,11 @@ interface ProjectParams {
 }
 
 interface ScreenshotsProps {
+  t: TFunction
   project: ProjectInterface
 }
 
-const Screenshots = ({project}: ScreenshotsProps): JSX.Element => {
+const Screenshots = ({t, project}: ScreenshotsProps): JSX.Element => {
   const [firstSwiper, setFirstSwiper] = useState(null)
   const [secondSwiper, setSecondSwiper] = useState(null)
 
@@ -24,6 +26,7 @@ const Screenshots = ({project}: ScreenshotsProps): JSX.Element => {
     <div>
       {project.images.desktop && (
         <Carousel
+          t={t}
           title={project.title}
           images={project.images.desktop}
           swiper={secondSwiper}
@@ -33,6 +36,7 @@ const Screenshots = ({project}: ScreenshotsProps): JSX.Element => {
       {project.images.mobile && (
         <Carousel
           mobile
+          t={t}
           title={project.title}
           images={project.images.mobile}
           swiper={firstSwiper}
@@ -46,6 +50,7 @@ const Screenshots = ({project}: ScreenshotsProps): JSX.Element => {
 export default function Project({
   match,
 }: RouteChildrenProps<ProjectParams>): JSX.Element {
+  const {t} = useTranslation()
   const project: ProjectInterface = PROJECTS.find(
     (project: ProjectInterface): boolean =>
       PROJECT_ROUTE[project.name].slice(1) === match!.params.project
@@ -65,8 +70,8 @@ export default function Project({
       }
       secondSection={
         <section className="Section Section_pagination Section_colorful">
-          <h2 className="VisuallyHidden">Скриншоты</h2>
-          <Screenshots project={project} />
+          <h2 className="VisuallyHidden">{t('portfolio.subtitle')}</h2>
+          <Screenshots t={t} project={project} />
           <Pagination prevTo={ROUTE.portfolio} />
           <Copyright />
         </section>
