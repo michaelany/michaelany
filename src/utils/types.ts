@@ -66,15 +66,17 @@ export type ProjectName =
   | 'glyphs'
   | 'msp'
 
+export type TKey = string | TKeyObject
+
 export interface Map<T> {
   [key: string]: T
 }
 
-export type TKey = string | TKeyObject
-
 export interface TKeyObject {
-  tKey: string
+  tKey?: string
+  tKeys?: string[]
   value?: string | number
+  values?: string[]
 }
 
 export interface SocialLink {
@@ -146,6 +148,8 @@ export interface Job {
 
 export interface Project {
   name: ProjectName
+  title?: string
+  textValue?: string
   types: ProjectType[]
   companyName: CompanyName
   href?: string

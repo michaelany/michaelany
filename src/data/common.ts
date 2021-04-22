@@ -7,15 +7,6 @@ import {ReactComponent as FacebookIcon} from '../assets/icons/facebook.svg'
 import {ReactComponent as TelegramIcon} from '../assets/icons/telegram.svg'
 import {SocialLink, Company, TechnologyGroup} from '../utils/types'
 
-interface Title {
-  home: string
-  about: string
-  skills: string
-  experience: string
-  portfolio: string
-  contact: string
-}
-
 interface CompanyTitle {
   mvideo: string
   everpoint: string
@@ -40,23 +31,7 @@ interface CompanyInterface {
   mvideo: Company
 }
 
-interface ProjectTypeLabel {
-  app: string
-  site: string
-  admin: string
-  landing: string
-}
-
 export const MY_NAME: string = 'Michael Any'
-
-export const TITLE: Title = {
-  home: 'Главная',
-  about: 'Обо мне',
-  skills: 'Навыки',
-  experience: 'Опыт',
-  portfolio: 'Портфолио',
-  contact: 'Контакты',
-}
 
 export const COMPANY_TITLE: CompanyTitle = {
   mvideo: 'M.Видео',
@@ -147,13 +122,6 @@ export const COMPANY: CompanyInterface = {
     color: 'red',
     href: 'https://www.mvideo.ru',
   },
-}
-
-export const PROJECT_TYPE_LABEL: ProjectTypeLabel = {
-  app: 'Приложение',
-  site: 'Сайт',
-  admin: 'Админка',
-  landing: 'Лендинг',
 }
 
 export const TECHNOLOGY_TITLE = {

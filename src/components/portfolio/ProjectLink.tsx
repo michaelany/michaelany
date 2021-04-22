@@ -29,6 +29,7 @@ interface ProjectLinkProps {
   index: number
   width: Width
   name: ProjectName
+  title?: string
   types: ProjectType[]
   companyName: CompanyName
 }
@@ -52,6 +53,7 @@ export default function ProjectLink({
   index,
   width,
   name,
+  title,
   types,
   companyName,
 }: ProjectLinkProps): JSX.Element {
@@ -93,7 +95,7 @@ export default function ProjectLink({
                 alt={company.title}
               />
               <h3 className="ProjectLink-Title">
-                {t(`portfolio.project.${name}.title`)}
+                {title ?? t(`portfolio.project.${name}.title`)}
               </h3>
               <p className="ProjectLink-Label">{tProjectTypes(t, types)}</p>
             </div>

@@ -58,6 +58,7 @@ function Projects(): JSX.Element {
             width={width}
             index={index}
             name={project.name}
+            title={project.title}
             types={project.types}
             companyName={project.companyName}
           />

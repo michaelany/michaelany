@@ -62,6 +62,8 @@ export default function Project({
       firstSection={
         <ProjectDetails
           name={project.name}
+          title={project.title}
+          textValue={project.textValue}
           companyName={project.companyName}
           types={project.types}
           features={project.features}

@@ -21,12 +21,15 @@ import {
   Feature,
   ProjectType,
   CompanyName,
+  Company as CompanyInterface,
   TKey,
 } from '../../utils/types'
 import {COMPANY} from '../../data/common'
 
 interface ProjectDetailsProps {
   name: ProjectName
+  title?: string
+  textValue?: string
   companyName: CompanyName
   types: ProjectType[]
   features: TKey[]
@@ -45,6 +48,8 @@ const featureIcons = [
 
 export default function ProjectDetails({
   name,
+  title,
+  textValue,
   companyName,
   types,
   features,
@@ -58,9 +63,15 @@ export default function ProjectDetails({
       return {
         label:
           typeof feature === 'object'
-            ? `${t(
-                `${isTime ? 'month' : 'portfolio.feature'}.${feature.tKey}`
-              )}${feature.value ? `${isTime ? '' : ','} ${feature.value}` : ''}`
+            ? isTime
+              ? `${t(`month.${feature.tKey}`)} ${feature.value}`
+              : `${feature.value ? `${feature.value}, ` : ''}${
+                  feature.tKeys
+                    ? feature.tKeys
+                        .map((tKey: string) => t(`portfolio.feature.${tKey}`))
+                        .join(', ')
+                    : t(`portfolio.feature.${feature.tKey}`, feature.values)
+                }`
             : feature,
         Icon: featureIcons[index],
         time: isTime,
@@ -72,17 +83,20 @@ export default function ProjectDetails({
     Icon: WebIcon,
   })
 
-  const tProject = `portfolio.project.${name}`
-  const company = COMPANY[companyName]
+  const projectKey: string = `portfolio.project.${name}`
+  const company: CompanyInterface = COMPANY[companyName]
 
   return (
     <section className="ProjectDetails Section">
       <div className="ProjectDetails-Block">
-        <h1 className="Title Title_smallIndent">{t(`${tProject}.title`)}</h1>
+        <h1 className="Title Title_smallIndent">
+          {title ?? t(`${projectKey}.title`)}
+        </h1>
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {t(`${tProject}.text`)}. {t('portfolio.developed')} "{company.title}"
+        {t(`${projectKey}.text`, textValue && {textValue})}.{' '}
+        {t('portfolio.developed')} "{company.title}"
       </p>
       <Features items={featureItems} />
       {href && (

@@ -1,21 +1,40 @@
 import {COMPANY, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
+const feature = {
+  rest: 'REST API',
+  stripe: 'Stripe',
+  keycloak: 'Keycloak',
+  docker: 'Docker',
+  socket: 'WebSocket',
+}
+
 const PROJECTS: Project[] = [
-  /* {
-    title: 'Road Ninja',
+  {
     name: 'ninjal',
-    description: 'Лендинг новозеландского сервиса найма водителей грузовиков',
+    title: 'Road Ninja',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `${featureText.animations}`,
-      'Апрель 2021',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'april',
+        value: 2021,
+      },
     ],
     images: {
       desktop: [
@@ -67,19 +86,30 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Road Ninja',
     name: 'ninja',
-    description: 'Новозеландский сервис найма водителей грузовиков',
+    title: 'Road Ninja',
     types: ['app', 'site'],
     companyName: 'sevenGlyphs',
     features: [
-      'Верстка компонентов и разработка части бизнес-логики',
-      featureText.teamWork,
+      {
+        tKey: 'markupBusinessLogic',
+      },
+      {
+        tKey: 'teamWork',
+      },
       `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}, ${featureText.emails}`,
-      `${featureText.rest}, WebSocket, ${TECHNOLOGY_TITLE.webpack}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
-      featureText.businessLogic,
-      'Апрель 2021',
+      {
+        tKeys: ['responsive', 'emails'],
+        value: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
+      },
+      `${feature.rest}, ${feature.socket}, ${TECHNOLOGY_TITLE.webpack}, ${feature.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      {
+        tKey: 'businessLogic',
+      },
+      {
+        tKey: 'april',
+        value: 2021,
+      },
     ],
     images: {
       desktop: [
@@ -103,20 +133,30 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Сelebration',
     name: 'celebration',
-    description:
-      'Новогоднее мини-приложение для поздравления сотрудников компании',
+    title: 'Сelebration',
     types: ['app'],
     companyName: 't1',
     features: [
-      `${featureText.scratchDevelopment}, ${featureText.design}`,
-      featureText.leadWork,
+      {
+        tKeys: ['scratchDevelopment', 'design'],
+      },
+      {
+        tKey: 'leadWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `${featureText.animations}, PWA`,
-      'Декабрь 2020',
+      {
+        tKeys: ['animations', 'pwa'],
+      },
+      {
+        tKey: 'december',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -161,21 +201,32 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Ally',
     name: 'ally',
-    description:
-      'Лендинг мобильного приложения для интерактивных фигурок Nintendo Amiibo',
+    title: 'Ally',
+    textValue: 'Nintendo Amiibo',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/ally',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `${featureText.animations}`,
-      'Октябрь 2020',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'october',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -209,20 +260,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Present.me',
     name: 'presentmel',
-    description: 'Лендинг новозеландского сервиса создания профиля соискателя',
+    title: 'Present.me',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `${featureText.animations}`,
-      'Сентябрь 2020',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'september',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -277,20 +339,28 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Present.me',
     name: 'presentmep',
-    description: 'Админка новозеландского сервиса создания профиля соискателя',
+    title: 'Present.me',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'teamWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      featureText.businessLogic,
-      'Август 2020',
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'businessLogic',
+      },
+      {
+        tKey: 'august',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -315,20 +385,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Present.me',
     name: 'presentme',
-    description: 'Новозеландский сервис создания профиля соискателя',
+    title: 'Present.me',
     types: ['app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}, ${featureText.emails}`,
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
-      `Динамические формы, собственный роутинг`,
-      'Август 2020',
+      {
+        tKeys: ['responsive', 'emails'],
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      {
+        tKey: 'dynamicFormsRouting',
+      },
+      {
+        tKey: 'august',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -390,19 +471,30 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Dropdrone',
     name: 'dropdrone',
-    description: 'Лендинг новозеландского сельскохозяйственного стартапа',
+    title: 'Dropdrone',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.animations,
-      'Июнь 2020',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'june',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -455,21 +547,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Just Hatched',
     name: 'hatched',
-    description:
-      'Лендинг мобильного приложения-трекера для новорожденных малышей',
+    title: 'Just Hatched',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/justhatched',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'teamWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      `${featureText.animations}`,
-      'Май 2020',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'may',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -517,19 +619,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Unified Login System',
     name: 'uls',
-    description: 'Единый кабинет пользователей компании "Vaillant Group"',
+    textValue: 'Vaillant Group',
     types: ['app'],
     companyName: 't1',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${featureText.responsive}`,
-      `${TECHNOLOGY_TITLE.webpack}, ${featureText.rest}, Keycloak, Docker`,
-      'Поработал с Keycloak и Docker',
-      'Февраль 2020',
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
+      },
+      `${TECHNOLOGY_TITLE.webpack}, ${feature.rest}, ${feature.keycloak}, ${feature.docker}`,
+      {
+        tKey: 'tryTwo',
+        values: [feature.keycloak, feature.docker],
+      },
+      {
+        tKey: 'february',
+        value: 2020,
+      },
     ],
     images: {
       desktop: [
@@ -563,20 +677,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Proximal Coffee',
     name: 'proximal',
-    description: 'Лендинг австралийской кофейни',
+    title: 'Proximal Coffee',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://www.proximalcoffee.com.au',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.animations,
-      'Декабрь 2019',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'december',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -617,19 +742,26 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'АРМА ЕМБП',
     name: 'embp',
-    description: 'Админка биометрической платформы для банка "ВТБ"',
     types: ['admin', 'app'],
     companyName: 't1',
     features: [
-      `${featureText.wholeDevelopment}, ${featureText.design}`,
-      featureText.leadWork,
+      {
+        tKeys: ['wholeDevelopment', 'design'],
+      },
+      {
+        tKey: 'leadWork',
+      },
       `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
-      'Темная тема',
-      'Июль 2019',
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
+      {
+        tKey: 'darkTheme',
+      },
+      {
+        tKey: 'july',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -657,20 +789,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Ted Manson Foundation',
     name: 'tmf',
-    description: 'Сайт новозеландской строительной компании',
+    title: 'Ted Manson Foundation',
     types: ['site'],
     companyName: 'sevenGlyphs',
     href: 'https://www.tmfoundation.co.nz',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.photoshop}`,
-      featureText.animations,
-      'Октябрь 2019',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'october',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -720,20 +863,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: '7 glyphs Lite',
     name: 'lite',
-    description: `Лендинг сервиса новозеландского диджитал-агентства`,
+    title: '7 glyphs Lite',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://lite.7glyphs.com',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.animations,
-      'Сентябрь 2019',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'september',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -775,20 +929,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Melissa Chalmers',
     name: 'melissa',
-    description: 'Лендинг фитнес-блогера',
+    title: 'Melissa Chalmers',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.animations,
-      'Сентябрь 2019',
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'september',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -826,21 +991,28 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Foodprint',
     name: 'foodp',
-    description:
-      'Портал новозеландского сервиса заказа дисконтной еды в ресторанах',
+    title: 'Foodprint',
     types: ['site', 'app', 'admin'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      featureText.businessLogic,
-      'Июнь 2019',
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'businessLogic',
+      },
+      {
+        tKey: 'june',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -868,21 +1040,30 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Foodprint',
     name: 'food',
-    description:
-      'Лендинг новозеландского сервиса заказа дисконтной еды в ресторанах',
+    title: 'Foodprint',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}, ${featureText.emails}`,
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
-      featureText.animations,
-      'Июнь 2019',
+      {
+        tKeys: ['responsive', 'emails'],
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'june',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -924,20 +1105,28 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Sales Digital System',
     name: 'sds',
-    description:
-      'Корпоративный сервис для работы с документооборотом компании "Vaillant Group"',
+    title: 'Sales Digital System',
+    textValue: 'Vaillant Group',
     types: ['app'],
     companyName: 't1',
     features: [
-      `${featureText.wholeDevelopment}, ${featureText.design}`,
-      featureText.leadWork,
+      {
+        tKeys: ['wholeDevelopment', 'design'],
+      },
+      {
+        tKey: 'leadWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, Keycloak, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.businessLogic,
-      'Апрель 2019',
+      `${feature.rest}, Keycloak, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'businessLogic',
+      },
+      {
+        tKey: 'april',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -961,20 +1150,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'StrongHer',
     name: 'strong',
-    description: 'Сайт мобильного фитнес-приложения',
+    title: 'StrongHer',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}, ${featureText.emails}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
-      `${featureText.animations}`,
-      'Февраль 2019',
+      {
+        tKeys: ['responsive', 'emails'],
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${feature.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'february',
+        value: 2019,
+      },
     ],
     images: {
       desktop: [
@@ -1026,20 +1226,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: '7 glyphs 2.0',
     name: 'glyphs2',
-    description: 'Домашний сайт новозеландского диджитал-агентства',
+    title: '7 glyphs 2.0',
     types: ['site'],
     companyName: 'sevenGlyphs',
     href: COMPANY.sevenGlyphs.href,
     features: [
-      featureText.growthSupportDevelopment,
-      featureText.teamWork,
+      {
+        tKey: 'growthSupportDevelopment',
+      },
+      {
+        tKey: 'teamWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}, ${featureText.responsive}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      featureText.animations,
-      'Январь 2018',
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'january',
+        value: 2018,
+      },
     ],
     images: {
       desktop: [
@@ -1096,21 +1307,28 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Rogue Travel',
     name: 'rogue',
-    description:
-      'Новозеландский сервис группового бронирования авиабилетов и отелей',
+    title: 'Rogue Travel',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
-      featureText.scratchGrowthDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchGrowthDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${featureText.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      featureText.businessLogic,
-      'Ноябрь 2018',
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${feature.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'businessLogic',
+      },
+      {
+        tKey: 'november',
+        value: 2018,
+      },
     ],
     images: {
       desktop: [
@@ -1130,20 +1348,29 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Quarry Trucks',
     name: 'trucks',
-    description: 'Новозеландский сервис мониторинга передвижения грузовиков',
+    title: 'Quarry Trucks',
     types: ['app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
     features: [
-      'Верстка и разработка части бизнес-логики',
-      featureText.teamWork,
+      {
+        tKey: 'markupBusinessLogic',
+      },
+      {
+        tKey: 'teamWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.mobx}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.zeplin}`,
-      `Поработал с ${TECHNOLOGY_TITLE.mobx} и графиками`,
-      'Май 2018',
+      `${feature.rest}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'tryOneGraph',
+        values: [TECHNOLOGY_TITLE.mobx],
+      },
+      {
+        tKey: 'may',
+        value: 2018,
+      },
     ],
     images: {
       desktop: [
@@ -1164,20 +1391,32 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Service Packages',
     name: 'services',
-    description: `Лендинг описания услуг новозеландского диджитал-агентства "${COMPANY_TITLE.sevenGlyphs}"`,
+    title: 'Service Packages',
+    textValue: COMPANY_TITLE.sevenGlyphs,
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/approach/packages',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      featureText.animations,
-      'Февраль 2018',
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'february',
+        value: 2018,
+      },
     ],
     images: {
       desktop: [
@@ -1217,19 +1456,27 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'FCDC',
     name: 'fcdc',
-    description: 'Админка сервиса управления мероприятиями',
+    title: 'FCDC',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      'Много форм и таблиц',
-      'Январь 2018',
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
+      {
+        tKey: 'formsTables',
+      },
+      {
+        tKey: 'january',
+        value: 2018,
+      },
     ],
     images: {
       desktop: [
@@ -1249,20 +1496,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: '12 Saffron',
     name: 'saffron',
-    description: 'Целевая страница для продажи частного дома в Новой Зеландии',
+    title: '12 Saffron',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}`,
-      'Дом успешно продан',
-      'Август 2017',
+      {
+        tKey: 'sellHouse',
+      },
+      {
+        tKey: 'august',
+        value: 2017,
+      },
     ],
     images: {
       desktop: [
@@ -1300,20 +1558,36 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'Whip Around',
     name: 'whip',
-    description: 'Новозеландский сервис техосмотра автомобилей',
+    title: 'Whip Around',
     types: ['site'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
-      featureText.growthSupportDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'growthSupportDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.blade}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}, ${featureText.responsive}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.laravel}`,
-      `Поработал с ${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.laravel} и ${TECHNOLOGY_TITLE.blade}`,
-      'Сентябрь 2017',
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.laravel}`,
+      {
+        tKey: 'tryThree',
+        values: [
+          TECHNOLOGY_TITLE.php,
+          TECHNOLOGY_TITLE.laravel,
+          TECHNOLOGY_TITLE.blade,
+        ],
+      },
+      {
+        tKey: 'september',
+        value: 2017,
+      },
     ],
     images: {
       desktop: [
@@ -1331,20 +1605,36 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'LazyAz',
     name: 'lazyazd',
-    description: 'Админка новозеландского сервиса доставки товаров',
+    title: 'LazyAz',
     types: ['admin'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
-      featureText.scratchDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.blade}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}, ${featureText.responsive}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.laravel}, ${TECHNOLOGY_TITLE.zeplin}`,
-      `Поработал с ${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.laravel} и ${TECHNOLOGY_TITLE.blade}`,
-      'Май 2017',
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.laravel}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'tryThree',
+        values: [
+          TECHNOLOGY_TITLE.php,
+          TECHNOLOGY_TITLE.laravel,
+          TECHNOLOGY_TITLE.blade,
+        ],
+      },
+      {
+        tKey: 'may',
+        value: 2017,
+      },
     ],
     images: {
       desktop: [
@@ -1362,20 +1652,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: 'LazyAz',
     name: 'lazyaz',
-    description: 'Веб-платформа новозеландского сервиса доставки товаров',
+    title: 'LazyAz',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
-      featureText.wholeDevelopment,
-      featureText.soloWork,
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${featureText.responsive}, ${featureText.emails}`,
-      `${featureText.rest}, ${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      'Первый коммерческий проект, написанный с нуля',
-      'Март 2017',
+      {
+        tKeys: ['responsive', 'emails'],
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'firstScratchProject',
+      },
+      {
+        tKey: 'march',
+        value: 2017,
+      },
     ],
     images: {
       desktop: [
@@ -1410,19 +1711,31 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    title: '7 glyphs',
     name: 'glyphs',
-    description: 'Домашний сайт новозеландского диджитал-агентства',
+    title: '7 glyphs',
     types: ['site'],
     companyName: 'sevenGlyphs',
     features: [
-      `Переписывание кодовой базы с ${TECHNOLOGY_TITLE.jquery} на ${TECHNOLOGY_TITLE.react}`,
-      featureText.soloWork,
+      {
+        tKey: 'jqueryReact',
+        values: [TECHNOLOGY_TITLE.jquery, TECHNOLOGY_TITLE.react],
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${featureText.responsive}`,
+      {
+        tKey: 'responsive',
+        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
+      },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}`,
-      'Превратил сайт в SPA',
-      'Январь 2017',
+      {
+        tKey: 'spa',
+      },
+      {
+        tKey: 'january',
+        value: 2017,
+      },
     ],
     images: {
       desktop: [
@@ -1455,7 +1768,7 @@ const PROJECTS: Project[] = [
         ],
       ],
     },
-  }, */
+  },
   {
     name: 'msp',
     types: ['site', 'app'],
@@ -1470,10 +1783,7 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.handlebars}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.semantic}`,
-      {
-        tKey: 'rest',
-        value: `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      },
+      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
       {
         tKey: 'firstProject',
       },
