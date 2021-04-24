@@ -5,26 +5,59 @@ import {
 } from '@material-ui/icons'
 
 import './Copyright.scss'
+import {ReactComponent as ReactIcon} from '../../assets/icons/react.svg'
+import {ReactComponent as MuiIcon} from '../../assets/icons/mui.svg'
+import {Tooltip} from '../common'
 import {TODAY, BLANK_LINK_PROPS} from '../../utils/constants'
-import {CONTACT_LINK} from '../../data/common'
+import {
+  CONTACT_LINK,
+  TECHNOLOGY_TITLE,
+  MAIN_TECHNOLOGY_LINK,
+} from '../../data/common'
 
 const year: number = TODAY.getFullYear()
+
+const links = [
+  {
+    name: 'react',
+    Icon: ReactIcon,
+  },
+  {
+    name: 'mui',
+    Icon: MuiIcon,
+  },
+]
 
 export default function Copyright() {
   const {t} = useTranslation()
 
   return (
     <footer className="Copyright">
-      <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
-      {t('copyright.crafted')}{' '}
-      <a
-        {...BLANK_LINK_PROPS}
-        className="Copyright-Link"
-        href={CONTACT_LINK.gitHub.href}
-      >
-        {t('copyright.me')}
-      </a>{' '}
-      {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
+      <p>
+        <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
+        {t('copyright.crafted')}{' '}
+        <a
+          {...BLANK_LINK_PROPS}
+          className="Copyright-Author"
+          href={CONTACT_LINK.gitHub.href}
+        >
+          {t('copyright.me')}
+        </a>{' '}
+        {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
+      </p>
+      <div className="Copyright-Links">
+        {links.map(({name, Icon}) => (
+          <Tooltip key={name} title={`${t('copyright.made')} `}>
+            <a
+              {...BLANK_LINK_PROPS}
+              className="Copyright-Link"
+              href={MAIN_TECHNOLOGY_LINK[name as any]}
+            >
+              <Icon />
+            </a>
+          </Tooltip>
+        ))}
+      </div>
     </footer>
   )
 }

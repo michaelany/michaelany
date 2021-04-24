@@ -11,7 +11,7 @@
 
 .Section {
   position: relative;
-  padding: 80px 10%;
+  padding: 80px 10% 120px;
   height: 100%;
   &_single {
     padding-left: 5%;
@@ -40,7 +40,7 @@
     padding-right: 7.5%;
   }
   @include sm {
-    padding: 64px 24px;
+    padding: 64px 24px 96px;
     padding-right: 24px;
   }
 }

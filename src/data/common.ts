@@ -184,6 +184,11 @@ export const TECHNOLOGY_TITLE = {
   laravel: 'Laravel',
 }
 
+export const MAIN_TECHNOLOGY_LINK = {
+  react: 'https://reactjs.org',
+  mui: 'https://material-ui.com',
+}
+
 export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
   {
     tKey: 'logic',
@@ -205,7 +210,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         name: 'react',
         label: TECHNOLOGY_TITLE.react,
         color: 'blue',
-        href: 'https://reactjs.org',
+        href: MAIN_TECHNOLOGY_LINK.react,
       },
       {
         name: 'redux',
@@ -337,7 +342,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         name: 'mui',
         label: TECHNOLOGY_TITLE.mui,
         color: 'blue',
-        href: 'https://material-ui.com',
+        href: MAIN_TECHNOLOGY_LINK.mui,
       },
       {
         name: 'ant',
