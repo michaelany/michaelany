@@ -4,6 +4,7 @@ import {
   ExploreRounded as ExploreIcon,
   MyLocationRounded as MyLocationIcon,
   DateRangeRounded as DateRangeIcon,
+  RoomRounded as RoomIcon,
 } from '@material-ui/icons'
 
 import './Work.scss'
@@ -55,7 +56,7 @@ const jobs: JobInterface[] = [
       {tKey: 'busyFull', Icon: ScheduleIcon},
       {tKey: 'remote', Icon: MyLocationIcon},
       {tKey: 'office', Icon: MyLocationIcon, disabled: true},
-      {tKey: 'moscow', Icon: ExploreIcon},
+      {tKey: 'moscow', Icon: RoomIcon},
     ],
   },
   {
@@ -93,7 +94,7 @@ const jobs: JobInterface[] = [
       {tKey: 'busyPart', Icon: ScheduleIcon},
       {tKey: 'busyFull', Icon: ScheduleIcon, disabled: true},
       {tKey: 'remote', Icon: MyLocationIcon},
-      {tKey: 'auckland', Icon: ExploreIcon},
+      {tKey: 'auckland', Icon: RoomIcon},
     ],
   },
   {
@@ -125,7 +126,7 @@ const jobs: JobInterface[] = [
       },
       {tKey: 'busyFull', Icon: ScheduleIcon},
       {tKey: 'office', Icon: MyLocationIcon},
-      {tKey: 'moscow', Icon: ExploreIcon},
+      {tKey: 'moscow', Icon: RoomIcon},
     ],
   },
   {
@@ -151,7 +152,7 @@ const jobs: JobInterface[] = [
       {tKey: 'office', Icon: MyLocationIcon},
       {
         tKey: 'moscow',
-        Icon: ExploreIcon,
+        Icon: RoomIcon,
       },
     ],
   },

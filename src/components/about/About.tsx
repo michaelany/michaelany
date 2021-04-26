@@ -61,7 +61,7 @@ const features: Feature[] = [
   {
     tKey: 'programming',
     Icon: CodeIcon,
-    textValue: `${TECHNOLOGY_TITLE.js} и ${TECHNOLOGY_TITLE.css}`,
+    textValue: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.css}`,
   },
   {
     tKey: 'growing',
@@ -88,7 +88,6 @@ const features: Feature[] = [
     Icon: FavoriteIcon,
     textValue: differenceInYears(TODAY, new Date(2013, 1)),
     link: {
-      text: 'Она',
       component: (
         // eslint-disable-next-line
         <a
@@ -108,7 +107,7 @@ const features: Feature[] = [
 export default function About(): JSX.Element {
   return (
     <Sections
-      firstSection={<Info type="about" features={features} />}
+      firstSection={<Info type="about" textValue="UI/UX" features={features} />}
       secondSection={<Social />}
     />
   )

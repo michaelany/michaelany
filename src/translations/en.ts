@@ -36,67 +36,67 @@ const EN = {
   },
   about: {
     text:
-      'Занимаюсь <strong>фронтенд-разработкой</strong>. Создаю красивые и удобные проекты любой сложности. Воплощаю в жизнь UI/UX идеи',
+      "I'm engaged in <strong>front‑end development</strong>. I create beautiful and convenient projects of any complexity, bringing {{value}} ideas to life",
     feature: {
       projects: {
-        label: 'Реализовал множество проектов',
+        label: 'Developed many projects',
         text:
-          'В моем послужном списке около {{textValue}} зарубежных и отечественных коммерческих проектов - от лендингов до крупных веб-приложений. Некоторые из них представлены в <0>{{linkText}}</0>',
+          'I have about {{textValue}} foreign and domestic commercial projects in my track record - from landing pages to large web applications. Some of them are presented in the <0>{{linkText}}</0>',
       },
       experience: {
-        label: 'Опыт разработки {{labelValue}}+ лет',
+        label: '{{labelValue}}+ years of experience',
         text:
-          'Первый сайт сделал в 13 лет. Прошел путь от верстальщика до тимлида фронтенд-разработки. Работаю в отечественной ИТ компании и сотрудничаю с новозеландской студией. Подробнее на странице <0>{{linkText}}</0>',
+          'Made my first website at the age of 13. I went from a junior coder to a front-end team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More details on the page <0>{{linkText}}</0>',
       },
       position: {
-        label: 'Ведущий разработчик и ментор',
+        label: 'Senior developer & mentor',
         text:
-          'Разрабатываю проекты с нуля, верстаю, пишу бизнес-логику, оптимизирую и поддерживаю код. Планирую и оцениваю задачи, провожу код-ревью и обучаю. Более подробно в <0>{{linkText}}</0>',
+          'I develop projects from scratch, create layout, write business logic, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. For more information, go to <0>{{linkText}}</0>',
       },
       organizing: {
-        label: 'Организованный и автономный',
+        label: 'Organized & standalone',
         text:
-          'Большинство проектов разработаны мной самостоятельно. Я люблю брать на себя всю клиентскую часть проекта от обсуждения концепции до финальной реализации и поддержки на продакшне',
+          'Most of the projects were developed by me independently. I like to take over the entire client part of the project from discussing the concept to the final implementation and support in production',
       },
       programming: {
-        label: 'Люблю программировать',
+        label: 'Love to code',
         text:
-          'Фронтенд - мое основное хобби. Мне нравится экспериментировать с {{textValue}}. Интересуюсь кроссплатформенной и бекенд-разработкой. Планирую запустить собственный блог',
+          'Frontend is my main hobby. I like to experiment with {{textValue}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
       },
       growing: {
-        label: 'Постоянно развиваюсь',
+        label: 'Constantly evolving',
         text:
-          'Регулярно "затачиваю пилу", изучаю документации, статьи, курсы, книги и доклады по разработке. В постоянном поиске новых технологий и инструментов повышения эффективности',
+          'I regularly "sharpen the saw", study documentation, articles, courses, books and development reports. In constant search for new technologies and tools to improve my efficiency',
       },
       perfect: {
-        label: 'Склонный к перфекционизму',
+        label: 'Prone to perfectionism',
         text:
-          'Высокое качество - мой главный принцип. В каждый проект я вкладываю всего себя. Однако, сила дедлайна и опыт помогают мне сосредоточиться на скорости и конечном результате',
+          'High quality is my main principle. I put all of myself into every project. However, the strength of the deadline and the experience help me focus on speed and the end result',
       },
       education: {
-        label: 'Два высших образования',
+        label: 'Two higher educations',
         text:
-          'Окончил "Российский технологический университет" и "Всероссийский государственный институт кинематографии" 🙂. Учеба в последнем очень хорошо прокачала мои гибкие навыки',
+          'Graduated from the "Moscow Technological University" and "Russian State University of Cinematography" 🙂. Studying in the latter boosted my soft skills very well',
       },
       sport: {
-        label: 'Занимаюсь спортом',
+        label: 'Playing sports',
         text:
-          'Физические нагрузки особенно актуальны для разработчика. Каждый день я стараюсь посвящать время спорту (калистеника, велосипед, бег, фитнес). Этим летом открыл для себя сапсерфинг',
+          'Physical activity is especially relevant for the developer. Every day I try to devote time to sports (calisthenics, cycling, running, fitness). I discovered standup paddleboarding this summer',
       },
       travel: {
-        label: 'Путешествую',
+        label: 'Traveling',
         text:
-          'Посетил более 15 стран. В восторге от Японии и Новой Зеландии. Был в Хоббитоне, покорил вершину Фудзиямы и остался жив после встречи с уральским медведем на Перевале Дятлова 🙂',
+          'Visited over 15 countries. Love Japan and New Zealand. I was in Hobbiton, climbed the top of Fujiyama and survived after meeting with the Ural bear on the Dyatlov Pass 🙂',
       },
       love: {
-        label: 'Счастливый муж',
+        label: 'Happy husband',
         text:
-          '<0>{{linkText}}</0> - мой главный источник вдохновения и лучший друг. Мы вместе уже более {{textValue}} лет. Кстати, когда-то я разработал прогрессивное веб-приложение для предложения ей руки и сердца 🙂',
+          "<0>She</0> is my main source of inspiration and best friend. We've been together for over {{textValue}} years. By the way, I once developed a progressive web application to offer her a hand and heart 🙂",
       },
       coffee: {
-        label: 'Кофеман',
+        label: 'Coffee lover',
         text:
-          'Известно, что "программист - это человек, превращающий кофе в код" 🙂. Свой рабочий день я начинаю с кружечки ароматного кофе. Также после поездки в Японию полюбил чай матчу',
+          'It\'s known that "programmer - an organism that turns coffee into code" 🙂. I start my working day with a cup of aromatic coffee. Also, after a trip to Japan, I fell in love with matcha tea',
       },
     },
     subtitle: 'Аватар и социальные сети',
