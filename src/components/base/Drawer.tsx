@@ -3,6 +3,7 @@ import {ArrowBackRounded as ArrowBackIcon} from '@material-ui/icons'
 
 import './Drawer.scss'
 import {Navigation} from '../common'
+import Settings from './Settings'
 
 interface DrawerProps {
   open: boolean
@@ -13,16 +14,19 @@ export default function Drawer({open, onClose}: DrawerProps): JSX.Element {
   return (
     <MuiDrawer className="Drawer" open={open} onClose={onClose}>
       <div className="Drawer-Content">
-        <div className="Drawer-Block">
-          <IconButton
-            className="Colorful"
-            aria-label="Скрыть"
-            onClick={onClose}
-          >
-            <ArrowBackIcon className="ButtonIcon" />
-          </IconButton>
+        <div>
+          <div className="Drawer-Block">
+            <IconButton
+              className="Colorful"
+              aria-label="Скрыть"
+              onClick={onClose}
+            >
+              <ArrowBackIcon className="ButtonIcon" />
+            </IconButton>
+          </div>
+          <Navigation onClose={onClose} />
         </div>
-        <Navigation onClose={onClose} />
+        <Settings />
       </div>
     </MuiDrawer>
   )

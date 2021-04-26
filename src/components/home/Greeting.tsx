@@ -54,9 +54,9 @@ export default function Greeting(): JSX.Element {
           </span>
         </strong>
       </p>
-      <div className="Actions">
+      <div className="Greeting-Actions Actions">
         <Button
-          className="Greeting-Sixth Button Button_color_blue"
+          className="Greeting-Button Greeting-Sixth Button Button_color_blue"
           component={Link}
           to={ROUTE.portfolio}
           size="large"
@@ -65,7 +65,7 @@ export default function Greeting(): JSX.Element {
           {t('title.portfolio')}
         </Button>
         <Button
-          className="Greeting-Seventh Button Button_color_green"
+          className="Greeting-Button Greeting-Seventh Button Button_color_green"
           component={Link}
           to={ROUTE.contact}
           size="large"

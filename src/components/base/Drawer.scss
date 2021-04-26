@@ -13,7 +13,10 @@
 }
 
 .Drawer-Content {
-  padding-bottom: 24px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Drawer-Block {

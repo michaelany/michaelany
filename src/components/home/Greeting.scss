@@ -105,3 +105,11 @@
   height: 100%;
   @include animation(fadeInZoomOut, 2600ms);
 }
+
+.Greeting-Actions {
+  margin-bottom: -16px;
+}
+
+.Greeting-Button {
+  margin-bottom: 16px;
+}
