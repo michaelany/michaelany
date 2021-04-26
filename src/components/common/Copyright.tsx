@@ -1,3 +1,4 @@
+import {FunctionComponent, SVGProps} from 'react'
 import {useTranslation} from 'react-i18next'
 import {
   CopyrightRounded as CopyrightIcon,
@@ -15,9 +16,15 @@ import {
   MAIN_TECHNOLOGY_LINK,
 } from '../../data/common'
 
+interface Link {
+  title: string
+  href: string
+  Icon: FunctionComponent<SVGProps<SVGSVGElement>>
+}
+
 const year: number = TODAY.getFullYear()
 
-const links = [
+const links: Link[] = [
   {
     title: TECHNOLOGY_TITLE.react,
     href: MAIN_TECHNOLOGY_LINK.react,
@@ -30,7 +37,7 @@ const links = [
   },
 ]
 
-export default function Copyright() {
+export default function Copyright(): JSX.Element {
   const {t} = useTranslation()
 
   return (
@@ -48,7 +55,7 @@ export default function Copyright() {
         {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
       </p>
       <div className="Copyright-Links">
-        {links.map(({Icon, ...link}, index) => (
+        {links.map(({Icon, ...link}: Link, index: number) => (
           <Tooltip key={index} title={link.title}>
             <a
               {...BLANK_LINK_PROPS}

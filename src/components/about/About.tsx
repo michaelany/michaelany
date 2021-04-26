@@ -47,7 +47,7 @@ const features: Feature[] = [
     },
   },
   {
-    tKey: 'experience',
+    tKey: 'position',
     Icon: SupervisorAccountIcon,
     link: {
       tKey: 'title.skills',

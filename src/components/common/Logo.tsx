@@ -7,7 +7,7 @@ import {ROUTE} from '../../utils/constants'
 export default function Logo(): JSX.Element {
   return (
     <Link className="Logo Colorful" to={ROUTE.home}>
-      <LogoSvg />
+      <LogoSvg className="Logo-Svg" />
     </Link>
   )
 }

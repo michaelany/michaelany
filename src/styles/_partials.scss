@@ -22,10 +22,8 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  &_colorful {
-    &::before {
-      @include pseudoGradient;
-    }
+  &_colorful::before {
+    @include pseudoGradient;
   }
   .App_color_alternate &_colorful {
     @include animationAlternate(alternateBackgroundColor);
@@ -38,9 +36,12 @@
   @include md {
     padding-left: 7.5%;
     padding-right: 7.5%;
+    .Sections-SectionWrapper:first-child > & {
+      padding-bottom: 80px;
+    }
   }
   @include sm {
-    padding: 64px 24px 96px;
+    padding-left: 24px;
     padding-right: 24px;
   }
 }
@@ -206,9 +207,6 @@
   }
   @include md {
     margin-top: 48px;
-  }
-  @include sm {
-    margin-top: 40px;
   }
 }
 

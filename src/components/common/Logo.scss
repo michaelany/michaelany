@@ -19,11 +19,17 @@
   @include md {
     padding: 0;
     margin-bottom: 0;
-    width: 46px;
     @include hover {
       &:hover {
         transform: scale(1.15) rotate(10deg);
       }
     }
+  }
+}
+
+.Logo-Svg {
+  @include md {
+    width: 46px;
+    height: 46px;
   }
 }

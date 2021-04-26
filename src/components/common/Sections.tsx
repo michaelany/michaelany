@@ -1,4 +1,3 @@
-import cn from 'clsx'
 import {Grid} from '@material-ui/core'
 
 import './Sections.scss'
@@ -14,12 +13,26 @@ export default function Sections({
   firstSection,
   secondSection,
 }: SectionsProps): JSX.Element {
+  const notContact: boolean = !contact
+
   return (
     <Grid container className="Sections" spacing={0}>
-      <Grid item xs={12} lg={6}>
+      <Grid
+        item
+        className={notContact ? 'Sections-SectionWrapper' : undefined}
+        xs={12}
+        lg={6}
+      >
         {firstSection}
       </Grid>
-      <Grid item className={cn(!contact && 'Sections-Animated')} xs={12} lg={6}>
+      <Grid
+        item
+        className={
+          notContact ? 'Sections-SectionWrapper Sections-Animated' : undefined
+        }
+        xs={12}
+        lg={6}
+      >
         {secondSection}
       </Grid>
     </Grid>
