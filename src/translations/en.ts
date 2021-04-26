@@ -29,14 +29,14 @@ const EN = {
     hi: 'Hi',
     iam: "I'm",
     occupation: {
-      part1: 'a front‑end ',
+      part1: 'a frontend',
       part2: 'developer',
     },
     subtitle: 'Banner',
   },
   about: {
     text:
-      "I'm engaged in <strong>front‑end development</strong>. I create beautiful and convenient projects of any complexity, bringing {{value}} ideas to life",
+      "I'm engaged in <strong>frontend development</strong>. I create beautiful and convenient projects of any complexity, bringing {{value}} ideas to life",
     feature: {
       projects: {
         label: 'Developed many projects',
@@ -46,7 +46,7 @@ const EN = {
       experience: {
         label: '{{labelValue}}+ years of experience',
         text:
-          'Made my first website at the age of 13. I went from a junior coder to a front-end team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More details on the page <0>{{linkText}}</0>',
+          'Made my first website at the age of 13. I went from a junior coder to a frontend team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More details on the page <0>{{linkText}}</0>',
       },
       position: {
         label: 'Senior developer & mentor',
@@ -137,7 +137,7 @@ const EN = {
           'I avoid over-nesting, follow the principle of separation of concerns, DRY and KISS. Each module / class / component is responsible for one functionality type. Configuring the project build system',
       },
       tools: {
-        label: 'Use up-to-date frameworks, libraries, and tools',
+        label: 'Use modern frameworks, libraries, and tools',
         text:
           'I regularly follow the updates of the technologies used and in the constant search for new ones. In addition to <0>primary</0> I use a large number of auxiliary libraries and tools',
       },
@@ -180,110 +180,108 @@ const EN = {
   },
   experience: {
     text:
-      'Профессионально занимаюсь фронтенд-разработкой более {{value}} лет. <strong>Ведущий разработчик</strong> и <strong>тимлид</strong>. Работаю удаленно',
-    duties: 'Обязанности',
-    achievements: 'Достижения',
-    current: 'Текущая должность',
+      "I've been professionally engaged in frontend development for more than {{value}} years. <strong>Senior developer</strong> and <strong>team lead</strong>. Working remotely",
+    duties: 'Duties',
+    achievements: 'Achievements',
+    current: 'Current position',
     occupation: {
-      lead: 'Тимлид фронтенд-разработки',
-      senior: 'Ведущий фронтенд-разработчик',
-      middle: 'Фронтенд разработчик',
-      junior: 'Верстальщик',
-      support: 'Инженер технической поддержки',
+      lead: 'Frontend team lead',
+      senior: 'Senior frontend developer',
+      middle: 'Frontend developer',
+      junior: 'Junior frontend developer',
+      support: 'Technical support engineer',
     },
     job: {
       duty: {
-        logicApps: 'Разработка бизнес-логики приложений',
-        logicAppsSites: 'Разработка бизнес-логики приложений и сайтов',
-        logicModules: 'Разработка бизнес-логики компонентов приложения',
-        structureApps: 'Создание архитектуры приложений',
-        structureProjects: 'Создание архитектуры проектов',
-        responsive: 'Кроссбраузерная и адаптивная верстка',
-        rest: 'Работа с REST API',
-        restSocket: 'Работа с REST API и WebSocket',
-        refactor: 'Рефакторинг и сопровождение кода',
-        scratch: 'Разработка проектов с нуля',
-        support: 'Поддержка проектов',
-        tasks: 'Декомпозиция и оценка задач',
-        tasksTeam: 'Планирование, декомпозиция и оценка задач команды',
-        manage: 'Управление и развитие команды',
-        review: 'Проведение код-ревью и собеседований',
-        serviceDesk:
-          'Регистрация и обработка обращений в системах Service Desk',
-        hardwareFix:
-          'Решение проблем программного обеспечения и периферийного оборудования',
-        hardwareInstall:
-          'Установка и настройка программного обеспечения и периферийного оборудования',
-        consult: 'Консультирование сотрудников по техническим вопросам',
+        logicApps: 'Application business logic development',
+        logicAppsSites:
+          'Development of business logic for applications and websites',
+        logicModules: 'Developing the business logic of application components',
+        structureApps: 'Application architecture creation',
+        structureProjects: 'Creation of projects architecture',
+        responsive: 'Cross-browser and responsive markup',
+        rest: 'Working with REST API',
+        restSocket: 'Working with REST API and WebSocket',
+        refactor: 'Code refactoring and maintenance',
+        scratch: 'Developing projects from scratch',
+        support: 'Projects support',
+        tasks: 'Decomposition and evaluation of tasks',
+        tasksTeam: 'Planning, decomposing and evaluating team tasks',
+        manage: 'Team management and development',
+        review: 'Making code reviews and interviews',
+        serviceDesk: 'Registration and processing of requests in Service Desk',
+        hardwareFix: 'Solving software and hardware issues',
+        hardwareInstall: 'Installing, configuring software and hardware',
+        consult: 'Advising employees on technical issues',
       },
       achievement: {
         resultCorporate:
-          'Успешно реализовал несколько масштабных проектов для крупных заказчиков',
+          'Successfully completed several large-scale projects for large customers',
         resultForeign:
-          'Успешно реализовал с нуля большое количество разноплановых зарубежных проектов',
+          'Has successfully implemented a large number of different foreign projects from scratch',
         resultApp:
-          'Успешно реализовал множество компонентов и разделов для крупного приложения',
-        pathLead: 'Прошел путь от рядового разработчика до тимлида',
-        pathFront: 'Вырос от верстальщика до фронтенд-разработчика',
-        internship: 'Разработал корпоративную программу стажировки',
-        mentor: 'Стал ментором и обучил несколько стажеров',
+          'Successfully implemented many components and sections for a large application',
+        pathLead: 'Passed the way from an ordinary developer to a team lead',
+        pathFront: 'Grew from junior to a middle frontend developer',
+        internship: 'Developed a corporate internship program',
+        mentor: 'Became a mentor and trained several juniors',
         mobile:
-          'Помимо веб-приложений разрабатываю мобильные приложения на {{value}}',
-        design: 'Периодически занимаюсь дизайном и прототипированием',
-        interview: 'Провел десятки собеседований',
+          'In addition to web applications, I develop mobile applications on {{value}}',
+        design: 'Periodically doing design and prototyping',
+        interview: 'Conducted dozens of interviews',
         technologies:
-          'Изучил и применил на практике множество технологий и библиотек',
-        technologiesBase: 'Хорошо прокачал {{value}}',
+          'Studied and applied in practice many technologies and libraries',
+        technologiesBase: 'Pumped the {{value}} well',
         speed:
-          'Поставил личный рекорд скорости завершения полноценного проекта - 1 день',
-        independent: 'Достиг высокого уровня автономности и организованности',
-        english: 'Прокачал английский, сотрудничая с иностранными заказчиками',
+          'Set a personal record for the speed of completion of a project - 1 day',
+        independent: 'Reached a high level of autonomy and organization',
+        english: 'Improved English, cooperating with foreign customers',
         testimonials:
-          'Получил множество лестных отзывов от коллег / заказчиков',
-        work: 'Развил навык работы в команде',
-        orders: 'Обработал тысячи заявок',
-        hardware: 'Приобрел обширный опыт работы с софтом и железом',
-        softSkills: 'Прокачал коммуникативные навыки',
+          'Received many complimentary reviews from colleagues / customers',
+        work: 'Improved teamwork skills',
+        orders: 'Processed thousands of requests',
+        hardware: 'Gained extensive experience with software and hardware',
+        softSkills: 'Improved soft skills',
       },
       feature: {
-        busyFull: 'полная занятость',
-        busyPart: 'частичная занятость',
-        remote: 'удаленно',
-        office: 'офис',
-        moscow: 'Москва, Россия',
-        auckland: 'Окленд, Новая Зеландия',
+        busyFull: 'full-time',
+        busyPart: 'part-time',
+        remote: 'remotely',
+        office: 'office',
+        moscow: 'Moscow, Russia',
+        auckland: 'Auckland, New Zealand',
       },
     },
-    subtitle: 'Этапы',
-    next: 'Вперед',
-    back: 'Назад',
-    refresh: 'Обновить',
-    continue: 'Продолжение следует',
+    subtitle: 'Steps',
+    next: 'Next',
+    back: 'Back',
+    refresh: 'Reset',
+    continue: 'To be continued ✌️',
     stepper: {
       step1:
-        'Работал <strong>инженером технической поддержки</strong> в компании "{{0}}"',
-      step2: 'Расширял кругозор в других сферах деятельности 🙂',
+        'Worked as a <strong>technical support engineer</strong> in the "{{0}}"',
+      step2: 'Expanded my horizons in other areas of activity 🙂',
       step3:
-        'Параллельно с учебой в институте создавал пет-проекты в процессе обучения веб-разработке',
+        'In parallel with my study at the university, I created pet projects in the process of learning web development',
       step4:
-        'Прошел интервью. Выполнил тестовые задания и был приглашен на работу <strong>верстальщиком</strong> в компанию "{{0}}"',
-      step5: 'Работал <strong>верстальщиком</strong> в компании "{{0}}"',
+        'Passed the interview. Completed the test tasks and I was invited to work as a <strong>junior frontend developer</strong> in the "{{0}}" company',
+      step5:
+        'Worked as a <strong>junior frontend developer</strong> in the "{{0}}"',
       step6:
-        'В результате успешной работы получил повышение до <strong>фронтенд-разработчика</strong> в компании "{{0}}"',
+        'As a result of successful work, I was promoted to a <strong>frontend developer</strong> in the "{{0}}" company',
       step7:
-        'Работал <strong>фронтенд-разработчиком</strong> в компании "{{0}}". В свободное время делал коммерческий проект для компании "{{1}}"',
+        'Worked as a <strong>frontend developer</strong> in the "{{0}}". In my spare time I did a commercial project for the "{{1}}"',
       step8:
-        ' В результате успешного завершения проекта был приглашен в компанию "{{0}}" на должность <strong>фронтенд-разработчика</strong>. Принял решение перейти из "{{1}}" в "{{2}}"',
-      step9:
-        'Работал <strong>фронтенд-разработчиком</strong> в компании "{{0}}"',
+        'As a result of the successful completion of the project, I was invited to the company "{{0}}" for the position of a <strong>front-end developer</strong>. Made a decision to move from "{{1}}" to "{{2}}"',
+      step9: 'Worked as a <strong>front-end developer</strong> in the "{{0}}"',
       step10:
-        'Договорился с "{{0}}" о продолжении сотрудничества по проектам в режиме частичной занятости. Получил несколько офферов на позицию <strong>ведущего фронтенд-разработчика</strong>, выбрал компанию "{{1}}"',
+        'Agreed with the "{{0}}" to continue working on projects in part-time mode. Received several offers for the position of a <strong>senior frontend developer</strong>, chose the "{{1}}" company',
       step11:
-        'Работал <strong>ведущим фронтенд-разработчиком</strong> в компании "{{0}}"',
+        'Worked as a <strong>senior frontend developer</strong> in the "{{0}}"',
       step12:
-        'В результате успешной реализации нескольких проектов и расширения зоны ответственности получил повышение до <strong>тимлида фронтенд-разработки</strong> в компании "{{0}}"',
+        'As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <strong>frontend team lead</strong> in the "{{0}}"',
       step13:
-        'Работаю <strong>тимлидом фронтенд-разработки</strong> в компании "{{0}}". Продолжаю сотрудничество по проектам с "{{1}}"',
+        'Working as a <strong>frontend team lead</strong> in the "{{0}}". Continue to collaborate on projects with the "{{1}}"',
     },
   },
   portfolio: {

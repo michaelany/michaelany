@@ -106,7 +106,7 @@ const jobs: JobInterface[] = [
       'pathFront',
       {
         tKey: 'technologiesBase',
-        value: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react} и ${TECHNOLOGY_TITLE.css}`,
+        value: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.css}`,
       },
       'work',
     ],
