@@ -45,6 +45,7 @@ export default function Skills(): JSX.Element {
       },
       {
         tKey: 'markup',
+        labelValue: 'Pixel Perfect',
         Icon: PaletteIcon,
       },
       {
@@ -59,7 +60,6 @@ export default function Skills(): JSX.Element {
         tKey: 'tools',
         Icon: BuildIcon,
         link: {
-          text: 'основных',
           component: (
             <Link
               component="button"
@@ -78,12 +78,12 @@ export default function Skills(): JSX.Element {
       {
         tKey: 'responsive',
         Icon: DevicesOtherIcon,
-        textValue: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.css} и ${TECHNOLOGY_TITLE.svg}`,
+        textValue: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.svg}`,
       },
       {
         tKey: 'code',
         Icon: BrushIcon,
-        textValue: `${TECHNOLOGY_TITLE.eslint} и ${TECHNOLOGY_TITLE.prettier}`,
+        textValue: `${TECHNOLOGY_TITLE.eslint}, ${TECHNOLOGY_TITLE.prettier}`,
       },
       {
         tKey: 'test',

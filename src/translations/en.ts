@@ -103,79 +103,80 @@ const EN = {
   },
   skills: {
     text:
-      'Разрабатываю приложения, лендинги, многостраничные сайты и админки. Основной стек - <strong>{{value}}</strong>',
+      'I develop applications, landing pages, multi-page sites and admin panels. My main stack is <strong>{{value}}</strong>',
     feature: {
       interface: {
-        label: 'Создаю надежные и правильно работающие интерфейсы',
+        label: 'Create reliable & well-functioning interfaces',
         text:
-          'Реализую систему всех возможных элементов интерфейса с удобным взаимодействием и продуманной бизнес-логикой. Забочусь о кроссбраузерности, безопасности и обрабатываю возможные ошибки',
+          'I implement a system of all possible interface elements with convenient interaction and well-thought-out business logic. I care about cross-browser compatibility, security and handle possible errors',
       },
       performance: {
-        label: 'Пишу современный и производительный код',
+        label: 'Write modern & productive code',
         text:
-          'Использую стандарты ES6-ES11, {{textValue}} Grid... Оптимизирую тяжелые вычисления. Избегаю лишних операций и утечек памяти. Применяю техники повышения производительности',
+          'I use ES6-ES11 standards, {{textValue}} Grid ... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
       },
       efficient: {
-        label: 'Выбираю простой и эффективный способ решения задачи',
+        label: 'Choose a simple & effective way to solve the problem',
         text:
-          'Для любой задачи стараюсь найти оптимальное и понятное решение. Понимаю в каких случаях стоит использовать тот или иной метод, паттерн, библиотеку или инструмент',
+          'For any task, I try to find an optimal and understandable solution. I understand in which cases it is necessary to use a particular method, pattern, library or tool',
       },
       markup: {
-        label: 'Верстаю семантично, доступно, кроссбраузерно и pixel-perfect',
+        label:
+          'Create semantic, accessible, cross-browser & {{labelValue}} markup',
         text:
-          'Верстаю пиксель в пиксель макеты любой сложности. Использую семантичные теги, не болею "диватозом" 🙂. Тестирую во всех браузерах, включая IE. Забочусь о доступности. Верстаю письма',
+          'I make pixel-by-pixel layouts of any complexity. I use semantic tags and don\'t suffer from "divatosis" 🙂. I test in all browsers (including IE), care about accessibility and also build HTML emails',
       },
       patterns: {
-        label: 'Имею в арсенале большое количество паттернов и приемов',
+        label: 'Use a large number of patterns & techniques',
         text:
-          'Мемоизация, виртуализация, ленивая загрузка, деструктуризация, декоратор, каррирование, делегирование, рекурсия, модуль, фабрика, наблюдатель, прокси, примесь, троттлинг, дебаунс..',
+          'Memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
       },
       modules: {
-        label: 'Создаю модульную и оптимальную архитектуру проекта',
+        label: 'Build a modular & optimal project architecture',
         text:
-          'Избегаю чрезмерной вложенности, следую принципу разделения ответственности, DRY и KISS. Каждый модуль / класс / компонент отвечает за один набор функций. Конфигурирую систему сборки проекта',
+          'I avoid over-nesting, follow the principle of separation of concerns, DRY and KISS. Each module / class / component is responsible for one functionality type. Configuring the project build system',
       },
       tools: {
-        label: 'Использую актуальные фреймворки, библиотеки и инструменты',
+        label: 'Use up-to-date frameworks, libraries, and tools',
         text:
-          'Регулярно слежу за обновлениями используемых технологий и в постоянном поиске новых. Помимо <0>{{linkText}}</0> использую большое количество вспомогательных библиотек и инструментов',
+          'I regularly follow the updates of the technologies used and in the constant search for new ones. In addition to <0>primary</0> I use a large number of auxiliary libraries and tools',
       },
       responsive: {
-        label: 'Реализую адаптивный интерфейс и анимации',
+        label: 'Implement responsive interface & animations',
         text:
-          'Применяю подходы desktop / mobile first. Тестирую интерфейс на каждом пикселе от минимальной до максимальной ширины экрана. Создаю производительные {{textValue}} анимации',
+          'I use desktop / mobile first approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{textValue}} animations',
       },
       code: {
-        label: 'Соблюдаю единый стиль написания чистого кода',
+        label: 'Follow a single style of writing clean code',
         text:
-          'Пишу самодокументируемый код в декларативном стиле. Применяю лучшие практики популярных стайлгайдов. Активно использую {{textValue}}. Читаемый код важнее быстрого',
+          'I write self-documenting and declarative code, apply the best practices of popular style guides, actively use {{textValue}}. Human-readable code is more important than the fast one',
       },
       test: {
-        label: 'Рефакторю, оптимизирую и тестирую',
+        label: 'Refactor, optimize & test',
         text:
-          'Проверяю работу проекта в различных браузерах / устройствах. Провожу рефакторинг кода. Замеряю и ускоряю загрузку ресурсов. Минифицирую и оптимизирую файлы / изображения. Пишу тесты',
+          'I check the performance of the project in various browsers / devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files / images. Writing tests',
       },
       tasks: {
-        label: 'Планирую, декомпозирую и документирую',
+        label: 'Planning, decomposing & documenting',
         text:
-          'Планирую бэклог, группирую, декомпозирую и оцениваю задачи. Применяю методологии Kanban / Scrum и GTD. Создал личную систему планирования. Использую таск-менеджеры. Пишу документацию',
+          'I plan the backlog, group, decompose, and evaluate tasks. I use Kanban / Scrum and GTD methodologies. Created a personal planning system. I use task managers. Writing documentation',
       },
       mentor: {
-        label: 'Провожу код-ревью и занимаюсь обучением',
+        label: 'Make code reviews & teaching',
         text:
-          'Занимаюсь менторством, даю обратную связь по пулл-реквестам и делюсь опытом с коллегами. Разработал корпоративную программу стажировки. Есть опыт проведения собеседований',
+          "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in interviewing",
       },
     },
     subtitle: 'Технологии',
     technologyGroup: {
-      logic: 'Логика',
-      markup: 'Разметка',
-      styles: 'Стили',
-      utils: 'Утилиты',
-      tools: 'Инструменты',
-      other: 'Другое',
+      logic: 'Logic',
+      markup: 'Markup',
+      styles: 'Styles',
+      utils: 'Utils',
+      tools: 'Tools',
+      other: 'Other',
     },
-    learn: 'Изучаю',
+    learn: 'Exploring',
   },
   experience: {
     text:
