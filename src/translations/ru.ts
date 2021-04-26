@@ -429,8 +429,12 @@ const RU = {
     screen: 'экрана проекта',
   },
   contact: {
-    text:
-      'Нужна моя <strong>помощь</strong> или есть ко мне <strong>предложение</strong>? Пишите на почту <a>{{linkText}}</a> или воспользуйтесь формой',
+    text: {
+      part1: 'Нужна моя <strong>помощь</strong>',
+      part2: 'Или есть ко мне <strong>предложение</strong>',
+      part3:
+        'Отправьте мне <strong>сообщение</strong> на <a>{{linkText}}</a> или воспользуйтесь формой',
+    },
     marker: 'Сейчас я живу здесь',
     form: {
       name: 'Имя',

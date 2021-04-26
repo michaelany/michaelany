@@ -35,7 +35,17 @@ export default function Contact(): JSX.Element {
             <h1 className="Title">{t('title.contact')}</h1>
             <p className="MainText MainText_dark">
               <Trans
-                i18nKey="contact.text"
+                i18nKey="contact.text.part1"
+                components={transComponents}
+              />
+              ?<br />
+              <Trans
+                i18nKey="contact.text.part2"
+                components={transComponents}
+              />
+              ?<br />
+              <Trans
+                i18nKey="contact.text.part3"
                 values={{linkText: email}}
                 components={transComponents}
               />

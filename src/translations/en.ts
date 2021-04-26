@@ -199,7 +199,7 @@ const EN = {
         logicModules: 'Developing the business logic of application components',
         structureApps: 'Application architecture creation',
         structureProjects: 'Creation of projects architecture',
-        responsive: 'Cross-browser and responsive markup',
+        responsive: 'Cross-browsing and responsive markup',
         rest: 'Working with REST API',
         restSocket: 'Working with REST API and WebSocket',
         refactor: 'Code refactoring and maintenance',
@@ -259,7 +259,7 @@ const EN = {
     continue: 'To be continued ✌️',
     stepper: {
       step1:
-        'Worked as a <strong>technical support engineer</strong> in the "{{0}}"',
+        'Worked as a <strong>technical support engineer</strong> in the "{{0}}" company',
       step2: 'Expanded my horizons in other areas of activity 🙂',
       step3:
         'In parallel with my study at the university, I created pet projects in the process of learning web development',
@@ -430,19 +430,23 @@ const EN = {
     screen: 'экрана проекта',
   },
   contact: {
-    text:
-      'Нужна моя <strong>помощь</strong> или есть ко мне <strong>предложение</strong>? Пишите на почту <a>{{linkText}}</a> или воспользуйтесь формой',
-    marker: 'Сейчас я живу здесь',
+    text: {
+      part1: 'Do you need my <strong>help</strong>',
+      part2: 'Or have a <strong>suggestion</strong> for me',
+      part3:
+        'Send me a <strong>message</strong> to <a>{{linkText}}</a> or use the form',
+    },
+    marker: "I'm living here now",
     form: {
-      name: 'Имя',
-      message: 'Сообщение',
-      send: 'Отправить',
+      name: 'Name',
+      message: 'Message',
+      send: 'Send',
     },
     success: {
-      thank: 'Сообщение отправлено. Спасибо',
-      sent: 'Сообщение отправлено',
-      callback: 'В ближайшее время я свяжусь с вами',
-      ok: 'Хорошо',
+      thank: 'Message sent. Thank you',
+      sent: 'Message sent',
+      callback: 'I will contact you shortly',
+      ok: 'Good',
     },
   },
   copyright: {
