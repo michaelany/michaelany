@@ -450,7 +450,6 @@ const RU = {
     crafted: 'Разработано',
     me: 'мной',
     with: 'с',
-    made: 'Сделано с {{value}}',
   },
 }
 

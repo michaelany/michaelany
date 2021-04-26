@@ -450,7 +450,6 @@ const EN = {
     crafted: 'Crafted by',
     me: 'me',
     with: 'with',
-    made: 'Сделано с {{value}}',
   },
 }
 

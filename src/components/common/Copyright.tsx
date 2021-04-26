@@ -19,11 +19,13 @@ const year: number = TODAY.getFullYear()
 
 const links = [
   {
-    name: 'react',
+    title: TECHNOLOGY_TITLE.react,
+    href: MAIN_TECHNOLOGY_LINK.react,
     Icon: ReactIcon,
   },
   {
-    name: 'mui',
+    title: TECHNOLOGY_TITLE.mui,
+    href: MAIN_TECHNOLOGY_LINK.mui,
     Icon: MuiIcon,
   },
 ]
@@ -46,12 +48,12 @@ export default function Copyright() {
         {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
       </p>
       <div className="Copyright-Links">
-        {links.map(({name, Icon}) => (
-          <Tooltip key={name} title={`${t('copyright.made')} `}>
+        {links.map(({Icon, ...link}, index) => (
+          <Tooltip key={index} title={link.title}>
             <a
               {...BLANK_LINK_PROPS}
               className="Copyright-Link"
-              href={MAIN_TECHNOLOGY_LINK[name as any]}
+              href={link.href}
             >
               <Icon />
             </a>
