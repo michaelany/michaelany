@@ -34,10 +34,10 @@ interface CompanyInterface {
 export const MY_NAME: string = 'Michael Any'
 
 export const COMPANY_TITLE: CompanyTitle = {
-  mvideo: 'M.Видео',
+  mvideo: 'M.Video',
   everpoint: 'Everpoint',
   sevenGlyphs: '7 glyphs Ltd.',
-  t1: 'T1 Консалтинг',
+  t1: 'T1 Consulting',
 }
 
 export const CONTACT_LINK: ContactLink = {
