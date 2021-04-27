@@ -5,8 +5,6 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import {EN, RU} from '../translations'
 
 i18n.on('languageChanged', (lng) => {
-  console.log(document.title)
-
   const translation = lng === 'ru' ? RU : EN
   document.documentElement.setAttribute('lang', lng)
   document.title = translation.other.meta
@@ -27,4 +25,6 @@ const options: InitOptions = {
   },
 }
 
-export default i18n.use(LanguageDetector).use(initReactI18next).init(options)
+i18n.use(LanguageDetector).use(initReactI18next).init(options)
+
+export default i18n
