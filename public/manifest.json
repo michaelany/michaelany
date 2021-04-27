@@ -1,11 +1,10 @@
 {
     "name": "Michael Any",
-    "short_name": "MA",
-    "description": "Michael's Any personal portfolio application.",
+    "short_name": "michaelany",
+    "description": "The portfolio of Michael Any, Frontend Developer.",
     "start_url": ".",
     "display": "standalone",
     "orientation": "portrait",
-    "categories": ["programming", "productivity", "design"],
     "theme_color": "#62a5fc",
     "background_color": "#62a5fc",
     "icons": [
@@ -23,7 +22,7 @@
     "screenshots" : [
         {
           "src": "/assets/preview.png",
-          "sizes": "1200x630",
+          "sizes": "1200x403",
           "type": "image/png"
         }
     ]

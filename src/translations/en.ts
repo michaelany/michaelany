@@ -162,7 +162,7 @@ const EN = {
           'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. Created a personal planning system. I use task managers. Writing documentation',
       },
       mentor: {
-        label: 'Make code reviews & teaching',
+        label: 'Make code reviews & teach',
         text:
           "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in interviewing",
       },
@@ -383,7 +383,7 @@ const EN = {
       sds: {
         text: 'Enterprise service for work with {{0}} document flow',
       },
-      0: {
+      strong: {
         text: 'Mobile fitness application website',
       },
       glyphs2: {
@@ -453,6 +453,7 @@ const EN = {
     with: 'with',
   },
   other: {
+    meta: 'Michael Any | Frontend Developer',
     more: 'Details',
   },
 }

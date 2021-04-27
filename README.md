@@ -6,30 +6,30 @@
 
 <h1 align="center">Michael Any</h1>
 
-![Banner](./public/assets/banner.png)
+![Banner](./public/assets/preview@2x.png)
 
-## Привет! 👋 &nbsp;Я - [Michael Any](website). Фронтенд-разработчик 👨‍💻
+## Hi! 👋 &nbsp;I'm [Michael Any](website), a frontend developer 👨‍💻
 
-## [Обо мне](https://michaelany.com/about)
+## [About](https://michaelany.com/about)
 
-- 👨‍💻 &nbsp;Занимаюсь фронтенд-разработкой
-- 🚀 &nbsp;Создаю красивые и удобные [проекты](https://michaelany.com/portfolio) любой сложности
-- 💡 &nbsp;Воплощаю в жизнь UI/UX идеи
-- 💼 &nbsp;[Опыт](https://michaelany.com/experience) разработки 5+ лет
-- 👨‍🏫 &nbsp;Ведущий разработчик и ментор
+- 👨‍💻 &nbsp;I'm engaged in frontend development
+- 🚀 &nbsp;I create beautiful & convenient [projects](https://michaelany.com/portfolio) of any complexity
+- 💡 &nbsp;Bringing UI/UX ideas to life
+- 💼 &nbsp;5+ years of [experience](https://michaelany.com/experience)
+- 👨‍🏫 &nbsp;Senior developer & mentor
 
 <details>
-  <summary>🔽 &nbsp;<strong>Подробнее</strong></summary>
+  <summary>🔽 &nbsp;<strong>Details</strong></summary>
 
-- 👔 &nbsp;Организованный и автономный
-- 🤓 &nbsp;Люблю программировать
-- 🌱 &nbsp;Постоянно развиваюсь
-- 📐 &nbsp;Склонный к перфекционизму
-- 🎓 &nbsp;Два высших образования
-- 🏃‍♂️ &nbsp;Занимаюсь спортом
-- ⛰ &nbsp;Путешествую
-- 👫 &nbsp;Счастливый муж
-- ☕️ &nbsp;Кофеман
+- 👔 &nbsp;Organized & standalone
+- 🤓 &nbsp;Love to code
+- 🌱 &nbsp;Constantly evolving
+- 📐 &nbsp;Prone to perfectionism
+- 🎓 &nbsp;Two higher educations
+- 🏃‍♂️ &nbsp;Sports lover
+- ⛰ &nbsp;Traveler
+- 👫 &nbsp;Happy husband
+- ☕️ &nbsp;Coffee lover
 
 </details>&nbsp;
 
@@ -40,26 +40,26 @@
 [<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />](vk)
 [<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
 
-## [Навыки](https://michaelany.com/skills)
+## [Skills](https://michaelany.com/skills)
 
-- 👾 &nbsp;Разрабатываю приложения, лендинги, многостраничные сайты и админки
-- 🛠 &nbsp;Основной стек - `TypeScript` + `React` + `Redux`
-- ✅ &nbsp;Создаю надежные и правильно работающие интерфейсы
-- 🏎 &nbsp;Пишу современный и производительный код
-- 🎨 &nbsp;Верстаю семантично, доступно, кроссбраузерно и pixel-perfect
+- 👾 &nbsp;I develop applications, landing pages, multi-page sites & admin panels
+- 🛠 &nbsp;My main stack is `TypeScript` + `React` + `Redux`
+- ✅ &nbsp;Create reliable & well-functioning interfaces
+- 🏎 &nbsp;Write modern & productive code
+- 🎨 &nbsp;Create semantic, accessible, cross-browser & Pixel Perfect markup
 
 <details>
-  <summary>🔽 &nbsp;<strong>Подробнее</strong></summary>
+  <summary>🔽 &nbsp;<strong>Details</strong></summary>
 
-- 🧠 &nbsp;Выбираю простой и эффективный способ решения задачи
-- 🧩 &nbsp;Имею в арсенале большое количество паттернов и приемов
-- 🧱 &nbsp;Создаю модульную и оптимальную архитектуру проекта
-- 🔧 &nbsp;Использую актуальные фреймворки, библиотеки и инструменты
-- 📱 &nbsp;Реализую адаптивный интерфейс и анимации
-- 🧹 &nbsp;Соблюдаю единый стиль написания чистого кода
-- 🔬 &nbsp;Рефакторю, оптимизирую и тестирую
-- 📒 &nbsp;Планирую, декомпозирую и документирую
-- 🐣 &nbsp;Провожу код-ревью и занимаюсь обучением
+- 🧠 &nbsp;Choose a simple & effective way to solve the problem
+- 🧩 &nbsp;Use a large number of patterns & techniques
+- 🧱 &nbsp;Build a modular & optimal project architecture
+- 🔧 &nbsp;Use modern frameworks, libraries, and tools
+- 📱 &nbsp;Implement responsive interface & animations
+- 🧹 &nbsp;Follow a single style of writing clean code
+- 🔬 &nbsp;Refactor, optimize & test
+- 📒 &nbsp;Planning, decomposing & documenting
+- 🐣 &nbsp;Make code reviews & teach
 
 </details>&nbsp;
 
@@ -82,9 +82,9 @@
 ![Figma](https://img.shields.io/badge/-Figma-282828?logo=figma&logoColor=f24e1e)
 ![macOS](https://img.shields.io/badge/-macOS-282828?logo=macos&logoColor=white)
 
-## [Контакты](https://michaelany.com/contact)
+## [Contact](https://michaelany.com/contact)
 
-Нужна моя помощь или есть ко мне предложение? Пишите на почту michael.any.dev@gmail.com или воспользуйтесь ссылками:
+Do you need my help? Or have a suggestion for me? Send me a mail to michael.any.dev@gmail.com or use links below:
 
 [<img src="https://img.shields.io/badge/-Michael_Any_Contact-5eb070?logo=google-chrome&logoColor=white" alt="Google Chrome" />](website)
 [<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michael.any.dev@gmail.com)
