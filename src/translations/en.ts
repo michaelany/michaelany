@@ -77,7 +77,7 @@ const EN = {
       education: {
         label: 'Two higher educations',
         text:
-          'Graduated from the "Moscow Technological University" and "Russian State University of Cinematography" {{0}}. Studying in the latter boosted my soft skills very well',
+          'Graduated from the Moscow Technological University and Russian State University of Cinematography {{0}}. Studying in the latter boosted my soft skills very well',
       },
       sport: {
         label: 'Sports lover',
@@ -259,27 +259,27 @@ const EN = {
     continue: 'To be continued ✌️',
     stepper: {
       step1:
-        'Worked as a <0>technical support engineer</0> in the "{{0}}" company',
+        'Worked as a <0>technical support engineer</0> in the {{0}} company',
       step2: 'Expanded my horizons in other areas of activity {{0}}',
       step3:
         'In parallel with my study at the university, I created pet projects in the process of learning web development',
       step4:
-        'Passed the interview. Completed the test tasks and I was invited to work as a <0>junior frontend developer</0> in the "{{0}}" company',
-      step5: 'Worked as a <0>junior frontend developer</0> in the "{{0}}"',
+        'Passed the interview. Completed the test tasks and I was invited to work as a <0>junior frontend developer</0> in the {{0}} company',
+      step5: 'Worked as a <0>junior frontend developer</0> in the {{0}}',
       step6:
-        'As a result of successful work, I was promoted to a <0>frontend developer</0> in the "{{0}}" company',
+        'As a result of successful work, I was promoted to a <0>frontend developer</0> in the {{0}} company',
       step7:
-        'Worked as a <0>frontend developer</0> in the "{{0}}". In my spare time I did a commercial project for the "{{1}}" company',
+        'Worked as a <0>frontend developer</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company',
       step8:
-        'As a result of the successful completion of the project, I was invited to the company "{{0}}" for the position of a <0>front-end developer</0>. Made a decision to move from "{{1}}" to "{{2}}"',
-      step9: 'Worked as a <0>front-end developer</0> in the "{{0}}"',
+        'As a result of the successful completion of the project, I was invited to the company {{0}} for the position of a <0>front-end developer</0>. Made a decision to move from {{1}} to {{2}}',
+      step9: 'Worked as a <0>front-end developer</0> in the {{0}}',
       step10:
-        'Agreed with the "{{0}}" to continue working on projects in part-time mode. Received several offers for the position of a <0>senior frontend developer</0>, chose the "{{1}}" company',
-      step11: 'Worked as a <0>senior frontend developer</0> in the "{{0}}"',
+        'Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>senior frontend developer</0>, chose the {{1}} company',
+      step11: 'Worked as a <0>senior frontend developer</0> in the {{0}}',
       step12:
-        'As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <0>frontend team lead</0> in the "{{0}}" company',
+        'As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <0>frontend team lead</0> in the {{0}} company',
       step13:
-        'Working as a <0>frontend team lead</0> in the "{{0}}". Continue to collaborate on projects with the "{{1}}"',
+        'Working as a <0>frontend team lead</0> in the {{0}}. Continue to collaborate on projects with the {{1}}',
     },
   },
   portfolio: {
@@ -354,7 +354,7 @@ const EN = {
       },
       uls: {
         title: 'United Login System',
-        text: '"{{0}}" single user account',
+        text: '{{0}} single user account',
       },
       proximal: {
         text: 'Landing page for an Australian coffee shop',
@@ -381,7 +381,7 @@ const EN = {
           'Landing page of a New Zealand service for ordering discount food in restaurants',
       },
       sds: {
-        text: 'Enterprise service for work with "{{0}}" document flow',
+        text: 'Enterprise service for work with {{0}} document flow',
       },
       0: {
         text: 'Mobile fitness application website',
@@ -397,7 +397,7 @@ const EN = {
       },
       services: {
         text:
-          '"{{0}}" New Zealand digital agency service description landing page',
+          '{{0}} New Zealand digital agency service description landing page',
       },
       fcdc: {
         text: 'Event management service admin panel',

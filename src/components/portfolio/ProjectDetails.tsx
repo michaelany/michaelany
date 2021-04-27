@@ -95,8 +95,8 @@ export default function ProjectDetails({
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {t(`${projectKey}.text`, textValues)}. {t('portfolio.developed')} "
-        {company.title}"
+        {t(`${projectKey}.text`, textValues)}. {t('portfolio.developed')}{' '}
+        {company.title}
       </p>
       <Features items={featureItems} />
       {href && (
