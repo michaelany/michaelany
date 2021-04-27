@@ -1,7 +1,4 @@
-const EN = {
-  common: {
-    more: 'Details',
-  },
+const common = {
   title: {
     home: 'Home',
     about: 'About',
@@ -11,6 +8,13 @@ const EN = {
     contact: 'Contact',
     language: 'English',
   },
+  portfolio: {
+    scratchDevelopment: 'Frontend development from scratch',
+  },
+}
+
+const EN = {
+  title: common.title,
   month: {
     september: 'september',
     october: 'october',
@@ -36,22 +40,19 @@ const EN = {
   },
   about: {
     text:
-      "I'm engaged in <strong>frontend development</strong>. I create beautiful and convenient projects of any complexity, bringing {{value}} ideas to life",
+      "I'm engaged in <0>frontend development</0>. I create beautiful & convenient projects of any complexity, bringing {{0}} ideas to life",
     feature: {
       projects: {
         label: 'Developed many projects',
-        text:
-          'I have about {{textValue}} foreign and domestic commercial projects in my track record - from landing pages to large web applications. Some of them are presented in the <0>{{linkText}}</0>',
-      },
-      experience: {
-        label: '{{labelValue}}+ years of experience',
-        text:
-          'Made my first website at the age of 13. I went from a junior coder to a frontend team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More details on the page <0>{{linkText}}</0>',
+        text: `I have about {{0}} foreign and domestic commercial projects in my track record - from landing pages to large web applications. Some of them are presented in the <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Senior developer & mentor',
-        text:
-          'I develop projects from scratch, create layout, write business logic, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. For more information, go to <0>{{linkText}}</0>',
+        text: `I develop projects from scratch, create layout, write business logic, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. For more information, go to <0>${common.title.skills}</0>`,
+      },
+      experience: {
+        label: '{{0}}+ years of experience',
+        text: `Made my first website at the age of {{0}}. I went from a junior coder to a frontend team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More details on the page <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -61,7 +62,7 @@ const EN = {
       programming: {
         label: 'Love to code',
         text:
-          'Frontend is my main hobby. I like to experiment with {{textValue}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
+          'Frontend is my main hobby. I like to experiment with {{0}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
       },
       growing: {
         label: 'Constantly evolving',
@@ -76,34 +77,34 @@ const EN = {
       education: {
         label: 'Two higher educations',
         text:
-          'Graduated from the "Moscow Technological University" and "Russian State University of Cinematography" 🙂. Studying in the latter boosted my soft skills very well',
+          'Graduated from the "Moscow Technological University" and "Russian State University of Cinematography" {{0}}. Studying in the latter boosted my soft skills very well',
       },
       sport: {
-        label: 'Playing sports',
+        label: 'Sports lover',
         text:
-          'Physical activity is especially relevant for the developer. Every day I try to devote time to sports (calisthenics, cycling, running, fitness). I discovered standup paddleboarding this summer',
+          'Physical activity is especially relevant for the developer. Every day I try to devote time to sports (calisthenics, cycling, running, hiking). I discovered standup paddleboarding this summer',
       },
       travel: {
-        label: 'Traveling',
+        label: 'Traveler',
         text:
-          'Visited over 15 countries. Love Japan and New Zealand. I was in Hobbiton, climbed the top of Fujiyama and survived after meeting with the Ural bear on the Dyatlov Pass 🙂',
+          'Visited over {{0}} countries. Love Japan and New Zealand. I was in Hobbiton, climbed the top of Fujiyama and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
       },
       love: {
         label: 'Happy husband',
         text:
-          "<0>She</0> is my main source of inspiration and best friend. We've been together for over {{textValue}} years. By the way, I once developed a progressive web application to offer her a hand and heart 🙂",
+          "<0>She</0> is my main source of inspiration and best friend. We've been together for over {{0}} years. By the way, I once developed a progressive web application to offer her a hand and heart {{1}}",
       },
       coffee: {
         label: 'Coffee lover',
         text:
-          'It\'s known that "programmer - an organism that turns coffee into code" 🙂. I start my working day with a cup of aromatic coffee. Also, after a trip to Japan, I fell in love with matcha tea',
+          'It\'s known that "programmer - an organism that turns coffee into code" {{0}}. I start my working day with a cup of aromatic coffee. Also, after a trip to Japan, I fell in love with matcha tea',
       },
     },
-    subtitle: 'Аватар и социальные сети',
+    subtitle: 'Avatar and social',
   },
   skills: {
     text:
-      'I develop applications, landing pages, multi-page sites and admin panels. My main stack is <strong>{{value}}</strong>',
+      'I develop applications, landing pages, multi-page sites & admin panels. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
@@ -113,7 +114,7 @@ const EN = {
       performance: {
         label: 'Write modern & productive code',
         text:
-          'I use ES6-ES11 standards, {{textValue}} Grid ... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
+          'I use {{0}} standards, {{1}} , {{2}}, {{3}}... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
       },
       efficient: {
         label: 'Choose a simple & effective way to solve the problem',
@@ -121,10 +122,9 @@ const EN = {
           'For any task, I try to find an optimal and understandable solution. I understand in which cases it is necessary to use a particular method, pattern, library or tool',
       },
       markup: {
-        label:
-          'Create semantic, accessible, cross-browser & {{labelValue}} markup',
+        label: 'Create semantic, accessible, cross-browser & {{0}} markup',
         text:
-          'I make pixel-by-pixel layouts of any complexity. I use semantic tags and don\'t suffer from "divatosis" 🙂. I test in all browsers (including IE), care about accessibility and also build HTML emails',
+          'I make pixel-by-pixel layouts of any complexity. I use semantic tags and don\'t suffer from "divatosis" {{0}}. I test in all browsers (including {{1}}), care about accessibility and also build HTML emails',
       },
       patterns: {
         label: 'Use a large number of patterns & techniques',
@@ -134,7 +134,7 @@ const EN = {
       modules: {
         label: 'Build a modular & optimal project architecture',
         text:
-          'I avoid over-nesting, follow the principle of separation of concerns, DRY and KISS. Each module / class / component is responsible for one functionality type. Configuring the project build system',
+          'I avoid over-nesting, follow the principle of separation of concerns, {{0}} and {{1}}. Each module / class / component is responsible for one functionality type. Configuring the project build system',
       },
       tools: {
         label: 'Use modern frameworks, libraries, and tools',
@@ -144,12 +144,12 @@ const EN = {
       responsive: {
         label: 'Implement responsive interface & animations',
         text:
-          'I use desktop / mobile first approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{textValue}} animations',
+          'I use {{0}} approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{1}}, {{2}} and {{3}} animations',
       },
       code: {
         label: 'Follow a single style of writing clean code',
         text:
-          'I write self-documenting and declarative code, apply the best practices of popular style guides, actively use {{textValue}}. Human-readable code is more important than the fast one',
+          'I write self-documenting and declarative code, apply the best practices of popular style guides, actively use {{0}} and {{1}}. Human-readable code is more important than the fast one',
       },
       test: {
         label: 'Refactor, optimize & test',
@@ -159,7 +159,7 @@ const EN = {
       tasks: {
         label: 'Planning, decomposing & documenting',
         text:
-          'I plan the backlog, group, decompose, and evaluate tasks. I use Kanban / Scrum and GTD methodologies. Created a personal planning system. I use task managers. Writing documentation',
+          'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. Created a personal planning system. I use task managers. Writing documentation',
       },
       mentor: {
         label: 'Make code reviews & teaching',
@@ -167,7 +167,7 @@ const EN = {
           "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in interviewing",
       },
     },
-    subtitle: 'Технологии',
+    subtitle: 'Technologies',
     technologyGroup: {
       logic: 'Logic',
       markup: 'Markup',
@@ -180,7 +180,7 @@ const EN = {
   },
   experience: {
     text:
-      "I've been professionally engaged in frontend development for more than {{value}} years. <strong>Senior developer</strong> and <strong>team lead</strong>. Working remotely",
+      "I've been professionally engaged in frontend development for more than {{0}} years. <0>Senior developer</0> & <0>team lead</0>. Working remotely",
     duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
@@ -200,8 +200,8 @@ const EN = {
         structureApps: 'Application architecture creation',
         structureProjects: 'Creation of projects architecture',
         responsive: 'Cross-browsing and responsive markup',
-        rest: 'Working with REST API',
-        restSocket: 'Working with REST API and WebSocket',
+        rest: 'Working with {{0}}',
+        restSocket: 'Working with {{0}} and {{1}}',
         refactor: 'Code refactoring and maintenance',
         scratch: 'Developing projects from scratch',
         support: 'Projects support',
@@ -209,7 +209,7 @@ const EN = {
         tasksTeam: 'Planning, decomposing and evaluating team tasks',
         manage: 'Team management and development',
         review: 'Making code reviews and interviews',
-        serviceDesk: 'Registration and processing of requests in Service Desk',
+        serviceDesk: 'Registration and processing of requests in {{0}}',
         hardwareFix: 'Solving software and hardware issues',
         hardwareInstall: 'Installing, configuring software and hardware',
         consult: 'Advising employees on technical issues',
@@ -226,14 +226,14 @@ const EN = {
         internship: 'Developed a corporate internship program',
         mentor: 'Became a mentor and trained several juniors',
         mobile:
-          'In addition to web applications, I develop mobile applications on {{value}}',
+          'In addition to web applications, I develop mobile applications on {{0}}',
         design: 'Periodically doing design and prototyping',
         interview: 'Conducted dozens of interviews',
         technologies:
           'Studied and applied in practice many technologies and libraries',
-        technologiesBase: 'Pumped the {{value}} well',
+        technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}} very well',
         speed:
-          'Set a personal record for the speed of completion of a project - 1 day',
+          'Set a personal record for the speed of completion of a project - {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
         english: 'Improved English, cooperating with foreign customers',
         testimonials:
@@ -259,182 +259,180 @@ const EN = {
     continue: 'To be continued ✌️',
     stepper: {
       step1:
-        'Worked as a <strong>technical support engineer</strong> in the "{{0}}" company',
-      step2: 'Expanded my horizons in other areas of activity 🙂',
+        'Worked as a <0>technical support engineer</0> in the "{{0}}" company',
+      step2: 'Expanded my horizons in other areas of activity {{0}}',
       step3:
         'In parallel with my study at the university, I created pet projects in the process of learning web development',
       step4:
-        'Passed the interview. Completed the test tasks and I was invited to work as a <strong>junior frontend developer</strong> in the "{{0}}" company',
-      step5:
-        'Worked as a <strong>junior frontend developer</strong> in the "{{0}}"',
+        'Passed the interview. Completed the test tasks and I was invited to work as a <0>junior frontend developer</0> in the "{{0}}" company',
+      step5: 'Worked as a <0>junior frontend developer</0> in the "{{0}}"',
       step6:
-        'As a result of successful work, I was promoted to a <strong>frontend developer</strong> in the "{{0}}" company',
+        'As a result of successful work, I was promoted to a <0>frontend developer</0> in the "{{0}}" company',
       step7:
-        'Worked as a <strong>frontend developer</strong> in the "{{0}}". In my spare time I did a commercial project for the "{{1}}"',
+        'Worked as a <0>frontend developer</0> in the "{{0}}". In my spare time I did a commercial project for the "{{1}}" company',
       step8:
-        'As a result of the successful completion of the project, I was invited to the company "{{0}}" for the position of a <strong>front-end developer</strong>. Made a decision to move from "{{1}}" to "{{2}}"',
-      step9: 'Worked as a <strong>front-end developer</strong> in the "{{0}}"',
+        'As a result of the successful completion of the project, I was invited to the company "{{0}}" for the position of a <0>front-end developer</0>. Made a decision to move from "{{1}}" to "{{2}}"',
+      step9: 'Worked as a <0>front-end developer</0> in the "{{0}}"',
       step10:
-        'Agreed with the "{{0}}" to continue working on projects in part-time mode. Received several offers for the position of a <strong>senior frontend developer</strong>, chose the "{{1}}" company',
-      step11:
-        'Worked as a <strong>senior frontend developer</strong> in the "{{0}}"',
+        'Agreed with the "{{0}}" to continue working on projects in part-time mode. Received several offers for the position of a <0>senior frontend developer</0>, chose the "{{1}}" company',
+      step11: 'Worked as a <0>senior frontend developer</0> in the "{{0}}"',
       step12:
-        'As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <strong>frontend team lead</strong> in the "{{0}}"',
+        'As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <0>frontend team lead</0> in the "{{0}}" company',
       step13:
-        'Working as a <strong>frontend team lead</strong> in the "{{0}}". Continue to collaborate on projects with the "{{1}}"',
+        'Working as a <0>frontend team lead</0> in the "{{0}}". Continue to collaborate on projects with the "{{1}}"',
     },
   },
   portfolio: {
-    developed: 'Разработано в',
+    developed: 'Developed in',
     filter: {
-      all: 'Все',
-      app: 'Приложение',
-      site: 'Сайт',
-      landing: 'Лендинг',
-      admin: 'Админка',
+      all: 'All',
+      app: 'Application',
+      site: 'Website',
+      landing: 'Landing page',
+      admin: 'Admin panel',
     },
     feature: {
-      wholeDevelopment:
-        'Фронтенд-разработка с нуля, развитие, поддержка проекта',
-      scratchGrowthDevelopment: 'Фронтенд-разработка с нуля, поддержка проекта',
-      scratchDevelopment: 'Фронтенд-разработка с нуля',
-      growthSupportDevelopment: 'Развитие, поддержка проекта',
-      markupBusinessLogic: 'Верстка и разработка части бизнес-логики',
-      jqueryReact: 'Переписывание кодовой базы с {{0}} на {{1}}',
-      leadWork: 'Тимлид команды фронтенд-разработки',
-      teamWork: 'Член команды фронтенд-разработки',
-      soloWork: 'Самостоятельная фронтенд-разработка',
-      responsive: 'адаптивный интерфейс',
-      emails: 'верстка писем',
-      design: 'прототипирование и дизайн',
-      animations: 'Анимации',
-      businessLogic: 'Обширная бизнес-логика',
-      pwa: 'прогрессивное веб-приложение',
-      firstProject: 'Первый коммерческий проект',
-      firstScratchProject: 'Первый коммерческий проект, написанный с нуля',
-      spa: 'Превратил сайт в одностраничное приложение',
-      tryTwo: `Поработал с {{0}}, и {{1}}`,
-      tryThree: `Поработал с {{0}}, {{1}} и {{2}}`,
-      tryOneGraph: `Поработал с {{0}} и графиками`,
-      sellHouse: 'Дом успешно продан',
-      formsTables: 'Много форм и таблиц',
-      darkTheme: 'Темная тема',
-      dynamicFormsRouting: 'Динамические формы, собственный роутинг',
+      wholeDevelopment: `${common.portfolio.scratchDevelopment}, project progress and support`,
+      scratchGrowthDevelopment: `${common.portfolio.scratchDevelopment}, project support`,
+      scratchDevelopment: common.portfolio.scratchDevelopment,
+      growthSupportDevelopment: 'Project progress and support',
+      markupBusinessLogic: 'Markup and development of a part of business logic',
+      jqueryReact: 'Rewriting the codebase from {{0}} to {{1}}',
+      leadWork: 'Frontend development team lead',
+      teamWork: 'Frontend development team member',
+      soloWork: 'Standalone frontend development',
+      responsive: 'Responsive interface',
+      emails: 'email markup',
+      design: 'prototyping and design',
+      animations: 'Animations',
+      businessLogic: 'Extensive business logic',
+      pwa: 'Progressive Web Application',
+      firstProject: 'First commercial project',
+      firstScratchProject:
+        'The first commercial project developed from scratch',
+      spa: 'Turned the site into a Single Page Application',
+      tryTwo: `Worked with {{0}}, and {{1}}`,
+      tryThree: `Worked with {{0}}, {{1}} and {{2}}`,
+      tryOneGraph: `Worked with {{0}} and charts`,
+      sellHouse: 'House sold successfully',
+      formsTables: 'Many forms and tables',
+      darkTheme: 'Dark theme',
+      dynamicFormsRouting: 'Dynamic forms, own routing',
     },
     project: {
       ninjal: {
-        text: 'Лендинг новозеландского сервиса найма водителей грузовиков',
+        text: 'Landing page for a New Zealand truck drivers hire service',
       },
       ninja: {
-        text: 'Новозеландский сервис найма водителей грузовиков',
+        text: 'New Zealand truck drivers hire service',
       },
       celebration: {
         text:
-          'Новогоднее мини-приложение для поздравления сотрудников компании',
+          "New Year's mini-application for congratulating company employees",
       },
       ally: {
         text:
-          'Лендинг мобильного приложения для интерактивных фигурок {{textValue}}',
+          'Landing page for a mobile application for interactive figures {{0}}',
       },
       presentmel: {
-        text: 'Лендинг новозеландского сервиса создания профиля соискателя',
+        text:
+          'Landing page for a New Zealand jobseeker profile creation service',
       },
       presentmep: {
-        text: 'Админка новозеландского сервиса создания профиля соискателя',
+        text:
+          'Admin panel of the New Zealand service for creating a job seeker profile',
       },
       presentme: {
-        text: 'Новозеландский сервис создания профиля соискателя',
+        text: 'New Zealand service for creating a job seeker profile',
       },
       dropdrone: {
-        text: 'Лендинг новозеландского сельскохозяйственного стартапа',
+        text: 'Landing page of a New Zealand agricultural startup',
       },
       hatched: {
-        text: 'Лендинг мобильного приложения-трекера для новорожденных малышей',
+        text:
+          'Landing page for a mobile application tracker for newborn babies',
       },
       uls: {
-        title: 'Единый Кабинет Пользователя',
-        text: 'Единый кабинет пользователей компании "{{textValue}}"',
+        title: 'United Login System',
+        text: '"{{0}}" single user account',
       },
       proximal: {
-        text: 'Лендинг австралийской кофейни',
+        text: 'Landing page for an Australian coffee shop',
       },
       embp: {
-        title: 'АРМА ЕМБП',
-        text: 'Админка биометрической платформы для банка "ВТБ"',
+        title: 'EMBP',
+        text: 'Admin panel of the biometric platform for VTB Bank',
       },
       tmf: {
-        text: 'Сайт новозеландской строительной компании',
+        text: 'New Zealand construction company website',
       },
       lite: {
-        text: 'Лендинг сервиса новозеландского диджитал-агентства',
+        text: 'Landing page for a New Zealand digital agency service',
       },
       melissa: {
-        text: 'Лендинг фитнес-блогера',
+        text: 'Fitness blogger landing page',
       },
       foodp: {
         text:
-          'Портал новозеландского сервиса заказа дисконтной еды в ресторанах',
+          'Portal of the New Zealand discount food ordering service in restaurants',
       },
       food: {
         text:
-          'Лендинг новозеландского сервиса заказа дисконтной еды в ресторанах',
+          'Landing page of a New Zealand service for ordering discount food in restaurants',
       },
       sds: {
-        text:
-          'Корпоративный сервис для работы с документооборотом компании "{{textValue}}"',
+        text: 'Enterprise service for work with "{{0}}" document flow',
       },
-      strong: {
-        text: 'Сайт мобильного фитнес-приложения',
+      0: {
+        text: 'Mobile fitness application website',
       },
       glyphs2: {
-        text: 'Домашний сайт новозеландского диджитал-агентства',
+        text: 'Home website of a New Zealand digital agency',
       },
       rogue: {
-        text:
-          'Новозеландский сервис группового бронирования авиабилетов и отелей',
+        text: 'New Zealand flight and hotel group booking service',
       },
       trucks: {
-        text: 'Новозеландский сервис мониторинга передвижения грузовиков',
+        text: 'New Zealand truck traffic monitoring service',
       },
       services: {
         text:
-          'Лендинг описания услуг новозеландского диджитал-агентства "{{textValue}}"',
+          '"{{0}}" New Zealand digital agency service description landing page',
       },
       fcdc: {
-        text: 'Админка сервиса управления мероприятиями',
+        text: 'Event management service admin panel',
       },
       saffron: {
-        text: 'Целевая страница для продажи частного дома в Новой Зеландии',
+        text: 'Landing page for sale of a private home in New Zealand',
       },
       whip: {
-        text: 'Новозеландский сервис техосмотра автомобилей',
+        text: 'New Zealand vehicle inspection service',
       },
       lazyazd: {
-        text: 'Админка новозеландского сервиса доставки товаров',
+        text: 'Admin panel of a New Zealand delivery service',
       },
       lazyaz: {
-        text: 'Веб-платформа новозеландского сервиса доставки товаров',
+        text: 'Web platform for a New Zealand delivery service',
       },
       glyphs: {
-        text: 'Домашний сайт новозеландского диджитал-агентства',
+        text: 'Home site of a New Zealand digital agency',
       },
       msp: {
-        title: 'Бизнес-навигатор МСП',
+        title: 'Business navigator MSP',
         text:
-          'Ресурс для предпринимателей, которые хотят открыть или расширить свой бизнес',
+          'Service for entrepreneurs who want to open or expand their business',
       },
     },
-    subtitle: 'Скриншоты',
-    screenshot: 'Скриншот',
-    mobile: 'мобильного',
-    screen: 'экрана проекта',
+    subtitle: 'Screenshots',
+    screenshot: 'Screenshot',
+    mobile: 'mobile',
+    screen: 'project screen',
   },
   contact: {
     text: {
-      part1: 'Do you need my <strong>help</strong>',
-      part2: 'Or have a <strong>suggestion</strong> for me',
-      part3:
-        'Send me a <strong>message</strong> to <a>{{linkText}}</a> or use the form',
+      part1: 'Do you need my <0>help</0>',
+      part2: 'Or have a <0>suggestion</0> for me',
+      part3: 'Send me a <0>message</0> to <1>{{0}}</1> or use the form',
     },
     marker: "I'm living here now",
     form: {
@@ -453,6 +451,9 @@ const EN = {
     crafted: 'Crafted by',
     me: 'me',
     with: 'with',
+  },
+  other: {
+    more: 'Details',
   },
 }
 

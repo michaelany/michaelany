@@ -1,7 +1,6 @@
 import {useTranslation, Trans} from 'react-i18next'
 import {
   ScheduleRounded as ScheduleIcon,
-  ExploreRounded as ExploreIcon,
   MyLocationRounded as MyLocationIcon,
   DateRangeRounded as DateRangeIcon,
   RoomRounded as RoomIcon,
@@ -11,7 +10,7 @@ import './Work.scss'
 import {Animate} from '../common'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
-import {COMPANY, TECHNOLOGY_TITLE} from '../../data/common'
+import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '../../data/common'
 import {YEARS_OF_EXPERIENCE, CAREER_START_PARTS} from '../../utils/constants'
 
 const jobs: JobInterface[] = [
@@ -23,7 +22,7 @@ const jobs: JobInterface[] = [
       'logicApps',
       'structureApps',
       'responsive',
-      'rest',
+      {tKey: 'rest', values: [FEATURE.rest]},
       'refactor',
       'scratch',
       'support',
@@ -38,7 +37,7 @@ const jobs: JobInterface[] = [
       'mentor',
       {
         tKey: 'mobile',
-        value: TECHNOLOGY_TITLE.reactnative,
+        values: [TECHNOLOGY_TITLE.reactnative],
       },
       'design',
       'interview',
@@ -67,7 +66,7 @@ const jobs: JobInterface[] = [
       'logicAppsSites',
       'structureProjects',
       'responsive',
-      'restSocket',
+      {tKey: 'restSocket', values: [FEATURE.rest, FEATURE.socket]},
       'refactor',
       'scratch',
       'support',
@@ -76,7 +75,7 @@ const jobs: JobInterface[] = [
     achievements: [
       'resultForeign',
       'technologies',
-      'speed',
+      {tKey: 'speed', values: [1]},
       'independent',
       'english',
       'testimonials',
@@ -100,13 +99,23 @@ const jobs: JobInterface[] = [
   {
     company: COMPANY.everpoint,
     occupations: ['middle', 'junior'],
-    duties: ['logicModules', 'responsive', 'rest', 'refactor', 'tasks'],
+    duties: [
+      'logicModules',
+      'responsive',
+      {tKey: 'rest', values: [FEATURE.rest]},
+      'refactor',
+      'tasks',
+    ],
     achievements: [
       'resultApp',
       'pathFront',
       {
         tKey: 'technologiesBase',
-        value: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.css}`,
+        values: [
+          TECHNOLOGY_TITLE.js,
+          TECHNOLOGY_TITLE.react,
+          TECHNOLOGY_TITLE.css,
+        ],
       },
       'work',
     ],
@@ -132,7 +141,12 @@ const jobs: JobInterface[] = [
   {
     company: COMPANY.mvideo,
     occupations: ['support'],
-    duties: ['serviceDesk', 'hardwareFix', 'hardwareInstall', 'consult'],
+    duties: [
+      {tKey: 'serviceDesk', values: ['Service Desk']},
+      'hardwareFix',
+      'hardwareInstall',
+      'consult',
+    ],
     achievements: ['orders', 'hardware', 'softSkills'],
     features: [
       {
@@ -158,7 +172,7 @@ const jobs: JobInterface[] = [
   },
 ]
 
-const transComponents = {strong: <strong />}
+const transComponents: JSX.Element[] = [<strong />]
 
 export default function Work(): JSX.Element {
   const {t} = useTranslation()
@@ -169,7 +183,7 @@ export default function Work(): JSX.Element {
       <p className="MainText">
         <Trans
           i18nKey={`experience.text`}
-          values={{value: YEARS_OF_EXPERIENCE}}
+          values={[YEARS_OF_EXPERIENCE]}
           components={transComponents}
         />
       </p>

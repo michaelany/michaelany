@@ -75,8 +75,8 @@ export interface Map<T> {
 export interface TKeyObject {
   tKey?: string
   tKeys?: string[]
-  value?: string | number
-  values?: string[]
+  values?: (string | number)[]
+  text?: string | number
 }
 
 export interface SocialLink {
@@ -91,13 +91,9 @@ export interface Feature {
   label?: string
   time?: boolean
   tKey?: TKey
-  labelValue?: string | number
-  textValue?: string | number
-  link?: {
-    tKey?: string
-    text?: string
-    component: ReactNode
-  }
+  textValues?: (string | number)[]
+  labelValues?: (string | number)[]
+  Link?: ReactNode
 }
 
 export interface Technology {
@@ -149,7 +145,7 @@ export interface Job {
 export interface Project {
   name: ProjectName
   title?: string
-  textValue?: string
+  textValues?: (string | number)[]
   types: ProjectType[]
   companyName: CompanyName
   href?: string

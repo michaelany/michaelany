@@ -17,11 +17,11 @@ const links: SocialLink[] = [
 
 const email: string = 'michael.any.dev@gmail.com'
 
-const transComponents = {
-  strong: <strong />,
+const transComponents = [
+  <strong />,
   // eslint-disable-next-line
-  a: <a {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
-}
+  <a {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
+]
 
 export default function Contact(): JSX.Element {
   const {t} = useTranslation()
@@ -46,7 +46,7 @@ export default function Contact(): JSX.Element {
               ?<br />
               <Trans
                 i18nKey="contact.text.part3"
-                values={{linkText: email}}
+                values={[email]}
                 components={transComponents}
               />
               :

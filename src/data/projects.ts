@@ -1,13 +1,5 @@
-import {COMPANY, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
+import {COMPANY, FEATURE, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
-
-const feature = {
-  rest: 'REST API',
-  stripe: 'Stripe',
-  keycloak: 'Keycloak',
-  docker: 'Docker',
-  socket: 'WebSocket',
-}
 
 const PROJECTS: Project[] = [
   {
@@ -25,7 +17,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -33,7 +25,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'april',
-        value: 2021,
+        text: 2021,
       },
     ],
     images: {
@@ -100,15 +92,15 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        value: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${feature.rest}, ${feature.socket}, ${TECHNOLOGY_TITLE.webpack}, ${feature.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
       {
         tKey: 'businessLogic',
       },
       {
         tKey: 'april',
-        value: 2021,
+        text: 2021,
       },
     ],
     images: {
@@ -147,7 +139,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -155,7 +147,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'december',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -203,7 +195,7 @@ const PROJECTS: Project[] = [
   {
     name: 'ally',
     title: 'Ally',
-    textValue: 'Nintendo Amiibo',
+    textValues: ['Nintendo Amiibo'],
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/portfolio/projects/ally',
@@ -217,7 +209,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -225,7 +217,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'october',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -275,7 +267,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -283,7 +275,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'september',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -353,13 +345,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'businessLogic',
       },
       {
         tKey: 'august',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -400,15 +392,15 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
       {
         tKey: 'dynamicFormsRouting',
       },
       {
         tKey: 'august',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -485,7 +477,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -493,7 +485,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'june',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -562,7 +554,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -570,7 +562,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'may',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -620,7 +612,7 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'uls',
-    textValue: 'Vaillant Group',
+    textValues: ['Vaillant Group'],
     types: ['app'],
     companyName: 't1',
     features: [
@@ -633,16 +625,16 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
       },
-      `${TECHNOLOGY_TITLE.webpack}, ${feature.rest}, ${feature.keycloak}, ${feature.docker}`,
+      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${FEATURE.keycloak}, ${FEATURE.docker}`,
       {
         tKey: 'tryTwo',
-        values: [feature.keycloak, feature.docker],
+        values: [FEATURE.keycloak, FEATURE.docker],
       },
       {
         tKey: 'february',
-        value: 2020,
+        text: 2020,
       },
     ],
     images: {
@@ -692,7 +684,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -700,7 +692,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'december',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -754,13 +746,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
       {
         tKey: 'darkTheme',
       },
       {
         tKey: 'july',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -804,7 +796,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.photoshop}`,
       {
@@ -812,7 +804,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'october',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -878,7 +870,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -886,7 +878,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'september',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -944,15 +936,15 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'animations',
       },
       {
         tKey: 'september',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -1005,13 +997,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'businessLogic',
       },
       {
         tKey: 'june',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -1055,14 +1047,14 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       {
         tKey: 'animations',
       },
       {
         tKey: 'june',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -1107,7 +1099,7 @@ const PROJECTS: Project[] = [
   {
     name: 'sds',
     title: 'Sales Digital System',
-    textValue: 'Vaillant Group',
+    textValues: ['Vaillant Group'],
     types: ['app'],
     companyName: 't1',
     features: [
@@ -1119,13 +1111,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${feature.rest}, Keycloak, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${FEATURE.keycloak}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
       },
       {
         tKey: 'april',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -1165,15 +1157,15 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${feature.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
       {
         tKey: 'animations',
       },
       {
         tKey: 'february',
-        value: 2019,
+        text: 2019,
       },
     ],
     images: {
@@ -1241,15 +1233,15 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'animations',
       },
       {
         tKey: 'january',
-        value: 2018,
+        text: 2018,
       },
     ],
     images: {
@@ -1321,13 +1313,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${feature.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
       },
       {
         tKey: 'november',
-        value: 2018,
+        text: 2018,
       },
     ],
     images: {
@@ -1362,14 +1354,14 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.mobx}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'tryOneGraph',
         values: [TECHNOLOGY_TITLE.mobx],
       },
       {
         tKey: 'may',
-        value: 2018,
+        text: 2018,
       },
     ],
     images: {
@@ -1393,7 +1385,7 @@ const PROJECTS: Project[] = [
   {
     name: 'services',
     title: 'Service Packages',
-    textValue: COMPANY_TITLE.sevenGlyphs,
+    textValues: [COMPANY_TITLE.sevenGlyphs],
     types: ['landing'],
     companyName: 'sevenGlyphs',
     href: 'https://7glyphs.com/approach/packages',
@@ -1407,7 +1399,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
@@ -1415,7 +1407,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'february',
-        value: 2018,
+        text: 2018,
       },
     ],
     images: {
@@ -1469,13 +1461,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
       {
         tKey: 'formsTables',
       },
       {
         tKey: 'january',
-        value: 2018,
+        text: 2018,
       },
     ],
     images: {
@@ -1511,7 +1503,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
@@ -1519,7 +1511,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'august',
-        value: 2017,
+        text: 2017,
       },
     ],
     images: {
@@ -1573,9 +1565,9 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.blade}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.laravel}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.laravel}`,
       {
         tKey: 'tryThree',
         values: [
@@ -1586,7 +1578,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'september',
-        value: 2017,
+        text: 2017,
       },
     ],
     images: {
@@ -1620,9 +1612,9 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.blade}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.laravel}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.laravel}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'tryThree',
         values: [
@@ -1633,7 +1625,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'may',
-        value: 2017,
+        text: 2017,
       },
     ],
     images: {
@@ -1667,15 +1659,15 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${feature.rest}, ${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'firstScratchProject',
       },
       {
         tKey: 'march',
-        value: 2017,
+        text: 2017,
       },
     ],
     images: {
@@ -1726,7 +1718,7 @@ const PROJECTS: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        value: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}`,
       {
@@ -1734,7 +1726,7 @@ const PROJECTS: Project[] = [
       },
       {
         tKey: 'january',
-        value: 2017,
+        text: 2017,
       },
     ],
     images: {
@@ -1783,13 +1775,13 @@ const PROJECTS: Project[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.handlebars}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.semantic}`,
-      `${feature.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
       {
         tKey: 'firstProject',
       },
       {
         tKey: 'august',
-        value: 2016,
+        text: 2016,
       },
     ],
     images: {

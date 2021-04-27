@@ -31,28 +31,19 @@ const features: Feature[] = [
   {
     tKey: 'projects',
     Icon: AppsIcon,
-    textValue: PROJECTS.length + 3,
-    link: {
-      tKey: 'title.portfolio',
-      component: <Link className="Link" to={ROUTE.portfolio} />,
-    },
-  },
-  {
-    tKey: 'experience',
-    Icon: BusinessCenterIcon,
-    labelValue: YEARS_OF_EXPERIENCE,
-    link: {
-      tKey: 'title.experience',
-      component: <Link className="Link" to={ROUTE.experience} />,
-    },
+    textValues: [PROJECTS.length + 3, 'title.portfolio'],
+    Link: <Link className="Link" to={ROUTE.portfolio} />,
   },
   {
     tKey: 'position',
     Icon: SupervisorAccountIcon,
-    link: {
-      tKey: 'title.skills',
-      component: <Link className="Link" to={ROUTE.skills} />,
-    },
+    Link: <Link className="Link" to={ROUTE.skills} />,
+  },
+  {
+    tKey: 'experience',
+    Icon: BusinessCenterIcon,
+    labelValues: [YEARS_OF_EXPERIENCE],
+    Link: <Link className="Link" to={ROUTE.experience} />,
   },
   {
     tKey: 'organizing',
@@ -61,7 +52,7 @@ const features: Feature[] = [
   {
     tKey: 'programming',
     Icon: CodeIcon,
-    textValue: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.css}`,
+    textValues: [TECHNOLOGY_TITLE.js, TECHNOLOGY_TITLE.css],
   },
   {
     tKey: 'growing',
@@ -73,6 +64,7 @@ const features: Feature[] = [
   },
   {
     tKey: 'education',
+    textValues: ['🙂'],
     Icon: SchoolIcon,
   },
   {
@@ -81,25 +73,25 @@ const features: Feature[] = [
   },
   {
     tKey: 'travel',
+    textValues: [15, '🙂'],
     Icon: ExploreIcon,
   },
   {
     tKey: 'love',
     Icon: FavoriteIcon,
-    textValue: differenceInYears(TODAY, new Date(2013, 1)),
-    link: {
-      component: (
-        // eslint-disable-next-line
-        <a
-          {...BLANK_LINK_PROPS}
-          className="Link"
-          href="https://www.instagram.com/kate_watermelon"
-        />
-      ),
-    },
+    textValues: [differenceInYears(TODAY, new Date(2013, 1)), '🙂'],
+    Link: (
+      // eslint-disable-next-line
+      <a
+        {...BLANK_LINK_PROPS}
+        className="Link"
+        href="https://www.instagram.com/kate_watermelon"
+      />
+    ),
   },
   {
     tKey: 'coffee',
+    textValues: ['🙂'],
     Icon: LocalCafeIcon,
   },
 ]
@@ -107,7 +99,9 @@ const features: Feature[] = [
 export default function About(): JSX.Element {
   return (
     <Sections
-      firstSection={<Info type="about" textValue="UI/UX" features={features} />}
+      firstSection={
+        <Info type="about" textValues={['UI/UX']} features={features} />
+      }
       secondSection={<Social />}
     />
   )

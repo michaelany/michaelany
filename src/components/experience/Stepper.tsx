@@ -53,6 +53,7 @@ const steps: StepInterface[] = [
         year: 2014,
       },
     },
+    values: ['🙂'],
   },
   {
     period: {
@@ -178,7 +179,7 @@ const steps: StepInterface[] = [
   },
 ]
 
-const transComponents = {strong: <strong />}
+const transComponents: JSX.Element[] = [<strong />]
 
 export default function Stepper({sectionRef}: StepperProps): JSX.Element {
   const {t} = useTranslation()

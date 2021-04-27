@@ -29,7 +29,7 @@ import {COMPANY} from '../../data/common'
 interface ProjectDetailsProps {
   name: ProjectName
   title?: string
-  textValue?: string
+  textValues?: (string | number)[]
   companyName: CompanyName
   types: ProjectType[]
   features: TKey[]
@@ -49,7 +49,7 @@ const featureIcons = [
 export default function ProjectDetails({
   name,
   title,
-  textValue,
+  textValues,
   companyName,
   types,
   features,
@@ -64,8 +64,8 @@ export default function ProjectDetails({
         label:
           typeof feature === 'object'
             ? isTime
-              ? `${t(`month.${feature.tKey}`)} ${feature.value}`
-              : `${feature.value ? `${feature.value}, ` : ''}${
+              ? `${t(`month.${feature.tKey}`)} ${feature.text}`
+              : `${feature.text ? `${feature.text}, ` : ''}${
                   feature.tKeys
                     ? feature.tKeys
                         .map((tKey: string) => t(`portfolio.feature.${tKey}`))
@@ -95,8 +95,8 @@ export default function ProjectDetails({
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {t(`${projectKey}.text`, textValue && {textValue})}.{' '}
-        {t('portfolio.developed')} "{company.title}"
+        {t(`${projectKey}.text`, textValues)}. {t('portfolio.developed')} "
+        {company.title}"
       </p>
       <Features items={featureItems} />
       {href && (
@@ -108,7 +108,7 @@ export default function ProjectDetails({
             endIcon={<OpenInNewIcon />}
             href={href}
           >
-            {t('common.more')}
+            {t('other.more')}
           </Button>
         </Animate>
       )}

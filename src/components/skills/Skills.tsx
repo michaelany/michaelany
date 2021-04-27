@@ -37,7 +37,12 @@ export default function Skills(): JSX.Element {
       {
         tKey: 'performance',
         Icon: SpeedIcon,
-        textValue: `${TECHNOLOGY_TITLE.ts} 4, ${TECHNOLOGY_TITLE.react} Hooks, CSS`,
+        textValues: [
+          'ES6-ES11',
+          `${TECHNOLOGY_TITLE.ts} 4`,
+          `${TECHNOLOGY_TITLE.react} Hooks`,
+          'CSS Grid',
+        ],
       },
       {
         tKey: 'efficient',
@@ -45,7 +50,8 @@ export default function Skills(): JSX.Element {
       },
       {
         tKey: 'markup',
-        labelValue: 'Pixel Perfect',
+        labelValues: ['Pixel Perfect'],
+        textValues: ['🙂', 'IE', ''],
         Icon: PaletteIcon,
       },
       {
@@ -54,36 +60,40 @@ export default function Skills(): JSX.Element {
       },
       {
         tKey: 'modules',
+        textValues: ['DRY', 'KISS'],
         Icon: AccountTreeIcon,
       },
       {
         tKey: 'tools',
         Icon: BuildIcon,
-        link: {
-          component: (
-            <Link
-              component="button"
-              className="Link"
-              onClick={(): void => {
-                setExpanded(
-                  TECHNOLOGY_GROUPS.map((group: TechnologyGroup) => group.tKey)
-                )
-                scrollToView(sectionRef.current as HTMLElement)
-                firstTechnologyActionRef.current?.focusVisible()
-              }}
-            />
-          ),
-        },
+        Link: (
+          <Link
+            component="button"
+            className="Link"
+            onClick={(): void => {
+              setExpanded(
+                TECHNOLOGY_GROUPS.map((group: TechnologyGroup) => group.tKey)
+              )
+              scrollToView(sectionRef.current as HTMLElement)
+              firstTechnologyActionRef.current?.focusVisible()
+            }}
+          />
+        ),
       },
       {
         tKey: 'responsive',
         Icon: DevicesOtherIcon,
-        textValue: `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.svg}`,
+        textValues: [
+          'desktop / mobile first',
+          TECHNOLOGY_TITLE.js,
+          TECHNOLOGY_TITLE.css,
+          TECHNOLOGY_TITLE.svg,
+        ],
       },
       {
         tKey: 'code',
         Icon: BrushIcon,
-        textValue: `${TECHNOLOGY_TITLE.eslint}, ${TECHNOLOGY_TITLE.prettier}`,
+        textValues: [TECHNOLOGY_TITLE.eslint, TECHNOLOGY_TITLE.prettier],
       },
       {
         tKey: 'test',
@@ -92,6 +102,7 @@ export default function Skills(): JSX.Element {
       },
       {
         tKey: 'tasks',
+        textValues: ['Kanban / Scrum', 'GTD'],
         Icon: ListAltIcon,
       },
       {
@@ -107,7 +118,11 @@ export default function Skills(): JSX.Element {
       firstSection={
         <Info
           type="skills"
-          textValue={`${TECHNOLOGY_TITLE.ts} + ${TECHNOLOGY_TITLE.react} + ${TECHNOLOGY_TITLE.redux}`}
+          textValues={[
+            TECHNOLOGY_TITLE.ts,
+            TECHNOLOGY_TITLE.react,
+            TECHNOLOGY_TITLE.redux,
+          ]}
           features={features}
         />
       }

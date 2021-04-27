@@ -95,7 +95,7 @@ const Block = ({t, isDuties, items}: BlockProps): JSX.Element => (
             `experience.job.${isDuties ? 'duty' : 'achievement'}.${
               (item as TKeyObject).tKey ?? item
             }`,
-            typeof item === 'object' ? {value: item.value} : undefined
+            typeof item === 'object' ? item.values : undefined
           )}
         </li>
       ))}

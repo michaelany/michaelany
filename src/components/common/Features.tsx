@@ -30,24 +30,17 @@ const ExtraContent = ({
   item,
 }: ExtraContentProps): JSX.Element | null => {
   const tKey: string = `${type}.feature.${item.tKey}.text`
-  const text: string = t(
-    tKey,
-    item.textValue ? {textValue: item.textValue} : undefined
-  )
 
   return (
     <p className="Features-Description FadeIn">
-      {item.link ? (
+      {item.Link ? (
         <Trans
           i18nKey={tKey}
-          values={{
-            textValue: item.textValue,
-            linkText: item.link.text ?? t(item.link.tKey!),
-          }}
-          components={[item.link.component]}
+          values={item.textValues}
+          components={[item.Link]}
         />
       ) : (
-        text
+        t(tKey, item.textValues)
       )}
       .
     </p>
@@ -77,7 +70,7 @@ function Features({t, type, extra, items}: FeaturesProps): JSX.Element {
               {t
                 ? t(
                     `${type}.feature.${item.tKey}.label`,
-                    item.labelValue ? {labelValue: item.labelValue} : undefined
+                    item.labelValues ?? undefined
                   )
                 : renderLabel(item)}
             </p>

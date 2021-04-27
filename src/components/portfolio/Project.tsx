@@ -63,7 +63,7 @@ export default function Project({
         <ProjectDetails
           name={project.name}
           title={project.title}
-          textValue={project.textValue}
+          textValues={project.textValues}
           companyName={project.companyName}
           types={project.types}
           features={project.features}

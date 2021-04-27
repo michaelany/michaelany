@@ -14,12 +14,12 @@ import {Feature} from '../../utils/types'
 interface InfoProps {
   type: string
   features: Feature[]
-  textValue?: string
+  textValues?: (string | number)[]
 }
 
-const transComponents = {strong: <strong />}
+const transComponents: JSX.Element[] = [<strong />]
 
-function Info({type, textValue, features}: InfoProps): JSX.Element {
+function Info({type, textValues, features}: InfoProps): JSX.Element {
   const {t} = useTranslation()
   const storageProp: string = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(
@@ -40,7 +40,7 @@ function Info({type, textValue, features}: InfoProps): JSX.Element {
       <p className="MainText">
         <Trans
           i18nKey={`${type}.text`}
-          values={{value: textValue}}
+          values={textValues}
           components={transComponents}
         />
       </p>
@@ -58,7 +58,7 @@ function Info({type, textValue, features}: InfoProps): JSX.Element {
           }
           onClick={handleToggle}
         >
-          {t('common.more')}
+          {t('other.more')}
         </Button>
       </Animate>
     </section>

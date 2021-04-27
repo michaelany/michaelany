@@ -124,6 +124,14 @@ export const COMPANY: CompanyInterface = {
   },
 }
 
+export const FEATURE = {
+  rest: 'REST API',
+  stripe: 'Stripe',
+  keycloak: 'Keycloak',
+  docker: 'Docker',
+  socket: 'WebSocket',
+}
+
 export const TECHNOLOGY_TITLE = {
   js: 'JavaScript',
   ts: 'TypeScript',
