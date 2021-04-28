@@ -1,7 +1,7 @@
 import {COMPANY, FEATURE, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
-const PROJECTS: Project[] = [
+const projects: Project[] = [
   {
     name: 'ninjal',
     title: 'Road Ninja',
@@ -1808,5 +1808,10 @@ const PROJECTS: Project[] = [
     },
   },
 ]
+
+const PROJECTS: Project[] =
+  process.env.REACT_APP_SHOW_PRIVATE_PROJECTS === 'true'
+    ? projects
+    : projects.filter((project: Project) => !project.private)
 
 export default PROJECTS
