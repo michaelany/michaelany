@@ -346,7 +346,7 @@ const EN = {
         text: 'New Zealand service for creating a job seeker profile',
       },
       dropdrone: {
-        text: 'Landing page of a New Zealand agricultural startup',
+        text: 'New Zealand agricultural startup website',
       },
       hatched: {
         text:

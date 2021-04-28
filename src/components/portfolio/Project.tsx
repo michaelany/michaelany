@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import SwiperCore from 'swiper'
 import {useTranslation, TFunction} from 'react-i18next'
-import {RouteChildrenProps} from 'react-router-dom'
+import {RouteChildrenProps, Redirect} from 'react-router-dom'
 
 import {Sections, Pagination, Copyright} from '../common'
 import ProjectDetails from './ProjectDetails'
@@ -52,10 +52,12 @@ export default function Project({
   match,
 }: RouteChildrenProps<ProjectParams>): JSX.Element {
   const {t} = useTranslation()
-  const project: ProjectInterface = PROJECTS.find(
+  const project: ProjectInterface | undefined = PROJECTS.find(
     (project: ProjectInterface): boolean =>
       PROJECT_ROUTE[project.name].slice(1) === match!.params.project
-  )!
+  )
+
+  if (!project) return <Redirect to={ROUTE.portfolio} />
 
   return (
     <Sections

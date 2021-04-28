@@ -465,7 +465,7 @@ const PROJECTS: Project[] = [
   {
     name: 'dropdrone',
     title: 'Dropdrone',
-    types: ['landing'],
+    types: ['site'],
     companyName: 'sevenGlyphs',
     features: [
       {
@@ -781,6 +781,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    private: true,
     name: 'tmf',
     title: 'Ted Manson Foundation',
     types: ['site'],
@@ -983,6 +984,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    private: true,
     name: 'foodp',
     title: 'Foodprint',
     types: ['site', 'app', 'admin'],
@@ -1032,6 +1034,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    private: true,
     name: 'food',
     title: 'Foodprint',
     types: ['landing'],
@@ -1142,6 +1145,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    private: true,
     name: 'strong',
     title: 'StrongHer',
     types: ['site', 'app'],
@@ -1448,6 +1452,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    private: true,
     name: 'fcdc',
     title: 'FCDC',
     types: ['admin', 'app'],
@@ -1550,6 +1555,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    private: true,
     name: 'whip',
     title: 'Whip Around',
     types: ['site'],

@@ -143,6 +143,7 @@ export interface Job {
 }
 
 export interface Project {
+  private?: boolean
   name: ProjectName
   title?: string
   textValues?: (string | number)[]
