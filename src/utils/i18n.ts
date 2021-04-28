@@ -4,9 +4,12 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 
 import {EN, RU} from '../translations'
 
-i18n.on('languageChanged', (lng) => {
-  const translation = lng === 'ru' ? RU : EN
-  document.documentElement.setAttribute('lang', lng)
+export const isRuLng = (lng: string): boolean => lng.startsWith('ru')
+
+i18n.on('languageChanged', (lng: string): void => {
+  const isRu: boolean = isRuLng(lng)
+  const translation = isRu ? RU : EN
+  document.documentElement.setAttribute('lang', isRu ? 'ru' : 'en')
   document.title = translation.other.meta
 })
 
