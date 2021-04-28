@@ -9,6 +9,7 @@ import {getListDelay, tProjectTypes} from '../../utils/helpers'
 import {
   DETECT,
   ROUTE,
+  TILT_MAX,
   TILT_SCALE,
   PROJECT_ROUTE,
   PATH_COLOR,
@@ -35,7 +36,7 @@ interface ProjectLinkProps {
 }
 
 const tiltOptions: TiltOptions = {
-  max: DETECT.safari ? 0 : 20,
+  max: DETECT.safari ? 0 : TILT_MAX,
   scale: TILT_SCALE,
   speed: DURATION.longest,
 }

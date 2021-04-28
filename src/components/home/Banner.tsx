@@ -6,7 +6,7 @@ import './Banner.scss'
 import macbookImg from '../../assets/img/shapes/macbook.png'
 import macbookImg2x from '../../assets/img/shapes/macbook@2x.png'
 import {Animate, Pagination, Copyright, Tilt} from '../common'
-import {DETECT, ROUTE, TILT_SCALE} from '../../utils/constants'
+import {DETECT, ROUTE, TILT_MAX, TILT_SCALE} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {DURATION} from '../../styles/theme'
 
@@ -28,7 +28,7 @@ const images = [
 
 const tiltOptions: TiltOptions = {
   reset: DETECT.safari,
-  max: DETECT.safari ? 0 : 50,
+  max: DETECT.safari ? 0 : TILT_MAX,
   scale: DETECT.safari ? TILT_SCALE : 1,
   speed: DURATION.lingering,
 }

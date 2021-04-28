@@ -12,6 +12,7 @@ import {Animate, SocialLinks, Pagination, Copyright, Tilt} from '../common'
 import {
   DETECT,
   ROUTE,
+  TILT_MAX,
   TILT_SCALE,
   QUERY_BREAKPOINT,
 } from '../../utils/constants'
@@ -20,7 +21,7 @@ import {MY_NAME, CONTACT_LINK} from '../../data/common'
 import {DURATION} from '../../styles/theme'
 
 const tiltOptions: TiltOptions = {
-  max: DETECT.safari ? 0 : 35,
+  max: DETECT.safari ? 0 : TILT_MAX,
   scale: TILT_SCALE,
   speed: DURATION.longest,
 }
