@@ -7,6 +7,7 @@ const projects: Project[] = [
     title: 'Road Ninja',
     types: ['landing'],
     companyName: 'sevenGlyphs',
+    url: 'https://roadninja.co.nz',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -198,7 +199,8 @@ const projects: Project[] = [
     textValues: ['Nintendo Amiibo'],
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/ally',
+    url: 'https://ally.ninja',
+    details: 'https://7glyphs.com/portfolio/projects/ally',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -256,7 +258,8 @@ const projects: Project[] = [
     title: 'Present.me',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/presentme',
+    url: 'https://business.present.me',
+    details: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -335,7 +338,7 @@ const projects: Project[] = [
     title: 'Present.me',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/presentme',
+    details: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -381,7 +384,7 @@ const projects: Project[] = [
     title: 'Present.me',
     types: ['app'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/presentme',
+    details: 'https://7glyphs.com/portfolio/projects/presentme',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -543,7 +546,8 @@ const projects: Project[] = [
     title: 'Just Hatched',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/justhatched',
+    url: 'https://justhatched.app',
+    details: 'https://7glyphs.com/portfolio/projects/justhatched',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -673,7 +677,6 @@ const projects: Project[] = [
     title: 'Proximal Coffee',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://www.proximalcoffee.com.au',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -786,7 +789,7 @@ const projects: Project[] = [
     title: 'Ted Manson Foundation',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    href: 'https://www.tmfoundation.co.nz',
+    url: 'https://www.tmfoundation.co.nz',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -860,7 +863,7 @@ const projects: Project[] = [
     title: '7 glyphs Lite',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://lite.7glyphs.com',
+    url: 'https://lite.7glyphs.com',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -926,6 +929,7 @@ const projects: Project[] = [
     title: 'Melissa Chalmers',
     types: ['landing'],
     companyName: 'sevenGlyphs',
+    url: 'https://melissachalmers.app',
     href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
       {
@@ -989,7 +993,7 @@ const projects: Project[] = [
     title: 'Foodprint',
     types: ['site', 'app', 'admin'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/foodprint',
+    details: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -1039,7 +1043,8 @@ const projects: Project[] = [
     title: 'Foodprint',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/foodprint',
+    url: 'https://foodprint.app',
+    details: 'https://7glyphs.com/portfolio/projects/foodprint',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -1150,7 +1155,8 @@ const projects: Project[] = [
     title: 'StrongHer',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/strongher',
+    url: 'https://strongherapp.com',
+    details: 'https://7glyphs.com/portfolio/projects/strongher',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -1226,7 +1232,7 @@ const projects: Project[] = [
     title: '7 glyphs 2.0',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    href: COMPANY.sevenGlyphs.href,
+    url: COMPANY.sevenGlyphs.href,
     features: [
       {
         tKey: 'growthSupportDevelopment',
@@ -1307,7 +1313,7 @@ const projects: Project[] = [
     title: 'Rogue Travel',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/rogue-travel',
+    details: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
       {
         tKey: 'scratchGrowthDevelopment',
@@ -1348,7 +1354,7 @@ const projects: Project[] = [
     title: 'Quarry Trucks',
     types: ['app'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
+    details: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
     features: [
       {
         tKey: 'markupBusinessLogic',
@@ -1392,7 +1398,7 @@ const projects: Project[] = [
     textValues: [COMPANY_TITLE.sevenGlyphs],
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/approach/packages',
+    url: 'https://7glyphs.com/approach/packages',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -1497,7 +1503,8 @@ const projects: Project[] = [
     title: '12 Saffron',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/12-saffron',
+    url: 'https://12saffron.co.nz',
+    details: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -1560,7 +1567,7 @@ const projects: Project[] = [
     title: 'Whip Around',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/whip-around',
+    details: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
       {
         tKey: 'growthSupportDevelopment',
@@ -1607,7 +1614,7 @@ const projects: Project[] = [
     title: 'LazyAz',
     types: ['admin'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/lazyaz',
+    details: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -1654,7 +1661,7 @@ const projects: Project[] = [
     title: 'LazyAz',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
-    href: 'https://7glyphs.com/portfolio/projects/lazyaz',
+    details: 'https://7glyphs.com/portfolio/projects/lazyaz',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -1771,7 +1778,8 @@ const projects: Project[] = [
     name: 'msp',
     types: ['site', 'app'],
     companyName: 'everpoint',
-    href: 'https://www.everpoint.ru/msp',
+    url: 'https://navigator.smbn.ru',
+    details: 'https://www.everpoint.ru/msp',
     features: [
       {
         tKey: 'growthSupportDevelopment',

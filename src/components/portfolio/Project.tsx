@@ -69,7 +69,8 @@ export default function Project({
           companyName={project.companyName}
           types={project.types}
           features={project.features}
-          href={project.href}
+          url={project.url}
+          details={project.details}
         />
       }
       secondSection={

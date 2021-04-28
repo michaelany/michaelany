@@ -150,6 +150,8 @@ export interface Project {
   types: ProjectType[]
   companyName: CompanyName
   href?: string
+  url?: string
+  details?: string
   features: TKey[]
   images: {
     desktop?: string[][]

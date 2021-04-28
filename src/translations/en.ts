@@ -455,6 +455,7 @@ const EN = {
   other: {
     meta: 'Michael Any | Frontend Developer',
     more: 'Details',
+    see: 'See it live',
   },
 }
 

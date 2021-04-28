@@ -1,3 +1,7 @@
 .ProjectDetails-Block {
   margin-bottom: 12px;
 }
+
+.ProjectDetails-Button:not(:last-child) {
+  margin-bottom: 16px;
+}
