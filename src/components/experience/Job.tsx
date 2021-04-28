@@ -67,7 +67,7 @@ const Occupations = ({
             <span>
               {t(`experience.occupation.${occupation}`)}
               {lastCurrent && (
-                <Tooltip title={t('experience.current')!}>
+                <Tooltip title={t('experience.current')!} enterDelay={0}>
                   <span className="Job-Badge" />
                 </Tooltip>
               )}
