@@ -60,7 +60,7 @@ function Projects(): JSX.Element {
             name={project.name}
             title={project.title}
             types={project.types}
-            companyName={project.companyName}
+            logo={project.images.logo}
           />
         ))}
       </Grid>

@@ -18,12 +18,10 @@ import {
   Effect,
   ProjectName,
   ProjectType,
-  CompanyName,
   TiltOptions,
   Width,
 } from '../../utils/types'
 import {DURATION} from '../../styles/theme'
-import {COMPANY} from '../../data/common'
 
 interface ProjectLinkProps {
   t: TFunction
@@ -32,7 +30,7 @@ interface ProjectLinkProps {
   name: ProjectName
   title?: string
   types: ProjectType[]
-  companyName: CompanyName
+  logo: string[]
 }
 
 const tiltOptions: TiltOptions = {
@@ -56,10 +54,11 @@ export default function ProjectLink({
   name,
   title,
   types,
-  companyName,
+  logo,
 }: ProjectLinkProps): JSX.Element {
   const path = PROJECT_ROUTE[name]
-  const company = COMPANY[companyName]
+
+  const projectTitle = title ?? t(`portfolio.project.${name}.title`)
 
   return (
     <Grid
@@ -89,15 +88,8 @@ export default function ProjectLink({
               className={`ProjectLink-View ProjectLink-View_name_${name}`}
             />
             <div className="ProjectLink-Content">
-              <img
-                className="ProjectLink-Company"
-                src={company.images[0]}
-                srcSet={`${company.images[1]} 2x`}
-                alt={company.title}
-              />
-              <h3 className="ProjectLink-Title">
-                {title ?? t(`portfolio.project.${name}.title`)}
-              </h3>
+              <img src={logo[0]} srcSet={`${logo[1]} 2x`} alt={projectTitle} />
+              <h3 className="ProjectLink-Title">{projectTitle}</h3>
               <p className="ProjectLink-Label">{tProjectTypes(t, types)}</p>
             </div>
           </ButtonBase>

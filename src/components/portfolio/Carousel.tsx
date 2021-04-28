@@ -2,18 +2,17 @@ import {Dispatch, SetStateAction} from 'react'
 import {TFunction} from 'react-i18next'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Autoplay, SwiperOptions, Controller} from 'swiper'
-import {useMediaQuery} from '@material-ui/core'
 
 import './Carousel.scss'
 import {ReactComponent as PhoneSvg} from '../../assets/img/shapes/phone.svg'
 import {Animate, Panel} from '../common'
-import {QUERY_BREAKPOINT} from '../../utils/constants'
 import {ProjectName} from '../../utils/types'
 import {DURATION} from '../../styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
   t: TFunction
+  md: boolean
   name: ProjectName
   images: string[][]
   swiper: SwiperCore | null
@@ -66,8 +65,6 @@ const renderContent = (
 }
 
 export default function Carousel(props: CarouselProps): JSX.Element {
-  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
-
   if (props.mobile)
     return (
       <Animate className="Carousel Carousel_type_mobile">
@@ -79,8 +76,8 @@ export default function Carousel(props: CarouselProps): JSX.Element {
   return (
     <Animate
       className="Carousel Carousel_type_desktop"
-      effect={md ? 'bottom' : 'right'}
-      duration={md ? undefined : 'longer'}
+      effect={props.md ? 'bottom' : 'right'}
+      duration={props.md ? undefined : 'longer'}
     >
       <Panel className="Carousel-Content">
         <div className="Carousel-Block">{renderContent(props, true)}</div>

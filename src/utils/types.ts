@@ -142,6 +142,12 @@ export interface Job {
   features: JobFeature[]
 }
 
+export interface ProjectImages {
+  logo: string[]
+  desktop: string[][]
+  mobile?: string[][]
+}
+
 export interface Project {
   private?: boolean
   name: ProjectName
@@ -149,14 +155,10 @@ export interface Project {
   textValues?: (string | number)[]
   types: ProjectType[]
   companyName: CompanyName
-  href?: string
   url?: string
   details?: string
   features: TKey[]
-  images: {
-    desktop?: string[][]
-    mobile?: string[][]
-  }
+  images: ProjectImages
 }
 
 export interface TiltOptions {

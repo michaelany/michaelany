@@ -5,7 +5,7 @@
   border-radius: $border-radius;
   overflow: hidden;
   &:not(:last-child) {
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
   &_type_desktop {
     @include responsiveBlock(70.35%);

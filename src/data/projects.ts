@@ -1,6 +1,44 @@
 import {COMPANY, FEATURE, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
+const commonLogo = {
+  roadNinja: [
+    require('../assets/img/logos/road-ninja_sm.png').default,
+    require('../assets/img/logos/road-ninja.png').default,
+    require('../assets/img/logos/road-ninja@2x.png').default,
+  ],
+  presentMe: [
+    require('../assets/img/logos/present-me_sm.png').default,
+    require('../assets/img/logos/present-me.png').default,
+    require('../assets/img/logos/present-me@2x.png').default,
+  ],
+  vaillant: [
+    require('../assets/img/logos/vaillant_sm.png').default,
+    require('../assets/img/logos/vaillant.png').default,
+    require('../assets/img/logos/vaillant@2x.png').default,
+  ],
+  sevenGlyphs: [
+    require('../assets/img/logos/7glyphs_sm.png').default,
+    require('../assets/img/logos/7glyphs.png').default,
+    require('../assets/img/logos/7glyphs@2x.png').default,
+  ],
+  strongher: [
+    require('../assets/img/logos/strongher_sm.png').default,
+    require('../assets/img/logos/strongher.png').default,
+    require('../assets/img/logos/strongher@2x.png').default,
+  ],
+  foodprint: [
+    require('../assets/img/logos/foodprint_sm.png').default,
+    require('../assets/img/logos/foodprint.png').default,
+    require('../assets/img/logos/foodprint@2x.png').default,
+  ],
+  lazyaz: [
+    require('../assets/img/logos/lazyaz_sm.png').default,
+    require('../assets/img/logos/lazyaz.png').default,
+    require('../assets/img/logos/lazyaz@2x.png').default,
+  ],
+}
+
 const projects: Project[] = [
   {
     name: 'ninjal',
@@ -30,6 +68,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.roadNinja,
       desktop: [
         [
           require('../assets/img/projects/ninjal@2x.jpg').default,
@@ -95,7 +134,7 @@ const projects: Project[] = [
         tKeys: ['responsive', 'emails'],
         text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
       },
@@ -105,6 +144,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.roadNinja,
       desktop: [
         [
           require('../assets/img/projects/ninja@2x.jpg').default,
@@ -152,6 +192,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/celebration_sm.png').default,
+        require('../assets/img/logos/celebration.png').default,
+        require('../assets/img/logos/celebration@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/celebration@2x.jpg').default,
@@ -223,6 +268,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/ally_sm.png').default,
+        require('../assets/img/logos/ally.png').default,
+        require('../assets/img/logos/ally@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/ally@2x.jpg').default,
@@ -282,6 +332,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.presentMe,
       desktop: [
         [
           require('../assets/img/projects/presentmel@2x.jpg').default,
@@ -358,6 +409,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.presentMe,
       desktop: [
         [
           require('../assets/img/projects/presentmep@2x.jpg').default,
@@ -397,7 +449,7 @@ const projects: Project[] = [
         tKeys: ['responsive', 'emails'],
         text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'dynamicFormsRouting',
       },
@@ -407,6 +459,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.presentMe,
       desktop: [
         [
           require('../assets/img/projects/presentme@2x.jpg').default,
@@ -492,6 +545,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/dropdrone_sm.png').default,
+        require('../assets/img/logos/dropdrone.png').default,
+        require('../assets/img/logos/dropdrone@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/dropdrone@2x.jpg').default,
@@ -570,6 +628,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/just-hatched_sm.png').default,
+        require('../assets/img/logos/just-hatched.png').default,
+        require('../assets/img/logos/just-hatched@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/hatched@2x.jpg').default,
@@ -642,6 +705,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.vaillant,
       desktop: [
         [
           require('../assets/img/projects/uls@2x.jpg').default,
@@ -699,6 +763,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/proximal-coffee_sm.png').default,
+        require('../assets/img/logos/proximal-coffee.png').default,
+        require('../assets/img/logos/proximal-coffee@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/proximal@2x.jpg').default,
@@ -759,6 +828,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/vtb_sm.png').default,
+        require('../assets/img/logos/vtb.png').default,
+        require('../assets/img/logos/vtb@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/embp@2x.jpg').default,
@@ -812,6 +886,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/tmf_sm.png').default,
+        require('../assets/img/logos/tmf.png').default,
+        require('../assets/img/logos/tmf@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/tmf@2x.jpg').default,
@@ -886,6 +965,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.sevenGlyphs,
       desktop: [
         [
           require('../assets/img/projects/lite@2x.jpg').default,
@@ -930,7 +1010,7 @@ const projects: Project[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://melissachalmers.app',
-    href: 'https://7glyphs.com/portfolio/projects/melissachalmers',
+    details: 'https://7glyphs.com/portfolio/projects/melissachalmers',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -953,6 +1033,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.strongher,
       desktop: [
         [
           require('../assets/img/projects/melissa@2x.jpg').default,
@@ -1013,6 +1094,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.foodprint,
       desktop: [
         [
           require('../assets/img/projects/foodp@2x.jpg').default,
@@ -1066,6 +1148,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.foodprint,
       desktop: [
         [
           require('../assets/img/projects/food@2x.jpg').default,
@@ -1129,6 +1212,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.vaillant,
       desktop: [
         [
           require('../assets/img/projects/sds@2x.jpg').default,
@@ -1169,7 +1253,7 @@ const projects: Project[] = [
         tKeys: ['responsive', 'emails'],
         text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.emails}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'animations',
       },
@@ -1179,6 +1263,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.strongher,
       desktop: [
         [
           require('../assets/img/projects/strong@2x.jpg').default,
@@ -1255,6 +1340,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.sevenGlyphs,
       desktop: [
         [
           require('../assets/img/projects/glyphs2@2x.jpg').default,
@@ -1322,7 +1408,10 @@ const projects: Project[] = [
         tKey: 'soloWork',
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      {
+        tKey: 'emails',
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
@@ -1333,6 +1422,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/rogue-travel_sm.png').default,
+        require('../assets/img/logos/rogue-travel.png').default,
+        require('../assets/img/logos/rogue-travel@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/rogue@2x.jpg').default,
@@ -1375,6 +1469,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/querry-trucks_sm.png').default,
+        require('../assets/img/logos/querry-trucks.png').default,
+        require('../assets/img/logos/querry-trucks@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/trucks@2x.jpg').default,
@@ -1421,6 +1520,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.sevenGlyphs,
       desktop: [
         [
           require('../assets/img/projects/services@2x.jpg').default,
@@ -1482,6 +1582,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/fcdc_sm.png').default,
+        require('../assets/img/logos/fcdc.png').default,
+        require('../assets/img/logos/fcdc@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/fcdc@2x.jpg').default,
@@ -1527,6 +1632,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/12saffron_sm.png').default,
+        require('../assets/img/logos/12saffron.png').default,
+        require('../assets/img/logos/12saffron@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/saffron@2x.jpg').default,
@@ -1595,6 +1705,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/whip-around_sm.png').default,
+        require('../assets/img/logos/whip-around.png').default,
+        require('../assets/img/logos/whip-around@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/whip@2x.jpg').default,
@@ -1642,6 +1757,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.lazyaz,
       desktop: [
         [
           require('../assets/img/projects/lazyazd@2x.jpg').default,
@@ -1684,6 +1800,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.lazyaz,
       desktop: [
         [
           require('../assets/img/projects/lazyaz@2x.jpg').default,
@@ -1743,6 +1860,7 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: commonLogo.sevenGlyphs,
       desktop: [
         [
           require('../assets/img/projects/glyphs@2x.jpg').default,
@@ -1799,6 +1917,11 @@ const projects: Project[] = [
       },
     ],
     images: {
+      logo: [
+        require('../assets/img/logos/msp_sm.png').default,
+        require('../assets/img/logos/msp.png').default,
+        require('../assets/img/logos/msp@2x.png').default,
+      ],
       desktop: [
         [
           require('../assets/img/projects/msp@2x.jpg').default,
