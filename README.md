@@ -12,16 +12,15 @@
 
 ## [About](https://michaelany.com/about)
 
-- 👨‍💻 &nbsp;I'm engaged in frontend development
 - 🚀 &nbsp;I create beautiful & convenient [projects](https://michaelany.com/portfolio) of any complexity
-- 💡 &nbsp;Bringing UI/UX ideas to life
-- 💼 &nbsp;5+ years of [experience](https://michaelany.com/experience)
+- 💡 &nbsp;Bring UI/UX ideas to life
 - 👨‍🏫 &nbsp;Senior developer & mentor
+- 💼 &nbsp;5+ years of [experience](https://michaelany.com/experience)
+- 👔 &nbsp;Organized & standalone
 
 <details>
   <summary>🔽 &nbsp;<strong>Details</strong></summary>
 
-- 👔 &nbsp;Organized & standalone
 - 🤓 &nbsp;Love to code
 - 🌱 &nbsp;Constantly evolving
 - 📐 &nbsp;Prone to perfectionism
@@ -101,6 +100,6 @@ Do you need my help? Or have a suggestion for me? Send me a mail to michael.any.
 
 [website]: https://michaelany.com
 [linkedin]: https://linkedin.com/mclananiev
-[instagram]: https://instagram.com/mclananiev
+[instagram]: https://instagram.com/anymichael
 [facebook]: https://facebook.com/mclananiev
 [vk]: https://vk.com/mclananiev
