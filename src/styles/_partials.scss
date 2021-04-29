@@ -85,9 +85,6 @@
   @include lg {
     font-size: 44px;
   }
-  @include sm {
-    font-size: 36px;
-  }
 }
 
 .MainText {
@@ -104,9 +101,6 @@
   }
   @include lg {
     font-size: 26px;
-  }
-  @include sm {
-    font-size: 22px;
   }
 }
 

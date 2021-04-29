@@ -40,7 +40,7 @@
   width: 100%;
   padding-left: $sidebar-width;
   @include md {
-    padding-top: $header_height / 1.2;
+    padding-top: $header_height / 1.5;
     padding-left: 0;
   }
 }

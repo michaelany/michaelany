@@ -57,10 +57,14 @@ const Photo = () => {
       )}
       effect={md ? undefined : 'zoomOut'}
       duration={md ? undefined : 'longer'}
-      onMouseOver={handlePhotoOver}
-      onMouseOut={handlePhotoOut}
     >
-      <Tilt el="figure" className="Social-Photo" options={tiltOptions}>
+      <Tilt
+        el="figure"
+        className="Social-Photo"
+        options={tiltOptions}
+        onMouseOver={handlePhotoOver}
+        onMouseOut={handlePhotoOut}
+      >
         <>
           <img
             className="Social-Img"

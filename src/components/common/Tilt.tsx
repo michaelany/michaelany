@@ -1,10 +1,11 @@
+import {AllHTMLAttributes} from 'react'
 import ReactTilt from 'react-tilt'
 
 import {DETECT} from '../../utils/constants'
 import {TiltOptions} from '../../utils/types'
 import {EASING} from '../../styles/theme'
 
-interface TiltProps {
+interface TiltProps extends AllHTMLAttributes<HTMLElement> {
   children: JSX.Element
   el?: any
   className?: string
@@ -16,9 +17,10 @@ export default function Tilt({
   el: Element,
   className,
   options,
+  ...props
 }: TiltProps): JSX.Element {
   const content: JSX.Element = Element ? (
-    <Element className={DETECT.mobile ? className : undefined}>
+    <Element {...props} className={DETECT.mobile ? className : undefined}>
       {children}
     </Element>
   ) : (
