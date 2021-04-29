@@ -5,7 +5,6 @@
   "homepage": "https://michaelany.com",
   "description": "My portfolio project",
   "repository": "github:michaelany/michaelany",
-  "bugs": "https://github.com/michaelany/michaelany/issues",
   "private": true,
   "dependencies": {
     "@material-ui/core": "4.11.3",

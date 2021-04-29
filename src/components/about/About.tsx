@@ -27,6 +27,8 @@ import {
 } from '../../utils/constants'
 import {Feature} from '../../utils/types'
 
+const textValues: string[] = ['UI/UX']
+
 const features: Feature[] = [
   {
     tKey: 'projects',
@@ -100,7 +102,7 @@ export default function About(): JSX.Element {
   return (
     <Sections
       firstSection={
-        <Info type="about" textValues={['UI/UX']} features={features} />
+        <Info type="about" textValues={textValues} features={features} />
       }
       secondSection={<Social />}
     />

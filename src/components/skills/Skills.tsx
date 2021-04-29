@@ -28,6 +28,12 @@ export default function Skills(): JSX.Element {
   const sectionRef = useRef<HTMLElement>(null)
   const firstTechnologyActionRef = useRef<ButtonBaseActions>(null)
 
+  const textValues: string[] = [
+    TECHNOLOGY_TITLE.ts,
+    TECHNOLOGY_TITLE.react,
+    TECHNOLOGY_TITLE.redux,
+  ]
+
   const features: Feature[] = useMemo(
     () => [
       {
@@ -116,15 +122,7 @@ export default function Skills(): JSX.Element {
   return (
     <Sections
       firstSection={
-        <Info
-          type="skills"
-          textValues={[
-            TECHNOLOGY_TITLE.ts,
-            TECHNOLOGY_TITLE.react,
-            TECHNOLOGY_TITLE.redux,
-          ]}
-          features={features}
-        />
+        <Info type="skills" textValues={textValues} features={features} />
       }
       secondSection={
         <Technologies
