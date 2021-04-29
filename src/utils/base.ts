@@ -10,7 +10,7 @@ export const handleAppLoaded = (): void => {
 export const logConsoleWelcomeMessage = () => {
   const consoleTextStyle = 'font-size: 16px;'
   console.log(
-    `%cHi! 👋 \nI'm %c${MY_NAME}%c, a frontend developer 👨‍💻\nHere you can find the description of this project 👉 https://github.com/michaelany/michaelany/blob/master/README.md 👈`,
+    `%cHi! 👋 \nI'm %c${MY_NAME}%c, a frontend developer 👨‍💻\nHere you can find the README this project 👉 https://github.com/michaelany/michaelany/blob/master/README.md 👈`,
     consoleTextStyle,
     `${consoleTextStyle} font-weight: bold;`,
     consoleTextStyle
