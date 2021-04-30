@@ -452,7 +452,6 @@ const RU = {
     with: 'с',
   },
   other: {
-    meta: 'Michael Any | Фронтенд разработчик',
     more: 'Подробнее',
     see: 'Посмотреть',
   },

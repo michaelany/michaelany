@@ -10,7 +10,7 @@ i18n.on('languageChanged', (lng: string): void => {
   const isRu: boolean = isRuLng(lng)
   const translation = isRu ? RU : EN
   document.documentElement.setAttribute('lang', isRu ? 'ru' : 'en')
-  document.title = translation.other.meta
+  document.title = `Michael Any | ${translation.experience.occupation.middle}`
 })
 
 const options: InitOptions = {

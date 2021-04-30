@@ -8,6 +8,13 @@ const common = {
     contact: 'Contact',
     language: 'English',
   },
+  occupation: {
+    lead: 'Frontend Team Lead',
+    senior: 'Senior Frontend Developer',
+    middle: 'Frontend Developer',
+    junior: 'Junior Frontend Developer',
+    support: 'Technical Support Engineer',
+  },
   portfolio: {
     scratchDevelopment: 'Frontend development from scratch',
   },
@@ -180,17 +187,11 @@ const EN = {
   },
   experience: {
     text:
-      "I've been professionally engaged in frontend development for more than {{0}} years. <0>Senior developer</0> & <0>team lead</0>. Working remotely",
+      "I've been professionally engaged in frontend development for more than {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
     duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
-    occupation: {
-      lead: 'Frontend team lead',
-      senior: 'Senior frontend developer',
-      middle: 'Frontend developer',
-      junior: 'Junior frontend developer',
-      support: 'Technical support engineer',
-    },
+    occupation: common.occupation,
     job: {
       duty: {
         logicApps: 'Application business logic development',
@@ -258,28 +259,20 @@ const EN = {
     refresh: 'Reset',
     continue: 'To be continued ✌️',
     stepper: {
-      step1:
-        'Worked as a <0>technical support engineer</0> in the {{0}} company',
+      step1: `Worked as a <0>${common.occupation.support}</0> in the {{0}} company`,
       step2: 'Expanded my horizons in other areas of activity {{0}}',
       step3:
         'In parallel with my study at the university, I created pet projects in the process of learning web development',
-      step4:
-        'Passed the interview. Completed the test tasks and I was invited to work as a <0>junior frontend developer</0> in the {{0}} company',
-      step5: 'Worked as a <0>junior frontend developer</0> in the {{0}}',
-      step6:
-        'As a result of successful work, I was promoted to a <0>frontend developer</0> in the {{0}} company',
-      step7:
-        'Worked as a <0>frontend developer</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company',
-      step8:
-        'As a result of the successful completion of the project, I was invited to the company {{0}} for the position of a <0>front-end developer</0>. Made a decision to move from {{1}} to {{2}}',
-      step9: 'Worked as a <0>front-end developer</0> in the {{0}}',
-      step10:
-        'Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>senior frontend developer</0>, chose the {{1}} company',
-      step11: 'Worked as a <0>senior frontend developer</0> in the {{0}}',
-      step12:
-        'As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <0>frontend team lead</0> in the {{0}} company',
-      step13:
-        'Working as a <0>frontend team lead</0> in the {{0}}. Continue to collaborate on projects with the {{1}}',
+      step4: `Passed the interview. Completed the test tasks and I was invited to work as a <0>${common.occupation.junior}</0> in the {{0}} company`,
+      step5: `Worked as a <0>${common.occupation.junior}</0> in the {{0}}`,
+      step6: `As a result of successful work, I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
+      step7: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
+      step8: `As a result of the successful completion of the project, I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
+      step9: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
+      step10: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.senior}</0>, chose the {{1}} company`,
+      step11: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
+      step12: `As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <0>${common.occupation.lead}</0> in the {{0}} company`,
+      step13: `Working as a <0>${common.occupation.lead}</0> in the {{0}}. Continue to collaborate on projects with the {{1}}`,
     },
   },
   portfolio: {
@@ -455,7 +448,6 @@ const EN = {
     with: 'with',
   },
   other: {
-    meta: 'Michael Any | Frontend Developer',
     more: 'Details',
     see: 'See it live',
   },
