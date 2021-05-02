@@ -114,6 +114,14 @@ const THEME = {
     MuiCircularProgress: {
       thickness: 3,
     },
+    MuiSnackbar: {
+      ContentProps: {elevation: 0},
+      anchorOrigin: {
+        vertical: 'bottom',
+        horizontal: 'left',
+      },
+      autoHideDuration: DURATION.lingering,
+    },
   },
 }
 

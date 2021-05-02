@@ -209,3 +209,7 @@
     vertical-align: inherit;
   }
 }
+
+.MuiSnackbarContent-root {
+  background-color: $color_error;
+}

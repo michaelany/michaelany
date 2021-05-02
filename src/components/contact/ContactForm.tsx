@@ -6,6 +6,7 @@ import {
   MutableRefObject,
 } from 'react'
 import {useTranslation} from 'react-i18next'
+import emailjs from 'emailjs-com'
 import {
   TextField,
   Button,
@@ -14,6 +15,7 @@ import {
   InputProps,
   Fade,
   CircularProgress,
+  Snackbar,
 } from '@material-ui/core'
 import {
   PersonRounded as PersonIcon,
@@ -29,6 +31,11 @@ import {Map} from '../../utils/types'
 interface Field {
   name: string
   email: string
+  message: string
+}
+
+interface SnackbarContent {
+  open: boolean
   message: string
 }
 
@@ -71,7 +78,11 @@ const inputProps: Map<InputProps> = {
 
 export default function ContactForm(): JSX.Element {
   const {t} = useTranslation()
-  const [successDialog, setsSuccessDialog] = useState<boolean>(false)
+  const [successDialog, setSuccessDialog] = useState<boolean>(false)
+  const [snackbar, setSnackbar] = useState<SnackbarContent>({
+    open: false,
+    message: '',
+  })
   const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
@@ -81,9 +92,9 @@ export default function ContactForm(): JSX.Element {
     [field.message]: useRef<HTMLInputElement>(null!),
   }
 
-  const handleSubmit = (e: SyntheticEvent): void => {
+  const handleSubmit = async (e: SyntheticEvent): Promise<void> => {
     e.preventDefault()
-    // validation
+
     const newErrors: typeof initialErrors = {}
     Object.keys(values).forEach((name: string): void => {
       if (
@@ -105,13 +116,22 @@ export default function ContactForm(): JSX.Element {
       setErrors({...errors, ...newErrors})
       return
     }
-    // request
+
     setLoading(true)
-    setTimeout(() => {
-      setsSuccessDialog(true)
+    try {
+      await emailjs.send(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID!,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID!,
+        values,
+        process.env.REACT_APP_EMAIL_JS_USER_ID
+      )
+      setSuccessDialog(true)
       changeValues(initialValues)
       setLoading(false)
-    }, 2000)
+    } catch (error) {
+      setSnackbar({open: true, message: error.text || t('other.error')})
+      setLoading(false)
+    }
   }
 
   const handleChange = ({
@@ -133,7 +153,11 @@ export default function ContactForm(): JSX.Element {
   }
 
   const handleSuccessDialogClose = (): void => {
-    setsSuccessDialog(false)
+    setSuccessDialog(false)
+  }
+
+  const handleSnackbarClose = (): void => {
+    setSnackbar((state) => ({...state, open: false}))
   }
 
   return (
@@ -209,6 +233,11 @@ export default function ContactForm(): JSX.Element {
         t={t}
         open={successDialog}
         onClose={handleSuccessDialogClose}
+      />
+      <Snackbar
+        open={snackbar.open}
+        message={snackbar.message}
+        onClose={handleSnackbarClose}
       />
     </>
   )

@@ -16,6 +16,7 @@
     "@types/react-router-dom": "5.1.7",
     "clsx": "1.1.1",
     "date-fns": "2.20.2",
+    "emailjs-com": "2.6.4",
     "gh-pages": "3.1.0",
     "google-maps-react": "2.0.6",
     "husky": "4.3.8",

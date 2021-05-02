@@ -450,6 +450,7 @@ const EN = {
   other: {
     more: 'Details',
     see: 'See it live',
+    error: 'Server connection error',
   },
 }
 

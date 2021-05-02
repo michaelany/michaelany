@@ -18,7 +18,7 @@
       @include pseudoGradient;
     }
     ::selection {
-      background-color: rgba(white, 0.4);
+      background-color: rgba($color_default, 0.4);
     }
   }
   &_color_alternate {
