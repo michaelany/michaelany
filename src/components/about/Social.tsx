@@ -4,10 +4,10 @@ import {useMediaQuery} from '@material-ui/core'
 import cn from 'clsx'
 
 import './Social.scss'
-import meNormalImg from '../../assets/img/pictures/me-normal.png'
-import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.png'
-import meExcitedImg from '../../assets/img/pictures/me-excited.png'
-import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.png'
+import meNormalImg from '../../assets/img/pictures/me-normal.jpg'
+import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.jpg'
+import meExcitedImg from '../../assets/img/pictures/me-excited.jpg'
+import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.jpg'
 import {Animate, SocialLinks, Pagination, Copyright, Tilt} from '../common'
 import {
   DETECT,

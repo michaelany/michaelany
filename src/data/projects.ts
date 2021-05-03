@@ -1945,4 +1945,6 @@ const PROJECTS: Project[] =
     ? projects
     : projects.filter((project: Project) => !project.private)
 
+export const PROJECTS_COUNT: number = projects.length
+
 export default PROJECTS

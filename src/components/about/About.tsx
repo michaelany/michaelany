@@ -17,7 +17,7 @@ import {
 
 import {Sections, Info} from '../common'
 import Social from './Social'
-import PROJECTS from '../../data/projects'
+import {PROJECTS_COUNT} from '../../data/projects'
 import {TECHNOLOGY_TITLE} from '../../data/common'
 import {
   YEARS_OF_EXPERIENCE,
@@ -33,7 +33,7 @@ const features: Feature[] = [
   {
     tKey: 'projects',
     Icon: AppsIcon,
-    textValues: [PROJECTS.length + 3, 'title.portfolio'],
+    textValues: [PROJECTS_COUNT + 3, 'title.portfolio'],
     Link: <Link className="Link" to={ROUTE.portfolio} />,
   },
   {
