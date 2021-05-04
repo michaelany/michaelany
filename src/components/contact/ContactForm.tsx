@@ -6,6 +6,7 @@ import {
   MutableRefObject,
 } from 'react'
 import {useTranslation} from 'react-i18next'
+import ReCAPTCHA from 'react-google-recaptcha'
 import emailjs from 'emailjs-com'
 import {
   TextField,
@@ -91,6 +92,7 @@ export default function ContactForm(): JSX.Element {
     [field.email]: useRef<HTMLInputElement>(null!),
     [field.message]: useRef<HTMLInputElement>(null!),
   }
+  const recaptchaRef = useRef<ReCAPTCHA>(null!)
 
   const handleSubmit = async (e: SyntheticEvent): Promise<void> => {
     e.preventDefault()
@@ -119,17 +121,20 @@ export default function ContactForm(): JSX.Element {
 
     setLoading(true)
     try {
+      const token = await recaptchaRef.current.executeAsync()
+      recaptchaRef.current.reset()
       await emailjs.send(
         process.env.REACT_APP_EMAIL_JS_SERVICE_ID!,
         process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID!,
-        values,
+        {...values, 'g-recaptcha-response': token},
         process.env.REACT_APP_EMAIL_JS_USER_ID
       )
       setSuccessDialog(true)
       changeValues(initialValues)
       setLoading(false)
     } catch (error) {
-      setSnackbar({open: true, message: error.text || t('other.error')})
+      console.log(`error`, error)
+      setSnackbar({open: true, message: error?.text || t('other.error')})
       setLoading(false)
     }
   }
@@ -229,6 +234,11 @@ export default function ContactForm(): JSX.Element {
           </Fade>
         </Button>
       </Animate>
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        size="invisible"
+        sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_KEY as string}
+      />
       <SuccessDialog
         t={t}
         open={successDialog}

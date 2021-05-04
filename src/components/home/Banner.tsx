@@ -35,7 +35,7 @@ const tiltOptions: TiltOptions = {
 
 const MacScreen = (): JSX.Element => {
   const [show, setShow] = useState<number>(0)
-  const timer = useRef<any>(null!)
+  const timer = useRef<any>()
 
   useEffect(() => {
     const handleAutoShowSet = (): void => {
