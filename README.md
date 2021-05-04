@@ -98,6 +98,30 @@ Do you need my help? Or have a suggestion for me? Send me a mail to michael.any.
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=michaelany&layout=compact&theme=tokyonight" alt="GitHub Top Languages" />
 <img src="https://github-readme-stats.vercel.app/api?username=michaelany&hide=prs,issues,contribs&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
 
+---
+
+## Project
+
+- 🚀 &nbsp;Developed from scratch
+- 🚀 &nbsp;TypeScript, React, React Router, Sass, BEM (React style)
+- 🚀 &nbsp;Create React App (some config changes in .env file)
+- 🚀 &nbsp;It's a PWA (Progressive Web Application)
+- 🚀 &nbsp;Responsive
+- 🚀 &nbsp;Semantically
+- 🚀 &nbsp;Fully typed code
+- 🚀 &nbsp;One style & clean code, prettier
+- 🚀 &nbsp;Eng & Rus languages, use i18next + react-i18next libs
+- 🚀 &nbsp;My own simple css animations, also create Animate component based on react-waypoint lib to execute animations by scroll view
+- 🚀 &nbsp;95% Lighthouse
+- 🚀 &nbsp;All images optimized & ready for retina
+- 🚀 &nbsp;Accessibility, by keyboard
+- 🚀 &nbsp;Contact form with EmailJS & reCaptcha v2 invisible
+- 🚀 &nbsp;Details, projects filter store in Local Storage
+- 🚀 &nbsp;Neutra Text font
+- 🚀 &nbsp;Main colors #64a6fc, #2fd0c8, #6ed485, #f8c24f, #fb9674, #a189f0, #b0b0b0
+- 🚀 &nbsp;
+- 🚀 &nbsp;
+
 [website]: https://michaelany.com
 [linkedin]: https://linkedin.com/mclananiev
 [instagram]: https://instagram.com/anymichael

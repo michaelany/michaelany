@@ -1,20 +1,20 @@
 $color_text: #4a4a4a;
 $color_second-text: #7b7b7b;
 $color_light-grey: #e6e6e6;
-$color_default: #b0b0b0;
-$color_dark-default: #939393;
-$color_red: #fb9674;
-$color_dark-red: #cf7e63;
-$color_yellow: #f8c24f;
-$color_dark-yellow: #cda145;
-$color_grass: #6ed485;
-$color_dark-grass: #5eb070;
-$color_green: #2fd0c8;
-$color_dark-green: #2caca6;
 $color_blue: #64a6fc;
 $color_dark-blue: #568bd0;
+$color_green: #2fd0c8;
+$color_dark-green: #2caca6;
+$color_grass: #6ed485;
+$color_dark-grass: #5eb070;
+$color_yellow: #f8c24f;
+$color_dark-yellow: #cda145;
+$color_red: #fb9674;
+$color_dark-red: #cf7e63;
 $color_violet: #a189f0;
 $color_dark-violet: #8774c6;
+$color_default: #b0b0b0;
+$color_dark-default: #939393;
 $color_error: #ef5350;
 
 $colors-map: (
@@ -22,8 +22,8 @@ $colors-map: (
   'blue' $color_blue $color_dark-blue,
   'green' $color_green $color_dark-green,
   'grass' $color_grass $color_dark-grass,
-  'red' $color_red $color_dark-red,
   'yellow' $color_yellow $color_dark-yellow,
+  'red' $color_red $color_dark-red,
   'violet' $color_violet $color_dark-violet
 );
 
