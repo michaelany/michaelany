@@ -1,12 +1,10 @@
 /* TEAM */
 	Author: Michael Any
-  Site: https://michaelany.com
   GitHub: https://github.com/michaelany
 	Contact: michael.any.dev@gmail.com | https://michaelany.com/contact
-  
+
 /* SITE */
 	Last update: 04/05/2021
 	Language: English | Russian
-  Standards: HTML5, CSS3, BEM
 	Components: React, TypeScript, Material-UI, Sass
 	Software: Visual Studio Code, Sketch, ImageOptim, Chrome DevTools
