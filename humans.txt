@@ -7,4 +7,4 @@
 	Last update: 04/05/2021
 	Language: English | Russian
 	Components: React, TypeScript, Material-UI, Sass
-	Software: Visual Studio Code, Sketch, ImageOptim, Chrome DevTools
+	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, Trello, macOS Big Sur

@@ -83,7 +83,7 @@
 
 ## [Contact](https://michaelany.com/contact)
 
-Do you need my help? Or have a suggestion for me? Send me a mail to michael.any.dev@gmail.com or use links below:
+Do you need my **help**? Or have a **suggestion** for me? Send me a mail to michael.any.dev@gmail.com or use links below:
 
 [<img src="https://img.shields.io/badge/-Michael_Any_Contact-5eb070?logo=google-chrome&logoColor=white" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michael.any.dev@gmail.com)
@@ -100,27 +100,24 @@ Do you need my help? Or have a suggestion for me? Send me a mail to michael.any.
 
 ---
 
-## Project
+## Portfolio Project
 
-- 🚀 &nbsp;Developed from scratch
-- 🚀 &nbsp;TypeScript, React, React Router, Sass, BEM (React style)
-- 🚀 &nbsp;Create React App (some config changes in .env file)
-- 🚀 &nbsp;It's a PWA (Progressive Web Application)
-- 🚀 &nbsp;Responsive
-- 🚀 &nbsp;Semantically
-- 🚀 &nbsp;Fully typed code
-- 🚀 &nbsp;One style & clean code, prettier
-- 🚀 &nbsp;Eng & Rus languages, use i18next + react-i18next libs
-- 🚀 &nbsp;My own simple css animations, also create Animate component based on react-waypoint lib to execute animations by scroll view
-- 🚀 &nbsp;95% Lighthouse
-- 🚀 &nbsp;All images optimized & ready for retina
-- 🚀 &nbsp;Accessibility, by keyboard
-- 🚀 &nbsp;Contact form with EmailJS & reCaptcha v2 invisible
-- 🚀 &nbsp;Details, projects filter store in Local Storage
-- 🚀 &nbsp;Neutra Text font
-- 🚀 &nbsp;Main colors #64a6fc, #2fd0c8, #6ed485, #f8c24f, #fb9674, #a189f0, #b0b0b0
-- 🚀 &nbsp;
-- 🚀 &nbsp;
+- 🚀 &nbsp;This portfolio project is a `Single Page App` & also a `Progressive Web App`
+- ⚙️ &nbsp;It's built from scratch by `Create React App` with some custom adjustments
+- 🔧 &nbsp;Base dependencies: `typescript`, `react`, `react-router-dom`, `@material-ui/core`, `sass`
+- ✅ &nbsp;All `HTML` is semantic & accessible (you can also navigate it from the keyboard)
+- 🎨 &nbsp;Styled with `BEM` naming convention (React style)
+- 📱 &nbsp;Responsive markup tested on every pixel of the screen width
+- 🎞 &nbsp;`CSS` animations, also created my own scroll animation component `Animate` based on the `react-waypoint`
+- 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next`, `react-i18next`
+- 📨 &nbsp;Uses `EmailJS` & `reCaptcha` (v2, invisible) to send contact form emails
+- 🗄 &nbsp;Some UI data is stored in the `localStorage`
+- 🧹 &nbsp;Clean & unified code style, `prettier` helped a lot
+- 🌄 &nbsp;All images optimized & ready for retina
+- 💪🏻 &nbsp;Everything is obviously done by myself: design, code, texts, integrations, deployment etc.
+- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Big Sur`
+- 🏎 &nbsp;Google Page Speed score `~97`:
+  <img src="./public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" style="margin-top: 8px" />
 
 [website]: https://michaelany.com
 [linkedin]: https://linkedin.com/mclananiev
