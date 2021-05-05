@@ -48,7 +48,7 @@ export default function Greeting(): JSX.Element {
                 height={68}
                 src={frontEndImg}
                 srcSet={`${frontEndImg2x} 2x`}
-                alt="Front-End"
+                alt="Frontend"
               />
             </Link>
           </span>
