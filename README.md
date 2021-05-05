@@ -117,7 +117,8 @@ Do you need my **help**? Or have a **suggestion** for me? Send me a mail to mich
 - 💪🏻 &nbsp;Everything is obviously done by myself: design, code, texts, integrations, deployment etc.
 - 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Big Sur`
 - 🏎 &nbsp;Google Page Speed score `~97`:
-  <img src="./public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" style="margin-top: 8px" />
+
+<img src="./public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
 
 [website]: https://michaelany.com
 [linkedin]: https://linkedin.com/mclananiev
