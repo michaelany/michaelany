@@ -36,6 +36,12 @@
   margin-bottom: 0;
 }
 
+.Greeting-SubText {
+  margin-top: 16px;
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
 .Greeting-Part {
   display: inline-block;
 }
@@ -54,7 +60,7 @@
 }
 
 .Greeting-Third {
-  @include animation(fadeInBottom, 1000ms);
+  @include animation(fadeInBottom, 1s);
   &_order_second {
     animation-delay: 1250ms;
   }
@@ -72,11 +78,15 @@
 }
 
 .Greeting-Sixth {
-  @include animation(fadeInBottom, 3000ms);
+  @include animation(fadeInLeft, 2800ms);
 }
 
 .Greeting-Seventh {
   @include animation(fadeInBottom, 3250ms);
+}
+
+.Greeting-Eighth {
+  @include animation(fadeInBottom, 3500ms);
 }
 
 .Greeting-Word {
@@ -103,7 +113,7 @@
 .Greeting-ExtraImg {
   width: 100%;
   height: 100%;
-  @include animation(fadeInZoomOut, 2600ms);
+  @include animation(fadeInZoomOut, 2500ms);
 }
 
 .Greeting-Actions {

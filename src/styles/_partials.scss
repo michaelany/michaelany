@@ -66,10 +66,10 @@
 }
 
 .Title {
-  font-size: 60px;
+  font-size: 72px;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.5em;
   @include animation(fadeIn);
   &_smallIndent {
     margin-bottom: 0.16em;
@@ -83,7 +83,10 @@
     }
   }
   @include lg {
-    font-size: 44px;
+    font-size: 56px;
+  }
+  @include xs {
+    font-size: 48px;
   }
 }
 
