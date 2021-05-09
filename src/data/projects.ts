@@ -806,6 +806,7 @@ const projects: Project[] = [
     },
   },
   {
+    private: true,
     name: 'embp',
     types: ['admin', 'app'],
     companyName: 't1',

@@ -152,7 +152,7 @@ export const PATH_COLOR: Map<Color> = {
   [PROJECT_ROUTE.presentme]: 'yellow',
   [PROJECT_ROUTE.dropdrone]: 'default',
   [PROJECT_ROUTE.hatched]: 'yellow',
-  [PROJECT_ROUTE.uls]: 'default',
+  [PROJECT_ROUTE.uls]: 'blue',
   [PROJECT_ROUTE.proximal]: 'yellow',
   [PROJECT_ROUTE.embp]: 'blue',
   [PROJECT_ROUTE.tmf]: 'blue',
