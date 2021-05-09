@@ -87,7 +87,7 @@ Do you need my **help**? Or have a **suggestion** for me? Send me a mail to mich
 
 [<img src="https://img.shields.io/badge/-Michael_Any_Contact-5eb070?logo=google-chrome&logoColor=white" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michael.any.dev@gmail.com)
-[<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/mclananiev)
+[<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/michaelany)
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
 [<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />][instagram]
 [<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />][facebook]

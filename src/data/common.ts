@@ -79,7 +79,7 @@ export const CONTACT_LINK: ContactLink = {
   },
   telegram: {
     title: 'Telegram',
-    href: 'https://t.me/mclananiev',
+    href: 'https://t.me/michaelany',
     Icon: TelegramIcon,
     size: 'md',
   },
