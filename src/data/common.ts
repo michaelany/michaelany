@@ -49,7 +49,7 @@ export const CONTACT_LINK: ContactLink = {
   },
   linkedIn: {
     title: 'LinkedIn',
-    href: 'https://linkedin.com/mclananiev',
+    href: 'https://www.linkedin.com/in/michaelany',
     Icon: LinkedInIcon,
     size: 'sm',
   },
@@ -61,19 +61,19 @@ export const CONTACT_LINK: ContactLink = {
   },
   instagram: {
     title: 'Instagram',
-    href: 'https://instagram.com/mclananiev',
+    href: 'https://instagram.com/anymichael',
     Icon: InstagramIcon,
     size: 'md',
   },
   vk: {
     title: 'VK',
-    href: 'https://vk.com/mclananiev',
+    href: 'https://vk.com/michaelany',
     Icon: VKIcon,
     size: 'md',
   },
   facebook: {
     title: 'Facebook',
-    href: 'https://facebook.com/mclananiev',
+    href: 'https://www.facebook.com/michaelany.fb',
     Icon: FacebookIcon,
     size: 'sm',
   },
