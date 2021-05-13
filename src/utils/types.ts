@@ -91,8 +91,8 @@ export interface Feature {
   label?: string
   time?: boolean
   tKey?: TKey
-  textValues?: (string | number)[]
   labelValues?: (string | number)[]
+  textValues?: (string | number)[]
   Link?: ReactNode
 }
 
