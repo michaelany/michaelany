@@ -34,10 +34,10 @@
 
 [<img src="https://img.shields.io/badge/-Michael_Any-568bd0?logo=google-chrome&logoColor=white" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
+[<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
 [<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />][instagram]
 [<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />][facebook]
 [<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />][vk]
-[<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
 
 ## [Skills](https://michaelany.com/skills)
 
