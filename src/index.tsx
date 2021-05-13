@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import {BrowserRouter} from 'react-router-dom'
+import {HashRouter} from 'react-router-dom'
 import {
   createMuiTheme,
   StylesProvider,
@@ -22,11 +22,11 @@ const theme: Theme = createMuiTheme(THEME as object)
 ReactDOM.render(
   <StylesProvider injectFirst>
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <HashRouter>
         <CssBaseline />
         <ScrollToTop />
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   </StylesProvider>,
   ROOT
