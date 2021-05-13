@@ -277,7 +277,7 @@ const EN = {
   },
   portfolio: {
     limit:
-      "Here are some of my favorite projects I've worked on that can be shown",
+      "Here are some of my favourite projects I've worked on that can be shown",
     developed: 'Developed in',
     filter: {
       all: 'All',
