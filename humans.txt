@@ -1,7 +1,7 @@
 /* TEAM */
 	Author: Michael Any
   GitHub: https://github.com/michaelany
-	Contact: michael.any.dev@gmail.com | https://michaelany.com/contact
+	Contact: michael.any.dev@gmail.com | https://michaelany.com/#/contact
 
 /* SITE */
 	Last update: 04/05/2021

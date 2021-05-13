@@ -8,12 +8,12 @@
 
 ## Hi! 👋 &nbsp;I'm [Michael Any][website], a frontend developer 👨‍💻
 
-## [About](https://michaelany.com/about)
+## [About](https://michaelany.com/#/about)
 
-- 🚀 &nbsp;I create beautiful & convenient [projects](https://michaelany.com/portfolio) of any complexity
+- 🚀 &nbsp;I create beautiful & convenient [projects](https://michaelany.com/#/portfolio) of any complexity
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 👨‍🏫 &nbsp;Senior developer & mentor
-- 💼 &nbsp;5+ years of [experience](https://michaelany.com/experience)
+- 💼 &nbsp;5+ years of [experience](https://michaelany.com/#/experience)
 - 👔 &nbsp;Organized & standalone
 
 <details>
@@ -37,7 +37,7 @@
 [<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />][facebook]
 [<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />][vk]
 
-## [Skills](https://michaelany.com/skills)
+## [Skills](https://michaelany.com/#/skills)
 
 - 👾 &nbsp;I develop applications, landing pages, multi-page sites & admin panels
 - 🛠 &nbsp;My main stack is `TypeScript` + `React` + `Redux`
@@ -79,7 +79,7 @@
 ![Figma](https://img.shields.io/badge/-Figma-282828?logo=figma&logoColor=f24e1e)
 ![macOS](https://img.shields.io/badge/-macOS-282828?logo=macos&logoColor=white)
 
-## [Contact](https://michaelany.com/contact)
+## [Contact](https://michaelany.com/#/contact)
 
 Do you need my **help**? Or have a **suggestion** for me? Send me a mail to michael.any.dev@gmail.com or use links below:
 
