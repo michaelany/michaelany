@@ -94,7 +94,7 @@ const EN = {
       travel: {
         label: 'Traveler',
         text:
-          'Visited over {{0}} countries. Love Japan and New Zealand. I was in Hobbiton, climbed the top of Fujiyama and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
+          'Visited over {{0}} countries. Love Japan and New Zealand. Was in Hobbiton, climbed the top of Fujiyama and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
       },
       love: {
         label: 'Happy husband',

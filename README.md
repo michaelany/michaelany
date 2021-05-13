@@ -121,7 +121,7 @@ Do you need my **help**? Or have a **suggestion** for me? Send me a mail to mich
 <img src="./public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
 
 [website]: https://michaelany.com
-[linkedin]: https://linkedin.com/mclananiev
+[linkedin]: https://www.linkedin.com/in/michaelany
 [instagram]: https://instagram.com/anymichael
-[facebook]: https://facebook.com/mclananiev
-[vk]: https://vk.com/mclananiev
+[facebook]: https://www.facebook.com/michaelany.fb
+[vk]: https://vk.com/michaelany
