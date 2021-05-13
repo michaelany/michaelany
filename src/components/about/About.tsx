@@ -45,6 +45,7 @@ const features: Feature[] = [
     tKey: 'experience',
     Icon: BusinessCenterIcon,
     labelValues: [YEARS_OF_EXPERIENCE],
+    textValues: [13],
     Link: <Link className="Link" to={ROUTE.experience} />,
   },
   {

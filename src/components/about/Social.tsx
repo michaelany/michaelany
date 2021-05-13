@@ -29,10 +29,10 @@ const tiltOptions: TiltOptions = {
 const links: SocialLink[] = [
   CONTACT_LINK.gitHub,
   CONTACT_LINK.linkedIn,
+  CONTACT_LINK.sevenGlyphs,
   CONTACT_LINK.instagram,
   CONTACT_LINK.facebook,
   CONTACT_LINK.vk,
-  CONTACT_LINK.sevenGlyphs,
 ]
 
 const imgSize: number = 320
