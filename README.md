@@ -6,8 +6,6 @@
 
 <h1 align="center">Michael Any</h1>
 
-![Banner](./public/assets/preview@2x.png)
-
 ## Hi! 👋 &nbsp;I'm [Michael Any][website], a frontend developer 👨‍💻
 
 ## [About](https://michaelany.com/about)
