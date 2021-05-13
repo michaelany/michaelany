@@ -188,7 +188,7 @@ const EN = {
   experience: {
     text:
       "I've been professionally engaged in frontend development for more than {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
-    duties: 'Duties',
+    duties: 'Responsibilities',
     achievements: 'Achievements',
     current: 'Current position',
     occupation: common.occupation,
