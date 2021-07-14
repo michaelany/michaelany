@@ -57,7 +57,7 @@ export default function Skills(): JSX.Element {
       {
         tKey: 'markup',
         labelValues: ['Pixel Perfect'],
-        textValues: ['🙂', 'IE', ''],
+        textValues: ['🙂'],
         Icon: PaletteIcon,
       },
       {

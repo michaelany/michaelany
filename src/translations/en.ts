@@ -111,12 +111,12 @@ const EN = {
   },
   skills: {
     text:
-      'I develop applications, landing pages, multi-page sites & admin panels. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
+      'I develop applications, admin panels, landing pages & multi-page sites. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
         text:
-          'I implement a system of all possible interface elements with convenient interaction and well-thought-out business logic. I care about cross-browser compatibility, security and handle possible errors',
+          'I implement a system of interface elements with convenient interaction and well-thought-out business logic. I care about cross-browser compatibility, security and handle possible errors',
       },
       performance: {
         label: 'Write modern & productive code',
@@ -124,17 +124,17 @@ const EN = {
           'I use {{0}} standards, {{1}} , {{2}}, {{3}}... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
       },
       efficient: {
-        label: 'Choose a simple & effective way to solve the problem',
+        label: 'Choose a simple way to solve the problem',
         text:
-          'For any task, I try to find an optimal and understandable solution. I understand in which cases it is necessary to use a particular method, pattern, library or tool',
+          'For any task, I find an optimal and understandable solution. I understand in which cases it is necessary to use a particular method, pattern, library or tool',
       },
       markup: {
-        label: 'Create semantic, accessible, cross-browser & {{0}} markup',
+        label: 'Create semantic, cross-browser & {{0}} markup',
         text:
-          'I make pixel-by-pixel layouts of any complexity. I use semantic tags and don\'t suffer from "divatosis" {{0}}. I test in all browsers (including {{1}}), care about accessibility and also build HTML emails',
+          'I make pixel-by-pixel layouts. I use semantic tags and don\'t suffer from "divatosis" {{0}}. I test in all modern browsers, care about accessibility and also build HTML emails',
       },
       patterns: {
-        label: 'Use a large number of patterns & techniques',
+        label: 'Use a lot of patterns & techniques',
         text:
           'Memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
       },
@@ -146,7 +146,7 @@ const EN = {
       tools: {
         label: 'Use modern frameworks, libraries, and tools',
         text:
-          'I regularly follow the updates of the technologies used and in the constant search for new ones. In addition to <0>primary</0> I use a large number of auxiliary libraries and tools',
+          'I regularly follow the technology updates and in constant search for new ones. In addition to <0>basic</0> I use many auxiliary libraries and tools',
       },
       responsive: {
         label: 'Implement responsive interface & animations',
@@ -154,19 +154,19 @@ const EN = {
           'I use {{0}} approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{1}}, {{2}} and {{3}} animations',
       },
       code: {
-        label: 'Follow a single style of writing clean code',
+        label: 'Follow a consistent code style',
         text:
-          'I write self-documenting and declarative code, apply the best practices of popular style guides, actively use {{0}} and {{1}}. Human-readable code is more important than the fast one',
+          'I write self-documenting and declarative code, apply popular style guides practices, actively use {{0}} and {{1}}. Human-readable code is more important than the fast one',
       },
       test: {
         label: 'Refactor, optimize & test',
         text:
-          'I check the performance of the project in various browsers / devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files / images. Writing tests',
+          'I check the performance of the project in various browsers / devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files / images',
       },
       tasks: {
         label: 'Planning, decomposing & documenting',
         text:
-          'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. Created a personal planning system. I use task managers. Writing documentation',
+          'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
       },
       mentor: {
         label: 'Make code reviews & teach',
