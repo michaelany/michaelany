@@ -86,7 +86,7 @@
     font-size: 56px;
   }
   @include xs {
-    font-size: 48px;
+    font-size: 42px;
   }
 }
 
@@ -104,6 +104,9 @@
   }
   @include lg {
     font-size: 26px;
+  }
+  @include xs {
+    font-size: 22px;
   }
 }
 
