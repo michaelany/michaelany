@@ -47,19 +47,19 @@ const EN = {
   },
   about: {
     text:
-      "I'm engaged in <0>frontend development</0>. I create beautiful & convenient projects of any complexity, bringing {{0}} ideas to life",
+      "I'm engaged in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life",
     feature: {
       projects: {
-        label: 'Developed many projects',
-        text: `I have about {{0}} foreign and domestic commercial projects in my track record - from landing pages to large web applications. Some of them are presented in the <0>${common.title.portfolio}</0>`,
+        label: 'Developed {{0}} commercial projects',
+        text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. Most of them can be viewed in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Senior developer & mentor',
-        text: `I develop projects from scratch, create layout, write business logic, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. For more information, go to <0>${common.title.skills}</0>`,
+        text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
-        label: '{{0}}+ years of experience',
-        text: `Made my first website at the age of {{0}}. I went from a junior coder to a frontend team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More details on the page <0>${common.title.experience}</0>`,
+        label: '{{0}} years of experience',
+        text: `Made my first website at the age of {{0}}. I went from a junior coder to a frontend team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -69,42 +69,42 @@ const EN = {
       programming: {
         label: 'Love to code',
         text:
-          'Frontend is my main hobby. I like to experiment with {{0}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
+          'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
       },
       growing: {
-        label: 'Constantly evolving',
+        label: 'Constantly learning',
         text:
-          'I regularly "sharpen the saw", study documentation, articles, courses, books and development reports. In constant search for new technologies and tools to improve my efficiency',
+          'I regularly "sharpen the saw", study new technologies, documentation, articles, courses, books and reports. I am looking for new methods and tools to improve efficiency',
       },
       perfect: {
         label: 'Prone to perfectionism',
         text:
-          'High quality is my main principle. I put all of myself into every project. However, the strength of the deadline and the experience help me focus on speed and the end result',
+          'High quality is my main principle. I put all of myself into every project. The strength of the deadline, the experience and the thought of "all is well in moderation" help me focus on speed and result',
       },
       education: {
         label: 'Two higher educations',
         text:
-          'Graduated from the Moscow Technological University and Russian State University of Cinematography {{0}}. Studying in the latter boosted my soft skills very well',
+          'Graduated from the Moscow Technological University and Russian State University of Cinematography {{0}}. Studying in the latter boosted my soft skills well',
       },
       sport: {
         label: 'Sports lover',
         text:
-          'Physical activity is especially relevant for the developer. Every day I try to devote time to sports (calisthenics, cycling, running, hiking). I discovered standup paddleboarding this summer',
+          'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running and hiking. I discovered standup paddleboarding this summer',
       },
       travel: {
         label: 'Traveler',
         text:
-          'Visited over {{0}} countries. Love Japan and New Zealand. Was in Hobbiton, climbed the top of Fujiyama and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
+          'Visited {{0}} countries. Love Japan and New Zealand. Climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
       },
       love: {
         label: 'Happy husband',
         text:
-          "<0>She</0> is my main source of inspiration and best friend. We've been together for over {{0}} years. By the way, I once developed a progressive web application to offer her a hand and heart {{1}}",
+          "<0>She</0> is my main source of inspiration and best friend. We've been together for {{0}} years. I once developed a progressive web application to offer her a hand and heart {{1}}",
       },
       coffee: {
         label: 'Coffee lover',
         text:
-          'It\'s known that "programmer - an organism that turns coffee into code" {{0}}. I start my working day with a cup of aromatic coffee. Also, after a trip to Japan, I fell in love with matcha tea',
+          '"Programmer is an organism that turns coffee into code" {{0}}. I start my working day with a cup of aromatic coffee. After a trip to Japan, I fell in love with matcha tea',
       },
     },
     subtitle: 'Avatar and social',

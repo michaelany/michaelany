@@ -33,7 +33,8 @@ const features: Feature[] = [
   {
     tKey: 'projects',
     Icon: AppsIcon,
-    textValues: [PROJECTS_COUNT + 3, 'title.portfolio'],
+    labelValues: [PROJECTS_COUNT],
+    textValues: [PROJECTS_COUNT, 'title.portfolio'],
     Link: <Link className="Link" to={ROUTE.portfolio} />,
   },
   {
