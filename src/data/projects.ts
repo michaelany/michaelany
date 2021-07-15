@@ -1,4 +1,4 @@
-import {COMPANY, FEATURE, COMPANY_TITLE, TECHNOLOGY_TITLE} from './common'
+import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
 const commonLogo = {
