@@ -187,7 +187,7 @@ const EN = {
   },
   experience: {
     text:
-      "I've been professionally engaged in frontend development for more than {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
+      "I've been professionally engaged in frontend development for {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
     duties: 'Responsibilities',
     achievements: 'Achievements',
     current: 'Current position',
@@ -217,19 +217,18 @@ const EN = {
       },
       achievement: {
         resultCorporate:
-          'Successfully completed several large-scale projects for large customers',
-        resultForeign:
-          'Has successfully implemented a large number of different foreign projects from scratch',
+          'Developed several large-scale applications for large customers',
+        resultForeign: 'Developed from scratch many different foreign projects',
         resultApp:
-          'Successfully implemented many components and sections for a large application',
+          'Developed many components and sections for a large application',
         pathLead: 'Passed the way from an ordinary developer to a team lead',
         pathFront: 'Grew from junior to a middle frontend developer',
-        internship: 'Developed a corporate internship program',
-        mentor: 'Became a mentor and trained several juniors',
-        mobile:
-          'In addition to web applications, I develop mobile applications on {{0}}',
-        design: 'Periodically doing design and prototyping',
-        interview: 'Conducted dozens of interviews',
+        internship: 'Created a corporate internship program',
+        mentor: 'Trained several juniors',
+        mobile: 'Developed a mobile application on {{0}}',
+        design: 'Created several approved design layouts',
+        interview:
+          'Conducted many interviews and hired a dozen decent developers',
         technologies:
           'Studied and applied in practice many technologies and libraries',
         technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}} very well',
@@ -238,7 +237,7 @@ const EN = {
         independent: 'Reached a high level of autonomy and organization',
         english: 'Improved English, cooperating with foreign customers',
         testimonials:
-          'Received many complimentary reviews from colleagues / customers',
+          'Received complimentary reviews from colleagues and customers',
         work: 'Improved teamwork skills',
         orders: 'Processed thousands of requests',
         hardware: 'Gained extensive experience with software and hardware',
@@ -262,17 +261,19 @@ const EN = {
       step1: `Worked as a <0>${common.occupation.support}</0> in the {{0}} company`,
       step2: 'Expanded my horizons in other areas of activity {{0}}',
       step3:
-        'In parallel with my study at the university, I created pet projects in the process of learning web development',
-      step4: `Passed the interview. Completed the test tasks and I was invited to work as a <0>${common.occupation.junior}</0> in the {{0}} company`,
+        'In parallel with my study at the university, I created pet projects and learned programming',
+      step4: `Passed the interview, completed the test tasks and I got a job as a <0>${common.occupation.junior}</0> in the {{0}} company`,
       step5: `Worked as a <0>${common.occupation.junior}</0> in the {{0}}`,
-      step6: `As a result of successful work, I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
+      step6: `I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
       step7: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
-      step8: `As a result of the successful completion of the project, I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
-      step9: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
-      step10: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.senior}</0>, chose the {{1}} company`,
-      step11: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
-      step12: `As a result of the successful implementation of several projects and the expansion of the area of responsibility, I was promoted to <0>${common.occupation.lead}</0> in the {{0}} company`,
-      step13: `Working as a <0>${common.occupation.lead}</0> in the {{0}}. Continue to collaborate on projects with the {{1}}`,
+      step8: `I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
+      step9: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
+      step10: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.middle}</0>, chose the {{1}} company`,
+      step11: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
+      step12: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
+      step13: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
+      step14: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.lead}</0> in the {{0}} company`,
+      step15: `Working as a <0>${common.occupation.lead}</0> in the {{0}}. Continue to collaborate on projects with the {{1}}`,
     },
   },
   portfolio: {

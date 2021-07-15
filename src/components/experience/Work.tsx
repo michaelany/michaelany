@@ -17,7 +17,7 @@ const jobs: JobInterface[] = [
   {
     current: true,
     company: COMPANY.t1,
-    occupations: ['lead', 'senior'],
+    occupations: ['lead', 'senior', 'middle'],
     duties: [
       'logicApps',
       'structureApps',
