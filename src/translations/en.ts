@@ -16,7 +16,7 @@ const common = {
     support: 'Technical Support Engineer',
   },
   portfolio: {
-    scratchDevelopment: 'Frontend development from scratch',
+    scratchDevelopment: 'Development from scratch',
   },
 }
 
@@ -277,8 +277,7 @@ const EN = {
     },
   },
   portfolio: {
-    limit:
-      "Here are some of my favourite projects I've worked on that can be shown",
+    limit: "Here are commercial projects I've worked on that can be shown",
     developed: 'Developed in',
     filter: {
       all: 'All',
@@ -294,9 +293,9 @@ const EN = {
       growthSupportDevelopment: 'Project progress & support',
       markupBusinessLogic: 'Markup & development of a part of business logic',
       jqueryReact: 'Rewriting the codebase from {{0}} to {{1}}',
-      leadWork: 'Frontend development team lead',
-      teamWork: 'Frontend development team member',
-      soloWork: 'Standalone frontend development',
+      leadWork: 'Frontend Development team lead',
+      teamWork: 'Development team member',
+      soloWork: 'Standalone development',
       responsive: 'Responsive interface',
       emails: 'email markup',
       design: 'prototyping & design',
@@ -393,7 +392,7 @@ const EN = {
       },
       services: {
         text:
-          '{{0}} New Zealand digital agency service description landing page',
+          'Landing page for complex services of a New Zealand digital agency',
       },
       fcdc: {
         text: 'Event management service admin panel',
@@ -427,8 +426,8 @@ const EN = {
   contact: {
     text: {
       part1: 'Do you need my <0>help</0>',
-      part2: 'Or have a <0>suggestion</0> for me',
-      part3: 'Send me a <0>message</0> to <1>{{0}}</1> or use the form',
+      part2: 'Have a <0>suggestion</0> for me',
+      part3: 'Send a <0>message</0> to <1>{{0}}</1> or use the form',
     },
     marker: "I'm living here now",
     form: {

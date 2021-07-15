@@ -1495,7 +1495,6 @@ const projects: Project[] = [
   {
     name: 'services',
     title: 'Service Packages',
-    textValues: [COMPANY_TITLE.sevenGlyphs],
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://7glyphs.com/approach/packages',
