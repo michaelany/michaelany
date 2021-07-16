@@ -105,7 +105,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michael.an
 - ✅ &nbsp;All `HTML` is semantic & accessible
 - 🎨 &nbsp;Styled with `BEM` React style naming convention
 - 📱 &nbsp;Responsive markup tested on every pixel of the screen width
-- 🎞 &nbsp;Use my own scroll animation component `Animate` based on the `react-waypoint` for the `CSS` animations
+- 🎞 &nbsp;Uses my own scroll animation component `Animate` based on the `react-waypoint` for the `CSS` animations
 - 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next` & `react-i18next`
 - 📨 &nbsp;Uses `EmailJS` & `reCaptcha` v2 to send contact form emails
 - 🗄 &nbsp;Some UI data is stored in the `localStorage`
