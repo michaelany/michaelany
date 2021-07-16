@@ -10,17 +10,17 @@
 
 ## [About](https://michaelany.com/#/about)
 
-- 🚀 &nbsp;I create beautiful & convenient [projects](https://michaelany.com/#/portfolio) of any complexity
-- 💡 &nbsp;Bring UI/UX ideas to life
+- 🚀 &nbsp;I create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
+- 💡 &nbsp;Bringing UI/UX ideas to life
 - 👨‍🏫 &nbsp;Senior developer & mentor
-- 💼 &nbsp;5+ years of [experience](https://michaelany.com/#/experience)
+- 💼 &nbsp;6 years of [experience](https://michaelany.com/#/experience)
 - 👔 &nbsp;Organized & standalone
 
 <details>
   <summary>🔽 &nbsp;<strong>Details</strong></summary>
 
 - 🤓 &nbsp;Love to code
-- 🌱 &nbsp;Constantly evolving
+- 🌱 &nbsp;Constantly learning
 - 📐 &nbsp;Prone to perfectionism
 - 🎓 &nbsp;Two higher educations
 - 🏃‍♂️ &nbsp;Sports lover
@@ -39,21 +39,21 @@
 
 ## [Skills](https://michaelany.com/#/skills)
 
-- 👾 &nbsp;I develop applications, landing pages, multi-page sites & admin panels
+- 👾 &nbsp;I develop applications, admin panels, landing pages & multi-page sites
 - 🛠 &nbsp;My main stack is `TypeScript` + `React` + `Redux`
 - ✅ &nbsp;Create reliable & well-functioning interfaces
 - 🏎 &nbsp;Write modern & productive code
-- 🎨 &nbsp;Create semantic, accessible, cross-browser & Pixel Perfect markup
+- 🎨 &nbsp;Create semantic, cross-browser & Pixel Perfect markup
 
 <details>
   <summary>🔽 &nbsp;<strong>Details</strong></summary>
 
-- 🧠 &nbsp;Choose a simple & effective way to solve the problem
-- 🧩 &nbsp;Use a large number of patterns & techniques
+- 🧠 &nbsp;Choose a simple way to solve the problem
+- 🧩 &nbsp;Use a lot of patterns & techniques
 - 🧱 &nbsp;Build a modular & optimal project architecture
 - 🔧 &nbsp;Use modern frameworks, libraries, and tools
 - 📱 &nbsp;Implement responsive interface & animations
-- 🧹 &nbsp;Follow a single style of writing clean code
+- 🧹 &nbsp;Follow a consistent code style
 - 🔬 &nbsp;Refactor, optimize & test
 - 📒 &nbsp;Planning, decomposing & documenting
 - 🐣 &nbsp;Make code reviews & teach
@@ -81,7 +81,7 @@
 
 ## [Contact](https://michaelany.com/#/contact)
 
-Do you need my **help**? Or have a **suggestion** for me? Send me a mail to michael.any.dev@gmail.com or use links below:
+Do you need my **help**? Have a **suggestion** for me? Send a mail to michael.any.dev@gmail.com or use links below:
 
 [<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michael.any.dev@gmail.com)
 [<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/michaelany)
@@ -99,20 +99,20 @@ Do you need my **help**? Or have a **suggestion** for me? Send me a mail to mich
 
 ## Portfolio Project
 
-- 🚀 &nbsp;This portfolio project is a `Single Page App` & also a `Progressive Web App`
-- ⚙️ &nbsp;It's built from scratch by `Create React App` with some custom adjustments
+- 🚀 &nbsp;This portfolio project is a `Single Page App` & a `Progressive Web App`
+- ⚙️ &nbsp;It's built from scratch by `Create React App` with custom adjustments
 - 🔧 &nbsp;Base dependencies: `typescript`, `react`, `react-router-dom`, `@material-ui/core`, `sass`
-- ✅ &nbsp;All `HTML` is semantic & accessible (you can also navigate it from the keyboard)
-- 🎨 &nbsp;Styled with `BEM` naming convention (React style)
+- ✅ &nbsp;All `HTML` is semantic & accessible
+- 🎨 &nbsp;Styled with `BEM` React style naming convention
 - 📱 &nbsp;Responsive markup tested on every pixel of the screen width
-- 🎞 &nbsp;`CSS` animations, also created my own scroll animation component `Animate` based on the `react-waypoint`
-- 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next`, `react-i18next`
-- 📨 &nbsp;Uses `EmailJS` & `reCaptcha` (v2, invisible) to send contact form emails
+- 🎞 &nbsp;Use my own scroll animation component `Animate` based on the `react-waypoint` for the `CSS` animations
+- 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next` & `react-i18next`
+- 📨 &nbsp;Uses `EmailJS` & `reCaptcha` v2 to send contact form emails
 - 🗄 &nbsp;Some UI data is stored in the `localStorage`
-- 🧹 &nbsp;Clean & unified code style, `prettier` helped a lot
+- 🧹 &nbsp;Clean & unified code style, `prettier` helps a lot
 - 🌄 &nbsp;All images optimized & ready for retina
-- 💪🏻 &nbsp;Everything is obviously done by myself: design, code, texts, integrations, deployment etc.
 - 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Big Sur`
+- 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
 - 🏎 &nbsp;Google Page Speed score `~97`:
 
 <img src="./public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
