@@ -99,8 +99,8 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michael.an
 
 ## Portfolio Project
 
-- 🚀 &nbsp;This portfolio project is a `Single Page App` & `Progressive Web App`
-- ⚙️ &nbsp;It's built from scratch by `Create React App` with custom adjustments
+- 🚀 &nbsp;This project is a `Single Page App` & `Progressive Web App`
+- ⚙️ &nbsp;Built from scratch by `Create React App` with custom adjustments
 - 🔧 &nbsp;Base dependencies: `typescript`, `react`, `react-router-dom`, `@material-ui/core`, `sass`
 - ✅ &nbsp;All `HTML` is semantic & accessible
 - 🎨 &nbsp;Styled with `BEM` React style naming convention
