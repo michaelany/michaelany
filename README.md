@@ -108,7 +108,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michael.an
 - 🎞 &nbsp;Uses my own scroll animation component `Animate` based on the `react-waypoint` for the `CSS` animations
 - 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next` & `react-i18next`
 - 📨 &nbsp;Uses `EmailJS` & `reCaptcha` v2 to send contact form emails
-- 🗄 &nbsp;Some UI data is stored in the `localStorage`
+- 🗄 &nbsp;Some UI data stores in the `localStorage`
 - 🧹 &nbsp;Clean & unified code style, `prettier` helps a lot
 - 🌄 &nbsp;All images optimized & ready for retina
 - 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Big Sur`
