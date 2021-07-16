@@ -10,8 +10,8 @@
 
 ## [About](https://michaelany.com/#/about)
 
-- 🚀 &nbsp;I create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
-- 💡 &nbsp;Bringing UI/UX ideas to life
+- 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
+- 💡 &nbsp;Bring UI/UX ideas to life
 - 👨‍🏫 &nbsp;Senior developer & mentor
 - 💼 &nbsp;6 years of [experience](https://michaelany.com/#/experience)
 - 👔 &nbsp;Organized & standalone
@@ -39,8 +39,8 @@
 
 ## [Skills](https://michaelany.com/#/skills)
 
-- 👾 &nbsp;I develop applications, admin panels, landing pages & multi-page sites
-- 🛠 &nbsp;My main stack is `TypeScript` + `React` + `Redux`
+- 👾 &nbsp;Develop applications, admin panels, landing pages & multi-page sites
+- 🛠 &nbsp;Main stack is `TypeScript` + `React` + `Redux`
 - ✅ &nbsp;Create reliable & well-functioning interfaces
 - 🏎 &nbsp;Write modern & productive code
 - 🎨 &nbsp;Create semantic, cross-browser & Pixel Perfect markup
@@ -55,7 +55,7 @@
 - 📱 &nbsp;Implement responsive interface & animations
 - 🧹 &nbsp;Follow a consistent code style
 - 🔬 &nbsp;Refactor, optimize & test
-- 📒 &nbsp;Planning, decomposing & documenting
+- 📒 &nbsp;Plan, decompose & document
 - 🐣 &nbsp;Make code reviews & teach
 
 </details>&nbsp;

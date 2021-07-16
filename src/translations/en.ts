@@ -164,7 +164,7 @@ const EN = {
           'I check the performance of the project in various browsers  devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files, images',
       },
       tasks: {
-        label: 'Planning, decomposing & documenting',
+        label: 'Plan, decompose & document',
         text:
           'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
       },
