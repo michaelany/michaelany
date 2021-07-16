@@ -51,7 +51,7 @@ const EN = {
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
-        text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. Most of them can be viewed in <0>${common.title.portfolio}</0>`,
+        text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. More in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Senior developer & mentor',
@@ -126,7 +126,7 @@ const EN = {
       efficient: {
         label: 'Choose a simple way to solve the problem',
         text:
-          'For any task, I find an optimal and understandable solution. I understand in which cases it is necessary to use a particular method, pattern, library or tool',
+          'I try to find a clear and optimal solution for any task. I know when to use a specific method, pattern, library or tool',
       },
       markup: {
         label: 'Create semantic, cross-browser & {{0}} markup',
@@ -141,7 +141,7 @@ const EN = {
       modules: {
         label: 'Build a modular & optimal project architecture',
         text:
-          'I avoid over-nesting, follow the principle of separation of concerns, {{0}} and {{1}}. Each module / class / component is responsible for one functionality type. Configuring the project build system',
+          'I avoid over-nesting, follow the principle of separation of concerns, {{0}} and {{1}}. Each module, class or component is responsible for one functionality type. Configuring the project build system',
       },
       tools: {
         label: 'Use modern frameworks, libraries, and tools',
@@ -156,12 +156,12 @@ const EN = {
       code: {
         label: 'Follow a consistent code style',
         text:
-          'I write self-documenting and declarative code, apply popular style guides practices, actively use {{0}} and {{1}}. Human-readable code is more important than the fast one',
+          'I write self-documenting and declarative code, explore popular style guides practices, use {{0}} and {{1}}. Human-readable code is more important than the fast one',
       },
       test: {
         label: 'Refactor, optimize & test',
         text:
-          'I check the performance of the project in various browsers / devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files / images',
+          'I check the performance of the project in various browsers  devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files, images',
       },
       tasks: {
         label: 'Planning, decomposing & documenting',
@@ -231,13 +231,13 @@ const EN = {
           'Conducted many interviews and hired a dozen decent developers',
         technologies:
           'Studied and applied in practice many technologies and libraries',
-        technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}} very well',
+        technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}}',
         speed:
           'Set a personal record for the speed of completion of a project - {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
         english: 'Improved English, cooperating with foreign customers',
         testimonials:
-          'Received complimentary reviews from colleagues and customers',
+          'Received many complimentary reviews from colleagues and customers',
         work: 'Improved teamwork skills',
         orders: 'Processed thousands of requests',
         hardware: 'Gained extensive experience with software and hardware',
@@ -277,7 +277,8 @@ const EN = {
     },
   },
   portfolio: {
-    limit: "Here are commercial projects I've worked on that can be shown",
+    limit:
+      'Commercial projects released into production and available for demonstration',
     developed: 'Developed in',
     filter: {
       all: 'All',
