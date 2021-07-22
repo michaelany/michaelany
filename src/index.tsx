@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import {HashRouter} from 'react-router-dom'
 import {
-  createMuiTheme,
+  createTheme,
   StylesProvider,
   ThemeProvider,
   Theme,
@@ -17,7 +17,7 @@ import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
 import {register as registerServiceWorker} from './utils/serviceWorkerRegistration'
 
-const theme: Theme = createMuiTheme(THEME as object)
+const theme: Theme = createTheme(THEME as object)
 
 ReactDOM.render(
   <StylesProvider injectFirst>

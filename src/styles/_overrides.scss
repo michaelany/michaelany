@@ -148,7 +148,7 @@
   &-indicator {
     background-color: white;
     height: 4px;
-    border-radius: $border-radius / 4;
+    border-radius: math.div($border-radius, 4);
     transition: all $duration_medium-long $easing_out;
   }
   &-scrollButtons {
@@ -163,8 +163,8 @@
     color: white;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
-    border-bottom-left-radius: $border-radius / 4;
-    border-bottom-right-radius: $border-radius / 4;
+    border-bottom-left-radius: math.div($border-radius, 4);
+    border-bottom-right-radius: math.div($border-radius, 4);
     @include md {
       min-width: 100px;
     }

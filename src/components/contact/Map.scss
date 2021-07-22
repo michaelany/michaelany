@@ -1,10 +1,12 @@
+@use "sass:math";
+
 @import 'styles/variables';
 @import 'styles/mixins';
 
 .Map {
   @include animation(fadeInRight);
   position: fixed;
-  width: calc(50% - #{$sidebar-width} / 2);
+  width: calc(50% - #{math.div($sidebar-width, 2)});
   height: 100vh;
   right: 0;
   top: 0;
