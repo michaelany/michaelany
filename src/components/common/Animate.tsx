@@ -34,11 +34,6 @@ export default function Animate({
     !reached && setReached(true)
   }
 
-
-
-
-  
-
   return (
     <Waypoint bottomOffset="5%" onEnter={onWaypointEnter}>
       <Element
