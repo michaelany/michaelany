@@ -1,4 +1,3 @@
-import {useEffect} from 'react'
 import {Switch, Route, Redirect, useLocation} from 'react-router-dom'
 import cn from 'clsx'
 import {Hidden} from '@material-ui/core'
@@ -13,15 +12,10 @@ import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
 import Contact from './contact/Contact'
-import {handleAppLoaded} from '../utils/base'
 import {ROUTE, PATH_COLOR} from '../utils/constants'
 
 export default function App(): JSX.Element {
   const {pathname} = useLocation()
-
-  useEffect(() => {
-    window.addEventListener('load', handleAppLoaded)
-  }, [])
 
   const lastSlashIndex: number = pathname.lastIndexOf('/')
   const AppClassName: string = cn(

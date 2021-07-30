@@ -12,25 +12,32 @@ import './styles/index.scss'
 import './utils/i18n'
 import ScrollToTop from './components/base/ScrollToTop'
 import App from './components/App'
-import {logConsoleWelcomeMessage} from './utils/base'
+import {handleAppLoaded, logConsoleWelcomeMessage} from './utils/base'
 import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
 import {register as registerServiceWorker} from './utils/serviceWorkerRegistration'
 
-const theme: Theme = createTheme(THEME as object)
+const init = () => {
+  const theme: Theme = createTheme(THEME as object)
 
-ReactDOM.render(
-  <StylesProvider injectFirst>
-    <ThemeProvider theme={theme}>
-      <HashRouter>
-        <CssBaseline />
-        <ScrollToTop />
-        <App />
-      </HashRouter>
-    </ThemeProvider>
-  </StylesProvider>,
-  ROOT
-)
+  window.addEventListener('load', handleAppLoaded)
 
-logConsoleWelcomeMessage()
-registerServiceWorker()
+  logConsoleWelcomeMessage()
+
+  registerServiceWorker()
+
+  ReactDOM.render(
+    <StylesProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <HashRouter>
+          <CssBaseline />
+          <ScrollToTop />
+          <App />
+        </HashRouter>
+      </ThemeProvider>
+    </StylesProvider>,
+    ROOT
+  )
+}
+
+init()
