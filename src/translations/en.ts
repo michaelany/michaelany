@@ -46,8 +46,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text:
-      "I'm engaged in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life",
+    text: "I'm engaged in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life",
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
@@ -63,115 +62,93 @@ const EN = {
       },
       organizing: {
         label: 'Organized & standalone',
-        text:
-          'Most of the projects were developed by me independently. I like to take over the entire client part of the project from discussing the concept to the final implementation and support in production',
+        text: 'Most of the projects were developed by me independently. I like to take over the entire client part of the project from discussing the concept to the final implementation and support in production',
       },
       programming: {
         label: 'Love to code',
-        text:
-          'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
+        text: 'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
       },
       growing: {
         label: 'Constantly learning',
-        text:
-          'I regularly "sharpen the saw", study new technologies, documentation, articles, courses, books and reports. I am looking for new methods and tools to improve efficiency',
+        text: 'I regularly "sharpen the saw", study new technologies, documentation, articles, courses, books and reports. I am looking for new methods and tools to improve efficiency',
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text:
-          'High quality is my main principle. I put all of myself into every project. The strength of the deadline, the experience and the thought of "all is well in moderation" help me focus on speed and result',
+        text: 'High quality is my main principle. I put all of myself into every project. The strength of the deadline, the experience and the thought of "all is well in moderation" help me focus on speed and result',
       },
       education: {
         label: 'Two higher educations',
-        text:
-          'Graduated from the Moscow Technological University and Russian State University of Cinematography {{0}}. Studying in the latter boosted my soft skills well',
+        text: 'Graduated from the Moscow Technological University and Russian State University of Cinematography {{0}}. Studying in the latter boosted my soft skills well',
       },
       sport: {
         label: 'Sports lover',
-        text:
-          'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running and hiking. I discovered standup paddleboarding this summer',
+        text: 'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running and hiking. I discovered standup paddleboarding this summer',
       },
       travel: {
         label: 'Traveler',
-        text:
-          'Visited {{0}} countries. Love Japan and New Zealand. Climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
+        text: 'Visited {{0}} countries. Love Japan and New Zealand. Climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
       },
       love: {
         label: 'Happy husband',
-        text:
-          "<0>She</0> is my main source of inspiration and best friend. We've been together for {{0}} years. I once developed a progressive web application to offer her a hand and heart {{1}}",
+        text: "<0>She</0> is my main source of inspiration and best friend. We've been together for {{0}} years. I once developed a progressive web application to offer her a hand and heart {{1}}",
       },
       coffee: {
         label: 'Coffee lover',
-        text:
-          '"Programmer is an organism that turns coffee into code" {{0}}. I start my working day with a cup of aromatic coffee. After a trip to Japan, I fell in love with matcha tea',
+        text: '"Programmer is an organism that turns coffee into code" {{0}}. I start my working day with a cup of aromatic coffee. After a trip to Japan, I fell in love with matcha tea',
       },
     },
     subtitle: 'Avatar and social',
   },
   skills: {
-    text:
-      'I develop applications, admin panels, landing pages & multi-page sites. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
+    text: 'I develop applications, admin panels, landing pages & multi-page sites. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
-        text:
-          'I implement a system of interface elements with convenient interaction and well-thought-out business logic. I care about cross-browser compatibility, security and handle possible errors',
+        text: 'I implement a system of interface elements with convenient interaction and well-thought-out business logic. I care about cross-browser compatibility, security and handle possible errors',
       },
       performance: {
         label: 'Write modern & productive code',
-        text:
-          'I use {{0}} standards, {{1}} , {{2}}, {{3}}... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
+        text: 'I use {{0}} standards, {{1}} , {{2}}, {{3}}... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
       },
       efficient: {
         label: 'Choose a simple way to solve the problem',
-        text:
-          'I try to find a clear and optimal solution for any task. I know when to use a specific method, pattern, library or tool',
+        text: 'I try to find a clear and optimal solution for any task. I know when to use a specific method, pattern, library or tool',
       },
       markup: {
         label: 'Create semantic, cross-browser & {{0}} markup',
-        text:
-          'I make pixel-by-pixel layouts. I use semantic tags and don\'t suffer from "divatosis" {{0}}. I test in all modern browsers, care about accessibility and also build HTML emails',
+        text: 'I make pixel-by-pixel layouts. I use semantic tags and don\'t suffer from "divatosis" {{0}}. I test in all modern browsers, care about accessibility and also build HTML emails',
       },
       patterns: {
         label: 'Use a lot of patterns & techniques',
-        text:
-          'Memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
+        text: 'Memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
       },
       modules: {
         label: 'Build a modular & optimal project architecture',
-        text:
-          'I avoid over-nesting, follow the principle of separation of concerns, {{0}} and {{1}}. Each module, class or component is responsible for one functionality type. Configuring the project build system',
+        text: 'I avoid over-nesting, follow the principle of separation of concerns, {{0}} and {{1}}. Each module, class or component is responsible for one functionality type. Configuring the project build system',
       },
       tools: {
         label: 'Use modern frameworks, libraries, and tools',
-        text:
-          'I regularly follow the technology updates and in constant search for new ones. In addition to <0>basic</0> I use many auxiliary libraries and tools',
+        text: 'I regularly follow the technology updates and in constant search for new ones. In addition to <0>basic</0> I use many auxiliary libraries and tools',
       },
       responsive: {
         label: 'Implement responsive interface & animations',
-        text:
-          'I use {{0}} approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{1}}, {{2}} and {{3}} animations',
+        text: 'I use {{0}} approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{1}}, {{2}} and {{3}} animations',
       },
       code: {
         label: 'Follow a consistent code style',
-        text:
-          'I write self-documenting and declarative code, explore popular style guides practices, use {{0}} and {{1}}. Human-readable code is more important than the fast one',
+        text: 'I write self-documenting and declarative code, explore popular style guides practices, use {{0}} and {{1}}. Human-readable code is more important than the fast one',
       },
       test: {
         label: 'Refactor, optimize & test',
-        text:
-          'I check the performance of the project in various browsers  devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files, images',
+        text: 'I check the performance of the project in various browsers  devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files, images',
       },
       tasks: {
         label: 'Plan, decompose & document',
-        text:
-          'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
+        text: 'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
       },
       mentor: {
         label: 'Make code reviews & teach',
-        text:
-          "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in interviewing",
+        text: "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in interviewing",
       },
     },
     subtitle: 'Technologies',
@@ -186,8 +163,7 @@ const EN = {
     learn: 'Exploring',
   },
   experience: {
-    text:
-      "I've been professionally engaged in frontend development for {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
+    text: "I've been professionally engaged in frontend development for {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
     duties: 'Responsibilities',
     achievements: 'Achievements',
     current: 'Current position',
@@ -278,7 +254,7 @@ const EN = {
   },
   portfolio: {
     limit:
-      'Commercial projects released into production and available for demonstration',
+      'Commercial projects released into production and allowed to demonstration',
     developed: 'Developed in',
     filter: {
       all: 'All',
@@ -316,6 +292,9 @@ const EN = {
       dynamicFormsRouting: 'Dynamic forms, own routing',
     },
     project: {
+      madfit: {
+        text: 'A tiny registering & paying application for a fitness service subscription',
+      },
       ninjal: {
         text: 'Landing page for a New Zealand truck drivers hire service',
       },
@@ -323,20 +302,16 @@ const EN = {
         text: 'New Zealand truck drivers hire service',
       },
       celebration: {
-        text:
-          "New Year's mini-application for congratulating company employees",
+        text: "New Year's mini-application for congratulating company employees",
       },
       ally: {
-        text:
-          'Landing page for a mobile application for interactive figures {{0}}',
+        text: 'Landing page for a mobile application for interactive figures {{0}}',
       },
       presentmel: {
-        text:
-          'Landing page for a New Zealand jobseeker profile creation service',
+        text: 'Landing page for a New Zealand jobseeker profile creation service',
       },
       presentmep: {
-        text:
-          'Admin panel of the New Zealand service for creating a job seeker profile',
+        text: 'Admin panel of the New Zealand service for creating a job seeker profile',
       },
       presentme: {
         text: 'New Zealand service for creating a job seeker profile',
@@ -345,8 +320,7 @@ const EN = {
         text: 'New Zealand agricultural startup website',
       },
       hatched: {
-        text:
-          'Landing page for a mobile application tracker for newborn babies',
+        text: 'Landing page for a mobile application tracker for newborn babies',
       },
       uls: {
         title: 'United Login System',
@@ -369,12 +343,10 @@ const EN = {
         text: 'Fitness blogger landing page',
       },
       foodp: {
-        text:
-          'Portal of the New Zealand discount food ordering service in restaurants',
+        text: 'Portal of the New Zealand discount food ordering service in restaurants',
       },
       food: {
-        text:
-          'Landing page of a New Zealand service for ordering discount food in restaurants',
+        text: 'Landing page of a New Zealand service for ordering discount food in restaurants',
       },
       sds: {
         text: 'Enterprise service for work with {{0}} document flow',
@@ -392,8 +364,7 @@ const EN = {
         text: 'New Zealand truck traffic monitoring service',
       },
       services: {
-        text:
-          'Landing page for complex services of a New Zealand digital agency',
+        text: 'Landing page for complex services of a New Zealand digital agency',
       },
       fcdc: {
         text: 'Event management service admin panel',
@@ -415,8 +386,7 @@ const EN = {
       },
       msp: {
         title: 'Business navigator MSP',
-        text:
-          'Service for entrepreneurs who want to open or expand their business',
+        text: 'Service for entrepreneurs who want to open or expand their business',
       },
     },
     subtitle: 'Screenshots',

@@ -41,6 +41,61 @@ const commonLogo = {
 
 const projects: Project[] = [
   {
+    name: 'madfit',
+    title: 'MadFit',
+    types: ['app', 'landing'],
+    companyName: 'sevenGlyphs',
+    features: [
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
+      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'july',
+        text: 2021,
+      },
+    ],
+    images: {
+      logo: [
+        require('../assets/img/logos/madfit_sm.png').default,
+        require('../assets/img/logos/madfit.png').default,
+        require('../assets/img/logos/madfit@2x.png').default,
+      ],
+      desktop: [
+        [
+          require('../assets/img/projects/madfit@2x.jpg').default,
+          require('../assets/img/projects/madfit-desktop-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-desktop-second.jpg').default,
+          require('../assets/img/projects/madfit-desktop-second@2x.jpg')
+            .default,
+        ],
+      ],
+      mobile: [
+        [
+          require('../assets/img/projects/madfit-mobile-first.jpg').default,
+          require('../assets/img/projects/madfit-mobile-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-mobile-second.jpg').default,
+          require('../assets/img/projects/madfit-mobile-second@2x.jpg').default,
+        ],
+      ],
+    },
+  },
+  {
     name: 'ninjal',
     title: 'Road Ninja',
     types: ['landing'],
