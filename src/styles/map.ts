@@ -25,7 +25,7 @@ const STYLES = [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLOR.text,
+        color: COLOR.secondText,
       },
     ],
   },
@@ -76,7 +76,7 @@ const STYLES = [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLOR.text,
+        color: COLOR.secondText,
       },
       {
         visibility: 'on',
@@ -144,7 +144,7 @@ const STYLES = [
     elementType: 'geometry',
     stylers: [
       {
-        color: COLOR.text,
+        color: COLOR.secondText,
       },
     ],
   },

@@ -2,8 +2,8 @@
 export const COLOR = {
   green: '#2fd0c8',
   blue: '#64a6fc',
-  text: '#4a4a4a',
-  secondText: '#7b7b7b',
+  text: '#282c34',
+  secondText: '#6d6d6d',
   darkRed: '#cf7e63',
 }
 
