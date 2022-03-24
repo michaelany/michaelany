@@ -15,7 +15,7 @@ const links: SocialLink[] = [
   CONTACT_LINK.vk,
 ]
 
-const email: string = 'michael.any.dev@gmail.com'
+const email = 'michael.any.dev@gmail.com'
 
 const transComponents = [
   <strong />,

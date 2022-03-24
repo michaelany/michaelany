@@ -7,33 +7,25 @@
   justify-content: center;
 }
 
-.Greeting-Block {
-  display: flex;
-  align-items: center;
-}
-
-.Greeting-Icon {
-  position: relative;
-  bottom: 6px;
-  margin-left: 18px;
-  animation: hello $duration_lingering $easing_in-out infinite;
-  @include lg {
-    bottom: 4px;
-    width: 50px;
-    height: 50px;
-    margin-left: 16px;
-  }
-  @include xs {
-    bottom: 2px;
-    width: 42px;
-    height: 42px;
-    margin-left: 14px;
-  }
-}
-
 .Greeting-Text {
   font-weight: normal;
   margin-bottom: 0;
+}
+
+.Greeting-Nowrap {
+  white-space: nowrap;
+}
+
+.Greeting-Icon {
+  animation: hello $duration_lingering $easing_in-out infinite;
+  @include lg {
+    width: 50px;
+    height: 50px;
+  }
+  @include xs {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 .Greeting-SubText {
@@ -57,6 +49,9 @@
 
 .Greeting-Second {
   @include animation(fadeInZoomIn, 300ms);
+  position: relative;
+  top: 0.1em;
+  margin-left: 0.25em;
 }
 
 .Greeting-Third {

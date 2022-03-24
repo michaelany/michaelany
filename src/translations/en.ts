@@ -37,7 +37,12 @@ const EN = {
     august: 'august',
   },
   home: {
-    hi: 'Hi',
+    hi: {
+      morning: 'Good morning',
+      afternoon: 'Good afternoon',
+      evening: 'Good evening',
+      night: 'Good night',
+    },
     iam: "I'm",
     occupation: {
       part1: 'a frontend',

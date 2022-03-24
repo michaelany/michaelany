@@ -30,7 +30,12 @@ const RU = {
     august: 'август',
   },
   home: {
-    hi: 'Привет',
+    hi: {
+      morning: 'Доброе утро',
+      afternoon: 'Добрый день',
+      evening: 'Добрый вечер',
+      night: 'Доброй ночи',
+    },
     iam: 'Я –',
     occupation: {
       part1: 'фронтенд',

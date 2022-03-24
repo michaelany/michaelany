@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
+import {getHours, setHours} from 'date-fns'
 import {Button} from '@material-ui/core'
 import {
   WebRounded as WebIcon,
@@ -12,16 +13,29 @@ import frontEndImg2x from '../../assets/img/pictures/frontend@2x.png'
 import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
 import {ROUTE} from '../../utils/constants'
 
+const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
+  const hours: number = getHours(setHours(new Date(), 19))
+  if (hours >= 0 && hours < 6) return 'night'
+  if (hours >= 6 && hours < 12) return 'morning'
+  if (hours >= 12 && hours < 18) return 'afternoon'
+  return 'evening'
+}
+
 export default function Greeting(): JSX.Element {
   const {t} = useTranslation()
 
   return (
     <section className="Greeting Section">
-      <div className="Greeting-Block">
-        <p className="Greeting-Text Greeting-First Title">{t('home.hi')}!</p>
-        <div className="Greeting-Second">
-          <HelloIcon className="Greeting-Icon" />
-        </div>
+      <div>
+        <p className="Greeting-Text Greeting-First Title">
+          {t(`home.hi.${getDayTime()}`)}
+          <span className="Greeting-Nowrap">
+            !
+            <span className="Greeting-Second">
+              <HelloIcon className="Greeting-Icon" />
+            </span>
+          </span>
+        </p>
       </div>
       <h1 className="Greeting-Text Title">
         <span className="Greeting-Part Greeting-Text Greeting-Third Title">
