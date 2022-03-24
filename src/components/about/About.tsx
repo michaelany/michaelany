@@ -29,6 +29,29 @@ import {Feature} from '../../utils/types'
 
 const textValues: string[] = ['UI/UX']
 
+const countriesVisited: string[] = [
+  'New Zealand',
+  'Japan',
+  'Russian Federation',
+  'Ukraine',
+  'Belarus',
+  'Abkhazia',
+  'Turkey',
+  'Maldives',
+  'Greece',
+  'Czech Republic',
+  'Egypt',
+  'Germany',
+  'Sri Lanka',
+  'Thailand',
+  'Italy',
+  'Vatican City',
+  'France',
+  'Spain',
+  'Cyprus',
+  'Latvia',
+]
+
 const features: Feature[] = [
   {
     tKey: 'projects',
@@ -77,7 +100,7 @@ const features: Feature[] = [
   },
   {
     tKey: 'travel',
-    textValues: [15, '🙂'],
+    textValues: [countriesVisited.length, '🙂'],
     Icon: ExploreIcon,
   },
   {

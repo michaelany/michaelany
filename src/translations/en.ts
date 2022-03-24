@@ -58,7 +58,7 @@ const EN = {
         text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. More in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Senior developer & mentor',
+        label: 'Lead developer & mentor',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
@@ -113,7 +113,7 @@ const EN = {
       },
       performance: {
         label: 'Write modern & productive code',
-        text: 'I use {{0}} standards, {{1}} , {{2}}, {{3}}... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
+        text: 'I use {{0}} standards, {{1}}, {{2}}, {{3}}... Optimize heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
       },
       efficient: {
         label: 'Choose a simple way to solve the problem',

@@ -36,7 +36,7 @@ const RU = {
       evening: 'Добрый вечер',
       night: 'Доброй ночи',
     },
-    iam: 'Я –',
+    iam: 'Я',
     occupation: {
       part1: 'фронтенд',
       part2: 'разработчик',

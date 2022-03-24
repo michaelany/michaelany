@@ -14,7 +14,7 @@ import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
 import {ROUTE} from '../../utils/constants'
 
 const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
-  const hours: number = getHours(setHours(new Date(), 19))
+  const hours: number = getHours(new Date())
   if (hours >= 0 && hours < 6) return 'night'
   if (hours >= 6 && hours < 12) return 'morning'
   if (hours >= 12 && hours < 18) return 'afternoon'
