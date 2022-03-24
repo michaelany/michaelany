@@ -4,7 +4,7 @@
 	Contact: michael.any.dev@gmail.com | https://michaelany.com/#/contact
 
 /* SITE */
-	Last update: 04/05/2021
+	Last update: 24/03/2022
 	Language: English | Russian
 	Components: React, TypeScript, Material-UI, Sass
-	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, Trello, macOS Big Sur
+	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, Trello, macOS Monterey
