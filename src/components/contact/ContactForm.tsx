@@ -132,8 +132,7 @@ export default function ContactForm(): JSX.Element {
       setSuccessDialog(true)
       changeValues(initialValues)
       setLoading(false)
-    } catch (error) {
-      console.log(`error`, error)
+    } catch (error: any) {
       setSnackbar({open: true, message: error?.text || t('other.error')})
       setLoading(false)
     }

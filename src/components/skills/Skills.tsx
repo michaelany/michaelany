@@ -24,7 +24,7 @@ import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '../../data/common'
 const textValues: string[] = [
   TECHNOLOGY_TITLE.ts,
   TECHNOLOGY_TITLE.react,
-  TECHNOLOGY_TITLE.redux,
+  TECHNOLOGY_TITLE.reactquery,
 ]
 
 const initialExpanded = [TECHNOLOGY_GROUPS[0].tKey]

@@ -44,11 +44,11 @@
 }
 
 .Greeting-First {
-  @include animation(fadeIn);
+  @include animation(fadeInZoomInSm);
 }
 
 .Greeting-Second {
-  @include animation(fadeInZoomIn, 300ms);
+  @include animation(fadeInLeft, 300ms);
   position: relative;
   top: 0.05em;
   margin-left: 0.2em;

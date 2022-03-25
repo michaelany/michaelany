@@ -1,13 +1,16 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
-$technologies: 'js', 'ts', 'react', 'redux', 'mobx', 'preact', 'svelte', 'vue',
-  'apollo', 'jquery', 'html', 'svg', 'pug', 'handlebars', 'markdown', 'laravel',
-  'css', 'sass', 'bem', 'mui', 'styled', 'modules', 'ant', 'bulma', 'reactstrap',
-  'materialize', 'bootstrap', 'semantic', 'emails', 'npm', 'yarn', 'webpack',
-  'gulp', 'gatsby', 'next', 'git', 'babel', 'prettier', 'eslint', 'jest',
-  'iterm', 'vscode', 'phpstorm', 'devtools', 'zeplin', 'sketch', 'figma',
-  'photoshop', 'optim', 'mac', 'node', 'mongo', 'mysql', 'php';
+$technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
+  'preact', 'svelte', 'vue', 'apollo', 'jquery', 'html', 'svg', 'pug',
+  'handlebars', 'markdown', 'laravel', 'css', 'sass', 'less', 'modules', 'bem',
+  'mui', 'styled', 'ant', 'reactstrap', 'materialize', 'bootstrap', 'semantic',
+  'emails', 'npm', 'yarn', 'webpack', 'gulp', 'gatsby', 'next', 'git', 'babel',
+  'prettier', 'eslint', 'jest', 'iterm', 'vscode', 'phpstorm', 'devtools',
+  'zeplin', 'sketch', 'figma', 'photoshop', 'optim', 'paw', 'clickup',
+  'monterey', 'node', 'mongo', 'mysql', 'php', 'docker', 'mac', 'ipad',
+  'keyboard', 'mouse', 'trackpad', 'airpods', 'glasses', 'light', 'mascot',
+  'cup';
 
 .Technologies-Item {
   @include responsiveBlock;

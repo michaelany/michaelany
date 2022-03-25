@@ -33,12 +33,14 @@ export default function Technologies({
   const {t} = useTranslation()
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
-  const handleExpand = (tKey: TKey): (() => void) => () =>
-    setExpanded((expanded: TKey[]) =>
-      expanded.includes(tKey)
-        ? expanded.filter((item) => item !== tKey)
-        : [...expanded, tKey]
-    )
+  const handleExpand =
+    (tKey: TKey): (() => void) =>
+    () =>
+      setExpanded((expanded: TKey[]) =>
+        expanded.includes(tKey)
+          ? expanded.filter((item) => item !== tKey)
+          : [...expanded, tKey]
+      )
 
   return (
     <section

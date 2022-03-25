@@ -133,7 +133,7 @@ const EN = {
       },
       tools: {
         label: 'Use modern frameworks, libraries, and tools',
-        text: 'I regularly follow the technology updates and in constant search for new ones. In addition to <0>basic</0> I use many auxiliary libraries and tools',
+        text: 'I regularly follow the technology updates and in constant search for new ones. In addition to <0>general</0> I use many auxiliary libraries and tools',
       },
       responsive: {
         label: 'Implement responsive interface & animations',
@@ -161,9 +161,10 @@ const EN = {
       logic: 'Logic',
       markup: 'Markup',
       styles: 'Styles',
-      utils: 'Utils',
       tools: 'Tools',
-      other: 'Other',
+      misc: 'Miscellaneous',
+      software: 'Software',
+      hardware: 'Hardware',
     },
     learn: 'Exploring',
   },

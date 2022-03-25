@@ -14,6 +14,7 @@ const images = [
   require('../../assets/img/pictures/js.svg').default,
   require('../../assets/img/pictures/ts.svg').default,
   require('../../assets/img/pictures/react.svg').default,
+  require('../../assets/img/pictures/reactquery.svg').default,
   require('../../assets/img/pictures/redux.svg').default,
   require('../../assets/img/pictures/html.svg').default,
   require('../../assets/img/pictures/pug.svg').default,

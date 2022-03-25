@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
-import {getHours, setHours} from 'date-fns'
+import {getHours} from 'date-fns'
 import {Button} from '@material-ui/core'
 import {
   WebRounded as WebIcon,
