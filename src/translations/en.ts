@@ -9,10 +9,11 @@ const common = {
     language: 'English',
   },
   occupation: {
-    lead: 'Frontend Team Lead',
+    lead: 'Lead Frontend Developer',
     senior: 'Senior Frontend Developer',
     middle: 'Frontend Developer',
     junior: 'Junior Frontend Developer',
+    consult: 'Frontend Development Consultant',
     support: 'Technical Support Engineer',
   },
   portfolio: {
@@ -51,7 +52,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: "I'm engaged in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life",
+    text: "I'm engaged in <0>frontend development</0> & mentoring. I create projects of any complexity from scratch. Bring {{0}} ideas to life",
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
@@ -63,7 +64,7 @@ const EN = {
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `Made my first website at the age of {{0}}. I went from a junior coder to a frontend team lead. I work for a domestic IT company and collaborate with a New Zealand studio. More in <0>${common.title.experience}</0>`,
+        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work in a New Zealand company and consult on front-end development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -75,11 +76,11 @@ const EN = {
       },
       growing: {
         label: 'Constantly learning',
-        text: 'I regularly "sharpen the saw", study new technologies, documentation, articles, courses, books and reports. I am looking for new methods and tools to improve efficiency',
+        text: 'I regularly "sharpen the saw", study new technologies, documentation, articles, courses, books and reports. I am constantly looking for new methods and tools to improve my efficiency',
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'High quality is my main principle. I put all of myself into every project. The strength of the deadline, the experience and the thought of "all is well in moderation" help me focus on speed and result',
+        text: 'High quality is my main principle. I put all of myself into every project. The strength of the deadline, experience and the thought of "all is well in moderation" helps me focus on speed and result',
       },
       education: {
         label: 'Two higher educations',
@@ -87,11 +88,11 @@ const EN = {
       },
       sport: {
         label: 'Sports lover',
-        text: 'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running and hiking. I discovered standup paddleboarding this summer',
+        text: 'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running, hiking and fitness. Recently discovered and loved surfing',
       },
       travel: {
         label: 'Traveler',
-        text: 'Visited {{0}} countries. Love Japan and New Zealand. Climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the Ural bear on the Dyatlov Pass {{1}}',
+        text: 'Visited {{0}} countries. Love Japan and New Zealand. Climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the wild bear at the Dyatlov Pass {{1}}',
       },
       love: {
         label: 'Happy husband',
@@ -144,12 +145,12 @@ const EN = {
         text: 'I write self-documenting and declarative code, explore popular style guides practices, use {{0}} and {{1}}. Human-readable code is more important than the fast one',
       },
       test: {
-        label: 'Refactor, optimize & test',
-        text: 'I check the performance of the project in various browsers  devices. Refactoring the code. I measure and speed up the loading of resources. Minify and optimize files, images',
+        label: 'Optimize, test & refactor',
+        text: 'I check project perfomance in various browsers and devices. I measure and speed up the loading of resources. Minify and optimize files, images. Refactoring code',
       },
       tasks: {
         label: 'Plan, decompose & document',
-        text: 'I plan the backlog, group, decompose, and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
+        text: 'I plan the backlog, group, decompose and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
       },
       mentor: {
         label: 'Make code reviews & teach',
@@ -169,7 +170,7 @@ const EN = {
     learn: 'Exploring',
   },
   experience: {
-    text: "I've been professionally engaged in frontend development for {{0}} years. <0>Senior Developer</0> & <0>Team Lead</0>. Working remotely",
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. Working remotely`,
     duties: 'Responsibilities',
     achievements: 'Achievements',
     current: 'Current position',
@@ -207,7 +208,7 @@ const EN = {
         pathFront: 'Grew from junior to a middle frontend developer',
         internship: 'Created a corporate internship program',
         mentor: 'Trained several juniors',
-        mobile: 'Developed a mobile application on {{0}}',
+        mobile: 'Developed a corporate mobile application on {{0}}',
         design: 'Created several approved design layouts',
         interview:
           'Conducted many interviews and hired a dozen decent developers',
@@ -255,7 +256,11 @@ const EN = {
       step12: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
       step13: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
       step14: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.lead}</0> in the {{0}} company`,
-      step15: `Working as a <0>${common.occupation.lead}</0> in the {{0}}. Continue to collaborate on projects with the {{1}}`,
+      step15: `Worked as a <0>${common.occupation.lead}</0> in the {{0}}. Continued to collaborate on projects with the {{1}}`,
+      step16:
+        'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
+      step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
+      step18: `Work as a <0>${common.occupation.lead}</0> in a New Zealand company {{0}} I give consultations on front-end development`,
     },
   },
   portfolio: {
@@ -404,9 +409,9 @@ const EN = {
     text: {
       part1: 'Do you need my <0>help</0>',
       part2: 'Have a <0>suggestion</0> for me',
-      part3: 'Send a <0>message</0> to <1>{{0}}</1> or use the form',
+      part3: 'Send me a <0>message</0> to <1>{{0}}</1> or use the form',
     },
-    marker: "I'm living here now",
+    marker: 'I live here now',
     form: {
       name: 'Name',
       message: 'Message',

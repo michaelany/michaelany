@@ -11,57 +11,17 @@ import {Animate} from '../common'
 import Job from './Job'
 import {Job as JobInterface} from '../../utils/types'
 import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '../../data/common'
-import {YEARS_OF_EXPERIENCE, CAREER_START_PARTS} from '../../utils/constants'
+import {
+  YEARS_OF_EXPERIENCE,
+  CAREER_START_PARTS,
+  BLANK_LINK_PROPS,
+} from '../../utils/constants'
 
 const jobs: JobInterface[] = [
   {
     current: true,
-    company: COMPANY.t1,
-    occupations: ['lead', 'senior', 'middle'],
-    duties: [
-      'logicApps',
-      'structureApps',
-      'responsive',
-      {tKey: 'rest', values: [FEATURE.rest]},
-      'refactor',
-      'scratch',
-      'support',
-      'tasksTeam',
-      'manage',
-      'review',
-    ],
-    achievements: [
-      'resultCorporate',
-      'pathLead',
-      'internship',
-      'mentor',
-      {
-        tKey: 'mobile',
-        values: [TECHNOLOGY_TITLE.reactnative],
-      },
-      'design',
-      'interview',
-    ],
-    features: [
-      {
-        period: {
-          from: {
-            tKey: 'april',
-            year: 2018,
-          },
-        },
-        Icon: DateRangeIcon,
-      },
-      {tKey: 'busyFull', Icon: ScheduleIcon},
-      {tKey: 'remote', Icon: MyLocationIcon},
-      {tKey: 'office', Icon: MyLocationIcon, disabled: true},
-      {tKey: 'moscow', Icon: RoomIcon},
-    ],
-  },
-  {
-    current: true,
     company: COMPANY.sevenGlyphs,
-    occupations: ['senior', 'middle'],
+    occupations: ['lead', 'senior', 'middle'],
     duties: [
       'logicAppsSites',
       'structureProjects',
@@ -90,10 +50,55 @@ const jobs: JobInterface[] = [
         },
         Icon: DateRangeIcon,
       },
+      {tKey: 'busyPart', Icon: ScheduleIcon, disabled: true},
+      {tKey: 'busyFull', Icon: ScheduleIcon},
+      {tKey: 'remote', Icon: MyLocationIcon},
+      {tKey: 'auckland', Icon: RoomIcon},
+    ],
+  },
+  {
+    current: true,
+    company: COMPANY.t1,
+    occupations: ['consult', 'lead', 'senior', 'middle'],
+    duties: [
+      'logicApps',
+      'structureApps',
+      'responsive',
+      {tKey: 'rest', values: [FEATURE.rest]},
+      'refactor',
+      'scratch',
+      'support',
+      'tasksTeam',
+      'manage',
+      'review',
+    ],
+    achievements: [
+      'resultCorporate',
+      'pathLead',
+      {
+        tKey: 'mobile',
+        values: [TECHNOLOGY_TITLE.reactnative],
+      },
+      'internship',
+      'mentor',
+      'design',
+      'interview',
+    ],
+    features: [
+      {
+        period: {
+          from: {
+            tKey: 'april',
+            year: 2018,
+          },
+        },
+        Icon: DateRangeIcon,
+      },
       {tKey: 'busyPart', Icon: ScheduleIcon},
       {tKey: 'busyFull', Icon: ScheduleIcon, disabled: true},
       {tKey: 'remote', Icon: MyLocationIcon},
-      {tKey: 'auckland', Icon: RoomIcon},
+      {tKey: 'office', Icon: MyLocationIcon, disabled: true},
+      {tKey: 'moscow', Icon: RoomIcon},
     ],
   },
   {
@@ -172,7 +177,11 @@ const jobs: JobInterface[] = [
   },
 ]
 
-const transComponents: JSX.Element[] = [<strong />]
+const transComponents: JSX.Element[] = [
+  <strong />,
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  <a {...BLANK_LINK_PROPS} className="Link" href={COMPANY.sevenGlyphs.href} />,
+]
 
 export default function Work(): JSX.Element {
   const {t} = useTranslation()
@@ -183,7 +192,7 @@ export default function Work(): JSX.Element {
       <p className="MainText">
         <Trans
           i18nKey={`experience.text`}
-          values={[YEARS_OF_EXPERIENCE]}
+          values={[COMPANY.sevenGlyphs.title, YEARS_OF_EXPERIENCE]}
           components={transComponents}
         />
       </p>

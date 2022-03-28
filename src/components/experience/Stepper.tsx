@@ -196,8 +196,43 @@ const steps: StepInterface[] = [
         tKey: 'february',
         year: 2020,
       },
+      to: {
+        tKey: 'january',
+        year: 2022,
+      },
     },
     values: [COMPANY_TITLE.t1, COMPANY_TITLE.sevenGlyphs],
+  },
+  {
+    period: {
+      from: {
+        tKey: 'march',
+        year: 2021,
+      },
+      to: {
+        tKey: 'december',
+        year: 2021,
+      },
+    },
+    values: ['AppStore', 'Google Play'],
+  },
+  {
+    period: {
+      from: {
+        tKey: 'january',
+        year: 2022,
+      },
+    },
+    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
+  },
+  {
+    period: {
+      from: {
+        tKey: 'january',
+        year: 2022,
+      },
+    },
+    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
   },
 ]
 
@@ -205,7 +240,7 @@ const transComponents: JSX.Element[] = [<strong />]
 
 export default function Stepper({sectionRef}: StepperProps): JSX.Element {
   const {t} = useTranslation()
-  const [step, changeStep] = useState<number>(0)
+  const [step, changeStep] = useState<number>(steps.length - 1)
 
   const handleNext = (): void => {
     changeStep(step + 1)

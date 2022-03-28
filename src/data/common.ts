@@ -25,8 +25,8 @@ interface ContactLink {
 }
 
 interface CompanyInterface {
-  t1: Company
   sevenGlyphs: Company
+  t1: Company
   everpoint: Company
   mvideo: Company
 }
@@ -86,15 +86,6 @@ export const CONTACT_LINK: ContactLink = {
 }
 
 export const COMPANY: CompanyInterface = {
-  t1: {
-    title: COMPANY_TITLE.t1,
-    images: [
-      require('../assets/img/companies/t1.png').default,
-      require('../assets/img/companies/t1@2x.png').default,
-    ],
-    color: 'blue',
-    href: 'http://www.t1-consulting.ru',
-  },
   sevenGlyphs: {
     title: COMPANY_TITLE.sevenGlyphs,
     images: [
@@ -103,6 +94,15 @@ export const COMPANY: CompanyInterface = {
     ],
     color: 'default',
     href: 'https://7glyphs.com',
+  },
+  t1: {
+    title: COMPANY_TITLE.t1,
+    images: [
+      require('../assets/img/companies/t1.png').default,
+      require('../assets/img/companies/t1@2x.png').default,
+    ],
+    color: 'blue',
+    href: 'http://www.t1-consulting.ru',
   },
   everpoint: {
     title: COMPANY_TITLE.everpoint,

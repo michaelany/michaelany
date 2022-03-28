@@ -44,7 +44,7 @@ export default function Skills(): JSX.Element {
         tKey: 'performance',
         Icon: SpeedIcon,
         textValues: [
-          'ES6-ES11',
+          'ES6-ES12',
           `${TECHNOLOGY_TITLE.ts} 4`,
           `${TECHNOLOGY_TITLE.react} Hooks`,
           'CSS Grid',
