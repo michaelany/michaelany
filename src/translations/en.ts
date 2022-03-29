@@ -56,7 +56,7 @@ const EN = {
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
-        text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. More in <0>${common.title.portfolio}</0>`,
+        text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. Most of them in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Lead developer & mentor',
@@ -264,8 +264,7 @@ const EN = {
     },
   },
   portfolio: {
-    limit:
-      'Commercial projects released into production and allowed to demonstration',
+    limit: 'Projects released into production and allowed to demonstration',
     developed: 'Developed in',
     filter: {
       all: 'All',
