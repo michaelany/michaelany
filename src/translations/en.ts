@@ -293,6 +293,7 @@ const EN = {
       firstScratchProject:
         'The first commercial project developed from scratch',
       spa: 'Turned the site into a Single Page Application',
+      tryOne: `Worked with {{0}}`,
       tryTwo: `Worked with {{0}}, & {{1}}`,
       tryThree: `Worked with {{0}}, {{1}} & {{2}}`,
       tryOneGraph: `Worked with {{0}} & charts`,
@@ -303,12 +304,15 @@ const EN = {
       mobileDevelopment: 'Released the application to {{0}} & {{1}}',
     },
     project: {
+      madfit: {
+        text: 'Landing page & subscription service for a revolutionary mobile fitness app',
+      },
+      tradease: {
+        text: 'New Zealand building order management website',
+      },
       t1online: {
         type: 'Mobile application',
         text: 'Corporate mobile application for company employees',
-      },
-      madfit: {
-        text: 'A tiny registering & paying application for a fitness service subscription',
       },
       ninjal: {
         text: 'Landing page for a New Zealand truck drivers hire service',

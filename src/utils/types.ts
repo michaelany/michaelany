@@ -35,8 +35,9 @@ export type CompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 export type ProjectType = 'app' | 'site' | 'landing' | 'admin'
 
 export type ProjectName =
-  | 't1online'
   | 'madfit'
+  | 'tradease'
+  | 't1online'
   | 'ninjal'
   | 'ninja'
   | 'celebration'
@@ -159,6 +160,7 @@ export interface Project {
   companyName: CompanyName
   url?: string
   details?: string
+  stores?: string[]
   features: TKey[]
   images: ProjectImages
 }

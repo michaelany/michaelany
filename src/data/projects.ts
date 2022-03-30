@@ -41,10 +41,185 @@ const commonLogo = {
 
 const projects: Project[] = [
   {
+    name: 'madfit',
+    title: 'MadFit',
+    types: ['landing', 'app'],
+    companyName: 'sevenGlyphs',
+    url: 'https://maddielymburner.co',
+    details: 'https://7glyphs.com/portfolio/projects/madfit',
+    features: [
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.gsap}`,
+      },
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'january',
+        text: 2022,
+      },
+    ],
+    images: {
+      logo: [
+        require('../assets/img/logos/madfit_sm.png').default,
+        require('../assets/img/logos/madfit.png').default,
+        require('../assets/img/logos/madfit@2x.png').default,
+      ],
+      desktop: [
+        [
+          require('../assets/img/projects/madfit@2x.jpg').default,
+          require('../assets/img/projects/madfit-desktop-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-desktop-second.jpg').default,
+          require('../assets/img/projects/madfit-desktop-second@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/madfit-desktop-third.jpg').default,
+          require('../assets/img/projects/madfit-desktop-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-desktop-fourth.jpg').default,
+          require('../assets/img/projects/madfit-desktop-fourth@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/madfit-desktop-fifth.jpg').default,
+          require('../assets/img/projects/madfit-desktop-fifth@2x.jpg').default,
+        ],
+      ],
+      mobile: [
+        [
+          require('../assets/img/projects/madfit-mobile-first.jpg').default,
+          require('../assets/img/projects/madfit-mobile-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-mobile-second.jpg').default,
+          require('../assets/img/projects/madfit-mobile-second@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-mobile-third.jpg').default,
+          require('../assets/img/projects/madfit-mobile-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-mobile-fourth.jpg').default,
+          require('../assets/img/projects/madfit-mobile-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/madfit-mobile-fifth.jpg').default,
+          require('../assets/img/projects/madfit-mobile-fifth@2x.jpg').default,
+        ],
+      ],
+    },
+  },
+  {
+    name: 'tradease',
+    title: 'Tradease',
+    types: ['site', 'app'],
+    companyName: 'sevenGlyphs',
+    features: [
+      {
+        tKey: 'scratchGrowthDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}`,
+      },
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.figma}`,
+      {
+        tKey: 'tryOne',
+        values: [TECHNOLOGY_TITLE.reactquery],
+      },
+      {
+        tKey: 'november',
+        text: 2021,
+      },
+    ],
+    images: {
+      logo: [
+        require('../assets/img/logos/tradease_sm.png').default,
+        require('../assets/img/logos/tradease.png').default,
+        require('../assets/img/logos/tradease@2x.png').default,
+      ],
+      desktop: [
+        [
+          require('../assets/img/projects/tradease@2x.jpg').default,
+          require('../assets/img/projects/tradease-desktop-first@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-desktop-second.jpg').default,
+          require('../assets/img/projects/tradease-desktop-second@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-desktop-third.jpg').default,
+          require('../assets/img/projects/tradease-desktop-third@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-desktop-fourth.jpg').default,
+          require('../assets/img/projects/tradease-desktop-fourth@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-desktop-fifth.jpg').default,
+          require('../assets/img/projects/tradease-desktop-fifth@2x.jpg')
+            .default,
+        ],
+      ],
+      mobile: [
+        [
+          require('../assets/img/projects/tradease-mobile-first.jpg').default,
+          require('../assets/img/projects/tradease-mobile-first@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-mobile-second.jpg').default,
+          require('../assets/img/projects/tradease-mobile-second@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-mobile-third.jpg').default,
+          require('../assets/img/projects/tradease-mobile-third@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-mobile-fourth.jpg').default,
+          require('../assets/img/projects/tradease-mobile-fourth@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/tradease-mobile-fifth.jpg').default,
+          require('../assets/img/projects/tradease-mobile-fifth@2x.jpg')
+            .default,
+        ],
+      ],
+    },
+  },
+  {
     name: 't1online',
     title: 'T1 Онлайн',
     types: ['app'],
     companyName: 't1',
+    stores: [
+      'https://apps.apple.com/ru/app/%D1%821-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/id1592700568?l=en',
+      'https://play.google.com/store/apps/details?id=com.t1consulting.t1online',
+    ],
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -54,13 +229,13 @@ const projects: Project[] = [
       },
       `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.reactnative}`,
       `${TECHNOLOGY_TITLE.reactnative} styles`,
-      `${TECHNOLOGY_TITLE.expo}, Xcode, Android Studio, ${TECHNOLOGY_TITLE.figma}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.expo}, Xcode, Android Studio, ${TECHNOLOGY_TITLE.figma}`,
       {
         tKey: 'mobileDevelopment',
         values: ['AppStore', 'Google Play'],
       },
       {
-        tKey: 'november',
+        tKey: 'october',
         text: 2021,
       },
     ],
@@ -95,66 +270,12 @@ const projects: Project[] = [
     },
   },
   {
-    name: 'madfit',
-    title: 'MadFit',
-    types: ['app', 'landing'],
-    companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      {
-        tKey: 'july',
-        text: 2021,
-      },
-    ],
-    images: {
-      logo: [
-        require('../assets/img/logos/madfit_sm.png').default,
-        require('../assets/img/logos/madfit.png').default,
-        require('../assets/img/logos/madfit@2x.png').default,
-      ],
-      desktop: [
-        [
-          require('../assets/img/projects/madfit@2x.jpg').default,
-          require('../assets/img/projects/madfit-desktop-first@2x.jpg').default,
-        ],
-        [
-          require('../assets/img/projects/madfit-desktop-second.jpg').default,
-          require('../assets/img/projects/madfit-desktop-second@2x.jpg')
-            .default,
-        ],
-      ],
-      mobile: [
-        [
-          require('../assets/img/projects/madfit-mobile-first.jpg').default,
-          require('../assets/img/projects/madfit-mobile-first@2x.jpg').default,
-        ],
-        [
-          require('../assets/img/projects/madfit-mobile-second.jpg').default,
-          require('../assets/img/projects/madfit-mobile-second@2x.jpg').default,
-        ],
-      ],
-    },
-  },
-  {
     name: 'ninjal',
     title: 'Road Ninja',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://roadninja.co.nz',
+    details: 'https://7glyphs.com/portfolio/projects/roadninja',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -165,7 +286,7 @@ const projects: Project[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem},  ${TECHNOLOGY_TITLE.gsap}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -231,6 +352,7 @@ const projects: Project[] = [
     title: 'Road Ninja',
     types: ['app', 'site'],
     companyName: 'sevenGlyphs',
+    details: 'https://7glyphs.com/portfolio/projects/roadninja',
     features: [
       {
         tKey: 'markupBusinessLogic',
@@ -1132,7 +1254,7 @@ const projects: Project[] = [
         tKey: 'responsive',
         text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'animations',
       },

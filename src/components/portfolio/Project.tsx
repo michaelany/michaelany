@@ -33,6 +33,7 @@ export default function Project({
           features={project.features}
           url={project.url}
           details={project.details}
+          stores={project.stores}
         />
       }
       secondSection={

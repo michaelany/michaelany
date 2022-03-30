@@ -1,7 +1,5 @@
 import {useTranslation} from 'react-i18next'
-import {Button} from '@material-ui/core'
 import {
-  VisibilityRounded as VisibilityIcon,
   CodeRounded as CodeIcon,
   EventRounded as EventIcon,
   PaletteRounded as PaletteIcon,
@@ -13,11 +11,9 @@ import {
 } from '@material-ui/icons'
 
 import './ProjectDetails.scss'
-import {ReactComponent as SevenGlyphsIcon} from '../../assets/icons/7glyphs.svg'
-import {ReactComponent as EverpointIcon} from '../../assets/icons/everpoint.svg'
-import {Animate, Features, Company} from '../common'
+import {Features, Company} from '../common'
+import ProjectActions from './ProjectActions'
 import {tProjectTypes} from '../../utils/helpers'
-import {BLANK_LINK_PROPS} from '../../utils/constants'
 import {
   ProjectName,
   Feature,
@@ -37,6 +33,7 @@ interface ProjectDetailsProps {
   features: TKey[]
   url?: string
   details?: string
+  stores?: string[]
   href?: string
 }
 
@@ -59,6 +56,7 @@ export default function ProjectDetails({
   features,
   url,
   details,
+  stores,
 }: ProjectDetailsProps): JSX.Element {
   const {t} = useTranslation()
 
@@ -104,42 +102,12 @@ export default function ProjectDetails({
         {company.title}
       </p>
       <Features items={featureItems} />
-      {(url || details) && (
-        <div className="Actions Actions_center">
-          {url && (
-            <Animate className="ProjectDetails-Button" effect="bottom">
-              <Button
-                {...BLANK_LINK_PROPS}
-                className="Button"
-                component="a"
-                endIcon={<VisibilityIcon />}
-                href={url}
-              >
-                {t('other.see')}
-              </Button>
-            </Animate>
-          )}
-          {details && (
-            <Animate className="ProjectDetails-Button" effect="bottom">
-              <Button
-                {...BLANK_LINK_PROPS}
-                className="Button"
-                component="a"
-                endIcon={
-                  companyName === 'everpoint' ? (
-                    <EverpointIcon />
-                  ) : (
-                    <SevenGlyphsIcon width={16} height={16} />
-                  )
-                }
-                href={details}
-              >
-                {t('other.more')}
-              </Button>
-            </Animate>
-          )}
-        </div>
-      )}
+      <ProjectActions
+        url={url}
+        details={details}
+        stores={stores}
+        companyName={companyName}
+      />
     </section>
   )
 }
