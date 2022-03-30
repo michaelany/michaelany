@@ -27,6 +27,7 @@ interface QueryBreakpoint {
 
 interface ProjectRoute {
   madfit: string
+  madfitp: string
   tradease: string
   t1online: string
   ninjal: string
@@ -108,6 +109,7 @@ export const ROUTE: RouteInterface = {
 
 export const PROJECT_ROUTE: ProjectRoute = {
   madfit: '/madfit',
+  madfitp: '/madfit-portal',
   tradease: '/tradease',
   t1online: '/t1-online',
   ninjal: '/road-ninja-landing',
@@ -150,6 +152,7 @@ export const PATH_COLOR: Map<Color> = {
   [ROUTE.portfolio]: 'white',
   [ROUTE.contact]: 'white',
   [PROJECT_ROUTE.madfit]: 'green',
+  [PROJECT_ROUTE.madfitp]: 'green',
   [PROJECT_ROUTE.tradease]: 'blue',
   [PROJECT_ROUTE.t1online]: 'blue',
   [PROJECT_ROUTE.ninjal]: 'red',

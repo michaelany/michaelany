@@ -302,10 +302,14 @@ const EN = {
       darkTheme: 'Dark theme',
       dynamicFormsRouting: 'Dynamic forms, own routing',
       mobileDevelopment: 'Released the application to {{0}} & {{1}}',
+      fastDevelopment: 'Fast development',
     },
     project: {
       madfit: {
-        text: 'Landing page & subscription service for a revolutionary mobile fitness app',
+        text: 'Landing page & subscription service for a mobile fitness application',
+      },
+      madfitp: {
+        text: 'Mini content management system for a mobile fitness application',
       },
       tradease: {
         text: 'New Zealand building order management website',
@@ -321,7 +325,7 @@ const EN = {
         text: 'New Zealand truck drivers hire service',
       },
       celebration: {
-        text: "New Year's mini-application for congratulating company employees",
+        text: "New Year's mini application for congratulating company employees",
       },
       ally: {
         text: 'Landing page for a mobile application for interactive figures {{0}}',

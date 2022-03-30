@@ -2,6 +2,11 @@ import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 import {Project} from '../utils/types'
 
 const commonLogo = {
+  madfit: [
+    require('../assets/img/logos/madfit_sm.png').default,
+    require('../assets/img/logos/madfit.png').default,
+    require('../assets/img/logos/madfit@2x.png').default,
+  ],
   roadNinja: [
     require('../assets/img/logos/road-ninja_sm.png').default,
     require('../assets/img/logos/road-ninja.png').default,
@@ -68,12 +73,9 @@ const projects: Project[] = [
         text: 2022,
       },
     ],
+
     images: {
-      logo: [
-        require('../assets/img/logos/madfit_sm.png').default,
-        require('../assets/img/logos/madfit.png').default,
-        require('../assets/img/logos/madfit@2x.png').default,
-      ],
+      logo: commonLogo.madfit,
       desktop: [
         [
           require('../assets/img/projects/madfit@2x.jpg').default,
@@ -118,6 +120,51 @@ const projects: Project[] = [
         [
           require('../assets/img/projects/madfit-mobile-fifth.jpg').default,
           require('../assets/img/projects/madfit-mobile-fifth@2x.jpg').default,
+        ],
+      ],
+    },
+  },
+  {
+    name: 'madfitp',
+    title: 'MadFit',
+    types: ['admin', 'app'],
+    companyName: 'sevenGlyphs',
+    details: 'https://7glyphs.com/portfolio/projects/madfit',
+    features: [
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'fastDevelopment',
+      },
+      {
+        tKey: 'january',
+        text: 2020,
+      },
+    ],
+    images: {
+      logo: commonLogo.madfit,
+      desktop: [
+        [
+          require('../assets/img/projects/madfitp@2x.jpg').default,
+          require('../assets/img/projects/madfitp-desktop-first@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/madfitp-desktop-second.jpg').default,
+          require('../assets/img/projects/madfitp-desktop-second@2x.jpg')
+            .default,
+        ],
+        [
+          require('../assets/img/projects/madfitp-desktop-third.jpg').default,
+          require('../assets/img/projects/madfitp-desktop-third@2x.jpg')
+            .default,
         ],
       ],
     },
@@ -176,11 +223,6 @@ const projects: Project[] = [
           require('../assets/img/projects/tradease-desktop-fourth@2x.jpg')
             .default,
         ],
-        [
-          require('../assets/img/projects/tradease-desktop-fifth.jpg').default,
-          require('../assets/img/projects/tradease-desktop-fifth@2x.jpg')
-            .default,
-        ],
       ],
       mobile: [
         [
@@ -201,11 +243,6 @@ const projects: Project[] = [
         [
           require('../assets/img/projects/tradease-mobile-fourth.jpg').default,
           require('../assets/img/projects/tradease-mobile-fourth@2x.jpg')
-            .default,
-        ],
-        [
-          require('../assets/img/projects/tradease-mobile-fifth.jpg').default,
-          require('../assets/img/projects/tradease-mobile-fifth@2x.jpg')
             .default,
         ],
       ],
