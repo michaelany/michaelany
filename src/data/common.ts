@@ -164,6 +164,7 @@ export const TECHNOLOGY_TITLE = {
   materialize: 'Materialize',
   bootstrap: 'Bootstrap',
   semantic: 'Semantic UI',
+  gsap: 'GreenSock',
   emails: 'Foundation for Emails',
   npm: 'npm',
   yarn: 'Yarn',
@@ -175,6 +176,7 @@ export const TECHNOLOGY_TITLE = {
   babel: 'Babel',
   prettier: 'Prettier',
   eslint: 'ESLint',
+  storybook: 'Storybook',
   jest: 'Jest',
   item: 'iTerm2',
   vscode: 'Visual Studio Code',
@@ -413,6 +415,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         href: 'https://semantic-ui.com',
       },
       {
+        name: 'gsap',
+        label: TECHNOLOGY_TITLE.gsap,
+        color: 'grass',
+        href: 'https://greensock.com',
+      },
+      {
         name: 'emails',
         label: TECHNOLOGY_TITLE.emails,
         color: 'red',
@@ -482,6 +490,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.gatsby,
         color: 'violet',
         href: 'https://www.gatsbyjs.org',
+      },
+      {
+        name: 'storybook',
+        label: TECHNOLOGY_TITLE.storybook,
+        color: 'red',
+        href: 'https://storybook.js.org',
       },
       {
         name: 'jest',
