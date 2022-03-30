@@ -90,7 +90,9 @@ export default function ProjectLink({
             <div className="ProjectLink-Content">
               <img src={logo[0]} srcSet={`${logo[1]} 2x`} alt={projectTitle} />
               <h3 className="ProjectLink-Title">{projectTitle}</h3>
-              <p className="ProjectLink-Label">{tProjectTypes(t, types)}</p>
+              <p className="ProjectLink-Label">
+                {tProjectTypes(t, types, name)}
+              </p>
             </div>
           </ButtonBase>
         </Tilt>

@@ -300,8 +300,13 @@ const EN = {
       formsTables: 'Many forms & tables',
       darkTheme: 'Dark theme',
       dynamicFormsRouting: 'Dynamic forms, own routing',
+      mobileDevelopment: 'Released the application to {{0}} & {{1}}',
     },
     project: {
+      t1online: {
+        type: 'Mobile application',
+        text: 'Corporate mobile application for company employees',
+      },
       madfit: {
         text: 'A tiny registering & paying application for a fitness service subscription',
       },

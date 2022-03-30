@@ -26,14 +26,16 @@ const Screenshots = ({t, md, name, images}: ScreenshotsProps): JSX.Element => {
 
   return (
     <>
-      <Carousel
-        t={t}
-        md={md}
-        name={name}
-        images={images.desktop}
-        swiper={secondSwiper}
-        setSwiper={setFirstSwiper}
-      />
+      {images.desktop && (
+        <Carousel
+          t={t}
+          md={md}
+          name={name}
+          images={images.desktop}
+          swiper={secondSwiper}
+          setSwiper={setFirstSwiper}
+        />
+      )}
       {images.mobile && (
         <Carousel
           mobile

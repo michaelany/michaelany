@@ -191,6 +191,7 @@ export const TECHNOLOGY_TITLE = {
   clickup: 'ClickUp',
   monterey: 'macOS Monterey',
   reactnative: 'React Native',
+  expo: 'Expo',
   node: 'Node.js',
   mongo: 'MongoDB',
   mysql: 'MySQL',

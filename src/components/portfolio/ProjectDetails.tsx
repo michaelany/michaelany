@@ -84,7 +84,7 @@ export default function ProjectDetails({
     }
   )
   featureItems.push({
-    label: tProjectTypes(t, types),
+    label: tProjectTypes(t, types, name),
     Icon: WebIcon,
   })
 

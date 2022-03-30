@@ -11,6 +11,7 @@ const common = {
   occupationLead: 'Ведущий фронтенд разработчик',
   portfolio: {
     scratchDevelopment: 'Разработка с нуля',
+    support: 'поддержка проекта',
   },
 }
 
@@ -285,10 +286,10 @@ const RU = {
       admin: 'Админка',
     },
     feature: {
-      wholeDevelopment: `${common.portfolio.scratchDevelopment}, развитие, поддержка проекта`,
-      scratchGrowthDevelopment: `${common.portfolio.scratchDevelopment}, поддержка проекта`,
+      wholeDevelopment: `${common.portfolio.scratchDevelopment}, развитие, ${common.portfolio.support}`,
+      scratchGrowthDevelopment: `${common.portfolio.scratchDevelopment}, ${common.portfolio.support}`,
       scratchDevelopment: common.portfolio.scratchDevelopment,
-      growthSupportDevelopment: 'Развитие, поддержка проекта',
+      growthSupportDevelopment: `Развитие, ${common.portfolio.support}`,
       markupBusinessLogic: 'Верстка и разработка части бизнес-логики',
       jqueryReact: 'Переписывание кодовой базы с {{0}} на {{1}}',
       leadWork: 'Тимлид команды фронтенд разработки',
@@ -310,8 +311,13 @@ const RU = {
       formsTables: 'Много форм и таблиц',
       darkTheme: 'Темная тема',
       dynamicFormsRouting: 'Динамические формы, собственный роутинг',
+      mobileDevelopment: 'Зарелизил приложение в {{0}} и {{1}}',
     },
     project: {
+      t1online: {
+        type: 'Мобильное приложение',
+        text: 'Корпоративное мобильное приложение для сотрудников компании',
+      },
       madfit: {
         text: 'Небольшое приложение для регистрации и оплаты подписки фитнес-сервиса',
       },

@@ -26,6 +26,7 @@ interface QueryBreakpoint {
 }
 
 interface ProjectRoute {
+  t1online: string
   madfit: string
   ninjal: string
   ninja: string
@@ -105,6 +106,7 @@ export const ROUTE: RouteInterface = {
 }
 
 export const PROJECT_ROUTE: ProjectRoute = {
+  t1online: '/t1-online',
   madfit: '/madfit',
   ninjal: '/road-ninja-landing',
   ninja: '/road-ninja',
@@ -145,6 +147,7 @@ export const PATH_COLOR: Map<Color> = {
   [ROUTE.experience]: 'violet',
   [ROUTE.portfolio]: 'white',
   [ROUTE.contact]: 'white',
+  [PROJECT_ROUTE.t1online]: 'blue',
   [PROJECT_ROUTE.madfit]: 'red',
   [PROJECT_ROUTE.ninjal]: 'red',
   [PROJECT_ROUTE.ninja]: 'red',

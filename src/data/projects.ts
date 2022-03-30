@@ -41,6 +41,60 @@ const commonLogo = {
 
 const projects: Project[] = [
   {
+    name: 't1online',
+    title: 'T1 Онлайн',
+    types: ['app'],
+    companyName: 't1',
+    features: [
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'leadWork',
+      },
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.reactnative}`,
+      `${TECHNOLOGY_TITLE.reactnative} styles`,
+      `${TECHNOLOGY_TITLE.expo}, Xcode, Android Studio, ${TECHNOLOGY_TITLE.figma}`,
+      {
+        tKey: 'mobileDevelopment',
+        values: ['AppStore', 'Google Play'],
+      },
+      {
+        tKey: 'november',
+        text: 2021,
+      },
+    ],
+    images: {
+      logo: [
+        require('../assets/img/logos/t1_sm.png').default,
+        require('../assets/img/logos/t1.png').default,
+        require('../assets/img/logos/t1@2x.png').default,
+      ],
+      mobile: [
+        [
+          require('../assets/img/projects/t1online-first.jpg').default,
+          require('../assets/img/projects/t1online-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/t1online-second.jpg').default,
+          require('../assets/img/projects/t1online-second@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/t1online-third.jpg').default,
+          require('../assets/img/projects/t1online-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/t1online-fourth.jpg').default,
+          require('../assets/img/projects/t1online-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/t1online-fifth.jpg').default,
+          require('../assets/img/projects/t1online-fifth@2x.jpg').default,
+        ],
+      ],
+    },
+  },
+  {
     name: 'madfit',
     title: 'MadFit',
     types: ['app', 'landing'],

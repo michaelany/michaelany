@@ -35,6 +35,7 @@ export type CompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 export type ProjectType = 'app' | 'site' | 'landing' | 'admin'
 
 export type ProjectName =
+  | 't1online'
   | 'madfit'
   | 'ninjal'
   | 'ninja'
@@ -145,7 +146,7 @@ export interface Job {
 
 export interface ProjectImages {
   logo: string[]
-  desktop: string[][]
+  desktop?: string[][]
   mobile?: string[][]
 }
 
