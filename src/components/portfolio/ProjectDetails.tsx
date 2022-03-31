@@ -23,6 +23,7 @@ import {
   TKey,
 } from '../../utils/types'
 import {COMPANY} from '../../data/common'
+import {BLANK_LINK_PROPS} from '../../utils/constants'
 
 interface ProjectDetailsProps {
   name: ProjectName
@@ -99,7 +100,9 @@ export default function ProjectDetails({
       </div>
       <p className="MainText">
         {t(`${projectKey}.text`, textValues)}. {t('portfolio.developed')}{' '}
-        {company.title}
+        <a {...BLANK_LINK_PROPS} className="Link" href={company.href}>
+          {company.title}
+        </a>
       </p>
       <Features items={featureItems} />
       <ProjectActions

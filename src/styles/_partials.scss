@@ -183,6 +183,7 @@
 .Link {
   font-weight: bold;
   user-select: auto;
+  white-space: nowrap;
   .App_color_white & {
     color: white;
     outline-color: white;
