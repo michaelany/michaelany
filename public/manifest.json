@@ -1,29 +1,29 @@
 {
-    "name": "Michael Any",
-    "short_name": "Michael Any",
-    "description": "The portfolio of Michael Any, Frontend Developer.",
-    "start_url": ".",
-    "display": "standalone",
-    "orientation": "portrait",
-    "theme_color": "#62a5fc",
-    "background_color": "#62a5fc",
-    "icons": [
-        {
-            "src": "/assets/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/assets/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "screenshots" : [
-        {
-          "src": "/assets/preview.png",
-          "sizes": "1200x630",
-          "type": "image/png"
-        }
-    ]
+  "name": "Michael Any",
+  "short_name": "Michael Any",
+  "description": "The portfolio of Michael Any, Frontend Developer.",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#64a6fc",
+  "background_color": "#64a6fc",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/preview.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
 }
