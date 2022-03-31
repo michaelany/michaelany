@@ -1,6 +1,5 @@
 import {useTranslation, TFunction} from 'react-i18next'
 import {NavLink} from 'react-router-dom'
-import cn from 'clsx'
 import {Button, SvgIcon} from '@material-ui/core'
 import {
   HomeRounded as HomeIcon,
