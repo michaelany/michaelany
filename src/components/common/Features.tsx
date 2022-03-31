@@ -4,9 +4,9 @@ import {useMediaQuery, Collapse, Grid} from '@material-ui/core'
 
 import './Features.scss'
 import {Animate} from '../common'
-import {QUERY_BREAKPOINT} from '../../utils/constants'
-import {DURATION} from '../../styles/theme'
-import {Feature, Effect} from '../../utils/types'
+import {QUERY_BREAKPOINT} from 'utils/constants'
+import {DURATION} from 'styles/theme'
+import {Feature, Effect} from 'utils/types'
 
 interface FeaturesProps {
   items: Feature[]

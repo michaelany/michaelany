@@ -4,8 +4,8 @@ import {ButtonBase} from '@material-ui/core'
 
 import './Company.scss'
 import Tooltip from './Tooltip'
-import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Company as CompanyInterface} from '../../utils/types'
+import {BLANK_LINK_PROPS} from 'utils/constants'
+import {Company as CompanyInterface} from 'utils/types'
 
 interface CompanyProps extends CompanyInterface {
   animated?: boolean

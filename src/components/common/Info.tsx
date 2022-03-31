@@ -7,9 +7,9 @@ import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
 import './Info.scss'
 import Features from './Features'
 import Animate from './Animate'
-import {scrollToView} from '../../utils/helpers'
-import {ROOT} from '../../utils/constants'
-import {Feature} from '../../utils/types'
+import {scrollToView} from 'utils/helpers'
+import {ROOT} from 'utils/constants'
+import {Feature} from 'utils/types'
 
 interface InfoProps {
   type: string

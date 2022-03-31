@@ -4,9 +4,9 @@ import {useMediaQuery, Fab} from '@material-ui/core'
 import './SocialLinks.scss'
 import Animate from './Animate'
 import Tooltip from './Tooltip'
-import {getListDelay} from '../../utils/helpers'
-import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '../../utils/constants'
-import {SocialLink} from '../../utils/types'
+import {getListDelay} from 'utils/helpers'
+import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from 'utils/constants'
+import {SocialLink} from 'utils/types'
 
 interface SocialLinksProps {
   links: SocialLink[]

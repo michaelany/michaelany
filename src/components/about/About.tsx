@@ -17,15 +17,15 @@ import {
 
 import {Sections, Info} from '../common'
 import Social from './Social'
-import {PROJECTS_COUNT} from '../../data/projects'
-import {TECHNOLOGY_TITLE} from '../../data/common'
+import {PROJECTS_COUNT} from 'data/projects'
+import {TECHNOLOGY_TITLE} from 'data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
   ROUTE,
   BLANK_LINK_PROPS,
-} from '../../utils/constants'
-import {Feature} from '../../utils/types'
+} from 'utils/constants'
+import {Feature} from 'utils/types'
 
 const textValues: string[] = ['UI/UX']
 

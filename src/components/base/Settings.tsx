@@ -2,10 +2,10 @@ import {useTranslation} from 'react-i18next'
 import {Button} from '@material-ui/core'
 
 import './Settings.scss'
-import {ReactComponent as EnIcon} from '../../assets/icons/en.svg'
-import {ReactComponent as RuIcon} from '../../assets/icons/ru.svg'
+import {ReactComponent as EnIcon} from 'assets/icons/en.svg'
+import {ReactComponent as RuIcon} from 'assets/icons/ru.svg'
 import {Tooltip} from '../common'
-import {isRuLng} from '../../utils/i18n'
+import {isRuLng} from 'utils/i18n'
 
 export default function Settings(): JSX.Element {
   const {t, i18n} = useTranslation()

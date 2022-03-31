@@ -1,6 +1,6 @@
 import {Tooltip as MuiTooltip, TooltipProps} from '@material-ui/core'
 
-import {DETECT} from '../../utils/constants'
+import {DETECT} from 'utils/constants'
 
 export default function Tooltip({
   children,

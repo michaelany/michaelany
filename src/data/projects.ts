@@ -1,5 +1,5 @@
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
-import {Project} from '../utils/types'
+import {Project} from 'utils/types'
 
 const commonLogo = {
   madfit: [

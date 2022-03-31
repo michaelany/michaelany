@@ -8,10 +8,10 @@ import {
 } from '@material-ui/icons'
 
 import './Greeting.scss'
-import frontEndImg from '../../assets/img/pictures/frontend.png'
-import frontEndImg2x from '../../assets/img/pictures/frontend@2x.png'
-import {ReactComponent as HelloIcon} from '../../assets/icons/hello.svg'
-import {ROUTE} from '../../utils/constants'
+import frontEndImg from 'assets/img/pictures/frontend.png'
+import frontEndImg2x from 'assets/img/pictures/frontend@2x.png'
+import {ReactComponent as HelloIcon} from 'assets/icons/hello.svg'
+import {ROUTE} from 'utils/constants'
 
 const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
   const hours: number = getHours(new Date())

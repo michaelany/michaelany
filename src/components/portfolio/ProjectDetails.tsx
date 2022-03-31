@@ -13,7 +13,7 @@ import {
 import './ProjectDetails.scss'
 import {Features, Company} from '../common'
 import ProjectActions from './ProjectActions'
-import {tProjectTypes} from '../../utils/helpers'
+import {tProjectTypes} from 'utils/helpers'
 import {
   ProjectName,
   Feature,
@@ -21,9 +21,9 @@ import {
   CompanyName,
   Company as CompanyInterface,
   TKey,
-} from '../../utils/types'
-import {COMPANY} from '../../data/common'
-import {BLANK_LINK_PROPS} from '../../utils/constants'
+} from 'utils/types'
+import {COMPANY} from 'data/common'
+import {BLANK_LINK_PROPS} from 'utils/constants'
 
 interface ProjectDetailsProps {
   name: ProjectName

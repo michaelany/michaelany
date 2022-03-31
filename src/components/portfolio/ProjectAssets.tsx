@@ -6,8 +6,8 @@ import {useMediaQuery} from '@material-ui/core'
 import './ProjectAssets.scss'
 import {Animate, Pagination, Copyright} from '../common'
 import Carousel from './Carousel'
-import {ROUTE, QUERY_BREAKPOINT} from '../../utils/constants'
-import {ProjectName, ProjectImages} from '../../utils/types'
+import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
+import {ProjectName, ProjectImages} from 'utils/types'
 
 interface ProjectAssetsProps {
   name: ProjectName

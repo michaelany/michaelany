@@ -12,7 +12,7 @@ import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
 import Contact from './contact/Contact'
-import {ROUTE, PATH_COLOR} from '../utils/constants'
+import {ROUTE, PATH_COLOR} from 'utils/constants'
 
 export default function App(): JSX.Element {
   const {pathname} = useLocation()

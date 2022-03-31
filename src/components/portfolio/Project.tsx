@@ -3,9 +3,9 @@ import {RouteChildrenProps, Redirect} from 'react-router-dom'
 import {Sections} from '../common'
 import ProjectDetails from './ProjectDetails'
 import ProjectAssets from './ProjectAssets'
-import {ROUTE, PROJECT_ROUTE} from '../../utils/constants'
-import {Project as ProjectInterface} from '../../utils/types'
-import PROJECTS from '../../data/projects'
+import {ROUTE, PROJECT_ROUTE} from 'utils/constants'
+import {Project as ProjectInterface} from 'utils/types'
+import PROJECTS from 'data/projects'
 
 interface ProjectParams {
   project: string

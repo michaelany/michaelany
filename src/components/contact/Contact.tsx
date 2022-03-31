@@ -3,9 +3,9 @@ import {useTranslation, Trans} from 'react-i18next'
 import {Sections, SocialLinks, Pagination, Copyright} from '../common'
 import ContactForm from './ContactForm'
 import Map from './Map'
-import {BLANK_LINK_PROPS, ROUTE} from '../../utils/constants'
-import {SocialLink} from '../../utils/types'
-import {CONTACT_LINK} from '../../data/common'
+import {BLANK_LINK_PROPS, ROUTE} from 'utils/constants'
+import {SocialLink} from 'utils/types'
+import {CONTACT_LINK} from 'data/common'
 
 const links: SocialLink[] = [
   CONTACT_LINK.telegram,

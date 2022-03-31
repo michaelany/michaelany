@@ -7,8 +7,8 @@ import {
 } from '@material-ui/icons'
 
 import './Pagination.scss'
-import {ROUTE} from '../../utils/constants'
-import {Route, Map} from '../../utils/types'
+import {ROUTE} from 'utils/constants'
+import {Route, Map} from 'utils/types'
 
 interface PaginationProps {
   prevTo?: Route

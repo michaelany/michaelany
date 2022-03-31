@@ -6,15 +6,11 @@ import {
 } from '@material-ui/icons'
 
 import './Copyright.scss'
-import {ReactComponent as ReactIcon} from '../../assets/icons/react.svg'
-import {ReactComponent as MuiIcon} from '../../assets/icons/mui.svg'
+import {ReactComponent as ReactIcon} from 'assets/icons/react.svg'
+import {ReactComponent as MuiIcon} from 'assets/icons/mui.svg'
 import {Tooltip} from '../common'
-import {TODAY, BLANK_LINK_PROPS} from '../../utils/constants'
-import {
-  CONTACT_LINK,
-  TECHNOLOGY_TITLE,
-  MAIN_TECHNOLOGY_LINK,
-} from '../../data/common'
+import {TODAY, BLANK_LINK_PROPS} from 'utils/constants'
+import {CONTACT_LINK, TECHNOLOGY_TITLE, MAIN_TECHNOLOGY_LINK} from 'data/common'
 
 interface Link {
   title: string

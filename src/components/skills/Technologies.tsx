@@ -12,10 +12,10 @@ import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
 
 import './Technologies.scss'
 import {Animate, Pagination, Copyright} from '../common'
-import {TECHNOLOGY_GROUPS} from '../../data/common'
 import TechnologyList from './TechnologyList'
-import {ROUTE, QUERY_BREAKPOINT} from '../../utils/constants'
-import {TechnologyGroup, TKey} from '../../utils/types'
+import {TECHNOLOGY_GROUPS} from 'data/common'
+import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
+import {TechnologyGroup, TKey} from 'utils/types'
 
 interface TechnologiesProps {
   expanded: TKey[]

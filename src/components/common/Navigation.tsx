@@ -12,8 +12,8 @@ import {
 
 import './Navigation.scss'
 import Tooltip from './Tooltip'
-import {ROUTE} from '../../utils/constants'
-import {Route} from '../../utils/types'
+import {ROUTE} from 'utils/constants'
+import {Route} from 'utils/types'
 
 interface NavigationProps {
   onClose?: () => void

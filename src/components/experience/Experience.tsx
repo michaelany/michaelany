@@ -5,7 +5,7 @@ import {useMediaQuery} from '@material-ui/core'
 import {Animate, Sections, Pagination, Copyright} from '../common'
 import Work from './Work'
 import Stepper from './Stepper'
-import {ROUTE, QUERY_BREAKPOINT} from '../../utils/constants'
+import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
 
 export default function Experience(): JSX.Element {
   const {t} = useTranslation()

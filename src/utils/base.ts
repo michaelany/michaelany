@@ -1,5 +1,5 @@
-import {MY_NAME} from '../data/common'
-import {DURATION} from '../styles/theme'
+import {MY_NAME} from 'data/common'
+import {DURATION} from 'styles/theme'
 
 export const handleAppLoaded = (): void => {
   const preloader: HTMLElement = document.getElementById('preloader')!

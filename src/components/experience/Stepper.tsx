@@ -14,10 +14,10 @@ import {
 } from '@material-ui/icons'
 
 import './Stepper.scss'
-import {scrollToView, tPeriodPart} from '../../utils/helpers'
-import {CAREER_START_PARTS} from '../../utils/constants'
-import {Period} from '../../utils/types'
-import {COMPANY_TITLE} from '../../data/common'
+import {scrollToView, tPeriodPart} from 'utils/helpers'
+import {CAREER_START_PARTS} from 'utils/constants'
+import {Period} from 'utils/types'
+import {COMPANY_TITLE} from 'data/common'
 
 interface StepperProps {
   sectionRef: RefObject<HTMLElement>

@@ -3,28 +3,28 @@ import {useTranslation} from 'react-i18next'
 import cn from 'clsx'
 
 import './Banner.scss'
-import macbookImg from '../../assets/img/shapes/macbook.png'
-import macbookImg2x from '../../assets/img/shapes/macbook@2x.png'
+import macbookImg from 'assets/img/shapes/macbook.png'
+import macbookImg2x from 'assets/img/shapes/macbook@2x.png'
 import {Animate, Pagination, Copyright, Tilt} from '../common'
-import {DETECT, ROUTE, TILT_MAX, TILT_SCALE} from '../../utils/constants'
-import {TiltOptions} from '../../utils/types'
-import {DURATION} from '../../styles/theme'
+import {DETECT, ROUTE, TILT_MAX, TILT_SCALE} from 'utils/constants'
+import {TiltOptions} from 'utils/types'
+import {DURATION} from 'styles/theme'
 
 const images = [
-  require('../../assets/img/pictures/js.svg').default,
-  require('../../assets/img/pictures/ts.svg').default,
-  require('../../assets/img/pictures/react.svg').default,
-  require('../../assets/img/pictures/reactquery.svg').default,
-  require('../../assets/img/pictures/redux.svg').default,
-  require('../../assets/img/pictures/html.svg').default,
-  require('../../assets/img/pictures/pug.svg').default,
-  require('../../assets/img/pictures/css.svg').default,
-  require('../../assets/img/pictures/sass.svg').default,
-  require('../../assets/img/pictures/mui.svg').default,
-  require('../../assets/img/pictures/zeplin.svg').default,
-  require('../../assets/img/pictures/sketch.svg').default,
-  require('../../assets/img/pictures/vscode.svg').default,
-  require('../../assets/img/pictures/git.svg').default,
+  require('assets/img/pictures/js.svg').default,
+  require('assets/img/pictures/ts.svg').default,
+  require('assets/img/pictures/react.svg').default,
+  require('assets/img/pictures/reactquery.svg').default,
+  require('assets/img/pictures/redux.svg').default,
+  require('assets/img/pictures/html.svg').default,
+  require('assets/img/pictures/pug.svg').default,
+  require('assets/img/pictures/css.svg').default,
+  require('assets/img/pictures/sass.svg').default,
+  require('assets/img/pictures/mui.svg').default,
+  require('assets/img/pictures/zeplin.svg').default,
+  require('assets/img/pictures/sketch.svg').default,
+  require('assets/img/pictures/vscode.svg').default,
+  require('assets/img/pictures/git.svg').default,
 ]
 
 const tiltOptions: TiltOptions = {

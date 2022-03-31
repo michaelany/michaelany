@@ -4,9 +4,9 @@ import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import {CircularProgress} from '@material-ui/core'
 
 import './Map.scss'
-import markerIcon from '../../assets/icons/marker.svg'
-import {ROUTE} from '../../utils/constants'
-import STYLES from '../../styles/map'
+import markerIcon from 'assets/icons/marker.svg'
+import {ROUTE} from 'utils/constants'
+import STYLES from 'styles/map'
 
 interface InitialCenter {
   lat: number

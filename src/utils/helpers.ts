@@ -1,7 +1,7 @@
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import {TFunction} from 'react-i18next'
 
-import {DURATION} from '../styles/theme'
+import {DURATION} from 'styles/theme'
 import {ProjectType, PeriodPart, ProjectName} from './types'
 
 export const getListDelay = (order: number): number =>

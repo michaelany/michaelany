@@ -1,11 +1,11 @@
-import {ReactComponent as SevenGlyphsIcon} from '../assets/icons/7glyphs.svg'
-import {ReactComponent as GitHubIcon} from '../assets/icons/github.svg'
-import {ReactComponent as LinkedInIcon} from '../assets/icons/linkedin.svg'
-import {ReactComponent as InstagramIcon} from '../assets/icons/instagram.svg'
-import {ReactComponent as VKIcon} from '../assets/icons/vk.svg'
-import {ReactComponent as FacebookIcon} from '../assets/icons/facebook.svg'
-import {ReactComponent as TelegramIcon} from '../assets/icons/telegram.svg'
-import {SocialLink, Company, TechnologyGroup} from '../utils/types'
+import {ReactComponent as SevenGlyphsIcon} from 'assets/icons/7glyphs.svg'
+import {ReactComponent as GitHubIcon} from 'assets/icons/github.svg'
+import {ReactComponent as LinkedInIcon} from 'assets/icons/linkedin.svg'
+import {ReactComponent as InstagramIcon} from 'assets/icons/instagram.svg'
+import {ReactComponent as VKIcon} from 'assets/icons/vk.svg'
+import {ReactComponent as FacebookIcon} from 'assets/icons/facebook.svg'
+import {ReactComponent as TelegramIcon} from 'assets/icons/telegram.svg'
+import {SocialLink, Company, TechnologyGroup} from 'utils/types'
 
 interface CompanyTitle {
   mvideo: string

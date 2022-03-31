@@ -27,7 +27,7 @@ import {
 import './ContactForm.scss'
 import {Animate} from '../common'
 import SuccessDialog from './SuccessDialog'
-import {Map} from '../../utils/types'
+import {Map} from 'utils/types'
 
 interface Field {
   name: string

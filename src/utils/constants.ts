@@ -2,7 +2,7 @@ import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/en-US'
 
 import {Route, Color, Map} from './types'
-import {BREAKPOINT} from '../styles/theme'
+import {BREAKPOINT} from 'styles/theme'
 
 interface Detect {
   mobile: boolean

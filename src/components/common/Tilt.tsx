@@ -1,9 +1,9 @@
 import {AllHTMLAttributes} from 'react'
 import ReactTilt from 'react-tilt'
 
-import {DETECT} from '../../utils/constants'
-import {TiltOptions} from '../../utils/types'
-import {EASING} from '../../styles/theme'
+import {DETECT} from 'utils/constants'
+import {TiltOptions} from 'utils/types'
+import {EASING} from 'styles/theme'
 
 interface TiltProps extends AllHTMLAttributes<HTMLElement> {
   children: JSX.Element

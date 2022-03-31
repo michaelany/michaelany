@@ -4,9 +4,9 @@ import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
 
 import './Projects.scss'
 import ProjectLink from './ProjectLink'
-import {QUERY_BREAKPOINT} from '../../utils/constants'
-import {Project, ProjectType, Width} from '../../utils/types'
-import PROJECTS from '../../data/projects'
+import {QUERY_BREAKPOINT} from 'utils/constants'
+import {Project, ProjectType, Width} from 'utils/types'
+import PROJECTS from 'data/projects'
 
 type Filter = 'all' | ProjectType
 

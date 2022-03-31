@@ -17,9 +17,9 @@ import {
 
 import {Sections, Info} from '../common'
 import Technologies from './Technologies'
-import {scrollToView} from '../../utils/helpers'
-import {Feature, TechnologyGroup, TKey} from '../../utils/types'
-import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '../../data/common'
+import {scrollToView} from 'utils/helpers'
+import {Feature, TechnologyGroup, TKey} from 'utils/types'
+import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from 'data/common'
 
 const textValues: string[] = [
   TECHNOLOGY_TITLE.ts,

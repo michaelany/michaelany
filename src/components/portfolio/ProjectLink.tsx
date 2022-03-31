@@ -5,7 +5,7 @@ import {Grid, ButtonBase} from '@material-ui/core'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'
-import {getListDelay, tProjectTypes} from '../../utils/helpers'
+import {getListDelay, tProjectTypes} from 'utils/helpers'
 import {
   DETECT,
   ROUTE,
@@ -13,15 +13,9 @@ import {
   TILT_SCALE,
   PROJECT_ROUTE,
   PATH_COLOR,
-} from '../../utils/constants'
-import {
-  Effect,
-  ProjectName,
-  ProjectType,
-  TiltOptions,
-  Width,
-} from '../../utils/types'
-import {DURATION} from '../../styles/theme'
+} from 'utils/constants'
+import {Effect, ProjectName, ProjectType, TiltOptions, Width} from 'utils/types'
+import {DURATION} from 'styles/theme'
 
 interface ProjectLinkProps {
   t: TFunction

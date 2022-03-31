@@ -16,13 +16,8 @@ import {
 
 import './Job.scss'
 import {Tooltip, Company} from '../common'
-import {tPeriodPart} from '../../utils/helpers'
-import {
-  Job as JobInterface,
-  JobFeature,
-  TKey,
-  TKeyObject,
-} from '../../utils/types'
+import {tPeriodPart} from 'utils/helpers'
+import {Job as JobInterface, JobFeature, TKey, TKeyObject} from 'utils/types'
 
 interface JobProps extends JobInterface {
   t: TFunction

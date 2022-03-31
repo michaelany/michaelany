@@ -2,7 +2,7 @@ import i18n, {InitOptions} from 'i18next'
 import {initReactI18next} from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-import {EN, RU} from '../translations'
+import {EN, RU} from 'translations'
 
 export const isRuLng = (lng: string): boolean => lng.startsWith('ru')
 

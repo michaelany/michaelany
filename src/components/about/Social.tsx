@@ -4,10 +4,10 @@ import {useMediaQuery} from '@material-ui/core'
 import cn from 'clsx'
 
 import './Social.scss'
-import meNormalImg from '../../assets/img/pictures/me-normal.jpg'
-import meNormalImg2x from '../../assets/img/pictures/me-normal@2x.jpg'
-import meExcitedImg from '../../assets/img/pictures/me-excited.jpg'
-import meExcitedImg2x from '../../assets/img/pictures/me-excited@2x.jpg'
+import meNormalImg from 'assets/img/pictures/me-normal.jpg'
+import meNormalImg2x from 'assets/img/pictures/me-normal@2x.jpg'
+import meExcitedImg from 'assets/img/pictures/me-excited.jpg'
+import meExcitedImg2x from 'assets/img/pictures/me-excited@2x.jpg'
 import {Animate, SocialLinks, Pagination, Copyright, Tilt} from '../common'
 import {
   DETECT,
@@ -15,10 +15,10 @@ import {
   TILT_MAX,
   TILT_SCALE,
   QUERY_BREAKPOINT,
-} from '../../utils/constants'
-import {SocialLink, TiltOptions} from '../../utils/types'
-import {MY_NAME, CONTACT_LINK} from '../../data/common'
-import {DURATION} from '../../styles/theme'
+} from 'utils/constants'
+import {SocialLink, TiltOptions} from 'utils/types'
+import {MY_NAME, CONTACT_LINK} from 'data/common'
+import {DURATION} from 'styles/theme'
 
 const tiltOptions: TiltOptions = {
   max: DETECT.safari ? 0 : TILT_MAX,

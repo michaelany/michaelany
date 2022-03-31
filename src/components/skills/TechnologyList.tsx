@@ -5,8 +5,8 @@ import {Grid, ButtonBase, ButtonBaseActions} from '@material-ui/core'
 
 import './TechnologyList.scss'
 import {Tooltip} from '../common'
-import {BLANK_LINK_PROPS} from '../../utils/constants'
-import {Technology} from '../../utils/types'
+import {BLANK_LINK_PROPS} from 'utils/constants'
+import {Technology} from 'utils/types'
 
 interface TechnologyListProps {
   t: TFunction
@@ -18,7 +18,7 @@ export default function TechnologyList({
   t,
   technologies,
   firstTechnologyActionRef,
-}: TechnologyListProps) {
+}: TechnologyListProps): JSX.Element {
   return (
     <Grid container component="ul">
       {technologies.map(

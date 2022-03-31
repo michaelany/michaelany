@@ -9,13 +9,13 @@ import {
 import './Work.scss'
 import {Animate} from '../common'
 import Job from './Job'
-import {Job as JobInterface} from '../../utils/types'
-import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '../../data/common'
+import {Job as JobInterface} from 'utils/types'
+import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from 'data/common'
 import {
   YEARS_OF_EXPERIENCE,
   CAREER_START_PARTS,
   BLANK_LINK_PROPS,
-} from '../../utils/constants'
+} from 'utils/constants'
 
 const jobs: JobInterface[] = [
   {

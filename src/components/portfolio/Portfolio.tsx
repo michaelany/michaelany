@@ -5,8 +5,8 @@ import {Tooltip} from '@material-ui/core'
 import './Portfolio.scss'
 import {Pagination, Copyright} from '../common'
 import Projects from './Projects'
-import {ROUTE} from '../../utils/constants'
-import {DURATION} from '../../styles/theme'
+import {ROUTE} from 'utils/constants'
+import {DURATION} from 'styles/theme'
 
 export default function Portfolio(): JSX.Element {
   const {t} = useTranslation()
