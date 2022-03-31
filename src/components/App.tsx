@@ -42,7 +42,7 @@ export default function App(): JSX.Element {
           <Route path={ROUTE.experience} element={<Experience />} />
           <Route path={ROUTE.portfolio}>
             <Route index element={<Portfolio />} />
-            <Route path={':project'} element={<Project />} />
+            <Route path=":project" element={<Project />} />
           </Route>
           <Route path={ROUTE.contact} element={<Contact />} />
           <Route path="*" element={<Navigate replace to={ROUTE.home} />} />

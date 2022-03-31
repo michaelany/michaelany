@@ -27,7 +27,6 @@ import {
 import './ContactForm.scss'
 import {Animate} from '../common'
 import SuccessDialog from './SuccessDialog'
-import {Map} from 'utils/types'
 
 interface Field {
   name: string
@@ -48,14 +47,14 @@ const field: Field = {
   message: 'message',
 }
 
-const getInitialData = (value: any): Map<any> =>
+const getInitialData = (value: any): Record<string, any> =>
   Object.fromEntries(Object.entries(field).map(([key]) => [key, value]))
 
-const initialValues: Map<string> = getInitialData('')
+const initialValues: Record<string, string> = getInitialData('')
 
-const initialErrors: Map<boolean> = getInitialData(false)
+const initialErrors: Record<string, boolean> = getInitialData(false)
 
-const inputProps: Map<InputProps> = {
+const inputProps: Record<string, InputProps> = {
   [field.name]: {
     disableUnderline: true,
     endAdornment: (
@@ -87,7 +86,7 @@ export default function ContactForm(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
-  const fieldElements: Map<MutableRefObject<HTMLInputElement>> = {
+  const fieldElements: Record<string, MutableRefObject<HTMLInputElement>> = {
     [field.name]: useRef<HTMLInputElement>(null!),
     [field.email]: useRef<HTMLInputElement>(null!),
     [field.message]: useRef<HTMLInputElement>(null!),

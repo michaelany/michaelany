@@ -8,14 +8,14 @@ import {
 
 import './Pagination.scss'
 import {ROUTE} from 'utils/constants'
-import {Route, Map} from 'utils/types'
+import {Route} from 'utils/types'
 
 interface PaginationProps {
   prevTo?: Route
   nextTo?: Route
 }
 
-const pathKeys: Map<string> = {
+const pathKeys: Record<string, string> = {
   [ROUTE.home]: 'home',
   [ROUTE.about]: 'about',
   [ROUTE.skills]: 'skills',

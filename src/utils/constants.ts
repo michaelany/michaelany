@@ -1,7 +1,7 @@
 import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/en-US'
 
-import {Route, Color, Map} from './types'
+import {Route, Color} from './types'
 import {BREAKPOINT} from 'styles/theme'
 
 interface Detect {
@@ -146,7 +146,7 @@ export const PROJECT_ROUTE: ProjectRoute = {
   msp: '/msp',
 }
 
-export const PATH_COLOR: Map<Color> = {
+export const PATH_COLOR: Record<Route | string, Color> = {
   [ROUTE.home]: 'alternate',
   [ROUTE.about]: 'green',
   [ROUTE.skills]: 'blue',

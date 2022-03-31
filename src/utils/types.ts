@@ -73,10 +73,6 @@ export type ProjectName =
 
 export type TKey = string | TKeyObject
 
-export interface Map<T> {
-  [key: string]: T
-}
-
 export interface TKeyObject {
   tKey?: string
   tKeys?: string[]
