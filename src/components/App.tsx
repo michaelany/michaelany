@@ -1,4 +1,4 @@
-import {Switch, Route, Redirect, useLocation} from 'react-router-dom'
+import {Routes, Route, Navigate, useLocation} from 'react-router-dom'
 import cn from 'clsx'
 import {Hidden} from '@material-ui/core'
 
@@ -35,20 +35,18 @@ export default function App(): JSX.Element {
         <Header />
       </Hidden>
       <main className="App-Main">
-        <Switch>
-          <Route exact path={ROUTE.home} component={Home} />
-          <Route exact path={ROUTE.about} component={About} />
-          <Route exact path={ROUTE.skills} component={Skills} />
-          <Route exact path={ROUTE.experience} component={Experience} />
-          <Route exact path={ROUTE.portfolio} component={Portfolio} />
-          <Route
-            exact
-            path={`${ROUTE.portfolio}/:project`}
-            component={Project}
-          />
-          <Route exact path={ROUTE.contact} component={Contact} />
-          <Redirect to={ROUTE.home} />
-        </Switch>
+        <Routes>
+          <Route path={ROUTE.home} element={<Home />} />
+          <Route path={ROUTE.about} element={<About />} />
+          <Route path={ROUTE.skills} element={<Skills />} />
+          <Route path={ROUTE.experience} element={<Experience />} />
+          <Route path={ROUTE.portfolio}>
+            <Route index element={<Portfolio />} />
+            <Route path={':project'} element={<Project />} />
+          </Route>
+          <Route path={ROUTE.contact} element={<Contact />} />
+          <Route path="*" element={<Navigate replace to={ROUTE.home} />} />
+        </Routes>
       </main>
     </div>
   )

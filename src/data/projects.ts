@@ -83,7 +83,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/madfit-desktop-second.jpg'),
-          require('assets/img/projects/madfit-desktop-second@2x.jpg').default,
+          require('assets/img/projects/madfit-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/madfit-desktop-third.jpg'),
@@ -91,7 +91,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/madfit-desktop-fourth.jpg'),
-          require('assets/img/projects/madfit-desktop-fourth@2x.jpg').default,
+          require('assets/img/projects/madfit-desktop-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/madfit-desktop-fifth.jpg'),
@@ -151,15 +151,15 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/madfitp@2x.jpg'),
-          require('assets/img/projects/madfitp-desktop-first@2x.jpg').default,
+          require('assets/img/projects/madfitp-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/madfitp-desktop-second.jpg'),
-          require('assets/img/projects/madfitp-desktop-second@2x.jpg').default,
+          require('assets/img/projects/madfitp-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/madfitp-desktop-third.jpg'),
-          require('assets/img/projects/madfitp-desktop-third@2x.jpg').default,
+          require('assets/img/projects/madfitp-desktop-third@2x.jpg'),
         ],
       ],
     },
@@ -279,37 +279,37 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/tradease@2x.jpg'),
-          require('assets/img/projects/tradease-desktop-first@2x.jpg').default,
+          require('assets/img/projects/tradease-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/tradease-desktop-second.jpg'),
-          require('assets/img/projects/tradease-desktop-second@2x.jpg').default,
+          require('assets/img/projects/tradease-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/tradease-desktop-third.jpg'),
-          require('assets/img/projects/tradease-desktop-third@2x.jpg').default,
+          require('assets/img/projects/tradease-desktop-third@2x.jpg'),
         ],
         [
           require('assets/img/projects/tradease-desktop-fourth.jpg'),
-          require('assets/img/projects/tradease-desktop-fourth@2x.jpg').default,
+          require('assets/img/projects/tradease-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
           require('assets/img/projects/tradease-mobile-first.jpg'),
-          require('assets/img/projects/tradease-mobile-first@2x.jpg').default,
+          require('assets/img/projects/tradease-mobile-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/tradease-mobile-second.jpg'),
-          require('assets/img/projects/tradease-mobile-second@2x.jpg').default,
+          require('assets/img/projects/tradease-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/tradease-mobile-third.jpg'),
-          require('assets/img/projects/tradease-mobile-third@2x.jpg').default,
+          require('assets/img/projects/tradease-mobile-third@2x.jpg'),
         ],
         [
           require('assets/img/projects/tradease-mobile-fourth.jpg'),
-          require('assets/img/projects/tradease-mobile-fourth@2x.jpg').default,
+          require('assets/img/projects/tradease-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -409,7 +409,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/ninjal-desktop-second.jpg'),
-          require('assets/img/projects/ninjal-desktop-second@2x.jpg').default,
+          require('assets/img/projects/ninjal-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/ninjal-desktop-third.jpg'),
@@ -417,7 +417,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/ninjal-desktop-fourth.jpg'),
-          require('assets/img/projects/ninjal-desktop-fourth@2x.jpg').default,
+          require('assets/img/projects/ninjal-desktop-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/ninjal-desktop-fifth.jpg'),
@@ -532,35 +532,29 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/celebration@2x.jpg'),
-          require('assets/img/projects/celebration-desktop-first@2x.jpg')
-            .default,
+          require('assets/img/projects/celebration-desktop-first@2x.jpg'),
         ],
         [
-          require('assets/img/projects/celebration-desktop-second.jpg').default,
-          require('assets/img/projects/celebration-desktop-second@2x.jpg')
-            .default,
+          require('assets/img/projects/celebration-desktop-second.jpg'),
+          require('assets/img/projects/celebration-desktop-second@2x.jpg'),
         ],
         [
-          require('assets/img/projects/celebration-desktop-third.jpg').default,
-          require('assets/img/projects/celebration-desktop-third@2x.jpg')
-            .default,
+          require('assets/img/projects/celebration-desktop-third.jpg'),
+          require('assets/img/projects/celebration-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          require('assets/img/projects/celebration-mobile-first.jpg').default,
-          require('assets/img/projects/celebration-mobile-first@2x.jpg')
-            .default,
+          require('assets/img/projects/celebration-mobile-first.jpg'),
+          require('assets/img/projects/celebration-mobile-first@2x.jpg'),
         ],
         [
-          require('assets/img/projects/celebration-mobile-second.jpg').default,
-          require('assets/img/projects/celebration-mobile-second@2x.jpg')
-            .default,
+          require('assets/img/projects/celebration-mobile-second.jpg'),
+          require('assets/img/projects/celebration-mobile-second@2x.jpg'),
         ],
         [
-          require('assets/img/projects/celebration-mobile-third.jpg').default,
-          require('assets/img/projects/celebration-mobile-third@2x.jpg')
-            .default,
+          require('assets/img/projects/celebration-mobile-third.jpg'),
+          require('assets/img/projects/celebration-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -663,43 +657,37 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/presentmel@2x.jpg'),
-          require('assets/img/projects/presentmel-desktop-first@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmel-desktop-first@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmel-desktop-second.jpg').default,
-          require('assets/img/projects/presentmel-desktop-second@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmel-desktop-second.jpg'),
+          require('assets/img/projects/presentmel-desktop-second@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmel-desktop-third.jpg').default,
-          require('assets/img/projects/presentmel-desktop-third@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmel-desktop-third.jpg'),
+          require('assets/img/projects/presentmel-desktop-third@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmel-desktop-fourth.jpg').default,
-          require('assets/img/projects/presentmel-desktop-fourth@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmel-desktop-fourth.jpg'),
+          require('assets/img/projects/presentmel-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
           require('assets/img/projects/presentmel-mobile-first.jpg'),
-          require('assets/img/projects/presentmel-mobile-first@2x.jpg').default,
+          require('assets/img/projects/presentmel-mobile-first@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmel-mobile-second.jpg').default,
-          require('assets/img/projects/presentmel-mobile-second@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmel-mobile-second.jpg'),
+          require('assets/img/projects/presentmel-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentmel-mobile-third.jpg'),
-          require('assets/img/projects/presentmel-mobile-third@2x.jpg').default,
+          require('assets/img/projects/presentmel-mobile-third@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmel-mobile-fourth.jpg').default,
-          require('assets/img/projects/presentmel-mobile-fourth@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmel-mobile-fourth.jpg'),
+          require('assets/img/projects/presentmel-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -733,18 +721,15 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/presentmep@2x.jpg'),
-          require('assets/img/projects/presentmep-desktop-first@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmep-desktop-first@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmep-desktop-second.jpg').default,
-          require('assets/img/projects/presentmep-desktop-second@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmep-desktop-second.jpg'),
+          require('assets/img/projects/presentmep-desktop-second@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentmep-desktop-third.jpg').default,
-          require('assets/img/projects/presentmep-desktop-third@2x.jpg')
-            .default,
+          require('assets/img/projects/presentmep-desktop-third.jpg'),
+          require('assets/img/projects/presentmep-desktop-third@2x.jpg'),
         ],
       ],
     },
@@ -781,47 +766,45 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/presentme@2x.jpg'),
-          require('assets/img/projects/presentme-desktop-first@2x.jpg').default,
+          require('assets/img/projects/presentme-desktop-first@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentme-desktop-second.jpg').default,
-          require('assets/img/projects/presentme-desktop-second@2x.jpg')
-            .default,
+          require('assets/img/projects/presentme-desktop-second.jpg'),
+          require('assets/img/projects/presentme-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentme-desktop-third.jpg'),
-          require('assets/img/projects/presentme-desktop-third@2x.jpg').default,
+          require('assets/img/projects/presentme-desktop-third@2x.jpg'),
         ],
         [
-          require('assets/img/projects/presentme-desktop-fourth.jpg').default,
-          require('assets/img/projects/presentme-desktop-fourth@2x.jpg')
-            .default,
+          require('assets/img/projects/presentme-desktop-fourth.jpg'),
+          require('assets/img/projects/presentme-desktop-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentme-desktop-fifth.jpg'),
-          require('assets/img/projects/presentme-desktop-fifth@2x.jpg').default,
+          require('assets/img/projects/presentme-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
           require('assets/img/projects/presentme-mobile-first.jpg'),
-          require('assets/img/projects/presentme-mobile-first@2x.jpg').default,
+          require('assets/img/projects/presentme-mobile-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentme-mobile-second.jpg'),
-          require('assets/img/projects/presentme-mobile-second@2x.jpg').default,
+          require('assets/img/projects/presentme-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentme-mobile-third.jpg'),
-          require('assets/img/projects/presentme-mobile-third@2x.jpg').default,
+          require('assets/img/projects/presentme-mobile-third@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentme-mobile-fourth.jpg'),
-          require('assets/img/projects/presentme-mobile-fourth@2x.jpg').default,
+          require('assets/img/projects/presentme-mobile-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/presentme-mobile-fifth.jpg'),
-          require('assets/img/projects/presentme-mobile-fifth@2x.jpg').default,
+          require('assets/img/projects/presentme-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -861,40 +844,38 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/dropdrone@2x.jpg'),
-          require('assets/img/projects/dropdrone-desktop-first@2x.jpg').default,
+          require('assets/img/projects/dropdrone-desktop-first@2x.jpg'),
         ],
 
         [
-          require('assets/img/projects/dropdrone-desktop-second.jpg').default,
-          require('assets/img/projects/dropdrone-desktop-second@2x.jpg')
-            .default,
+          require('assets/img/projects/dropdrone-desktop-second.jpg'),
+          require('assets/img/projects/dropdrone-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/dropdrone-desktop-third.jpg'),
-          require('assets/img/projects/dropdrone-desktop-third@2x.jpg').default,
+          require('assets/img/projects/dropdrone-desktop-third@2x.jpg'),
         ],
         [
-          require('assets/img/projects/dropdrone-desktop-fourth.jpg').default,
-          require('assets/img/projects/dropdrone-desktop-fourth@2x.jpg')
-            .default,
+          require('assets/img/projects/dropdrone-desktop-fourth.jpg'),
+          require('assets/img/projects/dropdrone-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
           require('assets/img/projects/dropdrone-mobile-first.jpg'),
-          require('assets/img/projects/dropdrone-mobile-first@2x.jpg').default,
+          require('assets/img/projects/dropdrone-mobile-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/dropdrone-mobile-second.jpg'),
-          require('assets/img/projects/dropdrone-mobile-second@2x.jpg').default,
+          require('assets/img/projects/dropdrone-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/dropdrone-mobile-third.jpg'),
-          require('assets/img/projects/dropdrone-mobile-third@2x.jpg').default,
+          require('assets/img/projects/dropdrone-mobile-third@2x.jpg'),
         ],
         [
           require('assets/img/projects/dropdrone-mobile-fourth.jpg'),
-          require('assets/img/projects/dropdrone-mobile-fourth@2x.jpg').default,
+          require('assets/img/projects/dropdrone-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -936,19 +917,19 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/hatched@2x.jpg'),
-          require('assets/img/projects/hatched-desktop-first@2x.jpg').default,
+          require('assets/img/projects/hatched-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/hatched-desktop-second.jpg'),
-          require('assets/img/projects/hatched-desktop-second@2x.jpg').default,
+          require('assets/img/projects/hatched-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/hatched-desktop-third.jpg'),
-          require('assets/img/projects/hatched-desktop-third@2x.jpg').default,
+          require('assets/img/projects/hatched-desktop-third@2x.jpg'),
         ],
         [
           require('assets/img/projects/hatched-desktop-fourth.jpg'),
-          require('assets/img/projects/hatched-desktop-fourth@2x.jpg').default,
+          require('assets/img/projects/hatched-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
@@ -958,7 +939,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/hatched-mobile-second.jpg'),
-          require('assets/img/projects/hatched-mobile-second@2x.jpg').default,
+          require('assets/img/projects/hatched-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/hatched-mobile-third.jpg'),
@@ -966,7 +947,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/hatched-mobile-fourth.jpg'),
-          require('assets/img/projects/hatched-mobile-fourth@2x.jpg').default,
+          require('assets/img/projects/hatched-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1065,30 +1046,30 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/proximal@2x.jpg'),
-          require('assets/img/projects/proximal-desktop-first@2x.jpg').default,
+          require('assets/img/projects/proximal-desktop-first@2x.jpg'),
         ],
 
         [
           require('assets/img/projects/proximal-desktop-second.jpg'),
-          require('assets/img/projects/proximal-desktop-second@2x.jpg').default,
+          require('assets/img/projects/proximal-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/proximal-desktop-third.jpg'),
-          require('assets/img/projects/proximal-desktop-third@2x.jpg').default,
+          require('assets/img/projects/proximal-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
           require('assets/img/projects/proximal-mobile-first.jpg'),
-          require('assets/img/projects/proximal-mobile-first@2x.jpg').default,
+          require('assets/img/projects/proximal-mobile-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/proximal-mobile-second.jpg'),
-          require('assets/img/projects/proximal-mobile-second@2x.jpg').default,
+          require('assets/img/projects/proximal-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/proximal-mobile-third.jpg'),
-          require('assets/img/projects/proximal-mobile-third@2x.jpg').default,
+          require('assets/img/projects/proximal-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -1325,15 +1306,15 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/melissa@2x.jpg'),
-          require('assets/img/projects/melissa-desktop-first@2x.jpg').default,
+          require('assets/img/projects/melissa-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/melissa-desktop-second.jpg'),
-          require('assets/img/projects/melissa-desktop-second@2x.jpg').default,
+          require('assets/img/projects/melissa-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/melissa-desktop-third.jpg'),
-          require('assets/img/projects/melissa-desktop-third@2x.jpg').default,
+          require('assets/img/projects/melissa-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
@@ -1343,7 +1324,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/melissa-mobile-second.jpg'),
-          require('assets/img/projects/melissa-mobile-second@2x.jpg').default,
+          require('assets/img/projects/melissa-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/melissa-mobile-third.jpg'),
@@ -1555,7 +1536,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/strong-desktop-second.jpg'),
-          require('assets/img/projects/strong-desktop-second@2x.jpg').default,
+          require('assets/img/projects/strong-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/strong-desktop-third.jpg'),
@@ -1563,7 +1544,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/strong-desktop-fourth.jpg'),
-          require('assets/img/projects/strong-desktop-fourth@2x.jpg').default,
+          require('assets/img/projects/strong-desktop-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/strong-desktop-fifth.jpg'),
@@ -1626,23 +1607,23 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/glyphs2@2x.jpg'),
-          require('assets/img/projects/glyphs2-desktop-first@2x.jpg').default,
+          require('assets/img/projects/glyphs2-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs2-desktop-second.jpg'),
-          require('assets/img/projects/glyphs2-desktop-second@2x.jpg').default,
+          require('assets/img/projects/glyphs2-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs2-desktop-third.jpg'),
-          require('assets/img/projects/glyphs2-desktop-third@2x.jpg').default,
+          require('assets/img/projects/glyphs2-desktop-third@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs2-desktop-fourth.jpg'),
-          require('assets/img/projects/glyphs2-desktop-fourth@2x.jpg').default,
+          require('assets/img/projects/glyphs2-desktop-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs2-desktop-fifth.jpg'),
-          require('assets/img/projects/glyphs2-desktop-fifth@2x.jpg').default,
+          require('assets/img/projects/glyphs2-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
@@ -1652,7 +1633,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/glyphs2-mobile-second.jpg'),
-          require('assets/img/projects/glyphs2-mobile-second@2x.jpg').default,
+          require('assets/img/projects/glyphs2-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs2-mobile-third.jpg'),
@@ -1660,7 +1641,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/glyphs2-mobile-fourth.jpg'),
-          require('assets/img/projects/glyphs2-mobile-fourth@2x.jpg').default,
+          require('assets/img/projects/glyphs2-mobile-fourth@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs2-mobile-fifth.jpg'),
@@ -1756,7 +1737,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/trucks-desktop-second.jpg'),
-          require('assets/img/projects/trucks-desktop-second@2x.jpg').default,
+          require('assets/img/projects/trucks-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/trucks-desktop-third.jpg'),
@@ -1797,29 +1778,29 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/services@2x.jpg'),
-          require('assets/img/projects/services-desktop-first@2x.jpg').default,
+          require('assets/img/projects/services-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/services-desktop-second.jpg'),
-          require('assets/img/projects/services-desktop-second@2x.jpg').default,
+          require('assets/img/projects/services-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/services-desktop-third.jpg'),
-          require('assets/img/projects/services-desktop-third@2x.jpg').default,
+          require('assets/img/projects/services-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
           require('assets/img/projects/services-mobile-first.jpg'),
-          require('assets/img/projects/services-mobile-first@2x.jpg').default,
+          require('assets/img/projects/services-mobile-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/services-mobile-second.jpg'),
-          require('assets/img/projects/services-mobile-second@2x.jpg').default,
+          require('assets/img/projects/services-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/services-mobile-third.jpg'),
-          require('assets/img/projects/services-mobile-third@2x.jpg').default,
+          require('assets/img/projects/services-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -1907,15 +1888,15 @@ const projects: Project[] = [
       desktop: [
         [
           require('assets/img/projects/saffron@2x.jpg'),
-          require('assets/img/projects/saffron-desktop-first@2x.jpg').default,
+          require('assets/img/projects/saffron-desktop-first@2x.jpg'),
         ],
         [
           require('assets/img/projects/saffron-desktop-second.jpg'),
-          require('assets/img/projects/saffron-desktop-second@2x.jpg').default,
+          require('assets/img/projects/saffron-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/saffron-desktop-third.jpg'),
-          require('assets/img/projects/saffron-desktop-third@2x.jpg').default,
+          require('assets/img/projects/saffron-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
@@ -1925,7 +1906,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/saffron-mobile-second.jpg'),
-          require('assets/img/projects/saffron-mobile-second@2x.jpg').default,
+          require('assets/img/projects/saffron-mobile-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/saffron-mobile-third.jpg'),
@@ -2071,7 +2052,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/lazyaz-desktop-second.jpg'),
-          require('assets/img/projects/lazyaz-desktop-second@2x.jpg').default,
+          require('assets/img/projects/lazyaz-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/lazyaz-desktop-third.jpg'),
@@ -2130,7 +2111,7 @@ const projects: Project[] = [
         ],
         [
           require('assets/img/projects/glyphs-desktop-second.jpg'),
-          require('assets/img/projects/glyphs-desktop-second@2x.jpg').default,
+          require('assets/img/projects/glyphs-desktop-second@2x.jpg'),
         ],
         [
           require('assets/img/projects/glyphs-desktop-third.jpg'),

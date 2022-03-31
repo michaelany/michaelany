@@ -1,5 +1,6 @@
 import {useTranslation, TFunction} from 'react-i18next'
 import {NavLink} from 'react-router-dom'
+import cn from 'clsx'
 import {Button, SvgIcon} from '@material-ui/core'
 import {
   HomeRounded as HomeIcon,
@@ -46,10 +47,8 @@ const Item = ({tKey, to, Icon, t, onClose}: ItemProps): JSX.Element => {
       <Tooltip title={title} placement="right">
         <Button
           fullWidth
-          exact={to !== ROUTE.portfolio}
-          className="NavigationButton"
-          activeClassName="Colorful"
           component={NavLink}
+          className="NavigationButton"
           to={to}
           aria-label={title}
           onClick={onClose}

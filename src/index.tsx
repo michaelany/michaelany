@@ -1,5 +1,5 @@
 import {createRoot, Root} from 'react-dom/client'
-import {HashRouter} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 import {
   createTheme,
   StylesProvider,
@@ -31,11 +31,11 @@ const init = () => {
   root.render(
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <HashRouter>
+        <BrowserRouter>
           <CssBaseline />
           <ScrollToTop />
           <App />
-        </HashRouter>
+        </BrowserRouter>
       </ThemeProvider>
     </StylesProvider>
   )

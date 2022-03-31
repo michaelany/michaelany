@@ -1,4 +1,4 @@
-import {RouteChildrenProps, Redirect} from 'react-router-dom'
+import {Navigate, useParams} from 'react-router-dom'
 
 import {Sections} from '../common'
 import ProjectDetails from './ProjectDetails'
@@ -7,19 +7,15 @@ import {ROUTE, PROJECT_ROUTE} from 'utils/constants'
 import {Project as ProjectInterface} from 'utils/types'
 import PROJECTS from 'data/projects'
 
-interface ProjectParams {
-  project: string
-}
+export default function Project(): JSX.Element {
+  const params = useParams()
 
-export default function Project({
-  match,
-}: RouteChildrenProps<ProjectParams>): JSX.Element {
   const project: ProjectInterface | undefined = PROJECTS.find(
     (project: ProjectInterface): boolean =>
-      PROJECT_ROUTE[project.name].slice(1) === match!.params.project
+      PROJECT_ROUTE[project.name].slice(1) === params.project
   )
 
-  if (!project) return <Redirect to={ROUTE.portfolio} />
+  if (!project) return <Navigate to={ROUTE.portfolio} replace={true} />
 
   return (
     <Sections

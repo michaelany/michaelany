@@ -1,4 +1,4 @@
-import {useHistory} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
 import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import {CircularProgress} from '@material-ui/core'
@@ -26,10 +26,10 @@ const LoadingContainer = (): JSX.Element => (
 
 function Map(): JSX.Element {
   const {t, i18n} = useTranslation()
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const handleMarkerClick = (): void => {
-    history.push(ROUTE.about)
+    navigate(ROUTE.about)
   }
 
   return (
