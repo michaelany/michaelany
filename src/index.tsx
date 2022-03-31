@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import {createRoot, Root} from 'react-dom/client'
 import {HashRouter} from 'react-router-dom'
 import {
   createTheme,
@@ -17,6 +17,8 @@ import {ROOT} from './utils/constants'
 import THEME from './styles/theme'
 import {register as registerServiceWorker} from './utils/serviceWorkerRegistration'
 
+const root: Root = createRoot(ROOT)
+
 const init = () => {
   const theme: Theme = createTheme(THEME as object)
 
@@ -26,7 +28,7 @@ const init = () => {
 
   registerServiceWorker()
 
-  ReactDOM.render(
+  root.render(
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <HashRouter>
@@ -35,8 +37,7 @@ const init = () => {
           <App />
         </HashRouter>
       </ThemeProvider>
-    </StylesProvider>,
-    ROOT
+    </StylesProvider>
   )
 }
 
