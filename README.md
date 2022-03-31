@@ -10,9 +10,9 @@
 
 ## [About](https://michaelany.com/#/about)
 
+- 👨‍🏫 &nbsp;Lead frontend developer at [7 glyphs](https://7glyphs.com/) & mentor
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
-- 👨‍🏫 &nbsp;Senior developer & mentor
 - 💼 &nbsp;6 years of [experience](https://michaelany.com/#/experience)
 - 👔 &nbsp;Organized & standalone
 
@@ -40,7 +40,7 @@
 ## [Skills](https://michaelany.com/#/skills)
 
 - 👾 &nbsp;Develop applications, admin panels, landing pages & multi-page sites
-- 🛠 &nbsp;Main stack is `TypeScript` + `React` + `Redux`
+- 🛠 &nbsp;Main stack is `TypeScript` + `React` + `React Query`
 - ✅ &nbsp;Create reliable & well-functioning interfaces
 - 🏎 &nbsp;Write modern & productive code
 - 🎨 &nbsp;Create semantic, cross-browser & Pixel Perfect markup
@@ -63,12 +63,13 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-282828?logo=javascript&logoColor=f7df1e)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-282828?logo=typescript&logoColor=3178c6)
 ![React](https://img.shields.io/badge/-React-282828?logo=react&logoColor=61dafb)
+![React Query](https://img.shields.io/badge/-React_Query-282828?logo=reactquery&logoColor=ff4154)
 ![Redux](https://img.shields.io/badge/-Redux-282828?logo=redux&logoColor=764abc)
 ![HTML](https://img.shields.io/badge/-HTML-282828?logo=html5&logoColor=e34f26)
 ![Pug](https://img.shields.io/badge/-Pug-282828?logo=pug&logoColor=a86454)
 ![CSS](https://img.shields.io/badge/-CSS-282828?logo=css3&logoColor=1572b6)
 ![Sass](https://img.shields.io/badge/-Sass-282828?logo=sass&logoColor=cc6699)
-![Material-UI](https://img.shields.io/badge/-Material_UI-282828?logo=material-ui&logoColor=0081cb)
+![Material-UI](https://img.shields.io/badge/-Material_UI-282828?logo=MUI&logoColor=0081cb)
 ![React Native](https://img.shields.io/badge/-React_Native-282828?logo=react&logoColor=61dafb)
 ![Markdown](https://img.shields.io/badge/-Markdown-282828?logo=markdown&logoColor=white)
 ![Node.js](https://img.shields.io/badge/-Node.js-282828?logo=node.js&logoColor=339933)

@@ -516,6 +516,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         href: 'https://reactnative.dev',
       },
       {
+        name: 'expo',
+        label: TECHNOLOGY_TITLE.expo,
+        color: 'default',
+        href: 'https://expo.dev',
+      },
+      {
         name: 'node',
         label: TECHNOLOGY_TITLE.node,
         color: 'grass',

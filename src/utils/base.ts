@@ -1,10 +1,11 @@
 import {MY_NAME} from '../data/common'
+import {DURATION} from '../styles/theme'
 
 export const handleAppLoaded = (): void => {
   const preloader: HTMLElement = document.getElementById('preloader')!
   preloader.classList.remove('Preloader_show')
   document.body.style.overflow = 'auto'
-  setTimeout(() => preloader.remove(), 1000)
+  setTimeout(() => preloader.remove(), DURATION.longer)
 }
 
 export const logConsoleWelcomeMessage = () => {
