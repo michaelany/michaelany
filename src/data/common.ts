@@ -89,8 +89,8 @@ export const COMPANY: CompanyInterface = {
   sevenGlyphs: {
     title: COMPANY_TITLE.sevenGlyphs,
     images: [
-      require('../assets/img/companies/7glyphs.png').default,
-      require('../assets/img/companies/7glyphs@2x.png').default,
+      require('../assets/img/companies/7glyphs.png'),
+      require('../assets/img/companies/7glyphs@2x.png'),
     ],
     color: 'default',
     href: 'https://7glyphs.com',
@@ -98,8 +98,8 @@ export const COMPANY: CompanyInterface = {
   t1: {
     title: COMPANY_TITLE.t1,
     images: [
-      require('../assets/img/companies/t1.png').default,
-      require('../assets/img/companies/t1@2x.png').default,
+      require('../assets/img/companies/t1.png'),
+      require('../assets/img/companies/t1@2x.png'),
     ],
     color: 'blue',
     href: 'http://www.t1-consulting.ru',
@@ -107,8 +107,8 @@ export const COMPANY: CompanyInterface = {
   everpoint: {
     title: COMPANY_TITLE.everpoint,
     images: [
-      require('../assets/img/companies/everpoint.png').default,
-      require('../assets/img/companies/everpoint@2x.png').default,
+      require('../assets/img/companies/everpoint.png'),
+      require('../assets/img/companies/everpoint@2x.png'),
     ],
     color: 'grass',
     href: 'https://www.everpoint.ru',
@@ -116,8 +116,8 @@ export const COMPANY: CompanyInterface = {
   mvideo: {
     title: COMPANY_TITLE.mvideo,
     images: [
-      require('../assets/img/companies/mvideo.png').default,
-      require('../assets/img/companies/mvideo@2x.png').default,
+      require('../assets/img/companies/mvideo.png'),
+      require('../assets/img/companies/mvideo@2x.png'),
     ],
     color: 'red',
     href: 'https://www.mvideo.ru',
