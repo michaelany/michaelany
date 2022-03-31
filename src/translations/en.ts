@@ -311,6 +311,9 @@ const EN = {
       madfitp: {
         text: 'Mini content management system for a mobile fitness application',
       },
+      vibe: {
+        text: 'Landing page for a New Zealand digital marketing agency',
+      },
       tradease: {
         text: 'New Zealand building order management website',
       },

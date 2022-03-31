@@ -37,6 +37,7 @@ export type ProjectType = 'app' | 'site' | 'landing' | 'admin'
 export type ProjectName =
   | 'madfit'
   | 'madfitp'
+  | 'vibe'
   | 'tradease'
   | 't1online'
   | 'ninjal'

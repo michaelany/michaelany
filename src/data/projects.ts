@@ -170,6 +170,85 @@ const projects: Project[] = [
     },
   },
   {
+    name: 'vibe',
+    title: 'Vibe Media',
+    types: ['landing'],
+    companyName: 'sevenGlyphs',
+    url: 'https://vibemedia.app',
+    features: [
+      {
+        tKey: 'scratchGrowthDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem},  ${TECHNOLOGY_TITLE.gsap}`,
+      },
+      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'december',
+        text: 2021,
+      },
+    ],
+    images: {
+      logo: [
+        require('../assets/img/logos/vibe_sm.png').default,
+        require('../assets/img/logos/vibe.png').default,
+        require('../assets/img/logos/vibe@2x.png').default,
+      ],
+      desktop: [
+        [
+          require('../assets/img/projects/vibe@2x.jpg').default,
+          require('../assets/img/projects/vibe-desktop-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-desktop-second.jpg').default,
+          require('../assets/img/projects/vibe-desktop-second@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-desktop-third.jpg').default,
+          require('../assets/img/projects/vibe-desktop-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-desktop-fourth.jpg').default,
+          require('../assets/img/projects/vibe-desktop-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-desktop-fifth.jpg').default,
+          require('../assets/img/projects/vibe-desktop-fifth@2x.jpg').default,
+        ],
+      ],
+      mobile: [
+        [
+          require('../assets/img/projects/vibe-mobile-first.jpg').default,
+          require('../assets/img/projects/vibe-mobile-first@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-mobile-second.jpg').default,
+          require('../assets/img/projects/vibe-mobile-second@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-mobile-third.jpg').default,
+          require('../assets/img/projects/vibe-mobile-third@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-mobile-fourth.jpg').default,
+          require('../assets/img/projects/vibe-mobile-fourth@2x.jpg').default,
+        ],
+        [
+          require('../assets/img/projects/vibe-mobile-fifth.jpg').default,
+          require('../assets/img/projects/vibe-mobile-fifth@2x.jpg').default,
+        ],
+      ],
+    },
+  },
+  {
     name: 'tradease',
     title: 'Tradease',
     types: ['site', 'app'],
