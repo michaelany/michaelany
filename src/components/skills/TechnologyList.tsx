@@ -4,7 +4,7 @@ import cn from 'clsx'
 import {Grid, ButtonBase, ButtonBaseActions} from '@material-ui/core'
 
 import './TechnologyList.scss'
-import {Tooltip} from '../common'
+import {Tooltip, Tilt} from '../common'
 import {BLANK_LINK_PROPS} from 'utils/constants'
 import {Technology} from 'utils/types'
 
@@ -33,26 +33,28 @@ export default function TechnologyList({
             lg={4}
             xl={3}
           >
-            <Tooltip
-              title={`${disabled ? `${t('skills.learn')} ` : ''}${label}`}
-            >
-              <ButtonBase
-                {...BLANK_LINK_PROPS}
-                focusRipple
-                component="a"
-                className={cn(
-                  `Technologies-Item ColorInteract ColorInteract_color_${color}`,
-                  disabled && 'Technologies-Item_disabled'
-                )}
-                href={href}
-                aria-label={label}
-                action={index === 0 ? firstTechnologyActionRef : undefined}
+            <Tilt className="ProjectLink-Tilt">
+              <Tooltip
+                title={`${disabled ? `${t('skills.learn')} ` : ''}${label}`}
               >
-                <div
-                  className={`Technologies-ItemContent Technologies-ItemContent_name_${name}`}
-                />
-              </ButtonBase>
-            </Tooltip>
+                <ButtonBase
+                  {...BLANK_LINK_PROPS}
+                  focusRipple
+                  component="a"
+                  className={cn(
+                    `Technologies-Item ColorInteract ColorInteract_color_${color}`,
+                    disabled && 'Technologies-Item_disabled'
+                  )}
+                  href={href}
+                  aria-label={label}
+                  action={index === 0 ? firstTechnologyActionRef : undefined}
+                >
+                  <div
+                    className={`Technologies-ItemContent Technologies-ItemContent_name_${name}`}
+                  />
+                </ButtonBase>
+              </Tooltip>
+            </Tilt>
           </Grid>
         )
       )}

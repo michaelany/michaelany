@@ -57,7 +57,7 @@ export default function ProjectLink({
         }
         delay={getDelay(index, width)}
       >
-        <Tilt el="div" className="ProjectLink-Tilt">
+        <Tilt className="ProjectLink-Tilt">
           <ButtonBase
             focusRipple
             component={Link}
