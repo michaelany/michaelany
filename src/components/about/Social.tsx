@@ -9,22 +9,9 @@ import meNormalImg2x from 'assets/img/pictures/me-normal@2x.jpg'
 import meExcitedImg from 'assets/img/pictures/me-excited.jpg'
 import meExcitedImg2x from 'assets/img/pictures/me-excited@2x.jpg'
 import {Animate, SocialLinks, Pagination, Copyright, Tilt} from '../common'
-import {
-  DETECT,
-  ROUTE,
-  TILT_MAX,
-  TILT_SCALE,
-  QUERY_BREAKPOINT,
-} from 'utils/constants'
-import {SocialLink, TiltOptions} from 'utils/types'
+import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
+import {SocialLink} from 'utils/types'
 import {MY_NAME, CONTACT_LINK} from 'data/common'
-import {DURATION} from 'styles/theme'
-
-const tiltOptions: TiltOptions = {
-  max: DETECT.safari ? 0 : TILT_MAX,
-  scale: TILT_SCALE,
-  speed: DURATION.longest,
-}
 
 const links: SocialLink[] = [
   CONTACT_LINK.gitHub,
@@ -61,7 +48,6 @@ const Photo = () => {
       <Tilt
         el="figure"
         className="Social-Photo"
-        options={tiltOptions}
         onMouseOver={handlePhotoOver}
         onMouseOut={handlePhotoOut}
       >

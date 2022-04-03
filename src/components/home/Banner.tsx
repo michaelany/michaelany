@@ -6,8 +6,7 @@ import './Banner.scss'
 import macbookImg from 'assets/img/shapes/macbook.png'
 import macbookImg2x from 'assets/img/shapes/macbook@2x.png'
 import {Animate, Pagination, Copyright, Tilt} from '../common'
-import {DETECT, ROUTE, TILT_MAX, TILT_SCALE} from 'utils/constants'
-import {TiltOptions} from 'utils/types'
+import {ROUTE} from 'utils/constants'
 import {DURATION} from 'styles/theme'
 
 const images = [
@@ -26,13 +25,6 @@ const images = [
   require('assets/img/pictures/vscode.svg').default,
   require('assets/img/pictures/git.svg').default,
 ]
-
-const tiltOptions: TiltOptions = {
-  reset: DETECT.safari,
-  max: DETECT.safari ? 0 : TILT_MAX,
-  scale: DETECT.safari ? TILT_SCALE : 1,
-  speed: DURATION.lingering,
-}
 
 const MacScreen = (): JSX.Element => {
   const [show, setShow] = useState<number>(0)
@@ -82,7 +74,11 @@ export default function Banner(): JSX.Element {
       <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
       <div className="Banner-Content">
         <Animate effect="zoomIn" duration="longest" easing="out">
-          <Tilt el="figure" className="Banner-Figure" options={tiltOptions}>
+          <Tilt
+            el="figure"
+            className="Banner-Figure"
+            speed={DURATION.lingering}
+          >
             <MacScreen />
           </Tilt>
         </Animate>

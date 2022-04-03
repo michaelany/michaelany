@@ -83,9 +83,6 @@ export const DETECT: Detect = {
   safari: /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
 }
 
-export const TILT_MAX: number = 20
-export const TILT_SCALE: number = 1.05
-
 export const CAREER_START_DATE: Date = new Date(2016, 6)
 
 export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy', {

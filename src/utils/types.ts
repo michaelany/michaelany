@@ -163,14 +163,6 @@ export interface Project {
   images: ProjectImages
 }
 
-export interface TiltOptions {
-  reverse?: boolean
-  reset?: boolean
-  max?: number
-  scale?: number
-  speed?: number
-}
-
 export interface Width {
   lg: boolean
   md: boolean

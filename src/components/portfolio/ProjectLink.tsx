@@ -6,16 +6,8 @@ import {Grid, ButtonBase} from '@material-ui/core'
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '../common'
 import {getListDelay, tProjectTypes} from 'utils/helpers'
-import {
-  DETECT,
-  ROUTE,
-  TILT_MAX,
-  TILT_SCALE,
-  PROJECT_ROUTE,
-  PATH_COLOR,
-} from 'utils/constants'
-import {Effect, ProjectName, ProjectType, TiltOptions, Width} from 'utils/types'
-import {DURATION} from 'styles/theme'
+import {DETECT, ROUTE, PROJECT_ROUTE, PATH_COLOR} from 'utils/constants'
+import {Effect, ProjectName, ProjectType, Width} from 'utils/types'
 
 interface ProjectLinkProps {
   t: TFunction
@@ -25,12 +17,6 @@ interface ProjectLinkProps {
   title?: string
   types: ProjectType[]
   logo: string[]
-}
-
-const tiltOptions: TiltOptions = {
-  max: DETECT.safari ? 0 : TILT_MAX,
-  scale: TILT_SCALE,
-  speed: DURATION.longest,
 }
 
 const randomEffects: Effect[] = ['top', 'right', 'bottom', 'left']
@@ -71,7 +57,7 @@ export default function ProjectLink({
         }
         delay={getDelay(index, width)}
       >
-        <Tilt el="div" className="ProjectLink-Tilt" options={tiltOptions}>
+        <Tilt el="div" className="ProjectLink-Tilt">
           <ButtonBase
             focusRipple
             component={Link}
