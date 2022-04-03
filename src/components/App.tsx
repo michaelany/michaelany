@@ -5,6 +5,7 @@ import {Hidden} from '@material-ui/core'
 import './App.scss'
 import Sidebar from './base/Sidebar'
 import Header from './base/Header'
+import StopWar from './base/StopWar'
 import Home from './home/Home'
 import About from './about/About'
 import Skills from './skills/Skills'
@@ -28,6 +29,7 @@ export default function App(): JSX.Element {
 
   return (
     <div className={AppClassName}>
+      <StopWar />
       <Hidden mdDown>
         <Sidebar />
       </Hidden>

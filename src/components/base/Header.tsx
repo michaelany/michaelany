@@ -20,7 +20,7 @@ export default function Header(): JSX.Element {
         <header className="Header">
           <IconButton
             className="Colorful"
-            aria-label="Показать"
+            aria-label="Show"
             onClick={handleOpen}
           >
             <MenuIcon className="ButtonIcon" />

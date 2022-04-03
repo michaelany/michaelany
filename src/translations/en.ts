@@ -449,6 +449,11 @@ const EN = {
     see: 'See it live',
     error: 'Server connection error',
   },
+  stopWar: {
+    text: 'I am Russian and also Ukrainian, my family lives both in Ukraine and Russia. My homeland, led by war criminals, attacked homeland. This is madness! Stop it! <0>NO WAR!</0>',
+    firstHelp: 'Find out how you can help',
+    secondHelp: 'More ways to help',
+  },
 }
 
 export default EN

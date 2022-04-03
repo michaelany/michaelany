@@ -312,7 +312,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         name: 'react',
         label: TECHNOLOGY_TITLE.jsx,
         color: 'blue',
-        href: 'https://reactjs.org/docs/introducing-JSX.html',
+        href: 'https://reactjs.org/docs/introducing-jsx.html',
       },
       {
         name: 'pug',

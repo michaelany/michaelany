@@ -1,0 +1,30 @@
+@import 'styles/variables';
+
+.StopWar {
+  .MuiSnackbarContent-root {
+    background-color: white;
+    color: $color_text;
+    border: 1px solid $color_text;
+  }
+
+  .MuiSnackbarContent-message {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .StopWar-Link {
+    color: $color_dark-blue;
+  }
+}
+
+.StopWar-Icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+  position: relative;
+  top: 4px;
+}
+
+.StopWar-Close {
+  margin-right: -12px;
+  margin-top: -12px;
+}
