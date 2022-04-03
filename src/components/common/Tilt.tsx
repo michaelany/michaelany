@@ -8,6 +8,7 @@ interface TiltProps extends AllHTMLAttributes<HTMLElement> {
   children: JSX.Element
   el?: any
   className?: string
+  enable?: boolean
   speed?: number
 }
 
@@ -15,6 +16,7 @@ export default function Tilt({
   children,
   el: Element,
   className,
+  enable = true,
   speed = DURATION.longest,
   ...props
 }: TiltProps): JSX.Element {
@@ -30,6 +32,7 @@ export default function Tilt({
   ) : (
     <ReactTilt
       className={className}
+      tiltEnable={enable}
       scale={1.05}
       tiltMaxAngleX={10}
       tiltMaxAngleY={10}

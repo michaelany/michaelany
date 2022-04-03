@@ -1,4 +1,3 @@
-import cn from 'clsx'
 import {TFunction} from 'react-i18next'
 import {Link} from 'react-router-dom'
 import {Grid, ButtonBase} from '@material-ui/core'
@@ -51,7 +50,7 @@ export default function ProjectLink({
       xl={3}
     >
       <Animate
-        className={cn(DETECT.mobile && 'ProjectLink-Tilt')}
+        className={DETECT.mobile ? 'ProjectLink-Tilt' : undefined}
         effect={
           width.sm ? undefined : randomEffects[Math.floor(Math.random() * 4)]
         }
