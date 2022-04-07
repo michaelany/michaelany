@@ -20,7 +20,7 @@ export default function StopWar(): JSX.Element {
   const {t} = useTranslation()
 
   useEffect(() => {
-    setTimeout(setOpen, DURATION.medium, true)
+    setTimeout(setOpen, DURATION.longest, true)
   }, [])
 
   const handleClose = (): void => setOpen(false)
