@@ -64,7 +64,7 @@ const EN = {
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work in a New Zealand company and consult on front-end development. More in <0>${common.title.experience}</0>`,
+        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work in a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -260,7 +260,7 @@ const EN = {
       step16:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
-      step18: `Work as a <0>${common.occupation.lead}</0> in a New Zealand company {{0}} I give consultations on front-end development`,
+      step18: `Work as a <0>${common.occupation.lead}</0> in a New Zealand company {{0}} I give consultations on frontend development`,
     },
   },
   portfolio: {
