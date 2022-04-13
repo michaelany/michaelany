@@ -57,7 +57,6 @@ const jobs: JobInterface[] = [
     ],
   },
   {
-    current: true,
     company: COMPANY.t1,
     occupations: ['consult', 'lead', 'senior', 'middle'],
     duties: [
@@ -90,6 +89,10 @@ const jobs: JobInterface[] = [
           from: {
             tKey: 'april',
             year: 2018,
+          },
+          to: {
+            tKey: 'april',
+            year: 2022,
           },
         },
         Icon: DateRangeIcon,
