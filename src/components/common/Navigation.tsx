@@ -4,7 +4,7 @@ import {Button, SvgIcon} from '@material-ui/core'
 import {
   HomeRounded as HomeIcon,
   PersonRounded as PersonIcon,
-  SchoolRounded as SchoolIcon,
+  BuildRounded as BuildIcon,
   WorkRounded as WorkIcon,
   WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
@@ -32,7 +32,7 @@ interface ItemProps extends NavigationProps, NavLinkInterface {
 const navLinks: NavLinkInterface[] = [
   {tKey: 'home', to: ROUTE.home, Icon: HomeIcon},
   {tKey: 'about', to: ROUTE.about, Icon: PersonIcon},
-  {tKey: 'skills', to: ROUTE.skills, Icon: SchoolIcon},
+  {tKey: 'skills', to: ROUTE.skills, Icon: BuildIcon},
   {tKey: 'experience', to: ROUTE.experience, Icon: WorkIcon},
   {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WidgetsIcon},
   {tKey: 'contact', to: ROUTE.contact, Icon: MailIcon},
