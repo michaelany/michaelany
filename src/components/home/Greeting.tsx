@@ -3,7 +3,7 @@ import {useTranslation} from 'react-i18next'
 import {getHours} from 'date-fns'
 import {Button} from '@material-ui/core'
 import {
-  WebRounded as WebIcon,
+  WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
 } from '@material-ui/icons'
 
@@ -77,7 +77,7 @@ export default function Greeting(): JSX.Element {
           component={Link}
           to={ROUTE.portfolio}
           size="large"
-          endIcon={<WebIcon />}
+          endIcon={<WidgetsIcon />}
         >
           {t('title.portfolio')}
         </Button>

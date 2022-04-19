@@ -6,7 +6,7 @@ import {
   PersonRounded as PersonIcon,
   SchoolRounded as SchoolIcon,
   WorkRounded as WorkIcon,
-  WebRounded as WebIcon,
+  WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
 } from '@material-ui/icons'
 
@@ -34,7 +34,7 @@ const navLinks: NavLinkInterface[] = [
   {tKey: 'about', to: ROUTE.about, Icon: PersonIcon},
   {tKey: 'skills', to: ROUTE.skills, Icon: SchoolIcon},
   {tKey: 'experience', to: ROUTE.experience, Icon: WorkIcon},
-  {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WebIcon},
+  {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WidgetsIcon},
   {tKey: 'contact', to: ROUTE.contact, Icon: MailIcon},
 ]
 
