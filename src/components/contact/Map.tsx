@@ -14,8 +14,8 @@ interface InitialCenter {
 }
 
 const initialCenter: InitialCenter = {
-  lat: 41.062548,
-  lng: 28.986351,
+  lat: 42.11486417283666,
+  lng: 19.0856566369828,
 }
 
 const LoadingContainer = (): JSX.Element => (
@@ -38,7 +38,7 @@ function Map(): JSX.Element {
         disableDefaultUI
         google={window.google}
         initialCenter={initialCenter}
-        zoom={6}
+        zoom={7}
         styles={STYLES as any}
       >
         <Marker
