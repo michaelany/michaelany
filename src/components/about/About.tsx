@@ -52,6 +52,7 @@ const countriesVisited: string[] = [
   'Latvia',
   'Montenegro',
   'Albania',
+  'Bosnia & Herzegovina',
 ]
 
 const features: Feature[] = [
