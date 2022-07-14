@@ -17,9 +17,6 @@ const links: SocialLink[] = [
   CONTACT_LINK.gitHub,
   CONTACT_LINK.sevenGlyphs,
   CONTACT_LINK.linkedIn,
-  CONTACT_LINK.instagram,
-  CONTACT_LINK.facebook,
-  CONTACT_LINK.vk,
 ]
 
 const imgSize: number = 320

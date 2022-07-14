@@ -34,7 +34,7 @@ export default function StopWar(): JSX.Element {
         <>
           <RuUaIcon className="StopWar-Icon" />
           <p>
-            <Trans i18nKey="stopWar.text" components={transComponents} /> 🇺🇦
+            <Trans i18nKey="stopWar.text" components={transComponents} />
             <br />
             <a
               {...BLANK_LINK_PROPS}

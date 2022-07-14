@@ -7,13 +7,7 @@ import {BLANK_LINK_PROPS, ROUTE} from 'utils/constants'
 import {SocialLink} from 'utils/types'
 import {CONTACT_LINK} from 'data/common'
 
-const links: SocialLink[] = [
-  CONTACT_LINK.telegram,
-  CONTACT_LINK.linkedIn,
-  CONTACT_LINK.instagram,
-  CONTACT_LINK.facebook,
-  CONTACT_LINK.vk,
-]
+const links: SocialLink[] = [CONTACT_LINK.telegram, CONTACT_LINK.linkedIn]
 
 const email = 'michael.any.dev@gmail.com'
 
