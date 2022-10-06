@@ -82,9 +82,9 @@
 
 ## [Contact](https://michaelany.com/#/contact)
 
-Do you need my **help**? Have a **suggestion** for me? Send a mail to michael.any.dev@gmail.com or use links below:
+Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany.it@gmail.com or use links below:
 
-[<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michael.any.dev@gmail.com)
+[<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michaelany.it@gmail.com)
 [<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/michaelany)
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
 [<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />][instagram]

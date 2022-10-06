@@ -9,7 +9,7 @@ import {CONTACT_LINK} from 'data/common'
 
 const links: SocialLink[] = [CONTACT_LINK.telegram, CONTACT_LINK.linkedIn]
 
-const email = 'michael.any.dev@gmail.com'
+const email = 'michaelany.it@gmail.com'
 
 const transComponents = [
   <strong />,

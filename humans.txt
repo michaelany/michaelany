@@ -1,10 +1,10 @@
 /* TEAM */
 	Author: Michael Any
   GitHub: https://github.com/michaelany
-	Contact: michael.any.dev@gmail.com | https://michaelany.com/#/contact
+	Contact: michaelany.it@gmail.com | https://michaelany.com/#/contact
 
 /* SITE */
-	Last update: 20/04/2022
+	Last update: 06/10/2022
 	Language: English | Russian
 	Components: TypeScript, React, Material-UI, Sass
 	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, macOS Monterey
