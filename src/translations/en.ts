@@ -264,7 +264,8 @@ const EN = {
     },
   },
   portfolio: {
-    limit: 'Projects released into production and allowed to demonstration',
+    limit:
+      'Projects that have been released into production and allowed to demonstration',
     developed: 'Developed in',
     filter: {
       all: 'All',
