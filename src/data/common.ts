@@ -168,6 +168,7 @@ export const TECHNOLOGY_TITLE = {
   emails: 'Foundation for Emails',
   npm: 'npm',
   yarn: 'Yarn',
+  vite: 'Vite',
   webpack: 'webpack',
   gulp: 'Gulp',
   gatsby: 'Gatsby',
@@ -449,6 +450,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.yarn,
         color: 'blue',
         href: 'https://yarnpkg.com',
+      },
+      {
+        name: 'vite',
+        label: TECHNOLOGY_TITLE.vite,
+        color: 'violet',
+        href: 'https://vitejs.dev',
       },
       {
         name: 'webpack',

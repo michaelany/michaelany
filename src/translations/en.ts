@@ -275,7 +275,7 @@ const EN = {
     },
     feature: {
       wholeDevelopment: `${common.portfolio.scratchDevelopment}, project progress & support`,
-      scratchGrowthDevelopment: `${common.portfolio.scratchDevelopment}, project support`,
+      scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, project support`,
       scratchDevelopment: common.portfolio.scratchDevelopment,
       growthSupportDevelopment: 'Project progress & support',
       markupBusinessLogic: 'Markup & development of a part of business logic',
@@ -305,14 +305,17 @@ const EN = {
       fastDevelopment: 'Fast development',
     },
     project: {
+      vconline: {
+        text: 'Landing page of the financial company mobile corporate application',
+      },
       madfit: {
-        text: 'Landing page & subscription service for a mobile fitness application',
+        text: 'Landing page & subscription service the mobile fitness application',
       },
       madfitp: {
-        text: 'Mini content management system for a mobile fitness application',
+        text: 'Mini content management system the mobile fitness application',
       },
       vibe: {
-        text: 'Landing page for a New Zealand digital marketing agency',
+        text: 'Landing page the New Zealand digital marketing agency',
       },
       tradease: {
         text: 'New Zealand building order management website',
@@ -322,7 +325,7 @@ const EN = {
         text: 'Corporate mobile application for company employees',
       },
       ninjal: {
-        text: 'Landing page for a New Zealand truck drivers hire service',
+        text: 'Landing page the New Zealand truck drivers hire service',
       },
       ninja: {
         text: 'New Zealand truck drivers hire service',
@@ -331,10 +334,10 @@ const EN = {
         text: "New Year's mini application for congratulating company employees",
       },
       ally: {
-        text: 'Landing page for a mobile application for interactive figures {{0}}',
+        text: 'Landing page the mobile application for interactive figures {{0}}',
       },
       presentmel: {
-        text: 'Landing page for a New Zealand jobseeker profile creation service',
+        text: 'Landing page the New Zealand jobseeker profile creation service',
       },
       presentmep: {
         text: 'Admin panel of the New Zealand service for creating a job seeker profile',
@@ -346,14 +349,14 @@ const EN = {
         text: 'New Zealand agricultural startup website',
       },
       hatched: {
-        text: 'Landing page for a mobile application tracker for newborn babies',
+        text: 'Landing page the mobile application tracker for newborn babies',
       },
       uls: {
         title: 'United Login System',
         text: '{{0}} single user account',
       },
       proximal: {
-        text: 'Landing page for an Australian coffee shop',
+        text: 'Landing page the Australian coffee shop',
       },
       embp: {
         title: 'EMBP',
@@ -363,7 +366,7 @@ const EN = {
         text: 'New Zealand construction company website',
       },
       lite: {
-        text: 'Landing page for a New Zealand digital agency service',
+        text: 'Landing page for the New Zealand digital agency service',
       },
       melissa: {
         text: 'Fitness blogger landing page',
@@ -372,7 +375,7 @@ const EN = {
         text: 'Portal of the New Zealand discount food ordering service in restaurants',
       },
       food: {
-        text: 'Landing page of a New Zealand service for ordering discount food in restaurants',
+        text: 'Landing page of the New Zealand service for ordering discount food in restaurants',
       },
       sds: {
         text: 'Enterprise service for work with {{0}} document flow',
@@ -381,7 +384,7 @@ const EN = {
         text: 'Mobile fitness application website',
       },
       glyphs2: {
-        text: 'Home website of a New Zealand digital agency',
+        text: 'Home website of the New Zealand digital agency',
       },
       rogue: {
         text: 'New Zealand flight & hotel group booking service',
@@ -390,13 +393,13 @@ const EN = {
         text: 'New Zealand truck traffic monitoring service',
       },
       services: {
-        text: 'Landing page for complex services of a New Zealand digital agency',
+        text: 'Landing page for complex services of the New Zealand digital agency',
       },
       fcdc: {
         text: 'Event management service admin panel',
       },
       saffron: {
-        text: 'Landing page for sale of a private home in New Zealand',
+        text: 'Landing page for sale of the private home in New Zealand',
       },
       whip: {
         text: 'New Zealand vehicle inspection service',
@@ -405,10 +408,10 @@ const EN = {
         text: 'Admin panel of a New Zealand delivery service',
       },
       lazyaz: {
-        text: 'Web platform for a New Zealand delivery service',
+        text: 'Web platform for the New Zealand delivery service',
       },
       glyphs: {
-        text: 'Home site of a New Zealand digital agency',
+        text: 'Home site of the New Zealand digital agency',
       },
       msp: {
         title: 'Business navigator MSP',

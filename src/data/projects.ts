@@ -46,6 +46,85 @@ const commonLogo = {
 
 const projects: Project[] = [
   {
+    name: 'vconline',
+    title: 'VC Online',
+    types: ['landing'],
+    companyName: 'sevenGlyphs',
+    url: 'https://online.vincentcapital.co.nz',
+    features: [
+      {
+        tKey: 'scratchSupportDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.gsap}`,
+      },
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'august',
+        text: 2022,
+      },
+    ],
+    images: {
+      logo: [
+        require('assets/img/logos/vc_sm.png'),
+        require('assets/img/logos/vc.png'),
+        require('assets/img/logos/vc@2x.png'),
+      ],
+      desktop: [
+        [
+          require('assets/img/projects/vconline@2x.jpg'),
+          require('assets/img/projects/vconline-desktop-first@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-desktop-second.jpg'),
+          require('assets/img/projects/vconline-desktop-second@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-desktop-third.jpg'),
+          require('assets/img/projects/vconline-desktop-third@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-desktop-fourth.jpg'),
+          require('assets/img/projects/vconline-desktop-fourth@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-desktop-fifth.jpg'),
+          require('assets/img/projects/vconline-desktop-fifth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          require('assets/img/projects/vconline-mobile-first.jpg'),
+          require('assets/img/projects/vconline-mobile-first@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-mobile-second.jpg'),
+          require('assets/img/projects/vconline-mobile-second@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-mobile-third.jpg'),
+          require('assets/img/projects/vconline-mobile-third@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-mobile-fourth.jpg'),
+          require('assets/img/projects/vconline-mobile-fourth@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/vconline-mobile-fifth.jpg'),
+          require('assets/img/projects/vconline-mobile-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
     name: 'madfit',
     title: 'MadFit',
     types: ['landing', 'app'],
@@ -73,7 +152,6 @@ const projects: Project[] = [
         text: 2022,
       },
     ],
-
     images: {
       logo: commonLogo.madfit,
       desktop: [
@@ -130,7 +208,7 @@ const projects: Project[] = [
     details: 'https://7glyphs.com/portfolio/projects/madfit',
     features: [
       {
-        tKey: 'scratchDevelopment',
+        tKey: 'wholeDevelopment',
       },
       {
         tKey: 'soloWork',
@@ -161,6 +239,14 @@ const projects: Project[] = [
           require('assets/img/projects/madfitp-desktop-third.jpg'),
           require('assets/img/projects/madfitp-desktop-third@2x.jpg'),
         ],
+        [
+          require('assets/img/projects/madfitp-desktop-fourth.jpg'),
+          require('assets/img/projects/madfitp-desktop-fourth@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/madfitp-desktop-fifth.jpg'),
+          require('assets/img/projects/madfitp-desktop-fifth@2x.jpg'),
+        ],
       ],
     },
   },
@@ -172,7 +258,7 @@ const projects: Project[] = [
     url: 'https://vibemedia.app',
     features: [
       {
-        tKey: 'scratchGrowthDevelopment',
+        tKey: 'scratchSupportDevelopment',
       },
       {
         tKey: 'soloWork',
@@ -250,7 +336,7 @@ const projects: Project[] = [
     companyName: 'sevenGlyphs',
     features: [
       {
-        tKey: 'scratchGrowthDevelopment',
+        tKey: 'scratchSupportDevelopment',
       },
       {
         tKey: 'soloWork',
@@ -423,6 +509,10 @@ const projects: Project[] = [
           require('assets/img/projects/ninjal-desktop-fifth.jpg'),
           require('assets/img/projects/ninjal-desktop-fifth@2x.jpg'),
         ],
+        [
+          require('assets/img/projects/ninjal-desktop-sixth.jpg'),
+          require('assets/img/projects/ninjal-desktop-sixth@2x.jpg'),
+        ],
       ],
       mobile: [
         [
@@ -444,6 +534,10 @@ const projects: Project[] = [
         [
           require('assets/img/projects/ninjal-mobile-fifth.jpg'),
           require('assets/img/projects/ninjal-mobile-fifth@2x.jpg'),
+        ],
+        [
+          require('assets/img/projects/ninjal-mobile-sixth.jpg'),
+          require('assets/img/projects/ninjal-mobile-sixth@2x.jpg'),
         ],
       ],
     },
@@ -1659,7 +1753,7 @@ const projects: Project[] = [
     details: 'https://7glyphs.com/portfolio/projects/rogue-travel',
     features: [
       {
-        tKey: 'scratchGrowthDevelopment',
+        tKey: 'scratchSupportDevelopment',
       },
       {
         tKey: 'soloWork',

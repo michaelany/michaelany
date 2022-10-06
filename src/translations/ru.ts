@@ -287,7 +287,7 @@ const RU = {
     },
     feature: {
       wholeDevelopment: `${common.portfolio.scratchDevelopment}, развитие, ${common.portfolio.support}`,
-      scratchGrowthDevelopment: `${common.portfolio.scratchDevelopment}, ${common.portfolio.support}`,
+      scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, ${common.portfolio.support}`,
       scratchDevelopment: common.portfolio.scratchDevelopment,
       growthSupportDevelopment: `Развитие, ${common.portfolio.support}`,
       markupBusinessLogic: 'Верстка и разработка части бизнес-логики',
@@ -316,6 +316,9 @@ const RU = {
       fastDevelopment: 'Быстрая разработка',
     },
     project: {
+      vconline: {
+        text: 'Лендинг корпоративного мобильного приложения финансовой компании',
+      },
       madfit: {
         text: 'Лендинг и сервис оформления подписок для мобильного фитнес-приложения',
       },
