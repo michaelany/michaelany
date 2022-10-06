@@ -10,6 +10,7 @@ const common = {
   },
   occupation: {
     lead: 'Lead Frontend Developer',
+    teamLead: 'Frontend Team Lead',
     senior: 'Senior Frontend Developer',
     middle: 'Frontend Developer',
     junior: 'Junior Frontend Developer',
@@ -254,8 +255,8 @@ const EN = {
       step11: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
       step12: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
       step13: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
-      step14: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.lead}</0> in the {{0}} company`,
-      step15: `Worked as a <0>${common.occupation.lead}</0> in the {{0}}. Continued to collaborate on projects with the {{1}}`,
+      step14: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.teamLead}</0> in the {{0}} company`,
+      step15: `Worked as a <0>${common.occupation.teamLead}</0> in the {{0}}. Continued to collaborate on projects with the {{1}}`,
       step16:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
