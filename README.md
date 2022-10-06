@@ -10,10 +10,10 @@
 
 ## [About](https://michaelany.com/#/about)
 
-- 👨‍🏫 &nbsp;Lead frontend developer at [7 glyphs](https://7glyphs.com/) & mentor
+- 👨‍🏫 &nbsp;Lead software engineer at [7 glyphs](https://7glyphs.com/) & mentor
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
-- 💼 &nbsp;6 years of [experience](https://michaelany.com/#/experience)
+- 💼 &nbsp;7 years of [experience](https://michaelany.com/#/experience)
 - 👔 &nbsp;Organized & standalone
 
 <details>
@@ -33,13 +33,10 @@
 [<img src="https://img.shields.io/badge/-Michael_Any-568bd0?logo=google-chrome&logoColor=white" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
 [<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
-[<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />][instagram]
-[<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />][facebook]
-[<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />][vk]
 
 ## [Skills](https://michaelany.com/#/skills)
 
-- 👾 &nbsp;Develop applications, admin panels, landing pages & multi-page sites
+- 👾 &nbsp;Craft applications, admin panels, landing pages & multi-page sites
 - 🛠 &nbsp;Main stack is `TypeScript` + `React` + `React Query`
 - ✅ &nbsp;Create reliable & well-functioning interfaces
 - 🏎 &nbsp;Write modern & productive code
@@ -87,9 +84,6 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 [<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michaelany.it@gmail.com)
 [<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/michaelany)
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
-[<img src="https://img.shields.io/badge/-Instagram-e4405f?logo=instagram&logoColor=white" alt="Instagram" />][instagram]
-[<img src="https://img.shields.io/badge/-Facebook-1877f2?logo=facebook&logoColor=white" alt="Facebook" />][facebook]
-[<img src="https://img.shields.io/badge/-VK-4680c2?logo=vk&logoColor=white" alt="vk" />][vk]
 
 ## GitHub Analytics
 
