@@ -52,19 +52,19 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: "I'm engaged in <0>frontend development</0> & mentoring. I create projects of any complexity from scratch. Bring {{0}} ideas to life",
+    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life",
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
         text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. Most of them in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Lead developer & mentor',
+        label: 'Lead software engineer & mentor',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work in a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work for a New Zealand digital company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -72,7 +72,7 @@ const EN = {
       },
       programming: {
         label: 'Love to code',
-        text: 'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I plan to launch my own blog',
+        text: 'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I plan to launch my own blog recently',
       },
       growing: {
         label: 'Constantly learning',
@@ -106,7 +106,7 @@ const EN = {
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I develop applications, admin panels, landing pages & multi-page sites. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
+    text: 'I craft applications, admin panels, landing pages & multi-page sites. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
@@ -171,30 +171,29 @@ const EN = {
   },
   experience: {
     text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. Working remotely`,
-    duties: 'Responsibilities',
+    duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
     occupation: common.occupation,
     job: {
       duty: {
-        logicApps: 'Application business logic development',
-        logicAppsSites:
-          'Development of business logic for applications and websites',
-        logicModules: 'Developing the business logic of application components',
-        structureApps: 'Application architecture creation',
-        structureProjects: 'Creation of projects architecture',
+        logicApps: 'Develop applications business logic',
+        logicAppsSites: 'Develop business logic for applications and websites',
+        logicModules: 'Develop application components',
+        structureApps: 'Create applications architecture',
+        structureProjects: 'Create projects architecture',
         responsive: 'Cross-browsing and responsive markup',
         rest: 'Working with {{0}}',
         restSocket: 'Working with {{0}} and {{1}}',
-        refactor: 'Code refactoring and maintenance',
-        scratch: 'Developing projects from scratch',
-        support: 'Projects support',
-        tasks: 'Decomposition and evaluation of tasks',
+        refactor: 'Refactoring and maintain the code',
+        scratch: 'Develop projects from scratch',
+        support: 'Support projects',
+        tasks: 'Decompose and evaluate tasks',
         tasksTeam: 'Planning, decomposing and evaluating team tasks',
         manage: 'Team management and development',
-        review: 'Making code reviews and interviews',
-        serviceDesk: 'Registration and processing of requests in {{0}}',
-        hardwareFix: 'Solving software and hardware issues',
+        review: 'Conducting code reviews and interviews',
+        serviceDesk: 'Registering and processing requests in {{0}}',
+        hardwareFix: 'Solve software and hardware issues',
         hardwareInstall: 'Installing, configuring software and hardware',
         consult: 'Advising employees on technical issues',
       },
@@ -260,7 +259,7 @@ const EN = {
       step16:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
-      step18: `Work as a <0>${common.occupation.lead}</0> in a New Zealand company {{0}} I give consultations on frontend development`,
+      step18: `Work as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I provide frontend development consultations`,
     },
   },
   portfolio: {
