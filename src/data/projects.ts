@@ -46,6 +46,7 @@ const commonLogo = {
 
 const projects: Project[] = [
   {
+    private: true,
     name: 'vconline',
     title: 'VC Online',
     types: ['landing'],
