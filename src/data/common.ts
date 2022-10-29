@@ -190,7 +190,7 @@ export const TECHNOLOGY_TITLE = {
   optim: 'ImageOptim',
   paw: 'Paw',
   clickup: 'ClickUp',
-  monterey: 'macOS Monterey',
+  macos: 'macOS Ventura',
   reactnative: 'React Native',
   expo: 'Expo',
   node: 'Node.js',
@@ -206,9 +206,7 @@ export const TECHNOLOGY_TITLE = {
   trackpad: 'Apple Magic Trackpad 2',
   airpods: 'Apple AirPods Pro',
   glasses: 'Qukan W1',
-  light: 'Cololight Hexagon',
   mascot: 'LEGO Star Wars Stormtrooper',
-  cup: 'Starbucks Plastic Hot Cup',
 }
 
 export const MAIN_TECHNOLOGY_LINK = {
@@ -636,10 +634,10 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         href: 'https://clickup.com',
       },
       {
-        name: 'monterey',
-        label: TECHNOLOGY_TITLE.monterey,
-        color: 'violet',
-        href: 'https://www.apple.com/macos/monterey',
+        name: 'macos',
+        label: TECHNOLOGY_TITLE.macos,
+        color: 'yellow',
+        href: 'https://www.apple.com/macos/ventura',
       },
     ],
   },
@@ -661,7 +659,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
       {
         name: 'keyboard',
         label: TECHNOLOGY_TITLE.keyboard,
-        color: 'default',
+        color: 'red',
         href: 'https://www.keychron.com/collections/low-profile-keyboard-collection/products/keychron-k3-wireless-mechanical-keyboard?variant=32220198928473',
       },
       {
@@ -689,22 +687,10 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         href: 'https://www.aliexpress.com/item/32969115946.html?spm=a2g0o.seodetail.topbuy.1.9ff6269dwNxZiN',
       },
       {
-        name: 'light',
-        label: TECHNOLOGY_TITLE.light,
-        color: 'violet',
-        href: 'https://cololight.com/pages/cololight-hexagon-led-light-panel',
-      },
-      {
         name: 'mascot',
         label: TECHNOLOGY_TITLE.mascot,
         color: 'default',
         href: 'https://media.entertainmentearth.com/assets/images/cfa66064858142faaa7f0cc9cbaa8c98lg.jpg',
-      },
-      {
-        name: 'cup',
-        label: TECHNOLOGY_TITLE.cup,
-        color: 'grass',
-        href: 'https://www.starbucks.com/menu/product/2123291/single',
       },
     ],
   },

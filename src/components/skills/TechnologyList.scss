@@ -5,12 +5,11 @@ $technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
   'preact', 'svelte', 'vue', 'apollo', 'jquery', 'html', 'svg', 'pug',
   'handlebars', 'markdown', 'laravel', 'css', 'sass', 'less', 'modules', 'bem',
   'mui', 'styled', 'ant', 'reactstrap', 'materialize', 'bootstrap', 'semantic',
-  'gsap', 'emails', 'npm', 'yarn', 'vite', 'webpack', 'gulp', 'gatsby', 'next', 'git',
-  'babel', 'prettier', 'eslint', 'storybook', 'jest', 'iterm', 'vscode',
+  'gsap', 'emails', 'npm', 'yarn', 'vite', 'webpack', 'gulp', 'gatsby', 'next',
+  'git', 'babel', 'prettier', 'eslint', 'storybook', 'jest', 'iterm', 'vscode',
   'phpstorm', 'devtools', 'zeplin', 'sketch', 'figma', 'photoshop', 'optim',
-  'paw', 'clickup', 'monterey', 'expo', 'node', 'mongo', 'mysql', 'php',
-  'docker', 'mac', 'ipad', 'keyboard', 'mouse', 'trackpad', 'airpods', 'glasses',
-  'light', 'mascot', 'cup';
+  'paw', 'clickup', 'macos', 'expo', 'node', 'mongo', 'mysql', 'php', 'docker',
+  'mac', 'ipad', 'keyboard', 'mouse', 'trackpad', 'airpods', 'glasses', 'mascot';
 
 .Technologies-Item {
   @include responsiveBlock;
