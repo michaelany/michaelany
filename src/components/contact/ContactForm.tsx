@@ -206,7 +206,7 @@ export default function ContactForm(): JSX.Element {
               multiline
               name={field.message}
               label={t('contact.form.message')}
-              rows="5"
+              minRows={5}
               variant="filled"
               InputProps={inputProps[field.message]}
               inputProps={{ref: fieldElements[field.message]}}

@@ -30,9 +30,11 @@ export default function App(): JSX.Element {
   return (
     <div className={AppClassName}>
       <StopWar />
+      {/* @ts-ignore */}
       <Hidden mdDown>
         <Sidebar />
       </Hidden>
+      {/* @ts-ignore */}
       <Hidden lgUp>
         <Header />
       </Hidden>

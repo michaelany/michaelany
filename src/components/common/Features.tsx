@@ -37,7 +37,7 @@ const ExtraContent = ({
         <Trans
           i18nKey={tKey}
           values={item.textValues}
-          components={[item.Link]}
+          components={[item.Link as any]}
         />
       ) : (
         t(tKey, item.textValues)

@@ -34,8 +34,10 @@ function Map(): JSX.Element {
 
   return (
     <div className="Map">
+      {/* @ts-ignore */}
       <GoogleMap
         disableDefaultUI
+        /* @ts-ignore */
         google={window.google}
         initialCenter={initialCenter}
         zoom={7}
@@ -43,6 +45,7 @@ function Map(): JSX.Element {
       >
         <Marker
           key={i18n.language}
+          /* @ts-ignore */
           title={`${t('contact.marker')} 🏠`}
           icon={markerIcon}
           onClick={handleMarkerClick}
