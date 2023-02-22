@@ -4,7 +4,7 @@
 	Contact: michaelany.it@gmail.com | https://michaelany.com/#/contact
 
 /* SITE */
-	Last update: 21/02/2023
+	Last update: 22/02/2023
 	Language: English | Russian
 	Components: TypeScript, React, Material-UI, Sass
 	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, macOS Monterey
