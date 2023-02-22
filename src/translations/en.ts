@@ -53,7 +53,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life",
+    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life. Live in Montenegro",
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
@@ -65,7 +65,7 @@ const EN = {
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work for a New Zealand digital company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work for the New Zealand digital company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -89,7 +89,7 @@ const EN = {
       },
       sport: {
         label: 'Sports lover',
-        text: 'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running, hiking and fitness. Recently discovered and loved surfing',
+        text: 'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running, hiking and fitness. Recently discovered surfing',
       },
       travel: {
         label: 'Traveler',
@@ -171,7 +171,7 @@ const EN = {
     learn: 'Exploring',
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. Working remotely`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I work remotely`,
     duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
@@ -218,6 +218,7 @@ const EN = {
         speed:
           'Set a personal record for the speed of completion of a project - {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
+        visa: 'Got a work visa to New Zealand from the company',
         english: 'Improved English, cooperating with foreign customers',
         testimonials:
           'Received many complimentary reviews from colleagues and customers',
@@ -261,6 +262,8 @@ const EN = {
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
       step18: `Work as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I provide frontend development consultations`,
+      step19:
+        'Moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Got a work visa. Preparing to move to New Zealand',
     },
   },
   portfolio: {

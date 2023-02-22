@@ -64,9 +64,10 @@ const jobs: JobInterface[] = [
       'resultForeign',
       'technologies',
       {tKey: 'speed', values: [1]},
-      'independent',
       'english',
       'testimonials',
+      'independent',
+      'visa',
     ],
     features: [
       {

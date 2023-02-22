@@ -255,7 +255,5 @@
 
 .Time {
   display: inline-block;
-  &::first-letter {
-    text-transform: uppercase;
-  }
+  text-transform: capitalize;
 }
