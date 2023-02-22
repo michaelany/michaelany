@@ -14,11 +14,12 @@
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 💼 &nbsp;7 years of [experience](https://michaelany.com/#/experience)
-- 👔 &nbsp;Organized & standalone
+- 🇲🇪 &nbsp;Live in Montenegro
 
 <details>
   <summary>🔽 &nbsp;<strong>Details</strong></summary>
 
+- 👔 &nbsp;Organized & standalone
 - 🤓 &nbsp;Love to code
 - 🌱 &nbsp;Constantly learning
 - 📐 &nbsp;Prone to perfectionism
@@ -68,6 +69,7 @@
 ![Sass](https://img.shields.io/badge/-Sass-282828?logo=sass&logoColor=cc6699)
 ![Material-UI](https://img.shields.io/badge/-Material_UI-282828?logo=MUI&logoColor=0081cb)
 ![React Native](https://img.shields.io/badge/-React_Native-282828?logo=react&logoColor=61dafb)
+![npm](https://img.shields.io/badge/-npm-282828?logo=npm&logoColor=cc0100)
 ![Markdown](https://img.shields.io/badge/-Markdown-282828?logo=markdown&logoColor=white)
 ![Node.js](https://img.shields.io/badge/-Node.js-282828?logo=node.js&logoColor=339933)
 ![PHP](https://img.shields.io/badge/-PHP-282828?logo=php&logoColor=777bb4)
@@ -106,7 +108,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 - 🗄 &nbsp;Some UI data stores in the `localStorage`
 - 🧹 &nbsp;Clean & unified code style, `prettier` helps a lot
 - 🌄 &nbsp;All images optimized & ready for retina
-- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Big Sur`
+- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Ventura`
 - 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
 - 🏎 &nbsp;Google Page Speed score `~97`:
 

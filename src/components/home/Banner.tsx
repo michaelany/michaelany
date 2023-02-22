@@ -82,9 +82,9 @@ const images = [
   require('assets/img/pictures/css.svg').default,
   require('assets/img/pictures/sass.svg').default,
   require('assets/img/pictures/mui.svg').default,
+  require('assets/img/pictures/npm.svg').default,
   require('assets/img/pictures/zeplin.svg').default,
   require('assets/img/pictures/sketch.svg').default,
   require('assets/img/pictures/vscode.svg').default,
   require('assets/img/pictures/git.svg').default,
-  require('assets/img/pictures/npm.svg').default,
 ]
