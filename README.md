@@ -30,7 +30,7 @@
 
 </details>&nbsp;
 
-[<img src="https://img.shields.io/badge/-Michael_Any-568bd0?logo=google-chrome&logoColor=white" alt="Google Chrome" />][website]
+[<img src="https://img.shields.io/badge/-Michael_Any-61DAFB?logo=google-chrome&logoColor=282828" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
 [<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
 
