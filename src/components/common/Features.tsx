@@ -21,36 +21,7 @@ interface ExtraContentProps {
   item: Omit<Feature, 'Icon'>
 }
 
-const getEffect = (xs: boolean, index: number): Effect =>
-  xs ? 'bottom' : index % 2 ? 'right' : 'left'
-
-const ExtraContent = ({
-  t,
-  type,
-  item,
-}: ExtraContentProps): JSX.Element | null => {
-  const tKey: string = `${type}.feature.${item.tKey}.text`
-
-  return (
-    <p className="Features-Description FadeIn">
-      {item.Link ? (
-        <Trans
-          i18nKey={tKey}
-          values={item.textValues}
-          components={[item.Link as any]}
-        />
-      ) : (
-        t(tKey, item.textValues)
-      )}
-      .
-    </p>
-  )
-}
-
-const renderLabel = (item: Omit<Feature, 'Icon'>): string | JSX.Element =>
-  item.time ? <time className="Time">{item.label}</time> : item.label!
-
-function Features({t, type, extra, items}: FeaturesProps): JSX.Element {
+function Features({t, type, extra, items}: FeaturesProps) {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
@@ -87,3 +58,28 @@ function Features({t, type, extra, items}: FeaturesProps): JSX.Element {
 }
 
 export default memo(Features)
+
+const ExtraContent = ({t, type, item}: ExtraContentProps) => {
+  const tKey: string = `${type}.feature.${item.tKey}.text`
+
+  return (
+    <p className="Features-Description FadeIn">
+      {item.Link ? (
+        <Trans
+          i18nKey={tKey}
+          values={item.textValues}
+          components={[item.Link as any]}
+        />
+      ) : (
+        t(tKey, item.textValues)
+      )}
+      .
+    </p>
+  )
+}
+
+const getEffect = (xs: boolean, index: number): Effect =>
+  xs ? 'bottom' : index % 2 ? 'right' : 'left'
+
+const renderLabel = (item: Omit<Feature, 'Icon'>): string | JSX.Element =>
+  item.time ? <time className="Time">{item.label}</time> : item.label!

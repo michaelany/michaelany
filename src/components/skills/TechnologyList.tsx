@@ -18,7 +18,7 @@ export default function TechnologyList({
   t,
   technologies,
   firstTechnologyActionRef,
-}: TechnologyListProps): JSX.Element {
+}: TechnologyListProps) {
   return (
     <Grid container component="ul">
       {technologies.map(

@@ -12,7 +12,7 @@ export default function Sections({
   contact,
   firstSection,
   secondSection,
-}: SectionsProps): JSX.Element {
+}: SectionsProps) {
   const notContact: boolean = !contact
 
   return (

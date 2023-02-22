@@ -11,17 +11,13 @@ interface CompanyProps extends CompanyInterface {
   animated?: boolean
 }
 
-const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
-  e.stopPropagation()
-}
-
 export default function Company({
   animated,
   title,
   color,
   href,
   images,
-}: CompanyProps): JSX.Element {
+}: CompanyProps) {
   return (
     <Tooltip title={title}>
       <ButtonBase
@@ -45,4 +41,8 @@ export default function Company({
       </ButtonBase>
     </Tooltip>
   )
+}
+
+const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
+  e.stopPropagation()
 }

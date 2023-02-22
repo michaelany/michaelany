@@ -38,16 +38,6 @@ interface ProjectDetailsProps {
   href?: string
 }
 
-const featureIcons = [
-  CheckCircleIcon,
-  GroupWorkIcon,
-  CodeIcon,
-  PaletteIcon,
-  BuildIcon,
-  StarIcon,
-  EventIcon,
-]
-
 export default function ProjectDetails({
   name,
   title,
@@ -58,7 +48,7 @@ export default function ProjectDetails({
   url,
   details,
   stores,
-}: ProjectDetailsProps): JSX.Element {
+}: ProjectDetailsProps) {
   const {t} = useTranslation()
 
   const featureItems: Feature[] = features.map(
@@ -114,3 +104,13 @@ export default function ProjectDetails({
     </section>
   )
 }
+
+const featureIcons = [
+  CheckCircleIcon,
+  GroupWorkIcon,
+  CodeIcon,
+  PaletteIcon,
+  BuildIcon,
+  StarIcon,
+  EventIcon,
+]

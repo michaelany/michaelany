@@ -28,6 +28,86 @@ interface StepInterface {
   values?: string[]
 }
 
+export default function Stepper({sectionRef}: StepperProps) {
+  const {t} = useTranslation()
+  const [step, changeStep] = useState<number>(steps.length - 1)
+
+  const handleNext = (): void => {
+    changeStep(step + 1)
+  }
+
+  const handleBack = (): void => {
+    changeStep(step - 1)
+  }
+
+  const handleReset = (): void => {
+    changeStep(0)
+    scrollToView(sectionRef.current as HTMLElement)
+  }
+
+  return (
+    <MuiStepper className="Stepper" activeStep={step} orientation="vertical">
+      {steps.map((item: StepInterface, index: number) => (
+        <Step key={index}>
+          <StepLabel>
+            <time className="Time">
+              {tPeriodPart(t, item.period.from)}
+              {item.period.to
+                ? ` - ${tPeriodPart(t, item.period.to)}`
+                : index === steps.length - 1 && ' - ...'}
+            </time>
+          </StepLabel>
+          <StepContent>
+            <p className="Stepper-Text">
+              <Trans
+                i18nKey={`experience.stepper.step${index + 1}`}
+                values={item.values}
+                components={transComponents}
+              />
+            </p>
+            <div className="Stepper-Actions">
+              <Fab
+                className="Stepper-Button"
+                size="medium"
+                aria-label={t('experience.next')}
+                onClick={handleNext}
+              >
+                <ArrowForwardIcon className="Stepper-ButtonIcon" />
+              </Fab>
+              <Fab
+                className="Stepper-Button"
+                size="medium"
+                aria-label={t('experience.back')}
+                disabled={step === 0}
+                onClick={handleBack}
+              >
+                <ArrowBackIcon className="Stepper-ButtonIcon" />
+              </Fab>
+            </div>
+          </StepContent>
+        </Step>
+      ))}
+      {step === steps.length && (
+        <>
+          <p className="Stepper-Text Stepper-Text_last">
+            {t('experience.continue')}...
+          </p>
+          <Fab
+            className="Stepper-Button"
+            size="medium"
+            aria-label={t('experience.refresh')}
+            onClick={handleReset}
+          >
+            <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />
+          </Fab>
+        </>
+      )}
+    </MuiStepper>
+  )
+}
+
+const transComponents: JSX.Element[] = [<strong />]
+
 const steps: StepInterface[] = [
   {
     period: {
@@ -235,83 +315,3 @@ const steps: StepInterface[] = [
     values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
   },
 ]
-
-const transComponents: JSX.Element[] = [<strong />]
-
-export default function Stepper({sectionRef}: StepperProps): JSX.Element {
-  const {t} = useTranslation()
-  const [step, changeStep] = useState<number>(steps.length - 1)
-
-  const handleNext = (): void => {
-    changeStep(step + 1)
-  }
-
-  const handleBack = (): void => {
-    changeStep(step - 1)
-  }
-
-  const handleReset = (): void => {
-    changeStep(0)
-    scrollToView(sectionRef.current as HTMLElement)
-  }
-
-  return (
-    <MuiStepper className="Stepper" activeStep={step} orientation="vertical">
-      {steps.map((item: StepInterface, index: number) => (
-        <Step key={index}>
-          <StepLabel>
-            <time className="Time">
-              {tPeriodPart(t, item.period.from)}
-              {item.period.to
-                ? ` - ${tPeriodPart(t, item.period.to)}`
-                : index === steps.length - 1 && ' - ...'}
-            </time>
-          </StepLabel>
-          <StepContent>
-            <p className="Stepper-Text">
-              <Trans
-                i18nKey={`experience.stepper.step${index + 1}`}
-                values={item.values}
-                components={transComponents}
-              />
-            </p>
-            <div className="Stepper-Actions">
-              <Fab
-                className="Stepper-Button"
-                size="medium"
-                aria-label={t('experience.next')}
-                onClick={handleNext}
-              >
-                <ArrowForwardIcon className="Stepper-ButtonIcon" />
-              </Fab>
-              <Fab
-                className="Stepper-Button"
-                size="medium"
-                aria-label={t('experience.back')}
-                disabled={step === 0}
-                onClick={handleBack}
-              >
-                <ArrowBackIcon className="Stepper-ButtonIcon" />
-              </Fab>
-            </div>
-          </StepContent>
-        </Step>
-      ))}
-      {step === steps.length && (
-        <>
-          <p className="Stepper-Text Stepper-Text_last">
-            {t('experience.continue')}...
-          </p>
-          <Fab
-            className="Stepper-Button"
-            size="medium"
-            aria-label={t('experience.refresh')}
-            onClick={handleReset}
-          >
-            <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />
-          </Fab>
-        </>
-      )}
-    </MuiStepper>
-  )
-}

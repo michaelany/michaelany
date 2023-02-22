@@ -15,7 +15,7 @@ import Project from './portfolio/Project'
 import Contact from './contact/Contact'
 import {ROUTE, PATH_COLOR} from 'utils/constants'
 
-export default function App(): JSX.Element {
+export default function App() {
   const {pathname} = useLocation()
 
   const lastSlashIndex: number = pathname.lastIndexOf('/')

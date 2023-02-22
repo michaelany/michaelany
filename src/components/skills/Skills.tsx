@@ -21,15 +21,7 @@ import {scrollToView} from 'utils/helpers'
 import {Feature, TechnologyGroup, TKey} from 'utils/types'
 import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from 'data/common'
 
-const textValues: string[] = [
-  TECHNOLOGY_TITLE.ts,
-  TECHNOLOGY_TITLE.react,
-  TECHNOLOGY_TITLE.reactquery,
-]
-
-const initialExpanded = [TECHNOLOGY_GROUPS[0].tKey]
-
-export default function Skills(): JSX.Element {
+export default function Skills() {
   const [expanded, setExpanded] = useState<TKey[]>(initialExpanded)
   const sectionRef = useRef<HTMLElement>(null)
   const firstTechnologyActionRef = useRef<ButtonBaseActions>(null)
@@ -135,3 +127,11 @@ export default function Skills(): JSX.Element {
     />
   )
 }
+
+const textValues: string[] = [
+  TECHNOLOGY_TITLE.ts,
+  TECHNOLOGY_TITLE.react,
+  TECHNOLOGY_TITLE.reactquery,
+]
+
+const initialExpanded = [TECHNOLOGY_GROUPS[0].tKey]

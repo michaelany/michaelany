@@ -19,15 +19,27 @@ interface CarouselProps {
   setSwiper: Dispatch<SetStateAction<SwiperCore | null>>
 }
 
-SwiperCore.use([Autoplay, Controller])
+export default function Carousel(props: CarouselProps) {
+  if (props.mobile)
+    return (
+      <Animate className="Carousel Carousel_type_mobile">
+        <div className="Carousel-Block">{renderContent(props)}</div>
+        <PhoneSvg className="Carousel-Svg" />
+      </Animate>
+    )
 
-export const swiperOptions: SwiperOptions = {
-  grabCursor: true,
-  loop: true,
-  speed: 1500,
+  return (
+    <Animate
+      className="Carousel Carousel_type_desktop"
+      effect={props.md ? 'bottom' : 'right'}
+      duration={props.md ? undefined : 'longer'}
+    >
+      <Panel className="Carousel-Content">
+        <div className="Carousel-Block">{renderContent(props, true)}</div>
+      </Panel>
+    </Animate>
+  )
 }
-
-const autoplayOptions = {delay: DURATION.lingering}
 
 const renderContent = (
   {t, mobile, name, images, swiper, setSwiper}: CarouselProps,
@@ -64,24 +76,12 @@ const renderContent = (
   )
 }
 
-export default function Carousel(props: CarouselProps): JSX.Element {
-  if (props.mobile)
-    return (
-      <Animate className="Carousel Carousel_type_mobile">
-        <div className="Carousel-Block">{renderContent(props)}</div>
-        <PhoneSvg className="Carousel-Svg" />
-      </Animate>
-    )
+SwiperCore.use([Autoplay, Controller])
 
-  return (
-    <Animate
-      className="Carousel Carousel_type_desktop"
-      effect={props.md ? 'bottom' : 'right'}
-      duration={props.md ? undefined : 'longer'}
-    >
-      <Panel className="Carousel-Content">
-        <div className="Carousel-Block">{renderContent(props, true)}</div>
-      </Panel>
-    </Animate>
-  )
+export const swiperOptions: SwiperOptions = {
+  grabCursor: true,
+  loop: true,
+  speed: 1500,
 }
+
+const autoplayOptions = {delay: DURATION.lingering}

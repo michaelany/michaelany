@@ -9,24 +9,30 @@ import {Animate, Pagination, Copyright, Tilt} from '../common'
 import {ROUTE} from 'utils/constants'
 import {DURATION} from 'styles/theme'
 
-const images = [
-  require('assets/img/pictures/js.svg').default,
-  require('assets/img/pictures/ts.svg').default,
-  require('assets/img/pictures/react.svg').default,
-  require('assets/img/pictures/reactquery.svg').default,
-  require('assets/img/pictures/redux.svg').default,
-  require('assets/img/pictures/html.svg').default,
-  require('assets/img/pictures/pug.svg').default,
-  require('assets/img/pictures/css.svg').default,
-  require('assets/img/pictures/sass.svg').default,
-  require('assets/img/pictures/mui.svg').default,
-  require('assets/img/pictures/zeplin.svg').default,
-  require('assets/img/pictures/sketch.svg').default,
-  require('assets/img/pictures/vscode.svg').default,
-  require('assets/img/pictures/git.svg').default,
-]
+export default function Banner() {
+  const {t} = useTranslation()
 
-const MacScreen = (): JSX.Element => {
+  return (
+    <section className="Banner Section Section_colorful">
+      <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
+      <div className="Banner-Content">
+        <Animate effect="zoomIn" duration="longest" easing="out">
+          <Tilt
+            el="figure"
+            className="Banner-Figure"
+            speed={DURATION.lingering}
+          >
+            <MacScreen />
+          </Tilt>
+        </Animate>
+        <Pagination nextTo={ROUTE.about} />
+        <Copyright />
+      </div>
+    </section>
+  )
+}
+
+const MacScreen = () => {
   const [show, setShow] = useState<number>(0)
   const timer = useRef<any>()
 
@@ -66,25 +72,19 @@ const MacScreen = (): JSX.Element => {
   )
 }
 
-export default function Banner(): JSX.Element {
-  const {t} = useTranslation()
-
-  return (
-    <section className="Banner Section Section_colorful">
-      <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
-      <div className="Banner-Content">
-        <Animate effect="zoomIn" duration="longest" easing="out">
-          <Tilt
-            el="figure"
-            className="Banner-Figure"
-            speed={DURATION.lingering}
-          >
-            <MacScreen />
-          </Tilt>
-        </Animate>
-        <Pagination nextTo={ROUTE.about} />
-        <Copyright />
-      </div>
-    </section>
-  )
-}
+const images = [
+  require('assets/img/pictures/js.svg').default,
+  require('assets/img/pictures/ts.svg').default,
+  require('assets/img/pictures/react.svg').default,
+  require('assets/img/pictures/reactquery.svg').default,
+  require('assets/img/pictures/redux.svg').default,
+  require('assets/img/pictures/html.svg').default,
+  require('assets/img/pictures/pug.svg').default,
+  require('assets/img/pictures/css.svg').default,
+  require('assets/img/pictures/sass.svg').default,
+  require('assets/img/pictures/mui.svg').default,
+  require('assets/img/pictures/zeplin.svg').default,
+  require('assets/img/pictures/sketch.svg').default,
+  require('assets/img/pictures/vscode.svg').default,
+  require('assets/img/pictures/git.svg').default,
+]

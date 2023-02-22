@@ -15,9 +15,6 @@ interface AnimateProps extends AllHTMLAttributes<HTMLElement> {
   easing?: keyof typeof EASING
 }
 
-const getEffectAnimation = (effect: Effect): string =>
-  `fadeIn${effect.charAt(0).toUpperCase() + effect.slice(1)}`
-
 export default function Animate({
   children,
   el: Element = 'div',
@@ -27,7 +24,7 @@ export default function Animate({
   delay = 0,
   easing = 'inOut',
   ...props
-}: AnimateProps): JSX.Element {
+}: AnimateProps) {
   const [reached, setReached] = useState<boolean>(false)
 
   const onWaypointEnter = (): void => {
@@ -54,3 +51,6 @@ export default function Animate({
     </Waypoint>
   )
 }
+
+const getEffectAnimation = (effect: Effect): string =>
+  `fadeIn${effect.charAt(0).toUpperCase() + effect.slice(1)}`

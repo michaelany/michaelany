@@ -14,18 +14,7 @@ interface SuccessDialogProps {
   onClose: () => void
 }
 
-const Transition = forwardRef(function Transition(
-  props: TransitionProps & {children?: React.ReactElement<any, any>},
-  ref: React.Ref<unknown>
-) {
-  return <Grow ref={ref} {...props} timeout={DURATION.standard} />
-})
-
-export default function SuccessDialog({
-  t,
-  open,
-  onClose,
-}: SuccessDialogProps): JSX.Element {
+export default function SuccessDialog({t, open, onClose}: SuccessDialogProps) {
   return (
     <Dialog
       open={open}
@@ -57,3 +46,10 @@ export default function SuccessDialog({
     </Dialog>
   )
 }
+
+const Transition = forwardRef(function Transition(
+  props: TransitionProps & {children?: React.ReactElement<any, any>},
+  ref: React.Ref<unknown>
+) {
+  return <Grow ref={ref} {...props} timeout={DURATION.standard} />
+})

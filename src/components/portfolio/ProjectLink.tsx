@@ -18,14 +18,6 @@ interface ProjectLinkProps {
   logo: string[]
 }
 
-const randomEffects: Effect[] = ['top', 'right', 'bottom', 'left']
-
-const getDelay = (index: number, width: Width): number => {
-  if (width.sm) return 0
-  const divider = width.md ? 2 : width.lg ? 3 : 4
-  return getListDelay(index % divider)
-}
-
 export default function ProjectLink({
   t,
   index,
@@ -34,7 +26,7 @@ export default function ProjectLink({
   title,
   types,
   logo,
-}: ProjectLinkProps): JSX.Element {
+}: ProjectLinkProps) {
   const path = PROJECT_ROUTE[name]
 
   const projectTitle = title ?? t(`portfolio.project.${name}.title`)
@@ -79,3 +71,11 @@ export default function ProjectLink({
     </Grid>
   )
 }
+
+const getDelay = (index: number, width: Width): number => {
+  if (width.sm) return 0
+  const divider = width.md ? 2 : width.lg ? 3 : 4
+  return getListDelay(index % divider)
+}
+
+const randomEffects: Effect[] = ['top', 'right', 'bottom', 'left']

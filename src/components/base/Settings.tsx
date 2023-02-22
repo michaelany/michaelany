@@ -7,7 +7,7 @@ import {ReactComponent as RuIcon} from 'assets/icons/ru.svg'
 import {Tooltip} from '../common'
 import {isRuLng} from 'utils/i18n'
 
-export default function Settings(): JSX.Element {
+export default function Settings() {
   const {t, i18n} = useTranslation()
   const isRu = isRuLng(i18n.language)
 

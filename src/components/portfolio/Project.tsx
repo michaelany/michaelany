@@ -7,7 +7,7 @@ import {ROUTE, PROJECT_ROUTE} from 'utils/constants'
 import {Project as ProjectInterface} from 'utils/types'
 import PROJECTS from 'data/projects'
 
-export default function Project(): JSX.Element {
+export default function Project() {
   const params = useParams()
 
   const project: ProjectInterface | undefined = PROJECTS.find(

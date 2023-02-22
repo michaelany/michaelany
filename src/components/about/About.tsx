@@ -27,6 +27,17 @@ import {
 } from 'utils/constants'
 import {Feature} from 'utils/types'
 
+export default function About() {
+  return (
+    <Sections
+      firstSection={
+        <Info type="about" textValues={textValues} features={features} />
+      }
+      secondSection={<Social />}
+    />
+  )
+}
+
 const textValues: string[] = ['UI/UX']
 
 const countriesVisited: string[] = [
@@ -125,14 +136,3 @@ const features: Feature[] = [
     Icon: LocalCafeIcon,
   },
 ]
-
-export default function About(): JSX.Element {
-  return (
-    <Sections
-      firstSection={
-        <Info type="about" textValues={textValues} features={features} />
-      }
-      secondSection={<Social />}
-    />
-  )
-}

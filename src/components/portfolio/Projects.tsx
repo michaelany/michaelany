@@ -10,18 +10,7 @@ import PROJECTS from 'data/projects'
 
 type Filter = 'all' | ProjectType
 
-const storageProp: string = 'filter'
-
-const filters: Filter[] = ['all', 'app', 'site', 'landing', 'admin']
-
-const getFilteredProjects = (filter: string): Project[] =>
-  filter === 'all'
-    ? PROJECTS
-    : PROJECTS.filter((project: Project): boolean =>
-        project.types.includes(filter as ProjectType)
-      )
-
-function Projects(): JSX.Element {
+function Projects() {
   const {t} = useTranslation()
   const [filter, changeFilter] = useState<string>(
     localStorage.getItem(storageProp) ?? 'all'
@@ -70,3 +59,14 @@ function Projects(): JSX.Element {
 
 // it's avoiding reanimation items if several times click on the navlink
 export default memo(Projects)
+
+const getFilteredProjects = (filter: string): Project[] =>
+  filter === 'all'
+    ? PROJECTS
+    : PROJECTS.filter((project: Project): boolean =>
+        project.types.includes(filter as ProjectType)
+      )
+
+const storageProp: string = 'filter'
+
+const filters: Filter[] = ['all', 'app', 'site', 'landing', 'admin']

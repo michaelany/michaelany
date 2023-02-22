@@ -15,19 +15,7 @@ interface PaginationProps {
   nextTo?: Route
 }
 
-const pathKeys: Record<string, string> = {
-  [ROUTE.home]: 'home',
-  [ROUTE.about]: 'about',
-  [ROUTE.skills]: 'skills',
-  [ROUTE.experience]: 'experience',
-  [ROUTE.portfolio]: 'portfolio',
-  [ROUTE.contact]: 'contact',
-}
-
-export default function Pagination({
-  prevTo,
-  nextTo,
-}: PaginationProps): JSX.Element {
+export default function Pagination({prevTo, nextTo}: PaginationProps) {
   const {t} = useTranslation()
 
   return (
@@ -67,4 +55,13 @@ export default function Pagination({
       </Grid>
     </div>
   )
+}
+
+const pathKeys: Record<string, string> = {
+  [ROUTE.home]: 'home',
+  [ROUTE.about]: 'about',
+  [ROUTE.skills]: 'skills',
+  [ROUTE.experience]: 'experience',
+  [ROUTE.portfolio]: 'portfolio',
+  [ROUTE.contact]: 'contact',
 }

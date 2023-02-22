@@ -25,26 +25,12 @@ interface LinkProps {
   icon: ReactNode
 }
 
-const Link = ({children, href, icon}: LinkProps): JSX.Element => (
-  <Animate className="ProjectActions-Link" effect="bottom">
-    <Button
-      {...BLANK_LINK_PROPS}
-      className="Button"
-      component="a"
-      endIcon={icon}
-      href={href}
-    >
-      {children}
-    </Button>
-  </Animate>
-)
-
 export default function ProjectActions({
   url,
   details,
   stores,
   companyName,
-}: ProjectActionsProps): JSX.Element | null {
+}: ProjectActionsProps) {
   const {t} = useTranslation()
 
   if (!url && !details && !stores) return null
@@ -83,3 +69,17 @@ export default function ProjectActions({
     </div>
   )
 }
+
+const Link = ({children, href, icon}: LinkProps) => (
+  <Animate className="ProjectActions-Link" effect="bottom">
+    <Button
+      {...BLANK_LINK_PROPS}
+      className="Button"
+      component="a"
+      endIcon={icon}
+      href={href}
+    >
+      {children}
+    </Button>
+  </Animate>
+)

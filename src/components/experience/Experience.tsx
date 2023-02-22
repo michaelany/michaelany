@@ -7,7 +7,7 @@ import Work from './Work'
 import Stepper from './Stepper'
 import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
 
-export default function Experience(): JSX.Element {
+export default function Experience() {
   const {t} = useTranslation()
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
   const sectionRef = useRef<HTMLElement>(null)

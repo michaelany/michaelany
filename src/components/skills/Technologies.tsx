@@ -29,7 +29,7 @@ export default function Technologies({
   sectionRef,
   firstTechnologyActionRef,
   setExpanded,
-}: TechnologiesProps): JSX.Element {
+}: TechnologiesProps) {
   const {t} = useTranslation()
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 

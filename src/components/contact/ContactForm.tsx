@@ -39,44 +39,7 @@ interface SnackbarContent {
   message: string
 }
 
-const emailRegExp: RegExp = /.+@.+\..+/i
-
-const field: Field = {
-  name: 'name',
-  email: 'email',
-  message: 'message',
-}
-
-const getInitialData = (value: any): Record<string, any> =>
-  Object.fromEntries(Object.entries(field).map(([key]) => [key, value]))
-
-const initialValues: Record<string, string> = getInitialData('')
-
-const initialErrors: Record<string, boolean> = getInitialData(false)
-
-const inputProps: Record<string, InputProps> = {
-  [field.name]: {
-    disableUnderline: true,
-    endAdornment: (
-      <InputAdornment position="end">
-        <PersonIcon />
-      </InputAdornment>
-    ),
-  },
-  [field.email]: {
-    disableUnderline: true,
-    endAdornment: (
-      <InputAdornment position="end">
-        <MailIcon />
-      </InputAdornment>
-    ),
-  },
-  [field.message]: {
-    disableUnderline: true,
-  },
-}
-
-export default function ContactForm(): JSX.Element {
+export default function ContactForm() {
   const {t} = useTranslation()
   const [successDialog, setSuccessDialog] = useState<boolean>(false)
   const [snackbar, setSnackbar] = useState<SnackbarContent>({
@@ -250,3 +213,40 @@ export default function ContactForm(): JSX.Element {
     </>
   )
 }
+
+const getInitialData = (value: any): Record<string, any> =>
+  Object.fromEntries(Object.entries(field).map(([key]) => [key, value]))
+
+const field: Field = {
+  name: 'name',
+  email: 'email',
+  message: 'message',
+}
+
+const inputProps: Record<string, InputProps> = {
+  [field.name]: {
+    disableUnderline: true,
+    endAdornment: (
+      <InputAdornment position="end">
+        <PersonIcon />
+      </InputAdornment>
+    ),
+  },
+  [field.email]: {
+    disableUnderline: true,
+    endAdornment: (
+      <InputAdornment position="end">
+        <MailIcon />
+      </InputAdornment>
+    ),
+  },
+  [field.message]: {
+    disableUnderline: true,
+  },
+}
+
+const initialValues: Record<string, string> = getInitialData('')
+
+const initialErrors: Record<string, boolean> = getInitialData(false)
+
+const emailRegExp: RegExp = /.+@.+\..+/i

@@ -13,18 +13,7 @@ interface InitialCenter {
   lng: number
 }
 
-const initialCenter: InitialCenter = {
-  lat: 42.11486417283666,
-  lng: 19.0856566369828,
-}
-
-const LoadingContainer = (): JSX.Element => (
-  <div className="Map Map_loading">
-    <CircularProgress />
-  </div>
-)
-
-function Map(): JSX.Element {
+function Map() {
   const {t, i18n} = useTranslation()
   const navigate = useNavigate()
 
@@ -55,7 +44,18 @@ function Map(): JSX.Element {
   )
 }
 
+const LoadingContainer = () => (
+  <div className="Map Map_loading">
+    <CircularProgress />
+  </div>
+)
+
 export default GoogleApiWrapper({
   LoadingContainer,
   apiKey: process.env.REACT_APP_GOOGLE_API_KEY as string,
 })(Map)
+
+const initialCenter: InitialCenter = {
+  lat: 42.11486417283666,
+  lng: 19.0856566369828,
+}

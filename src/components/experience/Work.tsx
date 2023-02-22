@@ -17,6 +17,34 @@ import {
   BLANK_LINK_PROPS,
 } from 'utils/constants'
 
+export default function Work() {
+  const {t} = useTranslation()
+
+  return (
+    <section className="Section">
+      <h1 className="Title">{t('title.experience')}</h1>
+      <p className="MainText">
+        <Trans
+          i18nKey={`experience.text`}
+          values={[COMPANY.sevenGlyphs.title, YEARS_OF_EXPERIENCE]}
+          components={transComponents}
+        />
+      </p>
+      <Animate el="ul" className="Work">
+        {jobs.map((job: JobInterface, index: number) => (
+          <Job key={index} {...job} t={t} index={index} />
+        ))}
+      </Animate>
+    </section>
+  )
+}
+
+const transComponents: JSX.Element[] = [
+  <strong />,
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  <a {...BLANK_LINK_PROPS} className="Link" href={COMPANY.sevenGlyphs.href} />,
+]
+
 const jobs: JobInterface[] = [
   {
     current: true,
@@ -179,31 +207,3 @@ const jobs: JobInterface[] = [
     ],
   },
 ]
-
-const transComponents: JSX.Element[] = [
-  <strong />,
-  // eslint-disable-next-line jsx-a11y/anchor-has-content
-  <a {...BLANK_LINK_PROPS} className="Link" href={COMPANY.sevenGlyphs.href} />,
-]
-
-export default function Work(): JSX.Element {
-  const {t} = useTranslation()
-
-  return (
-    <section className="Section">
-      <h1 className="Title">{t('title.experience')}</h1>
-      <p className="MainText">
-        <Trans
-          i18nKey={`experience.text`}
-          values={[COMPANY.sevenGlyphs.title, YEARS_OF_EXPERIENCE]}
-          components={transComponents}
-        />
-      </p>
-      <Animate el="ul" className="Work">
-        {jobs.map((job: JobInterface, index: number) => (
-          <Job key={index} {...job} t={t} index={index} />
-        ))}
-      </Animate>
-    </section>
-  )
-}

@@ -19,7 +19,7 @@ export default function Tilt({
   enable = true,
   speed = DURATION.longest,
   ...props
-}: TiltProps): JSX.Element {
+}: TiltProps) {
   const content: JSX.Element = Element ? (
     <Element {...props} className={DETECT.mobile ? className : undefined}>
       {children}

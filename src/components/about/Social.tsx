@@ -13,13 +13,21 @@ import {ROUTE, QUERY_BREAKPOINT, DETECT} from 'utils/constants'
 import {SocialLink} from 'utils/types'
 import {MY_NAME, CONTACT_LINK} from 'data/common'
 
-const links: SocialLink[] = [
-  CONTACT_LINK.gitHub,
-  CONTACT_LINK.sevenGlyphs,
-  CONTACT_LINK.linkedIn,
-]
+export default function Social() {
+  const {t} = useTranslation()
 
-const imgSize: number = 320
+  return (
+    <section className="Social Section Section_pagination Section_colorful FadeInRight">
+      <h2 className="VisuallyHidden">{t('about.subtitle')}</h2>
+      <div className="Social-Content">
+        <Photo />
+        <SocialLinks about links={links} />
+      </div>
+      <Pagination prevTo={ROUTE.home} nextTo={ROUTE.skills} />
+      <Copyright />
+    </section>
+  )
+}
 
 const Photo = () => {
   const [hovered, setHovered] = useState<boolean>(false)
@@ -72,18 +80,10 @@ const Photo = () => {
   )
 }
 
-export default function Social(): JSX.Element {
-  const {t} = useTranslation()
+const links: SocialLink[] = [
+  CONTACT_LINK.gitHub,
+  CONTACT_LINK.sevenGlyphs,
+  CONTACT_LINK.linkedIn,
+]
 
-  return (
-    <section className="Social Section Section_pagination Section_colorful FadeInRight">
-      <h2 className="VisuallyHidden">{t('about.subtitle')}</h2>
-      <div className="Social-Content">
-        <Photo />
-        <SocialLinks about links={links} />
-      </div>
-      <Pagination prevTo={ROUTE.home} nextTo={ROUTE.skills} />
-      <Copyright />
-    </section>
-  )
-}
+const imgSize: number = 320

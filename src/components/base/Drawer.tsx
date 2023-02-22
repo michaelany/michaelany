@@ -10,7 +10,7 @@ interface DrawerProps {
   onClose: () => void
 }
 
-export default function Drawer({open, onClose}: DrawerProps): JSX.Element {
+export default function Drawer({open, onClose}: DrawerProps) {
   return (
     <MuiDrawer className="Drawer" open={open} onClose={onClose}>
       <div className="Drawer-Content">

@@ -8,7 +8,7 @@ import Projects from './Projects'
 import {ROUTE} from 'utils/constants'
 import {DURATION} from 'styles/theme'
 
-export default function Portfolio(): JSX.Element {
+export default function Portfolio() {
   const {t} = useTranslation()
 
   return (

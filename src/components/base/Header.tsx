@@ -6,7 +6,7 @@ import './Header.scss'
 import {Logo} from '../common'
 import Drawer from './Drawer'
 
-export default function Header(): JSX.Element {
+export default function Header() {
   const [open, setOpen] = useState<boolean>(false)
   const trigger: boolean = useScrollTrigger()
 

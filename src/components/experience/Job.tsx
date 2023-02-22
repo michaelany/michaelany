@@ -41,11 +41,34 @@ interface FeaturesProps {
   features: JobFeature[]
 }
 
-const Occupations = ({
+export default function Job({
   t,
   current,
+  company,
   occupations,
-}: OccupationsProps): JSX.Element => (
+  duties,
+  achievements,
+  features,
+  index,
+}: JobProps) {
+  return (
+    <Accordion component="li" className="Job" defaultExpanded={index === 0}>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <div className="Job-Company">
+          <Company {...company} />
+        </div>
+      </AccordionSummary>
+      <AccordionDetails className="Job-Content">
+        <Occupations t={t} current={current} occupations={occupations} />
+        <Block t={t} isDuties items={duties} />
+        <Block t={t} items={achievements} />
+        <Features t={t} features={features} />
+      </AccordionDetails>
+    </Accordion>
+  )
+}
+
+const Occupations = ({t, current, occupations}: OccupationsProps) => (
   <div className="Job-Occupations">
     {occupations.map((occupation: TKey, index: number) => {
       const last: boolean = index === 0
@@ -77,7 +100,7 @@ const Occupations = ({
   </div>
 )
 
-const Block = ({t, isDuties, items}: BlockProps): JSX.Element => (
+const Block = ({t, isDuties, items}: BlockProps) => (
   <div className="Job-Block">
     <h4 className="Job-SubTitle">
       {isDuties ? <WorkIcon /> : <StarIcon />}
@@ -98,7 +121,7 @@ const Block = ({t, isDuties, items}: BlockProps): JSX.Element => (
   </div>
 )
 
-const Features = ({t, features}: FeaturesProps): JSX.Element => {
+const Features = ({t, features}: FeaturesProps) => {
   return (
     <div className="Job-Features">
       {features.map(
@@ -122,32 +145,5 @@ const Features = ({t, features}: FeaturesProps): JSX.Element => {
         )
       )}
     </div>
-  )
-}
-
-export default function Job({
-  t,
-  current,
-  company,
-  occupations,
-  duties,
-  achievements,
-  features,
-  index,
-}: JobProps): JSX.Element {
-  return (
-    <Accordion component="li" className="Job" defaultExpanded={index === 0}>
-      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <div className="Job-Company">
-          <Company {...company} />
-        </div>
-      </AccordionSummary>
-      <AccordionDetails className="Job-Content">
-        <Occupations t={t} current={current} occupations={occupations} />
-        <Block t={t} isDuties items={duties} />
-        <Block t={t} items={achievements} />
-        <Features t={t} features={features} />
-      </AccordionDetails>
-    </Accordion>
   )
 }

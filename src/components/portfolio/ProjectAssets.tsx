@@ -20,7 +20,39 @@ interface ScreenshotsProps extends Omit<ProjectAssetsProps, 'title'> {
   md: boolean
 }
 
-const Screenshots = ({t, md, name, images}: ScreenshotsProps): JSX.Element => {
+export default function ProjectAssets({
+  name,
+  title,
+  images,
+}: ProjectAssetsProps) {
+  const {t} = useTranslation()
+  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
+
+  return (
+    <section className="ProjectAssets Section Section_pagination Section_colorful">
+      <h2 className="VisuallyHidden">{t('portfolio.subtitle')}</h2>
+      <div>
+        <Animate
+          el="figure"
+          className="ProjectAssets-LogoWrapper"
+          effect={md ? undefined : 'zoomOut'}
+          duration={md ? undefined : 'longer'}
+        >
+          <img
+            src={images.logo[1]}
+            srcSet={`${images.logo[2]} 2x`}
+            alt={title}
+          />
+        </Animate>
+        <Screenshots t={t} md={md} name={name} images={images} />
+      </div>
+      <Pagination prevTo={ROUTE.portfolio} />
+      <Copyright />
+    </section>
+  )
+}
+
+const Screenshots = ({t, md, name, images}: ScreenshotsProps) => {
   const [firstSwiper, setFirstSwiper] = useState<SwiperCore | null>(null)
   const [secondSwiper, setSecondSwiper] = useState<SwiperCore | null>(null)
 
@@ -48,37 +80,5 @@ const Screenshots = ({t, md, name, images}: ScreenshotsProps): JSX.Element => {
         />
       )}
     </>
-  )
-}
-
-export default function ProjectAssets({
-  name,
-  title,
-  images,
-}: ProjectAssetsProps): JSX.Element {
-  const {t} = useTranslation()
-  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
-
-  return (
-    <section className="ProjectAssets Section Section_pagination Section_colorful">
-      <h2 className="VisuallyHidden">{t('portfolio.subtitle')}</h2>
-      <div>
-        <Animate
-          el="figure"
-          className="ProjectAssets-LogoWrapper"
-          effect={md ? undefined : 'zoomOut'}
-          duration={md ? undefined : 'longer'}
-        >
-          <img
-            src={images.logo[1]}
-            srcSet={`${images.logo[2]} 2x`}
-            alt={title}
-          />
-        </Animate>
-        <Screenshots t={t} md={md} name={name} images={images} />
-      </div>
-      <Pagination prevTo={ROUTE.portfolio} />
-      <Copyright />
-    </section>
   )
 }

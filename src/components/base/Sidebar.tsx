@@ -2,7 +2,7 @@ import './Sidebar.scss'
 import {Logo, Navigation} from '../common'
 import Settings from './Settings'
 
-export default function Sidebar(): JSX.Element {
+export default function Sidebar() {
   return (
     <aside className="Sidebar">
       <div>

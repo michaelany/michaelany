@@ -18,22 +18,7 @@ interface Link {
   Icon: FunctionComponent<SVGProps<SVGSVGElement>>
 }
 
-const year: number = TODAY.getFullYear()
-
-const links: Link[] = [
-  {
-    title: TECHNOLOGY_TITLE.react,
-    href: MAIN_TECHNOLOGY_LINK.react,
-    Icon: ReactIcon,
-  },
-  {
-    title: TECHNOLOGY_TITLE.mui,
-    href: MAIN_TECHNOLOGY_LINK.mui,
-    Icon: MuiIcon,
-  },
-]
-
-export default function Copyright(): JSX.Element {
+export default function Copyright() {
   const {t} = useTranslation()
 
   return (
@@ -66,3 +51,18 @@ export default function Copyright(): JSX.Element {
     </footer>
   )
 }
+
+const year: number = TODAY.getFullYear()
+
+const links: Link[] = [
+  {
+    title: TECHNOLOGY_TITLE.react,
+    href: MAIN_TECHNOLOGY_LINK.react,
+    Icon: ReactIcon,
+  },
+  {
+    title: TECHNOLOGY_TITLE.mui,
+    href: MAIN_TECHNOLOGY_LINK.mui,
+    Icon: MuiIcon,
+  },
+]

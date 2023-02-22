@@ -17,9 +17,7 @@ interface InfoProps {
   textValues?: (string | number)[]
 }
 
-const transComponents: JSX.Element[] = [<strong />]
-
-function Info({type, textValues, features}: InfoProps): JSX.Element {
+function Info({type, textValues, features}: InfoProps) {
   const {t} = useTranslation()
   const storageProp: string = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(
@@ -66,3 +64,5 @@ function Info({type, textValues, features}: InfoProps): JSX.Element {
 }
 
 export default memo(Info)
+
+const transComponents: JSX.Element[] = [<strong />]

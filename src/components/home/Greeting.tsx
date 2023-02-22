@@ -13,15 +13,7 @@ import frontEndImg2x from 'assets/img/pictures/frontend@2x.png'
 import {ReactComponent as HelloIcon} from 'assets/icons/hello.svg'
 import {ROUTE} from 'utils/constants'
 
-const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
-  const hours: number = getHours(new Date())
-  if (hours >= 0 && hours < 6) return 'night'
-  if (hours >= 6 && hours < 12) return 'morning'
-  if (hours >= 12 && hours < 18) return 'afternoon'
-  return 'evening'
-}
-
-export default function Greeting(): JSX.Element {
+export default function Greeting() {
   const {t} = useTranslation()
 
   return (
@@ -93,4 +85,12 @@ export default function Greeting(): JSX.Element {
       </div>
     </section>
   )
+}
+
+const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
+  const hours: number = getHours(new Date())
+  if (hours >= 0 && hours < 6) return 'night'
+  if (hours >= 6 && hours < 12) return 'morning'
+  if (hours >= 12 && hours < 18) return 'afternoon'
+  return 'evening'
 }

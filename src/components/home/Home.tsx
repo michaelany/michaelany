@@ -5,7 +5,7 @@ import Greeting from './Greeting'
 import Banner from './Banner'
 import {QUERY_BREAKPOINT} from 'utils/constants'
 
-export default function Home(): JSX.Element {
+export default function Home() {
   // matches for key to responsive alternate animations reset
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 

@@ -4,7 +4,7 @@ import './Logo.scss'
 import {ReactComponent as LogoSvg} from 'assets/img/logo.svg'
 import {ROUTE} from 'utils/constants'
 
-export default function Logo(): JSX.Element {
+export default function Logo() {
   return (
     <Link className="Logo Colorful" to={ROUTE.home}>
       <LogoSvg className="Logo-Svg" />

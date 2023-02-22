@@ -6,7 +6,7 @@ interface PanelProps {
   className?: string
 }
 
-export default function Panel({children, className}: PanelProps): JSX.Element {
+export default function Panel({children, className}: PanelProps) {
   return (
     <div className={`${className} Panel`}>
       <img

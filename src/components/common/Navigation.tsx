@@ -29,16 +29,21 @@ interface ItemProps extends NavigationProps, NavLinkInterface {
   t: TFunction
 }
 
-const navLinks: NavLinkInterface[] = [
-  {tKey: 'home', to: ROUTE.home, Icon: HomeIcon},
-  {tKey: 'about', to: ROUTE.about, Icon: PersonIcon},
-  {tKey: 'skills', to: ROUTE.skills, Icon: BuildIcon},
-  {tKey: 'experience', to: ROUTE.experience, Icon: WorkIcon},
-  {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WidgetsIcon},
-  {tKey: 'contact', to: ROUTE.contact, Icon: MailIcon},
-]
+export default function Navigation({onClose}: NavigationProps) {
+  const {t} = useTranslation()
 
-const Item = ({tKey, to, Icon, t, onClose}: ItemProps): JSX.Element => {
+  return (
+    <nav className="Navigation">
+      <ul>
+        {navLinks.map((link: NavLinkInterface) => (
+          <Item key={link.tKey} {...link} t={t} onClose={onClose} />
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+const Item = ({tKey, to, Icon, t, onClose}: ItemProps) => {
   const title: string = t(`title.${tKey}`)!
 
   return (
@@ -59,16 +64,11 @@ const Item = ({tKey, to, Icon, t, onClose}: ItemProps): JSX.Element => {
   )
 }
 
-export default function Navigation({onClose}: NavigationProps): JSX.Element {
-  const {t} = useTranslation()
-
-  return (
-    <nav className="Navigation">
-      <ul>
-        {navLinks.map((link: NavLinkInterface) => (
-          <Item key={link.tKey} {...link} t={t} onClose={onClose} />
-        ))}
-      </ul>
-    </nav>
-  )
-}
+const navLinks: NavLinkInterface[] = [
+  {tKey: 'home', to: ROUTE.home, Icon: HomeIcon},
+  {tKey: 'about', to: ROUTE.about, Icon: PersonIcon},
+  {tKey: 'skills', to: ROUTE.skills, Icon: BuildIcon},
+  {tKey: 'experience', to: ROUTE.experience, Icon: WorkIcon},
+  {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WidgetsIcon},
+  {tKey: 'contact', to: ROUTE.contact, Icon: MailIcon},
+]

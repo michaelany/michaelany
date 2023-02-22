@@ -7,17 +7,7 @@ import {BLANK_LINK_PROPS, ROUTE} from 'utils/constants'
 import {SocialLink} from 'utils/types'
 import {CONTACT_LINK} from 'data/common'
 
-const links: SocialLink[] = [CONTACT_LINK.telegram, CONTACT_LINK.linkedIn]
-
-const email = 'michaelany.it@gmail.com'
-
-const transComponents = [
-  <strong />,
-  // eslint-disable-next-line
-  <a {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
-]
-
-export default function Contact(): JSX.Element {
+export default function Contact() {
   const {t} = useTranslation()
 
   return (
@@ -56,3 +46,13 @@ export default function Contact(): JSX.Element {
     />
   )
 }
+
+const links: SocialLink[] = [CONTACT_LINK.telegram, CONTACT_LINK.linkedIn]
+
+const email = 'michaelany.it@gmail.com'
+
+const transComponents = [
+  <strong />,
+  // eslint-disable-next-line
+  <a {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
+]

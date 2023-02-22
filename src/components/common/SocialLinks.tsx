@@ -13,10 +13,7 @@ interface SocialLinksProps {
   about?: boolean
 }
 
-export default function SocialLinks({
-  links,
-  about,
-}: SocialLinksProps): JSX.Element {
+export default function SocialLinks({links, about}: SocialLinksProps) {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (

@@ -8,14 +8,7 @@ import {ReactComponent as RuUaIcon} from 'assets/icons/ru-ua.svg'
 import {BLANK_LINK_PROPS} from 'utils/constants'
 import {DURATION} from 'styles/theme'
 
-const anchorOrigin: SnackbarOrigin = {
-  vertical: 'top',
-  horizontal: 'center',
-}
-
-const transComponents: JSX.Element[] = [<strong />]
-
-export default function StopWar(): JSX.Element {
+export default function StopWar() {
   const [open, setOpen] = useState<boolean>(false)
   const {t} = useTranslation()
 
@@ -64,3 +57,10 @@ export default function StopWar(): JSX.Element {
     />
   )
 }
+
+const anchorOrigin: SnackbarOrigin = {
+  vertical: 'top',
+  horizontal: 'center',
+}
+
+const transComponents: JSX.Element[] = [<strong />]
