@@ -5,6 +5,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 256px;
+  @include lg {
+    padding-bottom: 160px;
+  }
+  @include xs {
+    .Sections-SectionWrapper:first-child > & {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .Greeting-Text {
@@ -112,9 +121,43 @@
 }
 
 .Greeting-Actions {
+  width: 50%;
   margin-bottom: -16px;
+  @include xs {
+    width: 100%;
+    margin-bottom: 24px;
+  }
 }
 
 .Greeting-Button {
   margin-bottom: 16px;
+}
+
+.Greeting-Photo {
+  @include animation(fadeInRight, 1625ms);
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  width: 42%;
+  min-width: 320px;
+  max-width: 480px;
+  @include lg {
+    min-width: 200px;
+    max-width: 320px;
+  }
+  @include md {
+    min-width: 180px;
+    right: 7.5%;
+  }
+  @include sm {
+    right: 24px;
+  }
+  @include xs {
+    @include animation(fadeInBottom, 3625ms);
+    position: static;
+    right: auto;
+    bottom: auto;
+    width: 180px;
+    margin: auto;
+  }
 }

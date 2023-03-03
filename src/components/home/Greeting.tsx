@@ -10,8 +10,15 @@ import {
 import './Greeting.scss'
 import frontEndImg from 'assets/img/pictures/frontend.png'
 import frontEndImg2x from 'assets/img/pictures/frontend@2x.png'
+import meImg from 'assets/img/pictures/me.png'
+import meImg2x from 'assets/img/pictures/me@2x.png'
+import meMdImg from 'assets/img/pictures/me_md.png'
+import meMdImg2x from 'assets/img/pictures/me_md@2x.png'
+import meXsImg from 'assets/img/pictures/me_xs.png'
+import meXsImg2x from 'assets/img/pictures/me_xs@2x.png'
 import {ReactComponent as HelloIcon} from 'assets/icons/hello.svg'
-import {ROUTE} from 'utils/constants'
+import {MY_NAME} from 'data/common'
+import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
 
 export default function Greeting() {
   const {t} = useTranslation()
@@ -65,7 +72,7 @@ export default function Greeting() {
       </p>
       <div className="Greeting-Actions Actions">
         <Button
-          className="Greeting-Button Greeting-Seventh Button Button_color_blue"
+          className="Greeting-Seventh Greeting-Button Button Button_color_blue"
           component={Link}
           to={ROUTE.portfolio}
           size="large"
@@ -74,7 +81,7 @@ export default function Greeting() {
           {t('title.portfolio')}
         </Button>
         <Button
-          className="Greeting-Button Greeting-Eighth Button Button_color_green"
+          className="Greeting-Eighth Greeting-Button Button Button_color_green"
           component={Link}
           to={ROUTE.contact}
           size="large"
@@ -83,6 +90,25 @@ export default function Greeting() {
           {t('title.contact')}
         </Button>
       </div>
+      <picture>
+        <source
+          width={180}
+          media={QUERY_BREAKPOINT.xs}
+          srcSet={`${meXsImg}, ${meXsImg2x} 2x`}
+        />
+        <source
+          width={320}
+          media={QUERY_BREAKPOINT.lg}
+          srcSet={`${meMdImg}, ${meMdImg2x} 2x`}
+        />
+        <img
+          className="Greeting-Photo"
+          width={480}
+          src={meImg}
+          srcSet={`${meImg2x} 2x`}
+          alt={MY_NAME}
+        />
+      </picture>
     </section>
   )
 }

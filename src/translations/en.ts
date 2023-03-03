@@ -60,7 +60,7 @@ const EN = {
         text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. Most of them in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Lead software engineer & mentor',
+        label: 'Lead software engineer',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
