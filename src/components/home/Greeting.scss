@@ -136,6 +136,7 @@
 .Greeting-Photo {
   @include animation(fadeInRight, 1625ms);
   position: absolute;
+  z-index: -1;
   right: 10%;
   bottom: 0;
   width: 42%;
