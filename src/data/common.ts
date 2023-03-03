@@ -53,22 +53,16 @@ export const CONTACT_LINK: ContactLink = {
     Icon: LinkedInIcon,
     size: 'sm',
   },
-  sevenGlyphs: {
-    title: `${COMPANY_TITLE.sevenGlyphs} Team`,
-    href: 'https://7glyphs.com/agency/team',
-    Icon: SevenGlyphsIcon,
-    size: 'xs',
+  telegram: {
+    title: 'Telegram',
+    href: 'https://t.me/michaelany',
+    Icon: TelegramIcon,
+    size: 'md',
   },
   instagram: {
     title: 'Instagram',
     href: 'https://instagram.com/anymichael',
     Icon: InstagramIcon,
-    size: 'md',
-  },
-  vk: {
-    title: 'VK',
-    href: 'https://vk.com/michaelany',
-    Icon: VKIcon,
     size: 'md',
   },
   facebook: {
@@ -77,10 +71,16 @@ export const CONTACT_LINK: ContactLink = {
     Icon: FacebookIcon,
     size: 'sm',
   },
-  telegram: {
-    title: 'Telegram',
-    href: 'https://t.me/michaelany',
-    Icon: TelegramIcon,
+  sevenGlyphs: {
+    title: `${COMPANY_TITLE.sevenGlyphs} Team`,
+    href: 'https://7glyphs.com/agency/team',
+    Icon: SevenGlyphsIcon,
+    size: 'xs',
+  },
+  vk: {
+    title: 'VK',
+    href: 'https://vk.com/michaelany',
+    Icon: VKIcon,
     size: 'md',
   },
 }

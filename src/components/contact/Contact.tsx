@@ -47,7 +47,12 @@ export default function Contact() {
   )
 }
 
-const links: SocialLink[] = [CONTACT_LINK.telegram, CONTACT_LINK.linkedIn]
+const links: SocialLink[] = [
+  CONTACT_LINK.telegram,
+  CONTACT_LINK.linkedIn,
+  CONTACT_LINK.instagram,
+  CONTACT_LINK.facebook,
+]
 
 const email = 'michaelany.it@gmail.com'
 
