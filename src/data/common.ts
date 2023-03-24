@@ -202,7 +202,7 @@ export const TECHNOLOGY_TITLE = {
   mac: "Apple MacBook Pro 16'' (M1 Pro)",
   ipad: "Apple iPad Pro 12.9'' (M1)",
   keyboard: 'Keychron K3 (Red Switch)',
-  mouse: 'Logitech G305',
+  mouse: 'Logitech MX Master 3S For Mac',
   trackpad: 'Apple Magic Trackpad 2',
   airpods: 'Apple AirPods Pro',
   glasses: 'Qukan W1',
@@ -666,7 +666,7 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         name: 'mouse',
         label: TECHNOLOGY_TITLE.mouse,
         color: 'default',
-        href: 'https://www.logitechg.com/en-us/products/gaming-mice/g305-lightspeed-wireless-gaming-mouse.910-005289',
+        href: 'https://www.logitech.com/en-us/products/mice/mx-master-3s-mac-bluetooth-mouse.910-006570',
       },
       {
         name: 'trackpad',
