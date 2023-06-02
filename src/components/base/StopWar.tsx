@@ -13,10 +13,14 @@ export default function StopWar() {
   const {t} = useTranslation()
 
   useEffect(() => {
+    if (Boolean(localStorage.stopWarChecked)) return
     setTimeout(setOpen, DURATION.longest, true)
   }, [])
 
-  const handleClose = (): void => setOpen(false)
+  const handleClose = (): void => {
+    localStorage.setItem('stopWarChecked', JSON.stringify(true))
+    setOpen(false)
+  }
 
   return (
     <Snackbar
