@@ -1,8 +1,8 @@
-<p align="center">
+<div align="center">
   <a href="https://michaelany.com" rel="noopener" target="_blank">
     <img width="100" src="public/assets/logo.svg" alt="Logo" />
   </a>
-</p>
+</div>
 
 <h1 align="center">Michael Any</h1>
 
@@ -112,7 +112,15 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 - 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
 - 🏎 &nbsp;Google Page Speed score `~97`:
 
-<img src="public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
+<div align="center">
+  <img src="public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
+</div>
+
+---
+
+<div align="center">
+  <img src="public/assets/preview.jpg" alt="Preview"  width="600" />
+</div>
 
 [website]: https://michaelany.com
 [linkedin]: https://www.linkedin.com/in/michaelany

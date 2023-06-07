@@ -12,6 +12,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -49,6 +50,7 @@
     "swiper": "9.0.5",
     "typescript": "5.0.4",
     "vite": "4.3.9",
+    "vite-plugin-pwa": "0.16.3",
     "vite-plugin-svgr": "3.2.0"
   }
 }
