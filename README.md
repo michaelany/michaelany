@@ -6,7 +6,7 @@
 
 <h1 align="center">Michael Any</h1>
 
-## Hi! 👋 &nbsp;I'm [Michael Any][website], a frontend developer 👨‍💻
+## Hi there! 👋 &nbsp;I'm [Michael Any][website], a Frontend Developer & Lead Software Engineer 👨‍💻
 
 ## [About](https://michaelany.com/#/about)
 
@@ -14,7 +14,7 @@
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 💼 &nbsp;7 years of [experience](https://michaelany.com/#/experience)
-- 🇳🇿 &nbsp;Live in New Zealand
+- 🇳🇿 &nbsp;Live in Auckland, New Zealand
 
 <details>
   <summary>🔽 &nbsp;<strong>Details</strong></summary>
@@ -96,7 +96,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 
 ## Portfolio Project
 
-- 🚀 &nbsp;This project is a `Single Page App` & `Progressive Web App`
+- 🚀 &nbsp;This project is a `SPA` (Single Page App) & `PWA` (Progressive Web App)
 - ⚙️ &nbsp;Built from scratch by `Vite` with custom adjustments
 - 🔧 &nbsp;Base dependencies: `typescript`, `react`, `react-router-dom`, `@material-ui/core`, `sass`
 - ✅ &nbsp;All `HTML` is semantic & accessible
@@ -106,7 +106,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 - 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next` & `react-i18next`
 - 📨 &nbsp;Uses `EmailJS` & `reCaptcha` v2 to send contact form emails
 - 🗄 &nbsp;Some UI data stores in the `localStorage`
-- 🧹 &nbsp;Clean & unified code style, use `prettier` & `eslint`
+- 🧹 &nbsp;Clean & unified code style, also use `prettier` & `eslint`
 - 🌄 &nbsp;All images optimized & ready for retina
 - 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `macOS Ventura`
 - 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
