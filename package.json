@@ -2,10 +2,9 @@
   "name": "michaelany",
   "private": true,
   "version": "2.1.0",
-  "type": "module",
   "author": "Michael Any | https://github.com/michaelany",
   "homepage": "https://michaelany.com",
-  "description": "My portfolio project",
+  "description": "Portfolio project of Michael Any, a frontend developer & lead software engineer",
   "repository": "github:michaelany/michaelany",
   "scripts": {
     "dev": "vite",
