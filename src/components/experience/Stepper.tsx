@@ -324,7 +324,20 @@ const steps: StepInterface[] = [
         tKey: 'march',
         year: 2022,
       },
+      to: {
+        tKey: 'april',
+        year: 2023,
+      },
     },
     values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
+  },
+  {
+    period: {
+      from: {
+        tKey: 'april',
+        year: 2023,
+      },
+    },
+    values: [COMPANY_TITLE.sevenGlyphs, '🙂'],
   },
 ]

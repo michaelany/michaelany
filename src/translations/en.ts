@@ -264,6 +264,8 @@ const EN = {
       step18: `Work as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I provide frontend development consultations`,
       step19:
         'Moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Got a work visa. Preparing to move to New Zealand',
+      step20:
+        'Moved to New Zealand on a work visa from the {{0}} company. Settling in, establishing relations with hobbits and alpacas {{1}}',
     },
   },
   portfolio: {
