@@ -11,14 +11,14 @@ export default defineConfig({
       registerType: 'autoUpdate',
       manifest: {
         name: 'Michael Any',
-        short_name: 'michaelany',
+        short_name: 'Michael Any',
         description:
-          'Portfolio project of Michael Any, Frontend Developer & Lead Software Engineer',
+          'Portfolio project of Michael Any, a frontend developer & lead software engineer',
         start_url: '.',
         display: 'standalone',
         orientation: 'portrait',
-        theme_color: '#61dafb',
-        background_color: '#fff',
+        theme_color: '#ffffff',
+        background_color: '#ffffff',
         icons: [
           {
             src: '/assets/pwa-192x192.png',
