@@ -94,7 +94,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 
 ---
 
-## Portfolio Project
+## About this project
 
 - 🚀 &nbsp;This project is a `SPA` (Single Page App) & `PWA` (Progressive Web App)
 - ⚙️ &nbsp;Built from scratch by `Vite` with custom adjustments

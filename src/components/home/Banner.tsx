@@ -15,7 +15,7 @@ import cssImg from '@assets/img/pictures/css.svg'
 import sassImg from '@assets/img/pictures/sass.svg'
 import muiImg from '@assets/img/pictures/mui.svg'
 import npmImg from '@assets/img/pictures/npm.svg'
-import zeplinImg from '@assets/img/pictures/zeplin.svg'
+import viteImg from '@assets/img/pictures/vite.svg'
 import sketchImg from '@assets/img/pictures/sketch.svg'
 import vscodeImg from '@assets/img/pictures/vscode.svg'
 import gitImg from '@assets/img/pictures/git.svg'
@@ -97,7 +97,7 @@ const images = [
   sassImg,
   muiImg,
   npmImg,
-  zeplinImg,
+  viteImg,
   sketchImg,
   vscodeImg,
   gitImg,

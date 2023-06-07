@@ -29,7 +29,7 @@ function Map() {
         /* @ts-ignore */
         google={window.google}
         initialCenter={initialCenter}
-        zoom={7}
+        zoom={11}
         styles={STYLES}
       >
         <Marker
@@ -56,6 +56,6 @@ export default GoogleApiWrapper({
 })(Map)
 
 const initialCenter: InitialCenter = {
-  lat: 42.100385082119736,
-  lng: 19.099013038775073,
+  lat: -36.79112718004715,
+  lng: 174.66694252383772,
 }

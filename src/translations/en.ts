@@ -53,7 +53,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life. Live in Montenegro",
+    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life. Live in New Zealand",
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',

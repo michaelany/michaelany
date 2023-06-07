@@ -36,8 +36,8 @@ export default function Skills() {
         tKey: 'performance',
         Icon: SpeedIcon,
         textValues: [
-          'ES6-ES12',
-          `${TECHNOLOGY_TITLE.ts} 4`,
+          'ES6-ES13',
+          `${TECHNOLOGY_TITLE.ts} 5`,
           `${TECHNOLOGY_TITLE.react} Hooks`,
           'CSS Grid',
         ],

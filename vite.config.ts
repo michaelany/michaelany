@@ -13,7 +13,7 @@ export default defineConfig({
         name: 'Michael Any',
         short_name: 'Michael Any',
         description:
-          'Portfolio project of Michael Any, a frontend developer & lead software engineer',
+          'Personal website of Michael Any, a frontend developer & lead software engineer',
         start_url: '.',
         display: 'standalone',
         orientation: 'portrait',

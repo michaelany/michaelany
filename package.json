@@ -4,7 +4,7 @@
   "version": "2.1.0",
   "author": "Michael Any | https://github.com/michaelany",
   "homepage": "https://michaelany.com",
-  "description": "Portfolio project of Michael Any, a frontend developer & lead software engineer",
+  "description": "Personal website of Michael Any, a frontend developer & lead software engineer",
   "repository": "github:michaelany/michaelany",
   "scripts": {
     "dev": "vite",
