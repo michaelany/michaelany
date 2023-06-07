@@ -3,10 +3,10 @@ import {Trans, TFunction} from 'react-i18next'
 import {useMediaQuery, Collapse, Grid} from '@material-ui/core'
 
 import './Features.scss'
-import {Animate} from '../common'
-import {QUERY_BREAKPOINT} from 'utils/constants'
-import {DURATION} from 'styles/theme'
-import {Feature, Effect} from 'utils/types'
+import {Animate} from '@components/common'
+import {QUERY_BREAKPOINT} from '@utils/constants'
+import {Feature, Effect} from '@utils/types'
+import {DURATION} from '@styles/theme'
 
 interface FeaturesProps {
   items: Feature[]
@@ -21,7 +21,7 @@ interface ExtraContentProps {
   item: Omit<Feature, 'Icon'>
 }
 
-function Features({t, type, extra, items}: FeaturesProps) {
+const Features = memo(({t, type, extra, items}: FeaturesProps) => {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
@@ -47,7 +47,7 @@ function Features({t, type, extra, items}: FeaturesProps) {
             </p>
             {type && (
               <Collapse unmountOnExit in={extra} timeout={DURATION.long}>
-                <ExtraContent t={t!} type={type} item={item} />
+                <ExtraContent t={t as TFunction} type={type} item={item} />
               </Collapse>
             )}
           </Animate>
@@ -55,12 +55,12 @@ function Features({t, type, extra, items}: FeaturesProps) {
       ))}
     </Grid>
   )
-}
+})
 
-export default memo(Features)
+export default Features
 
 const ExtraContent = ({t, type, item}: ExtraContentProps) => {
-  const tKey: string = `${type}.feature.${item.tKey}.text`
+  const tKey = `${type}.feature.${item.tKey}.text`
 
   return (
     <p className="Features-Description FadeIn">
@@ -82,4 +82,8 @@ const getEffect = (xs: boolean, index: number): Effect =>
   xs ? 'bottom' : index % 2 ? 'right' : 'left'
 
 const renderLabel = (item: Omit<Feature, 'Icon'>): string | JSX.Element =>
-  item.time ? <time className="Time">{item.label}</time> : item.label!
+  item.time ? (
+    <time className="Time">{item.label}</time>
+  ) : (
+    (item.label as string)
+  )

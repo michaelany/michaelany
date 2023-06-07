@@ -5,8 +5,8 @@ import {TransitionProps} from '@material-ui/core/transitions'
 import {ThumbUpRounded as ThumbUpIcon} from '@material-ui/icons'
 
 import './SuccessDialog.scss'
-import messageSentImg from 'assets/img/pictures/message-sent.svg'
-import {DURATION} from 'styles/theme'
+import messageSentImg from '@assets/img/pictures/message-sent.svg'
+import {DURATION} from '@styles/theme'
 
 interface SuccessDialogProps {
   t: TFunction

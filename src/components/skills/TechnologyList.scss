@@ -1,5 +1,5 @@
-@import 'styles/variables';
-@import 'styles/mixins';
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 $technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
   'preact', 'svelte', 'vue', 'apollo', 'jquery', 'html', 'svg', 'pug',
@@ -23,7 +23,7 @@ $technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
   align-items: center;
   @each $technology in $technologies {
     &_name_#{$technology}::before {
-      @include retinaImg('../assets/img/technologies/#{$technology}', 'png');
+      @include retinaImg('@assets/img/technologies/#{$technology}', 'png');
     }
   }
   &::before {

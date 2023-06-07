@@ -1,11 +1,11 @@
 import {useTranslation, Trans} from 'react-i18next'
 
-import {Sections, SocialLinks, Pagination, Copyright} from '../common'
+import {Sections, SocialLinks, Pagination, Copyright} from '@components/common'
+import {BLANK_LINK_PROPS, ROUTE} from '@utils/constants'
+import {SocialLink} from '@utils/types'
+import {CONTACT_LINK} from '@data/common'
 import ContactForm from './ContactForm'
 import Map from './Map'
-import {BLANK_LINK_PROPS, ROUTE} from 'utils/constants'
-import {SocialLink} from 'utils/types'
-import {CONTACT_LINK} from 'data/common'
 
 export default function Contact() {
   const {t} = useTranslation()
@@ -58,6 +58,5 @@ const email = 'michaelany.it@gmail.com'
 
 const transComponents = [
   <strong />,
-  // eslint-disable-next-line
   <a {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
 ]

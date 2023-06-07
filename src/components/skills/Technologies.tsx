@@ -11,11 +11,11 @@ import {
 import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
 
 import './Technologies.scss'
-import {Animate, Pagination, Copyright} from '../common'
+import {Animate, Pagination, Copyright} from '@components/common'
+import {TECHNOLOGY_GROUPS} from '@data/common'
+import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
+import {TechnologyGroup, TKey} from '@utils/types'
 import TechnologyList from './TechnologyList'
-import {TECHNOLOGY_GROUPS} from 'data/common'
-import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
-import {TechnologyGroup, TKey} from 'utils/types'
 
 interface TechnologiesProps {
   expanded: TKey[]
@@ -31,7 +31,7 @@ export default function Technologies({
   setExpanded,
 }: TechnologiesProps) {
   const {t} = useTranslation()
-  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
+  const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   const handleExpand =
     (tKey: TKey): (() => void) =>

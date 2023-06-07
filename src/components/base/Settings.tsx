@@ -2,16 +2,16 @@ import {useTranslation} from 'react-i18next'
 import {Button} from '@material-ui/core'
 
 import './Settings.scss'
-import {ReactComponent as EnIcon} from 'assets/icons/en.svg'
-import {ReactComponent as RuIcon} from 'assets/icons/ru.svg'
-import {Tooltip} from '../common'
-import {isRuLng} from 'utils/i18n'
+import {ReactComponent as EnIcon} from '@assets/icons/en.svg'
+import {ReactComponent as RuIcon} from '@assets/icons/ru.svg'
+import {Tooltip} from '@components/common'
+import {isRuLng} from '@utils/i18n'
 
 export default function Settings() {
   const {t, i18n} = useTranslation()
   const isRu = isRuLng(i18n.language)
 
-  const handleLanguageSwitch = (): void => {
+  const handleLanguageSwitch = () => {
     i18n.changeLanguage(isRu ? 'en' : 'ru')
   }
 

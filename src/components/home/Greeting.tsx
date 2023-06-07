@@ -8,17 +8,17 @@ import {
 } from '@material-ui/icons'
 
 import './Greeting.scss'
-import frontEndImg from 'assets/img/pictures/frontend.png'
-import frontEndImg2x from 'assets/img/pictures/frontend@2x.png'
-import meImg from 'assets/img/pictures/me.jpg'
-import meImg2x from 'assets/img/pictures/me@2x.jpg'
-import meMdImg from 'assets/img/pictures/me_md.jpg'
-import meMdImg2x from 'assets/img/pictures/me_md@2x.jpg'
-import meXsImg from 'assets/img/pictures/me_xs.jpg'
-import meXsImg2x from 'assets/img/pictures/me_xs@2x.jpg'
-import {ReactComponent as HelloIcon} from 'assets/icons/hello.svg'
-import {MY_NAME} from 'data/common'
-import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
+import frontEndImg from '@assets/img/pictures/frontend.png'
+import frontEndImg2x from '@assets/img/pictures/frontend@2x.png'
+import meImg from '@assets/img/pictures/me.jpg'
+import meImg2x from '@assets/img/pictures/me@2x.jpg'
+import meMdImg from '@assets/img/pictures/me_md.jpg'
+import meMdImg2x from '@assets/img/pictures/me_md@2x.jpg'
+import meXsImg from '@assets/img/pictures/me_xs.jpg'
+import meXsImg2x from '@assets/img/pictures/me_xs@2x.jpg'
+import {ReactComponent as HelloIcon} from '@assets/icons/hello.svg'
+import {MY_NAME} from '@data/common'
+import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
 
 export default function Greeting() {
   const {t} = useTranslation()

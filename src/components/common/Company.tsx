@@ -3,9 +3,9 @@ import cn from 'clsx'
 import {ButtonBase} from '@material-ui/core'
 
 import './Company.scss'
+import {BLANK_LINK_PROPS} from '@utils/constants'
+import {Company as CompanyInterface} from '@utils/types'
 import Tooltip from './Tooltip'
-import {BLANK_LINK_PROPS} from 'utils/constants'
-import {Company as CompanyInterface} from 'utils/types'
 
 interface CompanyProps extends CompanyInterface {
   animated?: boolean
@@ -43,6 +43,6 @@ export default function Company({
   )
 }
 
-const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>): void => {
+const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
   e.stopPropagation()
 }

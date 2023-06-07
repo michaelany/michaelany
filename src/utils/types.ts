@@ -114,7 +114,7 @@ export interface TechnologyGroup {
 export interface Company {
   title: string
   color: Color
-  images: string[]
+  images: any[]
   href: string
 }
 
@@ -145,9 +145,9 @@ export interface Job {
 }
 
 export interface ProjectImages {
-  logo: string[]
-  desktop?: string[][]
-  mobile?: string[][]
+  logo: any[]
+  desktop?: any[][]
+  mobile?: any[][]
 }
 
 export interface Project {

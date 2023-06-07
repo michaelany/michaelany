@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom'
 import {Grid, ButtonBase} from '@material-ui/core'
 
 import './ProjectLink.scss'
-import {Animate, Tilt, Panel} from '../common'
-import {getListDelay, tProjectTypes} from 'utils/helpers'
-import {DETECT, ROUTE, PROJECT_ROUTE, PATH_COLOR} from 'utils/constants'
-import {Effect, ProjectName, ProjectType, Width} from 'utils/types'
+import {Animate, Tilt, Panel} from '@components/common'
+import {getListDelay, tProjectTypes} from '@utils/helpers'
+import {DETECT, ROUTE, PROJECT_ROUTE, PATH_COLOR} from '@utils/constants'
+import {Effect, ProjectName, ProjectType, Width} from '@utils/types'
 
 interface ProjectLinkProps {
   t: TFunction

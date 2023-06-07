@@ -11,19 +11,18 @@ import {
 } from '@material-ui/icons'
 
 import './ProjectDetails.scss'
-import {Features, Company} from '../common'
-import ProjectActions from './ProjectActions'
-import {tProjectTypes} from 'utils/helpers'
+import {Features, Company} from '@components/common'
+import {tProjectTypes} from '@utils/helpers'
 import {
   ProjectName,
   Feature,
   ProjectType,
   CompanyName,
-  Company as CompanyInterface,
   TKey,
-} from 'utils/types'
-import {COMPANY} from 'data/common'
-import {BLANK_LINK_PROPS} from 'utils/constants'
+} from '@utils/types'
+import {COMPANY} from '@data/common'
+import {BLANK_LINK_PROPS} from '@utils/constants'
+import ProjectActions from './ProjectActions'
 
 interface ProjectDetailsProps {
   name: ProjectName
@@ -77,8 +76,8 @@ export default function ProjectDetails({
     Icon: WebIcon,
   })
 
-  const projectKey: string = `portfolio.project.${name}`
-  const company: CompanyInterface = COMPANY[companyName]
+  const projectKey = `portfolio.project.${name}`
+  const company = COMPANY[companyName]
 
   return (
     <section className="ProjectDetails Section">

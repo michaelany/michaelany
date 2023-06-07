@@ -4,14 +4,20 @@ import {useMediaQuery} from '@material-ui/core'
 import cn from 'clsx'
 
 import './Social.scss'
-import meNormalImg from 'assets/img/pictures/me-normal.jpg'
-import meNormalImg2x from 'assets/img/pictures/me-normal@2x.jpg'
-import meExcitedImg from 'assets/img/pictures/me-excited.jpg'
-import meExcitedImg2x from 'assets/img/pictures/me-excited@2x.jpg'
-import {Animate, SocialLinks, Pagination, Copyright, Tilt} from '../common'
-import {ROUTE, QUERY_BREAKPOINT, DETECT} from 'utils/constants'
-import {SocialLink} from 'utils/types'
-import {MY_NAME, CONTACT_LINK} from 'data/common'
+import meNormalImg from '@assets/img/pictures/me-normal.jpg'
+import meNormalImg2x from '@assets/img/pictures/me-normal@2x.jpg'
+import meExcitedImg from '@assets/img/pictures/me-excited.jpg'
+import meExcitedImg2x from '@assets/img/pictures/me-excited@2x.jpg'
+import {
+  Animate,
+  SocialLinks,
+  Pagination,
+  Copyright,
+  Tilt,
+} from '@components/common'
+import {ROUTE, QUERY_BREAKPOINT, DETECT} from '@utils/constants'
+import {SocialLink} from '@utils/types'
+import {MY_NAME, CONTACT_LINK} from '@data/common'
 
 export default function Social() {
   const {t} = useTranslation()
@@ -33,11 +39,11 @@ const Photo = () => {
   const [hovered, setHovered] = useState<boolean>(false)
   const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
-  const handlePhotoOver = (): void => {
+  const handlePhotoOver = () => {
     setHovered(true)
   }
 
-  const handlePhotoOut = (): void => {
+  const handlePhotoOut = () => {
     setHovered(false)
   }
 
@@ -89,4 +95,4 @@ const links: SocialLink[] = [
   CONTACT_LINK.sevenGlyphs,
 ]
 
-const imgSize: number = 320
+const imgSize = 320

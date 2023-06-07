@@ -3,10 +3,10 @@ import {ChatRounded as ChatIcon} from '@material-ui/icons'
 import {Tooltip} from '@material-ui/core'
 
 import './Portfolio.scss'
-import {Pagination, Copyright} from '../common'
+import {Pagination, Copyright} from '@components/common'
+import {ROUTE} from '@utils/constants'
+import {DURATION} from '@styles/theme'
 import Projects from './Projects'
-import {ROUTE} from 'utils/constants'
-import {DURATION} from 'styles/theme'
 
 export default function Portfolio() {
   const {t} = useTranslation()
@@ -16,9 +16,9 @@ export default function Portfolio() {
       <div>
         <h1 className="Portfolio-Title Title">
           {t('title.portfolio')}
-          {process.env.REACT_APP_SHOW_PRIVATE_PROJECTS !== 'true' && (
+          {import.meta.env.VITE_SHOW_PRIVATE_PROJECTS !== 'true' && (
             <Tooltip
-              title={t('portfolio.limit')!}
+              title={t('portfolio.limit')}
               enterDelay={0}
               enterTouchDelay={0}
               leaveTouchDelay={DURATION.lingering}

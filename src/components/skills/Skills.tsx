@@ -15,11 +15,11 @@ import {
   ExtensionRounded as ExtensionIcon,
 } from '@material-ui/icons'
 
-import {Sections, Info} from '../common'
+import {Sections, Info} from '@components/common'
+import {scrollToView} from '@utils/helpers'
+import {Feature, TechnologyGroup, TKey} from '@utils/types'
+import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '@data/common'
 import Technologies from './Technologies'
-import {scrollToView} from 'utils/helpers'
-import {Feature, TechnologyGroup, TKey} from 'utils/types'
-import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from 'data/common'
 
 export default function Skills() {
   const [expanded, setExpanded] = useState<TKey[]>(initialExpanded)
@@ -68,7 +68,7 @@ export default function Skills() {
           <Link
             component="button"
             className="Link"
-            onClick={(): void => {
+            onClick={() => {
               setExpanded(
                 TECHNOLOGY_GROUPS.map((group: TechnologyGroup) => group.tKey)
               )
@@ -128,7 +128,7 @@ export default function Skills() {
   )
 }
 
-const textValues: string[] = [
+const textValues = [
   TECHNOLOGY_TITLE.ts,
   TECHNOLOGY_TITLE.react,
   TECHNOLOGY_TITLE.reactquery,

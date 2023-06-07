@@ -5,11 +5,11 @@ import {Button} from '@material-ui/core'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
 
 import './Info.scss'
+import {scrollToView} from '@utils/helpers'
+import {ROOT} from '@utils/constants'
+import {Feature} from '@utils/types'
 import Features from './Features'
 import Animate from './Animate'
-import {scrollToView} from 'utils/helpers'
-import {ROOT} from 'utils/constants'
-import {Feature} from 'utils/types'
 
 interface InfoProps {
   type: string
@@ -17,14 +17,14 @@ interface InfoProps {
   textValues?: (string | number)[]
 }
 
-function Info({type, textValues, features}: InfoProps) {
+const Info = memo(({type, textValues, features}: InfoProps) => {
   const {t} = useTranslation()
-  const storageProp: string = `${type}Extra`
+  const storageProp = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(
     localStorage[storageProp] ? JSON.parse(localStorage[storageProp]) : false
   )
 
-  const handleToggle = (): void => {
+  const handleToggle = () => {
     const value = !open
     localStorage.setItem(storageProp, JSON.stringify(value))
     toggleOpen(value)
@@ -61,8 +61,8 @@ function Info({type, textValues, features}: InfoProps) {
       </Animate>
     </section>
   )
-}
+})
 
-export default memo(Info)
+export default Info
 
-const transComponents: JSX.Element[] = [<strong />]
+const transComponents = [<strong />]

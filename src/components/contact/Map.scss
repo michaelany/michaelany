@@ -1,7 +1,7 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import 'styles/variables';
-@import 'styles/mixins';
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 .Map {
   @include animation(fadeInRight);

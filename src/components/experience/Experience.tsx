@@ -2,10 +2,10 @@ import {useRef} from 'react'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery} from '@material-ui/core'
 
-import {Animate, Sections, Pagination, Copyright} from '../common'
+import {Animate, Sections, Pagination, Copyright} from '@components/common'
+import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
 import Work from './Work'
 import Stepper from './Stepper'
-import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
 
 export default function Experience() {
   const {t} = useTranslation()

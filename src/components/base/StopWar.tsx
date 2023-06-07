@@ -4,20 +4,20 @@ import {Snackbar, SnackbarOrigin, IconButton} from '@material-ui/core'
 import {CloseRounded as CloseIcon} from '@material-ui/icons'
 
 import './StopWar.scss'
-import {ReactComponent as RuUaIcon} from 'assets/icons/ru-ua.svg'
-import {BLANK_LINK_PROPS} from 'utils/constants'
-import {DURATION} from 'styles/theme'
+import {ReactComponent as RuUaIcon} from '@assets/icons/ru-ua.svg'
+import {BLANK_LINK_PROPS} from '@utils/constants'
+import {DURATION} from '@styles/theme'
 
 export default function StopWar() {
   const [open, setOpen] = useState<boolean>(false)
   const {t} = useTranslation()
 
   useEffect(() => {
-    if (Boolean(localStorage.stopWarChecked)) return
+    if (localStorage.stopWarChecked) return
     setTimeout(setOpen, DURATION.longest, true)
   }, [])
 
-  const handleClose = (): void => {
+  const handleClose = () => {
     localStorage.setItem('stopWarChecked', JSON.stringify(true))
     setOpen(false)
   }

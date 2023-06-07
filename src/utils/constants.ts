@@ -1,8 +1,8 @@
 import {differenceInYears, format} from 'date-fns'
 import locale from 'date-fns/locale/en-US'
 
+import {BREAKPOINT} from '@styles/theme'
 import {Route, Color} from './types'
-import {BREAKPOINT} from 'styles/theme'
 
 interface Detect {
   mobile: boolean
@@ -69,7 +69,7 @@ interface BlankLinkProps {
   rel: string
 }
 
-export const ROOT: HTMLElement = document.getElementById('root') as HTMLElement
+export const ROOT = document.getElementById('root') as HTMLElement
 
 export const DETECT: Detect = {
   mobile: [
@@ -84,7 +84,7 @@ export const DETECT: Detect = {
   safari: /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
 }
 
-export const CAREER_START_DATE: Date = new Date(2016, 6)
+export const CAREER_START_DATE = new Date(2016, 6)
 
 export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy', {
   locale,
@@ -92,9 +92,9 @@ export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy', {
   .toLowerCase()
   .split(' ')
 
-export const TODAY: Date = new Date()
+export const TODAY = new Date()
 
-export const YEARS_OF_EXPERIENCE: number =
+export const YEARS_OF_EXPERIENCE =
   differenceInYears(TODAY, CAREER_START_DATE) + 1
 
 export const ROUTE: RouteInterface = {

@@ -2,11 +2,11 @@ import cn from 'clsx'
 import {useMediaQuery, Fab} from '@material-ui/core'
 
 import './SocialLinks.scss'
+import {getListDelay} from '@utils/helpers'
+import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '@utils/constants'
+import {SocialLink} from '@utils/types'
 import Animate from './Animate'
 import Tooltip from './Tooltip'
-import {getListDelay} from 'utils/helpers'
-import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from 'utils/constants'
-import {SocialLink} from 'utils/types'
 
 interface SocialLinksProps {
   links: SocialLink[]
@@ -14,7 +14,7 @@ interface SocialLinksProps {
 }
 
 export default function SocialLinks({links, about}: SocialLinksProps) {
-  const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
+  const xs = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
     <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>

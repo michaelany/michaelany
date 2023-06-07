@@ -4,13 +4,13 @@ import {Button} from '@material-ui/core'
 import {VisibilityRounded as VisibilityIcon} from '@material-ui/icons'
 
 import './ProjectActions.scss'
-import {ReactComponent as SevenGlyphsIcon} from 'assets/icons/7glyphs.svg'
-import {ReactComponent as EverpointIcon} from 'assets/icons/everpoint.svg'
-import {ReactComponent as AppleIcon} from 'assets/icons/apple.svg'
-import {ReactComponent as GooglePlayIcon} from 'assets/icons/googleplay.svg'
-import {Animate} from '../common'
-import {BLANK_LINK_PROPS} from 'utils/constants'
-import {CompanyName} from 'utils/types'
+import {ReactComponent as SevenGlyphsIcon} from '@assets/icons/7glyphs.svg'
+import {ReactComponent as EverpointIcon} from '@assets/icons/everpoint.svg'
+import {ReactComponent as AppleIcon} from '@assets/icons/apple.svg'
+import {ReactComponent as GooglePlayIcon} from '@assets/icons/googleplay.svg'
+import {Animate} from '@components/common'
+import {BLANK_LINK_PROPS} from '@utils/constants'
+import {CompanyName} from '@utils/types'
 
 interface ProjectActionsProps {
   url?: string

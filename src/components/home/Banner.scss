@@ -1,5 +1,5 @@
-@import 'styles/variables';
-@import 'styles/mixins';
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 .Banner {
   display: flex;
@@ -20,7 +20,7 @@
   &::before {
     @include pseudo;
     background: center / contain no-repeat;
-    @include retinaImg('../assets/img/shapes/reflection', 'png');
+    @include retinaImg('@assets/img/shapes/reflection', 'png');
     width: 33%;
     height: 78%;
     top: 0.5%;

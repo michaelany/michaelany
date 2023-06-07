@@ -15,17 +15,17 @@ import {
   ExploreRounded as ExploreIcon,
 } from '@material-ui/icons'
 
-import {Sections, Info} from '../common'
-import Social from './Social'
-import {PROJECTS_COUNT} from 'data/projects'
-import {TECHNOLOGY_TITLE} from 'data/common'
+import {Sections, Info} from '@components/common'
+import {PROJECTS_COUNT} from '@data/projects'
+import {TECHNOLOGY_TITLE} from '@data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
   ROUTE,
   BLANK_LINK_PROPS,
-} from 'utils/constants'
-import {Feature} from 'utils/types'
+} from '@utils/constants'
+import {Feature} from '@utils/types'
+import Social from './Social'
 
 export default function About() {
   return (
@@ -122,7 +122,6 @@ const features: Feature[] = [
     Icon: FavoriteIcon,
     textValues: [differenceInYears(TODAY, new Date(2013, 1)), '🙂'],
     Link: (
-      // eslint-disable-next-line
       <a
         {...BLANK_LINK_PROPS}
         className="Link"

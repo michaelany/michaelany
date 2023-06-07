@@ -14,10 +14,10 @@ import {
 } from '@material-ui/icons'
 
 import './Stepper.scss'
-import {scrollToView, tPeriodPart} from 'utils/helpers'
-import {CAREER_START_PARTS} from 'utils/constants'
-import {Period} from 'utils/types'
-import {COMPANY_TITLE} from 'data/common'
+import {scrollToView, tPeriodPart} from '@utils/helpers'
+import {CAREER_START_PARTS} from '@utils/constants'
+import {Period} from '@utils/types'
+import {COMPANY_TITLE} from '@data/common'
 
 interface StepperProps {
   sectionRef: RefObject<HTMLElement>
@@ -32,15 +32,15 @@ export default function Stepper({sectionRef}: StepperProps) {
   const {t} = useTranslation()
   const [step, changeStep] = useState<number>(steps.length - 1)
 
-  const handleNext = (): void => {
+  const handleNext = () => {
     changeStep(step + 1)
   }
 
-  const handleBack = (): void => {
+  const handleBack = () => {
     changeStep(step - 1)
   }
 
-  const handleReset = (): void => {
+  const handleReset = () => {
     changeStep(0)
     scrollToView(sectionRef.current as HTMLElement)
   }
@@ -106,7 +106,7 @@ export default function Stepper({sectionRef}: StepperProps) {
   )
 }
 
-const transComponents: JSX.Element[] = [<strong />]
+const transComponents = [<strong />]
 
 const steps: StepInterface[] = [
   {

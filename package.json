@@ -1,23 +1,37 @@
 {
   "name": "michaelany",
-  "version": "2.0.0",
+  "private": true,
+  "version": "2.1.0",
+  "type": "module",
   "author": "Michael Any | https://github.com/michaelany",
   "homepage": "https://michaelany.com",
   "description": "My portfolio project",
   "repository": "github:michaelany/michaelany",
-  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@material-ui/core": "4.12.4",
     "@material-ui/icons": "4.11.3",
     "@types/google-maps-react": "2.0.5",
     "@types/node": "18.14.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
+    "@types/react": "18.2.8",
+    "@types/react-dom": "18.2.4",
     "@types/react-google-recaptcha": "2.1.5",
     "@types/react-router-dom": "5.3.3",
+    "@typescript-eslint/eslint-plugin": "5.59.8",
+    "@typescript-eslint/parser": "5.59.8",
+    "@vitejs/plugin-react": "4.0.0",
     "clsx": "1.2.1",
     "date-fns": "2.29.3",
     "emailjs-com": "3.2.0",
+    "eslint": "8.41.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.1",
     "gh-pages": "5.0.0",
     "google-maps-react": "2.0.6",
     "i18next": "22.4.10",
@@ -29,38 +43,12 @@
     "react-i18next": "11.18.6",
     "react-parallax-tilt": "1.7.107",
     "react-router-dom": "6.8.1",
-    "react-scripts": "5.0.1",
-    "react-tilt": "0.1.4",
     "react-waypoint": "10.3.0",
     "sass": "1.58.3",
     "smooth-scroll-into-view-if-needed": "1.1.33",
     "swiper": "9.0.5",
-    "typescript": "4.9.5",
-    "workbox-core": "6.5.4",
-    "workbox-expiration": "6.5.4",
-    "workbox-precaching": "6.5.4",
-    "workbox-routing": "6.5.4",
-    "workbox-strategies": "6.5.4"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "typescript": "5.0.4",
+    "vite": "4.3.9",
+    "vite-plugin-svgr": "3.2.0"
   }
 }

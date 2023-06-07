@@ -6,7 +6,7 @@ $fonts: ('regular' normal, 'bold' bold);
     font-weight: $value;
     font-style: normal;
     font-display: swap;
-    src: url('../assets/fonts/neutra-text_#{$type}.woff2') format('woff2'),
-      url('../assets/fonts/neutra-text_#{$type}.woff') format('woff');
+    src: url('@assets/fonts/neutra-text_#{$type}.woff2') format('woff2'),
+      url('@assets/fonts/neutra-text_#{$type}.woff') format('woff');
   }
 }

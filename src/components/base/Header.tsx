@@ -3,16 +3,16 @@ import {useScrollTrigger, Slide, IconButton} from '@material-ui/core'
 import {MenuRounded as MenuIcon} from '@material-ui/icons'
 
 import './Header.scss'
-import {Logo} from '../common'
+import {Logo} from '@components/common'
 import Drawer from './Drawer'
 
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false)
   const trigger: boolean = useScrollTrigger()
 
-  const handleOpen = (): void => setOpen(true)
+  const handleOpen = () => setOpen(true)
 
-  const handleClose = (): void => setOpen(false)
+  const handleClose = () => setOpen(false)
 
   return (
     <>

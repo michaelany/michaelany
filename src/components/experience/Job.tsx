@@ -15,9 +15,9 @@ import {
 } from '@material-ui/icons'
 
 import './Job.scss'
-import {Tooltip, Company} from '../common'
-import {tPeriodPart} from 'utils/helpers'
-import {Job as JobInterface, JobFeature, TKey, TKeyObject} from 'utils/types'
+import {Tooltip, Company} from '@components/common'
+import {tPeriodPart} from '@utils/helpers'
+import {Job as JobInterface, JobFeature, TKey, TKeyObject} from '@utils/types'
 
 interface JobProps extends JobInterface {
   t: TFunction
@@ -85,7 +85,7 @@ const Occupations = ({t, current, occupations}: OccupationsProps) => (
             <span>
               {t(`experience.occupation.${occupation}`)}
               {lastCurrent && (
-                <Tooltip title={t('experience.current')!} enterDelay={0}>
+                <Tooltip title={t('experience.current')} enterDelay={0}>
                   <span className="Job-Badge" />
                 </Tooltip>
               )}

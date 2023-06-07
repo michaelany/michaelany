@@ -4,10 +4,10 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Autoplay, SwiperOptions, Controller} from 'swiper'
 
 import './Carousel.scss'
-import {ReactComponent as PhoneSvg} from 'assets/img/shapes/phone.svg'
-import {Animate, Panel} from '../common'
-import {ProjectName} from 'utils/types'
-import {DURATION} from 'styles/theme'
+import {ReactComponent as PhoneSvg} from '@assets/img/shapes/phone.svg'
+import {Animate, Panel} from '@components/common'
+import {ProjectName} from '@utils/types'
+import {DURATION} from '@styles/theme'
 
 interface CarouselProps {
   mobile?: boolean

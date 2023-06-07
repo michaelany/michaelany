@@ -4,9 +4,9 @@ import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import {CircularProgress} from '@material-ui/core'
 
 import './Map.scss'
-import markerIcon from 'assets/icons/marker.svg'
-import {ROUTE} from 'utils/constants'
-import STYLES from 'styles/map'
+import markerIcon from '@assets/icons/marker.svg'
+import {ROUTE} from '@utils/constants'
+import STYLES from '@styles/map'
 
 interface InitialCenter {
   lat: number
@@ -17,7 +17,7 @@ function Map() {
   const {t, i18n} = useTranslation()
   const navigate = useNavigate()
 
-  const handleMarkerClick = (): void => {
+  const handleMarkerClick = () => {
     navigate(ROUTE.about)
   }
 
@@ -30,7 +30,7 @@ function Map() {
         google={window.google}
         initialCenter={initialCenter}
         zoom={7}
-        styles={STYLES as any}
+        styles={STYLES}
       >
         <Marker
           key={i18n.language}
@@ -52,7 +52,7 @@ const LoadingContainer = () => (
 
 export default GoogleApiWrapper({
   LoadingContainer,
-  apiKey: process.env.REACT_APP_GOOGLE_API_KEY as string,
+  apiKey: import.meta.env.VITE_GOOGLE_API_KEY,
 })(Map)
 
 const initialCenter: InitialCenter = {

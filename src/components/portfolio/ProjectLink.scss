@@ -1,5 +1,5 @@
-@import 'styles/variables';
-@import 'styles/mixins';
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
   'services', 'trucks', 'rogue', 'glyphs2', 'strong', 'sds', 'food', 'foodp',
@@ -33,7 +33,7 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
 .ProjectLink-View {
   @each $project in $projects {
     &_name_#{$project}::after {
-      @include retinaImg('../assets/img/projects/#{$project}', 'jpg');
+      @include retinaImg('@assets/img/projects/#{$project}', 'jpg');
     }
   }
   &::after {

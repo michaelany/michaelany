@@ -1,5 +1,5 @@
 import './Panel.scss'
-import desktopSvg from 'assets/img/shapes/desktop.svg'
+import desktopSvg from '@assets/img/shapes/desktop.svg'
 
 interface PanelProps {
   children?: JSX.Element

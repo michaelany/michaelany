@@ -13,7 +13,7 @@ export default function Sections({
   firstSection,
   secondSection,
 }: SectionsProps) {
-  const notContact: boolean = !contact
+  const notContact = !contact
 
   return (
     <Grid container className="Sections" spacing={0}>

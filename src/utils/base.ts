@@ -1,8 +1,8 @@
-import {MY_NAME} from 'data/common'
-import {DURATION} from 'styles/theme'
+import {MY_NAME} from '@data/common'
+import {DURATION} from '@styles/theme'
 
-export const handleAppLoaded = (): void => {
-  const preloader: HTMLElement = document.getElementById('preloader')!
+export const handleAppLoaded = () => {
+  const preloader = document.getElementById('preloader') as HTMLElement
   preloader.classList.remove('Preloader_show')
   document.body.style.overflow = 'auto'
   setTimeout(() => preloader.remove(), DURATION.longer)

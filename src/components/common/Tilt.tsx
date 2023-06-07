@@ -1,8 +1,8 @@
 import {AllHTMLAttributes} from 'react'
 import ReactTilt from 'react-parallax-tilt'
 
-import {DETECT} from 'utils/constants'
-import {DURATION} from 'styles/theme'
+import {DETECT} from '@utils/constants'
+import {DURATION} from '@styles/theme'
 
 interface TiltProps extends AllHTMLAttributes<HTMLElement> {
   children: JSX.Element

@@ -25,7 +25,7 @@ import {
 } from '@material-ui/icons'
 
 import './ContactForm.scss'
-import {Animate} from '../common'
+import {Animate} from '@components/common'
 import SuccessDialog from './SuccessDialog'
 
 interface Field {
@@ -49,18 +49,21 @@ export default function ContactForm() {
   const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
-  const fieldElements: Record<string, MutableRefObject<HTMLInputElement>> = {
-    [field.name]: useRef<HTMLInputElement>(null!),
-    [field.email]: useRef<HTMLInputElement>(null!),
-    [field.message]: useRef<HTMLInputElement>(null!),
+  const fieldElements: Record<
+    string,
+    MutableRefObject<HTMLInputElement | undefined>
+  > = {
+    [field.name]: useRef(),
+    [field.email]: useRef(),
+    [field.message]: useRef(),
   }
-  const recaptchaRef = useRef<ReCAPTCHA>(null!)
+  const recaptchaRef = useRef() as MutableRefObject<ReCAPTCHA>
 
   const handleSubmit = async (e: SyntheticEvent): Promise<void> => {
     e.preventDefault()
 
     const newErrors: typeof initialErrors = {}
-    Object.keys(values).forEach((name: string): void => {
+    Object.keys(values).forEach((name: string) => {
       if (
         (name === field.email &&
           (!values[name].trim() || !emailRegExp.test(values[name]))) ||
@@ -72,7 +75,8 @@ export default function ContactForm() {
     if (Object.values(newErrors).includes(true)) {
       Object.keys(newErrors).some((key: string): boolean => {
         if (newErrors[key]) {
-          fieldElements[key].current.focus()
+          const inputElement = fieldElements[key].current as HTMLInputElement
+          inputElement.focus()
           return true
         }
         return false
@@ -86,10 +90,10 @@ export default function ContactForm() {
       const token = await recaptchaRef.current.executeAsync()
       recaptchaRef.current.reset()
       await emailjs.send(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID!,
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID!,
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
         {...values, 'g-recaptcha-response': token},
-        process.env.REACT_APP_EMAIL_JS_USER_ID
+        import.meta.env.VITE_EMAIL_JS_USER_ID
       )
       setSuccessDialog(true)
       changeValues(initialValues)
@@ -102,7 +106,7 @@ export default function ContactForm() {
 
   const handleChange = ({
     target: {name, value},
-  }: ChangeEvent<HTMLInputElement>): void => {
+  }: ChangeEvent<HTMLInputElement>) => {
     changeValues({
       ...values,
       [name]: value,
@@ -118,11 +122,11 @@ export default function ContactForm() {
     }
   }
 
-  const handleSuccessDialogClose = (): void => {
+  const handleSuccessDialogClose = () => {
     setSuccessDialog(false)
   }
 
-  const handleSnackbarClose = (): void => {
+  const handleSnackbarClose = () => {
     setSnackbar((state) => ({...state, open: false}))
   }
 
@@ -198,7 +202,7 @@ export default function ContactForm() {
       <ReCAPTCHA
         ref={recaptchaRef}
         size="invisible"
-        sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_KEY as string}
+        sitekey={import.meta.env.VITE_GOOGLE_RECAPTCHA_KEY}
       />
       <SuccessDialog
         t={t}
@@ -249,4 +253,4 @@ const initialValues: Record<string, string> = getInitialData('')
 
 const initialErrors: Record<string, boolean> = getInitialData(false)
 
-const emailRegExp: RegExp = /.+@.+\..+/i
+const emailRegExp = /.+@.+\..+/i

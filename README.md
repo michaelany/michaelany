@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://michaelany.com" rel="noopener" target="_blank">
-    <img width="100" src="./public/assets/logo.svg" alt="Logo" />
+    <img width="100" src="public/assets/logo.svg" alt="Logo" />
   </a>
 </p>
 
@@ -14,7 +14,7 @@
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 💼 &nbsp;7 years of [experience](https://michaelany.com/#/experience)
-- 🇲🇪 &nbsp;Live in Montenegro
+- 🇳🇿 &nbsp;Live in New Zealand
 
 <details>
   <summary>🔽 &nbsp;<strong>Details</strong></summary>
@@ -97,7 +97,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 ## Portfolio Project
 
 - 🚀 &nbsp;This project is a `Single Page App` & `Progressive Web App`
-- ⚙️ &nbsp;Built from scratch by `Create React App` with custom adjustments
+- ⚙️ &nbsp;Built from scratch by `Vite` with custom adjustments
 - 🔧 &nbsp;Base dependencies: `typescript`, `react`, `react-router-dom`, `@material-ui/core`, `sass`
 - ✅ &nbsp;All `HTML` is semantic & accessible
 - 🎨 &nbsp;Styled with `BEM` React style naming convention
@@ -106,13 +106,13 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 - 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next` & `react-i18next`
 - 📨 &nbsp;Uses `EmailJS` & `reCaptcha` v2 to send contact form emails
 - 🗄 &nbsp;Some UI data stores in the `localStorage`
-- 🧹 &nbsp;Clean & unified code style, `prettier` helps a lot
+- 🧹 &nbsp;Clean & unified code style, use `prettier` & `eslint`
 - 🌄 &nbsp;All images optimized & ready for retina
-- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `Trello`, `macOS Ventura`
+- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `macOS Ventura`
 - 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
 - 🏎 &nbsp;Google Page Speed score `~97`:
 
-<img src="./public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
+<img src="public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
 
 [website]: https://michaelany.com
 [linkedin]: https://www.linkedin.com/in/michaelany

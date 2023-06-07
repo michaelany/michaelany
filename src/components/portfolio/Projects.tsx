@@ -3,14 +3,15 @@ import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
 
 import './Projects.scss'
+import {QUERY_BREAKPOINT} from '@utils/constants'
+import {Project, ProjectType, Width} from '@utils/types'
+import PROJECTS from '@data/projects'
 import ProjectLink from './ProjectLink'
-import {QUERY_BREAKPOINT} from 'utils/constants'
-import {Project, ProjectType, Width} from 'utils/types'
-import PROJECTS from 'data/projects'
 
 type Filter = 'all' | ProjectType
 
-function Projects() {
+// memo is for avoiding reanimation items if several times click on the navlink
+const Projects = memo(() => {
   const {t} = useTranslation()
   const [filter, changeFilter] = useState<string>(
     localStorage.getItem(storageProp) ?? 'all'
@@ -21,7 +22,7 @@ function Projects() {
     sm: useMediaQuery(QUERY_BREAKPOINT.sm),
   }
 
-  const handleChange = (e: ChangeEvent<object>, value: string): void => {
+  const handleChange = (_: ChangeEvent<object>, value: string) => {
     localStorage.setItem(storageProp, value)
     changeFilter(value)
   }
@@ -55,10 +56,9 @@ function Projects() {
       </Grid>
     </div>
   )
-}
+})
 
-// it's avoiding reanimation items if several times click on the navlink
-export default memo(Projects)
+export default Projects
 
 const getFilteredProjects = (filter: string): Project[] =>
   filter === 'all'
@@ -67,6 +67,6 @@ const getFilteredProjects = (filter: string): Project[] =>
         project.types.includes(filter as ProjectType)
       )
 
-const storageProp: string = 'filter'
+const storageProp = 'filter'
 
 const filters: Filter[] = ['all', 'app', 'site', 'landing', 'admin']

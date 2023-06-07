@@ -1,5 +1,5 @@
 import './Sidebar.scss'
-import {Logo, Navigation} from '../common'
+import {Logo, Navigation} from '@components/common'
 import Settings from './Settings'
 
 export default function Sidebar() {

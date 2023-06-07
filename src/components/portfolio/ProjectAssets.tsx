@@ -4,10 +4,10 @@ import SwiperCore from 'swiper'
 import {useMediaQuery} from '@material-ui/core'
 
 import './ProjectAssets.scss'
-import {Animate, Pagination, Copyright} from '../common'
+import {Animate, Pagination, Copyright} from '@components/common'
+import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
+import {ProjectName, ProjectImages} from '@utils/types'
 import Carousel from './Carousel'
-import {ROUTE, QUERY_BREAKPOINT} from 'utils/constants'
-import {ProjectName, ProjectImages} from 'utils/types'
 
 interface ProjectAssetsProps {
   name: ProjectName
@@ -26,7 +26,7 @@ export default function ProjectAssets({
   images,
 }: ProjectAssetsProps) {
   const {t} = useTranslation()
-  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
+  const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
     <section className="ProjectAssets Section Section_pagination Section_colorful">

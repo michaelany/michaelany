@@ -11,9 +11,9 @@ import {
 } from '@material-ui/icons'
 
 import './Navigation.scss'
+import {ROUTE} from '@utils/constants'
+import {Route} from '@utils/types'
 import Tooltip from './Tooltip'
-import {ROUTE} from 'utils/constants'
-import {Route} from 'utils/types'
 
 interface NavigationProps {
   onClose?: () => void
@@ -44,7 +44,7 @@ export default function Navigation({onClose}: NavigationProps) {
 }
 
 const Item = ({tKey, to, Icon, t, onClose}: ItemProps) => {
-  const title: string = t(`title.${tKey}`)!
+  const title = t(`title.${tKey}`)
 
   return (
     <li>

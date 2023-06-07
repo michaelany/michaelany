@@ -3,6 +3,7 @@ import cn from 'clsx'
 import {Hidden} from '@material-ui/core'
 
 import './App.scss'
+import {ROUTE, PATH_COLOR} from '@utils/constants'
 import Sidebar from './base/Sidebar'
 import Header from './base/Header'
 import StopWar from './base/StopWar'
@@ -13,7 +14,6 @@ import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
 import Contact from './contact/Contact'
-import {ROUTE, PATH_COLOR} from 'utils/constants'
 
 export default function App() {
   const {pathname} = useLocation()

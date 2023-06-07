@@ -7,15 +7,15 @@ import {
 } from '@material-ui/icons'
 
 import './Work.scss'
-import {Animate} from '../common'
-import Job from './Job'
-import {Job as JobInterface} from 'utils/types'
-import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from 'data/common'
+import {Animate} from '@components/common'
+import {Job as JobInterface} from '@utils/types'
 import {
   YEARS_OF_EXPERIENCE,
   CAREER_START_PARTS,
   BLANK_LINK_PROPS,
-} from 'utils/constants'
+} from '@utils/constants'
+import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '@data/common'
+import Job from './Job'
 
 export default function Work() {
   const {t} = useTranslation()
@@ -39,9 +39,8 @@ export default function Work() {
   )
 }
 
-const transComponents: JSX.Element[] = [
+const transComponents = [
   <strong />,
-  // eslint-disable-next-line jsx-a11y/anchor-has-content
   <a {...BLANK_LINK_PROPS} className="Link" href={COMPANY.sevenGlyphs.href} />,
 ]
 

@@ -1,11 +1,12 @@
-import {ReactComponent as SevenGlyphsIcon} from 'assets/icons/7glyphs.svg'
-import {ReactComponent as GitHubIcon} from 'assets/icons/github.svg'
-import {ReactComponent as LinkedInIcon} from 'assets/icons/linkedin.svg'
-import {ReactComponent as InstagramIcon} from 'assets/icons/instagram.svg'
-import {ReactComponent as VKIcon} from 'assets/icons/vk.svg'
-import {ReactComponent as FacebookIcon} from 'assets/icons/facebook.svg'
-import {ReactComponent as TelegramIcon} from 'assets/icons/telegram.svg'
-import {SocialLink, Company, TechnologyGroup} from 'utils/types'
+import {importImg} from '@utils/helpers'
+import {ReactComponent as SevenGlyphsIcon} from '@assets/icons/7glyphs.svg'
+import {ReactComponent as GitHubIcon} from '@assets/icons/github.svg'
+import {ReactComponent as LinkedInIcon} from '@assets/icons/linkedin.svg'
+import {ReactComponent as InstagramIcon} from '@assets/icons/instagram.svg'
+import {ReactComponent as VKIcon} from '@assets/icons/vk.svg'
+import {ReactComponent as FacebookIcon} from '@assets/icons/facebook.svg'
+import {ReactComponent as TelegramIcon} from '@assets/icons/telegram.svg'
+import {SocialLink, Company, TechnologyGroup} from '@utils/types'
 
 interface CompanyTitle {
   mvideo: string
@@ -31,7 +32,7 @@ interface CompanyInterface {
   mvideo: Company
 }
 
-export const MY_NAME: string = 'Michael Any'
+export const MY_NAME = 'Michael Any'
 
 export const COMPANY_TITLE: CompanyTitle = {
   mvideo: 'M.Video',
@@ -89,26 +90,23 @@ export const COMPANY: CompanyInterface = {
   sevenGlyphs: {
     title: COMPANY_TITLE.sevenGlyphs,
     images: [
-      require('../assets/img/companies/7glyphs.png'),
-      require('../assets/img/companies/7glyphs@2x.png'),
+      importImg('companies/7glyphs.png'),
+      importImg('companies/7glyphs@2x.png'),
     ],
     color: 'default',
     href: 'https://7glyphs.com',
   },
   t1: {
     title: COMPANY_TITLE.t1,
-    images: [
-      require('../assets/img/companies/t1.png'),
-      require('../assets/img/companies/t1@2x.png'),
-    ],
+    images: [importImg('companies/t1.png'), importImg('companies/t1@2x.png')],
     color: 'blue',
     href: 'http://www.t1-consulting.ru',
   },
   everpoint: {
     title: COMPANY_TITLE.everpoint,
     images: [
-      require('../assets/img/companies/everpoint.png'),
-      require('../assets/img/companies/everpoint@2x.png'),
+      importImg('companies/everpoint.png'),
+      importImg('companies/everpoint@2x.png'),
     ],
     color: 'grass',
     href: 'https://www.everpoint.ru',
@@ -116,8 +114,8 @@ export const COMPANY: CompanyInterface = {
   mvideo: {
     title: COMPANY_TITLE.mvideo,
     images: [
-      require('../assets/img/companies/mvideo.png'),
-      require('../assets/img/companies/mvideo@2x.png'),
+      importImg('companies/mvideo.png'),
+      importImg('companies/mvideo@2x.png'),
     ],
     color: 'red',
     href: 'https://www.mvideo.ru',
