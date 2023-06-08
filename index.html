@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Michael Any | https://github.com/michaelany" />
+    <meta
+      name="description"
+      content="Personal website of Michael Any, a frontend developer & lead software engineer"
+    />
+    <meta
+      name="keywords"
+      content="michaelany, frontend, software engineer, html, css, javascript, react"
+    />
+    <meta
+      property="og:title"
+      content="Michael Any | Frontend Developer | Lead Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Personal website of Michael Any, a frontend developer & lead software engineer"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://michaelany.com" />
+    <meta
+      property="og:image"
+      content="https://michaelany.com/assets/preview.jpg"
+    />
+    <meta property="og:site_name" content="michaelany.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image:alt"
+      content="Michael Any | Frontend Developer | Lead Software Engineer"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <link rel="icon" href="/assets/logo.svg" />
+    <link
+      rel="mask-icon"
+      href="/assets/safari-pinned-tab.svg"
+      color="#64a6fc"
+    />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link type="text/plain" rel="author" href="/humans.txt" />
+    <title>Michael Any | Frontend Developer | Lead Software Engineer</title>
+    <style>
+      @keyframes pulse {
+        from {
+          transform: scale3d(1, 1, 1);
+        }
+        50% {
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+        to {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+      html {
+        overflow-y: scroll;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: 'Neutra Text, sans-serif';
+      }
+      .Preloader {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: white;
+        color: #282c34;
+        transform: scale(5);
+        transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: transform, opacity;
+      }
+      .Preloader-Logo {
+        opacity: 0.01;
+        animation-play-state: paused;
+        transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+        animation: pulse 2s infinite;
+      }
+      .Preloader_show {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .Preloader_show .Preloader-Logo {
+        opacity: 1;
+        animation-play-state: running;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-cd89b360.js"></script>
+    <link rel="stylesheet" href="/assets/index-13f875f2.css">
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <body>
+    <div id="preloader" class="Preloader Preloader_show">
+      <div>
+        <svg
+          class="Preloader-Logo"
+          height="100"
+          viewBox="0 0 1000 1000"
+          width="100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m925 0c41.421355 0 75 33.5786437 75 75v850c0 41.421355-33.578645 75-75 75h-850c-41.4213563 0-75-33.578645-75-75v-850c0-41.4213563 33.5786437-75 75-75zm-793.831903 426.83991h-7.20524v450h87.772926v-167.030567c0-7.174048-.185664-15.350683-.46858-23.645785l-.180712-4.984208c-.064517-1.683877-.132303-3.365355-.202622-5.037075l-.085551-2.000905c-.967849-22.280605-2.337644-42.279625-2.337644-42.279625s12.803745 18.73719 27.629918 38.09895l3.092805 4.008853c5.710082 7.344117 11.604163 14.598372 17.09387 20.774292l88.427948 98.908297h8.515285l88.427947-98.908297c5.489708-6.17592 11.383788-13.430175 17.093871-20.774292l3.092805-4.008853c14.826172-19.36176 27.629917-38.09895 27.629917-38.09895s-1.369795 19.99902-2.337643 42.279625l-.085552 2.000905c-.014065.334345-.028027.669077-.041882 1.004145l-.121643 3.02295c-.01316.336525-.026193.673205-.039095 1.00998l-.180715 4.984208c-.254623 7.465592-.430472 14.835225-.463097 21.464377l-.007913 167.822065-.645447 1.487143h88.556852l.038595-.099643.48038.00241-.00038-1.15491 20.472658-49.25806h181.049562l20.991255 50.510203h96.428573l-204.008748-450h-7.87172l-107.06158 245.625357.00038-245.72259h-7.860263l-216.157204 241.048035zm553.134891 166.059333c.876524 3.067837 7.02356 24.289657 14.724217 46.841639l.737975 2.151293c.247478.718078.496402 1.43696.746655 2.156105l1.885705 5.35029c2.859905 8.008072 5.848595 15.88252 8.80049 22.87385l32.142858 77.405247h-117.419826l32.142858-77.405247c2.49271-6.16618 5.011662-12.9621 7.451895-19.904958l.729603-2.086782c.484687-1.393482.965807-2.790913 1.442519-4.188425l1.064808-3.14292.700557-2.090608c7.313968-21.919094 13.27408-42.661377 14.599836-47.136544l.226445-.75058c.009037-.028543.016844-.05268.023405-.07236z"
+            fill="#62dafc"
+          />
+        </svg>
+      </div>
+    </div>
+    <div id="root"></div>
+    
+  </body>
+</html>
