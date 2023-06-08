@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
-    VitePWA({
+    /* VitePWA({
       registerType: 'autoUpdate',
       manifest: {
         name: 'Michael Any',
@@ -39,7 +39,7 @@ export default defineConfig({
           },
         ],
       },
-    }),
+    }), */
   ],
   server: {
     open: true,
