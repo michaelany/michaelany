@@ -16,7 +16,7 @@ jobs:
           node-version: '19.x'
       - name: Build the project
         run: |
-          yarn install --silent --frozen-lockfile 
+          yarn --frozen-lockfile 
           yarn build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
