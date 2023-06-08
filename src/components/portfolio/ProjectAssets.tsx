@@ -71,6 +71,7 @@ const Screenshots = ({t, md, name, images}: ScreenshotsProps) => {
       {images.mobile && (
         <Carousel
           mobile
+          mobileOnly={!images.desktop}
           t={t}
           md={md}
           name={name}

@@ -11,6 +11,7 @@ import {DURATION} from '@styles/theme'
 
 interface CarouselProps {
   mobile?: boolean
+  mobileOnly?: boolean
   t: TFunction
   md: boolean
   name: ProjectName
@@ -42,7 +43,7 @@ export default function Carousel(props: CarouselProps) {
 }
 
 const renderContent = (
-  {t, mobile, name, images, swiper, setSwiper}: CarouselProps,
+  {t, mobile, mobileOnly, name, images, swiper, setSwiper}: CarouselProps,
   isDesktop?: boolean
 ): JSX.Element | JSX.Element[] => {
   const imageElements: JSX.Element[] = images.map(
@@ -62,10 +63,11 @@ const renderContent = (
       )
     }
   )
+
   return imageElements.length > 1 ? (
     <Swiper
       {...swiperOptions}
-      autoplay={isDesktop ? autoplayOptions : undefined}
+      autoplay={isDesktop || mobileOnly ? autoplayOptions : undefined}
       controller={{control: swiper ?? undefined}}
       onSwiper={setSwiper}
     >
