@@ -27,6 +27,7 @@ interface QueryBreakpoint {
 
 interface ProjectRoute {
   vconline: string
+  vconlinel: string
   madfit: string
   madfitp: string
   vibe: string
@@ -108,6 +109,7 @@ export const ROUTE: RouteInterface = {
 
 export const PROJECT_ROUTE: ProjectRoute = {
   vconline: '/vc-online',
+  vconlinel: '/vc-online-landing',
   madfit: '/madfit',
   madfitp: '/madfit-portal',
   vibe: '/vibe-media',
@@ -152,7 +154,8 @@ export const PATH_COLOR: Record<Route | string, Color> = {
   [ROUTE.experience]: 'violet',
   [ROUTE.portfolio]: 'white',
   [ROUTE.contact]: 'white',
-  [PROJECT_ROUTE.vconline]: 'default',
+  [PROJECT_ROUTE.vconline]: 'grass',
+  [PROJECT_ROUTE.vconlinel]: 'grass',
   [PROJECT_ROUTE.madfit]: 'green',
   [PROJECT_ROUTE.madfitp]: 'green',
   [PROJECT_ROUTE.vibe]: 'yellow',

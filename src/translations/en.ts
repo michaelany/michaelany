@@ -280,10 +280,10 @@ const EN = {
       admin: 'Admin panel',
     },
     feature: {
-      wholeDevelopment: `${common.portfolio.scratchDevelopment}, project progress & support`,
+      wholeDevelopment: `${common.portfolio.scratchDevelopment}, project improvement & support`,
       scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, project support`,
       scratchDevelopment: common.portfolio.scratchDevelopment,
-      growthSupportDevelopment: 'Project progress & support',
+      growthSupportDevelopment: 'Project improvement & support',
       markupBusinessLogic: 'Markup & development of a part of business logic',
       jqueryReact: 'Rewriting the codebase from {{0}} to {{1}}',
       leadWork: 'Frontend Development team lead',
@@ -312,6 +312,9 @@ const EN = {
     },
     project: {
       vconline: {
+        text: 'Corporate application of the financial company',
+      },
+      vconlinel: {
         text: 'Landing page of the financial company mobile corporate application',
       },
       madfit: {
