@@ -25,6 +25,7 @@ export default function Greeting() {
 
   return (
     <section className="Greeting Section">
+      <h1>!!!</h1>
       <div>
         <p className="Greeting-Text Greeting-First Title">
           {t(`home.hi.${getDayTime()}`)}
