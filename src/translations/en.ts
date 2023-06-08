@@ -362,7 +362,7 @@ const EN = {
       },
       uls: {
         title: 'United Login System',
-        text: '{{0}} single user account',
+        text: 'Single user account of the company',
       },
       proximal: {
         text: 'Landing page the Australian coffee shop',
@@ -387,7 +387,7 @@ const EN = {
         text: 'Landing page of the New Zealand service for ordering discount food in restaurants',
       },
       sds: {
-        text: 'Enterprise service for work with {{0}} document flow',
+        text: 'Enterprise service to work with the company document flow',
       },
       strong: {
         text: 'Mobile fitness application website',

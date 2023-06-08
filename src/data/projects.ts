@@ -1106,7 +1106,6 @@ const projects: Project[] = [
   },
   {
     name: 'uls',
-    textValues: ['Vaillant Group'],
     types: ['app'],
     companyName: 't1',
     features: [
@@ -1608,7 +1607,6 @@ const projects: Project[] = [
   {
     name: 'sds',
     title: 'Sales Digital System',
-    textValues: ['Vaillant Group'],
     types: ['app'],
     companyName: 't1',
     features: [
@@ -2072,7 +2070,7 @@ const projects: Project[] = [
     private: true,
     name: 'whip',
     title: 'Whip Around',
-    types: ['site'],
+    types: ['admin'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/whip-around',
     features: [
