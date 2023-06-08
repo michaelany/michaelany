@@ -4,11 +4,10 @@ import svgr from 'vite-plugin-svgr'
 import {VitePWA} from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: 'https://michaelany.com/',
   plugins: [
     react(),
     svgr(),
-    /* VitePWA({
+    VitePWA({
       registerType: 'autoUpdate',
       manifest: {
         name: 'Michael Any',
@@ -40,7 +39,7 @@ export default defineConfig({
           },
         ],
       },
-    }), */
+    }),
   ],
   server: {
     open: true,
