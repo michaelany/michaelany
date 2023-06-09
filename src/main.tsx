@@ -20,6 +20,16 @@ const theme: Theme = createTheme(THEME as object)
 
 window.addEventListener('load', handleAppLoaded)
 
+console.log(
+  'VITE_EMAIL_JS_TEMPLATE_ID',
+  import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID
+)
+
+console.log(
+  'VITE_GOOGLE_RECAPTCHA_KEY',
+  import.meta.env.VITE_GOOGLE_RECAPTCHA_KEY
+)
+
 logConsoleWelcomeMessage()
 
 createRoot(ROOT).render(
