@@ -20,8 +20,6 @@ const theme: Theme = createTheme(THEME as object)
 
 window.addEventListener('load', handleAppLoaded)
 
-console.log('VITE_EMAIL_JS_USER_ID', import.meta.env.VITE_EMAIL_JS_USER_ID)
-
 logConsoleWelcomeMessage()
 
 createRoot(ROOT).render(

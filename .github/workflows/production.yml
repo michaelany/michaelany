@@ -19,7 +19,12 @@ jobs:
           yarn --silent --frozen-lockfile 
           yarn build
         env:
-          VITE_EMAIL_JS_USER_ID: ${{ secrets.VITE_EMAIL_JS_USER_ID }}
+          VITE_SHOW_PRIVATE_PROJECTS: false
+          VITE_EMAIL_JS_SERVICE_ID: gmail_michaelany
+          VITE_EMAIL_JS_TEMPLATE_ID: michaelany
+          VITE_EMAIL_JS_USER_ID: ${{ secrets.EMAIL_JS_USER_ID }}
+          VITE_GOOGLE_RECAPTCHA_KEY: ${{ secrets.GOOGLE_RECAPTCHA_KEY }}
+          VITE_GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
