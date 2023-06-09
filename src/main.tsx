@@ -25,11 +25,6 @@ console.log(
   import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID
 )
 
-console.log(
-  'VITE_GOOGLE_RECAPTCHA_KEY',
-  import.meta.env.VITE_GOOGLE_RECAPTCHA_KEY
-)
-
 logConsoleWelcomeMessage()
 
 createRoot(ROOT).render(
