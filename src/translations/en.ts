@@ -57,7 +57,7 @@ const EN = {
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
-        text: `My portfolio includes foreign and domestic commercial projects - from one-page landing pages to large web applications. Most of them in <0>${common.title.portfolio}</0>`,
+        text: `My portfolio includes both foreign and domestic commercial projects, ranging from one-page landing pages to large web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Lead software engineer',
@@ -265,7 +265,7 @@ const EN = {
       step19:
         'Moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Got a work visa. Preparing to move to New Zealand',
       step20:
-        'Moved to New Zealand on a work visa from the {{0}} company. Settling in, establishing relations with hobbits and alpacas {{1}}',
+        'Moved to New Zealand on a work visa from the {{0}} company. Settling in, building relationships with hobbits and alpacas {{1}}',
     },
   },
   portfolio: {
