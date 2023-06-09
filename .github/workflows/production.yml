@@ -18,6 +18,8 @@ jobs:
         run: |
           yarn --silent --frozen-lockfile 
           yarn build
+        env:
+          VITE_EMAIL_JS_USER_ID: ${{ secrets.VITE_EMAIL_JS_USER_ID }}
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
