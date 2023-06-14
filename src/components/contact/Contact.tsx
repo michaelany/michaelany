@@ -51,7 +51,7 @@ const links: SocialLink[] = [
   CONTACT_LINK.telegram,
   CONTACT_LINK.linkedIn,
   CONTACT_LINK.instagram,
-  CONTACT_LINK.facebook,
+  //CONTACT_LINK.facebook,
 ]
 
 const email = 'michaelany.it@gmail.com'

@@ -1,3 +1,5 @@
+import {YouTube as YouTubeIcon} from '@material-ui/icons'
+
 import {importImg} from '@utils/helpers'
 import {ReactComponent as SevenGlyphsIcon} from '@assets/icons/7glyphs.svg'
 import {ReactComponent as GitHubIcon} from '@assets/icons/github.svg'
@@ -19,6 +21,7 @@ interface ContactLink {
   gitHub: SocialLink
   linkedIn: SocialLink
   sevenGlyphs: SocialLink
+  youTube: SocialLink
   instagram: SocialLink
   vk: SocialLink
   facebook: SocialLink
@@ -59,6 +62,12 @@ export const CONTACT_LINK: ContactLink = {
     href: 'https://t.me/michaelany',
     Icon: TelegramIcon,
     size: 'md',
+  },
+  youTube: {
+    title: 'YouTube',
+    href: 'https://www.youtube.com/@michaelany',
+    Icon: YouTubeIcon,
+    size: 'xl',
   },
   instagram: {
     title: 'Instagram',

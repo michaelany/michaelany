@@ -1,5 +1,7 @@
 import {ReactNode, FunctionComponent, SVGProps} from 'react'
-import {SvgIconProps} from '@material-ui/core'
+import {SvgIconProps, SvgIcon} from '@material-ui/core'
+
+type SvgIconComponent = typeof SvgIcon
 
 export type Route =
   | '/'
@@ -85,8 +87,8 @@ export interface TKeyObject {
 export interface SocialLink {
   title: string
   href: string
-  Icon: FunctionComponent<SVGProps<SVGSVGElement>>
-  size: 'xs' | 'sm' | 'md' | 'lg'
+  Icon: FunctionComponent<SVGProps<SVGSVGElement>> | SvgIconComponent
+  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 }
 
 export interface Feature {

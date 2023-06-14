@@ -89,8 +89,9 @@ const Photo = () => {
 const links: SocialLink[] = [
   CONTACT_LINK.gitHub,
   CONTACT_LINK.linkedIn,
+  CONTACT_LINK.youTube,
   CONTACT_LINK.instagram,
-  CONTACT_LINK.facebook,
+  //CONTACT_LINK.facebook,
   CONTACT_LINK.telegram,
   CONTACT_LINK.sevenGlyphs,
 ]

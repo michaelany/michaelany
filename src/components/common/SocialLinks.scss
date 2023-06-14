@@ -129,6 +129,10 @@
     width: 28px;
     height: 28px;
   }
+  &_size_xl {
+    width: 32px;
+    height: 32px;
+  }
   @include sm {
     &_size_xs {
       width: 18px;
@@ -145,6 +149,10 @@
     &_size_lg {
       width: 24px;
       height: 24px;
+    }
+    &_size_xl {
+      width: 28px;
+      height: 28px;
     }
   }
 }

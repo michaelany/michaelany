@@ -33,7 +33,9 @@
 
 [<img src="https://img.shields.io/badge/-Michael_Any-61DAFB?logo=google-chrome&logoColor=282828" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
-[<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />](https://7glyphs.com/agency/team)
+[<img src="https://img.shields.io/badge/-YouTube-f70000?logo=youtube&logoColor=white" alt="LinkedIn" />][youtube]
+[<img src="https://img.shields.io/badge/-Instagram-df7f57?logo=instagram&logoColor=white" alt="LinkedIn" />][instagram]
+[<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />][7glyphs]
 
 ## [Skills](https://michaelany.com/#/skills)
 
@@ -124,6 +126,8 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 
 [website]: https://michaelany.com
 [linkedin]: https://www.linkedin.com/in/michaelany
+[youtube]: https://www.youtube.com/@michaelany
 [instagram]: https://instagram.com/anymichael
+[7glyphs]: https://7glyphs.com/agency/team
 [facebook]: https://www.facebook.com/michaelany.fb
 [vk]: https://vk.com/michaelany
