@@ -427,12 +427,6 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         color: 'grass',
         href: 'https://greensock.com',
       },
-      {
-        name: 'emails',
-        label: TECHNOLOGY_TITLE.emails,
-        color: 'red',
-        href: 'https://get.foundation/emails.html',
-      },
     ],
   },
   {
@@ -515,6 +509,12 @@ export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.jest,
         color: 'red',
         href: 'https://jestjs.io',
+      },
+      {
+        name: 'emails',
+        label: TECHNOLOGY_TITLE.emails,
+        color: 'red',
+        href: 'https://get.foundation/emails.html',
       },
     ],
   },
