@@ -9,7 +9,8 @@
 
   .MuiSnackbarContent-message {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: 12px;
   }
 
   .StopWar-Link {
@@ -19,9 +20,6 @@
 
 .StopWar-Icon {
   flex-shrink: 0;
-  margin-right: 12px;
-  position: relative;
-  top: 4px;
 }
 
 .StopWar-Close {

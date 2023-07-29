@@ -32,22 +32,6 @@ export default function StopWar() {
           <RuUaIcon className="StopWar-Icon" />
           <p>
             <Trans i18nKey="stopWar.text" components={transComponents} />
-            <br />
-            <a
-              {...BLANK_LINK_PROPS}
-              className="StopWar-Link Link"
-              href="https://war.ukraine.ua/support-ukraine"
-            >
-              {t('stopWar.firstHelp')}
-            </a>{' '}
-            🕊{' '}
-            <a
-              {...BLANK_LINK_PROPS}
-              className="StopWar-Link Link"
-              href="https://www.stopputin.net/more-ways-to-help"
-            >
-              {t('stopWar.secondHelp')}
-            </a>
           </p>
           <IconButton
             className="StopWar-Close"
