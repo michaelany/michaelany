@@ -1,16 +1,14 @@
 import {useState, useEffect} from 'react'
-import {useTranslation, Trans} from 'react-i18next'
+import {Trans} from 'react-i18next'
 import {Snackbar, SnackbarOrigin, IconButton} from '@material-ui/core'
 import {CloseRounded as CloseIcon} from '@material-ui/icons'
 
 import './StopWar.scss'
 import {ReactComponent as RuUaIcon} from '@assets/icons/ru-ua.svg'
-import {BLANK_LINK_PROPS} from '@utils/constants'
 import {DURATION} from '@styles/theme'
 
 export default function StopWar() {
   const [open, setOpen] = useState<boolean>(false)
-  const {t} = useTranslation()
 
   useEffect(() => {
     if (localStorage.stopWarChecked) return
