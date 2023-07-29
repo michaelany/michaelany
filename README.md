@@ -13,7 +13,7 @@
 - 👨‍🏫 &nbsp;Lead software engineer at [7 glyphs](https://7glyphs.com/)
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
-- 💼 &nbsp;7 years of [experience](https://michaelany.com/#/experience)
+- 💼 &nbsp;8 years of [experience](https://michaelany.com/#/experience)
 - 🇳🇿 &nbsp;Live in Auckland, New Zealand
 
 <details>
