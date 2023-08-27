@@ -37,8 +37,6 @@ export type CompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 export type ProjectType = 'app' | 'site' | 'landing' | 'admin'
 
 export type ProjectName =
-  | 'vconline'
-  | 'vconlinel'
   | 'madfit'
   | 'madfitp'
   | 'vibe'

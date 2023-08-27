@@ -3,11 +3,6 @@ import {Project} from '@utils/types'
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 
 const commonLogo = {
-  vc: [
-    importImg('logos/vc_sm.png'),
-    importImg('logos/vc.png'),
-    importImg('logos/vc@2x.png'),
-  ],
   madfit: [
     importImg('logos/madfit_sm.png'),
     importImg('logos/madfit.png'),
@@ -51,137 +46,6 @@ const commonLogo = {
 }
 
 const projects: Project[] = [
-  {
-    private: true,
-    name: 'vconline',
-    title: 'VC Online',
-    types: ['app'],
-    companyName: 'sevenGlyphs',
-    url: 'https://vco.vincentcapital.co.nz/',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.zustand}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.ant}`,
-      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'businessLogic',
-      },
-      {
-        tKey: 'may',
-        text: 2023,
-      },
-    ],
-    images: {
-      logo: commonLogo.vc,
-      desktop: [
-        [
-          importImg('projects/vconline@2x.jpg'),
-          importImg('projects/vconline-first@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconline-second.jpg'),
-          importImg('projects/vconline-second@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconline-third.jpg'),
-          importImg('projects/vconline-third@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconline-fourth.jpg'),
-          importImg('projects/vconline-fourth@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconline-fifth.jpg'),
-          importImg('projects/vconline-fifth@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconline-sixth.jpg'),
-          importImg('projects/vconline-sixth@2x.jpg'),
-        ],
-      ],
-    },
-  },
-  {
-    private: true,
-    name: 'vconlinel',
-    title: 'VC Online',
-    types: ['landing'],
-    companyName: 'sevenGlyphs',
-    url: 'https://online.vincentcapital.co.nz',
-    features: [
-      {
-        tKey: 'scratchSupportDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.gsap}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      {
-        tKey: 'august',
-        text: 2022,
-      },
-    ],
-    images: {
-      logo: commonLogo.vc,
-      desktop: [
-        [
-          importImg('projects/vconlinel@2x.jpg'),
-          importImg('projects/vconlinel-desktop-first@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-desktop-second.jpg'),
-          importImg('projects/vconlinel-desktop-second@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-desktop-third.jpg'),
-          importImg('projects/vconlinel-desktop-third@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-desktop-fourth.jpg'),
-          importImg('projects/vconlinel-desktop-fourth@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-desktop-fifth.jpg'),
-          importImg('projects/vconlinel-desktop-fifth@2x.jpg'),
-        ],
-      ],
-      mobile: [
-        [
-          importImg('projects/vconlinel-mobile-first.jpg'),
-          importImg('projects/vconlinel-mobile-first@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-mobile-second.jpg'),
-          importImg('projects/vconlinel-mobile-second@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-mobile-third.jpg'),
-          importImg('projects/vconlinel-mobile-third@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-mobile-fourth.jpg'),
-          importImg('projects/vconlinel-mobile-fourth@2x.jpg'),
-        ],
-        [
-          importImg('projects/vconlinel-mobile-fifth.jpg'),
-          importImg('projects/vconlinel-mobile-fifth@2x.jpg'),
-        ],
-      ],
-    },
-  },
   {
     name: 'madfit',
     title: 'MadFit',
@@ -2338,7 +2202,7 @@ const PROJECTS: Project[] =
     ? projects
     : projects.filter((project: Project) => !project.private)
 
-const OTHER_PROJECTS_COUNT = 3
+const OTHER_PROJECTS_COUNT = 5
 
 export const PROJECTS_COUNT: number = projects.length + OTHER_PROJECTS_COUNT
 

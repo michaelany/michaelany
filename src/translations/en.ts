@@ -311,17 +311,11 @@ const EN = {
       fastDevelopment: 'Fast development',
     },
     project: {
-      vconline: {
-        text: 'Corporate application of the financial company',
-      },
-      vconlinel: {
-        text: 'Landing page of the financial company mobile corporate application',
-      },
       madfit: {
         text: 'Landing page & subscription service the mobile fitness application',
       },
       madfitp: {
-        text: 'Mini content management system the mobile fitness application',
+        text: 'Content management system the mobile fitness application',
       },
       vibe: {
         text: 'Landing page the New Zealand digital marketing agency',
