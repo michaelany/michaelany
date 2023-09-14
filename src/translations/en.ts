@@ -57,7 +57,7 @@ const EN = {
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
-        text: `My portfolio includes both foreign and domestic commercial projects, ranging from one-page landing pages to large web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
+        text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to large web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Lead software engineer',
@@ -73,7 +73,7 @@ const EN = {
       },
       programming: {
         label: 'Love to code',
-        text: 'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I plan to launch my own blog recently',
+        text: 'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I recently started a {{2}} <0>blog<0/>',
       },
       growing: {
         label: 'Constantly learning',
@@ -261,7 +261,7 @@ const EN = {
       step16:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
-      step18: `Work as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I provide frontend development consultations`,
+      step18: `Worked as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I also provided frontend development consultations`,
       step19:
         'Moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Got a work visa. Preparing to move to New Zealand',
       step20:

@@ -17,7 +17,7 @@ import {
 
 import {Sections, Info} from '@components/common'
 import {PROJECTS_COUNT} from '@data/projects'
-import {TECHNOLOGY_TITLE} from '@data/common'
+import {TECHNOLOGY_TITLE, CONTACT_LINK} from '@data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
@@ -93,7 +93,18 @@ const features: Feature[] = [
   {
     tKey: 'programming',
     Icon: CodeIcon,
-    textValues: [TECHNOLOGY_TITLE.js, TECHNOLOGY_TITLE.css],
+    textValues: [
+      TECHNOLOGY_TITLE.js,
+      TECHNOLOGY_TITLE.css,
+      CONTACT_LINK.youTube.title,
+    ],
+    Link: (
+      <a
+        {...BLANK_LINK_PROPS}
+        className="Link"
+        href={CONTACT_LINK.youTube.href}
+      />
+    ),
   },
   {
     tKey: 'growing',
