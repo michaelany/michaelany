@@ -19,7 +19,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-src/data/projects.ts
-src/assets/img/projects
-src/translations
