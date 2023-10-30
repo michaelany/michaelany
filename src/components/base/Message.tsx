@@ -3,36 +3,38 @@ import {Trans} from 'react-i18next'
 import {Snackbar, SnackbarOrigin, IconButton} from '@material-ui/core'
 import {CloseRounded as CloseIcon} from '@material-ui/icons'
 
-import './StopWar.scss'
-import {ReactComponent as RuUaIcon} from '@assets/icons/ru-ua.svg'
+import './Message.scss'
+import pumpkinImg from '@assets/img/shapes/pumpkin.png'
+// import {ReactComponent as RuUaIcon} from '@assets/icons/ru-ua.svg'
 import {DURATION} from '@styles/theme'
 
-export default function StopWar() {
+export default function Message() {
   const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
-    if (localStorage.stopWarChecked) return
+    if (localStorage.messageChecked) return
     setTimeout(setOpen, DURATION.longest, true)
   }, [])
 
   const handleClose = () => {
-    localStorage.setItem('stopWarChecked', JSON.stringify(true))
+    localStorage.setItem('messageChecked', JSON.stringify(true))
     setOpen(false)
   }
 
   return (
     <Snackbar
-      className="StopWar"
+      className="Message"
       open={open}
       anchorOrigin={anchorOrigin}
       message={
         <>
-          <RuUaIcon className="StopWar-Icon" />
+          {/* <RuUaIcon className="Message-Icon" /> */}
+          <img width={64} height={64} src={pumpkinImg} alt="Pumpkin" />
           <p>
-            <Trans i18nKey="stopWar.text" components={transComponents} />
+            <Trans i18nKey="message.halloween" components={transComponents} />!
           </p>
           <IconButton
-            className="StopWar-Close"
+            className="Message-Close"
             aria-label="Close"
             onClick={handleClose}
           >

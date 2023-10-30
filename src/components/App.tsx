@@ -6,7 +6,7 @@ import './App.scss'
 import {ROUTE, PATH_COLOR} from '@utils/constants'
 import Sidebar from './base/Sidebar'
 import Header from './base/Header'
-import StopWar from './base/StopWar'
+import Message from './base/Message'
 import Home from './home/Home'
 import About from './about/About'
 import Skills from './skills/Skills'
@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <div className={AppClassName}>
-      <StopWar />
+      <Message />
       {/* @ts-ignore */}
       <Hidden mdDown>
         <Sidebar />

@@ -455,10 +455,10 @@ const EN = {
     see: 'See it live',
     error: 'Server connection error',
   },
-  stopWar: {
-    text: 'I am Russian and also Ukrainian, my family lives both in Russia and Ukraine. <0>NO WAR!</0>',
-    firstHelp: 'Find out how to help',
-    secondHelp: 'More ways to help',
+  message: {
+    stopWar:
+      'I am Russian and also Ukrainian, my family lives both in Russia and Ukraine. <0>NO WAR</0>',
+    halloween: 'Happy <0>Halloween</0>',
   },
 }
 
