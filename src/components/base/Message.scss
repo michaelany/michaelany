@@ -2,18 +2,20 @@
 
 .Message {
   .MuiSnackbarContent-root {
+    background-color: white;
+    color: $color_text;
+    border: 1px solid $color_text;
+  }
+
+  /* .MuiSnackbarContent-root {
     background-color: black;
     color: white;
-  }
+  } */
 
   .MuiSnackbarContent-message {
     display: flex;
     align-items: center;
     gap: 12px;
-  }
-
-  .Message-Link {
-    color: $color_dark-blue;
   }
 }
 

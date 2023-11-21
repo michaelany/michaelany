@@ -456,8 +456,7 @@ const EN = {
     error: 'Server connection error',
   },
   message: {
-    stopWar:
-      'I am Russian and also Ukrainian, my family lives both in Russia and Ukraine. <0>NO WAR</0>',
+    stopWar: 'My relatives live in Russia and Ukraine. <0>NO WAR</0>',
     halloween: 'Happy <0>Halloween</0>',
   },
 }
