@@ -4,7 +4,7 @@
 	Contact: michaelany.it@gmail.com | https://michaelany.com/#/contact
 
 /* SITE */
-	Last update: 23/06/2023
+	Last update: 31/12/2023
 	Language: English | Russian
 	Components: TypeScript, React, Material-UI, Sass, Vite
 	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, macOS Ventura
