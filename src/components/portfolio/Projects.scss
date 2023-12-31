@@ -1,6 +1,3 @@
-@import '/src/styles/variables';
-@import '/src/styles/mixins';
-
 .Projects-Filters {
   @include animation(fadeIn);
   margin-bottom: 24px;
