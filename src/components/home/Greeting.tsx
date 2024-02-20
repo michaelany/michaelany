@@ -10,18 +10,18 @@ import {
 import './Greeting.scss'
 import frontEndImg from '@assets/img/pictures/frontend.png'
 import frontEndImg2x from '@assets/img/pictures/frontend@2x.png'
-/* import meImg from '@assets/img/pictures/me.jpg'
+import meImg from '@assets/img/pictures/me.jpg'
 import meImg2x from '@assets/img/pictures/me@2x.jpg'
 import meMdImg from '@assets/img/pictures/me_md.jpg'
 import meMdImg2x from '@assets/img/pictures/me_md@2x.jpg'
 import meXsImg from '@assets/img/pictures/me_xs.jpg'
-import meXsImg2x from '@assets/img/pictures/me_xs@2x.jpg' */
-import meSantaImg from '@assets/img/pictures/me-santa.jpg'
+import meXsImg2x from '@assets/img/pictures/me_xs@2x.jpg'
+/* import meSantaImg from '@assets/img/pictures/me-santa.jpg'
 import meSantaImg2x from '@assets/img/pictures/me-santa@2x.jpg'
 import meSantaMdImg from '@assets/img/pictures/me-santa_md.jpg'
 import meSantaMdImg2x from '@assets/img/pictures/me-santa_md@2x.jpg'
 import meSantaXsImg from '@assets/img/pictures/me-santa_xs.jpg'
-import meSantaXsImg2x from '@assets/img/pictures/me-santa_xs@2x.jpg'
+import meSantaXsImg2x from '@assets/img/pictures/me-santa_xs@2x.jpg' */
 import {ReactComponent as HelloIcon} from '@assets/icons/hello.svg'
 import {MY_NAME} from '@data/common'
 import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
@@ -100,18 +100,18 @@ export default function Greeting() {
         <source
           width={180}
           media={QUERY_BREAKPOINT.xs}
-          srcSet={`${meSantaXsImg}, ${meSantaXsImg2x} 2x`}
+          srcSet={`${meXsImg}, ${meXsImg2x} 2x`}
         />
         <source
           width={320}
           media={QUERY_BREAKPOINT.lg}
-          srcSet={`${meSantaMdImg}, ${meSantaMdImg2x} 2x`}
+          srcSet={`${meMdImg}, ${meMdImg2x} 2x`}
         />
         <img
           className="Greeting-Photo"
           width={480}
-          src={meSantaImg}
-          srcSet={`${meSantaImg2x} 2x`}
+          src={meImg}
+          srcSet={`${meImg2x} 2x`}
           alt={MY_NAME}
         />
       </picture>
