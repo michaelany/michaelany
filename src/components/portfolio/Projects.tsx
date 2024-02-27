@@ -1,6 +1,6 @@
 import {memo, useState, ChangeEvent} from 'react'
 import {useTranslation} from 'react-i18next'
-import {useMediaQuery, Grid, Tabs, Tab} from '@material-ui/core'
+import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
 
 import './Projects.scss'
 import {QUERY_BREAKPOINT} from '@utils/constants'
@@ -28,7 +28,7 @@ const Projects = memo(() => {
   }
 
   return (
-    <div className="Projects">
+    <div>
       <Tabs
         className="Projects-Filters"
         value={filter}

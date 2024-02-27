@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {useTranslation, TFunction} from 'react-i18next'
 import SwiperCore from 'swiper'
-import {useMediaQuery} from '@material-ui/core'
+import {useMediaQuery} from '@mui/material'
 
 import './ProjectAssets.scss'
 import {Animate, Pagination, Copyright} from '@components/common'
@@ -29,7 +29,7 @@ export default function ProjectAssets({
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
-    <section className="ProjectAssets Section Section_pagination Section_colorful">
+    <section className="Section Section_pagination Section_colorful">
       <h2 className="VisuallyHidden">{t('portfolio.subtitle')}</h2>
       <div>
         <Animate

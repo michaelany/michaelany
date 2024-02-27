@@ -1,6 +1,6 @@
 import {useTranslation, TFunction} from 'react-i18next'
 import {NavLink} from 'react-router-dom'
-import {Button, SvgIcon} from '@material-ui/core'
+import {Button, SvgIcon} from '@mui/material'
 import {
   HomeRounded as HomeIcon,
   PersonRounded as PersonIcon,
@@ -8,7 +8,7 @@ import {
   WorkRounded as WorkIcon,
   WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './Navigation.scss'
 import {ROUTE} from '@utils/constants'

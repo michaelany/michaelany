@@ -3,7 +3,7 @@ import {useTranslation} from 'react-i18next'
 import {
   CopyrightRounded as CopyrightIcon,
   FavoriteRounded as FavoriteIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './Copyright.scss'
 import ReactIcon from '@assets/icons/react.svg?react'

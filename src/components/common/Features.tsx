@@ -1,6 +1,6 @@
 import {memo} from 'react'
 import {Trans, TFunction} from 'react-i18next'
-import {useMediaQuery, Collapse, Grid} from '@material-ui/core'
+import {useMediaQuery, Collapse, Grid} from '@mui/material'
 
 import './Features.scss'
 import {Animate} from '@components/common'

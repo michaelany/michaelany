@@ -1,11 +1,11 @@
 import {Link} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
 import {getHours} from 'date-fns'
-import {Button} from '@material-ui/core'
+import {Button} from '@mui/material'
 import {
   WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './Greeting.scss'
 import frontEndImg from '@assets/img/pictures/frontend.png'

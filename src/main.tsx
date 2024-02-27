@@ -1,12 +1,12 @@
 import {createRoot} from 'react-dom/client'
 import {HashRouter as Router} from 'react-router-dom'
 import {
+  CssBaseline,
   createTheme,
-  StylesProvider,
+  StyledEngineProvider,
   ThemeProvider,
   Theme,
-} from '@material-ui/core/styles'
-import {CssBaseline} from '@material-ui/core'
+} from '@mui/material'
 
 import '@styles/index.scss'
 import '@utils/i18n'
@@ -23,7 +23,7 @@ window.addEventListener('load', handleAppLoaded)
 logConsoleWelcomeMessage()
 
 createRoot(ROOT).render(
-  <StylesProvider injectFirst>
+  <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
       <Router>
         <CssBaseline />
@@ -31,5 +31,5 @@ createRoot(ROOT).render(
         <App />
       </Router>
     </ThemeProvider>
-  </StylesProvider>
+  </StyledEngineProvider>
 )

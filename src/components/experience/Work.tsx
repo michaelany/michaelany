@@ -4,7 +4,7 @@ import {
   MyLocationRounded as MyLocationIcon,
   DateRangeRounded as DateRangeIcon,
   RoomRounded as RoomIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './Work.scss'
 import {Animate} from '@components/common'

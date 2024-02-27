@@ -13,7 +13,7 @@ import {
   GroupWorkRounded as GroupWorkIcon,
   BusinessCenterRounded as BusinessCenterIcon,
   ExploreRounded as ExploreIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import {Sections, Info} from '@components/common'
 import {PROJECTS_COUNT} from '@data/projects'

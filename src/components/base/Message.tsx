@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {Trans} from 'react-i18next'
-import {Snackbar, SnackbarOrigin, IconButton} from '@material-ui/core'
-import {CloseRounded as CloseIcon} from '@material-ui/icons'
+import {Snackbar, SnackbarOrigin, IconButton} from '@mui/material'
+import {CloseRounded as CloseIcon} from '@mui/icons-material'
 
 import './Message.scss'
 import santaImg from '@assets/img/pictures/santa.png'

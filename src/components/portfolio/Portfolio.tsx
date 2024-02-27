@@ -1,6 +1,6 @@
 import {useTranslation} from 'react-i18next'
-import {ChatRounded as ChatIcon} from '@material-ui/icons'
-import {Tooltip} from '@material-ui/core'
+import {ChatRounded as ChatIcon} from '@mui/icons-material'
+import {Tooltip} from '@mui/material'
 
 import './Portfolio.scss'
 import {Pagination, Copyright} from '@components/common'
@@ -12,7 +12,7 @@ export default function Portfolio() {
   const {t} = useTranslation()
 
   return (
-    <section className="Portfolio Section Section_single Section_pagination">
+    <section className="Section Section_single Section_pagination">
       <div>
         <h1 className="Portfolio-Title Title">
           {t('title.portfolio')}

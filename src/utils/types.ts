@@ -1,5 +1,5 @@
 import {ReactNode, FunctionComponent, SVGProps} from 'react'
-import {SvgIconProps, SvgIcon} from '@material-ui/core'
+import {SvgIconProps, SvgIcon} from '@mui/material'
 
 type SvgIconComponent = typeof SvgIcon
 

@@ -1,7 +1,7 @@
 import {ReactNode} from 'react'
 import {useTranslation} from 'react-i18next'
-import {Button} from '@material-ui/core'
-import {VisibilityRounded as VisibilityIcon} from '@material-ui/icons'
+import {Button} from '@mui/material'
+import {VisibilityRounded as VisibilityIcon} from '@mui/icons-material'
 
 import './ProjectActions.scss'
 import SevenGlyphsIcon from '@assets/icons/7glyphs.svg?react'
@@ -36,7 +36,7 @@ export default function ProjectActions({
   if (!url && !details && !stores) return null
 
   return (
-    <div className="ProjectActions Actions Actions_center">
+    <div className="Actions Actions_center">
       {url && (
         <Link icon={<VisibilityIcon />} href={url}>
           {t('other.see')}

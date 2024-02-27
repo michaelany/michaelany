@@ -1,6 +1,6 @@
 import {useRef} from 'react'
 import {useTranslation} from 'react-i18next'
-import {useMediaQuery} from '@material-ui/core'
+import {useMediaQuery} from '@mui/material'
 
 import {Animate, Sections, Pagination, Copyright} from '@components/common'
 import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'

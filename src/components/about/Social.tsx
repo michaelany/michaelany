@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {useTranslation} from 'react-i18next'
-import {useMediaQuery} from '@material-ui/core'
+import {useMediaQuery} from '@mui/material'
 import cn from 'clsx'
 
 import './Social.scss'
@@ -23,7 +23,7 @@ export default function Social() {
   const {t} = useTranslation()
 
   return (
-    <section className="Social Section Section_pagination Section_colorful FadeInRight">
+    <section className="Section Section_pagination Section_colorful FadeInRight">
       <h2 className="VisuallyHidden">{t('about.subtitle')}</h2>
       <div className="Social-Content">
         <Photo />

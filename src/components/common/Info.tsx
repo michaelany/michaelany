@@ -1,8 +1,8 @@
 import {useState, memo} from 'react'
 import {useTranslation, Trans} from 'react-i18next'
 import cn from 'clsx'
-import {Button} from '@material-ui/core'
-import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
+import {Button} from '@mui/material'
+import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
 import './Info.scss'
 import {scrollToView} from '@utils/helpers'
@@ -33,7 +33,7 @@ const Info = memo(({type, textValues, features}: InfoProps) => {
   }
 
   return (
-    <section className="Info Section">
+    <section className="Section">
       <h1 className="Title">{t(`title.${type}`)}</h1>
       <p className="MainText">
         <Trans

@@ -8,7 +8,7 @@ import {
   StarRounded as StarIcon,
   CheckCircleRounded as CheckCircleIcon,
   WebRounded as WebIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './ProjectDetails.scss'
 import {Features, Company} from '@components/common'
@@ -80,7 +80,7 @@ export default function ProjectDetails({
   const company = COMPANY[companyName]
 
   return (
-    <section className="ProjectDetails Section">
+    <section className="Section">
       <div className="ProjectDetails-Block">
         <h1 className="Title Title_smallIndent">
           {title ?? t(`${projectKey}.title`)}

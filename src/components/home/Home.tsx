@@ -1,4 +1,4 @@
-import {useMediaQuery} from '@material-ui/core'
+import {useMediaQuery} from '@mui/material'
 
 import {Sections} from '@components/common'
 import {QUERY_BREAKPOINT} from '@utils/constants'

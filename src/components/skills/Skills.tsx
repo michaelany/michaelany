@@ -1,5 +1,5 @@
 import {useState, useRef, useMemo} from 'react'
-import {Link, ButtonBaseActions} from '@material-ui/core'
+import {Link, ButtonBaseActions} from '@mui/material'
 import {
   ThumbUpRounded as ThumbUpIcon,
   SpeedRounded as SpeedIcon,
@@ -13,7 +13,7 @@ import {
   LoopRounded as LoopIcon,
   PaletteRounded as PaletteIcon,
   ExtensionRounded as ExtensionIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import {Sections, Info} from '@components/common'
 import {scrollToView} from '@utils/helpers'

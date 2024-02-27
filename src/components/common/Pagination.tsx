@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
-import {Grid, Button} from '@material-ui/core'
+import {Grid, Button} from '@mui/material'
 import {
   ChevronLeftRounded as ChevronLeftIcon,
   ChevronRightRounded as ChevronRightIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './Pagination.scss'
 import {ROUTE} from '@utils/constants'

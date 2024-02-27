@@ -1,5 +1,5 @@
-import {Drawer as MuiDrawer, IconButton} from '@material-ui/core'
-import {ArrowBackRounded as ArrowBackIcon} from '@material-ui/icons'
+import {Drawer as MuiDrawer, IconButton} from '@mui/material'
+import {ArrowBackRounded as ArrowBackIcon} from '@mui/icons-material'
 
 import './Drawer.scss'
 import {Navigation} from '@components/common'
@@ -12,7 +12,7 @@ interface DrawerProps {
 
 export default function Drawer({open, onClose}: DrawerProps) {
   return (
-    <MuiDrawer className="Drawer" open={open} onClose={onClose}>
+    <MuiDrawer open={open} onClose={onClose}>
       <div className="Drawer-Content">
         <div>
           <div className="Drawer-Block">

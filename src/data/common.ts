@@ -1,4 +1,4 @@
-import {YouTube as YouTubeIcon} from '@material-ui/icons'
+import {YouTube as YouTubeIcon} from '@mui/icons-material'
 
 import {importImg} from '@utils/helpers'
 import SevenGlyphsIcon from '@assets/icons/7glyphs.svg?react'

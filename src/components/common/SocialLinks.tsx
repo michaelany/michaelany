@@ -1,5 +1,5 @@
 import cn from 'clsx'
-import {useMediaQuery, Fab} from '@material-ui/core'
+import {useMediaQuery, Fab} from '@mui/material'
 
 import './SocialLinks.scss'
 import {getListDelay} from '@utils/helpers'

@@ -7,8 +7,8 @@ import {
   AccordionSummary,
   AccordionDetails,
   ButtonBaseActions,
-} from '@material-ui/core'
-import {ExpandMoreRounded as ExpandMoreIcon} from '@material-ui/icons'
+} from '@mui/material'
+import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
 import './Technologies.scss'
 import {Animate, Pagination, Copyright} from '@components/common'
@@ -44,7 +44,7 @@ export default function Technologies({
 
   return (
     <section
-      className="Technologies Section Section_pagination Section_colorful"
+      className="Section Section_pagination Section_colorful"
       ref={sectionRef}
     >
       <h2 className="VisuallyHidden">{t('skills.subtitle')}</h2>

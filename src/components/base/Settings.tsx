@@ -1,5 +1,5 @@
 import {useTranslation} from 'react-i18next'
-import {Button} from '@material-ui/core'
+import {Button} from '@mui/material'
 
 import './Settings.scss'
 import EnIcon from '@assets/icons/en.svg?react'
@@ -19,7 +19,7 @@ export default function Settings() {
   const title = t('title.language')
 
   return (
-    <div className="Settings">
+    <div>
       <Tooltip title={title} placement="right">
         <Button
           fullWidth

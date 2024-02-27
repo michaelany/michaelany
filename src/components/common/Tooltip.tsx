@@ -1,4 +1,4 @@
-import {Tooltip as MuiTooltip, TooltipProps} from '@material-ui/core'
+import {Tooltip as MuiTooltip, TooltipProps} from '@mui/material'
 
 import {DETECT} from '@utils/constants'
 

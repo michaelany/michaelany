@@ -1,6 +1,6 @@
 import {Routes, Route, Navigate, useLocation} from 'react-router-dom'
 import cn from 'clsx'
-import {Hidden} from '@material-ui/core'
+import {Hidden} from '@mui/material'
 
 import './App.scss'
 import {ROUTE, PATH_COLOR} from '@utils/constants'

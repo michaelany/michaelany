@@ -6,13 +6,13 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-} from '@material-ui/core'
+} from '@mui/material'
 import {
   ExpandMoreRounded as ExpandMoreIcon,
   ForwardRounded as ForwardIcon,
   WorkRounded as WorkIcon,
-  StarRounded as StarIcon,
-} from '@material-ui/icons'
+  EmojiEventsRounded as EmojiEventsIcon,
+} from '@mui/icons-material'
 
 import './Job.scss'
 import {Tooltip, Company} from '@components/common'
@@ -103,8 +103,10 @@ const Occupations = ({t, current, occupations}: OccupationsProps) => (
 const Block = ({t, isDuties, items}: BlockProps) => (
   <div className="Job-Block">
     <h4 className="Job-SubTitle">
-      {isDuties ? <WorkIcon /> : <StarIcon />}
-      {t(`experience.${isDuties ? 'duties' : 'achievements'}`)}
+      {isDuties ? <WorkIcon /> : <EmojiEventsIcon />}
+      <span className="Job-SubTitleText">
+        {t(`experience.${isDuties ? 'duties' : 'achievements'}`)}
+      </span>
     </h4>
     <ul className="Job-Items">
       {items.map((item: TKey, index: number) => (

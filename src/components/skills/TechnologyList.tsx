@@ -1,7 +1,7 @@
 import {RefObject} from 'react'
 import {TFunction} from 'react-i18next'
 import cn from 'clsx'
-import {Grid, ButtonBase, ButtonBaseActions} from '@material-ui/core'
+import {Grid, ButtonBase, ButtonBaseActions} from '@mui/material'
 
 import './TechnologyList.scss'
 import {Tooltip} from '@components/common'

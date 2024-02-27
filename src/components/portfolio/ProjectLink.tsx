@@ -1,6 +1,6 @@
 import {TFunction} from 'react-i18next'
 import {Link} from 'react-router-dom'
-import {Grid, ButtonBase} from '@material-ui/core'
+import {Grid, ButtonBase} from '@mui/material'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '@components/common'

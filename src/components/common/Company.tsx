@@ -1,6 +1,6 @@
 import {MouseEvent} from 'react'
 import cn from 'clsx'
-import {ButtonBase} from '@material-ui/core'
+import {ButtonBase} from '@mui/material'
 
 import './Company.scss'
 import {BLANK_LINK_PROPS} from '@utils/constants'

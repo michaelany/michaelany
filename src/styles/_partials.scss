@@ -173,6 +173,7 @@
 }
 
 .NavigationButton {
+  color: $color_text;
   font-size: 32px;
   height: 54px;
   &.active {
@@ -233,7 +234,8 @@
     opacity: 0;
     z-index: 1;
     transform: scale(0.8);
-    transition: transform $duration_short $easing_in-out,
+    transition:
+      transform $duration_short $easing_in-out,
       opacity $duration_short $easing_in-out;
   }
   & > .MuiTouchRipple-root {

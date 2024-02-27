@@ -6,12 +6,13 @@ import {
   StepLabel,
   StepContent,
   Fab,
-} from '@material-ui/core'
+  Paper,
+} from '@mui/material'
 import {
   ArrowForwardRounded as ArrowForwardIcon,
   ArrowBackRounded as ArrowBackIcon,
   RefreshRounded as RefreshIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './Stepper.scss'
 import {scrollToView, tPeriodPart} from '@utils/helpers'
@@ -46,7 +47,7 @@ export default function Stepper({sectionRef}: StepperProps) {
   }
 
   return (
-    <MuiStepper className="Stepper" activeStep={step} orientation="vertical">
+    <MuiStepper component={Paper} activeStep={step} orientation="vertical">
       {steps.map((item: StepInterface, index: number) => (
         <Step key={index}>
           <StepLabel>

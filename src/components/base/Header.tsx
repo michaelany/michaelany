@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import {useScrollTrigger, Slide, IconButton} from '@material-ui/core'
-import {MenuRounded as MenuIcon} from '@material-ui/icons'
+import {useScrollTrigger, Slide, IconButton} from '@mui/material'
+import {MenuRounded as MenuIcon} from '@mui/icons-material'
 
 import './Header.scss'
 import {Logo} from '@components/common'

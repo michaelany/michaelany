@@ -17,12 +17,12 @@ import {
   Fade,
   CircularProgress,
   Snackbar,
-} from '@material-ui/core'
+} from '@mui/material'
 import {
   PersonRounded as PersonIcon,
   MailRounded as MailIcon,
   SendRounded as SendIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import './ContactForm.scss'
 import {Animate} from '@components/common'
@@ -132,13 +132,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <Animate
-        noValidate
-        el="form"
-        className="ContactForm"
-        effect="bottom"
-        onSubmit={handleSubmit}
-      >
+      <Animate noValidate el="form" effect="bottom" onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} lg={12} xl={6}>
             <TextField
