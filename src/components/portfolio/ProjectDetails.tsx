@@ -1,4 +1,6 @@
 import {useTranslation} from 'react-i18next'
+import {Link} from '@mui/material'
+
 import {
   CodeRounded as CodeIcon,
   EventRounded as EventIcon,
@@ -89,9 +91,9 @@ export default function ProjectDetails({
       </div>
       <p className="MainText">
         {t(`${projectKey}.text`, textValues)}. {t('portfolio.developed')}{' '}
-        <a {...BLANK_LINK_PROPS} className="Link" href={company.href}>
+        <Link {...BLANK_LINK_PROPS} className="Link" href={company.href}>
           {company.title}
-        </a>
+        </Link>
       </p>
       <Features items={featureItems} />
       <ProjectActions

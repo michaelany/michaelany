@@ -41,7 +41,7 @@ interface SnackbarContent {
 
 export default function ContactForm() {
   const {t} = useTranslation()
-  const [successDialog, setSuccessDialog] = useState<boolean>(false)
+  const [successDialogOpen, setSuccessDialogOpen] = useState<boolean>(false)
   const [snackbar, setSnackbar] = useState<SnackbarContent>({
     open: false,
     message: '',
@@ -95,7 +95,7 @@ export default function ContactForm() {
         {...values, 'g-recaptcha-response': token},
         import.meta.env.VITE_EMAIL_JS_USER_ID
       )
-      setSuccessDialog(true)
+      setSuccessDialogOpen(true)
       changeValues(initialValues)
       setLoading(false)
     } catch (error: any) {
@@ -123,7 +123,7 @@ export default function ContactForm() {
   }
 
   const handleSuccessDialogClose = () => {
-    setSuccessDialog(false)
+    setSuccessDialogOpen(false)
   }
 
   const handleSnackbarClose = () => {
@@ -200,7 +200,7 @@ export default function ContactForm() {
       />
       <SuccessDialog
         t={t}
-        open={successDialog}
+        open={successDialogOpen}
         onClose={handleSuccessDialogClose}
       />
       <Snackbar

@@ -1,4 +1,5 @@
 import {useTranslation, Trans} from 'react-i18next'
+import {Link} from '@mui/material'
 import {
   ScheduleRounded as ScheduleIcon,
   MyLocationRounded as MyLocationIcon,
@@ -41,7 +42,11 @@ export default function Work() {
 
 const transComponents = [
   <strong />,
-  <a {...BLANK_LINK_PROPS} className="Link" href={COMPANY.sevenGlyphs.href} />,
+  <Link
+    {...BLANK_LINK_PROPS}
+    className="Link"
+    href={COMPANY.sevenGlyphs.href}
+  />,
 ]
 
 const jobs: JobInterface[] = [

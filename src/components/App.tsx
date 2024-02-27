@@ -17,10 +17,10 @@ import {ROUTE, PATH_COLOR, QUERY_BREAKPOINT} from '@utils/constants'
 
 export default function App() {
   const {pathname} = useLocation()
-  const isMd: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
+  const isMd = useMediaQuery(QUERY_BREAKPOINT.md)
 
-  const lastSlashIndex: number = pathname.lastIndexOf('/')
-  const AppClassName: string = cn(
+  const lastSlashIndex = pathname.lastIndexOf('/')
+  const AppClassName = cn(
     `App App_page_${
       pathname.slice(1, lastSlashIndex || undefined) || 'home'
     } App_color_${PATH_COLOR[pathname.slice(lastSlashIndex)]}`,

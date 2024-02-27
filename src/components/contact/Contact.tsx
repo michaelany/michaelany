@@ -1,4 +1,5 @@
 import {useTranslation, Trans} from 'react-i18next'
+import {Link} from '@mui/material'
 
 import {Sections, SocialLinks, Pagination, Copyright} from '@components/common'
 import {BLANK_LINK_PROPS, ROUTE} from '@utils/constants'
@@ -58,5 +59,5 @@ const email = 'michaelany.it@gmail.com'
 
 const transComponents = [
   <strong />,
-  <a {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
+  <Link {...BLANK_LINK_PROPS} className="Link" href={`mailto:${email}`} />,
 ]

@@ -22,8 +22,6 @@
   color: white;
   background-color: rgba(white, 0.1);
   @include hover {
-    &:hover {
-      background-color: rgba(white, 0.2);
-    }
+    background-color: rgba(white, 0.2);
   }
 }

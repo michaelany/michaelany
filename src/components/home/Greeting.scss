@@ -105,9 +105,7 @@
   transform: rotate(20deg);
   transition: transform $duration_standard $easing_out;
   @include hover {
-    &:hover {
-      transform: rotate(0) scale(1.2);
-    }
+    transform: rotate(0) scale(1.2);
   }
 }
 

@@ -14,17 +14,6 @@
   font-size: 14px;
 }
 
-.Copyright-Author {
-  font-weight: bold;
-  color: white;
-  outline-color: white;
-  @include hover {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 .Copyright-Links {
   padding-top: 12px;
   display: flex;

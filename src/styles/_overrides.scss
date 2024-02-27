@@ -18,9 +18,7 @@
 .MuiIconButton {
   &-root {
     @include hover {
-      &:hover {
-        background-color: rgba($color_text, 0.04);
-      }
+      background-color: rgba($color_text, 0.04);
     }
   }
 }
@@ -28,9 +26,7 @@
 .MuiFilledInput {
   &-root {
     @include hover {
-      &:hover {
-        background-color: transparent;
-      }
+      background-color: transparent;
     }
   }
 }

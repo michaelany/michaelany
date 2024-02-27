@@ -1,5 +1,7 @@
 import {differenceInYears} from 'date-fns'
 import {Link} from 'react-router-dom'
+import {Link as MuiLink} from '@mui/material'
+
 import {
   DirectionsBikeRounded as DirectionsBikeIcon,
   SchoolRounded as SchoolIcon,
@@ -72,19 +74,19 @@ const features: Feature[] = [
     Icon: AppsIcon,
     labelValues: [PROJECTS_COUNT],
     textValues: [PROJECTS_COUNT, 'title.portfolio'],
-    Link: <Link className="Link" to={ROUTE.portfolio} />,
+    Link: <MuiLink component={Link} className="Link" to={ROUTE.portfolio} />,
   },
   {
     tKey: 'position',
     Icon: SupervisorAccountIcon,
-    Link: <Link className="Link" to={ROUTE.skills} />,
+    Link: <MuiLink component={Link} className="Link" to={ROUTE.skills} />,
   },
   {
     tKey: 'experience',
     Icon: BusinessCenterIcon,
     labelValues: [YEARS_OF_EXPERIENCE],
     textValues: [13],
-    Link: <Link className="Link" to={ROUTE.experience} />,
+    Link: <MuiLink component={Link} className="Link" to={ROUTE.experience} />,
   },
   {
     tKey: 'organizing',
@@ -99,7 +101,7 @@ const features: Feature[] = [
       CONTACT_LINK.youTube.title,
     ],
     Link: (
-      <a
+      <MuiLink
         {...BLANK_LINK_PROPS}
         className="Link"
         href={CONTACT_LINK.youTube.href}
@@ -133,7 +135,7 @@ const features: Feature[] = [
     Icon: FavoriteIcon,
     textValues: [differenceInYears(TODAY, new Date(2013, 1)), '🙂'],
     Link: (
-      <a
+      <MuiLink
         {...BLANK_LINK_PROPS}
         className="Link"
         href="https://www.instagram.com/kate_watermelon"

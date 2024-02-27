@@ -6,7 +6,6 @@ import {ThumbUpRounded as ThumbUpIcon} from '@mui/icons-material'
 
 import './SuccessDialog.scss'
 import messageSentImg from '@assets/img/pictures/message-sent.svg'
-import {DURATION} from '@styles/theme'
 
 interface SuccessDialogProps {
   t: TFunction
@@ -48,8 +47,8 @@ export default function SuccessDialog({t, open, onClose}: SuccessDialogProps) {
 }
 
 const Transition = forwardRef(function Transition(
-  props: TransitionProps & {children?: React.ReactElement<any, any>},
+  props: TransitionProps & {children: React.ReactElement<any, any>},
   ref: React.Ref<unknown>
 ) {
-  return <Grow ref={ref} {...props} timeout={DURATION.standard} />
+  return <Grow ref={ref} {...props} />
 })

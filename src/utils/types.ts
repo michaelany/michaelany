@@ -1,7 +1,7 @@
 import {ReactNode, FunctionComponent, SVGProps} from 'react'
-import {SvgIconProps, SvgIcon} from '@mui/material'
+import {SvgIcon} from '@mui/material'
 
-type SvgIconComponent = typeof SvgIcon
+type TSvgIcon = typeof SvgIcon
 
 export type Route =
   | '/'
@@ -85,12 +85,12 @@ export interface TKeyObject {
 export interface SocialLink {
   title: string
   href: string
-  Icon: FunctionComponent<SVGProps<SVGSVGElement>> | SvgIconComponent
+  Icon: FunctionComponent<SVGProps<SVGSVGElement>> | TSvgIcon
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 }
 
 export interface Feature {
-  Icon: (props: SvgIconProps) => JSX.Element
+  Icon: TSvgIcon
   label?: string
   time?: boolean
   tKey?: TKey
@@ -132,7 +132,7 @@ export interface Period {
 export interface JobFeature {
   tKey?: string
   period?: Period
-  Icon: (props: SvgIconProps) => JSX.Element
+  Icon: TSvgIcon
   disabled?: boolean
 }
 

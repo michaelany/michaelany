@@ -6,20 +6,17 @@
   margin-bottom: 80px;
   display: flex;
   justify-content: center;
-  transition: transform $duration_standard $easing_out,
+  transition:
+    transform $duration_standard $easing_out,
     color $duration_short $easing_in-out;
   @include hover {
-    &:hover {
-      transform: scale(1.15) rotate(-10deg);
-    }
+    transform: scale(1.15) rotate(-10deg);
   }
   @include md {
     padding: 0;
     margin-bottom: 0;
     @include hover {
-      &:hover {
-        transform: scale(1.15) rotate(10deg);
-      }
+      transform: scale(1.15) rotate(10deg);
     }
   }
 }

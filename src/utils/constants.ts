@@ -1,5 +1,4 @@
 import {differenceInYears, format} from 'date-fns'
-import locale from 'date-fns/locale/en-US'
 
 import {BREAKPOINT} from '@styles/theme'
 import {Route, Color} from './types'
@@ -85,9 +84,7 @@ export const DETECT: Detect = {
 
 export const CAREER_START_DATE = new Date(2016, 6)
 
-export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy', {
-  locale,
-})
+export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy')
   .toLowerCase()
   .split(' ')
 

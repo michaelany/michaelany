@@ -19,10 +19,8 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
     display: none;
   }
   @include hover {
-    &:hover {
-      .ProjectLink-Content {
-        opacity: 1;
-      }
+    .ProjectLink-Content {
+      opacity: 1;
     }
   }
 }

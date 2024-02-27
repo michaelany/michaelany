@@ -120,9 +120,7 @@
       color: $color_dark-blue;
       background-color: rgba($color_blue, 0.2);
       @include hover {
-        &:hover {
-          background-color: rgba($color_blue, 0.4);
-        }
+        background-color: rgba($color_blue, 0.4);
       }
     }
   }
@@ -131,9 +129,7 @@
       color: $color_dark-green;
       background-color: rgba($color_green, 0.2);
       @include hover {
-        &:hover {
-          background-color: rgba($color_green, 0.4);
-        }
+        background-color: rgba($color_green, 0.4);
       }
     }
   }
@@ -145,9 +141,7 @@
       background-color: white;
     }
     @include hover {
-      &:hover {
-        background-color: $color_light-grey;
-      }
+      background-color: $color_light-grey;
     }
   }
   @each $key, $value, $second-value in $colors-map {
@@ -156,9 +150,7 @@
         color: $second-value;
         background-color: rgba($value, 0.2);
         @include hover {
-          &:hover {
-            background-color: rgba($value, 0.4);
-          }
+          background-color: rgba($value, 0.4);
         }
       }
     }
@@ -188,19 +180,24 @@
   font-weight: bold;
   user-select: auto;
   white-space: nowrap;
+  transition: text-decoration-color $duration_shortest $easing_out;
+  &_white,
   .App_color_white & {
     color: white;
     outline-color: white;
-  }
-  @each $key, $value, $second-value in $colors-map {
-    .App_color_#{$key} & {
-      color: $second-value;
-      outline-color: $second-value;
+    text-decoration-color: rgba(white, 0.3);
+    @include hover {
+      text-decoration-color: white;
     }
   }
-  @include hover {
-    &:hover {
-      text-decoration: underline;
+  @each $key, $value, $second-value in $colors-map {
+    .App_color_#{$key} &:not(.Link_white) {
+      color: $second-value;
+      outline-color: $second-value;
+      text-decoration-color: rgba($second-value, 0.3);
+      @include hover {
+        text-decoration-color: $second-value;
+      }
     }
   }
 }
@@ -242,11 +239,9 @@
     z-index: 1;
   }
   @include hover {
-    &:hover {
-      &::before {
-        transform: scale(1);
-        opacity: 1;
-      }
+    &::before {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }

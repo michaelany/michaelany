@@ -1,5 +1,6 @@
 import {FunctionComponent, SVGProps} from 'react'
 import {useTranslation} from 'react-i18next'
+import {Link} from '@mui/material'
 import {
   CopyrightRounded as CopyrightIcon,
   FavoriteRounded as FavoriteIcon,
@@ -30,13 +31,13 @@ export default function Copyright() {
       <p>
         <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
         {t('copyright.crafted')}{' '}
-        <a
+        <Link
           {...BLANK_LINK_PROPS}
-          className="Copyright-Author"
+          className="Link Link_white"
           href={CONTACT_LINK.gitHub.href}
         >
           {t('copyright.me')}
-        </a>{' '}
+        </Link>{' '}
         {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
       </p>
       <div className="Copyright-Links">
