@@ -22,7 +22,7 @@ import meSantaMdImg from '@assets/img/pictures/me-santa_md.jpg'
 import meSantaMdImg2x from '@assets/img/pictures/me-santa_md@2x.jpg'
 import meSantaXsImg from '@assets/img/pictures/me-santa_xs.jpg'
 import meSantaXsImg2x from '@assets/img/pictures/me-santa_xs@2x.jpg' */
-import {ReactComponent as HelloIcon} from '@assets/icons/hello.svg'
+import HelloIcon from '@assets/icons/hello.svg?react'
 import {MY_NAME} from '@data/common'
 import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
 

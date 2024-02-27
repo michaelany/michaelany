@@ -2,8 +2,8 @@ import {useTranslation} from 'react-i18next'
 import {Button} from '@material-ui/core'
 
 import './Settings.scss'
-import {ReactComponent as EnIcon} from '@assets/icons/en.svg'
-import {ReactComponent as RuIcon} from '@assets/icons/ru.svg'
+import EnIcon from '@assets/icons/en.svg?react'
+import RuIcon from '@assets/icons/ru.svg?react'
 import {Tooltip} from '@components/common'
 import {isRuLng} from '@utils/i18n'
 

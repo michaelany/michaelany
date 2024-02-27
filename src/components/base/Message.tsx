@@ -5,7 +5,7 @@ import {CloseRounded as CloseIcon} from '@material-ui/icons'
 
 import './Message.scss'
 import santaImg from '@assets/img/pictures/santa.png'
-// import {ReactComponent as RuUaIcon} from '@assets/icons/ru-ua.svg'
+// import RuUaIcon from '@assets/icons/ru-ua.svg?react'
 // import pumpkinImg from '@assets/img/pictures/pumpkin.png'
 import {DURATION} from '@styles/theme'
 
