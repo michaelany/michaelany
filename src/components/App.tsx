@@ -1,9 +1,8 @@
 import {Routes, Route, Navigate, useLocation} from 'react-router-dom'
 import cn from 'clsx'
-import {Hidden} from '@mui/material'
+import {useMediaQuery} from '@mui/material'
 
 import './App.scss'
-import {ROUTE, PATH_COLOR} from '@utils/constants'
 import Sidebar from './base/Sidebar'
 import Header from './base/Header'
 // import Message from './base/Message'
@@ -14,9 +13,11 @@ import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
 import Contact from './contact/Contact'
+import {ROUTE, PATH_COLOR, QUERY_BREAKPOINT} from '@utils/constants'
 
 export default function App() {
   const {pathname} = useLocation()
+  const isMd: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
   const lastSlashIndex: number = pathname.lastIndexOf('/')
   const AppClassName: string = cn(
@@ -29,15 +30,7 @@ export default function App() {
 
   return (
     <div className={AppClassName}>
-      {/* <Message /> */}
-      {/* @ts-ignore */}
-      <Hidden mdDown>
-        <Sidebar />
-      </Hidden>
-      {/* @ts-ignore */}
-      <Hidden lgUp>
-        <Header />
-      </Hidden>
+      {isMd ? <Header /> : <Sidebar />}
       <main className="App-Main">
         <Routes>
           <Route path={ROUTE.home} element={<Home />} />

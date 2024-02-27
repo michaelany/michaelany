@@ -32,8 +32,9 @@ const Projects = memo(() => {
       <Tabs
         className="Projects-Filters"
         value={filter}
+        scrollButtons={false}
+        textColor="inherit"
         variant="scrollable"
-        scrollButtons="off"
         onChange={handleChange}
       >
         {filters.map((type: string) => (

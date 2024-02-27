@@ -158,6 +158,9 @@ const THEME: ThemeOptions = {
           color: COLOR.secondText,
         },
       },
+      defaultProps: {
+        size: 'large',
+      },
     },
     MuiStepper: {
       styleOverrides: {

@@ -37,7 +37,7 @@ export default function Social() {
 
 const Photo = () => {
   const [hovered, setHovered] = useState<boolean>(false)
-  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
+  const isMd: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
 
   const handlePhotoOver = () => {
     setHovered(true)
@@ -53,8 +53,8 @@ const Photo = () => {
         'Social-PhotoWrapper',
         hovered && 'Social-PhotoWrapper_hovered'
       )}
-      effect={md ? undefined : 'zoomOut'}
-      duration={md ? undefined : 'longer'}
+      effect={isMd ? undefined : 'zoomOut'}
+      duration={isMd ? undefined : 'longer'}
     >
       <Tilt
         el="figure"
