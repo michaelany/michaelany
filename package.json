@@ -14,14 +14,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "11.11.3",
+    "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.0",
     "@mui/icons-material": "5.15.11",
     "@mui/material": "5.15.11",
     "@mui/styles": "5.15.11",
     "@types/google-maps-react": "2.0.5",
-    "@types/node": "20.11.20",
-    "@types/react": "18.2.59",
+    "@types/node": "20.11.21",
+    "@types/react": "18.2.60",
     "@types/react-dom": "18.2.19",
     "@types/react-google-recaptcha": "2.1.5",
     "@types/react-router-dom": "5.3.3",
