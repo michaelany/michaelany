@@ -10,11 +10,11 @@ import {CssBaseline} from '@material-ui/core'
 
 import '@styles/index.scss'
 import '@utils/i18n'
+import App from '@components/App'
 import ScrollToTop from '@components/base/ScrollToTop'
 import {handleAppLoaded, logConsoleWelcomeMessage} from '@utils/base'
 import {ROOT} from '@utils/constants'
 import THEME from '@styles/theme'
-import App from './components/App'
 
 const theme: Theme = createTheme(THEME as object)
 
