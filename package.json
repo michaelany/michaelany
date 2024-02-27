@@ -44,7 +44,7 @@
     "react-router-dom": "6.22.1",
     "react-waypoint": "10.3.0",
     "sass": "1.71.1",
-    "smooth-scroll-into-view-if-needed": "1.1.33",
+    "smooth-scroll-into-view-if-needed": "2.0.2",
     "swiper": "9.3.2",
     "typescript": "5.3.3",
     "vite": "5.1.4",
