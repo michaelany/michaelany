@@ -1,5 +1,6 @@
 import {memo} from 'react'
-import {Trans, TFunction} from 'react-i18next'
+import {Trans} from 'react-i18next'
+import {TFunction} from 'i18next'
 import {useMediaQuery, Collapse, Grid} from '@mui/material'
 
 import './Features.scss'
@@ -41,7 +42,11 @@ const Features = memo(({t, type, extra, items}: FeaturesProps) => {
               {t
                 ? t(
                     `${type}.feature.${item.tKey}.label`,
-                    item.labelValues ?? undefined
+                    item.labelValues
+                      ? {
+                          replace: item.labelValues,
+                        }
+                      : undefined
                   )
                 : renderLabel(item)}
             </p>
@@ -71,7 +76,7 @@ const ExtraContent = ({t, type, item}: ExtraContentProps) => {
           components={[item.Link as any]}
         />
       ) : (
-        t(tKey, item.textValues)
+        t(tKey, {replace: item.textValues})
       )}
       .
     </p>

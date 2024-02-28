@@ -1,5 +1,5 @@
 import {Fragment} from 'react'
-import {TFunction} from 'react-i18next'
+import {TFunction} from 'i18next'
 import cn from 'clsx'
 import {
   Chip,
@@ -115,7 +115,7 @@ const Block = ({t, isDuties, items}: BlockProps) => (
             `experience.job.${isDuties ? 'duty' : 'achievement'}.${
               (item as TKeyObject).tKey ?? item
             }`,
-            typeof item === 'object' ? item.values : undefined
+            typeof item === 'object' ? {replace: item.values} : undefined
           )}
         </li>
       ))}

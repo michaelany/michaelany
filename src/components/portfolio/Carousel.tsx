@@ -1,5 +1,5 @@
 import {Dispatch, SetStateAction} from 'react'
-import {TFunction} from 'react-i18next'
+import {TFunction} from 'i18next'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Autoplay, SwiperOptions, Controller} from 'swiper'
 

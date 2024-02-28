@@ -65,7 +65,9 @@ export default function ProjectDetails({
                     ? feature.tKeys
                         .map((tKey: string) => t(`portfolio.feature.${tKey}`))
                         .join(', ')
-                    : t(`portfolio.feature.${feature.tKey}`, feature.values)
+                    : t(`portfolio.feature.${feature.tKey}`, {
+                        replace: feature.values,
+                      })
                 }`
             : feature,
         Icon: featureIcons[index],
@@ -90,7 +92,8 @@ export default function ProjectDetails({
         <Company animated {...company} />
       </div>
       <p className="MainText">
-        {t(`${projectKey}.text`, textValues)}. {t('portfolio.developed')}{' '}
+        {t(`${projectKey}.text`, {replace: textValues})}.{' '}
+        {t('portfolio.developed')}{' '}
         <Link {...BLANK_LINK_PROPS} className="Link" href={company.href}>
           {company.title}
         </Link>
