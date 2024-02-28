@@ -344,6 +344,13 @@ const THEME: ThemeOptions = {
         },
       },
     },
+    MuiBackdrop: {
+      styleOverrides: {
+        root: {
+          backdropFilter: 'blur(8px)',
+        },
+      },
+    },
   },
 }
 

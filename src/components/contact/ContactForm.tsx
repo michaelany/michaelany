@@ -61,7 +61,6 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: SyntheticEvent): Promise<void> => {
     e.preventDefault()
-
     const newErrors: typeof initialErrors = {}
     Object.keys(values).forEach((name: string) => {
       if (
@@ -84,7 +83,6 @@ export default function ContactForm() {
       setErrors({...errors, ...newErrors})
       return
     }
-
     setLoading(true)
     try {
       const token = await recaptchaRef.current.executeAsync()
