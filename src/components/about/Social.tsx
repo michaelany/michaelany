@@ -5,9 +5,9 @@ import cn from 'clsx'
 
 import './Social.scss'
 import meNormalImg from '@assets/img/pictures/me-normal.jpg'
-import meNormalImg2x from '@assets/img/pictures/me-normal@2x.jpg'
+import meNormal2xImg from '@assets/img/pictures/me-normal@2x.jpg'
 import meExcitedImg from '@assets/img/pictures/me-excited.jpg'
-import meExcitedImg2x from '@assets/img/pictures/me-excited@2x.jpg'
+import meExcited2xImg from '@assets/img/pictures/me-excited@2x.jpg'
 import {
   Animate,
   SocialLinks,
@@ -69,7 +69,7 @@ const Photo = () => {
             width={imgSize}
             height={imgSize}
             src={meNormalImg}
-            srcSet={`${meNormalImg2x} 2x`}
+            srcSet={`${meNormal2xImg} 2x`}
             alt={MY_NAME}
           />
           <img
@@ -77,7 +77,7 @@ const Photo = () => {
             width={imgSize}
             height={imgSize}
             src={meExcitedImg}
-            srcSet={`${meExcitedImg2x} 2x`}
+            srcSet={`${meExcited2xImg} 2x`}
             alt={MY_NAME}
           />
         </>

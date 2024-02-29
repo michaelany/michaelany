@@ -4,12 +4,10 @@ import cn from 'clsx'
 
 import './Banner.scss'
 import macbookImg from '@assets/img/shapes/macbook.png'
-import macbookImg2x from '@assets/img/shapes/macbook@2x.png'
+import macbook2xImg from '@assets/img/shapes/macbook@2x.png'
 import jsImg from '@assets/img/pictures/js.svg'
 import tsImg from '@assets/img/pictures/ts.svg'
 import reactImg from '@assets/img/pictures/react.svg'
-import reactqueryImg from '@assets/img/pictures/reactquery.svg'
-import reduxImg from '@assets/img/pictures/redux.svg'
 import htmlImg from '@assets/img/pictures/html.svg'
 import cssImg from '@assets/img/pictures/css.svg'
 import sassImg from '@assets/img/pictures/sass.svg'
@@ -19,6 +17,8 @@ import viteImg from '@assets/img/pictures/vite.svg'
 import sketchImg from '@assets/img/pictures/sketch.svg'
 import vscodeImg from '@assets/img/pictures/vscode.svg'
 import gitImg from '@assets/img/pictures/git.svg'
+import gptImg from '@assets/img/pictures/gpt.svg'
+import fpcxImg from '@assets/img/pictures/fcpx.png'
 import {Animate, Pagination, Copyright, Tilt} from '@components/common'
 import {ROUTE} from '@utils/constants'
 import {DURATION} from '@styles/theme'
@@ -68,7 +68,7 @@ const MacScreen = () => {
         width={652}
         height={417}
         src={macbookImg}
-        srcSet={`${macbookImg2x} 2x`}
+        srcSet={`${macbook2xImg} 2x`}
         alt="MacBook Pro"
       />
       {images.map((image, index) => (
@@ -90,15 +90,15 @@ const images = [
   jsImg,
   tsImg,
   reactImg,
-  reactqueryImg,
-  reduxImg,
   htmlImg,
   cssImg,
   sassImg,
   muiImg,
   npmImg,
   viteImg,
-  sketchImg,
   vscodeImg,
   gitImg,
+  sketchImg,
+  gptImg,
+  fpcxImg,
 ]

@@ -39,6 +39,7 @@
   width: 50%;
   height: 50%;
   opacity: 0;
+  object-fit: contain;
   transition: opacity $duration_long $easing_in-out;
   &_show {
     opacity: 1;
