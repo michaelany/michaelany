@@ -8,21 +8,21 @@ import {SwiperModule, SwiperOptions} from 'swiper/types'
 import './Carousel.scss'
 import PhoneSvg from '@assets/img/shapes/phone.svg?react'
 import {Animate, Panel} from '@components/common'
-import {ProjectName} from '@utils/types'
+import {TProjectName} from '@utils/types'
 import {DURATION} from '@styles/theme'
 
-interface CarouselProps {
+interface ICarouselProps {
   mobile?: boolean
   mobileOnly?: boolean
   t: TFunction
   md: boolean
-  name: ProjectName
+  name: TProjectName
   images: string[][]
   swiper: SwiperCore
   setSwiper: Dispatch<SetStateAction<SwiperCore>>
 }
 
-export default function Carousel(props: CarouselProps) {
+export default function Carousel(props: ICarouselProps) {
   if (props.mobile)
     return (
       <Animate className="Carousel Carousel_type_mobile">
@@ -56,7 +56,7 @@ const Content = ({
   images,
   swiper,
   setSwiper,
-}: CarouselProps) => {
+}: ICarouselProps) => {
   const isAutoplay = Boolean(!mobile || mobileOnly)
 
   const imageElements: JSX.Element[] = images.map(

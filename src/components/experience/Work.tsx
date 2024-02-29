@@ -9,7 +9,7 @@ import {
 
 import './Work.scss'
 import {Animate} from '@components/common'
-import {Job as JobInterface} from '@utils/types'
+import {IJob} from '@utils/types'
 import {
   YEARS_OF_EXPERIENCE,
   CAREER_START_PARTS,
@@ -32,7 +32,7 @@ export default function Work() {
         />
       </p>
       <Animate el="ul" className="Work">
-        {jobs.map((job: JobInterface, index: number) => (
+        {jobs.map((job: IJob, index: number) => (
           <Job key={index} {...job} t={t} index={index} />
         ))}
       </Animate>
@@ -49,7 +49,7 @@ const transComponents = [
   />,
 ]
 
-const jobs: JobInterface[] = [
+const jobs: IJob[] = [
   {
     current: true,
     company: COMPANY.sevenGlyphs,

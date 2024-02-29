@@ -17,28 +17,28 @@ import {
 import './Job.scss'
 import {Tooltip, Company} from '@components/common'
 import {tPeriodPart} from '@utils/helpers'
-import {Job as JobInterface, JobFeature, TKey, TKeyObject} from '@utils/types'
+import {IJob, IJobFeature, TKey, TKeyObject} from '@utils/types'
 
-interface JobProps extends JobInterface {
+interface IJobProps extends IJob {
   t: TFunction
   index: number
 }
 
-interface OccupationsProps {
+interface IOccupationsProps {
   t: TFunction
   current?: boolean
   occupations: TKey[]
 }
 
-interface BlockProps {
+interface IBlockProps {
   t: TFunction
   isDuties?: boolean
   items: TKey[]
 }
 
-interface FeaturesProps {
+interface IFeaturesProps {
   t: TFunction
-  features: JobFeature[]
+  features: IJobFeature[]
 }
 
 export default function Job({
@@ -50,7 +50,7 @@ export default function Job({
   achievements,
   features,
   index,
-}: JobProps) {
+}: IJobProps) {
   return (
     <Accordion component="li" className="Job" defaultExpanded={index === 0}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -68,7 +68,7 @@ export default function Job({
   )
 }
 
-const Occupations = ({t, current, occupations}: OccupationsProps) => (
+const Occupations = ({t, current, occupations}: IOccupationsProps) => (
   <div className="Job-Occupations">
     {occupations.map((occupation: TKey, index: number) => {
       const last: boolean = index === 0
@@ -100,7 +100,7 @@ const Occupations = ({t, current, occupations}: OccupationsProps) => (
   </div>
 )
 
-const Block = ({t, isDuties, items}: BlockProps) => (
+const Block = ({t, isDuties, items}: IBlockProps) => (
   <div className="Job-Block">
     <h4 className="Job-SubTitle">
       {isDuties ? <WorkIcon /> : <EmojiEventsIcon />}
@@ -123,11 +123,11 @@ const Block = ({t, isDuties, items}: BlockProps) => (
   </div>
 )
 
-const Features = ({t, features}: FeaturesProps) => {
+const Features = ({t, features}: IFeaturesProps) => {
   return (
     <div className="Job-Features">
       {features.map(
-        ({tKey, period, Icon, disabled}: JobFeature, index: number) => (
+        ({tKey, period, Icon, disabled}: IJobFeature, index: number) => (
           <Chip
             key={index}
             className="Chip"

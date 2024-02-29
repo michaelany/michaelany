@@ -6,11 +6,11 @@ import {Grid, ButtonBase, ButtonBaseActions} from '@mui/material'
 import './TechnologyList.scss'
 import {Tooltip} from '@components/common'
 import {BLANK_LINK_PROPS} from '@utils/constants'
-import {Technology} from '@utils/types'
+import {ITechnology} from '@utils/types'
 
-interface TechnologyListProps {
+interface ITechnologyListProps {
   t: TFunction
-  technologies: Technology[]
+  technologies: ITechnology[]
   firstTechnologyActionRef?: RefObject<ButtonBaseActions>
 }
 
@@ -18,11 +18,11 @@ export default function TechnologyList({
   t,
   technologies,
   firstTechnologyActionRef,
-}: TechnologyListProps) {
+}: ITechnologyListProps) {
   return (
     <Grid container component="ul">
       {technologies.map(
-        ({label, name, color, href, disabled}: Technology, index: number) => (
+        ({label, name, color, href, disabled}: ITechnology, index: number) => (
           <Grid
             key={index}
             item

@@ -28,13 +28,13 @@ import './ContactForm.scss'
 import {Animate} from '@components/common'
 import SuccessDialog from './SuccessDialog'
 
-interface Field {
+interface IField {
   name: string
   email: string
   message: string
 }
 
-interface SnackbarContent {
+interface ISnackbarContent {
   open: boolean
   message: string
 }
@@ -42,7 +42,7 @@ interface SnackbarContent {
 export default function ContactForm() {
   const {t} = useTranslation()
   const [successDialogOpen, setSuccessDialogOpen] = useState<boolean>(false)
-  const [snackbar, setSnackbar] = useState<SnackbarContent>({
+  const [snackbar, setSnackbar] = useState<ISnackbarContent>({
     open: false,
     message: '',
   })
@@ -213,7 +213,7 @@ export default function ContactForm() {
 const getInitialData = (value: any): Record<string, any> =>
   Object.fromEntries(Object.entries(field).map(([key]) => [key, value]))
 
-const field: Field = {
+const field: IField = {
   name: 'name',
   email: 'email',
   message: 'message',

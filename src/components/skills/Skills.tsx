@@ -17,7 +17,7 @@ import {
 
 import {Sections, Info} from '@components/common'
 import {scrollToView} from '@utils/helpers'
-import {Feature, TechnologyGroup, TKey} from '@utils/types'
+import {IFeature, ITechnologyGroup, TKey} from '@utils/types'
 import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '@data/common'
 import Technologies from './Technologies'
 
@@ -25,7 +25,7 @@ export default function Skills() {
   const [expanded, setExpanded] = useState<TKey[]>(initialExpanded)
   const sectionRef = useRef<HTMLElement>(null)
   const firstTechnologyActionRef = useRef<ButtonBaseActions>(null)
-  const featuresRef = useRef<Feature[]>([
+  const featuresRef = useRef<IFeature[]>([
     {
       tKey: 'interface',
       Icon: VerifiedUserIcon,
@@ -68,7 +68,7 @@ export default function Skills() {
           className="Link"
           onClick={() => {
             setExpanded(
-              TECHNOLOGY_GROUPS.map((group: TechnologyGroup) => group.tKey)
+              TECHNOLOGY_GROUPS.map((group: ITechnologyGroup) => group.tKey)
             )
             scrollToView(sectionRef.current as HTMLElement)
             firstTechnologyActionRef.current?.focusVisible()

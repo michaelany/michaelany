@@ -26,7 +26,7 @@ import {
   ROUTE,
   BLANK_LINK_PROPS,
 } from '@utils/constants'
-import {Feature} from '@utils/types'
+import {IFeature} from '@utils/types'
 import Social from './Social'
 
 export default function About() {
@@ -68,7 +68,7 @@ const countriesVisited: string[] = [
   'Bosnia & Herzegovina',
 ]
 
-const features: Feature[] = [
+const features: IFeature[] = [
   {
     tKey: 'projects',
     Icon: AppsIcon,

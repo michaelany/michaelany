@@ -7,16 +7,16 @@ import {useMediaQuery} from '@mui/material'
 import './ProjectAssets.scss'
 import {Animate, Pagination, Copyright} from '@components/common'
 import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
-import {ProjectName, ProjectImages} from '@utils/types'
+import {TProjectName, IProjectImages} from '@utils/types'
 import Carousel from './Carousel'
 
-interface ProjectAssetsProps {
-  name: ProjectName
+interface IProjectAssetsProps {
+  name: TProjectName
   title?: string
-  images: ProjectImages
+  images: IProjectImages
 }
 
-interface ScreenshotsProps extends Omit<ProjectAssetsProps, 'title'> {
+interface IScreenshotsProps extends Omit<IProjectAssetsProps, 'title'> {
   t: TFunction
   md: boolean
 }
@@ -25,7 +25,7 @@ export default function ProjectAssets({
   name,
   title,
   images,
-}: ProjectAssetsProps) {
+}: IProjectAssetsProps) {
   const {t} = useTranslation()
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
@@ -53,7 +53,7 @@ export default function ProjectAssets({
   )
 }
 
-const Screenshots = ({t, md, name, images}: ScreenshotsProps) => {
+const Screenshots = ({t, md, name, images}: IScreenshotsProps) => {
   const [firstSwiper, setFirstSwiper] = useState<SwiperCore>({} as SwiperCore)
   const [secondSwiper, setSecondSwiper] = useState<SwiperCore>({} as SwiperCore)
 

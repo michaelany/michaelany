@@ -3,13 +3,13 @@ import cn from 'clsx'
 import {Waypoint} from 'react-waypoint'
 
 import './Animate.scss'
-import {Effect} from '@utils/types'
+import {TEffect} from '@utils/types'
 import {DURATION, EASING} from '@styles/theme'
 
-interface AnimateProps extends AllHTMLAttributes<HTMLElement> {
+interface IAnimateProps extends AllHTMLAttributes<HTMLElement> {
   children: ReactNode
   el?: any
-  effect?: Effect
+  effect?: TEffect
   duration?: keyof typeof DURATION
   delay?: number
   easing?: keyof typeof EASING
@@ -24,7 +24,7 @@ export default function Animate({
   delay = 0,
   easing = 'inOut',
   ...props
-}: AnimateProps) {
+}: IAnimateProps) {
   const [reached, setReached] = useState<boolean>(false)
 
   const onWaypointEnter = () => {
@@ -52,5 +52,5 @@ export default function Animate({
   )
 }
 
-const getEffectAnimation = (effect: Effect): string =>
+const getEffectAnimation = (effect: TEffect): string =>
   `fadeIn${effect.charAt(0).toUpperCase() + effect.slice(1)}`

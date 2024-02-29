@@ -13,30 +13,30 @@ import {
 
 import './Navigation.scss'
 import {ROUTE} from '@utils/constants'
-import {Route} from '@utils/types'
+import {TRoute} from '@utils/types'
 import Tooltip from './Tooltip'
 
-interface NavigationProps {
+interface INavigationProps {
   onClose?: () => void
 }
 
-interface NavLinkInterface {
+interface INavLink {
   tKey: string
-  to: Route
+  to: TRoute
   Icon: typeof SvgIcon
 }
 
-interface ItemProps extends NavigationProps, NavLinkInterface {
+interface IItemProps extends INavigationProps, INavLink {
   t: TFunction
 }
 
-export default function Navigation({onClose}: NavigationProps) {
+export default function Navigation({onClose}: INavigationProps) {
   const {t} = useTranslation()
 
   return (
     <nav className="Navigation">
       <ul>
-        {navLinks.map((link: NavLinkInterface) => (
+        {navLinks.map((link: INavLink) => (
           <Item key={link.tKey} {...link} t={t} onClose={onClose} />
         ))}
       </ul>
@@ -44,7 +44,7 @@ export default function Navigation({onClose}: NavigationProps) {
   )
 }
 
-const Item = ({tKey, to, Icon, t, onClose}: ItemProps) => {
+const Item = ({tKey, to, Icon, t, onClose}: IItemProps) => {
   const title = t(`title.${tKey}`)
 
   return (
@@ -65,7 +65,7 @@ const Item = ({tKey, to, Icon, t, onClose}: ItemProps) => {
   )
 }
 
-const navLinks: NavLinkInterface[] = [
+const navLinks: INavLink[] = [
   {tKey: 'home', to: ROUTE.home, Icon: HomeIcon},
   {tKey: 'about', to: ROUTE.about, Icon: PersonIcon},
   {tKey: 'skills', to: ROUTE.skills, Icon: BuildIcon},

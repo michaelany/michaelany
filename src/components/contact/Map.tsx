@@ -8,7 +8,7 @@ import markerIcon from '@assets/icons/marker.svg'
 import {ROUTE} from '@utils/constants'
 import STYLES from '@styles/map'
 
-interface InitialCenter {
+interface IInitialCenter {
   lat: number
   lng: number
 }
@@ -55,7 +55,7 @@ export default GoogleApiWrapper({
   apiKey: import.meta.env.VITE_GOOGLE_API_KEY,
 })(Map)
 
-const initialCenter: InitialCenter = {
+const initialCenter: IInitialCenter = {
   lat: -36.79112718004715,
   lng: 174.66694252383772,
 }

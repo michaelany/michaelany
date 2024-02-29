@@ -1,12 +1,12 @@
 import './Panel.scss'
 import desktopSvg from '@assets/img/shapes/desktop.svg'
 
-interface PanelProps {
+interface IPanelProps {
   children?: JSX.Element
   className?: string
 }
 
-export default function Panel({children, className}: PanelProps) {
+export default function Panel({children, className}: IPanelProps) {
   return (
     <div className={`${className} Panel`}>
       <img

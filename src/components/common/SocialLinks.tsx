@@ -4,21 +4,21 @@ import {useMediaQuery, Fab} from '@mui/material'
 import './SocialLinks.scss'
 import {getListDelay} from '@utils/helpers'
 import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '@utils/constants'
-import {SocialLink} from '@utils/types'
+import {ISocialLink} from '@utils/types'
 import Animate from './Animate'
 import Tooltip from './Tooltip'
 
-interface SocialLinksProps {
-  links: SocialLink[]
+interface ISocialLinksProps {
+  links: ISocialLink[]
   about?: boolean
 }
 
-export default function SocialLinks({links, about}: SocialLinksProps) {
+export default function SocialLinks({links, about}: ISocialLinksProps) {
   const xs = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
     <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>
-      {links.map(({Icon, ...link}: SocialLink, index: number) => (
+      {links.map(({Icon, ...link}: ISocialLink, index: number) => (
         <Animate
           key={index}
           el="li"

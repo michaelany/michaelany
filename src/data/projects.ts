@@ -1,5 +1,5 @@
 import {importImg} from '@utils/helpers'
-import {Project} from '@utils/types'
+import {IProject} from '@utils/types'
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 
 const commonLogo = {
@@ -45,7 +45,7 @@ const commonLogo = {
   ],
 }
 
-const projects: Project[] = [
+const projects: IProject[] = [
   {
     name: 'madfit',
     title: 'MadFit',
@@ -2197,10 +2197,10 @@ const projects: Project[] = [
   },
 ]
 
-const PROJECTS: Project[] =
+const PROJECTS: IProject[] =
   import.meta.env.VITE_SHOW_PRIVATE_PROJECTS === 'true'
     ? projects
-    : projects.filter((project: Project) => !project.private)
+    : projects.filter((project: IProject) => !project.private)
 
 const OTHER_PROJECTS_COUNT = 5
 

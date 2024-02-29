@@ -16,22 +16,22 @@ import './ProjectDetails.scss'
 import {Features, Company} from '@components/common'
 import {tProjectTypes} from '@utils/helpers'
 import {
-  ProjectName,
-  Feature,
-  ProjectType,
-  CompanyName,
+  TProjectName,
+  IFeature,
+  TProjectType,
+  TCompanyName,
   TKey,
 } from '@utils/types'
 import {COMPANY} from '@data/common'
 import {BLANK_LINK_PROPS} from '@utils/constants'
 import ProjectActions from './ProjectActions'
 
-interface ProjectDetailsProps {
-  name: ProjectName
+interface IProjectDetailsProps {
+  name: TProjectName
   title?: string
   textValues?: (string | number)[]
-  companyName: CompanyName
-  types: ProjectType[]
+  companyName: TCompanyName
+  types: TProjectType[]
   features: TKey[]
   url?: string
   details?: string
@@ -49,10 +49,10 @@ export default function ProjectDetails({
   url,
   details,
   stores,
-}: ProjectDetailsProps) {
+}: IProjectDetailsProps) {
   const {t} = useTranslation()
 
-  const featureItems: Feature[] = features.map(
+  const featureItems: IFeature[] = features.map(
     (feature: TKey, index: number) => {
       const isTime = index === features.length - 1
       return {

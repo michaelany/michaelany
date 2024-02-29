@@ -8,36 +8,29 @@ import InstagramIcon from '@assets/icons/instagram.svg?react'
 import VKIcon from '@assets/icons/vk.svg?react'
 import FacebookIcon from '@assets/icons/facebook.svg?react'
 import TelegramIcon from '@assets/icons/telegram.svg?react'
-import {SocialLink, Company, TechnologyGroup} from '@utils/types'
-
-interface CompanyTitle {
-  mvideo: string
-  everpoint: string
-  sevenGlyphs: string
-  t1: string
-}
+import {ISocialLink, ICompany, ITechnologyGroup} from '@utils/types'
 
 interface ContactLink {
-  gitHub: SocialLink
-  linkedIn: SocialLink
-  sevenGlyphs: SocialLink
-  youTube: SocialLink
-  instagram: SocialLink
-  vk: SocialLink
-  facebook: SocialLink
-  telegram: SocialLink
+  gitHub: ISocialLink
+  linkedIn: ISocialLink
+  sevenGlyphs: ISocialLink
+  youTube: ISocialLink
+  instagram: ISocialLink
+  vk: ISocialLink
+  facebook: ISocialLink
+  telegram: ISocialLink
 }
 
 interface CompanyInterface {
-  sevenGlyphs: Company
-  t1: Company
-  everpoint: Company
-  mvideo: Company
+  sevenGlyphs: ICompany
+  t1: ICompany
+  everpoint: ICompany
+  mvideo: ICompany
 }
 
 export const MY_NAME = 'Michael Any'
 
-export const COMPANY_TITLE: CompanyTitle = {
+export const COMPANY_TITLE = {
   mvideo: 'M.Video',
   everpoint: 'Everpoint',
   sevenGlyphs: '7 glyphs Ltd.',
@@ -221,7 +214,7 @@ export const MAIN_TECHNOLOGY_LINK = {
   mui: 'https://material-ui.com',
 }
 
-export const TECHNOLOGY_GROUPS: TechnologyGroup[] = [
+export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
   {
     tKey: 'logic',
     technologies: [

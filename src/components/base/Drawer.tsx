@@ -5,12 +5,12 @@ import './Drawer.scss'
 import {Navigation} from '@components/common'
 import Settings from './Settings'
 
-interface DrawerProps {
+interface IDrawerProps {
   open: boolean
   onClose: () => void
 }
 
-export default function Drawer({open, onClose}: DrawerProps) {
+export default function Drawer({open, onClose}: IDrawerProps) {
   return (
     <MuiDrawer open={open} onClose={onClose}>
       <div className="Drawer-Content">

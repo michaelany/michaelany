@@ -7,17 +7,17 @@ import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 import './Info.scss'
 import {scrollToView} from '@utils/helpers'
 import {ROOT} from '@utils/constants'
-import {Feature} from '@utils/types'
+import {IFeature} from '@utils/types'
 import Features from './Features'
 import Animate from './Animate'
 
-interface InfoProps {
+interface IInfoProps {
   type: string
-  features: Feature[]
+  features: IFeature[]
   textValues?: (string | number)[]
 }
 
-const Info = memo(({type, textValues, features}: InfoProps) => {
+const Info = memo(({type, textValues, features}: IInfoProps) => {
   const {t} = useTranslation()
   const storageProp = `${type}Extra`
   const [open, toggleOpen] = useState<boolean>(

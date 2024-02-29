@@ -1,30 +1,30 @@
 import {differenceInYears, format} from 'date-fns'
 
 import {BREAKPOINT} from '@styles/theme'
-import {Route, Color} from './types'
+import {TRoute, TColor} from './types'
 
-interface Detect {
+interface IDetect {
   mobile: boolean
   safari: boolean
 }
 
-interface RouteInterface {
-  home: Route
-  about: Route
-  skills: Route
-  experience: Route
-  portfolio: Route
-  contact: Route
+interface IRouteInterface {
+  home: TRoute
+  about: TRoute
+  skills: TRoute
+  experience: TRoute
+  portfolio: TRoute
+  contact: TRoute
 }
 
-interface QueryBreakpoint {
+interface IQueryBreakpoint {
   xs: string
   sm: string
   md: string
   lg: string
 }
 
-interface ProjectRoute {
+interface IProjectRoute {
   madfit: string
   madfitp: string
   vibe: string
@@ -62,14 +62,14 @@ interface ProjectRoute {
   msp: string
 }
 
-interface BlankLinkProps {
+interface IBlankLinkProps {
   target: string
   rel: string
 }
 
 export const ROOT = document.getElementById('root') as HTMLElement
 
-export const DETECT: Detect = {
+export const DETECT: IDetect = {
   mobile: [
     /Android/i,
     /webOS/i,
@@ -93,7 +93,7 @@ export const TODAY = new Date()
 export const YEARS_OF_EXPERIENCE =
   differenceInYears(TODAY, CAREER_START_DATE) + 1
 
-export const ROUTE: RouteInterface = {
+export const ROUTE: IRouteInterface = {
   home: '/',
   about: '/about',
   skills: '/skills',
@@ -102,7 +102,7 @@ export const ROUTE: RouteInterface = {
   contact: '/contact',
 }
 
-export const PROJECT_ROUTE: ProjectRoute = {
+export const PROJECT_ROUTE: IProjectRoute = {
   madfit: '/madfit',
   madfitp: '/madfit-portal',
   vibe: '/vibe-media',
@@ -140,7 +140,7 @@ export const PROJECT_ROUTE: ProjectRoute = {
   msp: '/msp',
 }
 
-export const PATH_COLOR: Record<Route | string, Color> = {
+export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.home]: 'alternate',
   [ROUTE.about]: 'green',
   [ROUTE.skills]: 'blue',
@@ -184,14 +184,14 @@ export const PATH_COLOR: Record<Route | string, Color> = {
   [PROJECT_ROUTE.msp]: 'blue',
 }
 
-export const QUERY_BREAKPOINT: QueryBreakpoint = {
+export const QUERY_BREAKPOINT: IQueryBreakpoint = {
   xs: `(max-width: ${BREAKPOINT.xs}px)`,
   sm: `(max-width: ${BREAKPOINT.sm}px)`,
   md: `(max-width: ${BREAKPOINT.md}px)`,
   lg: `(max-width: ${BREAKPOINT.lg}px)`,
 }
 
-export const BLANK_LINK_PROPS: BlankLinkProps = {
+export const BLANK_LINK_PROPS: IBlankLinkProps = {
   target: '_blank',
   rel: 'noopener noreferrer',
 }

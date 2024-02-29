@@ -3,7 +3,7 @@ import {SvgIcon} from '@mui/material'
 
 type TSvgIcon = typeof SvgIcon
 
-export type Route =
+export type TRoute =
   | '/'
   | '/about'
   | '/skills'
@@ -11,7 +11,7 @@ export type Route =
   | '/portfolio'
   | '/contact'
 
-export type Color =
+export type TColor =
   | 'alternate'
   | 'white'
   | 'default'
@@ -22,7 +22,7 @@ export type Color =
   | 'yellow'
   | 'violet'
 
-export type Effect =
+export type TEffect =
   | 'top'
   | 'right'
   | 'bottom'
@@ -32,11 +32,11 @@ export type Effect =
   | 'zoomOut'
   | 'zoomOutSm'
 
-export type CompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
+export type TCompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 
-export type ProjectType = 'app' | 'site' | 'landing' | 'admin'
+export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 
-export type ProjectName =
+export type TProjectName =
   | 'madfit'
   | 'madfitp'
   | 'vibe'
@@ -82,14 +82,14 @@ export interface TKeyObject {
   text?: string | number
 }
 
-export interface SocialLink {
+export interface ISocialLink {
   title: string
   href: string
   Icon: FunctionComponent<SVGProps<SVGSVGElement>> | TSvgIcon
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 }
 
-export interface Feature {
+export interface IFeature {
   Icon: TSvgIcon
   label?: string
   time?: boolean
@@ -99,73 +99,73 @@ export interface Feature {
   Link?: ReactNode
 }
 
-export interface Technology {
+export interface ITechnology {
   disabled?: boolean
   name: string
   label: string
-  color: Color
+  color: TColor
   href: string
 }
 
-export interface TechnologyGroup {
+export interface ITechnologyGroup {
   tKey: TKey
-  technologies: Technology[]
+  technologies: ITechnology[]
 }
 
-export interface Company {
+export interface ICompany {
   title: string
-  color: Color
+  color: TColor
   images: any[]
   href: string
 }
 
-export interface PeriodPart {
+export interface IPeriodPart {
   tKey: string
   year: number | string
 }
 
-export interface Period {
-  from: PeriodPart
-  to?: PeriodPart
+export interface IPeriod {
+  from: IPeriodPart
+  to?: IPeriodPart
 }
 
-export interface JobFeature {
+export interface IJobFeature {
   tKey?: string
-  period?: Period
+  period?: IPeriod
   Icon: TSvgIcon
   disabled?: boolean
 }
 
-export interface Job {
+export interface IJob {
   current?: boolean
-  company: Company
+  company: ICompany
   occupations: TKey[]
   duties: TKey[]
   achievements: TKey[]
-  features: JobFeature[]
+  features: IJobFeature[]
 }
 
-export interface ProjectImages {
+export interface IProjectImages {
   logo: any[]
   desktop?: any[][]
   mobile?: any[][]
 }
 
-export interface Project {
+export interface IProject {
   private?: boolean
-  name: ProjectName
+  name: TProjectName
   title?: string
   textValues?: (string | number)[]
-  types: ProjectType[]
-  companyName: CompanyName
+  types: TProjectType[]
+  companyName: TCompanyName
   url?: string
   details?: string
   stores?: string[]
   features: TKey[]
-  images: ProjectImages
+  images: IProjectImages
 }
 
-export interface Width {
+export interface IWidth {
   lg: boolean
   md: boolean
   sm: boolean

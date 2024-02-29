@@ -2,7 +2,7 @@ import {Navigate, useParams} from 'react-router-dom'
 
 import {Sections} from '@components/common'
 import {ROUTE, PROJECT_ROUTE} from '@utils/constants'
-import {Project as ProjectInterface} from '@utils/types'
+import {IProject} from '@utils/types'
 import PROJECTS from '@data/projects'
 import ProjectDetails from './ProjectDetails'
 import ProjectAssets from './ProjectAssets'
@@ -11,7 +11,7 @@ export default function Project() {
   const params = useParams()
 
   const project = PROJECTS.find(
-    (project: ProjectInterface): boolean =>
+    (project: IProject): boolean =>
       PROJECT_ROUTE[project.name].slice(1) === params.project
   )
 

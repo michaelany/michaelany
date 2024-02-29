@@ -6,15 +6,15 @@ import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '@components/common'
 import {getListDelay, tProjectTypes} from '@utils/helpers'
 import {DETECT, ROUTE, PROJECT_ROUTE, PATH_COLOR} from '@utils/constants'
-import {Effect, ProjectName, ProjectType, Width} from '@utils/types'
+import {TEffect, TProjectName, TProjectType, IWidth} from '@utils/types'
 
-interface ProjectLinkProps {
+interface IProjectLinkProps {
   t: TFunction
   index: number
-  width: Width
-  name: ProjectName
+  width: IWidth
+  name: TProjectName
   title?: string
-  types: ProjectType[]
+  types: TProjectType[]
   logo: string[]
 }
 
@@ -26,7 +26,7 @@ export default function ProjectLink({
   title,
   types,
   logo,
-}: ProjectLinkProps) {
+}: IProjectLinkProps) {
   const path = PROJECT_ROUTE[name]
 
   const projectTitle = title ?? t(`portfolio.project.${name}.title`)
@@ -72,10 +72,10 @@ export default function ProjectLink({
   )
 }
 
-const getDelay = (index: number, width: Width): number => {
+const getDelay = (index: number, width: IWidth): number => {
   if (width.sm) return 0
   const divider = width.md ? 2 : width.lg ? 3 : 4
   return getListDelay(index % divider)
 }
 
-const randomEffects: Effect[] = ['top', 'right', 'bottom', 'left']
+const randomEffects: TEffect[] = ['top', 'right', 'bottom', 'left']

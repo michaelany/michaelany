@@ -4,10 +4,10 @@ import {ButtonBase} from '@mui/material'
 
 import './Company.scss'
 import {BLANK_LINK_PROPS} from '@utils/constants'
-import {Company as CompanyInterface} from '@utils/types'
+import {ICompany as CompanyInterface} from '@utils/types'
 import Tooltip from './Tooltip'
 
-interface CompanyProps extends CompanyInterface {
+interface ICompanyProps extends CompanyInterface {
   animated?: boolean
 }
 
@@ -17,7 +17,7 @@ export default function Company({
   color,
   href,
   images,
-}: CompanyProps) {
+}: ICompanyProps) {
   return (
     <Tooltip title={title}>
       <ButtonBase

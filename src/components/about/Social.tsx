@@ -16,7 +16,7 @@ import {
   Tilt,
 } from '@components/common'
 import {ROUTE, QUERY_BREAKPOINT, DETECT} from '@utils/constants'
-import {SocialLink} from '@utils/types'
+import {ISocialLink} from '@utils/types'
 import {MY_NAME, CONTACT_LINK} from '@data/common'
 
 export default function Social() {
@@ -86,7 +86,7 @@ const Photo = () => {
   )
 }
 
-const links: SocialLink[] = [
+const links: ISocialLink[] = [
   CONTACT_LINK.gitHub,
   CONTACT_LINK.linkedIn,
   CONTACT_LINK.youTube,

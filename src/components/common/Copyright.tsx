@@ -17,7 +17,7 @@ import {
   MAIN_TECHNOLOGY_LINK,
 } from '@data/common'
 
-interface Link {
+interface ILink {
   title: string
   href: string
   Icon: FunctionComponent<SVGProps<SVGSVGElement>>
@@ -41,7 +41,7 @@ export default function Copyright() {
         {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
       </p>
       <div className="Copyright-Links">
-        {links.map(({Icon, ...link}: Link, index: number) => (
+        {links.map(({Icon, ...link}: ILink, index: number) => (
           <Tooltip key={index} title={link.title}>
             <a
               {...BLANK_LINK_PROPS}
@@ -59,7 +59,7 @@ export default function Copyright() {
 
 const year = TODAY.getFullYear()
 
-const links: Link[] = [
+const links: ILink[] = [
   {
     title: TECHNOLOGY_TITLE.react,
     href: MAIN_TECHNOLOGY_LINK.react,

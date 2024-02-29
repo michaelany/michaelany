@@ -4,7 +4,7 @@ import ReactTilt from 'react-parallax-tilt'
 import {DETECT} from '@utils/constants'
 import {DURATION} from '@styles/theme'
 
-interface TiltProps extends AllHTMLAttributes<HTMLElement> {
+interface ITiltProps extends AllHTMLAttributes<HTMLElement> {
   children: JSX.Element
   el?: any
   className?: string
@@ -19,7 +19,7 @@ export default function Tilt({
   enable = true,
   speed = DURATION.longest,
   ...props
-}: TiltProps) {
+}: ITiltProps) {
   const content: JSX.Element = Element ? (
     <Element {...props} className={DETECT.mobile ? className : undefined}>
       {children}

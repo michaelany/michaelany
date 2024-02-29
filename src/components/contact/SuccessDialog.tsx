@@ -7,13 +7,13 @@ import {ThumbUpRounded as ThumbUpIcon} from '@mui/icons-material'
 import './SuccessDialog.scss'
 import messageSentImg from '@assets/img/pictures/message-sent.svg'
 
-interface SuccessDialogProps {
+interface ISuccessDialogProps {
   t: TFunction
   open: boolean
   onClose: () => void
 }
 
-export default function SuccessDialog({t, open, onClose}: SuccessDialogProps) {
+export default function SuccessDialog({t, open, onClose}: ISuccessDialogProps) {
   return (
     <Dialog
       open={open}

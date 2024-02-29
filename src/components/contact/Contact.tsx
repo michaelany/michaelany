@@ -3,7 +3,7 @@ import {Link} from '@mui/material'
 
 import {Sections, SocialLinks, Pagination, Copyright} from '@components/common'
 import {BLANK_LINK_PROPS, ROUTE} from '@utils/constants'
-import {SocialLink} from '@utils/types'
+import {ISocialLink} from '@utils/types'
 import {CONTACT_LINK} from '@data/common'
 import ContactForm from './ContactForm'
 import Map from './Map'
@@ -48,7 +48,7 @@ export default function Contact() {
   )
 }
 
-const links: SocialLink[] = [
+const links: ISocialLink[] = [
   CONTACT_LINK.telegram,
   CONTACT_LINK.linkedIn,
   CONTACT_LINK.instagram,

@@ -8,14 +8,14 @@ import {
 
 import './Pagination.scss'
 import {ROUTE} from '@utils/constants'
-import {Route} from '@utils/types'
+import {TRoute} from '@utils/types'
 
-interface PaginationProps {
-  prevTo?: Route
-  nextTo?: Route
+interface IPaginationProps {
+  prevTo?: TRoute
+  nextTo?: TRoute
 }
 
-export default function Pagination({prevTo, nextTo}: PaginationProps) {
+export default function Pagination({prevTo, nextTo}: IPaginationProps) {
   const {t} = useTranslation()
 
   return (

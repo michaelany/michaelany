@@ -2,7 +2,7 @@ import {Grid} from '@mui/material'
 
 import './Sections.scss'
 
-interface SectionsProps {
+interface ISectionsProps {
   contact?: boolean
   firstSection: JSX.Element
   secondSection: JSX.Element
@@ -12,7 +12,7 @@ export default function Sections({
   contact,
   firstSection,
   secondSection,
-}: SectionsProps) {
+}: ISectionsProps) {
   const notContact = !contact
 
   return (

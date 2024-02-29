@@ -17,19 +17,19 @@ import {
 import './Stepper.scss'
 import {scrollToView, tPeriodPart} from '@utils/helpers'
 import {CAREER_START_PARTS} from '@utils/constants'
-import {Period} from '@utils/types'
+import {IPeriod} from '@utils/types'
 import {COMPANY_TITLE} from '@data/common'
 
-interface StepperProps {
+interface IStepperProps {
   sectionRef: RefObject<HTMLElement>
 }
 
-interface StepInterface {
-  period: Period
+interface IStepInterface {
+  period: IPeriod
   values?: string[]
 }
 
-export default function Stepper({sectionRef}: StepperProps) {
+export default function Stepper({sectionRef}: IStepperProps) {
   const {t} = useTranslation()
   const [step, changeStep] = useState<number>(steps.length - 1)
 
@@ -48,7 +48,7 @@ export default function Stepper({sectionRef}: StepperProps) {
 
   return (
     <MuiStepper component={Paper} activeStep={step} orientation="vertical">
-      {steps.map((item: StepInterface, index: number) => (
+      {steps.map((item: IStepInterface, index: number) => (
         <Step key={index}>
           <StepLabel>
             <time className="Time">
@@ -109,7 +109,7 @@ export default function Stepper({sectionRef}: StepperProps) {
 
 const transComponents = [<strong />]
 
-const steps: StepInterface[] = [
+const steps: IStepInterface[] = [
   {
     period: {
       from: {

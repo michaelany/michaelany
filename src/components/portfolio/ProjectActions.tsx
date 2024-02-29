@@ -10,16 +10,16 @@ import AppleIcon from '@assets/icons/apple.svg?react'
 import GooglePlayIcon from '@assets/icons/googleplay.svg?react'
 import {Animate} from '@components/common'
 import {BLANK_LINK_PROPS} from '@utils/constants'
-import {CompanyName} from '@utils/types'
+import {TCompanyName} from '@utils/types'
 
-interface ProjectActionsProps {
+interface IProjectActionsProps {
   url?: string
   details?: string
   stores?: string[]
-  companyName: CompanyName
+  companyName: TCompanyName
 }
 
-interface LinkProps {
+interface ILinkProps {
   children: ReactNode
   href: string
   icon: ReactNode
@@ -30,7 +30,7 @@ export default function ProjectActions({
   details,
   stores,
   companyName,
-}: ProjectActionsProps) {
+}: IProjectActionsProps) {
   const {t} = useTranslation()
 
   if (!url && !details && !stores) return null
@@ -70,7 +70,7 @@ export default function ProjectActions({
   )
 }
 
-const Link = ({children, href, icon}: LinkProps) => (
+const Link = ({children, href, icon}: ILinkProps) => (
   <Animate className="ProjectActions-Link" effect="bottom">
     <Button
       {...BLANK_LINK_PROPS}

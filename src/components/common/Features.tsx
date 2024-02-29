@@ -6,28 +6,28 @@ import {useMediaQuery, Collapse, Grid} from '@mui/material'
 import './Features.scss'
 import {Animate} from '@components/common'
 import {QUERY_BREAKPOINT} from '@utils/constants'
-import {Feature, Effect} from '@utils/types'
+import {IFeature, TEffect} from '@utils/types'
 import {DURATION} from '@styles/theme'
 
-interface FeaturesProps {
-  items: Feature[]
+interface IFeaturesProps {
+  items: IFeature[]
   t?: TFunction
   type?: string
   extra?: boolean
 }
 
-interface ExtraContentProps {
+interface IExtraContentProps {
   t: TFunction
   type: string
-  item: Omit<Feature, 'Icon'>
+  item: Omit<IFeature, 'Icon'>
 }
 
-const Features = memo(({t, type, extra, items}: FeaturesProps) => {
+const Features = memo(({t, type, extra, items}: IFeaturesProps) => {
   const xs: boolean = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
     <Grid container className="Features" component="ul" spacing={xs ? 4 : 6}>
-      {items.map(({Icon, ...item}: Feature, index: number) => (
+      {items.map(({Icon, ...item}: IFeature, index: number) => (
         <Grid
           key={index}
           item
@@ -64,7 +64,7 @@ const Features = memo(({t, type, extra, items}: FeaturesProps) => {
 
 export default Features
 
-const ExtraContent = ({t, type, item}: ExtraContentProps) => {
+const ExtraContent = ({t, type, item}: IExtraContentProps) => {
   const tKey = `${type}.feature.${item.tKey}.text`
 
   return (
@@ -83,10 +83,10 @@ const ExtraContent = ({t, type, item}: ExtraContentProps) => {
   )
 }
 
-const getEffect = (xs: boolean, index: number): Effect =>
+const getEffect = (xs: boolean, index: number): TEffect =>
   xs ? 'bottom' : index % 2 ? 'right' : 'left'
 
-const renderLabel = (item: Omit<Feature, 'Icon'>): string | JSX.Element =>
+const renderLabel = (item: Omit<IFeature, 'Icon'>): string | JSX.Element =>
   item.time ? (
     <time className="Time">{item.label}</time>
   ) : (

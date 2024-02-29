@@ -14,10 +14,10 @@ import './Technologies.scss'
 import {Animate, Pagination, Copyright} from '@components/common'
 import {TECHNOLOGY_GROUPS} from '@data/common'
 import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
-import {TechnologyGroup, TKey} from '@utils/types'
+import {ITechnologyGroup, TKey} from '@utils/types'
 import TechnologyList from './TechnologyList'
 
-interface TechnologiesProps {
+interface ITechnologiesProps {
   expanded: TKey[]
   sectionRef: RefObject<HTMLElement>
   firstTechnologyActionRef: RefObject<ButtonBaseActions>
@@ -29,7 +29,7 @@ export default function Technologies({
   sectionRef,
   firstTechnologyActionRef,
   setExpanded,
-}: TechnologiesProps) {
+}: ITechnologiesProps) {
   const {t} = useTranslation()
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
@@ -54,7 +54,7 @@ export default function Technologies({
         effect={md ? undefined : 'right'}
         duration={md ? undefined : 'longer'}
       >
-        {TECHNOLOGY_GROUPS.map((group: TechnologyGroup, index: number) => (
+        {TECHNOLOGY_GROUPS.map((group: ITechnologyGroup, index: number) => (
           <Accordion
             key={group.tKey as string}
             component="li"
