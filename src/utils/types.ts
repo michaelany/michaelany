@@ -153,6 +153,7 @@ export interface IProjectImages {
 
 export interface IProject {
   private?: boolean
+  mobileApp?: boolean
   name: TProjectName
   title?: string
   textValues?: (string | number)[]

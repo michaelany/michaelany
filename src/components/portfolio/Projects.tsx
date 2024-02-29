@@ -48,6 +48,7 @@ const Projects = memo(() => {
             t={t}
             width={width}
             index={index}
+            mobileApp={project.mobileApp}
             name={project.name}
             title={project.title}
             types={project.types}

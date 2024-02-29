@@ -12,6 +12,7 @@ interface IProjectLinkProps {
   t: TFunction
   index: number
   width: IWidth
+  mobileApp?: boolean
   name: TProjectName
   title?: string
   types: TProjectType[]
@@ -22,6 +23,7 @@ export default function ProjectLink({
   t,
   index,
   width,
+  mobileApp,
   name,
   title,
   types,
@@ -62,7 +64,7 @@ export default function ProjectLink({
               <img src={logo[0]} srcSet={`${logo[1]} 2x`} alt={projectTitle} />
               <h3 className="ProjectLink-Title">{projectTitle}</h3>
               <p className="ProjectLink-Label">
-                {tProjectTypes(t, types, name)}
+                {tProjectTypes(t, types, mobileApp)}
               </p>
             </div>
           </ButtonBase>

@@ -10,6 +10,7 @@ import {
   StarRounded as StarIcon,
   CheckCircleRounded as CheckCircleIcon,
   WebRounded as WebIcon,
+  PhoneIphone as PhoneIphoneIcon,
 } from '@mui/icons-material'
 
 import './ProjectDetails.scss'
@@ -27,6 +28,7 @@ import {BLANK_LINK_PROPS} from '@utils/constants'
 import ProjectActions from './ProjectActions'
 
 interface IProjectDetailsProps {
+  mobileApp?: boolean
   name: TProjectName
   title?: string
   textValues?: (string | number)[]
@@ -40,6 +42,7 @@ interface IProjectDetailsProps {
 }
 
 export default function ProjectDetails({
+  mobileApp,
   name,
   title,
   textValues,
@@ -76,8 +79,8 @@ export default function ProjectDetails({
     }
   )
   featureItems.push({
-    label: tProjectTypes(t, types, name),
-    Icon: WebIcon,
+    label: tProjectTypes(t, types, mobileApp),
+    Icon: mobileApp ? PhoneIphoneIcon : WebIcon,
   })
 
   const projectKey = `portfolio.project.${name}`

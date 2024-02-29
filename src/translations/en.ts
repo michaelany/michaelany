@@ -279,6 +279,7 @@ const EN = {
       landing: 'Landing page',
       admin: 'Admin panel',
     },
+    mobileApp: 'Mobile application',
     feature: {
       wholeDevelopment: `${common.portfolio.scratchDevelopment}, project improvement & support`,
       scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, project support`,
@@ -324,7 +325,6 @@ const EN = {
         text: 'New Zealand building order management website',
       },
       t1online: {
-        type: 'Mobile application',
         text: 'Corporate mobile application for company employees',
       },
       ninjal: {

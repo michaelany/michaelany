@@ -323,6 +323,7 @@ const projects: IProject[] = [
     },
   },
   {
+    mobileApp: true,
     name: 't1online',
     title: 'T1 Онлайн',
     types: ['app'],

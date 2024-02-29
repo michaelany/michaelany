@@ -21,6 +21,7 @@ export default function Project() {
     <Sections
       firstSection={
         <ProjectDetails
+          mobileApp={project.mobileApp}
           name={project.name}
           title={project.title}
           textValues={project.textValues}

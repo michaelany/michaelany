@@ -2,7 +2,7 @@ import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import {TFunction} from 'i18next'
 
 import {DURATION} from '@styles/theme'
-import {TProjectType, IPeriodPart, TProjectName} from './types'
+import {TProjectType, IPeriodPart} from './types'
 
 export const importImg = (path: string): string =>
   new URL(`/src/assets/img/${path}`, import.meta.url).href
@@ -13,9 +13,9 @@ export const getListDelay = (order: number): number =>
 export const tProjectTypes = (
   t: TFunction,
   types: TProjectType[],
-  name?: TProjectName
+  mobileApp?: boolean
 ): string => {
-  if (name === 't1online') return t('portfolio.project.t1online.type')
+  if (mobileApp) return t('portfolio.mobileApp')
   return types
     .map((type: TProjectType, index: number) => {
       const label = t(`portfolio.filter.${type}`)

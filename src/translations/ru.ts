@@ -291,6 +291,7 @@ const RU = {
       landing: 'Лендинг',
       admin: 'Админка',
     },
+    mobileApp: 'Мобильное приложение',
     feature: {
       wholeDevelopment: `${common.portfolio.scratchDevelopment}, развитие, ${common.portfolio.support}`,
       scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, ${common.portfolio.support}`,
@@ -335,7 +336,6 @@ const RU = {
         text: 'Новозеландский сайт управления строительными заказами',
       },
       t1online: {
-        type: 'Мобильное приложение',
         text: 'Корпоративное мобильное приложение для сотрудников компании',
       },
       ninjal: {
