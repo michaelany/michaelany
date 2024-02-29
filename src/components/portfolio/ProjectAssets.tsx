@@ -54,8 +54,8 @@ export default function ProjectAssets({
 }
 
 const Screenshots = ({t, md, name, images}: ScreenshotsProps) => {
-  const [firstSwiper, setFirstSwiper] = useState<SwiperCore | null>(null)
-  const [secondSwiper, setSecondSwiper] = useState<SwiperCore | null>(null)
+  const [firstSwiper, setFirstSwiper] = useState<SwiperCore>({} as SwiperCore)
+  const [secondSwiper, setSecondSwiper] = useState<SwiperCore>({} as SwiperCore)
 
   return (
     <>
