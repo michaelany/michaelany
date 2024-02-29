@@ -200,6 +200,7 @@ export const TECHNOLOGY_TITLE = {
   php: 'PHP',
   laravel: 'Laravel',
   docker: 'Docker',
+  epidemic: 'Epidemic Sound',
   mac: "Apple MacBook Pro 16'' (M1 Pro)",
   ipad: "Apple iPad Pro 12.9'' (M1)",
   keyboard: 'Keychron K3 (Red Switch)',
@@ -467,18 +468,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://babeljs.io',
       },
       {
-        name: 'prettier',
-        label: TECHNOLOGY_TITLE.prettier,
-        color: 'default',
-        href: 'https://prettier.io',
-      },
-      {
-        name: 'eslint',
-        label: TECHNOLOGY_TITLE.eslint,
-        color: 'violet',
-        href: 'https://eslint.org',
-      },
-      {
         name: 'next',
         label: TECHNOLOGY_TITLE.next,
         color: 'default',
@@ -489,6 +478,18 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.gatsby,
         color: 'violet',
         href: 'https://www.gatsbyjs.org',
+      },
+      {
+        name: 'prettier',
+        label: TECHNOLOGY_TITLE.prettier,
+        color: 'default',
+        href: 'https://prettier.io',
+      },
+      {
+        name: 'eslint',
+        label: TECHNOLOGY_TITLE.eslint,
+        color: 'violet',
+        href: 'https://eslint.org',
       },
       {
         name: 'storybook',
@@ -520,7 +521,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://openai.com/chatgpt',
       },
       {
-        name: 'react',
+        name: 'reactnative',
         label: TECHNOLOGY_TITLE.reactnative,
         color: 'blue',
         href: 'https://reactnative.dev',
@@ -546,7 +547,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'mysql',
         label: TECHNOLOGY_TITLE.mysql,
-        color: 'blue',
+        color: 'yellow',
         href: 'https://www.mysql.com',
       },
       {
@@ -566,6 +567,12 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         label: TECHNOLOGY_TITLE.docker,
         color: 'blue',
         href: 'https://www.docker.com',
+      },
+      {
+        name: 'epidemic',
+        label: TECHNOLOGY_TITLE.epidemic,
+        color: 'default',
+        href: 'https://share.epidemicsound.com/5mzb54',
       },
     ],
   },
