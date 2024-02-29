@@ -163,7 +163,7 @@ const EN = {
       logic: 'Logic',
       markup: 'Markup',
       styles: 'Styles',
-      tools: 'Tools',
+      tools: 'Utilities',
       misc: 'Miscellaneous',
       software: 'Software',
       hardware: 'Hardware',

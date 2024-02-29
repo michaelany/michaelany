@@ -6,5 +6,5 @@
 /* SITE */
 	Last update: 29/02/2024
 	Language: Russian | English
-	Components: TypeScript, React, Material-UI, Sass, Vite
+	Components: TypeScript, React, Material UI, Sass, Vite
 	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, macOS Sonoma

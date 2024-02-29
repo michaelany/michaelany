@@ -140,6 +140,7 @@ const THEME: ThemeOptions = {
     },
     MuiTooltip: {
       defaultProps: {
+        disableInteractive: true,
         enterDelay: DURATION.standard,
       },
       styleOverrides: {

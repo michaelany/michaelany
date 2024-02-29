@@ -2,11 +2,12 @@ $technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
   'preact', 'svelte', 'vue', 'apollo', 'jquery', 'html', 'svg', 'pug',
   'handlebars', 'markdown', 'laravel', 'css', 'sass', 'less', 'modules', 'bem',
   'mui', 'styled', 'ant', 'reactstrap', 'materialize', 'bootstrap', 'semantic',
-  'gsap', 'emails', 'npm', 'yarn', 'vite', 'webpack', 'gulp', 'gatsby', 'next',
-  'git', 'babel', 'prettier', 'eslint', 'storybook', 'jest', 'iterm', 'vscode',
+  'npm', 'yarn', 'vite', 'webpack', 'gulp', 'gatsby', 'next', 'git', 'babel',
+  'prettier', 'eslint', 'storybook', 'jest', 'gsap', 'iterm', 'vscode',
   'phpstorm', 'devtools', 'zeplin', 'sketch', 'figma', 'photoshop', 'optim',
-  'paw', 'clickup', 'macos', 'expo', 'node', 'mongo', 'mysql', 'php', 'docker',
-  'mac', 'ipad', 'keyboard', 'mouse', 'trackpad', 'airpods', 'glasses', 'mascot';
+  'paw', 'clickup', 'fcpx', 'macos', 'gpt', 'expo', 'node', 'mongo', 'mysql',
+  'php', 'docker', 'mac', 'ipad', 'keyboard', 'mouse', 'trackpad', 'airpods',
+  'dock', 'mic', 'iphone', 'gopro', 'glasses', 'mascot';
 
 .Technologies-Item {
   @include responsiveBlock;

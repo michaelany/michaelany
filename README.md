@@ -69,7 +69,7 @@
 ![Pug](https://img.shields.io/badge/-Pug-282828?logo=pug&logoColor=a86454)
 ![CSS](https://img.shields.io/badge/-CSS-282828?logo=css3&logoColor=1572b6)
 ![Sass](https://img.shields.io/badge/-Sass-282828?logo=sass&logoColor=cc6699)
-![Material-UI](https://img.shields.io/badge/-Material_UI-282828?logo=MUI&logoColor=0081cb)
+![Material UI](https://img.shields.io/badge/-Material_UI-282828?logo=MUI&logoColor=0081cb)
 ![React Native](https://img.shields.io/badge/-React_Native-282828?logo=react&logoColor=61dafb)
 ![npm](https://img.shields.io/badge/-npm-282828?logo=npm&logoColor=cc0100)
 ![Markdown](https://img.shields.io/badge/-Markdown-282828?logo=markdown&logoColor=white)
