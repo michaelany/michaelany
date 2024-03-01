@@ -9,6 +9,7 @@ export type TRoute =
   | '/skills'
   | '/experience'
   | '/portfolio'
+  | '/vlog'
   | '/contact'
 
 export type TColor =

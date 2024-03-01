@@ -28,7 +28,7 @@ const Projects = memo(() => {
   }
 
   return (
-    <div>
+    <>
       <Tabs
         className="Projects-Filters"
         value={filter}
@@ -56,7 +56,7 @@ const Projects = memo(() => {
           />
         ))}
       </Grid>
-    </div>
+    </>
   )
 })
 

@@ -31,7 +31,7 @@ export default function Portfolio() {
         </h1>
         <Projects />
       </div>
-      <Pagination prevTo={ROUTE.experience} nextTo={ROUTE.contact} />
+      <Pagination prevTo={ROUTE.experience} nextTo={ROUTE.vlog} />
       <Copyright />
     </section>
   )

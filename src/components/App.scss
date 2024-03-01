@@ -6,10 +6,14 @@
   &_background_blue {
     background-color: $color_blue;
   }
+  &_background_red {
+    background-color: $color_red;
+  }
   &_background_green {
     background-color: $color_green;
   }
   &_background_blue,
+  &_background_red,
   &_background_green {
     &::before {
       @include pseudoGradient;

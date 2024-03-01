@@ -39,7 +39,7 @@ export default function Contact() {
             <ContactForm />
           </div>
           <SocialLinks links={links} />
-          <Pagination prevTo={ROUTE.portfolio} />
+          <Pagination prevTo={ROUTE.vlog} />
           <Copyright />
         </section>
       }

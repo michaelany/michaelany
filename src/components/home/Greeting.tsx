@@ -5,7 +5,7 @@ import {Button} from '@mui/material'
 import {
   WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
-  VideocamRounded as VideocamIcon,
+  CameraAltRounded as CameraAltIcon,
 } from '@mui/icons-material'
 
 import './Greeting.scss'
@@ -128,9 +128,9 @@ export default function Greeting() {
         <Button
           className="Greeting-Tenth Greeting-Button Button Button_color_red"
           component={Link}
-          to={ROUTE.contact}
+          to={ROUTE.vlog}
           size="large"
-          endIcon={<VideocamIcon />}
+          endIcon={<CameraAltIcon />}
         >
           {t('title.vlog')}
         </Button>

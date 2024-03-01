@@ -12,6 +12,7 @@ import Skills from './skills/Skills'
 import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
+import Vlog from './vlog/Vlog'
 import Contact from './contact/Contact'
 import {ROUTE, PATH_COLOR, QUERY_BREAKPOINT} from '@utils/constants'
 
@@ -24,8 +25,13 @@ export default function App() {
     `App App_page_${
       pathname.slice(1, lastSlashIndex || undefined) || 'home'
     } App_color_${PATH_COLOR[pathname.slice(lastSlashIndex)]}`,
-    pathname === ROUTE.portfolio && 'App_background_blue',
-    pathname === ROUTE.contact && 'App_background_green'
+    pathname === ROUTE.portfolio
+      ? 'App_background_blue'
+      : pathname === ROUTE.vlog
+        ? 'App_background_red'
+        : pathname === ROUTE.contact
+          ? 'App_background_green'
+          : undefined
   )
 
   return (
@@ -41,6 +47,7 @@ export default function App() {
             <Route index element={<Portfolio />} />
             <Route path=":project" element={<Project />} />
           </Route>
+          <Route path={ROUTE.vlog} element={<Vlog />} />
           <Route path={ROUTE.contact} element={<Contact />} />
           <Route path="*" element={<Navigate replace to={ROUTE.home} />} />
         </Routes>

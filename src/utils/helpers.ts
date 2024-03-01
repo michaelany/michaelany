@@ -2,13 +2,19 @@ import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import {TFunction} from 'i18next'
 
 import {DURATION} from '@styles/theme'
-import {TProjectType, IPeriodPart} from './types'
+import {TProjectType, IPeriodPart, IWidth} from './types'
 
 export const importImg = (path: string): string =>
   new URL(`/src/assets/img/${path}`, import.meta.url).href
 
 export const getListDelay = (order: number): number =>
   (order * DURATION.shorter) / 2
+
+export const getGridAnimationDelay = (index: number, width: IWidth): number => {
+  if (width.sm) return 0
+  const divider = width.md ? 2 : width.lg ? 3 : 4
+  return getListDelay(index % divider)
+}
 
 export const tProjectTypes = (
   t: TFunction,

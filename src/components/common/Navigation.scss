@@ -1,4 +1,4 @@
-$pages: 'about', 'skills', 'experience', 'portfolio', 'contact';
+$pages: 'about', 'skills', 'experience', 'portfolio', 'vlog', 'contact';
 
 .Navigation {
   position: relative;
@@ -11,7 +11,8 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'contact';
     width: 8px;
     height: 54px;
     border-radius: math.div($border-radius, 2);
-    transition: transform $duration_medium-long $easing_out,
+    transition:
+      transform $duration_medium-long $easing_out,
       background-color $duration_short $easing_in-out;
     @for $index from 1 through length($pages) {
       $page: nth($pages, $index);

@@ -10,7 +10,7 @@ import FacebookIcon from '@assets/icons/facebook.svg?react'
 import TelegramIcon from '@assets/icons/telegram.svg?react'
 import {ISocialLink, ICompany, ITechnologyGroup} from '@utils/types'
 
-interface ContactLink {
+interface IContactLink {
   gitHub: ISocialLink
   linkedIn: ISocialLink
   sevenGlyphs: ISocialLink
@@ -21,7 +21,7 @@ interface ContactLink {
   telegram: ISocialLink
 }
 
-interface CompanyInterface {
+interface ICompanyData {
   sevenGlyphs: ICompany
   t1: ICompany
   everpoint: ICompany
@@ -37,7 +37,7 @@ export const COMPANY_TITLE = {
   t1: 'T1 Consulting',
 }
 
-export const CONTACT_LINK: ContactLink = {
+export const CONTACT_LINK: IContactLink = {
   gitHub: {
     title: 'GitHub',
     href: 'https://github.com/michaelany',
@@ -88,7 +88,7 @@ export const CONTACT_LINK: ContactLink = {
   },
 }
 
-export const COMPANY: CompanyInterface = {
+export const COMPANY: ICompanyData = {
   sevenGlyphs: {
     title: COMPANY_TITLE.sevenGlyphs,
     images: [

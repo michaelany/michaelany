@@ -1,12 +1,14 @@
 .Pagination {
   position: relative;
-  .App_background_blue & {
+  .App_background_blue &,
+  .App_background_red & {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
   @include md {
-    .App_background_blue & {
+    .App_background_blue &,
+    .App_background_red & {
       width: 100%;
     }
   }

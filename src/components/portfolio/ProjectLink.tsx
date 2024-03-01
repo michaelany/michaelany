@@ -4,9 +4,15 @@ import {Grid, ButtonBase} from '@mui/material'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '@components/common'
-import {getListDelay, tProjectTypes} from '@utils/helpers'
-import {DETECT, ROUTE, PROJECT_ROUTE, PATH_COLOR} from '@utils/constants'
-import {TEffect, TProjectName, TProjectType, IWidth} from '@utils/types'
+import {getGridAnimationDelay, tProjectTypes} from '@utils/helpers'
+import {
+  DETECT,
+  ROUTE,
+  PROJECT_ROUTE,
+  PATH_COLOR,
+  RANDOM_EFFECTS,
+} from '@utils/constants'
+import {TProjectName, TProjectType, IWidth} from '@utils/types'
 
 interface IProjectLinkProps {
   t: TFunction
@@ -46,9 +52,9 @@ export default function ProjectLink({
       <Animate
         className={DETECT.mobile ? 'ProjectLink-Tilt' : undefined}
         effect={
-          width.sm ? undefined : randomEffects[Math.floor(Math.random() * 4)]
+          width.sm ? undefined : RANDOM_EFFECTS[Math.floor(Math.random() * 4)]
         }
-        delay={getDelay(index, width)}
+        delay={getGridAnimationDelay(index, width)}
       >
         <Tilt className="ProjectLink-Tilt">
           <ButtonBase
@@ -73,11 +79,3 @@ export default function ProjectLink({
     </Grid>
   )
 }
-
-const getDelay = (index: number, width: IWidth): number => {
-  if (width.sm) return 0
-  const divider = width.md ? 2 : width.lg ? 3 : 4
-  return getListDelay(index % divider)
-}
-
-const randomEffects: TEffect[] = ['top', 'right', 'bottom', 'left']

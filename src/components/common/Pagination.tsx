@@ -57,11 +57,12 @@ export default function Pagination({prevTo, nextTo}: IPaginationProps) {
   )
 }
 
-const pathKeys: Record<string, string> = {
+const pathKeys = {
   [ROUTE.home]: 'home',
   [ROUTE.about]: 'about',
   [ROUTE.skills]: 'skills',
   [ROUTE.experience]: 'experience',
   [ROUTE.portfolio]: 'portfolio',
+  [ROUTE.vlog]: 'vlog',
   [ROUTE.contact]: 'contact',
 }

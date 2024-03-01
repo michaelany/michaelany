@@ -1,19 +1,20 @@
 import {differenceInYears, format} from 'date-fns'
 
 import {BREAKPOINT} from '@styles/theme'
-import {TRoute, TColor} from './types'
+import {TRoute, TColor, TEffect} from './types'
 
 interface IDetect {
   mobile: boolean
   safari: boolean
 }
 
-interface IRouteInterface {
+interface IRoute {
   home: TRoute
   about: TRoute
   skills: TRoute
   experience: TRoute
   portfolio: TRoute
+  vlog: TRoute
   contact: TRoute
 }
 
@@ -93,12 +94,13 @@ export const TODAY = new Date()
 export const YEARS_OF_EXPERIENCE =
   differenceInYears(TODAY, CAREER_START_DATE) + 1
 
-export const ROUTE: IRouteInterface = {
+export const ROUTE: IRoute = {
   home: '/',
   about: '/about',
   skills: '/skills',
   experience: '/experience',
   portfolio: '/portfolio',
+  vlog: '/vlog',
   contact: '/contact',
 }
 
@@ -146,6 +148,7 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.skills]: 'blue',
   [ROUTE.experience]: 'violet',
   [ROUTE.portfolio]: 'white',
+  [ROUTE.vlog]: 'white',
   [ROUTE.contact]: 'white',
   [PROJECT_ROUTE.madfit]: 'green',
   [PROJECT_ROUTE.madfitp]: 'green',
@@ -195,3 +198,5 @@ export const BLANK_LINK_PROPS: IBlankLinkProps = {
   target: '_blank',
   rel: 'noopener noreferrer',
 }
+
+export const RANDOM_EFFECTS: TEffect[] = ['top', 'right', 'bottom', 'left']

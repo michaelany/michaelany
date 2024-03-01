@@ -4,10 +4,10 @@ import {ButtonBase} from '@mui/material'
 
 import './Company.scss'
 import {BLANK_LINK_PROPS} from '@utils/constants'
-import {ICompany as CompanyInterface} from '@utils/types'
+import {ICompany} from '@utils/types'
 import Tooltip from './Tooltip'
 
-interface ICompanyProps extends CompanyInterface {
+interface ICompanyProps extends ICompany {
   animated?: boolean
 }
 

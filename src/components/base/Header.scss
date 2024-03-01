@@ -12,7 +12,8 @@ $background-opacity: 0.95;
   z-index: 100;
   padding-left: 8px;
   padding-right: 8px;
-  transition: color $duration_short $easing_in-out,
+  transition:
+    color $duration_short $easing_in-out,
     background-color $duration_standard $easing_in-out;
   .App_color_alternate & {
     @include animationAlternate(alternateBorderColor);
@@ -27,6 +28,9 @@ $background-opacity: 0.95;
   }
   .App_background_blue & {
     background-color: rgba($color_blue, $background-opacity);
+  }
+  .App_background_red & {
+    background-color: rgba($color_red, $background-opacity);
   }
   .App_background_green & {
     background-color: rgba($color_green, $background-opacity);

@@ -24,7 +24,7 @@ interface IStepperProps {
   sectionRef: RefObject<HTMLElement>
 }
 
-interface IStepInterface {
+interface IStep {
   period: IPeriod
   values?: string[]
 }
@@ -48,7 +48,7 @@ export default function Stepper({sectionRef}: IStepperProps) {
 
   return (
     <MuiStepper component={Paper} activeStep={step} orientation="vertical">
-      {steps.map((item: IStepInterface, index: number) => (
+      {steps.map((item: IStep, index: number) => (
         <Step key={index}>
           <StepLabel>
             <time className="Time">
@@ -109,7 +109,7 @@ export default function Stepper({sectionRef}: IStepperProps) {
 
 const transComponents = [<strong />]
 
-const steps: IStepInterface[] = [
+const steps: IStep[] = [
   {
     period: {
       from: {
