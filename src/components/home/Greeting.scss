@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 256px;
+  padding-bottom: 160px;
   @include lg {
-    padding-bottom: 160px;
+    padding-bottom: 80px;
   }
   @include xs {
     .Sections-SectionWrapper:first-child > & {
@@ -38,6 +38,7 @@
   margin-top: 16px;
   margin-bottom: 0;
   align-self: flex-start;
+  max-width: 400px;
 }
 
 .Greeting-Part {
@@ -71,7 +72,12 @@
 }
 
 .Greeting-Fourth {
-  @include animation(fadeInTop, 1750ms);
+  &_first {
+    @include animation(fadeInTop, 1750ms);
+  }
+  &_second {
+    @include animation(fadeInTop, 2650ms);
+  }
 }
 
 .Greeting-Fifth {
@@ -79,7 +85,7 @@
 }
 
 .Greeting-Sixth {
-  @include animation(fadeInLeft, 2800ms);
+  @include animation(fadeInRight, 2850ms);
 }
 
 .Greeting-Seventh {
@@ -87,7 +93,15 @@
 }
 
 .Greeting-Eighth {
-  @include animation(fadeInBottom, 3500ms);
+  @include animation(fadeInBottom, 3450ms);
+}
+
+.Greeting-Nineth {
+  @include animation(fadeInBottom, 3600ms);
+}
+
+.Greeting-Tenth {
+  @include animation(fadeInBottom, 3750ms);
 }
 
 .Greeting-Word {
@@ -95,41 +109,67 @@
 }
 
 .Greeting-Extra {
+  align-self: flex-start;
   display: flex;
   position: relative;
-  top: 0.15em;
-  left: 0.2em;
-  width: 0.84em;
-  height: 1.05em;
-  outline-color: $color_yellow;
-  transform: rotate(20deg);
+  left: 0.25em;
   transition: transform $duration_standard $easing_out;
+  &_first {
+    outline-color: $color_yellow;
+    top: 0.22em;
+    transform: rotate(20deg);
+  }
+  &_second {
+    outline-color: $color_red;
+    top: 0.25em;
+    transform: rotate(-15deg);
+  }
   @include hover {
+    transform: rotate(0) scale(1.2);
+  }
+  &:focus {
     transform: rotate(0) scale(1.2);
   }
 }
 
 .Greeting-ExtraImg {
-  width: 100%;
-  height: 100%;
-  @include animation(fadeInZoomOut, 2500ms);
+  .Greeting-Extra_first > & {
+    @include animation(fadeInZoomOut, 2450ms);
+    width: 0.83em;
+    height: 0.94em;
+  }
+  .Greeting-Extra_second > & {
+    @include animation(fadeInZoomIn, 3050ms);
+    width: 0.91em;
+    height: 0.64em;
+  }
 }
 
 .Greeting-Actions {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2em;
   margin-bottom: -16px;
   @include xs {
-    width: 100%;
     margin-bottom: 24px;
   }
 }
 
 .Greeting-Button {
   margin-bottom: 16px;
+  @include xs {
+    &:first-child {
+      order: -1;
+    }
+    &:last-child {
+      order: -1;
+    }
+  }
 }
 
 .Greeting-Photo {
-  @include animation(fadeInRight, 1625ms);
+  @include animation(fadeInLeft, 2s);
   position: absolute;
   z-index: -1;
   right: 10%;
@@ -149,7 +189,7 @@
     right: 24px;
   }
   @include xs {
-    @include animation(fadeInBottom, 3625ms);
+    @include animation(fadeInBottom, 3900ms);
     position: static;
     right: auto;
     bottom: auto;

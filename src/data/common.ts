@@ -569,6 +569,12 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://www.docker.com',
       },
       {
+        name: 'youtube',
+        label: CONTACT_LINK.youTube.title,
+        color: 'red',
+        href: CONTACT_LINK.youTube.href,
+      },
+      {
         name: 'epidemic',
         label: TECHNOLOGY_TITLE.epidemic,
         color: 'default',

@@ -49,6 +49,7 @@ const EN = {
     occupation: {
       part1: 'a frontend',
       part2: 'developer',
+      part3: 'YouTuber',
     },
     subtitle: 'Banner',
   },
@@ -60,7 +61,7 @@ const EN = {
         text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to large web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Lead software engineer',
+        label: 'Lead software engineer & {{0}} channel creator',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {

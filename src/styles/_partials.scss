@@ -133,6 +133,15 @@
       }
     }
   }
+  &_color_red {
+    &.MuiButton-text {
+      color: $color_dark-red;
+      background-color: rgba($color_red, 0.2);
+      @include hover {
+        background-color: rgba($color_red, 0.4);
+      }
+    }
+  }
   &_color_white,
   .App_color_white & {
     color: $color_text;
