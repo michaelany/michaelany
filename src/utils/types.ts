@@ -1,6 +1,8 @@
 import {ReactNode, FunctionComponent, SVGProps} from 'react'
 import {SvgIcon} from '@mui/material'
 
+export type TLng = 'ru' | 'eng'
+
 type TSvgIcon = typeof SvgIcon
 
 export type TRoute =
@@ -171,4 +173,11 @@ export interface IWidth {
   lg: boolean
   md: boolean
   sm: boolean
+}
+
+export interface IVideo {
+  name: string
+  color: TColor
+  date: Date
+  href: string
 }

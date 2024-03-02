@@ -263,3 +263,8 @@
   display: inline-block;
   text-transform: capitalize;
 }
+
+.Tabs {
+  @include animation(fadeIn);
+  margin-bottom: 24px;
+}

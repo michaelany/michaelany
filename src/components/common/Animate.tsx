@@ -25,7 +25,7 @@ export default function Animate({
   easing = 'inOut',
   ...props
 }: IAnimateProps) {
-  const [reached, setReached] = useState<boolean>(false)
+  const [reached, setReached] = useState(false)
 
   const onWaypointEnter = () => {
     !reached && setReached(true)

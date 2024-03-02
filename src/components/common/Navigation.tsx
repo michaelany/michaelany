@@ -37,7 +37,7 @@ export default function Navigation({onClose}: INavigationProps) {
   return (
     <nav className="Navigation">
       <ul>
-        {navLinks.map((link: INavLink) => (
+        {navLinks.map((link) => (
           <Item key={link.tKey} {...link} t={t} onClose={onClose} />
         ))}
       </ul>

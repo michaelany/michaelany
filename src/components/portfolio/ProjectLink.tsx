@@ -40,15 +40,7 @@ export default function ProjectLink({
   const projectTitle = title ?? t(`portfolio.project.${name}.title`)
 
   return (
-    <Grid
-      item
-      component="li"
-      className="ProjectLink"
-      xs={12}
-      md={6}
-      lg={4}
-      xl={3}
-    >
+    <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
       <Animate
         className={DETECT.mobile ? 'ProjectLink-Tilt' : undefined}
         effect={

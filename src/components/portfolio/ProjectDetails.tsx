@@ -55,29 +55,27 @@ export default function ProjectDetails({
 }: IProjectDetailsProps) {
   const {t} = useTranslation()
 
-  const featureItems: IFeature[] = features.map(
-    (feature: TKey, index: number) => {
-      const isTime = index === features.length - 1
-      return {
-        label:
-          typeof feature === 'object'
-            ? isTime
-              ? `${t(`month.${feature.tKey}`)} ${feature.text}`
-              : `${feature.text ? `${feature.text}, ` : ''}${
-                  feature.tKeys
-                    ? feature.tKeys
-                        .map((tKey: string) => t(`portfolio.feature.${tKey}`))
-                        .join(', ')
-                    : t(`portfolio.feature.${feature.tKey}`, {
-                        replace: feature.values,
-                      })
-                }`
-            : feature,
-        Icon: featureIcons[index],
-        time: isTime,
-      }
+  const featureItems: IFeature[] = features.map((feature, index) => {
+    const isTime = index === features.length - 1
+    return {
+      label:
+        typeof feature === 'object'
+          ? isTime
+            ? `${t(`month.${feature.tKey}`)} ${feature.text}`
+            : `${feature.text ? `${feature.text}, ` : ''}${
+                feature.tKeys
+                  ? feature.tKeys
+                      .map((tKey) => t(`portfolio.feature.${tKey}`))
+                      .join(', ')
+                  : t(`portfolio.feature.${feature.tKey}`, {
+                      replace: feature.values,
+                    })
+              }`
+          : feature,
+      Icon: featureIcons[index],
+      time: isTime,
     }
-  )
+  })
   featureItems.push({
     label: tProjectTypes(t, types, mobileApp),
     Icon: mobileApp ? PhoneIphoneIcon : WebIcon,

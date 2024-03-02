@@ -41,12 +41,12 @@ interface ISnackbarContent {
 
 export default function ContactForm() {
   const {t} = useTranslation()
-  const [successDialogOpen, setSuccessDialogOpen] = useState<boolean>(false)
+  const [successDialogOpen, setSuccessDialogOpen] = useState(false)
   const [snackbar, setSnackbar] = useState<ISnackbarContent>({
     open: false,
     message: '',
   })
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
   const fieldElements: Record<

@@ -7,7 +7,7 @@ import {Logo} from '@components/common'
 import Drawer from './Drawer'
 
 export default function Header() {
-  const [open, setOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState(false)
   const trigger: boolean = useScrollTrigger()
 
   const handleOpen = () => setOpen(true)

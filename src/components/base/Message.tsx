@@ -10,7 +10,7 @@ import santaImg from '@assets/img/pictures/santa.png'
 import {DURATION} from '@styles/theme'
 
 export default function Message() {
-  const [open, setOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     if (sessionStorage.messageChecked) return
@@ -53,4 +53,4 @@ const anchorOrigin: SnackbarOrigin = {
   horizontal: 'center',
 }
 
-const transComponents: JSX.Element[] = [<strong />]
+const transComponents = [<strong />]

@@ -18,7 +18,7 @@ import {ROUTE, PATH_COLOR, QUERY_BREAKPOINT} from '@utils/constants'
 
 export default function App() {
   const {pathname} = useLocation()
-  const isMd = useMediaQuery(QUERY_BREAKPOINT.md)
+  const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   const lastSlashIndex = pathname.lastIndexOf('/')
   const AppClassName = cn(
@@ -36,7 +36,7 @@ export default function App() {
 
   return (
     <div className={AppClassName}>
-      {isMd ? <Header /> : <Sidebar />}
+      {md ? <Header /> : <Sidebar />}
       <main className="App-Main">
         <Routes>
           <Route path={ROUTE.home} element={<Home />} />

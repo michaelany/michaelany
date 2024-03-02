@@ -14,7 +14,7 @@ import './Technologies.scss'
 import {Animate, Pagination, Copyright} from '@components/common'
 import {TECHNOLOGY_GROUPS} from '@data/common'
 import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
-import {ITechnologyGroup, TKey} from '@utils/types'
+import {TKey} from '@utils/types'
 import TechnologyList from './TechnologyList'
 
 interface ITechnologiesProps {
@@ -54,7 +54,7 @@ export default function Technologies({
         effect={md ? undefined : 'right'}
         duration={md ? undefined : 'longer'}
       >
-        {TECHNOLOGY_GROUPS.map((group: ITechnologyGroup, index: number) => (
+        {TECHNOLOGY_GROUPS.map((group, index) => (
           <Accordion
             key={group.tKey as string}
             component="li"

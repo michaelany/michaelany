@@ -21,41 +21,37 @@ export default function TechnologyList({
 }: ITechnologyListProps) {
   return (
     <Grid container component="ul">
-      {technologies.map(
-        ({label, name, color, href, disabled}: ITechnology, index: number) => (
-          <Grid
-            key={index}
-            item
-            component="li"
-            xs={6}
-            sm={4}
-            md={3}
-            lg={4}
-            xl={3}
-          >
-            <Tooltip
-              title={`${disabled ? `${t('skills.learn')} ` : ''}${label}`}
+      {technologies.map(({label, name, color, href, disabled}, index) => (
+        <Grid
+          key={index}
+          item
+          component="li"
+          xs={6}
+          sm={4}
+          md={3}
+          lg={4}
+          xl={3}
+        >
+          <Tooltip title={`${disabled ? `${t('skills.learn')} ` : ''}${label}`}>
+            <ButtonBase
+              {...BLANK_LINK_PROPS}
+              focusRipple
+              component="a"
+              className={cn(
+                `Technologies-Item ColorInteract ColorInteract_color_${color}`,
+                disabled && 'Technologies-Item_disabled'
+              )}
+              href={href}
+              aria-label={label}
+              action={index === 0 ? firstTechnologyActionRef : undefined}
             >
-              <ButtonBase
-                {...BLANK_LINK_PROPS}
-                focusRipple
-                component="a"
-                className={cn(
-                  `Technologies-Item ColorInteract ColorInteract_color_${color}`,
-                  disabled && 'Technologies-Item_disabled'
-                )}
-                href={href}
-                aria-label={label}
-                action={index === 0 ? firstTechnologyActionRef : undefined}
-              >
-                <div
-                  className={`Technologies-ItemContent Technologies-ItemContent_name_${name}`}
-                />
-              </ButtonBase>
-            </Tooltip>
-          </Grid>
-        )
-      )}
+              <div
+                className={`Technologies-ItemContent Technologies-ItemContent_name_${name}`}
+              />
+            </ButtonBase>
+          </Tooltip>
+        </Grid>
+      ))}
     </Grid>
   )
 }

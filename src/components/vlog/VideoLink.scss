@@ -1,16 +1,13 @@
-$projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
-  'services', 'trucks', 'rogue', 'glyphs2', 'strong', 'sds', 'food', 'foodp',
-  'melissa', 'lite', 'tmf', 'embp', 'proximal', 'uls', 'hatched', 'dropdrone',
-  'presentme', 'presentmep', 'presentmel', 'ally', 'celebration', 'ninja',
-  'ninjal', 't1online', 'tradease', 'vibe', 'madfitp', 'madfit';
+$videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand',
+  'how-i-became-software-engineer';
 
-.ProjectLink-Tilt {
+.VideoLink-Tilt {
   overflow: hidden;
   border-radius: $border-radius;
 }
 
-.ProjectLink-Item {
-  @include responsiveBlock(70.35%);
+.VideoLink-Item {
+  @include responsiveBlock(64%);
   width: 100%;
   background-color: white;
   border-radius: $border-radius;
@@ -19,32 +16,33 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
     display: none;
   }
   &.Mui-focusVisible {
-    .ProjectLink-Content {
+    .VideoLink-Content {
       opacity: 1;
     }
   }
   @include hover {
-    .ProjectLink-Content {
+    .VideoLink-Content {
       opacity: 1;
     }
   }
 }
 
-.ProjectLink-View {
-  @each $project in $projects {
-    &_name_#{$project}::after {
-      @include retinaImg('@assets/img/projects/#{$project}', 'jpg');
+.VideoLink-View {
+  @each $video in $videos {
+    &_name_#{$video}::after {
+      @include retinaImg('@assets/img/videos/#{$video}', 'jpg');
     }
   }
   &::after {
     @include pseudo(relative);
     height: 100%;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
 }
 
-.ProjectLink-Content {
+.VideoLink-Content {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -59,7 +57,7 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
   transition: opacity $duration_short $easing_in-out;
 }
 
-.ProjectLink-Title {
+.VideoLink-Title {
   padding-top: 4px;
   font-size: 22px;
   line-height: 1.2;
@@ -70,8 +68,10 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
   }
 }
 
-.ProjectLink-Label {
+.VideoLink-Label {
   font-size: $font-size_smaller;
-  font-weight: bold;
   color: $color_second-text;
+  & > span:first-child {
+    font-weight: bold;
+  }
 }

@@ -31,7 +31,7 @@ interface IStep {
 
 export default function Stepper({sectionRef}: IStepperProps) {
   const {t} = useTranslation()
-  const [step, changeStep] = useState<number>(steps.length - 1)
+  const [step, changeStep] = useState(steps.length - 1)
 
   const handleNext = () => {
     changeStep(step + 1)
@@ -48,7 +48,7 @@ export default function Stepper({sectionRef}: IStepperProps) {
 
   return (
     <MuiStepper component={Paper} activeStep={step} orientation="vertical">
-      {steps.map((item: IStep, index: number) => (
+      {steps.map((item, index) => (
         <Step key={index}>
           <StepLabel>
             <time className="Time">

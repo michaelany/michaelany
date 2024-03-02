@@ -5,17 +5,16 @@ import './Settings.scss'
 import EnIcon from '@assets/icons/en.svg?react'
 import RuIcon from '@assets/icons/ru.svg?react'
 import {Tooltip} from '@components/common'
-import {isRuLng} from '@utils/i18n'
 
 export default function Settings() {
   const {t, i18n} = useTranslation()
-  const isRu = isRuLng(i18n.language)
+  const ruLng = i18n.language === 'ru'
 
   const handleLanguageSwitch = () => {
-    i18n.changeLanguage(isRu ? 'en' : 'ru')
+    i18n.changeLanguage(ruLng ? 'en' : 'ru')
   }
 
-  const Icon = isRu ? RuIcon : EnIcon
+  const Icon = ruLng ? RuIcon : EnIcon
   const title = t('title.language')
 
   return (

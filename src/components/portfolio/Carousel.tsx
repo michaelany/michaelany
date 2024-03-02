@@ -57,32 +57,30 @@ const Content = ({
   swiper,
   setSwiper,
 }: ICarouselProps) => {
-  const isAutoplay = Boolean(!mobile || mobileOnly)
+  const autoplay = Boolean(!mobile || mobileOnly)
 
-  const imageElements: JSX.Element[] = images.map(
-    (image: string[], index: number) => {
-      const caption = `${t('portfolio.screenshot')} ${
-        mobile ? `${t('portfolio.mobile')} ` : ''
-      }${t('portfolio.screen')} "${t(`portfolio.project.${name}.title`)}"`
-      return (
-        <SwiperSlide key={image[0]} tag="figure">
-          <img
-            className="Carousel-Img"
-            src={image[0]}
-            srcSet={image[1] && `${image[1]} 2x`}
-            alt={`${caption} ${index + 1}`}
-          />
-        </SwiperSlide>
-      )
-    }
-  )
+  const imageElements = images.map((image, index) => {
+    const caption = `${t('portfolio.screenshot')} ${
+      mobile ? `${t('portfolio.mobile')} ` : ''
+    }${t('portfolio.screen')} "${t(`portfolio.project.${name}.title`)}"`
+    return (
+      <SwiperSlide key={image[0]} tag="figure">
+        <img
+          className="Carousel-Img"
+          src={image[0]}
+          srcSet={image[1] && `${image[1]} 2x`}
+          alt={`${caption} ${index + 1}`}
+        />
+      </SwiperSlide>
+    )
+  })
 
   return images.length > 1 ? (
     <Swiper
       {...swiperOptions}
       controller={swiper ? {control: swiper} : undefined}
-      autoplay={isAutoplay ? autoplayOptions : undefined}
-      modules={getModules(swiper, isAutoplay)}
+      autoplay={autoplay ? autoplayOptions : undefined}
+      modules={getModules(swiper, autoplay)}
       onSwiper={setSwiper}
     >
       {imageElements}
@@ -92,13 +90,10 @@ const Content = ({
   )
 }
 
-const getModules = (
-  swiper: SwiperCore,
-  isAutoplay: boolean
-): SwiperModule[] => {
+const getModules = (swiper: SwiperCore, autoplay: boolean): SwiperModule[] => {
   const modules: SwiperModule[] = []
   if (swiper) modules.push(Controller)
-  if (isAutoplay) modules.push(Autoplay)
+  if (autoplay) modules.push(Autoplay)
   return modules
 }
 

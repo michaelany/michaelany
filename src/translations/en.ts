@@ -5,6 +5,7 @@ const common = {
     skills: 'Skills',
     experience: 'Experience',
     portfolio: 'Portfolio',
+    vlog: 'Vlog',
     contact: 'Contact',
     language: 'English',
   },
@@ -426,6 +427,21 @@ const EN = {
     screenshot: 'Screenshot',
     mobile: 'mobile',
     screen: 'project screen',
+  },
+  vlog: {
+    sort: {
+      new: 'Latest',
+      old: 'Oldest',
+    },
+    video: {
+      'day-in-a-life-montenegro':
+        'A day in the life of a software engineer in Montenegro {{0}} Remote work',
+      'my-dreamdesk': 'My dreamdesk {{0}} New no monitors setup',
+      'day-in-a-life-new-zealand':
+        'A day in the life of a software engineer in New Zealand {{0}} POV',
+      'how-i-became-software-engineer':
+        'How i became a software engineer at 27 {{0}} From actor to developer',
+    },
   },
   contact: {
     text: {

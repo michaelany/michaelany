@@ -47,7 +47,7 @@ export default function Banner() {
 }
 
 const MacScreen = () => {
-  const [show, setShow] = useState<number>(0)
+  const [show, setShow] = useState(0)
   const timer = useRef<any>()
 
   useEffect(() => {

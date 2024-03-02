@@ -3,13 +3,11 @@ import {initReactI18next} from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
 import {EN, RU} from '@translations/index'
+import {TLng} from '@utils/types'
 
-export const isRuLng = (lng: string): boolean => lng.startsWith('ru')
-
-i18n.on('languageChanged', (lng: string) => {
-  const isRu: boolean = isRuLng(lng)
-  const translation = isRu ? RU : EN
-  document.documentElement.setAttribute('lang', isRu ? 'ru' : 'en')
+i18n.on('languageChanged', (lng: TLng) => {
+  const translation = lng === 'ru' ? RU : EN
+  document.documentElement.setAttribute('lang', lng)
   document.title = `Michael Any | ${translation.experience.occupation.middle}`
 })
 

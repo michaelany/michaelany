@@ -284,6 +284,11 @@ const THEME: ThemeOptions = {
       },
     },
     MuiTabs: {
+      defaultProps: {
+        scrollButtons: false,
+        textColor: 'inherit',
+        variant: 'scrollable',
+      },
       styleOverrides: {
         indicator: {
           backgroundColor: 'white',

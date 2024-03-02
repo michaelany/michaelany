@@ -18,7 +18,7 @@ export default function SocialLinks({links, about}: ISocialLinksProps) {
 
   return (
     <ul className={cn('SocialLinks', about && 'SocialLinks_about')}>
-      {links.map(({Icon, ...link}: ISocialLink, index: number) => (
+      {links.map(({Icon, ...link}, index) => (
         <Animate
           key={index}
           el="li"

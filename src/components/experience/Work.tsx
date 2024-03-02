@@ -32,7 +32,7 @@ export default function Work() {
         />
       </p>
       <Animate el="ul" className="Work">
-        {jobs.map((job: IJob, index: number) => (
+        {jobs.map((job, index) => (
           <Job key={index} {...job} t={t} index={index} />
         ))}
       </Animate>

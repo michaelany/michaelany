@@ -41,7 +41,7 @@ export default function Copyright() {
         {t('copyright.with')} <FavoriteIcon className="Copyright-Icon" />
       </p>
       <div className="Copyright-Links">
-        {links.map(({Icon, ...link}: ILink, index: number) => (
+        {links.map(({Icon, ...link}, index) => (
           <Tooltip key={index} title={link.title}>
             <a
               {...BLANK_LINK_PROPS}

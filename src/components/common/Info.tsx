@@ -20,8 +20,8 @@ interface IInfoProps {
 const Info = memo(({type, textValues, features}: IInfoProps) => {
   const {t} = useTranslation()
   const storageProp = `${type}Extra`
-  const [open, toggleOpen] = useState<boolean>(
-    localStorage[storageProp] ? JSON.parse(localStorage[storageProp]) : false
+  const [open, toggleOpen] = useState(
+    Boolean(localStorage[storageProp] ?? JSON.parse(localStorage[storageProp]))
   )
 
   const handleToggle = () => {

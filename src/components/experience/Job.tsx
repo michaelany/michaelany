@@ -10,7 +10,7 @@ import {
 import {
   ExpandMoreRounded as ExpandMoreIcon,
   ForwardRounded as ForwardIcon,
-  WorkRounded as WorkIcon,
+  BusinessCenterRounded as BusinessCenterIcon,
   EmojiEventsRounded as EmojiEventsIcon,
 } from '@mui/icons-material'
 
@@ -71,8 +71,8 @@ export default function Job({
 const Occupations = ({t, current, occupations}: IOccupationsProps) => (
   <div className="Job-Occupations">
     {occupations.map((occupation: TKey, index: number) => {
-      const last: boolean = index === 0
-      const lastCurrent: boolean | undefined = last && current
+      const last = index === 0
+      const lastCurrent = last && current
       return (
         <Fragment key={index}>
           <h3
@@ -103,13 +103,13 @@ const Occupations = ({t, current, occupations}: IOccupationsProps) => (
 const Block = ({t, isDuties, items}: IBlockProps) => (
   <div className="Job-Block">
     <h4 className="Job-SubTitle">
-      {isDuties ? <WorkIcon /> : <EmojiEventsIcon />}
+      {isDuties ? <BusinessCenterIcon /> : <EmojiEventsIcon />}
       <span className="Job-SubTitleText">
         {t(`experience.${isDuties ? 'duties' : 'achievements'}`)}
       </span>
     </h4>
     <ul className="Job-Items">
-      {items.map((item: TKey, index: number) => (
+      {items.map((item, index) => (
         <li key={index} className="Job-Item">
           {t(
             `experience.job.${isDuties ? 'duty' : 'achievement'}.${
@@ -126,26 +126,24 @@ const Block = ({t, isDuties, items}: IBlockProps) => (
 const Features = ({t, features}: IFeaturesProps) => {
   return (
     <div className="Job-Features">
-      {features.map(
-        ({tKey, period, Icon, disabled}: IJobFeature, index: number) => (
-          <Chip
-            key={index}
-            className="Chip"
-            icon={<Icon />}
-            label={
-              period ? (
-                <time>
-                  {tPeriodPart(t, period.from)} -{' '}
-                  {period.to ? tPeriodPart(t, period.to) : '...'}
-                </time>
-              ) : (
-                t(`experience.job.feature.${tKey}`)
-              )
-            }
-            disabled={disabled}
-          />
-        )
-      )}
+      {features.map(({tKey, period, Icon, disabled}, index) => (
+        <Chip
+          key={index}
+          className="Chip"
+          icon={<Icon />}
+          label={
+            period ? (
+              <time>
+                {tPeriodPart(t, period.from)} -{' '}
+                {period.to ? tPeriodPart(t, period.to) : '...'}
+              </time>
+            ) : (
+              t(`experience.job.feature.${tKey}`)
+            )
+          }
+          disabled={disabled}
+        />
+      ))}
     </div>
   )
 }
