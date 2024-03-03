@@ -69,11 +69,11 @@ const ExtraContent = ({t, type, item}: IExtraContentProps) => {
 
   return (
     <p className="Features-Description FadeIn">
-      {item.Link ? (
+      {item.links ? (
         <Trans
           i18nKey={tKey}
           values={item.textValues}
-          components={[item.Link as any]}
+          components={item.links as any}
         />
       ) : (
         t(tKey, {replace: item.textValues})

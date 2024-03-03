@@ -15,6 +15,8 @@ import {
   GroupWorkRounded as GroupWorkIcon,
   BusinessCenterRounded as BusinessCenterIcon,
   ExploreRounded as ExploreIcon,
+  VideocamRounded as VideocamIcon,
+  TheaterComedyRounded as TheaterComedyIcon,
 } from '@mui/icons-material'
 
 import {Sections, Info} from '@components/common'
@@ -40,7 +42,7 @@ export default function About() {
   )
 }
 
-const textValues: string[] = ['UI/UX']
+const textValues: string[] = ['UI/UX', CONTACT_LINK.youTube.title]
 
 const countriesVisited: string[] = [
   'New Zealand',
@@ -74,19 +76,35 @@ const features: IFeature[] = [
     Icon: AppsIcon,
     labelValues: [PROJECTS_COUNT],
     textValues: [PROJECTS_COUNT, 'title.portfolio'],
-    Link: <MuiLink component={Link} className="Link" to={ROUTE.portfolio} />,
+    links: [<MuiLink component={Link} className="Link" to={ROUTE.portfolio} />],
   },
   {
     tKey: 'position',
     Icon: SupervisorAccountIcon,
-    Link: <MuiLink component={Link} className="Link" to={ROUTE.skills} />,
+    links: [<MuiLink component={Link} className="Link" to={ROUTE.skills} />],
   },
   {
     tKey: 'experience',
     Icon: BusinessCenterIcon,
     labelValues: [YEARS_OF_EXPERIENCE],
     textValues: [13],
-    Link: <MuiLink component={Link} className="Link" to={ROUTE.experience} />,
+    links: [
+      <MuiLink component={Link} className="Link" to={ROUTE.experience} />,
+    ],
+  },
+  {
+    tKey: 'vlogger',
+    Icon: VideocamIcon,
+    labelValues: [CONTACT_LINK.youTube.title],
+    textValues: ['Год назад', CONTACT_LINK.youTube.title],
+    links: [
+      <MuiLink component={Link} className="Link" to={ROUTE.vlog} />,
+      <MuiLink
+        {...BLANK_LINK_PROPS}
+        className="Link"
+        href={CONTACT_LINK.youTube.href}
+      />,
+    ],
   },
   {
     tKey: 'organizing',
@@ -100,13 +118,7 @@ const features: IFeature[] = [
       TECHNOLOGY_TITLE.css,
       CONTACT_LINK.youTube.title,
     ],
-    Link: (
-      <MuiLink
-        {...BLANK_LINK_PROPS}
-        className="Link"
-        href={CONTACT_LINK.youTube.href}
-      />
-    ),
+    links: [<MuiLink component={Link} className="Link" to={ROUTE.vlog} />],
   },
   {
     tKey: 'growing',
@@ -118,8 +130,11 @@ const features: IFeature[] = [
   },
   {
     tKey: 'education',
-    textValues: ['🙂'],
     Icon: SchoolIcon,
+  },
+  {
+    tKey: 'actor',
+    Icon: TheaterComedyIcon,
   },
   {
     tKey: 'sport',
@@ -127,24 +142,23 @@ const features: IFeature[] = [
   },
   {
     tKey: 'travel',
-    textValues: [countriesVisited.length, '🙂'],
+    textValues: [countriesVisited.length],
     Icon: ExploreIcon,
   },
   {
     tKey: 'love',
     Icon: FavoriteIcon,
-    textValues: [differenceInYears(TODAY, new Date(2013, 1)), '🙂'],
-    Link: (
+    textValues: [differenceInYears(TODAY, new Date(2013, 1))],
+    links: [
       <MuiLink
         {...BLANK_LINK_PROPS}
         className="Link"
         href="https://www.instagram.com/kate_watermelon"
-      />
-    ),
+      />,
+    ],
   },
   {
     tKey: 'coffee',
-    textValues: ['🙂'],
     Icon: LocalCafeIcon,
   },
 ]

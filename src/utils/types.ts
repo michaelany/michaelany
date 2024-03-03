@@ -99,7 +99,7 @@ export interface IFeature {
   tKey?: TKey
   labelValues?: (string | number)[]
   textValues?: (string | number)[]
-  Link?: ReactNode
+  links?: ReactNode[]
 }
 
 export interface ITechnology {

@@ -13,12 +13,13 @@ import {
   LoopRounded as LoopIcon,
   PaletteRounded as PaletteIcon,
   ExtensionRounded as ExtensionIcon,
+  MovieRounded as MovieIcon,
 } from '@mui/icons-material'
 
 import {Sections, Info} from '@components/common'
 import {scrollToView} from '@utils/helpers'
 import {IFeature, ITechnologyGroup, TKey} from '@utils/types'
-import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '@data/common'
+import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS, CONTACT_LINK} from '@data/common'
 import Technologies from './Technologies'
 
 export default function Skills() {
@@ -47,7 +48,6 @@ export default function Skills() {
     {
       tKey: 'markup',
       labelValues: ['Pixel Perfect'],
-      textValues: ['🙂'],
       Icon: PaletteIcon,
     },
     {
@@ -62,7 +62,7 @@ export default function Skills() {
     {
       tKey: 'tools',
       Icon: BuildIcon,
-      Link: (
+      links: [
         <Link
           component="button"
           className="Link"
@@ -73,8 +73,8 @@ export default function Skills() {
             scrollToView(sectionRef.current as HTMLElement)
             firstTechnologyActionRef.current?.focusVisible()
           }}
-        />
-      ),
+        />,
+      ],
     },
     {
       tKey: 'responsive',
@@ -104,6 +104,11 @@ export default function Skills() {
       tKey: 'mentor',
       Icon: ChildFriendlyIcon,
     },
+    {
+      tKey: 'vlog',
+      labelValues: [CONTACT_LINK.youTube.title],
+      Icon: MovieIcon,
+    },
   ])
 
   return (
@@ -131,6 +136,8 @@ const textValues = [
   TECHNOLOGY_TITLE.ts,
   TECHNOLOGY_TITLE.react,
   TECHNOLOGY_TITLE.reactquery,
+  CONTACT_LINK.youTube.title,
+  TECHNOLOGY_TITLE.fcpx,
 ]
 
 const initialExpanded = [TECHNOLOGY_GROUPS[0].tKey]

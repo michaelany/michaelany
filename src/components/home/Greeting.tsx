@@ -95,14 +95,15 @@ export default function Greeting() {
                 width={65}
                 height={46}
                 src={youtubeImg}
-                alt="YouTube"
+                alt={CONTACT_LINK.youTube.title}
               />
             </a>
           </span>
         </strong>
       </p>
       <p className="Greeting-SubText Greeting-Seventh MainText">
-        {t('about.feature.position.label', {
+        {t('about.feature.position.label')}{' '}
+        {t('about.feature.vlogger.extraLabel', {
           replace: [CONTACT_LINK.youTube.title],
         })}
       </p>

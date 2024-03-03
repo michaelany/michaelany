@@ -55,15 +55,20 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life. Live in New Zealand",
+    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life. I have my own <0>{{1}} channel</0>. Live in New Zealand",
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
         text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to large web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Lead software engineer & {{0}} channel creator',
+        label: 'Lead software engineer',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
+      },
+      vlogger: {
+        label: '{{0}} channel creator',
+        extraLabel: '& {{0}} channel creator',
+        text: `I've launched my own channel on YouTube. I share my journey in programming and life, as well as provide insights and knowledge. More details in the <0>${common.title.vlog}</0> or on <1>{{1}}</1>`,
       },
       experience: {
         label: '{{0}} years of experience',
@@ -75,7 +80,7 @@ const EN = {
       },
       programming: {
         label: 'Love to code',
-        text: 'Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. I recently started a {{2}} <0>blog<0/>',
+        text: `Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. <0>${common.title.vlog}</0> is also related to programming`,
       },
       growing: {
         label: 'Constantly learning',
@@ -87,7 +92,11 @@ const EN = {
       },
       education: {
         label: 'Two higher educations',
-        text: 'Graduated from the Moscow Technological University and Russian State University of Cinematography {{0}}. Studying in the latter boosted my soft skills well',
+        text: 'Graduated from the Moscow Technological University and Russian State University of Cinematography. Studying in the latter boosted my soft skills well',
+      },
+      actor: {
+        label: 'Former professional actor',
+        text: 'I used to act in movies, TV series, and commercials, hosted events, worked as an animator, and performed in educational theater. But then I came to my senses and transitioned into programming',
       },
       sport: {
         label: 'Sports lover',
@@ -95,21 +104,21 @@ const EN = {
       },
       travel: {
         label: 'Traveler',
-        text: 'Visited {{0}} countries. Love Japan and New Zealand. Climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the wild bear at the Dyatlov Pass {{1}}',
+        text: 'Visited {{0}} countries. I relocated to New Zealand. Once I climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the wild bear at the Dyatlov Pass',
       },
       love: {
         label: 'Happy husband',
-        text: "<0>She</0> is my main source of inspiration and best friend. We've been together for {{0}} years. I once developed a progressive web application to offer her a hand and heart {{1}}",
+        text: "<0>She</0> is my main source of inspiration and best friend. We've been together for {{0}} years. I once developed a progressive web application to offer her a hand and heart",
       },
       coffee: {
         label: 'Coffee lover',
-        text: '"Programmer is an organism that turns coffee into code" {{0}}. I start my working day with a cup of aromatic coffee. After a trip to Japan, I fell in love with matcha tea',
+        text: '"Programmer is an organism that turns coffee into code". I start my working day with a cup of aromatic coffee. After a trip to Japan, I fell in love with matcha tea',
       },
     },
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I craft applications, admin panels, landing pages & multi-page sites. My main stack is <0>{{0}}</0> + <0>{{1}}</0> + <0>{{2}}</0>',
+    text: 'I craft <0>applications</0>, <0>admin panels</0>,  <0>landing pages</0> & <0>multi-page websites</0>. My main stack is {{0}} + {{1}} + {{2}}. I create <0>{{3}} videos</0> in {{4}}',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
@@ -125,7 +134,7 @@ const EN = {
       },
       markup: {
         label: 'Create semantic, cross-browser & {{0}} markup',
-        text: 'I make pixel-by-pixel layouts. I use semantic tags and don\'t suffer from "divatosis" {{0}}. I test in all modern browsers, care about accessibility and also build HTML emails',
+        text: 'I make pixel-by-pixel layouts. I use semantic tags and don\'t suffer from "divatosis". I test in all modern browsers, care about accessibility and also build HTML emails',
       },
       patterns: {
         label: 'Use a lot of patterns & techniques',
@@ -158,6 +167,10 @@ const EN = {
       mentor: {
         label: 'Make code reviews & teach',
         text: "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in interviewing",
+      },
+      vlog: {
+        label: 'Create {{0}} videos',
+        text: 'I write and edit scripts, plan shoots, film, edit, make color correction, process audio, create thumbnails and publish videos',
       },
     },
     subtitle: 'Technologies',
