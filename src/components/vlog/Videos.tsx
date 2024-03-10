@@ -1,4 +1,4 @@
-import {memo, useState, ChangeEvent} from 'react'
+import {useState, ChangeEvent} from 'react'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
 
@@ -8,7 +8,7 @@ import VideoLink from './VideoLink'
 
 type TSort = 'new' | 'old'
 
-const Videos = memo(() => {
+export default function Videos() {
   const {t, i18n} = useTranslation()
   const [sort, setSort] = useState<TSort>(
     (localStorage.getItem(storageProp) as TSort) ?? 'new'
@@ -34,7 +34,7 @@ const Videos = memo(() => {
       <Grid container component="ul" spacing={2}>
         {getSortedVideos(videos, sort).map((video, index) => (
           <VideoLink
-            key={video.name}
+            key={`${video.name}-${sort}`}
             t={t}
             lng={i18n.language as TLng}
             width={width}
@@ -45,9 +45,7 @@ const Videos = memo(() => {
       </Grid>
     </>
   )
-})
-
-export default Videos
+}
 
 const getSortedVideos = (videos: IVideo[], sort: TSort): IVideo[] => {
   if (sort === 'old') return videos

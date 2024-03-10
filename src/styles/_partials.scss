@@ -268,3 +268,7 @@
   @include animation(fadeIn);
   margin-bottom: 24px;
 }
+
+.Lowercase {
+  text-transform: lowercase;
+}

@@ -1,5 +1,5 @@
 import {useTranslation} from 'react-i18next'
-import {ChatRounded as ChatIcon} from '@mui/icons-material'
+import {ChatRounded as ChatIcon, Replay} from '@mui/icons-material'
 import {Tooltip} from '@mui/material'
 
 import './Portfolio.scss'
@@ -18,7 +18,7 @@ export default function Portfolio() {
           {t('title.portfolio')}
           {import.meta.env.VITE_SHOW_PRIVATE_PROJECTS !== 'true' && (
             <Tooltip
-              title={t('portfolio.limit')}
+              title={t('portfolio.limit', {replace: ['NDA']})}
               enterDelay={0}
               enterTouchDelay={0}
               leaveTouchDelay={DURATION.lingering}

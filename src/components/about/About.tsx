@@ -35,14 +35,30 @@ export default function About() {
   return (
     <Sections
       firstSection={
-        <Info type="about" textValues={textValues} features={features} />
+        <Info
+          type="about"
+          textValues={textValues}
+          transComponents={transComponents}
+          features={features}
+        />
       }
       secondSection={<Social />}
     />
   )
 }
 
-const textValues: string[] = ['UI/UX', CONTACT_LINK.youTube.title]
+const textValues: string[] = ['UI/UX', 'title.vlog', CONTACT_LINK.youTube.title]
+
+const transComponents = [
+  <strong />,
+  <MuiLink component={Link} className="Link" to={ROUTE.portfolio} />,
+  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.vlog} />,
+  <MuiLink
+    {...BLANK_LINK_PROPS}
+    className="Link"
+    href={CONTACT_LINK.youTube.href}
+  />,
+]
 
 const countriesVisited: string[] = [
   'New Zealand',
@@ -93,20 +109,6 @@ const features: IFeature[] = [
     ],
   },
   {
-    tKey: 'vlogger',
-    Icon: VideocamIcon,
-    labelValues: [CONTACT_LINK.youTube.title],
-    textValues: ['Год назад', CONTACT_LINK.youTube.title],
-    links: [
-      <MuiLink component={Link} className="Link" to={ROUTE.vlog} />,
-      <MuiLink
-        {...BLANK_LINK_PROPS}
-        className="Link"
-        href={CONTACT_LINK.youTube.href}
-      />,
-    ],
-  },
-  {
     tKey: 'organizing',
     Icon: GroupWorkIcon,
   },
@@ -119,6 +121,20 @@ const features: IFeature[] = [
       CONTACT_LINK.youTube.title,
     ],
     links: [<MuiLink component={Link} className="Link" to={ROUTE.vlog} />],
+  },
+  {
+    tKey: 'vlogger',
+    Icon: VideocamIcon,
+    labelValues: [CONTACT_LINK.youTube.title],
+    textValues: ['Год назад', CONTACT_LINK.youTube.title],
+    links: [
+      <MuiLink component={Link} className="Link" to={ROUTE.vlog} />,
+      <MuiLink
+        {...BLANK_LINK_PROPS}
+        className="Link"
+        href={CONTACT_LINK.youTube.href}
+      />,
+    ],
   },
   {
     tKey: 'growing',

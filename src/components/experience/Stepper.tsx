@@ -18,7 +18,7 @@ import './Stepper.scss'
 import {scrollToView, tPeriodPart} from '@utils/helpers'
 import {CAREER_START_PARTS} from '@utils/constants'
 import {IPeriod} from '@utils/types'
-import {COMPANY_TITLE} from '@data/common'
+import {COMPANY_TITLE, CONTACT_LINK} from '@data/common'
 
 interface IStepperProps {
   sectionRef: RefObject<HTMLElement>
@@ -26,20 +26,16 @@ interface IStepperProps {
 
 interface IStep {
   period: IPeriod
-  values?: string[]
+  values?: (string | number)[]
 }
 
 export default function Stepper({sectionRef}: IStepperProps) {
   const {t} = useTranslation()
   const [step, changeStep] = useState(steps.length - 1)
 
-  const handleNext = () => {
-    changeStep(step + 1)
-  }
+  const handleNext = () => changeStep(step + 1)
 
-  const handleBack = () => {
-    changeStep(step - 1)
-  }
+  const handleBack = () => changeStep(step - 1)
 
   const handleReset = () => {
     changeStep(0)
@@ -65,6 +61,7 @@ export default function Stepper({sectionRef}: IStepperProps) {
                 values={item.values}
                 components={transComponents}
               />
+              {index === steps.length - 1 && '...'}
             </p>
             <div className="Stepper-Actions">
               <Fab
@@ -91,7 +88,7 @@ export default function Stepper({sectionRef}: IStepperProps) {
       {step === steps.length && (
         <>
           <p className="Stepper-Text Stepper-Text_last">
-            {t('experience.continue')}...
+            {t('experience.continue')} ✌️...
           </p>
           <Fab
             className="Stepper-Button"
@@ -110,6 +107,19 @@ export default function Stepper({sectionRef}: IStepperProps) {
 const transComponents = [<strong />]
 
 const steps: IStep[] = [
+  {
+    period: {
+      from: {
+        tKey: 'september',
+        year: 2002,
+      },
+      to: {
+        tKey: 'october',
+        year: 2008,
+      },
+    },
+    values: [13, COMPANY_TITLE.mvideo],
+  },
   {
     period: {
       from: {
@@ -134,7 +144,6 @@ const steps: IStep[] = [
         year: 2014,
       },
     },
-    values: ['🙂'],
   },
   {
     period: {
@@ -330,7 +339,7 @@ const steps: IStep[] = [
         year: 2023,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
+    values: [COMPANY_TITLE.sevenGlyphs, CONTACT_LINK.youTube.title],
   },
   {
     period: {
@@ -339,6 +348,6 @@ const steps: IStep[] = [
         year: 2023,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, '🙂'],
+    values: [COMPANY_TITLE.sevenGlyphs, CONTACT_LINK.youTube.title],
   },
 ]

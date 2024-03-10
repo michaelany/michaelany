@@ -150,6 +150,7 @@ const THEME: ThemeOptions = {
           color: COLOR.text,
           backgroundColor: 'white',
           border: `1px solid ${COLOR.text}`,
+          padding: '6px 12px',
         },
       },
     },

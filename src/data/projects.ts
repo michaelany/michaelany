@@ -524,7 +524,7 @@ const projects: IProject[] = [
         tKeys: ['scratchDevelopment', 'design'],
       },
       {
-        tKey: 'leadWork',
+        tKey: 'soloWork',
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
@@ -582,7 +582,6 @@ const projects: IProject[] = [
     textValues: ['Nintendo Amiibo'],
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    url: 'https://ally.ninja',
     details: 'https://7glyphs.com/portfolio/projects/ally',
     features: [
       {
@@ -1228,7 +1227,6 @@ const projects: IProject[] = [
     title: '7 glyphs Lite',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    url: 'https://lite.7glyphs.com',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -1351,7 +1349,6 @@ const projects: IProject[] = [
     },
   },
   {
-    private: true,
     name: 'foodp',
     title: 'Foodprint',
     types: ['site', 'app', 'admin'],
@@ -1402,7 +1399,6 @@ const projects: IProject[] = [
     },
   },
   {
-    private: true,
     name: 'food',
     title: 'Foodprint',
     types: ['landing'],
@@ -1515,7 +1511,6 @@ const projects: IProject[] = [
     },
   },
   {
-    private: true,
     name: 'strong',
     title: 'StrongHer',
     types: ['site', 'app'],
@@ -1872,7 +1867,6 @@ const projects: IProject[] = [
     title: '12 Saffron',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    url: 'https://12saffron.co.nz',
     details: 'https://7glyphs.com/portfolio/projects/12-saffron',
     features: [
       {

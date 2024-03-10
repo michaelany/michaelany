@@ -1,5 +1,6 @@
 import {useTranslation, Trans} from 'react-i18next'
-import {Link} from '@mui/material'
+import {Link} from 'react-router-dom'
+import {Link as MuiLink} from '@mui/material'
 import {
   ScheduleRounded as ScheduleIcon,
   MyLocationRounded as MyLocationIcon,
@@ -14,6 +15,7 @@ import {
   YEARS_OF_EXPERIENCE,
   CAREER_START_PARTS,
   BLANK_LINK_PROPS,
+  ROUTE,
 } from '@utils/constants'
 import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '@data/common'
 import Job from './Job'
@@ -26,7 +28,7 @@ export default function Work() {
       <h1 className="Title">{t('title.experience')}</h1>
       <p className="MainText">
         <Trans
-          i18nKey={`experience.text`}
+          i18nKey="experience.text"
           values={[COMPANY.sevenGlyphs.title, YEARS_OF_EXPERIENCE]}
           components={transComponents}
         />
@@ -42,11 +44,12 @@ export default function Work() {
 
 const transComponents = [
   <strong />,
-  <Link
+  <MuiLink
     {...BLANK_LINK_PROPS}
     className="Link"
     href={COMPANY.sevenGlyphs.href}
   />,
+  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.vlog} />,
 ]
 
 const jobs: IJob[] = [
@@ -69,7 +72,6 @@ const jobs: IJob[] = [
       'technologies',
       {tKey: 'speed', values: [1]},
       'english',
-      'testimonials',
       'independent',
       'visa',
     ],
@@ -83,8 +85,9 @@ const jobs: IJob[] = [
         },
         Icon: DateRangeIcon,
       },
-      {tKey: 'busyPart', Icon: ScheduleIcon, disabled: true},
       {tKey: 'busyFull', Icon: ScheduleIcon},
+      {tKey: 'busyPart', Icon: ScheduleIcon},
+      {tKey: 'office', Icon: MyLocationIcon},
       {tKey: 'remote', Icon: MyLocationIcon},
       {tKey: 'auckland', Icon: RoomIcon},
     ],
@@ -113,7 +116,6 @@ const jobs: IJob[] = [
       },
       'internship',
       'mentor',
-      'design',
       'interview',
     ],
     features: [
@@ -130,10 +132,10 @@ const jobs: IJob[] = [
         },
         Icon: DateRangeIcon,
       },
+      {tKey: 'busyFull', Icon: ScheduleIcon},
       {tKey: 'busyPart', Icon: ScheduleIcon},
-      {tKey: 'busyFull', Icon: ScheduleIcon, disabled: true},
+      {tKey: 'office', Icon: MyLocationIcon},
       {tKey: 'remote', Icon: MyLocationIcon},
-      {tKey: 'office', Icon: MyLocationIcon, disabled: true},
       {tKey: 'moscow', Icon: RoomIcon},
     ],
   },

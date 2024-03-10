@@ -1,7 +1,8 @@
 import {useState, useRef} from 'react'
-import {Link, ButtonBaseActions} from '@mui/material'
+import {Link} from 'react-router-dom'
+import {Link as MuiLink, ButtonBaseActions} from '@mui/material'
 import {
-  ThumbUpRounded as ThumbUpIcon,
+  PsychologyRounded as PsychologyIcon,
   SpeedRounded as SpeedIcon,
   BuildRounded as BuildIcon,
   AccountTreeRounded as AccountTreeIcon,
@@ -18,6 +19,7 @@ import {
 
 import {Sections, Info} from '@components/common'
 import {scrollToView} from '@utils/helpers'
+import {BLANK_LINK_PROPS, PROJECT_FILTERS, ROUTE} from '@utils/constants'
 import {IFeature, ITechnologyGroup, TKey} from '@utils/types'
 import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS, CONTACT_LINK} from '@data/common'
 import Technologies from './Technologies'
@@ -43,11 +45,11 @@ export default function Skills() {
     },
     {
       tKey: 'efficient',
-      Icon: ThumbUpIcon,
+      Icon: PsychologyIcon,
     },
     {
       tKey: 'markup',
-      labelValues: ['Pixel Perfect'],
+      labelValues: ['pixel-perfect'],
       Icon: PaletteIcon,
     },
     {
@@ -63,7 +65,7 @@ export default function Skills() {
       tKey: 'tools',
       Icon: BuildIcon,
       links: [
-        <Link
+        <MuiLink
           component="button"
           className="Link"
           onClick={() => {
@@ -117,6 +119,7 @@ export default function Skills() {
         <Info
           type="skills"
           textValues={textValues}
+          transComponents={transComponents}
           features={featuresRef.current}
         />
       }
@@ -131,6 +134,39 @@ export default function Skills() {
     />
   )
 }
+
+const transComponents = [
+  <MuiLink
+    component={Link}
+    className="Link"
+    to={ROUTE.portfolio}
+    state={{filter: PROJECT_FILTERS[1]}}
+  />,
+  <MuiLink
+    component={Link}
+    className="Link"
+    to={ROUTE.portfolio}
+    state={{filter: PROJECT_FILTERS[2]}}
+  />,
+  <MuiLink
+    component={Link}
+    className="Link"
+    to={ROUTE.portfolio}
+    state={{filter: PROJECT_FILTERS[3]}}
+  />,
+  <MuiLink
+    component={Link}
+    className="Link"
+    to={ROUTE.portfolio}
+    state={{filter: PROJECT_FILTERS[4]}}
+  />,
+  <strong />,
+  <MuiLink
+    {...BLANK_LINK_PROPS}
+    className="Link"
+    href={`${CONTACT_LINK.youTube.href}/videos`}
+  />,
+]
 
 const textValues = [
   TECHNOLOGY_TITLE.ts,

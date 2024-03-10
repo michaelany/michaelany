@@ -1,3 +1,4 @@
+import {useMemo} from 'react'
 import {Link} from 'react-router-dom'
 import {TFunction} from 'i18next'
 import {Grid, ButtonBase} from '@mui/material'
@@ -35,6 +36,12 @@ export default function ProjectLink({
   types,
   logo,
 }: IProjectLinkProps) {
+  const effect = useMemo(
+    () =>
+      width.sm ? undefined : RANDOM_EFFECTS[Math.floor(Math.random() * 4)],
+    [width.sm]
+  )
+
   const path = PROJECT_ROUTE[name]
 
   const projectTitle = title ?? t(`portfolio.project.${name}.title`)
@@ -43,9 +50,7 @@ export default function ProjectLink({
     <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
       <Animate
         className={DETECT.mobile ? 'ProjectLink-Tilt' : undefined}
-        effect={
-          width.sm ? undefined : RANDOM_EFFECTS[Math.floor(Math.random() * 4)]
-        }
+        effect={effect}
         delay={getGridAnimationDelay(index, width)}
       >
         <Tilt className="ProjectLink-Tilt">

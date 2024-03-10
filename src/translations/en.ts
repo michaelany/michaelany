@@ -26,18 +26,18 @@ const common = {
 const EN = {
   title: common.title,
   month: {
-    september: 'september',
-    october: 'october',
-    november: 'november',
-    december: 'december',
     january: 'january',
     february: 'february',
-    april: 'april',
     march: 'march',
+    april: 'april',
     may: 'may',
     june: 'june',
     july: 'july',
     august: 'august',
+    september: 'september',
+    october: 'october',
+    november: 'november',
+    december: 'december',
   },
   home: {
     hi: {
@@ -55,7 +55,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: "I'm a software engineer specializing in <0>frontend development</0>. I create projects of any complexity from scratch, bringing {{0}} ideas to life. I have my own <0>{{1}} channel</0>. Live in New Zealand",
+    text: `I'm a software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity from scratch, bringing {{0}} ideas to life. I have my own <2>${common.title.vlog}</2> on <3>{{2}}</3>. Live in New Zealand`,
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
@@ -92,11 +92,11 @@ const EN = {
       },
       education: {
         label: 'Two higher educations',
-        text: 'Graduated from the Moscow Technological University and Russian State University of Cinematography. Studying in the latter boosted my soft skills well',
+        text: 'Graduated from the "Moscow State University of Instrument Engineering and Computer Science" and "Russian State University of Cinematography". Studying in the latter boosted my soft skills well',
       },
       actor: {
         label: 'Former professional actor',
-        text: 'I used to act in movies, TV series, and commercials, hosted events, worked as an animator, and performed in educational theater. But then I came to my senses and transitioned into programming',
+        text: 'I used to act in movies, TV series, and commercials, hosted events, worked as an animator, and performed in educational theater. But then I came to my senses and switched to programming',
       },
       sport: {
         label: 'Sports lover',
@@ -118,7 +118,7 @@ const EN = {
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I craft <0>applications</0>, <0>admin panels</0>,  <0>landing pages</0> & <0>multi-page websites</0>. My main stack is {{0}} + {{1}} + {{2}}. I create <0>{{3}} videos</0> in {{4}}',
+    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My main stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4>. I create <5>{{3}} videos</5> in {{4}}',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
@@ -138,7 +138,7 @@ const EN = {
       },
       patterns: {
         label: 'Use a lot of patterns & techniques',
-        text: 'Memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
+        text: 'I use memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
       },
       modules: {
         label: 'Build a modular & optimal project architecture',
@@ -161,8 +161,8 @@ const EN = {
         text: 'I check project perfomance in various browsers and devices. I measure and speed up the loading of resources. Minify and optimize files, images. Refactoring code',
       },
       tasks: {
-        label: 'Plan, decompose & document',
-        text: 'I plan the backlog, group, decompose and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers. Writing documentation',
+        label: 'Plan & decompose',
+        text: 'I plan the backlog, group, decompose and evaluate tasks. I use {{0}} and {{1}} methodologies. I use task managers',
       },
       mentor: {
         label: 'Make code reviews & teach',
@@ -186,7 +186,7 @@ const EN = {
     learn: 'Exploring',
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I work remotely`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. Share my experience & knowledge in my <2>${common.title.vlog}</2>`,
     duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
@@ -224,7 +224,6 @@ const EN = {
         internship: 'Created a corporate internship program',
         mentor: 'Trained several juniors',
         mobile: 'Developed a corporate mobile application on {{0}}',
-        design: 'Created several approved design layouts',
         interview:
           'Conducted many interviews and hired a dozen decent developers',
         technologies:
@@ -235,8 +234,6 @@ const EN = {
         independent: 'Reached a high level of autonomy and organization',
         visa: 'Got a work visa to New Zealand from the company',
         english: 'Improved English, cooperating with foreign customers',
-        testimonials:
-          'Received many complimentary reviews from colleagues and customers',
         work: 'Improved teamwork skills',
         orders: 'Processed thousands of requests',
         hardware: 'Gained extensive experience with software and hardware',
@@ -255,37 +252,39 @@ const EN = {
     next: 'Next',
     back: 'Back',
     refresh: 'Reset',
-    continue: 'To be continued ✌️',
+    continue: 'To be continued',
     stepper: {
-      step1: `Worked as a <0>${common.occupation.support}</0> in the {{0}} company`,
-      step2: 'Expanded my horizons in other areas of activity {{0}}',
+      step1:
+        'I created my first multi-page website at the age of {{0}}. After finishing school, I enrolled in the "Moscow State University of Instrument Engineering and Computer Science". Alongside my studies at the university, I got a job as a <0>technical support engineer</0> at the {{1}} company',
+      step2: `Worked as a <0>${common.occupation.support}</0> in the {{0}} company`,
       step3:
+        'I graduated from university. Expanded my horizons in other areas of activity. I decided to become an actor and enrolled in the "Russian State University of Cinematography"',
+      step4:
         'In parallel with my study at the university, I created pet projects and learned programming',
-      step4: `Passed the interview, completed the test tasks and I got a job as a <0>${common.occupation.junior}</0> in the {{0}} company`,
-      step5: `Worked as a <0>${common.occupation.junior}</0> in the {{0}}`,
-      step6: `I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
-      step7: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
-      step8: `I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
-      step9: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
-      step10: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.middle}</0>, chose the {{1}} company`,
-      step11: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
-      step12: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
-      step13: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
-      step14: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.teamLead}</0> in the {{0}} company`,
-      step15: `Worked as a <0>${common.occupation.teamLead}</0> in the {{0}}. Continued to collaborate on projects with the {{1}}`,
-      step16:
+      step5: `Passed the interview, completed the test tasks and I got a job as a <0>${common.occupation.junior}</0> in the {{0}} company`,
+      step6: `Worked as a <0>${common.occupation.junior}</0> in the {{0}}`,
+      step7: `I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
+      step8: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
+      step9: `I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
+      step10: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
+      step11: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.middle}</0>, chose the {{1}} company`,
+      step12: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
+      step13: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
+      step14: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
+      step15: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.teamLead}</0> in the {{0}} company`,
+      step16: `Worked as a <0>${common.occupation.teamLead}</0> in the {{0}}. Continued to collaborate on projects with the {{1}}`,
+      step17:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
-      step17: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
-      step18: `Worked as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I also provided frontend development consultations`,
-      step19:
-        'Moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Got a work visa. Preparing to move to New Zealand',
+      step18: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
+      step19: `Worked as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I also provided frontend development consultations`,
       step20:
-        'Moved to New Zealand on a work visa from the {{0}} company. Settling in, building relationships with hobbits and alpacas {{1}}',
+        'I moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Launched my {{1}} channel. Obtained a work visa',
+      step21:
+        'I moved to New Zealand on a work visa from the {{0}} company. Working, settling in, building relationships with hobbits and alpacas. I run the {{1}} channel',
     },
   },
   portfolio: {
-    limit:
-      'Projects that have been released into production and allowed to demonstration',
+    limit: 'Projects with no {{0}} that I can showcase',
     developed: 'Developed in',
     filter: {
       all: 'All',
@@ -453,7 +452,7 @@ const EN = {
       'day-in-a-life-new-zealand':
         'A day in the life of a software engineer in New Zealand {{0}} POV',
       'how-i-became-software-engineer':
-        'How i became a software engineer at 27 {{0}} From actor to developer',
+        'How I became a software engineer at 27 {{0}} From actor to developer',
     },
   },
   contact: {

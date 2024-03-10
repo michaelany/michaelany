@@ -126,7 +126,7 @@ const Block = ({t, isDuties, items}: IBlockProps) => (
 const Features = ({t, features}: IFeaturesProps) => {
   return (
     <div className="Job-Features">
-      {features.map(({tKey, period, Icon, disabled}, index) => (
+      {features.map(({tKey, period, Icon}, index) => (
         <Chip
           key={index}
           className="Chip"
@@ -141,7 +141,6 @@ const Features = ({t, features}: IFeaturesProps) => {
               t(`experience.job.feature.${tKey}`)
             )
           }
-          disabled={disabled}
         />
       ))}
     </div>

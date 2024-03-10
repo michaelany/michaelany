@@ -1,3 +1,4 @@
+import {useMemo} from 'react'
 import {TFunction} from 'i18next'
 import {format} from 'date-fns'
 import {Grid, ButtonBase} from '@mui/material'
@@ -23,13 +24,17 @@ export default function VideoLink({
   width,
   video,
 }: IVideoLinkProps) {
+  const effect = useMemo(
+    () =>
+      width.sm ? undefined : RANDOM_EFFECTS[Math.floor(Math.random() * 4)],
+    [width.sm]
+  )
+
   return (
     <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
       <Animate
         className={DETECT.mobile ? 'VideoLink-Tilt' : undefined}
-        effect={
-          width.sm ? undefined : RANDOM_EFFECTS[Math.floor(Math.random() * 4)]
-        }
+        effect={effect}
         delay={getGridAnimationDelay(index, width)}
       >
         <Tilt className="VideoLink-Tilt">

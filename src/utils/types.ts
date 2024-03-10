@@ -39,6 +39,8 @@ export type TCompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
 
 export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 
+export type TProjectFilter = 'all' | TProjectType
+
 export type TProjectName =
   | 'madfit'
   | 'madfitp'

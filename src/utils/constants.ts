@@ -1,7 +1,7 @@
 import {differenceInYears, format} from 'date-fns'
 
 import {BREAKPOINT} from '@styles/theme'
-import {TRoute, TColor, TEffect} from './types'
+import {TRoute, TColor, TProjectFilter, TEffect} from './types'
 
 interface IDetect {
   mobile: boolean
@@ -104,6 +104,14 @@ export const ROUTE: IRoute = {
   contact: '/contact',
 }
 
+export const PROJECT_FILTERS: TProjectFilter[] = [
+  'all',
+  'app',
+  'site',
+  'landing',
+  'admin',
+]
+
 export const PROJECT_ROUTE: IProjectRoute = {
   madfit: '/madfit',
   madfitp: '/madfit-portal',
@@ -170,7 +178,7 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [PROJECT_ROUTE.tmf]: 'blue',
   [PROJECT_ROUTE.lite]: 'grass',
   [PROJECT_ROUTE.melissa]: 'green',
-  [PROJECT_ROUTE.foodp]: 'blue',
+  [PROJECT_ROUTE.foodp]: 'violet',
   [PROJECT_ROUTE.food]: 'violet',
   [PROJECT_ROUTE.sds]: 'green',
   [PROJECT_ROUTE.strong]: 'red',

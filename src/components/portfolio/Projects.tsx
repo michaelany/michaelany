@@ -1,26 +1,28 @@
-import {memo, useState, ChangeEvent} from 'react'
+import {useState, ChangeEvent} from 'react'
+import {useLocation} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
 
-import {QUERY_BREAKPOINT} from '@utils/constants'
-import {IProject, TProjectType, IWidth} from '@utils/types'
+import {QUERY_BREAKPOINT, PROJECT_FILTERS} from '@utils/constants'
+import {IProject, TProjectType, TProjectFilter, IWidth} from '@utils/types'
 import PROJECTS from '@data/projects'
 import ProjectLink from './ProjectLink'
 
-type TFilter = 'all' | TProjectType
-
-const Projects = memo(() => {
-  const {t} = useTranslation()
-  const [filter, setFilter] = useState<TFilter>(
-    (localStorage.getItem(storageProp) as TFilter) ?? 'all'
+export default function Projects() {
+  const location = useLocation()
+  const [filter, setFilter] = useState<TProjectFilter>(
+    location.state
+      ? location.state.filter
+      : (localStorage.getItem(storageProp) as TProjectFilter) ?? 'all'
   )
+  const {t} = useTranslation()
   const width: IWidth = {
     lg: useMediaQuery(QUERY_BREAKPOINT.lg),
     md: useMediaQuery(QUERY_BREAKPOINT.md),
     sm: useMediaQuery(QUERY_BREAKPOINT.sm),
   }
 
-  const handleChange = (_: ChangeEvent<object>, value: TFilter) => {
+  const handleChange = (_: ChangeEvent<object>, value: TProjectFilter) => {
     localStorage.setItem(storageProp, value)
     setFilter(value)
   }
@@ -35,8 +37,12 @@ const Projects = memo(() => {
   return (
     <>
       <Tabs className="Tabs" value={filter} onChange={handleChange}>
-        {filters.map((type) => (
-          <Tab key={type} value={type} label={t(`portfolio.filter.${type}`)} />
+        {PROJECT_FILTERS.map((filter) => (
+          <Tab
+            key={filter}
+            value={filter}
+            label={t(`portfolio.filter.${filter}`)}
+          />
         ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>
@@ -56,10 +62,6 @@ const Projects = memo(() => {
       </Grid>
     </>
   )
-})
-
-export default Projects
+}
 
 const storageProp = 'filter'
-
-const filters: TFilter[] = ['all', 'app', 'site', 'landing', 'admin']
