@@ -224,15 +224,14 @@ const EN = {
         internship: 'Created a corporate internship program',
         mentor: 'Trained several juniors',
         mobile: 'Developed a corporate mobile application on {{0}}',
-        interview:
-          'Conducted many interviews and hired a dozen decent developers',
+        interview: 'Conducted many interviews and hired a dozen developers',
         technologies:
           'Studied and applied in practice many technologies and libraries',
         technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}}',
         speed:
           'Set a personal record for the speed of completion of a project - {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
-        visa: 'Got a work visa to New Zealand from the company',
+        visa: 'I relocated to New Zealand on a work visa by the company',
         english: 'Improved English, cooperating with foreign customers',
         work: 'Improved teamwork skills',
         orders: 'Processed thousands of requests',
@@ -284,7 +283,7 @@ const EN = {
     },
   },
   portfolio: {
-    limit: 'Projects with no {{0}} that I can showcase',
+    limit: 'Projects with no {{0}} that I can showcase {{1}}',
     developed: 'Developed in',
     filter: {
       all: 'All',
@@ -441,6 +440,8 @@ const EN = {
     screen: 'project screen',
   },
   vlog: {
+    description:
+      "Hi there! {{0}} My name is Michael. I've been professionally engaged in frontend development for 8 years. I went from junior coder to lead developer. I work for the New Zealand digital company 7 glyphs Ltd. In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{1}} On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful. {{2}} Peace and love to everyone {{3}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',

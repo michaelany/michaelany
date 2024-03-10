@@ -74,6 +74,10 @@
   &_smallIndent {
     margin-bottom: 0.16em;
   }
+  &_withIcon {
+    display: flex;
+    align-items: center;
+  }
   .App_color_white & {
     color: white;
   }
@@ -88,6 +92,12 @@
   @include xs {
     font-size: 42px;
   }
+}
+
+.TitleIconWrapper {
+  padding: 8px;
+  display: flex;
+  margin-left: 0.2em;
 }
 
 .MainText {

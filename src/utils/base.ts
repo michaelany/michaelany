@@ -1,4 +1,4 @@
-import {MY_NAME} from '@data/common'
+import {MY_NAME, CONTACT_LINK} from '@data/common'
 import {DURATION} from '@styles/theme'
 
 export const handleAppLoaded = () => {
@@ -10,10 +10,17 @@ export const handleAppLoaded = () => {
 
 export const logConsoleWelcomeMessage = () => {
   const consoleTextStyle = 'font-size: 16px;'
+  const consoleBoldTextStyle = `${consoleTextStyle} font-weight: bold;`
   console.log(
-    `%cHi there! 👋 \nI'm %c${MY_NAME}%c, a frontend developer & lead software engineer 👨‍💻\nDetails about this project 👉 https://github.com/michaelany/michaelany#portfolio-project`,
+    `%cHi there! 👋\nI'm %c${MY_NAME}%c, a %cFrontend Developer%c & %cLead Software Engineer%c 👨‍💻 | %cYouTuber%c 📹\nDetails about this project ${CONTACT_LINK.gitHub.href}/michaelany#portfolio-project 👾\nMy YouTube channel ${CONTACT_LINK.youTube.href} 📹`,
     consoleTextStyle,
-    `${consoleTextStyle} font-weight: bold;`,
+    consoleBoldTextStyle,
+    consoleTextStyle,
+    consoleBoldTextStyle,
+    consoleTextStyle,
+    consoleBoldTextStyle,
+    consoleTextStyle,
+    consoleBoldTextStyle,
     consoleTextStyle
   )
 }

@@ -1,11 +1,9 @@
 import {useTranslation} from 'react-i18next'
-import {ChatRounded as ChatIcon, Replay} from '@mui/icons-material'
 import {Tooltip} from '@mui/material'
+import {ChatRounded as ChatIcon} from '@mui/icons-material'
 
-import './Portfolio.scss'
 import {Pagination, Copyright} from '@components/common'
 import {ROUTE} from '@utils/constants'
-import {DURATION} from '@styles/theme'
 import Projects from './Projects'
 
 export default function Portfolio() {
@@ -14,16 +12,15 @@ export default function Portfolio() {
   return (
     <section className="Section Section_single Section_pagination">
       <div>
-        <h1 className="Portfolio-Title Title">
+        <h1 className="Title Title_withIcon">
           {t('title.portfolio')}
           {import.meta.env.VITE_SHOW_PRIVATE_PROJECTS !== 'true' && (
             <Tooltip
-              title={t('portfolio.limit', {replace: ['NDA']})}
+              title={t('portfolio.limit', {replace: ['NDA', '👀']})}
               enterDelay={0}
               enterTouchDelay={0}
-              leaveTouchDelay={DURATION.lingering}
             >
-              <div className="Portfolio-IconWrapper">
+              <div className="TitleIconWrapper">
                 <ChatIcon />
               </div>
             </Tooltip>
