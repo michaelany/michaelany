@@ -42,6 +42,7 @@ export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 export type TProjectFilter = 'all' | TProjectType
 
 export type TProjectName =
+  | 'pridefitp'
   | 'madfit'
   | 'madfitp'
   | 'vibe'

@@ -323,13 +323,17 @@ const EN = {
       dynamicFormsRouting: 'Dynamic forms, own routing',
       mobileDevelopment: 'Released the application to {{0}} & {{1}}',
       fastDevelopment: 'Fast development',
+      ffmpegwasm: 'Fast development',
     },
     project: {
+      pridefitp: {
+        text: 'Content management system for the mobile fitness application',
+      },
       madfit: {
         text: 'Landing page & subscription service the mobile fitness application',
       },
       madfitp: {
-        text: 'Content management system the mobile fitness application',
+        text: 'Content management system for the mobile fitness application',
       },
       vibe: {
         text: 'Landing page the New Zealand digital marketing agency',
@@ -441,7 +445,7 @@ const EN = {
   },
   vlog: {
     description:
-      "Hi there! {{0}} My name is Michael. I've been professionally engaged in frontend development for 8 years. I went from junior coder to lead developer. I work for the New Zealand digital company 7 glyphs Ltd. In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{1}} On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful. {{2}} Peace and love to everyone {{3}}",
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for 8 years. I went from junior coder to lead developer. I work for the New Zealand digital company 7 glyphs Ltd. {{1}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{2}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful{{3}}</0><0>Peace and love to everyone {{3}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',

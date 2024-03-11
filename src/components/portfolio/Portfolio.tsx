@@ -4,6 +4,7 @@ import {ChatRounded as ChatIcon} from '@mui/icons-material'
 
 import {Pagination, Copyright} from '@components/common'
 import {ROUTE} from '@utils/constants'
+import {DURATION} from '@styles/theme'
 import Projects from './Projects'
 
 export default function Portfolio() {
@@ -19,6 +20,7 @@ export default function Portfolio() {
               title={t('portfolio.limit', {replace: ['NDA', '👀']})}
               enterDelay={0}
               enterTouchDelay={0}
+              leaveTouchDelay={DURATION.lingering}
             >
               <div className="TitleIconWrapper">
                 <ChatIcon />

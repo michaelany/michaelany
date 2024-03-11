@@ -26,6 +26,7 @@ interface IQueryBreakpoint {
 }
 
 interface IProjectRoute {
+  pridefitp: string
   madfit: string
   madfitp: string
   vibe: string
@@ -113,8 +114,9 @@ export const PROJECT_FILTERS: TProjectFilter[] = [
 ]
 
 export const PROJECT_ROUTE: IProjectRoute = {
+  pridefitp: '/pridefit-cms',
   madfit: '/madfit',
-  madfitp: '/madfit-portal',
+  madfitp: '/madfit-cms',
   vibe: '/vibe-media',
   tradease: '/tradease',
   t1online: '/t1-online',
@@ -158,6 +160,7 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.portfolio]: 'white',
   [ROUTE.vlog]: 'white',
   [ROUTE.contact]: 'white',
+  [PROJECT_ROUTE.pridefitp]: 'blue',
   [PROJECT_ROUTE.madfit]: 'green',
   [PROJECT_ROUTE.madfitp]: 'green',
   [PROJECT_ROUTE.vibe]: 'yellow',

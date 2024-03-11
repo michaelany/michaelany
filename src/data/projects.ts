@@ -3,6 +3,11 @@ import {IProject} from '@utils/types'
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 
 const commonLogo = {
+  pridefit: [
+    importImg('logos/pridefit_sm.png'),
+    importImg('logos/pridefit.png'),
+    importImg('logos/pridefit@2x.png'),
+  ],
   madfit: [
     importImg('logos/madfit_sm.png'),
     importImg('logos/madfit.png'),
@@ -46,6 +51,56 @@ const commonLogo = {
 }
 
 const projects: IProject[] = [
+  {
+    name: 'pridefitp',
+    title: 'Pridefit',
+    types: ['admin', 'app'],
+    companyName: 'sevenGlyphs',
+    features: [
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'tryOne',
+        values: ['ffmpeg.wasm'],
+      },
+      {
+        tKey: 'may',
+        text: 2023,
+      },
+    ],
+    images: {
+      logo: commonLogo.pridefit,
+      desktop: [
+        [
+          importImg('projects/pridefitp@2x.jpg'),
+          importImg('projects/pridefitp-desktop-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefitp-desktop-second.jpg'),
+          importImg('projects/pridefitp-desktop-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefitp-desktop-third.jpg'),
+          importImg('projects/pridefitp-desktop-third@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefitp-desktop-fourth.jpg'),
+          importImg('projects/pridefitp-desktop-fourth@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefitp-desktop-fifth.jpg'),
+          importImg('projects/pridefitp-desktop-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
   {
     name: 'madfit',
     title: 'MadFit',
@@ -143,7 +198,7 @@ const projects: IProject[] = [
       },
       {
         tKey: 'january',
-        text: 2020,
+        text: 2021,
       },
     ],
     images: {

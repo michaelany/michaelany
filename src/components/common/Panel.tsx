@@ -1,5 +1,5 @@
 import './Panel.scss'
-import desktopSvg from '@assets/img/shapes/desktop.svg'
+import DesktopSvg from '@assets/img/shapes/desktop.svg?react'
 
 interface IPanelProps {
   children?: JSX.Element
@@ -9,14 +9,7 @@ interface IPanelProps {
 export default function Panel({children, className}: IPanelProps) {
   return (
     <div className={`${className} Panel`}>
-      <img
-        className="Panel-Svg"
-        width={474}
-        height={37}
-        src={desktopSvg}
-        alt="Window panel"
-        role="presentation"
-      />
+      <DesktopSvg className="Panel-Svg" />
       {children}
     </div>
   )
