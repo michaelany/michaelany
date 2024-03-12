@@ -26,6 +26,10 @@ interface IQueryBreakpoint {
 }
 
 interface IProjectRoute {
+  ally2: string
+  strongp: string
+  pridefit: string
+  allyp: string
   pridefitp: string
   madfit: string
   madfitp: string
@@ -47,6 +51,7 @@ interface IProjectRoute {
   tmf: string
   lite: string
   melissa: string
+  foodm: string
   foodp: string
   food: string
   sds: string
@@ -114,6 +119,10 @@ export const PROJECT_FILTERS: TProjectFilter[] = [
 ]
 
 export const PROJECT_ROUTE: IProjectRoute = {
+  ally2: '/ally-2',
+  strongp: '/strongher-cms',
+  pridefit: '/pridefit',
+  allyp: '/ally-cms',
   pridefitp: '/pridefit-cms',
   madfit: '/madfit',
   madfitp: '/madfit-cms',
@@ -135,6 +144,7 @@ export const PROJECT_ROUTE: IProjectRoute = {
   tmf: '/tmf',
   lite: '/7glyphs-lite',
   melissa: '/melissa-chalmers',
+  foodm: '/foodprint-mobile',
   foodp: '/foodprint-portal',
   food: '/foodprint',
   sds: '/sds',
@@ -160,6 +170,10 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.portfolio]: 'white',
   [ROUTE.vlog]: 'white',
   [ROUTE.contact]: 'white',
+  [PROJECT_ROUTE.ally2]: 'red',
+  [PROJECT_ROUTE.strongp]: 'red',
+  [PROJECT_ROUTE.pridefit]: 'violet',
+  [PROJECT_ROUTE.allyp]: 'red',
   [PROJECT_ROUTE.pridefitp]: 'blue',
   [PROJECT_ROUTE.madfit]: 'green',
   [PROJECT_ROUTE.madfitp]: 'green',
@@ -181,6 +195,7 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [PROJECT_ROUTE.tmf]: 'blue',
   [PROJECT_ROUTE.lite]: 'grass',
   [PROJECT_ROUTE.melissa]: 'green',
+  [PROJECT_ROUTE.foodm]: 'violet',
   [PROJECT_ROUTE.foodp]: 'violet',
   [PROJECT_ROUTE.food]: 'violet',
   [PROJECT_ROUTE.sds]: 'green',

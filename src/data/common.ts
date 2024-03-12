@@ -249,28 +249,28 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://tanstack.com/query',
       },
       {
-        name: 'redux',
-        label: TECHNOLOGY_TITLE.redux,
-        color: 'violet',
-        href: 'https://redux.js.org',
-      },
-      {
         name: 'zustand',
         label: TECHNOLOGY_TITLE.zustand,
         color: 'yellow',
         href: 'https://zustand-demo.pmnd.rs',
       },
       {
-        name: 'mobx',
-        label: TECHNOLOGY_TITLE.mobx,
-        color: 'red',
-        href: 'https://mobx.js.org',
-      },
-      {
         name: 'preact',
         label: TECHNOLOGY_TITLE.preact,
         color: 'violet',
         href: 'https://preactjs.com',
+      },
+      {
+        name: 'redux',
+        label: TECHNOLOGY_TITLE.redux,
+        color: 'violet',
+        href: 'https://redux.js.org',
+      },
+      {
+        name: 'mobx',
+        label: TECHNOLOGY_TITLE.mobx,
+        color: 'red',
+        href: 'https://mobx.js.org',
       },
       {
         name: 'vue',

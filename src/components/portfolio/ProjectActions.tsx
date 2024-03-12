@@ -58,7 +58,10 @@ export default function ProjectActions({
       )}
       {stores && (
         <>
-          <Link icon={<AppleIcon />} href={stores[0]}>
+          <Link
+            icon={<AppleIcon className="ProjectActions-AppleIcon" />}
+            href={stores[0]}
+          >
             AppStore
           </Link>
           <Link icon={<GooglePlayIcon />} href={stores[1]}>

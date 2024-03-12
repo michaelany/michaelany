@@ -42,6 +42,10 @@ export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 export type TProjectFilter = 'all' | TProjectType
 
 export type TProjectName =
+  | 'ally2'
+  | 'strongp'
+  | 'pridefit'
+  | 'allyp'
   | 'pridefitp'
   | 'madfit'
   | 'madfitp'
@@ -63,6 +67,7 @@ export type TProjectName =
   | 'tmf'
   | 'lite'
   | 'melissa'
+  | 'foodm'
   | 'foodp'
   | 'food'
   | 'sds'

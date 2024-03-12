@@ -3,6 +3,11 @@ import {IProject} from '@utils/types'
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 
 const commonLogo = {
+  ally: [
+    importImg('logos/ally_sm.png'),
+    importImg('logos/ally.png'),
+    importImg('logos/ally@2x.png'),
+  ],
   pridefit: [
     importImg('logos/pridefit_sm.png'),
     importImg('logos/pridefit.png'),
@@ -52,10 +57,13 @@ const commonLogo = {
 
 const projects: IProject[] = [
   {
-    name: 'pridefitp',
-    title: 'Pridefit',
-    types: ['admin', 'app'],
+    name: 'ally2',
+    title: 'Ally 2.0',
+    textValues: ['Nintendo Amiibo'],
+    types: ['landing'],
     companyName: 'sevenGlyphs',
+    url: 'https://ally.ninja',
+    details: 'https://7glyphs.com/portfolio/projects/ally',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -63,8 +71,244 @@ const projects: IProject[] = [
       {
         tKey: 'soloWork',
       },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      },
+      `${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'animations',
+      },
+      {
+        tKey: 'march',
+        text: 2024,
+      },
+    ],
+    images: {
+      logo: commonLogo.ally,
+      desktop: [
+        [
+          importImg('projects/ally2@2x.jpg'),
+          importImg('projects/ally2-desktop-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-desktop-second.jpg'),
+          importImg('projects/ally2-desktop-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-desktop-third.jpg'),
+          importImg('projects/ally2-desktop-third@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-desktop-fourth.jpg'),
+          importImg('projects/ally2-desktop-fourth@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-desktop-fifth.jpg'),
+          importImg('projects/ally2-desktop-fifth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          importImg('projects/ally2-mobile-first.jpg'),
+          importImg('projects/ally2-mobile-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-mobile-second.jpg'),
+          importImg('projects/ally2-mobile-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-mobile-third.jpg'),
+          importImg('projects/ally2-mobile-third@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-mobile-fourth.jpg'),
+          importImg('projects/ally2-mobile-fourth@2x.jpg'),
+        ],
+        [
+          importImg('projects/ally2-mobile-fifth.jpg'),
+          importImg('projects/ally2-mobile-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
+    name: 'strongp',
+    title: 'StrongHer',
+    types: ['admin', 'app'],
+    companyName: 'sevenGlyphs',
+    features: [
+      {
+        tKeys: ['wholeDevelopment', 'design'],
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.figma}`,
+      {
+        tKey: 'formsTables',
+      },
+      {
+        tKey: 'january',
+        text: 2024,
+      },
+    ],
+    images: {
+      logo: commonLogo.strongher,
+      desktop: [
+        [
+          importImg('projects/strongp@2x.jpg'),
+          importImg('projects/strongp-desktop-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/strongp-desktop-second.jpg'),
+          importImg('projects/strongp-desktop-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/strongp-desktop-third.jpg'),
+          importImg('projects/strongp-desktop-third@2x.jpg'),
+        ],
+        [
+          importImg('projects/strongp-desktop-fourth.jpg'),
+          importImg('projects/strongp-desktop-fourth@2x.jpg'),
+        ],
+        [
+          importImg('projects/strongp-desktop-fifth.jpg'),
+          importImg('projects/strongp-desktop-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
+    name: 'pridefit',
+    title: 'Pridefit',
+    types: ['landing', 'app'],
+    companyName: 'sevenGlyphs',
+    url: 'https://app.pridefit.com',
+    features: [
+      {
+        tKey: 'wholeDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      },
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.next}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'fastDevelopment',
+      },
+      {
+        tKey: 'october',
+        text: 2023,
+      },
+    ],
+    images: {
+      logo: commonLogo.pridefit,
+      desktop: [
+        [
+          importImg('projects/pridefit@2x.jpg'),
+          importImg('projects/pridefit-desktop-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefit-desktop-second.jpg'),
+          importImg('projects/pridefit-desktop-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefit-desktop-third.jpg'),
+          importImg('projects/pridefit-desktop-third@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          importImg('projects/pridefit-mobile-first.jpg'),
+          importImg('projects/pridefit-mobile-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefit-mobile-second.jpg'),
+          importImg('projects/pridefit-mobile-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/pridefit-mobile-third.jpg'),
+          importImg('projects/pridefit-mobile-third@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
+    name: 'allyp',
+    title: 'Ally',
+    textValues: ['Nintendo Amiibo'],
+    types: ['admin', 'app'],
+    companyName: 'sevenGlyphs',
+    features: [
+      {
+        tKeys: ['wholeDevelopment', 'design'],
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'newArchitecture',
+      },
+      {
+        tKey: 'september',
+        text: 2023,
+      },
+    ],
+    images: {
+      logo: [
+        importImg('logos/ally-second_sm.png'),
+        importImg('logos/ally-second.png'),
+        importImg('logos/ally-second@2x.png'),
+      ],
+      desktop: [
+        [
+          importImg('projects/allyp@2x.jpg'),
+          importImg('projects/allyp-desktop-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/allyp-desktop-second.jpg'),
+          importImg('projects/allyp-desktop-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/allyp-desktop-third.jpg'),
+          importImg('projects/allyp-desktop-third@2x.jpg'),
+        ],
+        [
+          importImg('projects/allyp-desktop-fourth.jpg'),
+          importImg('projects/allyp-desktop-fourth@2x.jpg'),
+        ],
+        [
+          importImg('projects/allyp-desktop-fifth.jpg'),
+          importImg('projects/allyp-desktop-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
+    name: 'pridefitp',
+    title: 'Pridefit',
+    types: ['admin', 'app'],
+    companyName: 'sevenGlyphs',
+    features: [
+      {
+        tKeys: ['wholeDevelopment', 'design'],
+      },
+      {
+        tKey: 'soloWork',
+      },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
+      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'tryOne',
@@ -185,7 +429,7 @@ const projects: IProject[] = [
     details: 'https://7glyphs.com/portfolio/projects/madfit',
     features: [
       {
-        tKey: 'wholeDevelopment',
+        tKeys: ['wholeDevelopment', 'design'],
       },
       {
         tKey: 'soloWork',
@@ -194,7 +438,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
-        tKey: 'fastDevelopment',
+        tKey: '≈',
       },
       {
         tKey: 'january',
@@ -243,7 +487,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem},  ${TECHNOLOGY_TITLE.gsap}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.gsap}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -453,7 +697,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem},  ${TECHNOLOGY_TITLE.gsap}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem},  ${TECHNOLOGY_TITLE.gsap}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -648,7 +892,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -660,11 +904,7 @@ const projects: IProject[] = [
       },
     ],
     images: {
-      logo: [
-        importImg('logos/ally_sm.png'),
-        importImg('logos/ally.png'),
-        importImg('logos/ally@2x.png'),
-      ],
+      logo: commonLogo.ally,
       desktop: [
         [
           importImg('projects/ally@2x.jpg'),
@@ -712,7 +952,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -777,7 +1017,7 @@ const projects: IProject[] = [
         tKey: 'teamWork',
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'businessLogic',
@@ -821,7 +1061,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -895,7 +1135,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -968,7 +1208,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -1037,7 +1277,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
+        text: `${TECHNOLOGY_TITLE.sass}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${FEATURE.keycloak}, ${FEATURE.docker}`,
       {
@@ -1096,7 +1336,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -1214,7 +1454,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.photoshop}`,
       {
@@ -1292,7 +1532,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -1360,7 +1600,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -1404,6 +1644,61 @@ const projects: IProject[] = [
     },
   },
   {
+    mobileApp: true,
+    name: 'foodm',
+    title: 'Foodprint',
+    types: ['app'],
+    companyName: 'sevenGlyphs',
+    stores: [
+      'https://apps.apple.com/nz/app/foodprint/id1462596522',
+      'https://play.google.com/store/apps/details?id=com.foodprint',
+    ],
+    features: [
+      {
+        tKey: 'growthSupportDevelopment',
+      },
+      {
+        tKey: 'teamWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.reactnative}`,
+      `${TECHNOLOGY_TITLE.reactnative} styles`,
+      `${FEATURE.rest}, Xcode, Android Studio, ${TECHNOLOGY_TITLE.zeplin}`,
+      {
+        tKey: 'tryOne',
+        values: [TECHNOLOGY_TITLE.reactnative],
+      },
+      {
+        tKey: 'june',
+        text: 2019,
+      },
+    ],
+    images: {
+      logo: commonLogo.foodprint,
+      mobile: [
+        [
+          importImg('projects/foodm-first.jpg'),
+          importImg('projects/foodm-first@2x.jpg'),
+        ],
+        [
+          importImg('projects/foodm-second.jpg'),
+          importImg('projects/foodm-second@2x.jpg'),
+        ],
+        [
+          importImg('projects/foodm-third.jpg'),
+          importImg('projects/foodm-third@2x.jpg'),
+        ],
+        [
+          importImg('projects/foodm-fourth.jpg'),
+          importImg('projects/foodm-fourth@2x.jpg'),
+        ],
+        [
+          importImg('projects/foodm-fifth.jpg'),
+          importImg('projects/foodm-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
     name: 'foodp',
     title: 'Foodprint',
     types: ['site', 'app', 'admin'],
@@ -1417,7 +1712,7 @@ const projects: IProject[] = [
         tKey: 'soloWork',
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'businessLogic',
@@ -1470,7 +1765,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       {
         tKey: 'animations',
@@ -1582,7 +1877,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -1657,7 +1952,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
@@ -1732,7 +2027,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'emails',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -1779,7 +2074,7 @@ const projects: IProject[] = [
         tKey: 'teamWork',
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.mobx}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'tryOneGraph',
@@ -1828,7 +2123,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
@@ -1885,7 +2180,7 @@ const projects: IProject[] = [
         tKey: 'soloWork',
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
+      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
       {
         tKey: 'formsTables',
@@ -1933,7 +2228,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
@@ -2097,7 +2392,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
@@ -2156,7 +2451,7 @@ const projects: IProject[] = [
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}`,
+        text: `${TECHNOLOGY_TITLE.sass}`,
       },
       `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}`,
       {

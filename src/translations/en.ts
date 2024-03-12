@@ -118,7 +118,7 @@ const EN = {
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My main stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4>. I create <5>{{3}} videos</5> in {{4}}',
+    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My main stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I create <5>{{4}} videos</5> in {{5}}',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
@@ -323,79 +323,94 @@ const EN = {
       dynamicFormsRouting: 'Dynamic forms, own routing',
       mobileDevelopment: 'Released the application to {{0}} & {{1}}',
       fastDevelopment: 'Fast development',
-      ffmpegwasm: 'Fast development',
+      newArchitecture: 'Try new module project architecture',
     },
     project: {
+      ally2: {
+        text: 'Landing page of the mobile application for the interactive figures {{0}}',
+      },
+      strongp: {
+        text: 'Content management system for the mobile fitness application',
+      },
+      pridefit: {
+        text: 'Subscription landing page for the mobile fitness application',
+      },
+      allyp: {
+        text: 'Content management system for the interactive figures {{0}} mobile application',
+      },
       pridefitp: {
         text: 'Content management system for the mobile fitness application',
       },
       madfit: {
-        text: 'Landing page & subscription service the mobile fitness application',
+        text: 'Landing page & subscription service for the mobile fitness application',
       },
       madfitp: {
         text: 'Content management system for the mobile fitness application',
       },
       vibe: {
-        text: 'Landing page the New Zealand digital marketing agency',
+        text: 'Landing page of the digital marketing agency',
       },
       tradease: {
-        text: 'New Zealand building order management website',
+        text: 'Building order management website',
       },
       t1online: {
         text: 'Corporate mobile application for company employees',
       },
       ninjal: {
-        text: 'Landing page the New Zealand truck drivers hire service',
+        text: 'Landing page for the truck drivers hire service',
       },
       ninja: {
-        text: 'New Zealand truck drivers hire service',
+        text: 'Truck drivers hire service',
       },
       celebration: {
         text: "New Year's mini application for congratulating company employees",
       },
       ally: {
-        text: 'Landing page the mobile application for interactive figures {{0}}',
+        text: 'Landing page of the mobile application for the interactive figures {{0}}',
       },
       presentmel: {
-        text: 'Landing page the New Zealand jobseeker profile creation service',
+        text: 'Landing page for the jobseeker profile creation service',
       },
       presentmep: {
-        text: 'Admin panel of the New Zealand service for creating a job seeker profile',
+        text: 'Admin panel of the job seeker creating profile service',
       },
       presentme: {
-        text: 'New Zealand service for creating a job seeker profile',
+        text: 'Service for creating a job seeker profile',
       },
       dropdrone: {
-        text: 'New Zealand agricultural startup website',
+        text: 'Agricultural startup website',
       },
       hatched: {
-        text: 'Landing page the mobile application tracker for newborn babies',
+        text: 'Landing page for the mobile application tracker for newborn babies',
       },
       uls: {
         title: 'United Login System',
         text: 'Single user account of the company',
       },
       proximal: {
-        text: 'Landing page the Australian coffee shop',
+        text: 'Landing page for the coffee shop',
       },
       embp: {
         title: 'EMBP',
         text: 'Admin panel of the biometric platform for VTB Bank',
       },
       tmf: {
-        text: 'New Zealand construction company website',
+        text: 'Construction company website',
       },
       lite: {
-        text: 'Landing page for the New Zealand digital agency service',
+        text: 'Landing page for the digital agency service',
       },
       melissa: {
         text: 'Fitness blogger landing page',
       },
+      foodm: {
+        text: 'Discount food ordering service in restaurants mobile application',
+      },
       foodp: {
-        text: 'Portal of the New Zealand discount food ordering service in restaurants',
+        text: 'Portal of the discount food ordering service in restaurants',
       },
       food: {
-        text: 'Landing page of the New Zealand service for ordering discount food in restaurants',
+        text: 'Landing page of the service for ordering discount food in restaurants',
       },
       sds: {
         text: 'Enterprise service to work with the company document flow',
@@ -404,16 +419,16 @@ const EN = {
         text: 'Mobile fitness application website',
       },
       glyphs2: {
-        text: 'Home website of the New Zealand digital agency',
+        text: 'Home website of the digital agency',
       },
       rogue: {
-        text: 'New Zealand flight & hotel group booking service',
+        text: 'Flight & hotel group booking service',
       },
       trucks: {
-        text: 'New Zealand truck traffic monitoring service',
+        text: 'Truck traffic monitoring service',
       },
       services: {
-        text: 'Landing page for complex services of the New Zealand digital agency',
+        text: 'Landing page for complex services of the digital agency',
       },
       fcdc: {
         text: 'Event management service admin panel',
@@ -422,16 +437,16 @@ const EN = {
         text: 'Landing page for sale of the private home in New Zealand',
       },
       whip: {
-        text: 'New Zealand vehicle inspection service',
+        text: 'Vehicle inspection service',
       },
       lazyazd: {
-        text: 'Admin panel of a New Zealand delivery service',
+        text: 'Admin panel of the delivery service',
       },
       lazyaz: {
-        text: 'Web platform for the New Zealand delivery service',
+        text: 'Web platform for the delivery service',
       },
       glyphs: {
-        text: 'Home site of the New Zealand digital agency',
+        text: 'Home site of the digital agency',
       },
       msp: {
         title: 'Business navigator MSP',
