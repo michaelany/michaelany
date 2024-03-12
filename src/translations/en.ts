@@ -10,7 +10,7 @@ const common = {
     language: 'English',
   },
   occupation: {
-    lead: 'Lead Frontend Developer',
+    lead: 'Lead Frontend Engineer',
     teamLead: 'Frontend Team Lead',
     senior: 'Senior Frontend Developer',
     middle: 'Frontend Developer',

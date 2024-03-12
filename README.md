@@ -6,7 +6,7 @@
 
 <h1 align="center">Michael Any</h1>
 
-## Hi there! 👋<br>I'm [Michael Any][website] 🦸‍♂️<br>Frontend Developer & Lead Software Engineer 👨‍💻<br>[YouTuber][youtube] 📹
+## Hi there! 👋<br>I'm [Michael Any][website] 🦸‍♂️<br>Lead Frontend Engineer 👨‍💻<br>[YouTuber][youtube] 📹
 
 ## [About](https://michaelany.com/#/about)
 

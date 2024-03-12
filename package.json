@@ -5,7 +5,7 @@
   "type": "module",
   "author": "Michael Any | https://github.com/michaelany",
   "homepage": "https://michaelany.com",
-  "description": "Personal website of Michael Any, a Frontend Developer, Lead Software Engineer & YouTuber",
+  "description": "Personal website of Michael Any, Lead Frontend Engineer & YouTuber",
   "repository": "github:michaelany/michaelany",
   "scripts": {
     "dev": "vite",
