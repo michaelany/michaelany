@@ -92,7 +92,7 @@ const EN = {
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'High quality is my main principle. I put all of myself into every project. The strength of the deadline, experience and the thought of "all is well in moderation" helps me focus on speed and result',
+        text: 'High quality is my main principle. I put all of myself into every project. The strength of the deadline, experience and the thought of "all is well in moderation" helps me focus on speed and result. A bit nerd',
       },
       education: {
         label: 'Two higher educations',

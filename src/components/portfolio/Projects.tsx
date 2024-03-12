@@ -10,9 +10,14 @@ import ProjectLink from './ProjectLink'
 
 export default function Projects() {
   const location = useLocation()
+  const hashValue = location.hash ? location.hash.slice(1) : null
+  const hashFilter =
+    hashValue && PROJECT_FILTERS.includes(hashValue as TProjectFilter)
+      ? (hashValue as TProjectFilter)
+      : null
   const [filter, setFilter] = useState<TProjectFilter>(
-    location.state
-      ? location.state.filter
+    hashFilter
+      ? hashFilter
       : (localStorage.getItem(storageProp) as TProjectFilter) ?? 'all'
   )
   const {t} = useTranslation()

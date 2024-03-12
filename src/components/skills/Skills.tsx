@@ -139,26 +139,22 @@ const transComponents = [
   <MuiLink
     component={Link}
     className="Link"
-    to={ROUTE.portfolio}
-    state={{filter: PROJECT_FILTERS[1]}}
+    to={`${ROUTE.portfolio}#${PROJECT_FILTERS[1]}`}
   />,
   <MuiLink
     component={Link}
     className="Link"
-    to={ROUTE.portfolio}
-    state={{filter: PROJECT_FILTERS[2]}}
+    to={`${ROUTE.portfolio}#${PROJECT_FILTERS[2]}`}
   />,
   <MuiLink
     component={Link}
     className="Link"
-    to={ROUTE.portfolio}
-    state={{filter: PROJECT_FILTERS[3]}}
+    to={`${ROUTE.portfolio}#${PROJECT_FILTERS[3]}`}
   />,
   <MuiLink
     component={Link}
     className="Link"
-    to={ROUTE.portfolio}
-    state={{filter: PROJECT_FILTERS[4]}}
+    to={`${ROUTE.portfolio}#${PROJECT_FILTERS[4]}`}
   />,
   <strong />,
   <MuiLink
