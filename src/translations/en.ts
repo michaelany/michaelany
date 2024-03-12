@@ -21,6 +21,10 @@ const common = {
   portfolio: {
     scratchDevelopment: 'Development from scratch',
   },
+  projects: {
+    ally: 'Landing page of the mobile application for the interactive figures {{0}}',
+    cmsFit: 'Content management system for the mobile fitness application',
+  },
 }
 
 const EN = {
@@ -327,10 +331,10 @@ const EN = {
     },
     project: {
       ally2: {
-        text: 'Landing page of the mobile application for the interactive figures {{0}}',
+        text: common.projects.ally,
       },
       strongp: {
-        text: 'Content management system for the mobile fitness application',
+        text: common.projects.cmsFit,
       },
       pridefit: {
         text: 'Subscription landing page for the mobile fitness application',
@@ -339,13 +343,13 @@ const EN = {
         text: 'Content management system for the interactive figures {{0}} mobile application',
       },
       pridefitp: {
-        text: 'Content management system for the mobile fitness application',
+        text: common.projects.cmsFit,
       },
       madfit: {
         text: 'Landing page & subscription service for the mobile fitness application',
       },
       madfitp: {
-        text: 'Content management system for the mobile fitness application',
+        text: common.projects.cmsFit,
       },
       vibe: {
         text: 'Landing page of the digital marketing agency',
@@ -366,7 +370,7 @@ const EN = {
         text: "New Year's mini application for congratulating company employees",
       },
       ally: {
-        text: 'Landing page of the mobile application for the interactive figures {{0}}',
+        text: common.projects.ally,
       },
       presentmel: {
         text: 'Landing page for the jobseeker profile creation service',
