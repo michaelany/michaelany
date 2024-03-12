@@ -6,11 +6,11 @@
 
 <h1 align="center">Michael Any</h1>
 
-## Hi there! 👋<br>I'm [Michael Any][website] | Frontend Developer & Lead Software Engineer 👨‍💻 | [YouTuber][youtube] 📹
+## Hi there! 👋<br>I'm [Michael Any][website] 🦸‍♂️<br>Frontend Developer & Lead Software Engineer 👨‍💻<br>[YouTuber][youtube] 📹
 
 ## [About](https://michaelany.com/#/about)
 
-- 👨‍🏫 &nbsp;Lead software engineer at [7 glyphs](https://7glyphs.com/)
+- 👨‍💻 &nbsp;Lead software engineer at [7 glyphs](https://7glyphs.com/)
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 💼 &nbsp;8 years of [experience](https://michaelany.com/#/experience)
