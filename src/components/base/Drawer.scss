@@ -2,14 +2,10 @@
   overflow-y: auto;
   height: 100%;
   transition: background-color $duration_standard $easing_in-out;
-  .App_background_blue & {
-    background-color: $color_blue;
-  }
-  .App_background_red & {
-    background-color: $color_red;
-  }
-  .App_background_green & {
-    background-color: $color_green;
+  @each $key, $value in $colors-map {
+    .App_background_#{$key} & {
+      background-color: $value;
+    }
   }
 }
 

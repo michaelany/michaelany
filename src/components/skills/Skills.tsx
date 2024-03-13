@@ -17,11 +17,11 @@ import {
   MovieRounded as MovieIcon,
 } from '@mui/icons-material'
 
-import {Sections, Info} from '@components/common'
-import {scrollToView} from '@utils/helpers'
-import {BLANK_LINK_PROPS, PROJECT_FILTERS, ROUTE} from '@utils/constants'
-import {IFeature, ITechnologyGroup, TKey} from '@utils/types'
-import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS, CONTACT_LINK} from '@data/common'
+import {Sections, Info} from '#components/common'
+import {scrollToView} from '#utils/helpers'
+import {BLANK_LINK_PROPS, PROJECT_FILTERS, ROUTE} from '#utils/constants'
+import {IFeature, ITechnologyGroup, TKey} from '#utils/types'
+import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS, CONTACT_LINK} from '#data/common'
 import Technologies from './Technologies'
 
 export default function Skills() {

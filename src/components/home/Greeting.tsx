@@ -9,29 +9,30 @@ import {
 } from '@mui/icons-material'
 
 import './Greeting.scss'
-import frontendImg from '@assets/img/pictures/frontend.svg'
-import youtubeImg from '@assets/img/pictures/youtube.svg'
-import meImg from '@assets/img/pictures/me.jpg'
-import me2xImg from '@assets/img/pictures/me@2x.jpg'
-import meMdImg from '@assets/img/pictures/me_md.jpg'
-import meMd2xImg from '@assets/img/pictures/me_md@2x.jpg'
-import meXsImg from '@assets/img/pictures/me_xs.jpg'
-import meXs2xImg from '@assets/img/pictures/me_xs@2x.jpg'
-/* import meSantaImg from '@assets/img/pictures/me-santa.jpg'
-import meSanta2xImg from '@assets/img/pictures/me-santa@2x.jpg'
-import meSantaMdImg from '@assets/img/pictures/me-santa_md.jpg'
-import meSantaMd2xImg from '@assets/img/pictures/me-santa_md@2x.jpg'
-import meSantaXsImg from '@assets/img/pictures/me-santa_xs.jpg'
-import meSantaXs2xImg from '@assets/img/pictures/me-santa_xs@2x.jpg' */
-import HelloIcon from '@assets/icons/hello.svg?react'
-import {CONTACT_LINK, MY_NAME} from '@data/common'
-import {ROUTE, QUERY_BREAKPOINT, BLANK_LINK_PROPS} from '@utils/constants'
+import frontendImg from '#assets/img/pictures/frontend.svg'
+import youtubeImg from '#assets/img/pictures/youtube.svg'
+import meImg from '#assets/img/pictures/me.jpg'
+import me2xImg from '#assets/img/pictures/me@2x.jpg'
+import meMdImg from '#assets/img/pictures/me_md.jpg'
+import meMd2xImg from '#assets/img/pictures/me_md@2x.jpg'
+import meXsImg from '#assets/img/pictures/me_xs.jpg'
+import meXs2xImg from '#assets/img/pictures/me_xs@2x.jpg'
+/* import meSantaImg from '#assets/img/pictures/me-santa.jpg'
+import meSanta2xImg from '#assets/img/pictures/me-santa@2x.jpg'
+import meSantaMdImg from '#assets/img/pictures/me-santa_md.jpg'
+import meSantaMd2xImg from '#assets/img/pictures/me-santa_md@2x.jpg'
+import meSantaXsImg from '#assets/img/pictures/me-santa_xs.jpg'
+import meSantaXs2xImg from '#assets/img/pictures/me-santa_xs@2x.jpg' */
+import {Section} from '#components/common'
+import HelloIcon from '#assets/icons/hello.svg?react'
+import {CONTACT_LINK, MY_NAME} from '#data/common'
+import {ROUTE, QUERY_BREAKPOINT, BLANK_LINK_PROPS} from '#utils/constants'
 
 export default function Greeting() {
   const {t} = useTranslation()
 
   return (
-    <section className="Greeting Section">
+    <Section contentClassName="Greeting-Content">
       <div>
         <p className="Greeting-Text Greeting-First Title">
           {t(`home.hi.${getDayTime()}`)}
@@ -155,7 +156,7 @@ export default function Greeting() {
           alt={MY_NAME}
         />
       </picture>
-    </section>
+    </Section>
   )
 }
 

@@ -2,9 +2,9 @@ import {useTranslation} from 'react-i18next'
 import {Button} from '@mui/material'
 
 import './Settings.scss'
-import EnIcon from '@assets/icons/en.svg?react'
-import RuIcon from '@assets/icons/ru.svg?react'
-import {Tooltip} from '@components/common'
+import EnIcon from '#assets/icons/en.svg?react'
+import RuIcon from '#assets/icons/ru.svg?react'
+import {Tooltip} from '#components/common'
 
 export default function Settings() {
   const {t, i18n} = useTranslation()

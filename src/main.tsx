@@ -8,13 +8,13 @@ import {
   Theme,
 } from '@mui/material'
 
-import '@styles/index.scss'
-import '@utils/i18n'
-import App from '@components/App'
-import ScrollToTop from '@components/base/ScrollToTop'
-import {handleAppLoaded, logConsoleWelcomeMessage} from '@utils/base'
-import {ROOT} from '@utils/constants'
-import THEME from '@styles/theme'
+import '#styles/index.scss'
+import '#utils/i18n'
+import App from '#components/App'
+import ScrollToTop from '#components/base/ScrollToTop'
+import {handleAppLoaded, logConsoleWelcomeMessage} from '#utils/base'
+import {ROOT} from '#utils/constants'
+import THEME from '#styles/theme'
 
 const theme: Theme = createTheme(THEME as object)
 

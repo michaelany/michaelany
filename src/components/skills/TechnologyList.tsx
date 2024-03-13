@@ -4,9 +4,9 @@ import cn from 'clsx'
 import {Grid, ButtonBase, ButtonBaseActions} from '@mui/material'
 
 import './TechnologyList.scss'
-import {Tooltip} from '@components/common'
-import {BLANK_LINK_PROPS} from '@utils/constants'
-import {ITechnology} from '@utils/types'
+import {Tooltip} from '#components/common'
+import {BLANK_LINK_PROPS} from '#utils/constants'
+import {ITechnology} from '#utils/types'
 
 interface ITechnologyListProps {
   t: TFunction

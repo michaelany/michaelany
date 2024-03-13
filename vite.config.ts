@@ -1,10 +1,12 @@
 import {defineConfig} from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 import {VitePWA} from 'vite-plugin-pwa'
 
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     react(),
     svgr(),
     VitePWA({
@@ -44,13 +46,6 @@ export default defineConfig({
   server: {
     open: true,
     port: 3000,
-  },
-  resolve: {
-    alias: Object.fromEntries(
-      ['assets', 'components', 'data', 'styles', 'utils', 'translations'].map(
-        (item) => [`@${item}`, `/src/${item}`]
-      )
-    ),
   },
   css: {
     preprocessorOptions: {

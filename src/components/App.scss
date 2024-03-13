@@ -3,25 +3,6 @@
   display: flex;
   min-width: 320px;
   transition: background-color $duration_standard $easing_in-out;
-  &_background_blue {
-    background-color: $color_blue;
-  }
-  &_background_red {
-    background-color: $color_red;
-  }
-  &_background_green {
-    background-color: $color_green;
-  }
-  &_background_blue,
-  &_background_red,
-  &_background_green {
-    &::before {
-      @include pseudoGradient;
-    }
-    ::selection {
-      background-color: rgba($color_default, 0.4);
-    }
-  }
   &_color_alternate {
     ::selection {
       background-color: rgba($color_default, 0.4);
@@ -31,6 +12,17 @@
     &_color_#{$key} {
       ::selection {
         background-color: rgba($value, 0.4);
+      }
+    }
+    &_background_#{$key} {
+      background-color: $value;
+    }
+    &_background_#{$key} {
+      &::before {
+        @include pseudoGradient;
+      }
+      ::selection {
+        background-color: rgba($color_default, 0.4);
       }
     }
   }

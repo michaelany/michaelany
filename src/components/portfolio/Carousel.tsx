@@ -6,10 +6,10 @@ import {Autoplay, Controller} from 'swiper/modules'
 import {SwiperModule, SwiperOptions} from 'swiper/types'
 
 import './Carousel.scss'
-import PhoneSvg from '@assets/img/shapes/phone.svg?react'
-import {Animate, Panel} from '@components/common'
-import {TProjectName} from '@utils/types'
-import {DURATION} from '@styles/theme'
+import PhoneSvg from '#assets/img/shapes/phone.svg?react'
+import {Animate, Panel} from '#components/common'
+import {TProjectName} from '#utils/types'
+import {DURATION} from '#styles/theme'
 
 interface ICarouselProps {
   mobile?: boolean
@@ -39,7 +39,7 @@ export default function Carousel(props: ICarouselProps) {
       effect={props.md ? 'bottom' : 'right'}
       duration={props.md ? undefined : 'longer'}
     >
-      <Panel className="Carousel-Content">
+      <Panel>
         <div className="Carousel-Block">
           <Content {...props} />
         </div>

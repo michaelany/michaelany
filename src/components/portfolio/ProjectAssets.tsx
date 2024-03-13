@@ -5,9 +5,9 @@ import SwiperCore from 'swiper'
 import {useMediaQuery} from '@mui/material'
 
 import './ProjectAssets.scss'
-import {Animate, Pagination, Copyright} from '@components/common'
-import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
-import {TProjectName, IProjectImages} from '@utils/types'
+import {Animate, Section} from '#components/common'
+import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
+import {TProjectName, IProjectImages} from '#utils/types'
 import Carousel from './Carousel'
 
 interface IProjectAssetsProps {
@@ -30,7 +30,7 @@ export default function ProjectAssets({
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
-    <section className="Section Section_pagination Section_colorful">
+    <Section colorful prevTo={ROUTE.portfolio}>
       <h2 className="VisuallyHidden">{t('portfolio.subtitle')}</h2>
       <div>
         <Animate
@@ -47,9 +47,7 @@ export default function ProjectAssets({
         </Animate>
         <Screenshots t={t} md={md} name={name} images={images} />
       </div>
-      <Pagination prevTo={ROUTE.portfolio} />
-      <Copyright />
-    </section>
+    </Section>
   )
 }
 

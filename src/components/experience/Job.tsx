@@ -15,9 +15,9 @@ import {
 } from '@mui/icons-material'
 
 import './Job.scss'
-import {Tooltip, Company} from '@components/common'
-import {tPeriodPart} from '@utils/helpers'
-import {IJob, IJobFeature, TKey, TKeyObject} from '@utils/types'
+import {Tooltip, Company} from '#components/common'
+import {tPeriodPart} from '#utils/helpers'
+import {IJob, IJobFeature, TKey, TKeyObject} from '#utils/types'
 
 interface IJobProps extends IJob {
   t: TFunction

@@ -1,6 +1,8 @@
 import {differenceInYears, format} from 'date-fns'
 
-import {BREAKPOINT} from '@styles/theme'
+import {BREAKPOINT} from '#styles/theme'
+import VIDEOS from '#data/videos'
+
 import {TRoute, TColor, TProjectFilter, TEffect} from './types'
 
 interface IDetect {
@@ -167,9 +169,6 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.about]: 'green',
   [ROUTE.skills]: 'blue',
   [ROUTE.experience]: 'violet',
-  [ROUTE.portfolio]: 'white',
-  [ROUTE.vlog]: 'white',
-  [ROUTE.contact]: 'white',
   [PROJECT_ROUTE.ally2]: 'red',
   [PROJECT_ROUTE.strongp]: 'red',
   [PROJECT_ROUTE.pridefit]: 'violet',
@@ -211,6 +210,13 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [PROJECT_ROUTE.lazyaz]: 'red',
   [PROJECT_ROUTE.glyphs]: 'grass',
   [PROJECT_ROUTE.msp]: 'blue',
+}
+
+export const PATH_BACKGROUND_COLOR: Record<TRoute | string, TColor> = {
+  [ROUTE.portfolio]: 'blue',
+  [ROUTE.vlog]: 'red',
+  [ROUTE.contact]: 'green',
+  ...Object.fromEntries(VIDEOS.map((video) => [`/${video.name}`, video.color])),
 }
 
 export const QUERY_BREAKPOINT: IQueryBreakpoint = {

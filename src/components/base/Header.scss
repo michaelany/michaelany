@@ -1,6 +1,4 @@
-$background-opacity: 0.95;
-
-.Header {
+.Header-Content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,7 +6,7 @@ $background-opacity: 0.95;
   width: 100%;
   height: $header_height;
   border-bottom: $header_border-width solid $color_green;
-  background-color: rgba(white, $background-opacity);
+  background-color: rgba(white, 0.95);
   z-index: 100;
   padding-left: 8px;
   padding-right: 8px;
@@ -25,14 +23,8 @@ $background-opacity: 0.95;
     .App_color_#{$key} & {
       border-color: $value;
     }
-  }
-  .App_background_blue & {
-    background-color: rgba($color_blue, $background-opacity);
-  }
-  .App_background_red & {
-    background-color: rgba($color_red, $background-opacity);
-  }
-  .App_background_green & {
-    background-color: rgba($color_green, $background-opacity);
+    .App_background_#{$key} & {
+      background-color: rgba($value, 0.95);
+    }
   }
 }

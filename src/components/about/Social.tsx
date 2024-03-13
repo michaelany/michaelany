@@ -4,34 +4,31 @@ import {useMediaQuery} from '@mui/material'
 import cn from 'clsx'
 
 import './Social.scss'
-import meNormalImg from '@assets/img/pictures/me-normal.jpg'
-import meNormal2xImg from '@assets/img/pictures/me-normal@2x.jpg'
-import meExcitedImg from '@assets/img/pictures/me-excited.jpg'
-import meExcited2xImg from '@assets/img/pictures/me-excited@2x.jpg'
-import {
-  Animate,
-  SocialLinks,
-  Pagination,
-  Copyright,
-  Tilt,
-} from '@components/common'
-import {ROUTE, QUERY_BREAKPOINT, DETECT} from '@utils/constants'
-import {ISocialLink} from '@utils/types'
-import {MY_NAME, CONTACT_LINK} from '@data/common'
+import meNormalImg from '#assets/img/pictures/me-normal.jpg'
+import meNormal2xImg from '#assets/img/pictures/me-normal@2x.jpg'
+import meExcitedImg from '#assets/img/pictures/me-excited.jpg'
+import meExcited2xImg from '#assets/img/pictures/me-excited@2x.jpg'
+import {Section, Animate, SocialLinks, Tilt} from '#components/common'
+import {ROUTE, QUERY_BREAKPOINT, DETECT} from '#utils/constants'
+import {ISocialLink} from '#utils/types'
+import {MY_NAME, CONTACT_LINK} from '#data/common'
 
 export default function Social() {
   const {t} = useTranslation()
 
   return (
-    <section className="Section Section_pagination Section_colorful FadeInRight">
+    <Section
+      colorful
+      className="FadeInRight"
+      prevTo={ROUTE.home}
+      nextTo={ROUTE.skills}
+    >
       <h2 className="VisuallyHidden">{t('about.subtitle')}</h2>
       <div className="Social-Content">
         <Photo />
         <SocialLinks about links={links} />
       </div>
-      <Pagination prevTo={ROUTE.home} nextTo={ROUTE.skills} />
-      <Copyright />
-    </section>
+    </Section>
   )
 }
 

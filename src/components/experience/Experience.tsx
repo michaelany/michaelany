@@ -2,8 +2,8 @@ import {useRef} from 'react'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery} from '@mui/material'
 
-import {Animate, Sections, Pagination, Copyright} from '@components/common'
-import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
+import {Animate, Sections, Section} from '#components/common'
+import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
 import Work from './Work'
 import Stepper from './Stepper'
 
@@ -16,9 +16,11 @@ export default function Experience() {
     <Sections
       firstSection={<Work />}
       secondSection={
-        <section
-          ref={sectionRef}
-          className="Section Section_pagination Section_colorful"
+        <Section
+          colorful
+          sectionRef={sectionRef}
+          prevTo={ROUTE.skills}
+          nextTo={ROUTE.portfolio}
         >
           <h2 className="VisuallyHidden">{t('experience.subtitle')}</h2>
           <Animate
@@ -27,9 +29,7 @@ export default function Experience() {
           >
             <Stepper sectionRef={sectionRef} />
           </Animate>
-          <Pagination prevTo={ROUTE.skills} nextTo={ROUTE.portfolio} />
-          <Copyright />
-        </section>
+        </Section>
       }
     />
   )

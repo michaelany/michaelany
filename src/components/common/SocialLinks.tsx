@@ -2,9 +2,9 @@ import cn from 'clsx'
 import {useMediaQuery, Fab} from '@mui/material'
 
 import './SocialLinks.scss'
-import {getListDelay} from '@utils/helpers'
-import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '@utils/constants'
-import {ISocialLink} from '@utils/types'
+import {getListDelay} from '#utils/helpers'
+import {BLANK_LINK_PROPS, QUERY_BREAKPOINT} from '#utils/constants'
+import {ISocialLink} from '#utils/types'
 import Animate from './Animate'
 import Tooltip from './Tooltip'
 

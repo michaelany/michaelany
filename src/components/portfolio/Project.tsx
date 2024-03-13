@@ -1,8 +1,8 @@
 import {Navigate, useParams} from 'react-router-dom'
 
-import {Sections} from '@components/common'
-import {ROUTE, PROJECT_ROUTE} from '@utils/constants'
-import PROJECTS from '@data/projects'
+import {Sections} from '#components/common'
+import {ROUTE, PROJECT_ROUTE} from '#utils/constants'
+import PROJECTS from '#data/projects'
 import ProjectDetails from './ProjectDetails'
 import ProjectAssets from './ProjectAssets'
 

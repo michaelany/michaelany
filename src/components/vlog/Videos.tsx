@@ -2,8 +2,9 @@ import {useState, ChangeEvent} from 'react'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
 
-import {QUERY_BREAKPOINT} from '@utils/constants'
-import {IWidth, TLng, IVideo} from '@utils/types'
+import VIDEOS from '#data/videos'
+import {QUERY_BREAKPOINT} from '#utils/constants'
+import {IWidth, TLng, IVideo} from '#utils/types'
 import VideoLink from './VideoLink'
 
 type TSort = 'new' | 'old'
@@ -32,7 +33,7 @@ export default function Videos() {
         ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>
-        {getSortedVideos(videos, sort).map((video, index) => (
+        {getSortedVideos(VIDEOS, sort).map((video, index) => (
           <VideoLink
             key={`${video.name}-${sort}`}
             t={t}
@@ -55,33 +56,6 @@ const getSortedVideos = (videos: IVideo[], sort: TSort): IVideo[] => {
   })
   return sortedVideos
 }
-
-const videos: IVideo[] = [
-  {
-    name: 'day-in-a-life-montenegro',
-    color: 'yellow',
-    date: new Date(2023, 1, 27),
-    href: 'https://youtu.be/b0bxdqMqGKo?si=Ut1Wc5VgkXeSUOXO',
-  },
-  {
-    name: 'my-dreamdesk',
-    color: 'default',
-    date: new Date(2023, 6, 4),
-    href: 'https://youtu.be/pQzEh3D6lHg?si=A4M_lJnl0Iq9QU1A',
-  },
-  {
-    name: 'day-in-a-life-new-zealand',
-    color: 'blue',
-    date: new Date(2023, 7, 3),
-    href: 'https://youtu.be/x5ZtJo-eLA8?si=cggbxCK6WBrd1bju',
-  },
-  {
-    name: 'how-i-became-software-engineer',
-    color: 'red',
-    date: new Date(2024, 1, 21),
-    href: 'https://youtu.be/TXKpsdQBBEA?si=ybwrVtV3_0KmNaPB',
-  },
-]
 
 const storageProp = 'sort'
 

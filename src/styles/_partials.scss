@@ -9,43 +9,6 @@
   overflow: hidden;
 }
 
-.Section {
-  position: relative;
-  padding: 80px 10% 144px;
-  height: 100%;
-  &_single {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  &_pagination {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  &_colorful::before {
-    @include pseudoGradient;
-  }
-  .App_color_alternate &_colorful {
-    @include animationAlternate(alternateBackgroundColor);
-  }
-  @each $key, $value in $colors-map {
-    .App_color_#{$key} &_colorful {
-      background-color: $value;
-    }
-  }
-  @include md {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
-    .Sections-SectionWrapper:first-child > & {
-      padding-bottom: 80px;
-    }
-  }
-  @include sm {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
 .Colorful {
   .App_color_alternate & {
     @include animationAlternate;
@@ -71,12 +34,18 @@
   line-height: 1.2;
   margin-bottom: 0.5em;
   @include animation(fadeIn);
+  &_mediumIndent {
+    margin-bottom: 0.32em;
+  }
   &_smallIndent {
     margin-bottom: 0.16em;
   }
   &_withIcon {
     display: flex;
     align-items: center;
+  }
+  &_fadeInBottom {
+    @include animation(fadeInBottom);
   }
   .App_color_white & {
     color: white;
@@ -100,10 +69,20 @@
   margin-left: 0.2em;
 }
 
-.MainText {
-  @include animation(fadeInBottom);
+.Text {
   font-size: 30px;
   line-height: 1.5;
+  @include lg {
+    font-size: 26px;
+  }
+  @include xs {
+    font-size: 22px;
+  }
+}
+
+.MainText {
+  @extend .Text;
+  @include animation(fadeInBottom);
   margin-bottom: 2em;
   color: $color_second-text;
   &_dark {
@@ -111,12 +90,6 @@
   }
   &_noAnimation {
     animation: none;
-  }
-  @include lg {
-    font-size: 26px;
-  }
-  @include xs {
-    font-size: 22px;
   }
 }
 

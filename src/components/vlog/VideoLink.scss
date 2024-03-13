@@ -30,7 +30,7 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand'
 .VideoLink-View {
   @each $video in $videos {
     &_name_#{$video}::after {
-      @include retinaImg('@assets/img/videos/#{$video}', 'jpg');
+      @include retinaImg('assets/img/videos/#{$video}', 'jpg');
     }
   }
   &::after {
@@ -68,10 +68,7 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand'
   }
 }
 
-.VideoLink-Label {
-  font-size: $font-size_smaller;
+.VideoLink-Date {
   color: $color_second-text;
-  & > span:first-child {
-    font-weight: bold;
-  }
+  justify-content: center;
 }

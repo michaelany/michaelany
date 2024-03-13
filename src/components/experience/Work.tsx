@@ -9,22 +9,22 @@ import {
 } from '@mui/icons-material'
 
 import './Work.scss'
-import {Animate} from '@components/common'
-import {IJob} from '@utils/types'
+import {Animate, Section} from '#components/common'
+import {IJob} from '#utils/types'
 import {
   YEARS_OF_EXPERIENCE,
   CAREER_START_PARTS,
   BLANK_LINK_PROPS,
   ROUTE,
-} from '@utils/constants'
-import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '@data/common'
+} from '#utils/constants'
+import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '#data/common'
 import Job from './Job'
 
 export default function Work() {
   const {t} = useTranslation()
 
   return (
-    <section className="Section">
+    <Section>
       <h1 className="Title">{t('title.experience')}</h1>
       <p className="MainText">
         <Trans
@@ -38,7 +38,7 @@ export default function Work() {
           <Job key={index} {...job} t={t} index={index} />
         ))}
       </Animate>
-    </section>
+    </Section>
   )
 }
 

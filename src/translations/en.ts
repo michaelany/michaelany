@@ -470,13 +470,25 @@ const EN = {
       old: 'Oldest',
     },
     video: {
-      'day-in-a-life-montenegro':
-        'A day in the life of a software engineer in Montenegro {{0}} Remote work',
-      'my-dreamdesk': 'My dreamdesk {{0}} New no monitors setup',
-      'day-in-a-life-new-zealand':
-        'A day in the life of a software engineer in New Zealand {{0}} POV',
-      'how-i-became-software-engineer':
-        'How I became a software engineer at 27 {{0}} From actor to developer',
+      'day-in-a-life-montenegro': {
+        title:
+          'A day in the life of a software engineer in Montenegro {{0}} Remote work',
+        text: 'I will provide a detailed overview of my typical day in Montenegro and how I work remotely for a New Zealand-based company. I enjoy watching similar videos, so I decided to create my own',
+      },
+      'my-dreamdesk': {
+        title: 'My dreamdesk {{0}} New no monitors setup',
+        text: "I've finally fulfilled my dream - created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing, and why I don't need a large monitor",
+      },
+      'day-in-a-life-new-zealand': {
+        title:
+          'A day in the life of a software engineer in New Zealand {{0}} POV',
+        text: "I was gifted the {{0}}, and someday I'll be filming myself surfing the waves of the Pacific Ocean in New Zealand. But for now, I invite you to spend a typical day with me in this distant and beautiful country through my eyes, that is, from a first-person point of view",
+      },
+      'how-i-became-software-engineer': {
+        title:
+          'How I became a software engineer at 27 {{0}} From actor to developer',
+        text: "In this video, I'll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I'll talk about myself, the challenges I faced, where and how I learned, what helped me along the way, and how I found my first job in {{0}}",
+      },
     },
   },
   contact: {

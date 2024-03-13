@@ -4,13 +4,13 @@ import {Button} from '@mui/material'
 import {VisibilityRounded as VisibilityIcon} from '@mui/icons-material'
 
 import './ProjectActions.scss'
-import SevenGlyphsIcon from '@assets/icons/7glyphs.svg?react'
-import EverpointIcon from '@assets/icons/everpoint.svg?react'
-import AppleIcon from '@assets/icons/apple.svg?react'
-import GooglePlayIcon from '@assets/icons/googleplay.svg?react'
-import {Animate} from '@components/common'
-import {BLANK_LINK_PROPS} from '@utils/constants'
-import {TCompanyName} from '@utils/types'
+import SevenGlyphsIcon from '#assets/icons/7glyphs.svg?react'
+import EverpointIcon from '#assets/icons/everpoint.svg?react'
+import AppleIcon from '#assets/icons/apple.svg?react'
+import GooglePlayIcon from '#assets/icons/googleplay.svg?react'
+import {Animate} from '#components/common'
+import {BLANK_LINK_PROPS} from '#utils/constants'
+import {TCompanyName} from '#utils/types'
 
 interface IProjectActionsProps {
   url?: string
@@ -74,7 +74,7 @@ export default function ProjectActions({
 }
 
 const Link = ({children, href, icon}: ILinkProps) => (
-  <Animate className="ProjectActions-Link" effect="bottom">
+  <Animate className="ProjectActions-Link">
     <Button
       {...BLANK_LINK_PROPS}
       className="Button"

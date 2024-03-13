@@ -25,7 +25,7 @@ import {
 } from '@mui/icons-material'
 
 import './ContactForm.scss'
-import {Animate} from '@components/common'
+import {Animate} from '#components/common'
 import SuccessDialog from './SuccessDialog'
 
 interface IField {

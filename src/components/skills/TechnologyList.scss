@@ -22,7 +22,7 @@ $technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
   align-items: center;
   @each $technology in $technologies {
     &_name_#{$technology}::before {
-      @include retinaImg('@assets/img/technologies/#{$technology}', 'png');
+      @include retinaImg('assets/img/technologies/#{$technology}', 'png');
     }
   }
   &::before {

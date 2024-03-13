@@ -1,4 +1,6 @@
 import {Link} from 'react-router-dom'
+import cn from 'clsx'
+
 import {useTranslation} from 'react-i18next'
 import {Grid, Button} from '@mui/material'
 import {
@@ -7,19 +9,30 @@ import {
 } from '@mui/icons-material'
 
 import './Pagination.scss'
-import {ROUTE} from '@utils/constants'
-import {TRoute} from '@utils/types'
+import {ROUTE} from '#utils/constants'
+import {TRoute} from '#utils/types'
 
 interface IPaginationProps {
+  halfWidth?: boolean
   prevTo?: TRoute
   nextTo?: TRoute
 }
 
-export default function Pagination({prevTo, nextTo}: IPaginationProps) {
+export default function Pagination({
+  halfWidth,
+  prevTo,
+  nextTo,
+}: IPaginationProps) {
   const {t} = useTranslation()
 
   return (
-    <div className="Pagination Actions">
+    <div
+      className={cn(
+        'Pagination',
+        halfWidth && 'Pagination_halfWidth',
+        'Actions'
+      )}
+    >
       <Grid
         container
         className="Pagination-Links"

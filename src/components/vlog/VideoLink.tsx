@@ -1,13 +1,14 @@
 import {useMemo} from 'react'
+import {Link} from 'react-router-dom'
 import {TFunction} from 'i18next'
-import {format} from 'date-fns'
 import {Grid, ButtonBase} from '@mui/material'
 
 import './VideoLink.scss'
-import {Animate, Tilt, Panel} from '@components/common'
-import {getGridAnimationDelay, getTimeSince} from '@utils/helpers'
-import {DETECT, RANDOM_EFFECTS, BLANK_LINK_PROPS} from '@utils/constants'
-import {IWidth, TLng, IVideo} from '@utils/types'
+import {Animate, Tilt, Panel} from '#components/common'
+import {getGridAnimationDelay} from '#utils/helpers'
+import {DETECT, RANDOM_EFFECTS, ROUTE} from '#utils/constants'
+import {IWidth, TLng, IVideo} from '#utils/types'
+import VideoDate from './VideoDate'
 
 interface IVideoLinkProps {
   t: TFunction
@@ -39,23 +40,23 @@ export default function VideoLink({
       >
         <Tilt className="VideoLink-Tilt">
           <ButtonBase
-            {...BLANK_LINK_PROPS}
             focusRipple
-            component="a"
+            component={Link}
             className={`VideoLink-Item ColorInteract ColorInteract_color_${video.color}`}
-            href={video.href}
+            to={`${ROUTE.vlog}/${video.name}`}
           >
             <Panel
               className={`VideoLink-View VideoLink-View_name_${video.name}`}
             />
             <div className="VideoLink-Content">
               <h3 className="VideoLink-Title">
-                {t(`vlog.video.${video.name}`, {replace: ['|']})}
+                {t(`vlog.video.${video.name}.title`, {replace: ['|']})}
               </h3>
-              <p className="VideoLink-Label">
-                <span>{format(video.date, 'dd.MM.yyyy')} • </span>
-                <span>{getTimeSince(video.date, lng)}</span>
-              </p>
+              <VideoDate
+                className="VideoLink-Date"
+                date={video.date}
+                lng={lng}
+              />
             </div>
           </ButtonBase>
         </Tilt>

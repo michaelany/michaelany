@@ -4,10 +4,10 @@ import {Snackbar, SnackbarOrigin, IconButton} from '@mui/material'
 import {CloseRounded as CloseIcon} from '@mui/icons-material'
 
 import './Message.scss'
-import santaImg from '@assets/img/pictures/santa.png'
-// import RuUaIcon from '@assets/icons/ru-ua.svg?react'
-// import pumpkinImg from '@assets/img/pictures/pumpkin.png'
-import {DURATION} from '@styles/theme'
+import santaImg from '#assets/img/pictures/santa.png'
+// import RuUaIcon from '#assets/icons/ru-ua.svg?react'
+// import pumpkinImg from '#assets/img/pictures/pumpkin.png'
+import {DURATION} from '#styles/theme'
 
 export default function Message() {
   const [open, setOpen] = useState(false)

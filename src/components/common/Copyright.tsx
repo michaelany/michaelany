@@ -7,15 +7,15 @@ import {
 } from '@mui/icons-material'
 
 import './Copyright.scss'
-import ReactIcon from '@assets/icons/react.svg?react'
-import MuiIcon from '@assets/icons/mui.svg?react'
-import {Tooltip} from '@components/common'
-import {TODAY, BLANK_LINK_PROPS} from '@utils/constants'
+import ReactIcon from '#assets/icons/react.svg?react'
+import MuiIcon from '#assets/icons/mui.svg?react'
+import {Tooltip} from '#components/common'
+import {TODAY, BLANK_LINK_PROPS} from '#utils/constants'
 import {
   CONTACT_LINK,
   TECHNOLOGY_TITLE,
   MAIN_TECHNOLOGY_LINK,
-} from '@data/common'
+} from '#data/common'
 
 interface ILink {
   title: string

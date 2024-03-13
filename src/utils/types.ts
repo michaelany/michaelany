@@ -187,5 +187,6 @@ export interface IVideo {
   name: string
   color: TColor
   date: Date
-  href: string
+  src: string
+  textValues?: (string | number)[]
 }

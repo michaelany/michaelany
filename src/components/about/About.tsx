@@ -19,16 +19,16 @@ import {
   TheaterComedyRounded as TheaterComedyIcon,
 } from '@mui/icons-material'
 
-import {Sections, Info} from '@components/common'
-import {PROJECTS_COUNT} from '@data/projects'
-import {TECHNOLOGY_TITLE, CONTACT_LINK} from '@data/common'
+import {Sections, Info} from '#components/common'
+import {PROJECTS_COUNT} from '#data/projects'
+import {TECHNOLOGY_TITLE, CONTACT_LINK} from '#data/common'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,
   ROUTE,
   BLANK_LINK_PROPS,
-} from '@utils/constants'
-import {IFeature} from '@utils/types'
+} from '#utils/constants'
+import {IFeature} from '#utils/types'
 import Social from './Social'
 
 export default function About() {

@@ -15,10 +15,10 @@ import {
 } from '@mui/icons-material'
 
 import './Stepper.scss'
-import {scrollToView, tPeriodPart} from '@utils/helpers'
-import {CAREER_START_PARTS} from '@utils/constants'
-import {IPeriod} from '@utils/types'
-import {COMPANY_TITLE, CONTACT_LINK} from '@data/common'
+import {scrollToView, tPeriodPart} from '#utils/helpers'
+import {CAREER_START_PARTS} from '#utils/constants'
+import {IPeriod} from '#utils/types'
+import {COMPANY_TITLE, CONTACT_LINK} from '#data/common'
 
 interface IStepperProps {
   sectionRef: RefObject<HTMLElement>

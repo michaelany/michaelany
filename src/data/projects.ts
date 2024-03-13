@@ -1,5 +1,5 @@
-import {importImg} from '@utils/helpers'
-import {IProject} from '@utils/types'
+import {importImg} from '#utils/helpers'
+import {IProject} from '#utils/types'
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 
 const commonLogo = {

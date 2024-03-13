@@ -13,25 +13,28 @@ import Experience from './experience/Experience'
 import Portfolio from './portfolio/Portfolio'
 import Project from './portfolio/Project'
 import Vlog from './vlog/Vlog'
+import Video from './vlog/Video'
 import Contact from './contact/Contact'
-import {ROUTE, PATH_COLOR, QUERY_BREAKPOINT} from '@utils/constants'
+import {
+  ROUTE,
+  PATH_COLOR,
+  PATH_BACKGROUND_COLOR,
+  QUERY_BREAKPOINT,
+} from '#utils/constants'
 
 export default function App() {
   const {pathname} = useLocation()
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   const lastSlashIndex = pathname.lastIndexOf('/')
+  const pathnameEnd = pathname.slice(lastSlashIndex)
+
   const AppClassName = cn(
     `App App_page_${
       pathname.slice(1, lastSlashIndex || undefined) || 'home'
-    } App_color_${PATH_COLOR[pathname.slice(lastSlashIndex)]}`,
-    pathname === ROUTE.portfolio
-      ? 'App_background_blue'
-      : pathname === ROUTE.vlog
-        ? 'App_background_red'
-        : pathname === ROUTE.contact
-          ? 'App_background_green'
-          : undefined
+    } App_color_${PATH_COLOR[pathnameEnd] ?? 'white'}`,
+    PATH_BACKGROUND_COLOR[pathnameEnd] &&
+      `App_background_${PATH_BACKGROUND_COLOR[pathnameEnd]}`
   )
 
   return (
@@ -47,7 +50,10 @@ export default function App() {
             <Route index element={<Portfolio />} />
             <Route path=":project" element={<Project />} />
           </Route>
-          <Route path={ROUTE.vlog} element={<Vlog />} />
+          <Route path={ROUTE.vlog}>
+            <Route index element={<Vlog />} />
+            <Route path=":video" element={<Video />} />
+          </Route>
           <Route path={ROUTE.contact} element={<Contact />} />
           <Route path="*" element={<Navigate replace to={ROUTE.home} />} />
         </Routes>

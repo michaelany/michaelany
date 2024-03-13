@@ -5,10 +5,10 @@ import {Button} from '@mui/material'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
 import './Info.scss'
-import {scrollToView} from '@utils/helpers'
-import {ROOT} from '@utils/constants'
-import {IFeature} from '@utils/types'
-
+import {Section} from '#components/common'
+import {scrollToView} from '#utils/helpers'
+import {ROOT} from '#utils/constants'
+import {IFeature} from '#utils/types'
 import Features from './Features'
 import Animate from './Animate'
 
@@ -36,7 +36,7 @@ const Info = memo(
     }
 
     return (
-      <section className="Section">
+      <Section>
         <h1 className="Title">{t(`title.${type}`)}</h1>
         <p className="MainText">
           <Trans
@@ -62,7 +62,7 @@ const Info = memo(
             {t('other.more')}
           </Button>
         </Animate>
-      </section>
+      </Section>
     )
   }
 )

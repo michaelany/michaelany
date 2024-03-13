@@ -1,10 +1,10 @@
 import {useTranslation, Trans} from 'react-i18next'
 import {Link} from '@mui/material'
 
-import {Sections, SocialLinks, Pagination, Copyright} from '@components/common'
-import {BLANK_LINK_PROPS, ROUTE} from '@utils/constants'
-import {ISocialLink} from '@utils/types'
-import {CONTACT_LINK} from '@data/common'
+import {Sections, SocialLinks, Section} from '#components/common'
+import {BLANK_LINK_PROPS, ROUTE} from '#utils/constants'
+import {ISocialLink} from '#utils/types'
+import {CONTACT_LINK} from '#data/common'
 import ContactForm from './ContactForm'
 import Map from './Map'
 
@@ -15,7 +15,7 @@ export default function Contact() {
     <Sections
       contact
       firstSection={
-        <section className="Section Section_pagination">
+        <Section prevTo={ROUTE.vlog}>
           <div>
             <h1 className="Title">{t('title.contact')}</h1>
             <p className="MainText MainText_dark">
@@ -37,11 +37,9 @@ export default function Contact() {
               :
             </p>
             <ContactForm />
+            <SocialLinks links={links} />
           </div>
-          <SocialLinks links={links} />
-          <Pagination prevTo={ROUTE.vlog} />
-          <Copyright />
-        </section>
+        </Section>
       }
       secondSection={<Map />}
     />

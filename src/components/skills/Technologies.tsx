@@ -11,10 +11,10 @@ import {
 import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
 import './Technologies.scss'
-import {Animate, Pagination, Copyright} from '@components/common'
-import {TECHNOLOGY_GROUPS} from '@data/common'
-import {ROUTE, QUERY_BREAKPOINT} from '@utils/constants'
-import {TKey} from '@utils/types'
+import {Animate, Section} from '#components/common'
+import {TECHNOLOGY_GROUPS} from '#data/common'
+import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
+import {TKey} from '#utils/types'
 import TechnologyList from './TechnologyList'
 
 interface ITechnologiesProps {
@@ -43,9 +43,11 @@ export default function Technologies({
       )
 
   return (
-    <section
-      className="Section Section_pagination Section_colorful"
-      ref={sectionRef}
+    <Section
+      colorful
+      sectionRef={sectionRef}
+      prevTo={ROUTE.about}
+      nextTo={ROUTE.experience}
     >
       <h2 className="VisuallyHidden">{t('skills.subtitle')}</h2>
       <Animate
@@ -78,8 +80,6 @@ export default function Technologies({
           </Accordion>
         ))}
       </Animate>
-      <Pagination prevTo={ROUTE.about} nextTo={ROUTE.experience} />
-      <Copyright />
-    </section>
+    </Section>
   )
 }

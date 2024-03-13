@@ -1,14 +1,14 @@
 import {YouTube as YouTubeIcon} from '@mui/icons-material'
 
-import {importImg} from '@utils/helpers'
-import SevenGlyphsIcon from '@assets/icons/7glyphs.svg?react'
-import GitHubIcon from '@assets/icons/github.svg?react'
-import LinkedInIcon from '@assets/icons/linkedin.svg?react'
-import InstagramIcon from '@assets/icons/instagram.svg?react'
-import VKIcon from '@assets/icons/vk.svg?react'
-import FacebookIcon from '@assets/icons/facebook.svg?react'
-import TelegramIcon from '@assets/icons/telegram.svg?react'
-import {ISocialLink, ICompany, ITechnologyGroup} from '@utils/types'
+import {importImg} from '#utils/helpers'
+import SevenGlyphsIcon from '#assets/icons/7glyphs.svg?react'
+import GitHubIcon from '#assets/icons/github.svg?react'
+import LinkedInIcon from '#assets/icons/linkedin.svg?react'
+import InstagramIcon from '#assets/icons/instagram.svg?react'
+import VKIcon from '#assets/icons/vk.svg?react'
+import FacebookIcon from '#assets/icons/facebook.svg?react'
+import TelegramIcon from '#assets/icons/telegram.svg?react'
+import {ISocialLink, ICompany, ITechnologyGroup} from '#utils/types'
 
 interface IContactLink {
   gitHub: ISocialLink

@@ -3,8 +3,8 @@ import cn from 'clsx'
 import {ButtonBase} from '@mui/material'
 
 import './Company.scss'
-import {BLANK_LINK_PROPS} from '@utils/constants'
-import {ICompany} from '@utils/types'
+import {BLANK_LINK_PROPS} from '#utils/constants'
+import {ICompany} from '#utils/types'
 import Tooltip from './Tooltip'
 
 interface ICompanyProps extends ICompany {

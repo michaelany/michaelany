@@ -2,7 +2,7 @@ import {Drawer as MuiDrawer, IconButton} from '@mui/material'
 import {ArrowBackRounded as ArrowBackIcon} from '@mui/icons-material'
 
 import './Drawer.scss'
-import {Navigation} from '@components/common'
+import {Navigation} from '#components/common'
 import Settings from './Settings'
 
 interface IDrawerProps {

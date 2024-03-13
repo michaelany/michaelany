@@ -2,16 +2,16 @@ import {useTranslation, Trans} from 'react-i18next'
 import {Tooltip} from '@mui/material'
 import {ChatRounded as ChatIcon} from '@mui/icons-material'
 
-import {Pagination, Copyright} from '@components/common'
-import {ROUTE} from '@utils/constants'
-import {DURATION} from '@styles/theme'
+import {Section} from '#components/common'
+import {ROUTE} from '#utils/constants'
+import {DURATION} from '#styles/theme'
 import Videos from './Videos'
 
 export default function Vlog() {
   const {t} = useTranslation()
 
   return (
-    <section className="Section Section_single Section_pagination">
+    <Section wide prevTo={ROUTE.portfolio} nextTo={ROUTE.contact}>
       <div>
         <h1 className="Title Title_withIcon">
           {t('title.vlog')}
@@ -34,8 +34,6 @@ export default function Vlog() {
         </h1>
         <Videos />
       </div>
-      <Pagination prevTo={ROUTE.portfolio} nextTo={ROUTE.contact} />
-      <Copyright />
-    </section>
+    </Section>
   )
 }

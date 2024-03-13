@@ -1,0 +1,15 @@
+.VideoDate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 6px;
+  font-size: $font-size_smaller;
+  & > span:not(:last-child) {
+    font-weight: bold;
+  }
+}
+
+.VideoDate-Icon {
+  position: relative;
+  top: -2px;
+}

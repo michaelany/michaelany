@@ -1,9 +1,8 @@
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import {TFunction} from 'i18next'
-import {differenceInDays, differenceInMonths} from 'date-fns'
 
-import {DURATION} from '@styles/theme'
-import {TProjectType, IPeriodPart, IWidth, TLng} from './types'
+import {DURATION} from '#styles/theme'
+import {TProjectType, IPeriodPart, IWidth} from './types'
 
 export const importImg = (path: string): string =>
   new URL(`/src/assets/img/${path}`, import.meta.url).href
@@ -39,28 +38,4 @@ export const scrollToView = (el: HTMLElement) => {
     behavior: 'smooth',
     block: 'start',
   })
-}
-
-export const getTimeSince = (date: Date, lng: TLng): string => {
-  const currentDate = new Date()
-  const days = differenceInDays(currentDate, date)
-  const months = differenceInMonths(currentDate, date)
-  const ruLng = lng === 'ru'
-  if (months >= 12) {
-    const years = months / 12
-    return ruLng
-      ? `${Math.floor(years)} год${Math.floor(years) % 10 === 1 && Math.floor(years) !== 11 ? '' : Math.floor(years) % 10 === 2 && Math.floor(years) !== 12 ? 'а' : 'ов'} назад`
-      : `${Math.floor(years)} year${Math.floor(years) > 1 ? 's' : ''} ago`
-  } else if (months > 0) {
-    const russianMonthsEnding =
-      months === 1 ? 'месяц' : months < 5 ? 'месяца' : 'месяцев'
-    return ruLng
-      ? `${months} ${russianMonthsEnding} назад`
-      : `${months} month${months > 1 ? 's' : ''} ago`
-  } else if (days > 0) {
-    const russianDaysEnding = days === 1 ? 'день' : days < 5 ? 'дня' : 'дней'
-    return ruLng
-      ? `${days} ${russianDaysEnding} назад`
-      : `${days} day${days > 1 ? 's' : ''} ago`
-  } else return ruLng ? 'Сегодня' : 'Today'
 }

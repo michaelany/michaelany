@@ -4,10 +4,10 @@ import {TFunction} from 'i18next'
 import {useMediaQuery, Collapse, Grid} from '@mui/material'
 
 import './Features.scss'
-import {Animate} from '@components/common'
-import {QUERY_BREAKPOINT} from '@utils/constants'
-import {IFeature, TEffect} from '@utils/types'
-import {DURATION} from '@styles/theme'
+import {Animate} from '#components/common'
+import {QUERY_BREAKPOINT} from '#utils/constants'
+import {IFeature, TEffect} from '#utils/types'
+import {DURATION} from '#styles/theme'
 
 interface IFeaturesProps {
   items: IFeature[]

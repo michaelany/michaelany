@@ -1,12 +1,12 @@
-import {useState} from 'react'
+import {useState, memo} from 'react'
 import {useScrollTrigger, Slide, IconButton} from '@mui/material'
 import {MenuRounded as MenuIcon} from '@mui/icons-material'
 
 import './Header.scss'
-import {Logo} from '@components/common'
+import {Logo} from '#components/common'
 import Drawer from './Drawer'
 
-export default function Header() {
+const Header = memo(() => {
   const [open, setOpen] = useState(false)
   const trigger: boolean = useScrollTrigger()
 
@@ -17,18 +17,22 @@ export default function Header() {
   return (
     <>
       <Slide appear={false} in={!trigger}>
-        <header className="Header">
-          <IconButton
-            className="Colorful"
-            aria-label="Show"
-            onClick={handleOpen}
-          >
-            <MenuIcon className="ButtonIcon" />
-          </IconButton>
-          <Logo />
+        <header>
+          <div className="Header-Content">
+            <IconButton
+              className="Colorful"
+              aria-label="Show"
+              onClick={handleOpen}
+            >
+              <MenuIcon className="ButtonIcon" />
+            </IconButton>
+            <Logo />
+          </div>
         </header>
       </Slide>
       <Drawer open={open} onClose={handleClose} />
     </>
   )
-}
+})
+
+export default Header

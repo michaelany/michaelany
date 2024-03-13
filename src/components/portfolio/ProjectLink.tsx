@@ -4,16 +4,16 @@ import {TFunction} from 'i18next'
 import {Grid, ButtonBase} from '@mui/material'
 
 import './ProjectLink.scss'
-import {Animate, Tilt, Panel} from '@components/common'
-import {getGridAnimationDelay, tProjectTypes} from '@utils/helpers'
+import {Animate, Tilt, Panel} from '#components/common'
+import {getGridAnimationDelay, tProjectTypes} from '#utils/helpers'
 import {
   DETECT,
   ROUTE,
   PROJECT_ROUTE,
   PATH_COLOR,
   RANDOM_EFFECTS,
-} from '@utils/constants'
-import {TProjectName, TProjectType, IWidth} from '@utils/types'
+} from '#utils/constants'
+import {TProjectName, TProjectType, IWidth} from '#utils/types'
 
 interface IProjectLinkProps {
   t: TFunction

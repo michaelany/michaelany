@@ -1,7 +1,7 @@
 import {useMediaQuery} from '@mui/material'
 
-import {Sections} from '@components/common'
-import {QUERY_BREAKPOINT} from '@utils/constants'
+import {Sections} from '#components/common'
+import {QUERY_BREAKPOINT} from '#utils/constants'
 import Greeting from './Greeting'
 import Banner from './Banner'
 

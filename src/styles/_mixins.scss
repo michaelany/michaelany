@@ -14,9 +14,9 @@
 }
 
 @mixin retinaImg($path, $file) {
-  background-image: url('#{$path}.#{$file}');
+  background-image: url('src/#{$path}.#{$file}');
   @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-    background-image: url('#{$path}@2x.#{$file}');
+    background-image: url('src/#{$path}@2x.#{$file}');
   }
 }
 

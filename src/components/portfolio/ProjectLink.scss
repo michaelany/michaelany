@@ -34,7 +34,7 @@ $projects: 'msp', 'glyphs', 'lazyaz', 'lazyazd', 'whip', 'saffron', 'fcdc',
 .ProjectLink-View {
   @each $project in $projects {
     &_name_#{$project}::after {
-      @include retinaImg('@assets/img/projects/#{$project}', 'jpg');
+      @include retinaImg('assets/img/projects/#{$project}', 'jpg');
     }
   }
   &::after {

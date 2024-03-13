@@ -1,0 +1,24 @@
+.Video-Content {
+  color: white;
+}
+
+.Video-Player {
+  background-color: black;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-bottom: 40px;
+  @include animation(fadeIn);
+}
+
+.Video-Panel {
+  display: flex;
+}
+
+.Video-Frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.Video-Text {
+  margin-bottom: 1em;
+}

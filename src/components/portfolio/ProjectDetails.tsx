@@ -14,17 +14,17 @@ import {
 } from '@mui/icons-material'
 
 import './ProjectDetails.scss'
-import {Features, Company} from '@components/common'
-import {tProjectTypes} from '@utils/helpers'
+import {Features, Company, Section} from '#components/common'
+import {tProjectTypes} from '#utils/helpers'
 import {
   TProjectName,
   IFeature,
   TProjectType,
   TCompanyName,
   TKey,
-} from '@utils/types'
-import {COMPANY} from '@data/common'
-import {BLANK_LINK_PROPS} from '@utils/constants'
+} from '#utils/types'
+import {COMPANY} from '#data/common'
+import {BLANK_LINK_PROPS} from '#utils/constants'
 import ProjectActions from './ProjectActions'
 
 interface IProjectDetailsProps {
@@ -85,7 +85,7 @@ export default function ProjectDetails({
   const company = COMPANY[companyName]
 
   return (
-    <section className="Section">
+    <Section>
       <div className="ProjectDetails-Block">
         <h1 className="Title Title_smallIndent">
           {title ?? t(`${projectKey}.title`)}
@@ -106,7 +106,7 @@ export default function ProjectDetails({
         stores={stores}
         companyName={companyName}
       />
-    </section>
+    </Section>
   )
 }
 

@@ -13,8 +13,8 @@ import {
 } from '@mui/icons-material'
 
 import './Navigation.scss'
-import {ROUTE} from '@utils/constants'
-import {TRoute} from '@utils/types'
+import {ROUTE} from '#utils/constants'
+import {TRoute} from '#utils/types'
 import Tooltip from './Tooltip'
 
 interface INavigationProps {

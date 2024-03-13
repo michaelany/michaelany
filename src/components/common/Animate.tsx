@@ -3,8 +3,8 @@ import cn from 'clsx'
 import {Waypoint} from 'react-waypoint'
 
 import './Animate.scss'
-import {TEffect} from '@utils/types'
-import {DURATION, EASING} from '@styles/theme'
+import {TEffect} from '#utils/types'
+import {DURATION, EASING} from '#styles/theme'
 
 interface IAnimateProps extends AllHTMLAttributes<HTMLElement> {
   children: ReactNode

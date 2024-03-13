@@ -4,9 +4,9 @@ import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
 import {CircularProgress} from '@mui/material'
 
 import './Map.scss'
-import markerIcon from '@assets/icons/marker.svg'
-import {ROUTE} from '@utils/constants'
-import STYLES from '@styles/map'
+import markerIcon from '#assets/icons/marker.svg'
+import {ROUTE} from '#utils/constants'
+import STYLES from '#styles/map'
 
 function Map() {
   const {t, i18n} = useTranslation()

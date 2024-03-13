@@ -1,7 +1,6 @@
 .Banner {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .Banner-Content {
@@ -12,12 +11,10 @@
 
 .Banner-Figure {
   @include responsiveBlock(64.472%);
-  margin: auto;
-  max-width: 750px;
   &::before {
     @include pseudo;
     background: center / contain no-repeat;
-    @include retinaImg('@assets/img/shapes/reflection', 'png');
+    @include retinaImg('assets/img/shapes/reflection', 'png');
     width: 33%;
     height: 78%;
     top: 0.5%;
