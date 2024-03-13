@@ -27,7 +27,7 @@ export default function Copyright() {
   const {t} = useTranslation()
 
   return (
-    <footer className="Copyright">
+    <div className="Copyright">
       <p>
         <CopyrightIcon className="Copyright-Icon" /> <time>{year}</time>,{' '}
         {t('copyright.crafted')}{' '}
@@ -53,7 +53,7 @@ export default function Copyright() {
           </Tooltip>
         ))}
       </div>
-    </footer>
+    </div>
   )
 }
 
