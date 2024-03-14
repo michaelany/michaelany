@@ -84,7 +84,7 @@ const ExtraContent = ({t, type, item}: IExtraContentProps) => {
 }
 
 const getEffect = (xs: boolean, index: number): TEffect =>
-  xs ? 'bottom' : index % 2 ? 'right' : 'left'
+  xs ? 'bottom' : index % 2 ? 'left' : 'right'
 
 const renderLabel = (item: Omit<IFeature, 'Icon'>): string | JSX.Element =>
   item.time ? (

@@ -1,11 +1,9 @@
-.Greeting-Content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.Greeting {
   padding-bottom: 160px;
   @include lg {
     padding-bottom: 80px;
   }
+
   @include xs {
     .Sections-SectionWrapper:first-child > & {
       padding-bottom: 0;

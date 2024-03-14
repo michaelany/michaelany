@@ -32,7 +32,7 @@ export default function Greeting() {
   const {t} = useTranslation()
 
   return (
-    <Section contentClassName="Greeting-Content">
+    <Section className="Greeting">
       <div>
         <p className="Greeting-Text Greeting-First Title">
           {t(`home.hi.${getDayTime()}`)}
