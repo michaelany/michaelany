@@ -33,9 +33,8 @@ export const tProjectTypes = (
 export const tPeriodPart = (t: TFunction, periodPart: IPeriodPart): string =>
   `${t(`month.${periodPart.tKey}`)} ${periodPart.year}`
 
-export const scrollToView = (el: HTMLElement) => {
+export const scrollToView = (el: HTMLElement) =>
   scrollIntoView(el, {
     behavior: 'smooth',
     block: 'start',
   })
-}

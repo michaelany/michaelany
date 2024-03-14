@@ -41,12 +41,12 @@ interface ISnackbarContent {
 
 export default function ContactForm() {
   const {t} = useTranslation()
-  const [successDialogOpen, setSuccessDialogOpen] = useState(false)
+  const [successDialogOpen, setSuccessDialogOpen] = useState<boolean>(false)
   const [snackbar, setSnackbar] = useState<ISnackbarContent>({
     open: false,
     message: '',
   })
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
   const fieldElements: Record<
@@ -72,7 +72,7 @@ export default function ContactForm() {
       }
     })
     if (Object.values(newErrors).includes(true)) {
-      Object.keys(newErrors).some((key: string): boolean => {
+      Object.keys(newErrors).some((key) => {
         if (newErrors[key]) {
           const inputElement = fieldElements[key].current as HTMLInputElement
           inputElement.focus()

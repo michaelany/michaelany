@@ -9,8 +9,6 @@ import ProjectAssets from './ProjectAssets'
 export default function Project() {
   const params = useParams()
 
-  console.log('project.name', params.project)
-
   const project = PROJECTS.find((project) => project.name === params.project)
 
   if (!project) return <Navigate to={ROUTE.portfolio} replace={true} />

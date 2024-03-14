@@ -7,8 +7,8 @@ import {Logo} from '#components/common'
 import Drawer from './Drawer'
 
 const Header = memo(() => {
-  const [open, setOpen] = useState(false)
-  const trigger: boolean = useScrollTrigger()
+  const [open, setOpen] = useState<boolean>(false)
+  const trigger = useScrollTrigger()
 
   const handleOpen = () => setOpen(true)
 

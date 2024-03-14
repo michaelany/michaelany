@@ -10,7 +10,7 @@ import santaImg from '#assets/img/pictures/santa.png'
 import {DURATION} from '#styles/theme'
 
 export default function Message() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
     if (sessionStorage.messageChecked) return

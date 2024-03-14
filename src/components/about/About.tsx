@@ -47,7 +47,7 @@ export default function About() {
   )
 }
 
-const textValues: string[] = ['UI/UX', 'title.vlog', CONTACT_LINK.youTube.title]
+const textValues = ['UI/UX', 'title.vlog', CONTACT_LINK.youTube.title]
 
 const transComponents = [
   <strong />,
@@ -60,7 +60,7 @@ const transComponents = [
   />,
 ]
 
-const countriesVisited: string[] = [
+const countriesVisited = [
   'New Zealand',
   'Japan',
   'Russian Federation',

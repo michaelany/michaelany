@@ -283,7 +283,7 @@ const EN = {
       step20:
         'I moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Launched my {{1}} channel. Obtained a work visa',
       step21:
-        'I moved to New Zealand on a work visa from the {{0}} company. Working, settling in, building relationships with hobbits and alpacas. I run the {{1}} channel',
+        'I moved to New Zealand on a work visa from the {{0}} company. Working, settling in, running my vlog, building relationships with hobbits and alpacas',
     },
   },
   portfolio: {

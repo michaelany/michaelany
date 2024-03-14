@@ -10,9 +10,7 @@ export default function Settings() {
   const {t, i18n} = useTranslation()
   const ruLng = i18n.language === 'ru'
 
-  const handleLanguageSwitch = () => {
-    i18n.changeLanguage(ruLng ? 'en' : 'ru')
-  }
+  const handleLanguageSwitch = () => i18n.changeLanguage(ruLng ? 'en' : 'ru')
 
   const Icon = ruLng ? RuIcon : EnIcon
   const title = t('title.language')

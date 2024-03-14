@@ -12,9 +12,7 @@ function Map() {
   const {t, i18n} = useTranslation()
   const navigate = useNavigate()
 
-  const handleMarkerClick = () => {
-    navigate(ROUTE.about)
-  }
+  const handleMarkerClick = () => navigate(ROUTE.about)
 
   return (
     <div className="Map">
