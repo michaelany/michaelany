@@ -19,7 +19,7 @@ export default function Vlog() {
             title={
               <Trans
                 i18nKey="vlog.description"
-                values={['👋', '👨‍💻', '🙂', '😉', '✌️']}
+                values={['👋', 8, '👨‍💻', '🙂', '😉', '✌️']}
                 components={[<p className="TooltipParagraph" />]}
               />
             }

@@ -330,40 +330,40 @@ const EN = {
       newArchitecture: 'Try new module project architecture',
     },
     project: {
-      ally2: {
+      'ally-2': {
         text: common.projects.ally,
       },
-      strongp: {
+      'strongher-cms': {
         text: common.projects.cmsFit,
       },
       pridefit: {
         text: 'Subscription landing page for the mobile fitness application',
       },
-      allyp: {
+      'ally-cms': {
         text: 'Content management system for the interactive figures {{0}} mobile application',
       },
-      pridefitp: {
+      'pridefit-cms': {
         text: common.projects.cmsFit,
       },
       madfit: {
         text: 'Landing page & subscription service for the mobile fitness application',
       },
-      madfitp: {
+      'madfit-cms': {
         text: common.projects.cmsFit,
       },
-      vibe: {
+      'vibe-media': {
         text: 'Landing page of the digital marketing agency',
       },
       tradease: {
         text: 'Building order management website',
       },
-      t1online: {
+      't1-online': {
         text: 'Corporate mobile application for company employees',
       },
-      ninjal: {
+      'road-ninja-landing': {
         text: 'Landing page for the truck drivers hire service',
       },
-      ninja: {
+      'road-ninja': {
         text: 'Truck drivers hire service',
       },
       celebration: {
@@ -372,26 +372,26 @@ const EN = {
       ally: {
         text: common.projects.ally,
       },
-      presentmel: {
+      'present-me-landing': {
         text: 'Landing page for the jobseeker profile creation service',
       },
-      presentmep: {
+      'present-me-portal': {
         text: 'Admin panel of the job seeker creating profile service',
       },
-      presentme: {
+      'present-me': {
         text: 'Service for creating a job seeker profile',
       },
       dropdrone: {
         text: 'Agricultural startup website',
       },
-      hatched: {
+      'just-hatched': {
         text: 'Landing page for the mobile application tracker for newborn babies',
       },
       uls: {
         title: 'United Login System',
         text: 'Single user account of the company',
       },
-      proximal: {
+      'proximal-coffee': {
         text: 'Landing page for the coffee shop',
       },
       embp: {
@@ -401,55 +401,55 @@ const EN = {
       tmf: {
         text: 'Construction company website',
       },
-      lite: {
+      '7glyphs-lite': {
         text: 'Landing page for the digital agency service',
       },
-      melissa: {
+      'melissa-chalmers': {
         text: 'Fitness blogger landing page',
       },
-      foodm: {
+      foodprint: {
         text: 'Discount food ordering service in restaurants mobile application',
       },
-      foodp: {
+      'foodprint-portal': {
         text: 'Portal of the discount food ordering service in restaurants',
       },
-      food: {
+      'foodprint-landing': {
         text: 'Landing page of the service for ordering discount food in restaurants',
       },
       sds: {
         text: 'Enterprise service to work with the company document flow',
       },
-      strong: {
+      strongher: {
         text: 'Mobile fitness application website',
       },
-      glyphs2: {
+      '7glyphs-2': {
         text: 'Home website of the digital agency',
       },
-      rogue: {
+      'rogue-travel': {
         text: 'Flight & hotel group booking service',
       },
-      trucks: {
+      'quarry-trucks': {
         text: 'Truck traffic monitoring service',
       },
-      services: {
+      'service-packages': {
         text: 'Landing page for complex services of the digital agency',
       },
       fcdc: {
         text: 'Event management service admin panel',
       },
-      saffron: {
+      '12-saffron': {
         text: 'Landing page for sale of the private home in New Zealand',
       },
-      whip: {
+      'whip-around': {
         text: 'Vehicle inspection service',
       },
-      lazyazd: {
+      'lazyaz-dashboard': {
         text: 'Admin panel of the delivery service',
       },
       lazyaz: {
         text: 'Web platform for the delivery service',
       },
-      glyphs: {
+      '7glyphs': {
         text: 'Home site of the digital agency',
       },
       msp: {
@@ -464,7 +464,7 @@ const EN = {
   },
   vlog: {
     description:
-      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for 8 years. I went from junior coder to lead developer. I work for the New Zealand digital company 7 glyphs Ltd. {{1}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{2}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful{{3}}</0><0>Peace and love to everyone {{3}}",
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I went from junior coder to lead developer. I work for the New Zealand digital company 7 glyphs Ltd. {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful{{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',

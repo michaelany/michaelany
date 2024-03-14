@@ -41,49 +41,6 @@ export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 
 export type TProjectFilter = 'all' | TProjectType
 
-export type TProjectName =
-  | 'ally2'
-  | 'strongp'
-  | 'pridefit'
-  | 'allyp'
-  | 'pridefitp'
-  | 'madfit'
-  | 'madfitp'
-  | 'vibe'
-  | 'tradease'
-  | 't1online'
-  | 'ninjal'
-  | 'ninja'
-  | 'celebration'
-  | 'ally'
-  | 'presentmel'
-  | 'presentmep'
-  | 'presentme'
-  | 'dropdrone'
-  | 'hatched'
-  | 'uls'
-  | 'proximal'
-  | 'embp'
-  | 'tmf'
-  | 'lite'
-  | 'melissa'
-  | 'foodm'
-  | 'foodp'
-  | 'food'
-  | 'sds'
-  | 'strong'
-  | 'glyphs2'
-  | 'rogue'
-  | 'trucks'
-  | 'services'
-  | 'fcdc'
-  | 'saffron'
-  | 'whip'
-  | 'lazyazd'
-  | 'lazyaz'
-  | 'glyphs'
-  | 'msp'
-
 export type TKey = string | TKeyObject
 
 export interface TKeyObject {
@@ -165,7 +122,8 @@ export interface IProjectImages {
 export interface IProject {
   private?: boolean
   mobileApp?: boolean
-  name: TProjectName
+  name: string
+  color: TColor
   title?: string
   textValues?: (string | number)[]
   types: TProjectType[]

@@ -7,25 +7,21 @@ import {useMediaQuery} from '@mui/material'
 import './ProjectAssets.scss'
 import {Animate, Section} from '#components/common'
 import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
-import {TProjectName, IProjectImages} from '#utils/types'
+import {IProject, IProjectImages} from '#utils/types'
 import Carousel from './Carousel'
 
 interface IProjectAssetsProps {
-  name: TProjectName
-  title?: string
+  project: IProject
+}
+
+interface IScreenshotsProps {
+  t: TFunction
+  md: boolean
+  name: string
   images: IProjectImages
 }
 
-interface IScreenshotsProps extends Omit<IProjectAssetsProps, 'title'> {
-  t: TFunction
-  md: boolean
-}
-
-export default function ProjectAssets({
-  name,
-  title,
-  images,
-}: IProjectAssetsProps) {
+export default function ProjectAssets({project}: IProjectAssetsProps) {
   const {t} = useTranslation()
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
@@ -40,12 +36,17 @@ export default function ProjectAssets({
           duration={md ? undefined : 'longer'}
         >
           <img
-            src={images.logo[1]}
-            srcSet={`${images.logo[2]} 2x`}
-            alt={title}
+            src={project.images.logo[1]}
+            srcSet={`${project.images.logo[2]} 2x`}
+            alt={project.title}
           />
         </Animate>
-        <Screenshots t={t} md={md} name={name} images={images} />
+        <Screenshots
+          t={t}
+          md={md}
+          name={project.name}
+          images={project.images}
+        />
       </div>
     </Section>
   )

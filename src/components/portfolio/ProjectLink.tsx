@@ -6,35 +6,21 @@ import {Grid, ButtonBase} from '@mui/material'
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '#components/common'
 import {getGridAnimationDelay, tProjectTypes} from '#utils/helpers'
-import {
-  DETECT,
-  ROUTE,
-  PROJECT_ROUTE,
-  PATH_COLOR,
-  RANDOM_EFFECTS,
-} from '#utils/constants'
-import {TProjectName, TProjectType, IWidth} from '#utils/types'
+import {DETECT, ROUTE, RANDOM_EFFECTS} from '#utils/constants'
+import {IWidth, IProject} from '#utils/types'
 
 interface IProjectLinkProps {
   t: TFunction
   index: number
   width: IWidth
-  mobileApp?: boolean
-  name: TProjectName
-  title?: string
-  types: TProjectType[]
-  logo: string[]
+  project: IProject
 }
 
 export default function ProjectLink({
   t,
   index,
   width,
-  mobileApp,
-  name,
-  title,
-  types,
-  logo,
+  project,
 }: IProjectLinkProps) {
   const effect = useMemo(
     () =>
@@ -42,9 +28,8 @@ export default function ProjectLink({
     [width.sm]
   )
 
-  const path = PROJECT_ROUTE[name]
-
-  const projectTitle = title ?? t(`portfolio.project.${name}.title`)
+  const projectTitle =
+    project.title ?? t(`portfolio.project.${project.name}.title`)
 
   return (
     <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
@@ -57,17 +42,21 @@ export default function ProjectLink({
           <ButtonBase
             focusRipple
             component={Link}
-            className={`ProjectLink-Item ColorInteract ColorInteract_color_${PATH_COLOR[path]}`}
-            to={`${ROUTE.portfolio}${path}`}
+            className={`ProjectLink-Item ColorInteract ColorInteract_color_${project.color}`}
+            to={`${ROUTE.portfolio}/${project.name}`}
           >
             <Panel
-              className={`ProjectLink-View ProjectLink-View_name_${name}`}
+              className={`ProjectLink-View ProjectLink-View_name_${project.name}`}
             />
             <div className="ProjectLink-Content">
-              <img src={logo[0]} srcSet={`${logo[1]} 2x`} alt={projectTitle} />
+              <img
+                src={project.images.logo[0]}
+                srcSet={`${project.images.logo[1]} 2x`}
+                alt={projectTitle}
+              />
               <h3 className="ProjectLink-Title">{projectTitle}</h3>
               <p className="ProjectLink-Label">
-                {tProjectTypes(t, types, mobileApp)}
+                {tProjectTypes(t, project.types, project.mobileApp)}
               </p>
             </div>
           </ButtonBase>

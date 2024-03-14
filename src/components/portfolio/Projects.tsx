@@ -57,11 +57,7 @@ export default function Projects() {
             t={t}
             width={width}
             index={index}
-            mobileApp={project.mobileApp}
-            name={project.name}
-            title={project.title}
-            types={project.types}
-            logo={project.images.logo}
+            project={project}
           />
         ))}
       </Grid>

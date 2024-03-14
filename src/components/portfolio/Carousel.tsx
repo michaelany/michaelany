@@ -8,7 +8,6 @@ import {SwiperModule, SwiperOptions} from 'swiper/types'
 import './Carousel.scss'
 import PhoneSvg from '#assets/img/shapes/phone.svg?react'
 import {Animate, Panel} from '#components/common'
-import {TProjectName} from '#utils/types'
 import {DURATION} from '#styles/theme'
 
 interface ICarouselProps {
@@ -16,7 +15,7 @@ interface ICarouselProps {
   mobileOnly?: boolean
   t: TFunction
   md: boolean
-  name: TProjectName
+  name: string
   images: string[][]
   swiper: SwiperCore
   setSwiper: Dispatch<SetStateAction<SwiperCore>>
