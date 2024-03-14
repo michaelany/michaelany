@@ -46,7 +46,11 @@ const getTimeSince = (date: Date, lng: TLng): string => {
       : `${months} month${months > 1 ? 's' : ''} ago`
   } else if (days > 0) {
     const russianDaysEnding =
-      days === 1 || days === 21 ? 'день' : days < 5 ? 'дня' : 'дней'
+      days === 1 || days === 21
+        ? 'день'
+        : days < 5 || (days > 21 && days < 25)
+          ? 'дня'
+          : 'дней'
     return ruLng
       ? `${days} ${russianDaysEnding} назад`
       : `${days} day${days > 1 ? 's' : ''} ago`
