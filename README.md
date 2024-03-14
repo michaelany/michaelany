@@ -14,8 +14,8 @@
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 💼 &nbsp;8 years of [experience](https://michaelany.com/#/experience)
-- 📹 &nbsp;I have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube] creator
-- 🇳🇿 &nbsp;Live in Auckland, New Zealand
+- 📹 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube] creator
+- 🇳🇿 &nbsp;Based in Auckland, New Zealand
 
 <details>
   <summary>🔽 &nbsp;<strong>More</strong></summary>
@@ -43,7 +43,7 @@
 ## [Skills](https://michaelany.com/#/skills)
 
 - 👾 &nbsp;Craft [applications](https://michaelany.com/#/portfolio#app), [multi-page sites](https://michaelany.com/#/portfolio#site), [landing pages](https://michaelany.com/#/portfolio#landing) & [admin panels](https://michaelany.com/#/portfolio#admin)
-- 🛠 &nbsp;Main stack is `TypeScript` + `React` + `React Query` + `Zustand`
+- 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Zustand` + `Material UI`
 - ✅ &nbsp;Create reliable & well-functioning interfaces
 - 🏎 &nbsp;Write modern & productive code
 - 🎨 &nbsp;Create semantic, cross-browser & pixel-perfect markup

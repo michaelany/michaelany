@@ -169,6 +169,7 @@ const textValues = [
   TECHNOLOGY_TITLE.react,
   TECHNOLOGY_TITLE.reactquery,
   TECHNOLOGY_TITLE.zustand,
+  TECHNOLOGY_TITLE.mui,
   CONTACT_LINK.youTube.title,
   TECHNOLOGY_TITLE.fcpx,
 ]

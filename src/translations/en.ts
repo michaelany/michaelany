@@ -59,19 +59,19 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity from scratch, bringing {{0}} ideas to life. I have my own <2>${common.title.vlog}</2> on <3>{{2}}</3>. Live in New Zealand`,
+    text: `I'm a passionate software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity from scratch, bringing {{0}} ideas to life. I have my own <2>${common.title.vlog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
-        text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to large web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
+        text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to complex web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Lead software engineer',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       vlogger: {
-        label: '{{0}} channel creator',
-        extraLabel: '& {{0}} channel creator',
+        label: '{{0}} content creator',
+        extraLabel: '& {{0}} content creator',
         text: `I've launched my own channel on YouTube. I share my journey in programming and life, as well as provide insights and knowledge. More details in the <0>${common.title.vlog}</0> or on <1>{{1}}</1>`,
       },
       experience: {
@@ -84,7 +84,7 @@ const EN = {
       },
       programming: {
         label: 'Love to code',
-        text: `Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. <0>${common.title.vlog}</0> is also related to programming`,
+        text: `Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. My <0>${common.title.vlog}</0> is also related to programming`,
       },
       growing: {
         label: 'Constantly learning',
@@ -122,7 +122,7 @@ const EN = {
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My main stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I create <5>{{4}} videos</5> in {{5}}',
+    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favorite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4> + <4>{{4}}</4>. I create <5>{{5}} videos</5> in {{6}}',
     feature: {
       interface: {
         label: 'Create reliable & well-functioning interfaces',
@@ -190,7 +190,7 @@ const EN = {
     learn: 'Exploring',
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. Share my experience & knowledge in my <2>${common.title.vlog}</2>`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming and life, as well as my experience and knowledge in my <2>${common.title.vlog}</2>`,
     duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
@@ -222,7 +222,7 @@ const EN = {
           'Developed several large-scale applications for large customers',
         resultForeign: 'Developed from scratch many different foreign projects',
         resultApp:
-          'Developed many components and sections for a large application',
+          'Developed many components and sections for a complex application',
         pathLead: 'Passed the way from an ordinary developer to a team lead',
         pathFront: 'Grew from junior to a middle frontend developer',
         internship: 'Created a corporate internship program',
@@ -287,7 +287,8 @@ const EN = {
     },
   },
   portfolio: {
-    limit: 'Projects with no {{0}} that I can showcase {{1}}',
+    limit:
+      "Here are some of the projects I've worked on that have no {{0}}, which I can showcase {{1}}",
     developed: 'Developed in',
     filter: {
       all: 'All',
@@ -464,7 +465,7 @@ const EN = {
   },
   vlog: {
     description:
-      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I went from junior coder to lead developer. I work for the New Zealand digital company 7 glyphs Ltd. {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful{{4}}</0><0>Peace and love to everyone {{5}}",
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity from scratch, bringing UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand digital company 7 glyphs Ltd. {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful{{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',
