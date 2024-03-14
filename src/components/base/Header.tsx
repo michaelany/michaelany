@@ -17,7 +17,7 @@ const Header = memo(() => {
   return (
     <>
       <Slide appear={false} in={!trigger}>
-        <header>
+        <header className="Header">
           <div className="Header-Content">
             <IconButton
               className="Colorful"

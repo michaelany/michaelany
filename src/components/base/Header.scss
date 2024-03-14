@@ -1,18 +1,22 @@
+.Header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
 .Header-Content {
+  height: $header_height;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  height: $header_height;
-  border-bottom: $header_border-width solid $color_green;
-  background-color: rgba(white, 0.95);
-  z-index: 100;
   padding-left: 8px;
   padding-right: 8px;
+  border-bottom: $header_border-width solid $color_green;
+  background-color: rgba(white, 0.95);
   transition:
     color $duration_short $easing_in-out,
     background-color $duration_standard $easing_in-out;
+
   .App_color_alternate & {
     @include animationAlternate(alternateBorderColor);
   }
