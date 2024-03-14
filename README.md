@@ -14,7 +14,7 @@
 - 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bring UI/UX ideas to life
 - 💼 &nbsp;8 years of [experience](https://michaelany.com/#/experience)
-- 📹 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube] creator
+- 📹 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube]
 - 🇳🇿 &nbsp;Based in Auckland, New Zealand
 
 <details>
