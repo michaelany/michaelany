@@ -219,10 +219,11 @@ const EN = {
       },
       achievement: {
         resultCorporate:
-          'Developed several large-scale applications for major clients',
-        resultForeign: 'Developed various different projects from scratch',
+          'Successfully developed several large-scale applications for the major clients',
+        resultForeign:
+          'Successfully developed various different projects from scratch',
         resultApp:
-          'Developed many components and sections for a complex application',
+          'Successfully developed many components and sections for a complex application',
         pathLead: 'Passed the way from an ordinary developer to a team lead',
         pathFront: 'Grew from junior to a middle frontend developer',
         internship: 'Created a corporate internship program',

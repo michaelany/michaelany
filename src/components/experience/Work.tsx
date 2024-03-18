@@ -156,8 +156,8 @@ const jobs: IJob[] = [
         tKey: 'technologiesBase',
         values: [
           TECHNOLOGY_TITLE.js,
-          TECHNOLOGY_TITLE.react,
           TECHNOLOGY_TITLE.css,
+          TECHNOLOGY_TITLE.react,
         ],
       },
       'work',
