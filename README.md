@@ -11,8 +11,8 @@
 ## [About](https://michaelany.com/#/about)
 
 - 👨‍💻 &nbsp;Lead software engineer at [7 glyphs](https://7glyphs.com/)
-- 🚀 &nbsp;Create [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
-- 💡 &nbsp;Bring UI/UX ideas to life
+- 🚀 &nbsp;Creating [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
+- 💡 &nbsp;Bringing UI/UX ideas to life
 - 💼 &nbsp;8 years of [experience](https://michaelany.com/#/experience)
 - 📹 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube]
 - 🇳🇿 &nbsp;Based in Auckland, New Zealand
@@ -42,25 +42,25 @@
 
 ## [Skills](https://michaelany.com/#/skills)
 
-- 👾 &nbsp;Craft [applications](https://michaelany.com/#/portfolio#app), [multi-page sites](https://michaelany.com/#/portfolio#site), [landing pages](https://michaelany.com/#/portfolio#landing) & [admin panels](https://michaelany.com/#/portfolio#admin)
+- 👾 &nbsp;Crafting [applications](https://michaelany.com/#/portfolio#app), [multi-page sites](https://michaelany.com/#/portfolio#site), [landing pages](https://michaelany.com/#/portfolio#landing) & [admin panels](https://michaelany.com/#/portfolio#admin)
 - 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Zustand` + `Material UI`
-- ✅ &nbsp;Create reliable & well-functioning interfaces
-- 🏎 &nbsp;Write modern & productive code
-- 🎨 &nbsp;Create semantic, cross-browser & pixel-perfect markup
-- 🎬 &nbsp;Create [YouTube videos](https://www.youtube.com/@michaelany/videos) in Final Cut Pro
+- ✅ &nbsp;Creating reliable & well-functioning interfaces
+- 🏎 &nbsp;Writing modern & productive code
+- 🎨 &nbsp;Creating semantic, cross-browser & pixel-perfect markup
+- 🎬 &nbsp;Creating [YouTube videos](https://www.youtube.com/@michaelany/videos) in Final Cut Pro
 
 <details>
   <summary>🔽 &nbsp;<strong>More</strong></summary>
 
-- 🧠 &nbsp;Choose a simple way to solve the problem
-- 🧩 &nbsp;Use a lot of patterns & techniques
-- 🧱 &nbsp;Build a modular & optimal project architecture
-- 🔧 &nbsp;Use modern frameworks, libraries, and tools
-- 📱 &nbsp;Implement responsive interface & animations
-- 🧹 &nbsp;Follow a consistent code style
-- 🔬 &nbsp;Refactor, optimize & test
-- 📒 &nbsp;Plan & decompose
-- 🐣 &nbsp;Make code reviews & teach
+- 🧠 &nbsp;Choosing a simple way to solve the problem
+- 🧩 &nbsp;Using a lot of patterns & techniques
+- 🧱 &nbsp;Building a modular & optimal project architecture
+- 🔧 &nbsp;Using modern frameworks, libraries, and tools
+- 📱 &nbsp;Implementing responsive interface & animations
+- 🧹 &nbsp;Following a consistent code style
+- 🔬 &nbsp;Refactoring, optimizing & testing
+- 📒 &nbsp;Planing & decomposing
+- 🐣 &nbsp;Making code reviews & teaching
 
 </details>&nbsp;
 

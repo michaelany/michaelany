@@ -3,7 +3,7 @@ import {Tooltip} from '@mui/material'
 import {ChatRounded as ChatIcon} from '@mui/icons-material'
 
 import {Section} from '#components/common'
-import {ROUTE} from '#utils/constants'
+import {ROUTE, YEARS_OF_EXPERIENCE} from '#utils/constants'
 import {DURATION} from '#styles/theme'
 import Videos from './Videos'
 
@@ -19,7 +19,7 @@ export default function Vlog() {
             title={
               <Trans
                 i18nKey="vlog.description"
-                values={['👋', 8, '👨‍💻', '🙂', '😉', '✌️']}
+                values={['👋', YEARS_OF_EXPERIENCE, '👨‍💻', '🙂', '😉', '✌️']}
                 components={[<p className="TooltipParagraph" />]}
               />
             }
