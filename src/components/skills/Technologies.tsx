@@ -70,7 +70,6 @@ export default function Technologies({
             </AccordionSummary>
             <AccordionDetails>
               <TechnologyList
-                t={t}
                 technologies={group.technologies}
                 firstTechnologyActionRef={
                   index === 0 ? firstTechnologyActionRef : undefined

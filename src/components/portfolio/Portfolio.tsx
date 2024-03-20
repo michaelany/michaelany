@@ -15,18 +15,16 @@ export default function Portfolio() {
       <div>
         <h1 className="Title Title_withIcon">
           {t('title.portfolio')}
-          {import.meta.env.VITE_SHOW_PRIVATE_PROJECTS !== 'true' && (
-            <Tooltip
-              title={t('portfolio.limit', {replace: ['NDA', '👀']})}
-              enterDelay={0}
-              enterTouchDelay={0}
-              leaveTouchDelay={DURATION.lingering}
-            >
-              <div className="TitleIconWrapper">
-                <ChatIcon />
-              </div>
-            </Tooltip>
-          )}
+          <Tooltip
+            title={t('portfolio.limit', {replace: ['NDA', '👀']})}
+            enterDelay={0}
+            enterTouchDelay={0}
+            leaveTouchDelay={DURATION.lingering}
+          >
+            <div className="TitleIconWrapper">
+              <ChatIcon />
+            </div>
+          </Tooltip>
         </h1>
         <Projects />
       </div>

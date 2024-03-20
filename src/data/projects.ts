@@ -634,7 +634,6 @@ const projects: IProject[] = [
     mobileApp: true,
     name: 't1-online',
     color: 'blue',
-    title: 'T1 Онлайн',
     types: ['app'],
     companyName: 't1',
     stores: [
@@ -2583,13 +2582,29 @@ const projects: IProject[] = [
   },
 ]
 
-const PROJECTS: IProject[] =
-  import.meta.env.VITE_SHOW_PRIVATE_PROJECTS === 'true'
-    ? projects
-    : projects.filter((project: IProject) => !project.private)
+const PUBLIC_PROJECTS: IProject[] = projects.filter(
+  (project: IProject) => !project.private
+)
 
-const OTHER_PROJECTS_COUNT = 5
+export const PRIVATE_PROJECTS: IProject[] = projects.filter(
+  (project: IProject) => project.private
+)
 
-export const PROJECTS_COUNT: number = projects.length + OTHER_PROJECTS_COUNT
+export const PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT = {
+  sevenGlyphs:
+    2 +
+    PRIVATE_PROJECTS.filter((project) => project.companyName === 'sevenGlyphs')
+      .length,
+  t1:
+    2 +
+    PRIVATE_PROJECTS.filter((project) => project.companyName === 't1').length,
+}
 
-export default PROJECTS
+export const PROJECTS_COUNT: number =
+  PUBLIC_PROJECTS.length +
+  Object.values(PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT).reduce(
+    (sum, count) => sum + count,
+    0
+  )
+
+export default PUBLIC_PROJECTS

@@ -212,10 +212,13 @@ const THEME: ThemeOptions = {
         root: {
           fontSize: FONT_SIZE.smaller,
           fontWeight: 'normal',
-          backgroundColor: 'transparent',
-          border: `1px solid ${COLOR.darkVioletAlpha}`,
-          color: COLOR.text,
-          margin: 4,
+        },
+        avatar: {
+          backgroundColor: 'white',
+          padding: 5,
+          '.MuiAvatar-img': {
+            objectFit: 'contain',
+          },
         },
         icon: {
           color: COLOR.darkVioletAlpha,

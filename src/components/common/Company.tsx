@@ -33,7 +33,7 @@ export default function Company({
         onClick={handleLinkClick}
       >
         <img
-          className="Company-Img"
+          className="Company-Image"
           src={images[0]}
           srcSet={`${images[1]} 2x`}
           alt={title}

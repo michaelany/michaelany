@@ -62,7 +62,7 @@ const Photo = () => {
       >
         <>
           <img
-            className="Social-Img"
+            className="Social-Image"
             width={imgSize}
             height={imgSize}
             src={meNormalImg}
@@ -70,7 +70,7 @@ const Photo = () => {
             alt={MY_NAME}
           />
           <img
-            className="Social-Img Social-Img_hidden"
+            className="Social-Image Social-Image_hidden"
             width={imgSize}
             height={imgSize}
             src={meExcitedImg}

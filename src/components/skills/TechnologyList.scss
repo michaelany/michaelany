@@ -1,40 +1,10 @@
-$technologies: 'js', 'ts', 'react', 'reactquery', 'redux', 'zustand', 'mobx',
-  'preact', 'svelte', 'vue', 'apollo', 'jquery', 'html', 'svg', 'pug',
-  'handlebars', 'markdown', 'laravel', 'css', 'sass', 'less', 'modules', 'bem',
-  'mui', 'styled', 'ant', 'reactstrap', 'materialize', 'bootstrap', 'semantic',
-  'npm', 'yarn', 'vite', 'webpack', 'gulp', 'gatsby', 'next', 'git', 'babel',
-  'prettier', 'eslint', 'storybook', 'jest', 'gsap', 'iterm', 'vscode',
-  'phpstorm', 'devtools', 'zeplin', 'sketch', 'figma', 'photoshop', 'optim',
-  'paw', 'clickup', 'fcpx', 'macos', 'gpt', 'reactnative', 'expo', 'node',
-  'mongo', 'mysql', 'php', 'docker', 'youtube', 'epidemic', 'mac', 'ipad',
-  'keyboard', 'mouse', 'trackpad', 'airpods', 'dock', 'mic', 'iphone', 'gopro',
-  'glasses', 'mascot';
-
 .Technologies-Item {
-  @include responsiveBlock;
-  overflow: hidden;
   width: 100%;
+  aspect-ratio: 1;
 }
 
-.Technologies-ItemContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @each $technology in $technologies {
-    &_name_#{$technology}::before {
-      @include retinaImg('assets/img/technologies/#{$technology}', 'png');
-    }
-  }
-  &::before {
-    @include pseudo(relative);
-    width: 50%;
-    height: 50%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
-  .Technologies-Item_disabled > & {
-    opacity: 0.15;
-  }
+.Technologies-Image {
+  object-fit: contain;
+  width: 50%;
+  height: 50%;
 }

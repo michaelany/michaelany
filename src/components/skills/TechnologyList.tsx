@@ -1,6 +1,4 @@
 import {RefObject} from 'react'
-import {TFunction} from 'i18next'
-import cn from 'clsx'
 import {Grid, ButtonBase, ButtonBaseActions} from '@mui/material'
 
 import './TechnologyList.scss'
@@ -9,19 +7,17 @@ import {BLANK_LINK_PROPS} from '#utils/constants'
 import {ITechnology} from '#utils/types'
 
 interface ITechnologyListProps {
-  t: TFunction
   technologies: ITechnology[]
   firstTechnologyActionRef?: RefObject<ButtonBaseActions>
 }
 
 export default function TechnologyList({
-  t,
   technologies,
   firstTechnologyActionRef,
 }: ITechnologyListProps) {
   return (
     <Grid container component="ul">
-      {technologies.map(({label, name, color, href, disabled}, index) => (
+      {technologies.map((technology, index) => (
         <Grid
           key={index}
           item
@@ -32,21 +28,23 @@ export default function TechnologyList({
           lg={4}
           xl={3}
         >
-          <Tooltip title={`${disabled ? `${t('skills.learn')} ` : ''}${label}`}>
+          <Tooltip title={technology.label}>
             <ButtonBase
               {...BLANK_LINK_PROPS}
               focusRipple
               component="a"
-              className={cn(
-                `Technologies-Item ColorInteract ColorInteract_color_${color}`,
-                disabled && 'Technologies-Item_disabled'
-              )}
-              href={href}
-              aria-label={label}
+              className={`Technologies-Item ColorInteract ColorInteract_color_${technology.color}`}
+              href={technology.href}
+              aria-label={technology.label}
               action={index === 0 ? firstTechnologyActionRef : undefined}
             >
-              <div
-                className={`Technologies-ItemContent Technologies-ItemContent_name_${name}`}
+              <img
+                className="Technologies-Image"
+                width={100}
+                height={100}
+                src={technology.images[0]}
+                srcSet={`${technology.images[1]} 2x`}
+                alt={technology.label}
               />
             </ButtonBase>
           </Tooltip>

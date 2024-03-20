@@ -65,7 +65,7 @@ const Content = ({
     return (
       <SwiperSlide key={image[0]} tag="figure">
         <img
-          className="Carousel-Img"
+          className="Carousel-Image"
           src={image[0]}
           srcSet={image[1] && `${image[1]} 2x`}
           alt={`${caption} ${index + 1}`}

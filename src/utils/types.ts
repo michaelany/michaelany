@@ -72,6 +72,7 @@ export interface ITechnology {
   name: string
   label: string
   color: TColor
+  images: any[]
   href: string
 }
 
@@ -82,6 +83,7 @@ export interface ITechnologyGroup {
 
 export interface ICompany {
   title: string
+  name: TCompanyName
   color: TColor
   images: any[]
   href: string
@@ -108,6 +110,7 @@ export interface IJob {
   current?: boolean
   company: ICompany
   occupations: TKey[]
+  tools?: string[]
   duties: TKey[]
   achievements: TKey[]
   features: IJobFeature[]

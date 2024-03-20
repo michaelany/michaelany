@@ -187,11 +187,12 @@ const EN = {
       software: 'Software',
       hardware: 'Hardware',
     },
-    learn: 'Exploring',
   },
   experience: {
     text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming and life, as well as my experience and knowledge in my <2>${common.title.vlog}</2>`,
-    duties: 'Duties',
+    projects: 'Projects',
+    tools: 'Base tools',
+    duties: 'Key duties',
     achievements: 'Achievements',
     current: 'Current position',
     occupation: common.occupation,
@@ -231,17 +232,24 @@ const EN = {
         mobile: 'Developed a corporate mobile application on {{0}}',
         interview: 'Conducted many interviews and hired a dozen developers',
         technologies:
-          'Studied and applied in practice many technologies and libraries',
+          'Studied and applied in practice a lot technologies and tools',
         technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}}',
         speed:
           'Set a personal record for the speed of completion of a project - {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
         visa: 'Relocated to New Zealand on a work visa by the company',
-        english: 'Improved English skills',
         work: 'Improved teamwork skills',
         orders: 'Processed thousands of requests',
         hardware: 'Gained extensive experience with software and hardware',
         softSkills: 'Improved soft skills',
+        architecture: 'Created my own ideal architecture for web applications',
+        routing: 'Implemented custom routing in one of the applications',
+        animations:
+          'Developed several landing pages with advanced and beautiful animations',
+        interfaces:
+          'Created a large number of multifunctional interfaces with custom charts, analytics, tables, forms, and dashboards',
+        businessLogic:
+          'Developed a large-scale financial application with extensive business logic and complex mathematical calculations and formulas on the client side',
       },
       feature: {
         busyFull: 'full-time',
@@ -360,6 +368,7 @@ const EN = {
         text: 'Building order management website',
       },
       't1-online': {
+        title: 'T1 Online',
         text: 'Corporate mobile application for company employees',
       },
       'road-ninja-landing': {

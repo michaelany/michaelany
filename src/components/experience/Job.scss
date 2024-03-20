@@ -97,7 +97,9 @@
 }
 
 .Job-Block {
-  margin-bottom: 24px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
 .Job-SubTitle {
@@ -129,8 +131,46 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 12px;
-  margin-right: -4px;
-  margin-bottom: -4px;
-  margin-left: -4px;
+  gap: 8px;
+  &_main {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+}
+
+.Job-Feature {
+  background-color: transparent;
+  border: 1px solid rgba($color_dark-violet, $dark-alfa);
+  color: $color_text;
+  .MuiAvatar-root {
+    color: $color_dark-violet;
+  }
+}
+
+.Job-Project {
+  font-weight: bold;
+  @each $key, $value, $secondValue in $colors-map {
+    &_color_#{$key} {
+      color: $secondValue;
+      background-color: rgba($value, 0.2);
+      &.Mui-focusVisible {
+        background-color: rgba($value, 0.4);
+      }
+      @include hover {
+        background-color: rgba($value, 0.4);
+      }
+    }
+  }
+}
+
+.Job-Tool {
+  background-color: transparent;
+  @each $key, $value, $secondValue in $colors-map {
+    &_color_#{$key} {
+      border: 1px solid rgba($secondValue, $dark-alfa);
+      .MuiAvatar-root {
+        background-color: rgba($secondValue, 0.1);
+      }
+    }
+  }
 }
