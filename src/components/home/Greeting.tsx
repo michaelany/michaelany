@@ -109,33 +109,18 @@ export default function Greeting() {
         })}
       </p>
       <div className="Greeting-Actions Actions">
-        <Button
-          className="Greeting-Eighth Greeting-Button Button Button_color_blue"
-          component={Link}
-          to={ROUTE.portfolio}
-          size="large"
-          endIcon={<WidgetsIcon />}
-        >
-          {t('title.portfolio')}
-        </Button>
-        <Button
-          className="Greeting-Nineth Greeting-Button Button Button_color_green"
-          component={Link}
-          to={ROUTE.contact}
-          size="large"
-          endIcon={<MailIcon />}
-        >
-          {t('title.contact')}
-        </Button>
-        <Button
-          className="Greeting-Tenth Greeting-Button Button Button_color_red"
-          component={Link}
-          to={ROUTE.vlog}
-          size="large"
-          endIcon={<CameraAltIcon />}
-        >
-          {t('title.vlog')}
-        </Button>
+        {links.map(({Icon, ...link}) => (
+          <Button
+            key={link.key}
+            className={`Greeting-${link.order} Greeting-Button Button Button_color_${link.color}`}
+            component={Link}
+            to={ROUTE[link.key]}
+            size="large"
+            endIcon={<Icon />}
+          >
+            {t(`title.${link.key}`)}
+          </Button>
+        ))}
       </div>
       <picture>
         <source
@@ -167,3 +152,9 @@ const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
   if (hours >= 12 && hours < 18) return 'afternoon'
   return 'evening'
 }
+
+const links = [
+  {key: 'portfolio', color: 'blue', order: 'Eighth', Icon: WidgetsIcon},
+  {key: 'contact', color: 'green', order: 'Nineth', Icon: MailIcon},
+  {key: 'vlog', color: 'red', order: 'Tenth', Icon: CameraAltIcon},
+]
