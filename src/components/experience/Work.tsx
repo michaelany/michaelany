@@ -91,7 +91,6 @@ const jobs: IJob[] = [
       'zeplin',
       'photoshop',
       'reactnative',
-      'php',
     ],
     duties: [
       'logicAppsSites',
