@@ -10,7 +10,6 @@
 }
 
 .Banner-Figure {
-  @include responsiveBlock(64.472%);
   &::before {
     @include pseudo;
     background: center / contain no-repeat;

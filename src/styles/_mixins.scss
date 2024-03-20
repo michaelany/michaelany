@@ -20,21 +20,6 @@
   }
 }
 
-@mixin responsiveBlock($percent: 100%) {
-  position: relative;
-  &::after {
-    @include pseudo(relative);
-    padding-bottom: $percent;
-  }
-  & > :first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-}
-
 @mixin hover {
   @media (hover: hover) {
     &:hover {

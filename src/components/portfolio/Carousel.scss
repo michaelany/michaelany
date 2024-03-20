@@ -5,7 +5,6 @@
     margin-bottom: 40px;
   }
   &_type_desktop {
-    @include responsiveBlock(70.35%);
     background-color: white;
   }
   &_type_mobile {
