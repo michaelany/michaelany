@@ -81,6 +81,7 @@ const jobs: IJob[] = [
       'webpack',
       'gulp',
       'gsap',
+      'stripe',
       'npm',
       'git',
       'vscode',

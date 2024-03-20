@@ -135,9 +135,7 @@ export const COMPANY: ICompanyData = {
 
 export const FEATURE = {
   rest: 'REST API',
-  stripe: 'Stripe',
   keycloak: 'Keycloak',
-  docker: 'Docker',
   socket: 'WebSocket',
 }
 
@@ -209,6 +207,7 @@ export const TECHNOLOGY_TITLE = {
   php: 'PHP',
   laravel: 'Laravel',
   docker: 'Docker',
+  stripe: 'Stripe',
   epidemic: 'Epidemic Sound',
   mac: "Apple MacBook Pro 16'' (M1 Pro)",
   ipad: "Apple iPad Pro 12.9'' (M1)",
@@ -791,6 +790,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/docker@2x.png'),
         ],
         href: 'https://www.docker.com',
+      },
+      {
+        name: 'stripe',
+        label: TECHNOLOGY_TITLE.stripe,
+        color: 'violet',
+        images: [
+          importImg('technologies/stripe.png'),
+          importImg('technologies/stripe@2x.png'),
+        ],
+        href: 'https://stripe.com',
       },
       {
         name: 'youtube',

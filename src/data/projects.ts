@@ -203,7 +203,7 @@ const projects: IProject[] = [
         tKey: 'responsive',
         text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.next}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.next}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'fastDevelopment',
       },
@@ -370,7 +370,7 @@ const projects: IProject[] = [
         tKey: 'responsive',
         text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.gsap}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}`,
       {
         tKey: 'animations',
       },
@@ -793,7 +793,7 @@ const projects: IProject[] = [
         tKeys: ['responsive', 'emails'],
         text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
       },
-      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
       },
@@ -1298,10 +1298,10 @@ const projects: IProject[] = [
         tKey: 'responsive',
         text: `${TECHNOLOGY_TITLE.sass}`,
       },
-      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${FEATURE.keycloak}, ${FEATURE.docker}`,
+      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${FEATURE.keycloak}, ${TECHNOLOGY_TITLE.docker}`,
       {
         tKey: 'tryTwo',
-        values: [FEATURE.keycloak, FEATURE.docker],
+        values: [FEATURE.keycloak, TECHNOLOGY_TITLE.docker],
       },
       {
         tKey: 'february',
@@ -1908,7 +1908,7 @@ const projects: IProject[] = [
         tKeys: ['responsive', 'emails'],
         text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'animations',
       },
@@ -2060,7 +2060,7 @@ const projects: IProject[] = [
         tKey: 'emails',
         text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
       },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${FEATURE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
       },

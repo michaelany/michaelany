@@ -122,19 +122,19 @@ const Occupations = ({t, current, occupations}: IOccupationsProps) => (
 const Features = ({t, features}: IFeaturesProps) => {
   return (
     <div className="Job-Features Job-Features_main">
-      {features.map(({tKey, period, Icon}, index) => (
+      {features.map(({Icon, ...feature}, index) => (
         <Chip
           key={index}
           className="Job-Feature"
           icon={<Icon />}
           label={
-            period ? (
+            feature.period ? (
               <time>
-                {tPeriodPart(t, period.from)} -{' '}
-                {period.to ? tPeriodPart(t, period.to) : '...'}
+                {tPeriodPart(t, feature.period.from)} -{' '}
+                {feature.period.to ? tPeriodPart(t, feature.period.to) : '...'}
               </time>
             ) : (
-              t(`experience.job.feature.${tKey}`)
+              t(`experience.job.feature.${feature.tKey}`)
             )
           }
         />
