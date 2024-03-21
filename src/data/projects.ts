@@ -1284,6 +1284,7 @@ const projects: IProject[] = [
   {
     name: 'uls',
     color: 'blue',
+    title: 'Vaillant United Login System',
     types: ['app'],
     companyName: 't1',
     features: [
@@ -1845,7 +1846,7 @@ const projects: IProject[] = [
   {
     name: 'sds',
     color: 'green',
-    title: 'Sales Digital System',
+    title: 'Vaillant Sales Digital System',
     types: ['app'],
     companyName: 't1',
     features: [

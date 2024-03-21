@@ -26,7 +26,7 @@ const Features = memo(({t, type, extra, items}: IFeaturesProps) => {
   const xs = useMediaQuery(QUERY_BREAKPOINT.xs)
 
   return (
-    <Grid container className="Features" component="ul" spacing={xs ? 4 : 6}>
+    <Grid container component="ul" spacing={xs ? 4 : 6}>
       {items.map(({Icon, ...item}, index) => (
         <Grid
           key={index}

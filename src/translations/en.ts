@@ -399,7 +399,6 @@ const EN = {
         text: 'Landing page for the mobile application tracker for newborn babies',
       },
       uls: {
-        title: 'United Login System',
         text: 'Single user account of the company',
       },
       'proximal-coffee': {
