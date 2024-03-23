@@ -23,9 +23,11 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around',
       opacity: 1;
     }
   }
-  @include hover {
-    .ProjectLink-Content {
-      opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      .ProjectLink-Content {
+        opacity: 1;
+      }
     }
   }
 }

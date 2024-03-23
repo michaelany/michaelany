@@ -17,9 +17,11 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand'
       opacity: 1;
     }
   }
-  @include hover {
-    .VideoLink-Content {
-      opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      .VideoLink-Content {
+        opacity: 1;
+      }
     }
   }
 }
