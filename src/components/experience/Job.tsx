@@ -1,4 +1,4 @@
-import {Fragment} from 'react'
+import {Fragment, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {TFunction} from 'i18next'
 import cn from 'clsx'
@@ -62,10 +62,29 @@ interface IFeaturesProps {
 }
 
 export default function Job({job, t, index}: IJobProps) {
+  const storageProp = `job${index}Expanded`
+  const [expanded, setExpanded] = useState<boolean>(
+    localStorage[storageProp]
+      ? JSON.parse(localStorage[storageProp])
+      : index === 0
+        ? true
+        : false
+  )
+
+  const handleExpand = (_: any, value: boolean) => {
+    localStorage.setItem(storageProp, JSON.stringify(value))
+    setExpanded(value)
+  }
+
   const showProjectsTools = job.company.name !== 'mvideo'
 
   return (
-    <Accordion component="li" className="Job" defaultExpanded={index === 0}>
+    <Accordion
+      component="li"
+      className="Job"
+      expanded={expanded}
+      onChange={handleExpand}
+    >
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <div className="Job-Company">
           <Company {...job.company} />
