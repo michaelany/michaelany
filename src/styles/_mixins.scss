@@ -26,6 +26,11 @@
       @content;
     }
   }
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
 }
 
 @mixin xs {
