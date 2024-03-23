@@ -37,6 +37,7 @@ export default function Company({
           src={images[0]}
           srcSet={`${images[1]} 2x`}
           alt={title}
+          loading="lazy"
         />
       </ButtonBase>
     </Tooltip>

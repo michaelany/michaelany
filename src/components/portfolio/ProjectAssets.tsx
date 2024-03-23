@@ -39,6 +39,7 @@ export default function ProjectAssets({project}: IProjectAssetsProps) {
             src={project.images.logo[1]}
             srcSet={`${project.images.logo[2]} 2x`}
             alt={project.title}
+            loading="lazy"
           />
         </Animate>
         <Screenshots

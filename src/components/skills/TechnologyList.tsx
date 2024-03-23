@@ -45,6 +45,7 @@ export default function TechnologyList({
                 src={technology.images[0]}
                 srcSet={`${technology.images[1]} 2x`}
                 alt={technology.label}
+                loading="lazy"
               />
             </ButtonBase>
           </Tooltip>

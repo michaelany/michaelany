@@ -139,6 +139,7 @@ export default function Greeting() {
           src={meImg}
           srcSet={`${me2xImg} 2x`}
           alt={MY_NAME}
+          loading="lazy"
         />
       </picture>
     </Section>

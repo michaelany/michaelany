@@ -69,6 +69,7 @@ const Content = ({
           src={image[0]}
           srcSet={image[1] && `${image[1]} 2x`}
           alt={`${caption} ${index + 1}`}
+          loading="lazy"
         />
       </SwiperSlide>
     )

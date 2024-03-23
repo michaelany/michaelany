@@ -68,6 +68,7 @@ const Photo = () => {
             src={meNormalImg}
             srcSet={`${meNormal2xImg} 2x`}
             alt={MY_NAME}
+            loading="lazy"
           />
           <img
             className="Social-Image Social-Image_hidden"
@@ -76,6 +77,7 @@ const Photo = () => {
             src={meExcitedImg}
             srcSet={`${meExcited2xImg} 2x`}
             alt={MY_NAME}
+            loading="lazy"
           />
         </>
       </Tilt>

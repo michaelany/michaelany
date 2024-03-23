@@ -68,6 +68,7 @@ const MacScreen = () => {
         src={macbookImg}
         srcSet={`${macbook2xImg} 2x`}
         alt="MacBook Pro"
+        loading="lazy"
       />
       {images.map((image, index) => (
         <img
@@ -78,6 +79,7 @@ const MacScreen = () => {
             index === show && 'Banner-ScreenImage_show'
           )}
           alt={`Screen technology ${index}`}
+          loading="lazy"
         />
       ))}
     </>

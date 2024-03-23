@@ -53,6 +53,7 @@ export default function ProjectLink({
                 src={project.images.logo[0]}
                 srcSet={`${project.images.logo[1]} 2x`}
                 alt={projectTitle}
+                loading="lazy"
               />
               <h3 className="ProjectLink-Title">{projectTitle}</h3>
               <p className="ProjectLink-Label">
