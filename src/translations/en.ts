@@ -189,7 +189,7 @@ const EN = {
     },
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming and life, as well as my experience and knowledge in my <2>${common.title.vlog}</2>`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming & life, as well as my experience & knowledge in my <2>${common.title.vlog}</2>`,
     projects: 'Projects',
     tools: 'Base tools',
     duties: 'Key duties',
@@ -229,7 +229,8 @@ const EN = {
         pathFront: 'Grew from junior to a middle frontend developer',
         internship: 'Created a corporate internship program',
         mentor: 'Trained several juniors',
-        mobile: 'Developed a corporate mobile application on {{0}}',
+        mobile:
+          'Developed a corporate mobile application on {{0}} and independently released it to the app stores',
         interview: 'Conducted many interviews and hired a dozen developers',
         technologies:
           'Studied and applied in practice a lot technologies and tools',
