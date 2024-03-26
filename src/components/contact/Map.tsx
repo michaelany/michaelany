@@ -49,6 +49,6 @@ export default GoogleApiWrapper({
 })(Map)
 
 const initialCenter = {
-  lat: -36.79112718004715,
-  lng: 174.66694252383772,
+  lat: -36.792836,
+  lng: 174.6605093,
 }
