@@ -102,24 +102,24 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 
 ## About this project
 
-- 🚀 &nbsp;This project is a `SPA` (Single Page App) & `PWA` (Progressive Web App)
-- ⚙️ &nbsp;Built from scratch by `Vite` with custom adjustments
+- 🚀 &nbsp;This project is a `SPA` (Single-page App) & `PWA` (Progressive Web App)
+- ⚙️ &nbsp;Using `Vite` with custom configuration as the project builder and development server
 - 🔧 &nbsp;Base dependencies: `typescript`, `react`, `react-router-dom`, `@mui/material`, `sass`
-- ✅ &nbsp;All `HTML` is semantic & accessible
+- ✅ &nbsp;All `HTML` is semantic and accessible, and you can navigate fully using the keyboard
 - 🎨 &nbsp;Styled with `BEM` React style naming convention
 - 📱 &nbsp;Responsive markup tested on every pixel of the screen width
 - 🎞 &nbsp;Uses my own scroll animation component `Animate` for the `CSS` animations
-- 🇺🇸 &nbsp;Supports English & Russian languages, used `i18next` & `react-i18next`
-- 📨 &nbsp;Uses `EmailJS` & `reCaptcha` v2 to send contact form emails
+- 🇺🇸 &nbsp;Supports English & Russian languages, used `react-i18next`
+- 📨 &nbsp;Uses `EmailJS` & `reCaptcha` to send contact form emails
 - 🗄 &nbsp;Some UI data stores in the `localStorage`
 - 🧹 &nbsp;Clean & unified code style, also use `prettier` & `eslint`
 - 🌄 &nbsp;All images optimized & ready for retina
 - 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `macOS Sonoma`
 - 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
-- 🏎 &nbsp;Google Page Speed score `~97`:
+- 🏎 &nbsp;Google Page Speed score `~96`:
 
 <div align="center">
-  <img src="public/assets/lighthouse-score.png" alt="Lighthouse score" width="350" />
+  <img src="public/assets/lighthouse-score.png" alt="Lighthouse score" width="577" />
 </div>
 
 ---
