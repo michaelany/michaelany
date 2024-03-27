@@ -80,7 +80,6 @@ const jobs: IJob[] = [
       'vite',
       'webpack',
       'gulp',
-      'gsap',
       'stripe',
       'npm',
       'git',
