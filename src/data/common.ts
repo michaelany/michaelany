@@ -195,6 +195,8 @@ export const TECHNOLOGY_TITLE = {
   optim: 'ImageOptim',
   paw: 'RapidAPI',
   clickup: 'ClickUp',
+  jira: 'Jira',
+  notes: 'Notes',
   fcpx: 'Final Cut Pro',
   macos: 'macOS Sonoma',
   gpt: 'ChatGPT',
@@ -856,16 +858,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://developers.google.com/web/tools/chrome-devtools',
       },
       {
-        name: 'zeplin',
-        label: TECHNOLOGY_TITLE.zeplin,
-        color: 'yellow',
-        images: [
-          importImg('technologies/zeplin.png'),
-          importImg('technologies/zeplin@2x.png'),
-        ],
-        href: 'https://zeplin.io',
-      },
-      {
         name: 'sketch',
         label: TECHNOLOGY_TITLE.sketch,
         color: 'yellow',
@@ -896,6 +888,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://www.adobe.com/products/photoshop.html',
       },
       {
+        name: 'zeplin',
+        label: TECHNOLOGY_TITLE.zeplin,
+        color: 'yellow',
+        images: [
+          importImg('technologies/zeplin.png'),
+          importImg('technologies/zeplin@2x.png'),
+        ],
+        href: 'https://zeplin.io',
+      },
+      {
         name: 'optim',
         label: TECHNOLOGY_TITLE.optim,
         color: 'default',
@@ -924,6 +926,26 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/clickup@2x.png'),
         ],
         href: 'https://clickup.com',
+      },
+      {
+        name: 'jira',
+        label: TECHNOLOGY_TITLE.jira,
+        color: 'blue',
+        images: [
+          importImg('technologies/jira.png'),
+          importImg('technologies/jira@2x.png'),
+        ],
+        href: 'https://www.atlassian.com/software/jira',
+      },
+      {
+        name: 'notes',
+        label: TECHNOLOGY_TITLE.notes,
+        color: 'yellow',
+        images: [
+          importImg('technologies/notes.png'),
+          importImg('technologies/notes@2x.png'),
+        ],
+        href: 'https://apps.apple.com/us/app/notes/id1110145109',
       },
       {
         name: 'fcpx',
