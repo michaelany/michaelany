@@ -244,7 +244,6 @@ const EN = {
         hardware: 'Gained extensive experience with software and hardware',
         softSkills: 'Improved soft skills',
         architecture: 'Created my own ideal architecture for web applications',
-        routing: 'Implemented custom routing in one of the applications',
         animations:
           'Developed several landing pages with advanced and beautiful animations',
         interfaces:

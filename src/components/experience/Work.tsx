@@ -107,7 +107,6 @@ const jobs: IJob[] = [
       'businessLogic',
       'animations',
       'architecture',
-      'routing',
       'technologies',
       {tKey: 'speed', values: [1]},
       'independent',
