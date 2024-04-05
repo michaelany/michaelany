@@ -43,7 +43,7 @@
 ## [Skills](https://michaelany.com/#/skills)
 
 - 👾 &nbsp;Crafting [applications](https://michaelany.com/#/portfolio#app), [multi-page sites](https://michaelany.com/#/portfolio#site), [landing pages](https://michaelany.com/#/portfolio#landing) & [admin panels](https://michaelany.com/#/portfolio#admin)
-- 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Zustand` + `Material UI`
+- 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Material UI`
 - ✅ &nbsp;Creating reliable & well-functioning interfaces
 - 🏎 &nbsp;Writing modern & productive code
 - 🎨 &nbsp;Creating semantic, cross-browser & pixel-perfect markup

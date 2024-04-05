@@ -122,7 +122,7 @@ const EN = {
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4> + <4>{{4}}</4>. I create <5>{{5}} videos</5> in {{6}}',
+    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I create <5>{{4}} videos</5> in {{5}}',
     feature: {
       interface: {
         label: 'Creating reliable & well-functioning interfaces',
