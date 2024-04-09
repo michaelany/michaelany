@@ -77,6 +77,7 @@ const jobs: IJob[] = [
       'ant',
       'bootstrap',
       'pug',
+      'gsap',
       'vite',
       'webpack',
       'gulp',
@@ -90,6 +91,8 @@ const jobs: IJob[] = [
       'zeplin',
       'photoshop',
       'reactnative',
+      'php',
+      'laravel',
     ],
     duties: [
       'logicAppsSites',

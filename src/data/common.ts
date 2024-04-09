@@ -167,7 +167,8 @@ export const TECHNOLOGY_TITLE = {
   styled: 'styled-components',
   mui: 'Material UI',
   ant: 'Ant Design',
-  reactstrap: 'reactstrap',
+  tailwind: 'Tailwind CSS',
+  bulma: 'Bulma',
   materialize: 'Materialize',
   bootstrap: 'Bootstrap',
   semantic: 'Semantic UI',
@@ -177,6 +178,7 @@ export const TECHNOLOGY_TITLE = {
   webpack: 'webpack',
   gulp: 'Gulp',
   gatsby: 'Gatsby',
+  gsap: 'GSAP',
   next: 'Next.js',
   git: 'Git',
   babel: 'Babel',
@@ -272,6 +274,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: MAIN_TECHNOLOGY_LINK.react,
       },
       {
+        name: 'vue',
+        label: TECHNOLOGY_TITLE.vue,
+        color: 'grass',
+        images: [
+          importImg('technologies/vue.png'),
+          importImg('technologies/vue@2x.png'),
+        ],
+        href: 'https://vuejs.org',
+      },
+      {
         name: 'reactquery',
         label: TECHNOLOGY_TITLE.reactquery,
         color: 'red',
@@ -290,16 +302,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/zustand@2x.png'),
         ],
         href: 'https://zustand-demo.pmnd.rs',
-      },
-      {
-        name: 'preact',
-        label: TECHNOLOGY_TITLE.preact,
-        color: 'violet',
-        images: [
-          importImg('technologies/preact.png'),
-          importImg('technologies/preact@2x.png'),
-        ],
-        href: 'https://preactjs.com',
       },
       {
         name: 'redux',
@@ -322,14 +324,35 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://mobx.js.org',
       },
       {
-        name: 'vue',
-        label: TECHNOLOGY_TITLE.vue,
-        color: 'grass',
+        name: 'next',
+        label: TECHNOLOGY_TITLE.next,
+        color: 'default',
         images: [
-          importImg('technologies/vue.png'),
-          importImg('technologies/vue@2x.png'),
+          importImg('technologies/next.png'),
+          importImg('technologies/next@2x.png'),
         ],
-        href: 'https://vuejs.org',
+        href: 'https://nextjs.org',
+      },
+      {
+        name: 'gatsby',
+        label: TECHNOLOGY_TITLE.gatsby,
+        color: 'violet',
+        images: [
+          importImg('technologies/gatsby.png'),
+          importImg('technologies/gatsby@2x.png'),
+        ],
+        href: 'https://www.gatsbyjs.org',
+      },
+
+      {
+        name: 'preact',
+        label: TECHNOLOGY_TITLE.preact,
+        color: 'violet',
+        images: [
+          importImg('technologies/preact.png'),
+          importImg('technologies/preact@2x.png'),
+        ],
+        href: 'https://preactjs.com',
       },
       {
         name: 'svelte',
@@ -516,14 +539,24 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://ant.design',
       },
       {
-        name: 'reactstrap',
-        label: TECHNOLOGY_TITLE.reactstrap,
-        color: 'default',
+        name: 'tailwind',
+        label: TECHNOLOGY_TITLE.tailwind,
+        color: 'blue',
         images: [
-          importImg('technologies/reactstrap.png'),
-          importImg('technologies/reactstrap@2x.png'),
+          importImg('technologies/tailwind.png'),
+          importImg('technologies/tailwind@2x.png'),
         ],
-        href: 'https://reactstrap.github.io/',
+        href: 'https://tailwindcss.com',
+      },
+      {
+        name: 'bulma',
+        label: TECHNOLOGY_TITLE.bulma,
+        color: 'green',
+        images: [
+          importImg('technologies/bulma.png'),
+          importImg('technologies/bulma@2x.png'),
+        ],
+        href: 'https://bulma.io',
       },
       {
         name: 'materialize',
@@ -631,24 +664,14 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://babeljs.io',
       },
       {
-        name: 'next',
-        label: TECHNOLOGY_TITLE.next,
-        color: 'default',
+        name: 'gsap',
+        label: TECHNOLOGY_TITLE.gsap,
+        color: 'grass',
         images: [
-          importImg('technologies/next.png'),
-          importImg('technologies/next@2x.png'),
+          importImg('technologies/gsap.png'),
+          importImg('technologies/gsap@2x.png'),
         ],
-        href: 'https://nextjs.org',
-      },
-      {
-        name: 'gatsby',
-        label: TECHNOLOGY_TITLE.gatsby,
-        color: 'violet',
-        images: [
-          importImg('technologies/gatsby.png'),
-          importImg('technologies/gatsby@2x.png'),
-        ],
-        href: 'https://www.gatsbyjs.org',
+        href: 'https://gsap.com',
       },
       {
         name: 'prettier',
