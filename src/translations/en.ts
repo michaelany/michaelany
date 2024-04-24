@@ -100,7 +100,7 @@ const EN = {
       },
       actor: {
         label: 'Former professional actor',
-        text: 'I used to act in movies, TV series, and commercials, hosted events, worked as an animator, and performed in educational theater. But then I came to my senses and switched to programming',
+        text: 'I used to act in movies, TV series and commercials, hosted events, worked as an animator and performed in educational theater. But then I came to my senses and switched to programming',
       },
       sport: {
         label: 'Sports lover',
