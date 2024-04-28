@@ -22,7 +22,7 @@ const common = {
     scratchDevelopment: 'Development from scratch',
   },
   projects: {
-    ally: 'Landing page of the mobile application for the interactive figures {{0}}',
+    ally: 'Landing page of the mobile application for the interactive {{0}} figures',
     cmsFit: 'Content management system for the mobile fitness application',
   },
 }
@@ -350,7 +350,7 @@ const EN = {
         text: 'Subscription landing page for the mobile fitness application',
       },
       'ally-cms': {
-        text: 'Content management system for the interactive figures {{0}} mobile application',
+        text: 'Content management system for the mobile application to manage {{0}} figures',
       },
       'pridefit-cms': {
         text: common.projects.cmsFit,
