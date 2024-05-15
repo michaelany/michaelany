@@ -11,6 +11,11 @@ export default defineConfig({
     svgr(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeAssets: [
+        'assets/logo.svg',
+        'assets/safari-pinned-tab.svg',
+        'assets/apple-touch-icon.png',
+      ],
       manifest: {
         name: 'Michael Any',
         short_name: 'Michael Any',
@@ -23,19 +28,19 @@ export default defineConfig({
         background_color: '#ffffff',
         icons: [
           {
-            src: '/assets/pwa-192x192.png',
+            src: 'assets/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/assets/pwa-512x512.png',
+            src: 'assets/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
         ],
         screenshots: [
           {
-            src: '/assets/preview.jpg',
+            src: 'assets/preview.jpg',
             sizes: '1200x630',
             type: 'image/jpg',
           },
