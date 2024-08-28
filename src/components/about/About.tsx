@@ -169,7 +169,7 @@ const features: IFeature[] = [
       <MuiLink
         {...BLANK_LINK_PROPS}
         className="Link"
-        href="https://www.instagram.com/kate_watermelon"
+        href="https://instagram.com/kate_watermelon"
       />,
     ],
   },

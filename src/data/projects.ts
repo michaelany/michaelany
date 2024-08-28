@@ -1466,7 +1466,7 @@ const projects: IProject[] = [
     title: 'Ted Manson Foundation',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    url: 'https://www.tmfoundation.co.nz',
+    url: 'https://tmfoundation.co.nz',
     features: [
       {
         tKey: 'scratchDevelopment',
@@ -2540,7 +2540,7 @@ const projects: IProject[] = [
     types: ['site', 'app'],
     companyName: 'everpoint',
     url: 'https://navigator.smbn.ru',
-    details: 'https://www.everpoint.ru/msp',
+    details: 'https://everpoint.ru/msp',
     features: [
       {
         tKey: 'growthSupportDevelopment',

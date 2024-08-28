@@ -45,7 +45,7 @@
 - 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Material UI`
 - 🏎 &nbsp;Writing modern & productive code
 - 🎨 &nbsp;Creating semantic, cross-browser & pixel-perfect markup
-- 🎬 &nbsp;Creating [YouTube videos](https://www.youtube.com/@michaelany/videos) in Final Cut Pro
+- 🎬 &nbsp;Creating [YouTube videos](https://youtube.com/@michaelany/videos) in Final Cut Pro
 
 <details>
   <summary>🔽 &nbsp;<strong>More</strong></summary>
@@ -131,9 +131,9 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 </div>
 
 [website]: https://michaelany.com
-[youtube]: https://www.youtube.com/@michaelany
-[linkedin]: https://www.linkedin.com/in/michaelany
+[youtube]: https://youtube.com/@michaelany
+[linkedin]: https://linkedin.com/in/michaelany
 [telegram]: https://t.me/michaelany
 [instagram]: https://instagram.com/anymichael
 [email]: mailto:michaelany.it@gmail.com
-[duolingo]: https://www.duolingo.com/profile/michael.any
+[duolingo]: https://duolingo.com/profile/michael.any

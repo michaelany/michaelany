@@ -47,7 +47,7 @@ export const COMPANY: ICompanyData = {
       importImg('companies/gorentals@2x.png'),
     ],
     color: 'red',
-    href: 'https://www.gorentals.co.nz',
+    href: 'https://gorentals.co.nz',
   },
   sevenGlyphs: {
     title: '7 glyphs',
@@ -64,7 +64,7 @@ export const COMPANY: ICompanyData = {
     name: 't1',
     images: [importImg('companies/t1.png'), importImg('companies/t1@2x.png')],
     color: 'blue',
-    href: 'http://www.t1-consulting.ru',
+    href: 'http://t1-consulting.ru',
   },
   everpoint: {
     title: 'Everpoint',
@@ -74,7 +74,7 @@ export const COMPANY: ICompanyData = {
       importImg('companies/everpoint@2x.png'),
     ],
     color: 'grass',
-    href: 'https://www.everpoint.ru',
+    href: 'https://everpoint.ru',
   },
   mVideo: {
     title: 'M.Video',
@@ -84,7 +84,7 @@ export const COMPANY: ICompanyData = {
       importImg('companies/mvideo@2x.png'),
     ],
     color: 'red',
-    href: 'https://www.mvideo.ru',
+    href: 'https://mvideo.ru',
   },
 }
 
@@ -97,7 +97,7 @@ export const CONTACT_LINK: IContactLink = {
   },
   linkedIn: {
     title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/michaelany',
+    href: 'https://linkedin.com/in/michaelany',
     Icon: LinkedInIcon,
     size: 'sm',
   },
@@ -109,7 +109,7 @@ export const CONTACT_LINK: IContactLink = {
   },
   youTube: {
     title: 'YouTube',
-    href: 'https://www.youtube.com/@michaelany',
+    href: 'https://youtube.com/@michaelany',
     Icon: YouTubeIcon,
     size: 'xl',
   },
@@ -121,7 +121,7 @@ export const CONTACT_LINK: IContactLink = {
   },
   facebook: {
     title: 'Facebook',
-    href: 'https://www.facebook.com/michaelany.fb',
+    href: 'https://facebook.com/michaelany.fb',
     Icon: FacebookIcon,
     size: 'sm',
   },
@@ -139,7 +139,7 @@ export const CONTACT_LINK: IContactLink = {
   },
   duolingo: {
     title: 'Duolingo',
-    href: 'https://www.duolingo.com/profile/michael.any',
+    href: 'https://duolingo.com/profile/michael.any',
     Icon: DuolingoIcon,
     size: 'md',
   },
@@ -272,7 +272,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/js.png'),
           importImg('technologies/js@2x.png'),
         ],
-        href: 'https://www.ecma-international.org/publications/standards/Ecma-262.htm',
+        href: 'https://ecma-international.org/publications/standards/Ecma-262.htm',
       },
       {
         name: 'ts',
@@ -282,7 +282,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/ts.png'),
           importImg('technologies/ts@2x.png'),
         ],
-        href: 'https://www.typescriptlang.org',
+        href: 'https://typescriptlang.org',
       },
       {
         name: 'react',
@@ -369,7 +369,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/gatsby.png'),
           importImg('technologies/gatsby@2x.png'),
         ],
-        href: 'https://www.gatsbyjs.org',
+        href: 'https://gatsbyjs.org',
       },
 
       {
@@ -400,7 +400,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/apollo.png'),
           importImg('technologies/apollo@2x.png'),
         ],
-        href: 'https://www.apollographql.com/docs/react',
+        href: 'https://apollographql.com/docs/react',
       },
       {
         name: 'jquery',
@@ -435,7 +435,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/svg.png'),
           importImg('technologies/svg@2x.png'),
         ],
-        href: 'https://www.w3.org/Graphics/svg',
+        href: 'https://w3.org/Graphics/svg',
       },
       {
         name: 'react',
@@ -494,7 +494,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/css.png'),
           importImg('technologies/css@2x.png'),
         ],
-        href: 'https://www.w3.org/style/css',
+        href: 'https://w3.org/style/css',
       },
       {
         name: 'sass',
@@ -639,7 +639,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/npm.png'),
           importImg('technologies/npm@2x.png'),
         ],
-        href: 'https://www.npmjs.com',
+        href: 'https://npmjs.com',
       },
       {
         name: 'yarn',
@@ -749,7 +749,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/cypress.png'),
           importImg('technologies/cypress@2x.png'),
         ],
-        href: 'https://www.cypress.io',
+        href: 'https://cypress.io',
       },
     ],
   },
@@ -824,7 +824,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/mongo.png'),
           importImg('technologies/mongo@2x.png'),
         ],
-        href: 'https://www.mongodb.com',
+        href: 'https://mongodb.com',
       },
       {
         name: 'mysql',
@@ -834,7 +834,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/mysql.png'),
           importImg('technologies/mysql@2x.png'),
         ],
-        href: 'https://www.mysql.com',
+        href: 'https://mysql.com',
       },
       {
         name: 'php',
@@ -844,7 +844,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/php.png'),
           importImg('technologies/php@2x.png'),
         ],
-        href: 'https://www.php.net',
+        href: 'https://php.net',
       },
       {
         name: 'laravel',
@@ -861,7 +861,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/docker.png'),
           importImg('technologies/docker@2x.png'),
         ],
-        href: 'https://www.docker.com',
+        href: 'https://docker.com',
       },
       {
         name: 'stripe',
@@ -926,7 +926,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/phpstorm.png'),
           importImg('technologies/phpstorm@2x.png'),
         ],
-        href: 'https://www.jetbrains.com/phpstorm',
+        href: 'https://jetbrains.com/phpstorm',
       },
       {
         name: 'devtools',
@@ -946,7 +946,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/sketch.png'),
           importImg('technologies/sketch@2x.png'),
         ],
-        href: 'https://www.sketch.com',
+        href: 'https://sketch.com',
       },
       {
         name: 'figma',
@@ -956,7 +956,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/figma.png'),
           importImg('technologies/figma@2x.png'),
         ],
-        href: 'https://www.figma.com/',
+        href: 'https://figma.com/',
       },
       {
         name: 'photoshop',
@@ -966,7 +966,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/photoshop.png'),
           importImg('technologies/photoshop@2x.png'),
         ],
-        href: 'https://www.adobe.com/products/photoshop.html',
+        href: 'https://adobe.com/products/photoshop.html',
       },
       {
         name: 'zeplin',
@@ -996,7 +996,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/browserstack.png'),
           importImg('technologies/browserstack@2x.png'),
         ],
-        href: 'https://www.browserstack.com',
+        href: 'https://browserstack.com',
       },
       {
         name: 'azure',
@@ -1026,7 +1026,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/jira.png'),
           importImg('technologies/jira@2x.png'),
         ],
-        href: 'https://www.atlassian.com/software/jira',
+        href: 'https://atlassian.com/software/jira',
       },
       {
         name: 'paw',
@@ -1056,7 +1056,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/fcpx.png'),
           importImg('technologies/fcpx@2x.png'),
         ],
-        href: 'https://www.apple.com/final-cut-pro',
+        href: 'https://apple.com/final-cut-pro',
       },
       {
         name: 'macos',
@@ -1066,7 +1066,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/macos.png'),
           importImg('technologies/macos@2x.png'),
         ],
-        href: 'https://www.apple.com/macos/sonoma',
+        href: 'https://apple.com/macos/sonoma',
       },
     ],
   },
@@ -1081,7 +1081,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/mac.png'),
           importImg('technologies/mac@2x.png'),
         ],
-        href: 'https://www.apple.com/macbook-pro-14-and-16',
+        href: 'https://apple.com/macbook-pro-14-and-16',
       },
       {
         name: 'ipad',
@@ -1091,7 +1091,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/ipad.png'),
           importImg('technologies/ipad@2x.png'),
         ],
-        href: 'https://www.apple.com/ipad-pro',
+        href: 'https://apple.com/ipad-pro',
       },
       {
         name: 'keyboard',
@@ -1101,7 +1101,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/keyboard.png'),
           importImg('technologies/keyboard@2x.png'),
         ],
-        href: 'https://www.keychron.com/collections/low-profile-keyboard-collection/products/keychron-k3-wireless-mechanical-keyboard?variant=32220198928473',
+        href: 'https://keychron.com/collections/low-profile-keyboard-collection/products/keychron-k3-wireless-mechanical-keyboard?variant=32220198928473',
       },
       {
         name: 'mouse',
@@ -1111,7 +1111,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/mouse.png'),
           importImg('technologies/mouse@2x.png'),
         ],
-        href: 'https://www.logitech.com/en-us/products/mice/mx-master-3s-mac-bluetooth-mouse.910-006570',
+        href: 'https://logitech.com/en-us/products/mice/mx-master-3s-mac-bluetooth-mouse.910-006570',
       },
       {
         name: 'trackpad',
@@ -1121,7 +1121,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/trackpad.png'),
           importImg('technologies/trackpad@2x.png'),
         ],
-        href: 'https://www.apple.com/shop/product/MMMP3AM/A/magic-trackpad-black-multi-touch-surface?fnode=6244f8b1f93720dfd5ea27c7c6e8ae7aab984968920761941d8af235417cb2ecf95cc816a20ac8709c677b86759bd3bb248762be9a693b327b17cc88e10d74233ac00f76840a93cf8835235a616513bda2e56a178ed07b255334dbff47fca7f0',
+        href: 'https://apple.com/shop/product/MMMP3AM/A/magic-trackpad-black-multi-touch-surface?fnode=6244f8b1f93720dfd5ea27c7c6e8ae7aab984968920761941d8af235417cb2ecf95cc816a20ac8709c677b86759bd3bb248762be9a693b327b17cc88e10d74233ac00f76840a93cf8835235a616513bda2e56a178ed07b255334dbff47fca7f0',
       },
       {
         name: 'airpods',
@@ -1131,7 +1131,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/airpods.png'),
           importImg('technologies/airpods@2x.png'),
         ],
-        href: 'https://www.apple.com/airpods-pro',
+        href: 'https://apple.com/airpods-pro',
       },
       {
         name: 'dock',
@@ -1141,7 +1141,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/dock.png'),
           importImg('technologies/dock@2x.png'),
         ],
-        href: 'https://www.owc.com/solutions/thunderbolt-dock',
+        href: 'https://owc.com/solutions/thunderbolt-dock',
       },
       {
         name: 'mic',
@@ -1161,7 +1161,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/iphone.png'),
           importImg('technologies/iphone@2x.png'),
         ],
-        href: 'https://www.apple.com/go/2022/iphone-14-pro',
+        href: 'https://apple.com/go/2022/iphone-14-pro',
       },
       {
         name: 'gopro',
@@ -1181,7 +1181,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/glasses.png'),
           importImg('technologies/glasses@2x.png'),
         ],
-        href: 'https://www.aliexpress.com/i/4000093342098.html',
+        href: 'https://aliexpress.com/i/4000093342098.html',
       },
       {
         name: 'mascot',
