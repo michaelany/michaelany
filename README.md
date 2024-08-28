@@ -10,10 +10,9 @@
 
 ## [About](https://michaelany.com/#/about)
 
-- 👨‍💻 &nbsp;Lead software engineer at [7 glyphs](https://7glyphs.com/)
 - 🚀 &nbsp;Creating [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
 - 💡 &nbsp;Bringing UI/UX ideas to life
-- 💼 &nbsp;8 years of [experience](https://michaelany.com/#/experience)
+- 💼 &nbsp;9 years of [experience](https://michaelany.com/#/experience)
 - 📹 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube]
 - 🇳🇿 &nbsp;Based in Auckland, New Zealand
 
@@ -44,7 +43,6 @@
 
 - 👾 &nbsp;Crafting [applications](https://michaelany.com/#/portfolio#app), [multi-page sites](https://michaelany.com/#/portfolio#site), [landing pages](https://michaelany.com/#/portfolio#landing) & [admin panels](https://michaelany.com/#/portfolio#admin)
 - 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Material UI`
-- ✅ &nbsp;Creating reliable & well-functioning interfaces
 - 🏎 &nbsp;Writing modern & productive code
 - 🎨 &nbsp;Creating semantic, cross-browser & pixel-perfect markup
 - 🎬 &nbsp;Creating [YouTube videos](https://www.youtube.com/@michaelany/videos) in Final Cut Pro
@@ -52,14 +50,15 @@
 <details>
   <summary>🔽 &nbsp;<strong>More</strong></summary>
 
+- ✅ &nbsp;Creating reliable & well-functioning interfaces
 - 🧠 &nbsp;Choosing a simple way to solve the problem
 - 🧩 &nbsp;Using a lot of patterns & techniques
 - 🧱 &nbsp;Building a modular & optimal project architecture
 - 🔧 &nbsp;Using modern frameworks, libraries, and tools
 - 📱 &nbsp;Implementing responsive interface & animations
 - 🧹 &nbsp;Following a consistent code style
-- 🔬 &nbsp;Refactoring, optimizing & testing
-- 📒 &nbsp;Planing & decomposing
+- 🔬 &nbsp;Optimizing, testing & refactoring
+- 📒 &nbsp;Planing & decomposing tasks
 - 🐣 &nbsp;Making code reviews & teaching
 
 </details>&nbsp;
