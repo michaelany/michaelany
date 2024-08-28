@@ -14,11 +14,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.0",
-    "@mui/icons-material": "5.15.12",
-    "@mui/material": "5.15.12",
-    "@mui/styles": "5.15.12",
+    "@emotion/react": "11.13.3",
+    "@emotion/styled": "11.13.0",
+    "@mui/icons-material": "6.0.0",
+    "@mui/material": "6.0.0",
+    "@mui/styles": "6.0.0",
     "@types/google-maps-react": "2.0.5",
     "@types/node": "22.5.1",
     "@types/react": "18.3.4",
