@@ -35,8 +35,8 @@
 [<img src="https://img.shields.io/badge/-Michael_Any-61DAFB?logo=google-chrome&logoColor=282828" alt="Google Chrome" />][website]
 [<img src="https://img.shields.io/badge/-YouTube-f70000?logo=youtube&logoColor=white" alt="LinkedIn" />][youtube]
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
-[<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/michaelany)
-[<img src="https://img.shields.io/badge/-7glyphs_team-acf7d0?logo=google-chrome&logoColor=282828" alt="Google Chrome" />][7glyphs]
+[<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](telegram)
+[<img src="https://img.shields.io/badge/-Duolingo-58cc02?logo=duolingo&logoColor=white" alt="Duolingo" />][duolingo]
 [<img src="https://img.shields.io/badge/-Instagram-df7f57?logo=instagram&logoColor=white" alt="LinkedIn" />][instagram]
 
 ## [Skills](https://michaelany.com/#/skills)
@@ -91,8 +91,8 @@
 
 Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany.it@gmail.com or use links below:
 
-[<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](mailto:michaelany.it@gmail.com)
-[<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](https://t.me/michaelany)
+[<img src="https://img.shields.io/badge/-Gmail-ea4335?logo=gmail&logoColor=white" alt="Gmail" />](email)
+[<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](telegram)
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
 
 ## GitHub Analytics
@@ -131,9 +131,9 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 </div>
 
 [website]: https://michaelany.com
-[linkedin]: https://www.linkedin.com/in/michaelany
 [youtube]: https://www.youtube.com/@michaelany
+[linkedin]: https://www.linkedin.com/in/michaelany
+[telegram]: https://t.me/michaelany
 [instagram]: https://instagram.com/anymichael
-[7glyphs]: https://7glyphs.com/agency/team
-[facebook]: https://www.facebook.com/michaelany.fb
-[vk]: https://vk.com/michaelany
+[email]: mailto:michaelany.it@gmail.com
+[duolingo]: https://www.duolingo.com/profile/michael.any
