@@ -35,7 +35,12 @@ export type TEffect =
   | 'zoomOut'
   | 'zoomOutSm'
 
-export type TCompanyName = 't1' | 'sevenGlyphs' | 'everpoint' | 'mvideo'
+export type TCompanyName =
+  | 't1'
+  | 'sevenGlyphs'
+  | 'everpoint'
+  | 'mVideo'
+  | 'goRentals'
 
 export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 
@@ -111,8 +116,8 @@ export interface IJob {
   company: ICompany
   occupations: TKey[]
   tools?: string[]
-  duties: TKey[]
-  achievements: TKey[]
+  duties?: TKey[]
+  achievements?: TKey[]
   features: IJobFeature[]
 }
 

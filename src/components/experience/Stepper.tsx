@@ -18,7 +18,7 @@ import './Stepper.scss'
 import {scrollToView, tPeriodPart} from '#utils/helpers'
 import {CAREER_START_PARTS} from '#utils/constants'
 import {IPeriod} from '#utils/types'
-import {COMPANY_TITLE, CONTACT_LINK} from '#data/common'
+import {COMPANY, CONTACT_LINK} from '#data/common'
 
 interface IStepperProps {
   sectionRef: RefObject<HTMLElement>
@@ -61,7 +61,7 @@ export default function Stepper({sectionRef}: IStepperProps) {
                 values={item.values}
                 components={transComponents}
               />
-              {index === steps.length - 1 && '...'}
+              .{index === steps.length - 1 && '..'}
             </p>
             <div className="Stepper-Actions">
               <Fab
@@ -118,7 +118,7 @@ const steps: IStep[] = [
         year: 2008,
       },
     },
-    values: [13, COMPANY_TITLE.mvideo],
+    values: [13, COMPANY.mVideo.title],
   },
   {
     period: {
@@ -131,7 +131,7 @@ const steps: IStep[] = [
         year: 2010,
       },
     },
-    values: [COMPANY_TITLE.mvideo],
+    values: [COMPANY.mVideo.title],
   },
   {
     period: {
@@ -164,7 +164,7 @@ const steps: IStep[] = [
         year: CAREER_START_PARTS[1],
       },
     },
-    values: [COMPANY_TITLE.everpoint],
+    values: [COMPANY.everpoint.title],
   },
   {
     period: {
@@ -177,7 +177,7 @@ const steps: IStep[] = [
         year: 2016,
       },
     },
-    values: [COMPANY_TITLE.everpoint],
+    values: [COMPANY.everpoint.title],
   },
   {
     period: {
@@ -186,7 +186,7 @@ const steps: IStep[] = [
         year: 2016,
       },
     },
-    values: [COMPANY_TITLE.everpoint],
+    values: [COMPANY.everpoint.title],
   },
   {
     period: {
@@ -199,7 +199,7 @@ const steps: IStep[] = [
         year: 2017,
       },
     },
-    values: [COMPANY_TITLE.everpoint, COMPANY_TITLE.sevenGlyphs],
+    values: [COMPANY.everpoint.title, COMPANY.sevenGlyphs.title],
   },
   {
     period: {
@@ -209,9 +209,9 @@ const steps: IStep[] = [
       },
     },
     values: [
-      COMPANY_TITLE.sevenGlyphs,
-      COMPANY_TITLE.everpoint,
-      COMPANY_TITLE.sevenGlyphs,
+      COMPANY.sevenGlyphs.title,
+      COMPANY.everpoint.title,
+      COMPANY.sevenGlyphs.title,
     ],
   },
   {
@@ -225,7 +225,7 @@ const steps: IStep[] = [
         year: 2018,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs],
+    values: [COMPANY.sevenGlyphs.title],
   },
   {
     period: {
@@ -234,7 +234,7 @@ const steps: IStep[] = [
         year: 2018,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
+    values: [COMPANY.sevenGlyphs.title, COMPANY.t1.title],
   },
   {
     period: {
@@ -247,7 +247,7 @@ const steps: IStep[] = [
         year: 2019,
       },
     },
-    values: [COMPANY_TITLE.t1],
+    values: [COMPANY.t1.title],
   },
   {
     period: {
@@ -256,7 +256,7 @@ const steps: IStep[] = [
         year: 2019,
       },
     },
-    values: [COMPANY_TITLE.t1],
+    values: [COMPANY.t1.title],
   },
   {
     period: {
@@ -269,7 +269,7 @@ const steps: IStep[] = [
         year: 2020,
       },
     },
-    values: [COMPANY_TITLE.t1],
+    values: [COMPANY.t1.title],
   },
   {
     period: {
@@ -278,7 +278,7 @@ const steps: IStep[] = [
         year: 2020,
       },
     },
-    values: [COMPANY_TITLE.t1],
+    values: [COMPANY.t1.title],
   },
   {
     period: {
@@ -291,7 +291,7 @@ const steps: IStep[] = [
         year: 2021,
       },
     },
-    values: [COMPANY_TITLE.t1, COMPANY_TITLE.sevenGlyphs],
+    values: [COMPANY.t1.title, COMPANY.sevenGlyphs.title],
   },
   {
     period: {
@@ -313,7 +313,7 @@ const steps: IStep[] = [
         year: 2022,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
+    values: [COMPANY.sevenGlyphs.title, COMPANY.t1.title],
   },
   {
     period: {
@@ -326,7 +326,7 @@ const steps: IStep[] = [
         year: 2022,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, COMPANY_TITLE.t1],
+    values: [COMPANY.sevenGlyphs.title, COMPANY.t1.title],
   },
   {
     period: {
@@ -339,7 +339,7 @@ const steps: IStep[] = [
         year: 2023,
       },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, CONTACT_LINK.youTube.title],
+    values: [COMPANY.sevenGlyphs.title, CONTACT_LINK.youTube.title],
   },
   {
     period: {
@@ -347,7 +347,37 @@ const steps: IStep[] = [
         tKey: 'april',
         year: 2023,
       },
+      to: {
+        tKey: 'march',
+        year: 2024,
+      },
     },
-    values: [COMPANY_TITLE.sevenGlyphs, CONTACT_LINK.youTube.title],
+    values: [COMPANY.sevenGlyphs.title, CONTACT_LINK.youTube.title],
+  },
+  {
+    period: {
+      from: {
+        tKey: 'march',
+        year: 2024,
+      },
+      to: {
+        tKey: 'june',
+        year: 2024,
+      },
+    },
+    values: [
+      COMPANY.sevenGlyphs.title,
+      COMPANY.goRentals.title,
+      COMPANY.sevenGlyphs.title,
+    ],
+  },
+  {
+    period: {
+      from: {
+        tKey: 'june',
+        year: 2024,
+      },
+    },
+    values: [COMPANY.goRentals.title],
   },
 ]

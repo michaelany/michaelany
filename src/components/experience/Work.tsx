@@ -29,9 +29,10 @@ export default function Work() {
       <p className="MainText">
         <Trans
           i18nKey="experience.text"
-          values={[COMPANY.sevenGlyphs.title, YEARS_OF_EXPERIENCE]}
+          values={[COMPANY.goRentals.title, YEARS_OF_EXPERIENCE]}
           components={transComponents}
         />
+        .
       </p>
       <Animate el="ul" className="Work">
         {jobs.map((job, index) => (
@@ -47,7 +48,7 @@ const transComponents = [
   <MuiLink
     {...BLANK_LINK_PROPS}
     className="Link"
-    href={COMPANY.sevenGlyphs.href}
+    href={COMPANY.goRentals.href}
   />,
   <MuiLink component={Link} className="Link Lowercase" to={ROUTE.vlog} />,
 ]
@@ -55,6 +56,53 @@ const transComponents = [
 const jobs: IJob[] = [
   {
     current: true,
+    company: COMPANY.goRentals,
+    occupations: ['lead'],
+    tools: [
+      'html',
+      'css',
+      'js',
+      'ts',
+      'vue',
+      'nuxt',
+      'sass',
+      'bem',
+      'tailwind',
+      'bulma',
+      'npm',
+      'git',
+      'wordpress',
+      'strapi',
+      'vscode',
+      'sketch',
+      'figma',
+      'azure',
+    ],
+    duties: [
+      'logicAppsSites',
+      'structureProjects',
+      'responsive',
+      {tKey: 'restSocket', values: [FEATURE.rest, FEATURE.socket]},
+      'refactor',
+      'support',
+      'tasks',
+    ],
+    features: [
+      {
+        period: {
+          from: {
+            tKey: 'june',
+            year: 2024,
+          },
+        },
+        Icon: DateRangeIcon,
+      },
+      {tKey: 'busyFull', Icon: ScheduleIcon},
+      {tKey: 'hybrid', Icon: MyLocationIcon},
+      {tKey: 'auckland', Icon: RoomIcon},
+    ],
+  },
+  {
     company: COMPANY.sevenGlyphs,
     occupations: ['lead', 'senior', 'middle'],
     tools: [
@@ -121,6 +169,10 @@ const jobs: IJob[] = [
           from: {
             tKey: 'april',
             year: 2017,
+          },
+          to: {
+            tKey: 'june',
+            year: 2024,
           },
         },
         Icon: DateRangeIcon,
@@ -261,7 +313,7 @@ const jobs: IJob[] = [
     ],
   },
   {
-    company: COMPANY.mvideo,
+    company: COMPANY.mVideo,
     occupations: ['support'],
     duties: [
       {tKey: 'serviceDesk', values: ['Service Desk']},

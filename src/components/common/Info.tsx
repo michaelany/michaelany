@@ -44,6 +44,7 @@ const Info = memo(
             values={textValues}
             components={transComponents}
           />
+          .
         </p>
         <Features t={t} type={type} extra={open} items={features} />
         <Animate className="Actions Actions_center" effect="bottom">

@@ -27,19 +27,63 @@ interface IContactLink {
 }
 
 interface ICompanyData {
+  goRentals: ICompany
   sevenGlyphs: ICompany
   t1: ICompany
   everpoint: ICompany
-  mvideo: ICompany
+  mVideo: ICompany
 }
 
 export const MY_NAME = 'Michael Any'
 
-export const COMPANY_TITLE = {
-  mvideo: 'M.Video',
-  everpoint: 'Everpoint',
-  sevenGlyphs: '7 glyphs Ltd.',
-  t1: 'T1 Consulting',
+export const COMPANY: ICompanyData = {
+  goRentals: {
+    title: 'GO Rentals',
+    name: 'goRentals',
+    images: [
+      importImg('companies/gorentals'),
+      importImg('companies/gorentals@2x.png'),
+    ],
+    color: 'red',
+    href: 'https://www.gorentals.co.nz',
+  },
+  sevenGlyphs: {
+    title: '7 glyphs',
+    name: 'sevenGlyphs',
+    images: [
+      importImg('companies/7glyphs.png'),
+      importImg('companies/7glyphs@2x.png'),
+    ],
+    color: 'default',
+    href: 'https://7glyphs.com',
+  },
+  t1: {
+    title: 'T1 Consulting',
+    name: 't1',
+    images: [importImg('companies/t1.png'), importImg('companies/t1@2x.png')],
+    color: 'blue',
+    href: 'http://www.t1-consulting.ru',
+  },
+  everpoint: {
+    title: 'Everpoint',
+    name: 'everpoint',
+    images: [
+      importImg('companies/everpoint.png'),
+      importImg('companies/everpoint@2x.png'),
+    ],
+    color: 'grass',
+    href: 'https://www.everpoint.ru',
+  },
+  mVideo: {
+    title: 'M.Video',
+    name: 'mVideo',
+    images: [
+      importImg('companies/mvideo.png'),
+      importImg('companies/mvideo@2x.png'),
+    ],
+    color: 'red',
+    href: 'https://www.mvideo.ru',
+  },
 }
 
 export const CONTACT_LINK: IContactLink = {
@@ -80,7 +124,7 @@ export const CONTACT_LINK: IContactLink = {
     size: 'sm',
   },
   sevenGlyphs: {
-    title: `${COMPANY_TITLE.sevenGlyphs} Team`,
+    title: `${COMPANY.sevenGlyphs.title} Team`,
     href: 'https://7glyphs.com/agency/team',
     Icon: SevenGlyphsIcon,
     size: 'xs',
@@ -90,46 +134,6 @@ export const CONTACT_LINK: IContactLink = {
     href: 'https://vk.com/michaelany',
     Icon: VKIcon,
     size: 'md',
-  },
-}
-
-export const COMPANY: ICompanyData = {
-  sevenGlyphs: {
-    title: COMPANY_TITLE.sevenGlyphs,
-    name: 'sevenGlyphs',
-    images: [
-      importImg('companies/7glyphs.png'),
-      importImg('companies/7glyphs@2x.png'),
-    ],
-    color: 'default',
-    href: 'https://7glyphs.com',
-  },
-  t1: {
-    title: COMPANY_TITLE.t1,
-    name: 't1',
-    images: [importImg('companies/t1.png'), importImg('companies/t1@2x.png')],
-    color: 'blue',
-    href: 'http://www.t1-consulting.ru',
-  },
-  everpoint: {
-    title: COMPANY_TITLE.everpoint,
-    name: 'everpoint',
-    images: [
-      importImg('companies/everpoint.png'),
-      importImg('companies/everpoint@2x.png'),
-    ],
-    color: 'grass',
-    href: 'https://www.everpoint.ru',
-  },
-  mvideo: {
-    title: COMPANY_TITLE.mvideo,
-    name: 'mvideo',
-    images: [
-      importImg('companies/mvideo.png'),
-      importImg('companies/mvideo@2x.png'),
-    ],
-    color: 'red',
-    href: 'https://www.mvideo.ru',
   },
 }
 
@@ -180,12 +184,14 @@ export const TECHNOLOGY_TITLE = {
   gatsby: 'Gatsby',
   gsap: 'GSAP',
   next: 'Next.js',
+  nuxt: 'Nuxt',
   git: 'Git',
   babel: 'Babel',
   prettier: 'Prettier',
   eslint: 'ESLint',
   storybook: 'Storybook',
   jest: 'Jest',
+  cypress: 'Cypress',
   iterm: 'iTerm2',
   vscode: 'Visual Studio Code',
   phpstorm: 'PhpStorm',
@@ -195,6 +201,8 @@ export const TECHNOLOGY_TITLE = {
   figma: 'Figma',
   photoshop: 'Photoshop',
   optim: 'ImageOptim',
+  browserstack: 'BrowserStack',
+  azure: 'Azure',
   paw: 'RapidAPI',
   clickup: 'ClickUp',
   jira: 'Jira',
@@ -205,6 +213,8 @@ export const TECHNOLOGY_TITLE = {
   reactnative: 'React Native',
   expo: 'Expo',
   node: 'Node.js',
+  wordpress: 'WordPress',
+  strapi: 'Strapi',
   mongo: 'MongoDB',
   mysql: 'MySQL',
   php: 'PHP',
@@ -332,6 +342,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/next@2x.png'),
         ],
         href: 'https://nextjs.org',
+      },
+      {
+        name: 'nuxt',
+        label: TECHNOLOGY_TITLE.nuxt,
+        color: 'grass',
+        images: [
+          importImg('technologies/nuxt.png'),
+          importImg('technologies/nuxt@2x.png'),
+        ],
+        href: 'https://nuxt.com/',
       },
       {
         name: 'gatsby',
@@ -713,6 +733,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         ],
         href: 'https://jestjs.io',
       },
+      {
+        name: 'cypress',
+        label: TECHNOLOGY_TITLE.cypress,
+        color: 'grass',
+        images: [
+          importImg('technologies/cypress.png'),
+          importImg('technologies/cypress@2x.png'),
+        ],
+        href: 'https://www.cypress.io',
+      },
     ],
   },
   {
@@ -757,6 +787,26 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/node@2x.png'),
         ],
         href: 'https://nodejs.org',
+      },
+      {
+        name: 'wordpress',
+        label: TECHNOLOGY_TITLE.wordpress,
+        color: 'default',
+        images: [
+          importImg('technologies/wordpress.png'),
+          importImg('technologies/wordpress@2x.png'),
+        ],
+        href: 'https://wordpress.com',
+      },
+      {
+        name: 'strapi',
+        label: TECHNOLOGY_TITLE.strapi,
+        color: 'violet',
+        images: [
+          importImg('technologies/strapi.png'),
+          importImg('technologies/strapi@2x.png'),
+        ],
+        href: 'https://strapi.io',
       },
       {
         name: 'mongo',
@@ -931,14 +981,24 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://imageoptim.com',
       },
       {
-        name: 'paw',
-        label: TECHNOLOGY_TITLE.paw,
+        name: 'browserstack',
+        label: TECHNOLOGY_TITLE.browserstack,
+        color: 'default',
+        images: [
+          importImg('technologies/browserstack.png'),
+          importImg('technologies/browserstack@2x.png'),
+        ],
+        href: 'https://www.browserstack.com',
+      },
+      {
+        name: 'azure',
+        label: TECHNOLOGY_TITLE.azure,
         color: 'blue',
         images: [
-          importImg('technologies/paw.png'),
-          importImg('technologies/paw@2x.png'),
+          importImg('technologies/azure.png'),
+          importImg('technologies/azure@2x.png'),
         ],
-        href: 'https://paw.cloud',
+        href: 'https://azure.microsoft.com',
       },
       {
         name: 'clickup',
@@ -959,6 +1019,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           importImg('technologies/jira@2x.png'),
         ],
         href: 'https://www.atlassian.com/software/jira',
+      },
+      {
+        name: 'paw',
+        label: TECHNOLOGY_TITLE.paw,
+        color: 'blue',
+        images: [
+          importImg('technologies/paw.png'),
+          importImg('technologies/paw@2x.png'),
+        ],
+        href: 'https://paw.cloud',
       },
       {
         name: 'notes',

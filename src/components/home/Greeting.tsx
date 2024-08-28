@@ -107,6 +107,7 @@ export default function Greeting() {
         {t('about.feature.vlogger.extraLabel', {
           replace: [CONTACT_LINK.youTube.title],
         })}
+        .
       </p>
       <div className="Greeting-Actions Actions">
         {links.map(({Icon, ...link}) => (

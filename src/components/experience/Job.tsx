@@ -76,7 +76,10 @@ export default function Job({job, t, index}: IJobProps) {
     setExpanded(value)
   }
 
-  const showProjectsTools = job.company.name !== 'mvideo'
+  const showProjects =
+    job.company.name !== 'mVideo' && job.company.name !== 'goRentals'
+
+  const showTools = job.company.name !== 'mVideo'
 
   return (
     <Accordion
@@ -97,10 +100,10 @@ export default function Job({job, t, index}: IJobProps) {
           occupations={job.occupations}
         />
         <Features t={t} features={job.features} />
-        {showProjectsTools && <Projects t={t} companyName={job.company.name} />}
-        <Block t={t} isDuties items={job.duties} />
-        <Block t={t} items={job.achievements} />
-        {showProjectsTools && <Tools t={t} tools={job.tools!} />}
+        {showProjects && <Projects t={t} companyName={job.company.name} />}
+        {job.duties && <Block t={t} isDuties items={job.duties} />}
+        {job.achievements && <Block t={t} items={job.achievements} />}
+        {showTools && <Tools t={t} tools={job.tools!} />}
       </AccordionDetails>
     </Accordion>
   )

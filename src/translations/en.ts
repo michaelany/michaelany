@@ -189,7 +189,7 @@ const EN = {
     },
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1> I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming & life, as well as my experience & knowledge in my <2>${common.title.vlog}</2>`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming & life, as well as my experience & knowledge in my <2>${common.title.vlog}</2>`,
     projects: 'Projects',
     tools: 'Base tools',
     duties: 'Key duties',
@@ -255,7 +255,8 @@ const EN = {
         busyFull: 'full-time',
         busyPart: 'part-time',
         remote: 'remotely',
-        office: 'office',
+        office: 'in the office',
+        hybrid: 'hybrid work',
         moscow: 'Moscow, Russia',
         auckland: 'Auckland, New Zealand',
       },
@@ -278,7 +279,7 @@ const EN = {
       step7: `I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
       step8: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
       step9: `I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
-      step10: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
+      step10: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. Graduated from VGIK and obtained a second higher education.`,
       step11: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.middle}</0>, chose the {{1}} company`,
       step12: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
       step13: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
@@ -288,11 +289,13 @@ const EN = {
       step17:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step18: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
-      step19: `Worked as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}} I also provided frontend development consultations`,
+      step19: `Worked as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}}. I also provided frontend development consultations`,
       step20:
-        'I moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}} Launched my {{1}} channel. Obtained a work visa',
+        'I moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}}. Launched my <0>{{1}} channel</0>. Obtained a work visa',
       step21:
-        'I moved to New Zealand on a work visa from the {{0}} company. Working, settling in, running my vlog, building relationships with hobbits and alpacas',
+        'I moved to New Zealand on a work visa from the {{0}} company. Worked, settled in, built relationships with hobbits and alpacas',
+      step22: `I agreed with {{0}} on a gradual search for a new job, as the company began shutting down its core business. I passed an interview, completed a technical assessment and received an offer from {{1}} for the position of <0>${common.occupation.lead}</0>. I was waiting for an update on my work visa while continuing to collaborate with {{2}} on projects`,
+      step23: `I received an updated work visa and started as a <0>${common.occupation.lead}</0> at {{0}}. Working, settling in, building relationships with hobbits and alpacas`,
     },
   },
   portfolio: {
@@ -474,7 +477,7 @@ const EN = {
   },
   vlog: {
     description:
-      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity from scratch, bringing UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand digital company 7 glyphs Ltd. {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity from scratch, bringing UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company. {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',

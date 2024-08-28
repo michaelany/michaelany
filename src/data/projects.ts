@@ -2592,6 +2592,7 @@ export const PRIVATE_PROJECTS: IProject[] = projects.filter(
 )
 
 export const PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT = {
+  goRentals: 3,
   sevenGlyphs:
     2 +
     PRIVATE_PROJECTS.filter((project) => project.companyName === 'sevenGlyphs')

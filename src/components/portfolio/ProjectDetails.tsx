@@ -72,6 +72,7 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
         <Link {...BLANK_LINK_PROPS} className="Link" href={company.href}>
           {company.title}
         </Link>
+        .
       </p>
       <Features items={featureItems} />
       <ProjectActions
