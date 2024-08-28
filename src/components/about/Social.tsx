@@ -86,12 +86,11 @@ const Photo = () => {
 }
 
 const links: ISocialLink[] = [
-  CONTACT_LINK.gitHub,
   CONTACT_LINK.youTube,
+  CONTACT_LINK.gitHub,
   CONTACT_LINK.linkedIn,
-  //CONTACT_LINK.facebook,
   CONTACT_LINK.telegram,
-  CONTACT_LINK.sevenGlyphs,
+  CONTACT_LINK.duolingo,
   CONTACT_LINK.instagram,
 ]
 

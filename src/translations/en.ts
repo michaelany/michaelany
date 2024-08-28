@@ -76,7 +76,7 @@ const EN = {
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work for the New Zealand digital company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work for the New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized & standalone',
@@ -477,7 +477,7 @@ const EN = {
   },
   vlog: {
     description:
-      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity from scratch, bringing UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company. {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity from scratch, bringing UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',

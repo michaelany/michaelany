@@ -8,6 +8,7 @@ import macbook2xImg from '#assets/img/shapes/macbook@2x.png'
 import jsImg from '#assets/img/pictures/js.svg'
 import tsImg from '#assets/img/pictures/ts.svg'
 import reactImg from '#assets/img/pictures/react.svg'
+import vueImg from '#assets/img/pictures/vue.svg'
 import htmlImg from '#assets/img/pictures/html.svg'
 import cssImg from '#assets/img/pictures/css.svg'
 import sassImg from '#assets/img/pictures/sass.svg'
@@ -90,6 +91,7 @@ const images = [
   jsImg,
   tsImg,
   reactImg,
+  vueImg,
   htmlImg,
   cssImg,
   sassImg,
