@@ -5,7 +5,7 @@ import {useMediaQuery} from '@mui/material'
 import './App.scss'
 import Sidebar from './base/Sidebar'
 import Header from './base/Header'
-// import Message from './base/Message'
+import Message from './base/Message'
 import Home from './home/Home'
 import About from './about/About'
 import Skills from './skills/Skills'
@@ -38,26 +38,29 @@ export default function App() {
   )
 
   return (
-    <div className={AppClassName}>
-      {md ? <Header /> : <Sidebar />}
-      <main className="App-Main">
-        <Routes>
-          <Route path={ROUTE.home} element={<Home />} />
-          <Route path={ROUTE.about} element={<About />} />
-          <Route path={ROUTE.skills} element={<Skills />} />
-          <Route path={ROUTE.experience} element={<Experience />} />
-          <Route path={ROUTE.portfolio}>
-            <Route index element={<Portfolio />} />
-            <Route path=":project" element={<Project />} />
-          </Route>
-          <Route path={ROUTE.vlog}>
-            <Route index element={<Vlog />} />
-            <Route path=":video" element={<Video />} />
-          </Route>
-          <Route path={ROUTE.contact} element={<Contact />} />
-          <Route path="*" element={<Navigate replace to={ROUTE.home} />} />
-        </Routes>
-      </main>
-    </div>
+    <>
+      <div className={AppClassName}>
+        {md ? <Header /> : <Sidebar />}
+        <main className="App-Main">
+          <Routes>
+            <Route path={ROUTE.home} element={<Home />} />
+            <Route path={ROUTE.about} element={<About />} />
+            <Route path={ROUTE.skills} element={<Skills />} />
+            <Route path={ROUTE.experience} element={<Experience />} />
+            <Route path={ROUTE.portfolio}>
+              <Route index element={<Portfolio />} />
+              <Route path=":project" element={<Project />} />
+            </Route>
+            <Route path={ROUTE.vlog}>
+              <Route index element={<Vlog />} />
+              <Route path=":video" element={<Video />} />
+            </Route>
+            <Route path={ROUTE.contact} element={<Contact />} />
+            <Route path="*" element={<Navigate replace to={ROUTE.home} />} />
+          </Routes>
+        </main>
+      </div>
+      <Message />
+    </>
   )
 }

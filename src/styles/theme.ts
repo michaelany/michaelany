@@ -49,7 +49,7 @@ const BORDER_RADIUS_QUARTER = BORDER_RADIUS / 4
 
 const THEME: ThemeOptions = {
   typography: {
-    fontFamily: 'Neutra Text, sans-serif',
+    fontFamily: '"Neutra Text", sans-serif',
     htmlFontSize: FONT_SIZE.base,
     fontSize: FONT_SIZE.base,
     body1: {

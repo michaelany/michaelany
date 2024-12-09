@@ -535,7 +535,7 @@ const EN = {
   },
   message: {
     stopWar: 'My relatives live in Russia and Ukraine. <0>NO WAR</0>',
-    newYear: '<0>Happy New Year 2024</0>',
+    newYear: '<0>Happy New Year 2025!</0>',
     halloween: 'Happy <0>Halloween</0>',
   },
 }

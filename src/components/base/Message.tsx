@@ -33,7 +33,7 @@ export default function Message() {
           <img width={64} height={64} src={santaImg} alt="Santa Claus" />
           {/* <img width={64} height={64} src={pumpkinImg} alt="Pumpkin" /> */}
           <p>
-            <Trans i18nKey="message.newYear" components={transComponents} />!
+            <Trans i18nKey="message.newYear" components={transComponents} />
           </p>
           <IconButton
             className="Message-Close"
