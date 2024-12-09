@@ -246,3 +246,21 @@
     opacity: 0;
   }
 }
+
+@keyframes garlandBlink {
+  0% {
+    fill: $color_red-second;
+  }
+  25% {
+    fill: $color_yellow-second;
+  }
+  50% {
+    fill: $color_green-second;
+  }
+  75% {
+    fill: $color_blue-second;
+  }
+  100% {
+    fill: $color_red-second;
+  }
+}

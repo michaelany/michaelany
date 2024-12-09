@@ -19,7 +19,7 @@ jobs:
           yarn --silent --frozen-lockfile 
           yarn build
         env:
-          VITE_SHOW_PRIVATE_PROJECTS: false
+          VITE_NEW_YEAR_MODE: true
           VITE_EMAIL_JS_SERVICE_ID: ${{ secrets.EMAIL_JS_SERVICE_ID }}
           VITE_EMAIL_JS_TEMPLATE_ID: ${{ secrets.EMAIL_JS_TEMPLATE_ID }}
           VITE_EMAIL_JS_USER_ID: ${{ secrets.EMAIL_JS_USER_ID }}

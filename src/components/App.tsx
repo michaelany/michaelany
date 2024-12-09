@@ -6,6 +6,7 @@ import './App.scss'
 import Sidebar from './base/Sidebar'
 import Header from './base/Header'
 import Message from './base/Message'
+import Garland from './base/Garland'
 import Home from './home/Home'
 import About from './about/About'
 import Skills from './skills/Skills'
@@ -20,6 +21,7 @@ import {
   PATH_COLOR,
   PATH_BACKGROUND_COLOR,
   QUERY_BREAKPOINT,
+  IS_NEW_YEAR_MODE,
 } from '#utils/constants'
 
 export default function App() {
@@ -42,6 +44,7 @@ export default function App() {
       <div className={AppClassName}>
         {md ? <Header /> : <Sidebar />}
         <main className="App-Main">
+          {IS_NEW_YEAR_MODE && <Garland />}
           <Routes>
             <Route path={ROUTE.home} element={<Home />} />
             <Route path={ROUTE.about} element={<About />} />
@@ -60,7 +63,7 @@ export default function App() {
           </Routes>
         </main>
       </div>
-      <Message />
+      {IS_NEW_YEAR_MODE && <Message />}
     </>
   )
 }

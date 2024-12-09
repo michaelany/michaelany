@@ -11,22 +11,27 @@ import {
 import './Greeting.scss'
 import frontendImg from '#assets/img/pictures/frontend.svg'
 import youtubeImg from '#assets/img/pictures/youtube.svg'
-/* import meImg from '#assets/img/pictures/me.jpg'
+import meImg from '#assets/img/pictures/me.jpg'
 import me2xImg from '#assets/img/pictures/me@2x.jpg'
 import meMdImg from '#assets/img/pictures/me_md.jpg'
 import meMd2xImg from '#assets/img/pictures/me_md@2x.jpg'
 import meXsImg from '#assets/img/pictures/me_xs.jpg'
-import meXs2xImg from '#assets/img/pictures/me_xs@2x.jpg' */
-import meImg from '#assets/img/pictures/me-santa.jpg'
-import me2xImg from '#assets/img/pictures/me-santa@2x.jpg'
-import meMdImg from '#assets/img/pictures/me-santa_md.jpg'
-import meMd2xImg from '#assets/img/pictures/me-santa_md@2x.jpg'
-import meXsImg from '#assets/img/pictures/me-santa_xs.jpg'
-import meXs2xImg from '#assets/img/pictures/me-santa_xs@2x.jpg'
+import meXs2xImg from '#assets/img/pictures/me_xs@2x.jpg'
+import meNewYearImg from '#assets/img/pictures/me-santa.jpg'
+import meNewYear2xImg from '#assets/img/pictures/me-santa@2x.jpg'
+import meNewYearMdImg from '#assets/img/pictures/me-santa_md.jpg'
+import meNewYearMd2xImg from '#assets/img/pictures/me-santa_md@2x.jpg'
+import meNewYearXsImg from '#assets/img/pictures/me-santa_xs.jpg'
+import meNewYearXs2xImg from '#assets/img/pictures/me-santa_xs@2x.jpg'
 import {Section} from '#components/common'
 import HelloIcon from '#assets/icons/hello.svg?react'
 import {CONTACT_LINK, MY_NAME} from '#data/common'
-import {ROUTE, QUERY_BREAKPOINT, BLANK_LINK_PROPS} from '#utils/constants'
+import {
+  ROUTE,
+  QUERY_BREAKPOINT,
+  BLANK_LINK_PROPS,
+  IS_NEW_YEAR_MODE,
+} from '#utils/constants'
 
 export default function Greeting() {
   const {t} = useTranslation()
@@ -127,18 +132,18 @@ export default function Greeting() {
         <source
           width={180}
           media={QUERY_BREAKPOINT.xs}
-          srcSet={`${meXsImg}, ${meXs2xImg} 2x`}
+          srcSet={`${me.xsImg}, ${me.xsImg2x} 2x`}
         />
         <source
           width={320}
           media={QUERY_BREAKPOINT.lg}
-          srcSet={`${meMdImg}, ${meMd2xImg} 2x`}
+          srcSet={`${me.mdImg}, ${me.mdImg2x} 2x`}
         />
         <img
           className="Greeting-Photo"
           width={480}
-          src={meImg}
-          srcSet={`${me2xImg} 2x`}
+          src={me.img}
+          srcSet={`${me.img2x} 2x`}
           alt={MY_NAME}
           loading="lazy"
         />
@@ -160,3 +165,12 @@ const links = [
   {key: 'contact', color: 'green', order: 'Nineth', Icon: MailIcon},
   {key: 'vlog', color: 'red', order: 'Tenth', Icon: CameraAltIcon},
 ]
+
+const me = {
+  img: IS_NEW_YEAR_MODE ? meNewYearImg : meImg,
+  img2x: IS_NEW_YEAR_MODE ? meNewYear2xImg : me2xImg,
+  mdImg: IS_NEW_YEAR_MODE ? meNewYearMdImg : meMdImg,
+  mdImg2x: IS_NEW_YEAR_MODE ? meNewYearMd2xImg : meMd2xImg,
+  xsImg: IS_NEW_YEAR_MODE ? meNewYearXsImg : meXsImg,
+  xsImg2x: IS_NEW_YEAR_MODE ? meNewYearXs2xImg : meXs2xImg,
+}

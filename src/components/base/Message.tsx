@@ -5,8 +5,6 @@ import {CloseRounded as CloseIcon} from '@mui/icons-material'
 
 import './Message.scss'
 import santaImg from '#assets/img/pictures/santa.png'
-// import RuUaIcon from '#assets/icons/ru-ua.svg?react'
-// import pumpkinImg from '#assets/img/pictures/pumpkin.png'
 import {DURATION} from '#styles/theme'
 
 export default function Message() {
@@ -29,9 +27,7 @@ export default function Message() {
       anchorOrigin={anchorOrigin}
       message={
         <>
-          {/* <RuUaIcon className="Message-Icon" /> */}
           <img width={64} height={64} src={santaImg} alt="Santa Claus" />
-          {/* <img width={64} height={64} src={pumpkinImg} alt="Pumpkin" /> */}
           <p>
             <Trans i18nKey="message.newYear" components={transComponents} />
           </p>
@@ -50,7 +46,7 @@ export default function Message() {
 
 const anchorOrigin: SnackbarOrigin = {
   vertical: 'top',
-  horizontal: 'center',
+  horizontal: 'right',
 }
 
 const transComponents = [<strong />]
