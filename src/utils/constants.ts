@@ -108,8 +108,3 @@ export const BLANK_LINK_PROPS: IBlankLinkProps = {
 export const RANDOM_EFFECTS: TEffect[] = ['top', 'right', 'bottom', 'left']
 
 export const IS_NEW_YEAR_MODE = import.meta.env.VITE_NEW_YEAR_MODE === 'true'
-
-console.log(
-  'import.meta.env.VITE_NEW_YEAR_MODE',
-  typeof import.meta.env.VITE_NEW_YEAR_MODE
-)

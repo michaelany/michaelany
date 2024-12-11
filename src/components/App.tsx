@@ -44,7 +44,7 @@ export default function App() {
       <div className={AppClassName}>
         {md ? <Header /> : <Sidebar />}
         <main className="App-Main">
-          {IS_NEW_YEAR_MODE && <Garland />}
+          {IS_NEW_YEAR_MODE && !md && <Garland />}
           <Routes>
             <Route path={ROUTE.home} element={<Home />} />
             <Route path={ROUTE.about} element={<About />} />
