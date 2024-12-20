@@ -18,7 +18,7 @@ export default function Projects() {
   const [filter, setFilter] = useState<TProjectFilter>(
     hashFilter
       ? hashFilter
-      : (localStorage.getItem(storageProp) as TProjectFilter) ?? 'all'
+      : ((localStorage.getItem(storageProp) as TProjectFilter) ?? 'all')
   )
   const {t} = useTranslation()
   const width: IWidth = {

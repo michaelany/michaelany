@@ -1,14 +1,13 @@
 import {useNavigate} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
-import {Map as GoogleMap, Marker, GoogleApiWrapper} from 'google-maps-react'
-import {CircularProgress} from '@mui/material'
+import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api'
 
 import './Map.scss'
 import markerIcon from '#assets/icons/marker.svg'
 import {ROUTE} from '#utils/constants'
-import STYLES from '#styles/map'
+import MAP_STYLES from '#styles/map'
 
-function Map() {
+export default function Map() {
   const {t, i18n} = useTranslation()
   const navigate = useNavigate()
 
@@ -16,37 +15,35 @@ function Map() {
 
   return (
     <div className="Map">
-      {/* @ts-ignore */}
-      <GoogleMap
-        disableDefaultUI
-        /* @ts-ignore */
-        google={window.google}
-        initialCenter={initialCenter}
-        zoom={11}
-        styles={STYLES}
-      >
-        <Marker
-          key={i18n.language}
-          /* @ts-ignore */
-          title={`${t('contact.marker')} 🏠`}
-          icon={markerIcon}
-          onClick={handleMarkerClick}
-        />
-      </GoogleMap>
+      <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_API_KEY}>
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={initialCenter}
+          zoom={11}
+          options={{
+            disableDefaultUI: true,
+            styles: MAP_STYLES,
+          }}
+        >
+          <Marker
+            key={i18n.language}
+            position={initialCenter}
+            title={`${t('contact.marker')} 🏠`}
+            icon={{
+              url: markerIcon,
+            }}
+            onClick={handleMarkerClick}
+          />
+        </GoogleMap>
+      </LoadScript>
     </div>
   )
 }
 
-const LoadingContainer = () => (
-  <div className="Map Map_loading">
-    <CircularProgress />
-  </div>
-)
-
-export default GoogleApiWrapper({
-  LoadingContainer,
-  apiKey: import.meta.env.VITE_GOOGLE_API_KEY,
-})(Map)
+const containerStyle = {
+  width: '100%',
+  height: '100%',
+}
 
 const initialCenter = {
   lat: -36.792836,
