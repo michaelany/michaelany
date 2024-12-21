@@ -7,25 +7,25 @@ $img-height_sm: 30px;
 .Company {
   padding: $padding_st;
   &_animated {
-    @include animation(fadeInTop);
+    @include m.animation(fadeInTop);
     margin-left: -$padding_st;
     margin-right: -$padding_st;
   }
-  @include lg {
+  @include m.lg {
     padding: $padding_sm;
     &_animated {
       margin-left: -$padding_sm;
       margin-right: -$padding_sm;
     }
   }
-  @include md {
+  @include m.md {
     padding: $padding_st;
     &_animated {
       margin-left: -$padding_st;
       margin-right: -$padding_st;
     }
   }
-  @include sm {
+  @include m.sm {
     padding: $padding_sm;
     &_animated {
       margin-left: -$padding_sm;
@@ -36,13 +36,13 @@ $img-height_sm: 30px;
 
 .Company-Image {
   height: $img-height_st;
-  @include lg {
+  @include m.lg {
     height: $img-height_sm;
   }
-  @include md {
+  @include m.md {
     height: $img-height_st;
   }
-  @include sm {
+  @include m.sm {
     height: $img-height_sm;
   }
 }

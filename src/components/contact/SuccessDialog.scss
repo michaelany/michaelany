@@ -1,7 +1,7 @@
 .SuccessDialog {
   padding: 48px;
   text-align: center;
-  @include sm {
+  @include m.sm {
     padding: 32px;
   }
 }
@@ -10,7 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
-  @include sm {
+  @include m.sm {
     width: 60px;
     height: 60px;
   }
@@ -19,10 +19,10 @@
 .SuccessDialog-Title {
   font-size: 36px;
   margin-bottom: 0.65em;
-  @include lg {
+  @include m.lg {
     font-size: 30px;
   }
-  @include sm {
+  @include m.sm {
     font-size: 26px;
   }
 }

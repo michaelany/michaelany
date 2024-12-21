@@ -14,13 +14,13 @@
 }
 
 .Stepper-Button {
-  color: $color_dark-violet;
-  background-color: rgba($color_violet, 0.2);
+  color: v.$color_dark-violet;
+  background-color: rgba(v.$color_violet, 0.2);
   &:not(:first-child) {
     margin-right: 8px;
   }
-  @include hover {
-    background-color: rgba($color_violet, 0.4);
+  @include m.hover {
+    background-color: rgba(v.$color_violet, 0.4);
     .Stepper-ButtonIcon {
       transform: rotate(90deg);
       &_refresh {
@@ -33,9 +33,9 @@
 .Stepper-ButtonIcon {
   font-size: 24px;
   transform: rotate(0deg);
-  transition: transform $duration_short $easing_in-out;
+  transition: transform v.$duration_short v.$easing_in-out;
   &_refresh {
     transform: rotate(0deg) scale(1);
-    transition: transform $duration_medium $easing_in-out;
+    transition: transform v.$duration_medium v.$easing_in-out;
   }
 }

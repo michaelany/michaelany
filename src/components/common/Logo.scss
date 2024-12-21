@@ -7,22 +7,22 @@
   display: flex;
   justify-content: center;
   transition:
-    transform $duration_standard $easing_out,
-    color $duration_short $easing_in-out;
-  @include hover {
+    transform v.$duration_standard v.$easing_out,
+    color v.$duration_short v.$easing_in-out;
+  @include m.hover {
     transform: scale(1.15) rotate(-10deg);
   }
-  @include md {
+  @include m.md {
     padding: 0;
     margin-bottom: 0;
-    @include hover {
+    @include m.hover {
       transform: scale(1.15) rotate(10deg);
     }
   }
 }
 
 .Logo-Svg {
-  @include md {
+  @include m.md {
     width: 46px;
     height: 46px;
   }

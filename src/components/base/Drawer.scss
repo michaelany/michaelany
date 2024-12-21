@@ -1,8 +1,8 @@
 .Drawer-Content {
   overflow-y: auto;
   height: 100%;
-  transition: background-color $duration_standard $easing_in-out;
-  @each $key, $value in $colors-map {
+  transition: background-color v.$duration_standard v.$easing_in-out;
+  @each $key, $value in v.$colors-map {
     .App_background_#{$key} & {
       background-color: $value;
     }
@@ -20,5 +20,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $header_height - $header_border-width;
+  height: v.$header_height - v.$header_border-width;
 }

@@ -1,16 +1,16 @@
-$videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand',
-  'how-i-became-software-engineer';
+$videos: 'day-in-a-life-montenegro', 'my-dreamdesk',
+  'day-in-a-life-new-zealand', 'how-i-became-software-engineer';
 
 .VideoLink-Tilt {
   overflow: hidden;
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
 }
 
 .VideoLink-Item {
   aspect-ratio: 1 / 0.64;
   width: 100%;
   background-color: white;
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
   overflow: hidden;
   &.Mui-focusVisible {
     .VideoLink-Content {
@@ -31,11 +31,11 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand'
   height: 100%;
   @each $video in $videos {
     &_name_#{$video}::after {
-      @include retinaImg('assets/img/videos/#{$video}', 'jpg');
+      @include m.retinaImg('assets/img/videos/#{$video}', 'jpg');
     }
   }
   &::after {
-    @include pseudo(relative);
+    @include m.pseudo(relative);
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -55,14 +55,14 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand'
   padding: 24px;
   background-color: white;
   opacity: 0;
-  transition: opacity $duration_short $easing_in-out;
+  transition: opacity v.$duration_short v.$easing_in-out;
 }
 
 .VideoLink-Title {
   padding-top: 4px;
   font-size: 22px;
   line-height: 1.2;
-  @each $key, $value, $secondValue in $colors-map {
+  @each $key, $_, $secondValue in v.$colors-map {
     .ColorInteract_color_#{$key} & {
       color: $secondValue;
     }
@@ -70,6 +70,6 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand'
 }
 
 .VideoLink-Date {
-  color: $color_second-text;
+  color: v.$color_second-text;
   justify-content: center;
 }

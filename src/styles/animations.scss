@@ -1,3 +1,5 @@
+@use 'styles/variables' as v;
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -9,7 +11,7 @@
 
 @keyframes fadeInTop {
   from {
-    transform: translate3d(0, -$effect_delta, 0);
+    transform: translate3d(0, -(v.$effect_delta), 0);
     opacity: 0;
   }
   to {
@@ -20,7 +22,7 @@
 
 @keyframes fadeInRight {
   from {
-    transform: translate3d($effect_delta, 0, 0);
+    transform: translate3d(v.$effect_delta, 0, 0);
     opacity: 0;
   }
   to {
@@ -31,7 +33,7 @@
 
 @keyframes fadeInBottom {
   from {
-    transform: translate3d(0, $effect_delta, 0);
+    transform: translate3d(0, v.$effect_delta, 0);
     opacity: 0;
   }
   to {
@@ -42,7 +44,7 @@
 
 @keyframes fadeInLeft {
   from {
-    transform: translate3d(-$effect_delta, 0, 0);
+    transform: translate3d(-(v.$effect_delta), 0, 0);
     opacity: 0;
   }
   to {
@@ -97,104 +99,104 @@
 
 @keyframes alternateColor {
   from {
-    color: $color_blue;
-    outline-color: $color_blue;
+    color: v.$color_blue;
+    outline-color: v.$color_blue;
   }
   16.66% {
-    color: $color_green;
-    outline-color: $color_green;
+    color: v.$color_green;
+    outline-color: v.$color_green;
   }
   33.33% {
-    color: $color_grass;
-    outline-color: $color_grass;
+    color: v.$color_grass;
+    outline-color: v.$color_grass;
   }
   50% {
-    color: $color_red;
-    outline-color: $color_red;
+    color: v.$color_red;
+    outline-color: v.$color_red;
   }
   66.66% {
-    color: $color_yellow;
-    outline-color: $color_yellow;
+    color: v.$color_yellow;
+    outline-color: v.$color_yellow;
   }
   83.33% {
-    color: $color_violet;
-    outline-color: $color_violet;
+    color: v.$color_violet;
+    outline-color: v.$color_violet;
   }
   to {
-    color: $color_blue;
-    outline-color: $color_blue;
+    color: v.$color_blue;
+    outline-color: v.$color_blue;
   }
 }
 
 @keyframes alternateBackgroundColor {
   from {
-    background-color: $color_blue;
+    background-color: v.$color_blue;
   }
   16.66% {
-    background-color: $color_green;
+    background-color: v.$color_green;
   }
   33.33% {
-    background-color: $color_grass;
+    background-color: v.$color_grass;
   }
   50% {
-    background-color: $color_red;
+    background-color: v.$color_red;
   }
   66.66% {
-    background-color: $color_yellow;
+    background-color: v.$color_yellow;
   }
   83.33% {
-    background-color: $color_violet;
+    background-color: v.$color_violet;
   }
   to {
-    background-color: $color_blue;
+    background-color: v.$color_blue;
   }
 }
 
 @keyframes alternateBackgroundOpacityColor {
   from {
-    background-color: rgba($color_blue, $backdrop-opacity);
+    background-color: rgba(v.$color_blue, v.$backdrop-opacity);
   }
   16.66% {
-    background-color: rgba($color_green, $backdrop-opacity);
+    background-color: rgba(v.$color_green, v.$backdrop-opacity);
   }
   33.33% {
-    background-color: rgba($color_grass, $backdrop-opacity);
+    background-color: rgba(v.$color_grass, v.$backdrop-opacity);
   }
   50% {
-    background-color: rgba($color_red, $backdrop-opacity);
+    background-color: rgba(v.$color_red, v.$backdrop-opacity);
   }
   66.66% {
-    background-color: rgba($color_yellow, $backdrop-opacity);
+    background-color: rgba(v.$color_yellow, v.$backdrop-opacity);
   }
   83.33% {
-    background-color: rgba($color_violet, $backdrop-opacity);
+    background-color: rgba(v.$color_violet, v.$backdrop-opacity);
   }
   to {
-    background-color: rgba($color_blue, $backdrop-opacity);
+    background-color: rgba(v.$color_blue, v.$backdrop-opacity);
   }
 }
 
 @keyframes alternateBorderColor {
   from {
-    border-color: $color_blue;
+    border-color: v.$color_blue;
   }
   16.66% {
-    border-color: $color_green;
+    border-color: v.$color_green;
   }
   33.33% {
-    border-color: $color_grass;
+    border-color: v.$color_grass;
   }
   50% {
-    border-color: $color_red;
+    border-color: v.$color_red;
   }
   66.66% {
-    border-color: $color_yellow;
+    border-color: v.$color_yellow;
   }
   83.33% {
-    border-color: $color_violet;
+    border-color: v.$color_violet;
   }
   to {
-    border-color: $color_blue;
+    border-color: v.$color_blue;
   }
 }
 
@@ -249,18 +251,18 @@
 
 @keyframes garlandBlink {
   0% {
-    fill: $color_red-second;
+    fill: v.$color_red-second;
   }
   25% {
-    fill: $color_yellow-second;
+    fill: v.$color_yellow-second;
   }
   50% {
-    fill: $color_green-second;
+    fill: v.$color_green-second;
   }
   75% {
-    fill: $color_blue-second;
+    fill: v.$color_blue-second;
   }
   100% {
-    fill: $color_red-second;
+    fill: v.$color_red-second;
   }
 }

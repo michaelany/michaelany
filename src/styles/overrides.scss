@@ -1,0 +1,63 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as m;
+
+.MuiFab {
+  &-root:not(.MuiFab-sizeMedium) {
+    @include m.lg {
+      width: v.$fab-size_mobile;
+      height: v.$fab-size_mobile;
+    }
+    @include m.md {
+      width: v.$fab-size_base;
+      height: v.$fab-size_base;
+    }
+    @include m.sm {
+      width: v.$fab-size_mobile;
+      height: v.$fab-size_mobile;
+    }
+  }
+}
+
+.MuiIconButton {
+  &-root {
+    @include m.hover {
+      background-color: rgba(v.$color_text, 0.04);
+    }
+  }
+}
+
+.MuiFilledInput {
+  &-root {
+    @include m.hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.MuiTab {
+  &-root {
+    @include m.sm {
+      font-size: v.$font-size_smaller;
+    }
+  }
+}
+
+.MuiBackdrop {
+  &-root {
+    .App_color_alternate & {
+      @include m.animationAlternate(alternateBackgroundOpacityColor);
+    }
+    .App_color_white & {
+      background-color: rgba(white, v.$backdrop-opacity);
+    }
+    @each $key, $value in v.$colors-map {
+      .App_color_#{$key} & {
+        background-color: rgba($value, v.$backdrop-opacity);
+      }
+    }
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

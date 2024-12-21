@@ -1,13 +1,16 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as m;
+
 html {
-  font-size: $font-size_base;
-  @include lg {
-    font-size: $font-size_smaller;
+  font-size: v.$font-size_base;
+  @include m.lg {
+    font-size: v.$font-size_smaller;
   }
-  @include md {
-    font-size: $font-size_base;
+  @include m.md {
+    font-size: v.$font-size_base;
   }
-  @include sm {
-    font-size: $font-size_smaller;
+  @include m.sm {
+    font-size: v.$font-size_smaller;
   }
 }
 

@@ -1,3 +1,5 @@
+@use 'styles/variables' as v;
+
 @mixin pseudo($pos: absolute, $display: block, $content: '') {
   content: $content;
   display: $display;
@@ -34,33 +36,33 @@
 }
 
 @mixin xs {
-  @media (max-width: $breakpoint_xs) {
+  @media (max-width: v.$breakpoint_xs) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (max-width: $breakpoint_sm) {
+  @media (max-width: v.$breakpoint_sm) {
     @content;
   }
 }
 
 @mixin md {
-  @media (max-width: $breakpoint_md) {
+  @media (max-width: v.$breakpoint_md) {
     @content;
   }
 }
 
 @mixin lg {
-  @media (max-width: $breakpoint_lg) {
+  @media (max-width: v.$breakpoint_lg) {
     @content;
   }
 }
 
 @mixin animation($animation, $delay: 0ms) {
-  animation: $animation $duration_long $easing_in-out $delay both;
+  animation: $animation v.$duration_long v.$easing_in-out $delay both;
 }
 
 @mixin animationAlternate($animation: alternateColor) {
-  animation: $animation $duration_alternate linear infinite;
+  animation: $animation v.$duration_alternate linear infinite;
 }

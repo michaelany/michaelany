@@ -1,14 +1,16 @@
+@use 'sass:math';
+
 .App {
   position: relative;
   display: flex;
   min-width: 320px;
-  transition: background-color $duration_standard $easing_in-out;
+  transition: background-color v.$duration_standard v.$easing_in-out;
   &_color_alternate {
     ::selection {
-      background-color: rgba($color_default, 0.4);
+      background-color: rgba(v.$color_default, 0.4);
     }
   }
-  @each $key, $value in $colors-map {
+  @each $key, $value in v.$colors-map {
     &_color_#{$key} {
       ::selection {
         background-color: rgba($value, 0.4);
@@ -19,10 +21,10 @@
     }
     &_background_#{$key} {
       &::before {
-        @include pseudoGradient;
+        @include m.pseudoGradient;
       }
       ::selection {
-        background-color: rgba($color_default, 0.4);
+        background-color: rgba(v.$color_default, 0.4);
       }
     }
   }
@@ -31,9 +33,9 @@
 .App-Main {
   min-height: 100vh;
   width: 100%;
-  padding-left: $sidebar-width;
-  @include md {
-    padding-top: math.div($header_height, 2);
+  padding-left: v.$sidebar-width;
+  @include m.md {
+    padding-top: math.div(v.$header_height, 2);
     padding-left: 0;
   }
 }

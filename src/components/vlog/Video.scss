@@ -4,10 +4,10 @@
 
 .Video-Player {
   background-color: black;
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
   overflow: hidden;
   margin-bottom: 40px;
-  @include animation(fadeIn);
+  @include m.animation(fadeIn);
 }
 
 .Video-Panel {

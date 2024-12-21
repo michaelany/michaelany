@@ -1,3 +1,6 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as m;
+
 .VisuallyHidden {
   position: absolute;
   width: 1px;
@@ -11,18 +14,18 @@
 
 .Colorful {
   .App_color_alternate & {
-    @include animationAlternate;
+    @include m.animationAlternate;
   }
   .App_color_white & {
     color: white;
     outline-color: white;
   }
-  @each $key, $value, $second-value in $colors-map {
+  @each $key, $value, $second-value in v.$colors-map {
     .App_color_#{$key} & {
       color: $value;
       outline-color: $value;
       &_dark {
-        color: rgba($second-value, $dark-alfa);
+        color: rgba($second-value, v.$dark-alfa);
       }
     }
   }
@@ -33,7 +36,7 @@
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 0.5em;
-  @include animation(fadeIn);
+  @include m.animation(fadeIn);
   &_mediumIndent {
     margin-bottom: 0.32em;
   }
@@ -45,20 +48,20 @@
     align-items: center;
   }
   &_fadeInBottom {
-    @include animation(fadeInBottom);
+    @include m.animation(fadeInBottom);
   }
   .App_color_white & {
     color: white;
   }
-  @each $key, $value in $colors-map {
+  @each $key, $value in v.$colors-map {
     .App_color_#{$key} & {
       color: $value;
     }
   }
-  @include lg {
+  @include m.lg {
     font-size: 56px;
   }
-  @include xs {
+  @include m.xs {
     font-size: 42px;
   }
 }
@@ -72,21 +75,21 @@
 .Text {
   font-size: 30px;
   line-height: 1.5;
-  @include lg {
+  @include m.lg {
     font-size: 26px;
   }
-  @include xs {
+  @include m.xs {
     font-size: 22px;
   }
 }
 
 .MainText {
   @extend .Text;
-  @include animation(fadeInBottom);
+  @include m.animation(fadeInBottom);
   margin-bottom: 2em;
-  color: $color_second-text;
+  color: v.$color_second-text;
   &_dark {
-    color: $color_text;
+    color: v.$color_text;
   }
   &_noAnimation {
     animation: none;
@@ -100,54 +103,54 @@
   }
   &_color_blue {
     &.MuiButton-text {
-      color: $color_dark-blue;
-      background-color: rgba($color_blue, 0.2);
-      @include hover {
-        background-color: rgba($color_blue, 0.4);
+      color: v.$color_dark-blue;
+      background-color: rgba(v.$color_blue, 0.2);
+      @include m.hover {
+        background-color: rgba(v.$color_blue, 0.4);
       }
     }
   }
   &_color_green {
     &.MuiButton-text {
-      color: $color_dark-green;
-      background-color: rgba($color_green, 0.2);
-      @include hover {
-        background-color: rgba($color_green, 0.4);
+      color: v.$color_dark-green;
+      background-color: rgba(v.$color_green, 0.2);
+      @include m.hover {
+        background-color: rgba(v.$color_green, 0.4);
       }
     }
   }
   &_color_red {
     &.MuiButton-text {
-      color: $color_dark-red;
-      background-color: rgba($color_red, 0.2);
-      @include hover {
-        background-color: rgba($color_red, 0.4);
+      color: v.$color_dark-red;
+      background-color: rgba(v.$color_red, 0.2);
+      @include m.hover {
+        background-color: rgba(v.$color_red, 0.4);
       }
     }
   }
   &_color_white,
   .App_color_white & {
-    color: $color_text;
+    color: v.$color_text;
     &,
     &:hover {
       background-color: white;
     }
-    @include hover {
-      background-color: $color_light-grey;
+    @include m.hover {
+      background-color: v.$color_light-grey;
     }
   }
-  @each $key, $value, $second-value in $colors-map {
+  @each $key, $value, $second-value in v.$colors-map {
     .App_color_#{$key} & {
       &.MuiButton-text {
         color: $second-value;
         background-color: rgba($value, 0.2);
-        @include hover {
+        @include m.hover {
           background-color: rgba($value, 0.4);
         }
       }
     }
   }
-  @include xs {
+  @include m.xs {
     width: 100%;
     margin-right: 0;
     &:not(:last-child) {
@@ -157,7 +160,7 @@
 }
 
 .NavigationButton {
-  color: $color_text;
+  color: v.$color_text;
   font-size: 32px;
   height: 54px;
   &.active {
@@ -172,22 +175,22 @@
   font-weight: bold;
   user-select: auto;
   white-space: nowrap;
-  transition: text-decoration-color $duration_shortest $easing_out;
+  transition: text-decoration-color v.$duration_shortest v.$easing_out;
   &_white,
   .App_color_white & {
     color: white;
     outline-color: white;
     text-decoration-color: rgba(white, 0.3);
-    @include hover {
+    @include m.hover {
       text-decoration-color: white;
     }
   }
-  @each $key, $value, $second-value in $colors-map {
+  @each $key, $value, $second-value in v.$colors-map {
     .App_color_#{$key} &:not(.Link_white) {
       color: $second-value;
       outline-color: $second-value;
       text-decoration-color: rgba($second-value, 0.3);
-      @include hover {
+      @include m.hover {
         text-decoration-color: $second-value;
       }
     }
@@ -199,15 +202,15 @@
   &_center {
     text-align: center;
   }
-  @include md {
+  @include m.md {
     margin-top: 48px;
   }
 }
 
 .ColorInteract {
   position: relative;
-  border-radius: $border-radius;
-  @each $key, $value in $colors-map {
+  border-radius: v.$border-radius;
+  @each $key, $value in v.$colors-map {
     &_color_#{$key} {
       color: $value;
       &::before {
@@ -216,21 +219,21 @@
     }
   }
   &::before {
-    @include pseudo;
-    border-radius: $border-radius;
+    @include m.pseudo;
+    border-radius: v.$border-radius;
     width: 100%;
     height: 100%;
     opacity: 0;
     z-index: 1;
     transform: scale(0.8);
     transition:
-      transform $duration_short $easing_in-out,
-      opacity $duration_short $easing_in-out;
+      transform v.$duration_short v.$easing_in-out,
+      opacity v.$duration_short v.$easing_in-out;
   }
   & > .MuiTouchRipple-root {
     z-index: 1;
   }
-  @include hover {
+  @include m.hover {
     &::before {
       transform: scale(1);
       opacity: 1;
@@ -248,7 +251,7 @@
 }
 
 .Tabs {
-  @include animation(fadeIn);
+  @include m.animation(fadeIn);
   margin-bottom: 24px;
 }
 

@@ -8,7 +8,7 @@
     display: none;
   }
   &:not(:last-child)::after {
-    @include pseudo;
+    @include m.pseudo;
     bottom: 0;
     background-color: rgba(black, 0.12);
     height: 1px;
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   padding-left: 1.8rem;
-  @include xs {
+  @include m.xs {
     justify-content: flex-start;
     padding-left: 0;
   }
@@ -32,7 +32,7 @@
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 32px;
-  @include xs {
+  @include m.xs {
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
@@ -48,9 +48,9 @@
 .Job-Occupation {
   font-weight: normal;
   font-size: 1.25rem;
-  color: $color_second-text;
+  color: v.$color_second-text;
   &_last {
-    color: $color_text;
+    color: v.$color_text;
   }
   &_current {
     & > span {
@@ -71,21 +71,21 @@
   height: 14px;
   transform: translateY(-50%);
   &::before {
-    @include pseudo;
+    @include m.pseudo;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: $color_violet;
-    animation: rippleSmall $duration_longest $easing_in-out infinite;
+    background-color: v.$color_violet;
+    animation: rippleSmall v.$duration_longest v.$easing_in-out infinite;
   }
   &::after {
-    @include pseudo(relative);
+    @include m.pseudo(relative);
     margin: auto;
     width: 8px;
     height: 8px;
-    background-color: $color_violet;
+    background-color: v.$color_violet;
     border-radius: 50%;
   }
 }
@@ -94,7 +94,7 @@
   position: relative;
   top: 4px;
   transform: rotate(-90deg);
-  color: $color_light-grey;
+  color: v.$color_light-grey;
 }
 
 .Job-Block {
@@ -109,7 +109,7 @@
   display: inline-flex;
   align-items: center;
   & > svg {
-    color: rgba($color_dark-violet, $dark-alfa);
+    color: rgba(v.$color_dark-violet, v.$dark-alfa);
   }
 }
 
@@ -141,23 +141,23 @@
 
 .Job-Feature {
   background-color: transparent;
-  border: 1px solid rgba($color_dark-violet, $dark-alfa);
-  color: $color_text;
+  border: 1px solid rgba(v.$color_dark-violet, v.$dark-alfa);
+  color: v.$color_text;
   .MuiAvatar-root {
-    color: $color_dark-violet;
+    color: v.$color_dark-violet;
   }
 }
 
 .Job-Project {
   font-weight: bold;
-  @each $key, $value, $secondValue in $colors-map {
+  @each $key, $value, $secondValue in v.$colors-map {
     &_color_#{$key} {
       color: $secondValue;
       background-color: rgba($value, 0.2);
       &.Mui-focusVisible {
         background-color: rgba($value, 0.4);
       }
-      @include hover {
+      @include m.hover {
         background-color: rgba($value, 0.4);
       }
     }
@@ -166,9 +166,9 @@
 
 .Job-Tool {
   background-color: transparent;
-  @each $key, $value, $secondValue in $colors-map {
+  @each $key, $_, $secondValue in v.$colors-map {
     &_color_#{$key} {
-      border: 1px solid rgba($secondValue, $dark-alfa);
+      border: 1px solid rgba($secondValue, v.$dark-alfa);
       .MuiAvatar-root {
         background-color: rgba($secondValue, 0.1);
       }

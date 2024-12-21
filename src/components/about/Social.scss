@@ -8,7 +8,7 @@
   position: relative;
   margin-bottom: 48px;
   &::after {
-    @include pseudo;
+    @include m.pseudo;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,13 +16,13 @@
     border-radius: 50%;
     background-color: white;
     opacity: 1;
-    transition: opacity $duration_medium $easing_in-out;
-    animation: ripple $duration_longest $easing_in-out infinite;
+    transition: opacity v.$duration_medium v.$easing_in-out;
+    animation: ripple v.$duration_longest v.$easing_in-out infinite;
   }
   &_hovered::after {
     animation-play-state: paused;
   }
-  @include xs {
+  @include m.xs {
     margin-bottom: 36px;
   }
 }
@@ -48,12 +48,12 @@
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity $duration_standard $easing_in-out;
+    transition: opacity v.$duration_standard v.$easing_in-out;
     .Social-Photo:hover & {
       opacity: 1;
     }
   }
-  @include xs {
+  @include m.xs {
     width: 100%;
     height: auto;
   }

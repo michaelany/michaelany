@@ -7,35 +7,35 @@
     padding-right: 5%;
   }
   &_colorful::before {
-    @include pseudoGradient;
+    @include m.pseudoGradient;
   }
   .App_color_alternate &_colorful {
-    @include animationAlternate(alternateBackgroundColor);
+    @include m.animationAlternate(alternateBackgroundColor);
   }
-  @each $key, $value in $colors-map {
+  @each $key, $value in v.$colors-map {
     .App_color_#{$key} &_colorful {
       background-color: $value;
     }
   }
-  @include md {
+  @include m.md {
     padding-left: 7.5%;
     padding-right: 7.5%;
     .Sections-SectionWrapper:first-child > & {
       padding-bottom: 80px;
     }
   }
-  @include sm {
+  @include m.sm {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
 .Section-Content {
-  max-width: $max-content-width;
+  max-width: v.$max-content-width;
   margin: auto;
   height: 100%;
   .Section_wide > & {
-    max-width: $max-content-width * 2;
+    max-width: v.$max-content-width * 2;
   }
   &_footer {
     display: flex;

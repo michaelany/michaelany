@@ -5,25 +5,25 @@
 }
 
 .Header-Content {
-  height: $header_height;
+  height: v.$header_height;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 8px;
   padding-right: 8px;
-  border-bottom: $header_border-width solid $color_green;
+  border-bottom: v.$header_border-width solid v.$color_green;
   background-color: rgba(white, 0.95);
   transition:
-    color $duration_short $easing_in-out,
-    background-color $duration_standard $easing_in-out;
+    color v.$duration_short v.$easing_in-out,
+    background-color v.$duration_standard v.$easing_in-out;
 
   .App_color_alternate & {
-    @include animationAlternate(alternateBorderColor);
+    @include m.animationAlternate(alternateBorderColor);
   }
   .App_color_white & {
     border-color: white;
   }
-  @each $key, $value in $colors-map {
+  @each $key, $value in v.$colors-map {
     .App_color_#{$key} & {
       border-color: $value;
     }

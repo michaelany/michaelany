@@ -3,20 +3,21 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around',
   '7glyphs-2', 'strongher', 'sds', 'foodprint-landing', 'foodprint-portal',
   'foodprint', 'melissa-chalmers', '7glyphs-lite', 'tmf', 'embp',
   'proximal-coffee', 'uls', 'just-hatched', 'dropdrone', 'present-me',
-  'present-me-portal', 'present-me-landing', 'ally', 'celebration', 'road-ninja',
-  'road-ninja-landing', 't1-online', 'tradease', 'vibe-media', 'madfit-cms',
-  'madfit', 'pridefit-cms', 'ally-cms', 'pridefit', 'strongher-cms', 'ally-2';
+  'present-me-portal', 'present-me-landing', 'ally', 'celebration',
+  'road-ninja', 'road-ninja-landing', 't1-online', 'tradease', 'vibe-media',
+  'madfit-cms', 'madfit', 'pridefit-cms', 'ally-cms', 'pridefit',
+  'strongher-cms', 'ally-2';
 
 .ProjectLink-Tilt {
   overflow: hidden;
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
 }
 
 .ProjectLink-Item {
   aspect-ratio: 1 / 0.7035;
   width: 100%;
   background-color: white;
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
   overflow: hidden;
   &.Mui-focusVisible {
     .ProjectLink-Content {
@@ -37,11 +38,11 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around',
   height: 100%;
   @each $project in $projects {
     &_name_#{$project}::after {
-      @include retinaImg('assets/img/projects/#{$project}', 'jpg');
+      @include m.retinaImg('assets/img/projects/#{$project}', 'jpg');
     }
   }
   &::after {
-    @include pseudo(relative);
+    @include m.pseudo(relative);
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,14 +61,14 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around',
   padding: 24px;
   background-color: white;
   opacity: 0;
-  transition: opacity $duration_short $easing_in-out;
+  transition: opacity v.$duration_short v.$easing_in-out;
 }
 
 .ProjectLink-Title {
   padding-top: 4px;
   font-size: 22px;
   line-height: 1.2;
-  @each $key, $value, $secondValue in $colors-map {
+  @each $key, $_, $secondValue in v.$colors-map {
     .ColorInteract_color_#{$key} & {
       color: $secondValue;
     }
@@ -75,7 +76,7 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around',
 }
 
 .ProjectLink-Label {
-  font-size: $font-size_smaller;
+  font-size: v.$font-size_smaller;
   font-weight: bold;
-  color: $color_second-text;
+  color: v.$color_second-text;
 }

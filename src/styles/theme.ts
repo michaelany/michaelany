@@ -1,13 +1,13 @@
 import {ThemeOptions, Shadows} from '@mui/material'
 
-const DARK_ALPHA = 0.7
+const darkAlpha = 0.7
 
 export const COLOR = {
   green: '#2fd0c8',
   grass: '#6ed485',
   blue: '#64a6fc',
   darkRed: '#cf7e63',
-  darkVioletAlpha: `rgba(135, 116, 198, ${DARK_ALPHA})`,
+  darkVioletAlpha: `rgba(135, 116, 198, ${darkAlpha})`,
   default: '#b0b0b0',
   text: '#282c34',
   secondText: '#6d6d6d',
@@ -39,19 +39,19 @@ export const BREAKPOINT = {
   lg: 1279,
 }
 
-const FONT_SIZE = {
+const fontSize = {
   base: 18,
   smaller: 16,
 }
 
-const BORDER_RADIUS = 8
-const BORDER_RADIUS_QUARTER = BORDER_RADIUS / 4
+const borderRadius = 8
+const borderRadiusQuarter = borderRadius / 4
 
 const THEME: ThemeOptions = {
   typography: {
     fontFamily: '"Neutra Text", sans-serif',
-    htmlFontSize: FONT_SIZE.base,
-    fontSize: FONT_SIZE.base,
+    htmlFontSize: fontSize.base,
+    fontSize: fontSize.base,
     body1: {
       fontSize: '1rem',
       lineHeight: 1.5,
@@ -110,7 +110,7 @@ const THEME: ThemeOptions = {
   },
   shadows: Array(25).fill('none') as Shadows,
   shape: {
-    borderRadius: BORDER_RADIUS,
+    borderRadius: borderRadius,
   },
   components: {
     MuiButton: {
@@ -145,7 +145,7 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         tooltip: {
-          fontSize: FONT_SIZE.smaller,
+          fontSize: fontSize.smaller,
           fontWeight: 'normal',
           color: COLOR.text,
           backgroundColor: 'white',
@@ -168,7 +168,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           padding: 24,
-          borderRadius: BORDER_RADIUS,
+          borderRadius: borderRadius,
         },
       },
     },
@@ -210,7 +210,7 @@ const THEME: ThemeOptions = {
     MuiChip: {
       styleOverrides: {
         root: {
-          fontSize: FONT_SIZE.smaller,
+          fontSize: fontSize.smaller,
           fontWeight: 'normal',
         },
         avatar: {
@@ -247,7 +247,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           backgroundColor: 'white',
-          borderRadius: BORDER_RADIUS,
+          borderRadius: borderRadius,
         },
       },
     },
@@ -255,11 +255,11 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           backgroundColor: 'transparent',
-          borderRadius: BORDER_RADIUS,
+          borderRadius: borderRadius,
           '&.Mui-error': {
             backgroundColor: `rgba(251, 150, 116, 0.2)`, // $color_red
             '.MuiSvgIcon-root': {
-              color: `rgba(207, 126, 99, ${DARK_ALPHA})`, // $color_dark-red
+              color: `rgba(207, 126, 99, ${darkAlpha})`, // $color_dark-red
             },
           },
           '&.Mui-focused:not(.Mui-error)': {
@@ -297,7 +297,7 @@ const THEME: ThemeOptions = {
         indicator: {
           backgroundColor: 'white',
           height: 4,
-          borderRadius: BORDER_RADIUS_QUARTER,
+          borderRadius: borderRadiusQuarter,
           transition: `all ${DURATION.mediumLong}ms ${EASING.out}`,
         },
       },
@@ -305,12 +305,12 @@ const THEME: ThemeOptions = {
     MuiTab: {
       styleOverrides: {
         root: {
-          fontSize: FONT_SIZE.base,
+          fontSize: fontSize.base,
           color: 'white',
-          borderTopLeftRadius: BORDER_RADIUS,
-          borderTopRightRadius: BORDER_RADIUS,
-          borderBottomLeftRadius: BORDER_RADIUS_QUARTER,
-          borderBottomRightRadius: BORDER_RADIUS_QUARTER,
+          borderTopLeftRadius: borderRadius,
+          borderTopRightRadius: borderRadius,
+          borderBottomLeftRadius: borderRadiusQuarter,
+          borderBottomRightRadius: borderRadiusQuarter,
         },
       },
     },

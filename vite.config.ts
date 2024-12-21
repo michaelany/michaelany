@@ -52,13 +52,18 @@ export default defineConfig({
     open: true,
     port: 3000,
   },
+  resolve: {
+    alias: {
+      styles: '/src/styles',
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
+        api: 'modern-compiler',
         additionalData: `
-          @use 'sass:math';
-          @import 'src/styles/variables.scss';
-          @import 'src/styles/mixins.scss';
+          @use 'styles/variables' as v;
+          @use 'styles/mixins' as m;
         `,
       },
     },

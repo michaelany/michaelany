@@ -1,7 +1,7 @@
 .SocialLinks {
   display: flex;
   justify-content: center;
-  @include xs {
+  @include m.xs {
     flex-wrap: wrap;
     padding-left: 25%;
     padding-right: 25%;
@@ -42,7 +42,7 @@
       margin-right: 8px;
     }
   }
-  @include lg {
+  @include m.lg {
     .SocialLinks_about > & {
       &:first-child,
       &:last-child {
@@ -59,7 +59,7 @@
       }
     }
   }
-  @include md {
+  @include m.md {
     .SocialLinks_about > & {
       &:first-child,
       &:last-child {
@@ -76,7 +76,7 @@
       }
     }
   }
-  @include sm {
+  @include m.sm {
     .SocialLinks_about > & {
       &:first-child,
       &:last-child {
@@ -93,7 +93,7 @@
       }
     }
   }
-  @include xs {
+  @include m.xs {
     margin-bottom: 16px;
     .SocialLinks_about > & {
       &:first-child,
@@ -130,7 +130,7 @@
     width: 32px;
     height: 32px;
   }
-  @include sm {
+  @include m.sm {
     &_size_xs {
       width: 18px;
       height: 18px;

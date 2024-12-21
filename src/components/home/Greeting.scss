@@ -1,10 +1,10 @@
 .Greeting {
   padding-bottom: 160px;
-  @include lg {
+  @include m.lg {
     padding-bottom: 80px;
   }
 
-  @include xs {
+  @include m.xs {
     .Sections-SectionWrapper:first-child > & {
       padding-bottom: 0;
     }
@@ -21,12 +21,12 @@
 }
 
 .Greeting-Icon {
-  animation: hello $duration_lingering $easing_in-out infinite;
-  @include lg {
+  animation: hello v.$duration_lingering v.$easing_in-out infinite;
+  @include m.lg {
     width: 50px;
     height: 50px;
   }
-  @include xs {
+  @include m.xs {
     width: 42px;
     height: 42px;
   }
@@ -45,22 +45,22 @@
 
 .Greeting-Main {
   font-weight: bold;
-  @include animationAlternate;
+  @include m.animationAlternate;
 }
 
 .Greeting-First {
-  @include animation(fadeInZoomInSm);
+  @include m.animation(fadeInZoomInSm);
 }
 
 .Greeting-Second {
-  @include animation(fadeInLeft, 300ms);
+  @include m.animation(fadeInLeft, 300ms);
   position: relative;
   top: 0.05em;
   margin-left: 0.2em;
 }
 
 .Greeting-Third {
-  @include animation(fadeInBottom, 1s);
+  @include m.animation(fadeInBottom, 1s);
   &_order_second {
     animation-delay: 1250ms;
   }
@@ -71,35 +71,35 @@
 
 .Greeting-Fourth {
   &_first {
-    @include animation(fadeInTop, 1750ms);
+    @include m.animation(fadeInTop, 1750ms);
   }
   &_second {
-    @include animation(fadeInTop, 2650ms);
+    @include m.animation(fadeInTop, 2650ms);
   }
 }
 
 .Greeting-Fifth {
-  @include animation(fadeInRight, 2250ms);
+  @include m.animation(fadeInRight, 2250ms);
 }
 
 .Greeting-Sixth {
-  @include animation(fadeInRight, 2850ms);
+  @include m.animation(fadeInRight, 2850ms);
 }
 
 .Greeting-Seventh {
-  @include animation(fadeInBottom, 3250ms);
+  @include m.animation(fadeInBottom, 3250ms);
 }
 
 .Greeting-Eighth {
-  @include animation(fadeInBottom, 3450ms);
+  @include m.animation(fadeInBottom, 3450ms);
 }
 
 .Greeting-Nineth {
-  @include animation(fadeInBottom, 3600ms);
+  @include m.animation(fadeInBottom, 3600ms);
 }
 
 .Greeting-Tenth {
-  @include animation(fadeInBottom, 3750ms);
+  @include m.animation(fadeInBottom, 3750ms);
 }
 
 .Greeting-Word {
@@ -111,18 +111,18 @@
   display: flex;
   position: relative;
   left: 0.25em;
-  transition: transform $duration_standard $easing_out;
+  transition: transform v.$duration_standard v.$easing_out;
   &_first {
-    outline-color: $color_yellow;
+    outline-color: v.$color_yellow;
     top: 0.22em;
     transform: rotate(20deg);
   }
   &_second {
-    outline-color: $color_red;
+    outline-color: v.$color_red;
     top: 0.25em;
     transform: rotate(-15deg);
   }
-  @include hover {
+  @include m.hover {
     transform: rotate(0) scale(1.2);
   }
   &:focus {
@@ -132,12 +132,12 @@
 
 .Greeting-ExtraImg {
   .Greeting-Extra_first > & {
-    @include animation(fadeInZoomOut, 2450ms);
+    @include m.animation(fadeInZoomOut, 2450ms);
     width: 0.83em;
     height: 0.94em;
   }
   .Greeting-Extra_second > & {
-    @include animation(fadeInZoomIn, 3050ms);
+    @include m.animation(fadeInZoomIn, 3050ms);
     width: 0.91em;
     height: 0.64em;
   }
@@ -149,14 +149,14 @@
   align-items: flex-start;
   margin-top: 2em;
   margin-bottom: -16px;
-  @include xs {
+  @include m.xs {
     margin-bottom: 24px;
   }
 }
 
 .Greeting-Button {
   margin-bottom: 16px;
-  @include xs {
+  @include m.xs {
     &:first-child {
       order: -1;
     }
@@ -167,7 +167,7 @@
 }
 
 .Greeting-Photo {
-  @include animation(fadeInLeft, 2s);
+  @include m.animation(fadeInLeft, 2s);
   position: absolute;
   z-index: -1;
   right: 10%;
@@ -175,19 +175,19 @@
   width: 42%;
   min-width: 320px;
   max-width: 480px;
-  @include lg {
+  @include m.lg {
     min-width: 200px;
     max-width: 320px;
   }
-  @include md {
+  @include m.md {
     min-width: 180px;
     right: 7.5%;
   }
-  @include sm {
+  @include m.sm {
     right: 24px;
   }
-  @include xs {
-    @include animation(fadeInBottom, 3900ms);
+  @include m.xs {
+    @include m.animation(fadeInBottom, 3900ms);
     position: static;
     right: auto;
     bottom: auto;

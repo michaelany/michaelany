@@ -1,5 +1,5 @@
 .Carousel {
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
   overflow: hidden;
   &:not(:last-child) {
     margin-bottom: 40px;
