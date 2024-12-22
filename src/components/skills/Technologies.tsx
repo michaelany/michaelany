@@ -44,6 +44,7 @@ export default function Technologies({
 
   return (
     <Section
+      aside
       colorful
       sectionRef={sectionRef}
       prevTo={ROUTE.about}

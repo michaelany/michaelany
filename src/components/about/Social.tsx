@@ -18,6 +18,7 @@ export default function Social() {
 
   return (
     <Section
+      aside
       colorful
       className="FadeInRight"
       prevTo={ROUTE.home}

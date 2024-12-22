@@ -17,6 +17,7 @@ export default function Experience() {
       firstSection={<Work />}
       secondSection={
         <Section
+          aside
           colorful
           sectionRef={sectionRef}
           prevTo={ROUTE.skills}

@@ -26,7 +26,7 @@ export default function ProjectAssets({project}: IProjectAssetsProps) {
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
-    <Section colorful prevTo={ROUTE.portfolio}>
+    <Section aside colorful prevTo={ROUTE.portfolio}>
       <h2 className="VisuallyHidden">{t('portfolio.subtitle')}</h2>
       <div>
         <Animate

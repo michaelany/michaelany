@@ -28,7 +28,7 @@ export default function Banner() {
   const {t} = useTranslation()
 
   return (
-    <Section colorful contentClassName="Banner" nextTo={ROUTE.about}>
+    <Section aside colorful contentClassName="Banner" nextTo={ROUTE.about}>
       <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
       <div className="Banner-Content">
         <Animate effect="zoomIn" duration="longest" easing="out">
@@ -47,7 +47,7 @@ export default function Banner() {
 
 const MacScreen = () => {
   const [show, setShow] = useState(0)
-  const timer = useRef<any>()
+  const timer = useRef<any>(null)
 
   useEffect(() => {
     const handleAutoShowSet = () => {

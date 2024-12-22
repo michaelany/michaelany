@@ -2,7 +2,9 @@ import {ReactNode, RefObject} from 'react'
 import cn from 'clsx'
 
 import './Section.scss'
+import Snowfall from '#components/base/Snowfall'
 import {Pagination, Copyright} from '#components/common'
+import {IS_NEW_YEAR_MODE} from '#utils/constants'
 import {TRoute} from '#utils/types'
 
 interface ISectionProps {
@@ -10,6 +12,7 @@ interface ISectionProps {
   sectionRef?: RefObject<any>
   className?: string
   contentClassName?: string
+  aside?: boolean
   wide?: boolean
   colorful?: boolean
   prevTo?: TRoute
@@ -21,6 +24,7 @@ export default function Section({
   sectionRef,
   className,
   contentClassName,
+  aside,
   wide,
   colorful,
   prevTo,
@@ -38,6 +42,9 @@ export default function Section({
         className
       )}
     >
+      {IS_NEW_YEAR_MODE && isFooter && (
+        <Snowfall type={aside ? 'absolute' : undefined} />
+      )}
       <div
         className={cn(
           contentClassName,
