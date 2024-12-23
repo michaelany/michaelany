@@ -2,24 +2,25 @@
   position: fixed;
   display: flex;
   z-index: 100;
-  top: 13px;
+  top: -3px;
   left: calc(50% + 48px);
-  transform: translateX(-50%) scale(3.5);
+  transform: translateX(-50%);
   &_header {
     position: absolute;
   }
   @include m.md {
-    top: 11px;
     left: 50%;
-    transform: translateX(-50%) scale(3);
   }
+}
+
+.Garland-Item {
+  width: 476px;
+  height: auto;
   @include m.sm {
-    top: 5px;
-    transform: translateX(-50%) scale(2);
+    width: 272px;
   }
   @include m.xs {
-    top: 2px;
-    transform: translateX(-50%) scale(1.5);
+    width: 204px;
   }
 }
 

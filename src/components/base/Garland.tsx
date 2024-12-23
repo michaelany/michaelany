@@ -20,7 +20,14 @@ export default function Garland({isHeader}: IGarlandProps) {
 }
 
 const GarlandItem = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={136} height={13} fill="none">
+  <svg
+    className="Garland-Item"
+    xmlns="http://www.w3.org/2000/svg"
+    width={136}
+    height={12}
+    fill="none"
+    viewBox="0 0 136 12"
+  >
     <path
       className="Garland-Lamp"
       d="M11.15 5.64c-.41 1.6-1.58 2.59-2.62 2.22S7 5.9 7.4 4.32c.4-1.58 1.58-2.58 2.62-2.22 1.05.37 1.5 1.96 1.13 3.54z"
