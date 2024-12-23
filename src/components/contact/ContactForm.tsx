@@ -1,10 +1,4 @@
-import {
-  useState,
-  useRef,
-  ChangeEvent,
-  SyntheticEvent,
-  MutableRefObject,
-} from 'react'
+import {useState, useRef, ChangeEvent, SyntheticEvent, RefObject} from 'react'
 import {useTranslation} from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 import emailjs from 'emailjs-com'
@@ -49,15 +43,12 @@ export default function ContactForm() {
   const [loading, setLoading] = useState<boolean>(false)
   const [values, changeValues] = useState<typeof initialValues>(initialValues)
   const [errors, setErrors] = useState<typeof initialErrors>(initialErrors)
-  const fieldElements: Record<
-    string,
-    MutableRefObject<HTMLInputElement | undefined>
-  > = {
-    [field.name]: useRef(),
-    [field.email]: useRef(),
-    [field.message]: useRef(),
+  const fieldElements: Record<string, RefObject<HTMLInputElement | null>> = {
+    [field.name]: useRef(null),
+    [field.email]: useRef(null),
+    [field.message]: useRef(null),
   }
-  const recaptchaRef = useRef() as MutableRefObject<ReCAPTCHA>
+  const recaptchaRef = useRef(null) as RefObject<ReCAPTCHA | null>
 
   const handleSubmit = async (e: SyntheticEvent): Promise<void> => {
     e.preventDefault()
@@ -85,8 +76,10 @@ export default function ContactForm() {
     }
     setLoading(true)
     try {
-      const token = await recaptchaRef.current.executeAsync()
-      recaptchaRef.current.reset()
+      const recaptcha = recaptchaRef.current
+      if (!recaptcha) throw {text: 'reCAPTCHA error'}
+      const token = await recaptcha.executeAsync()
+      recaptcha.reset()
       await emailjs.send(
         import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
         import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
@@ -95,9 +88,11 @@ export default function ContactForm() {
       )
       setSuccessDialogOpen(true)
       changeValues(initialValues)
-      setLoading(false)
     } catch (error: any) {
+      console.log('error', JSON.stringify(error))
+
       setSnackbar({open: true, message: error?.text || t('other.error')})
+    } finally {
       setLoading(false)
     }
   }

@@ -1,3 +1,4 @@
+import {JSX} from 'react'
 import cn from 'clsx'
 
 import './Panel.scss'

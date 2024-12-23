@@ -10,7 +10,7 @@ import Stepper from './Stepper'
 export default function Experience() {
   const {t} = useTranslation()
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLElement | null>(null)
 
   return (
     <Sections

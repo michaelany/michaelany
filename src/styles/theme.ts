@@ -4,13 +4,17 @@ const darkAlpha = 0.7
 
 export const COLOR = {
   green: '#2fd0c8',
+  darkGreen: '#2caca6',
   grass: '#6ed485',
   blue: '#64a6fc',
+  darkBlue: '#568bd0',
   darkRed: '#cf7e63',
   darkVioletAlpha: `rgba(135, 116, 198, ${darkAlpha})`,
   default: '#b0b0b0',
   text: '#282c34',
   secondText: '#6d6d6d',
+  error: '#ef5350',
+  errorAlpha: `rgba(239, 83, 80, 0.2)`,
 }
 
 export const DURATION = {
@@ -83,17 +87,17 @@ const THEME: ThemeOptions = {
     primary: {
       light: COLOR.blue,
       main: COLOR.blue,
-      dark: '#568bd0', // $color_dark-blue
+      dark: COLOR.darkBlue,
     },
     secondary: {
       light: COLOR.green,
       main: COLOR.green,
-      dark: '#2caca6', // $color_dark-green
+      dark: COLOR.darkGreen,
     },
     error: {
-      light: COLOR.darkRed,
-      main: COLOR.darkRed,
-      dark: COLOR.darkRed,
+      light: COLOR.error,
+      main: COLOR.error,
+      dark: COLOR.error,
     },
   },
   transitions: {
@@ -257,9 +261,9 @@ const THEME: ThemeOptions = {
           backgroundColor: 'transparent',
           borderRadius: borderRadius,
           '&.Mui-error': {
-            backgroundColor: `rgba(251, 150, 116, 0.2)`, // $color_red
+            backgroundColor: COLOR.errorAlpha,
             '.MuiSvgIcon-root': {
-              color: `rgba(207, 126, 99, ${darkAlpha})`, // $color_dark-red
+              color: COLOR.error,
             },
           },
           '&.Mui-focused:not(.Mui-error)': {
@@ -275,7 +279,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           '&.Mui-focused:not(.Mui-error)': {
-            color: '#2caca6', // $color_dark-green
+            color: COLOR.darkGreen,
           },
         },
       },
@@ -335,7 +339,7 @@ const THEME: ThemeOptions = {
     MuiSnackbarContent: {
       styleOverrides: {
         root: {
-          backgroundColor: '#ef5350', // $color_error
+          backgroundColor: COLOR.error,
         },
       },
     },

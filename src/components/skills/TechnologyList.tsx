@@ -8,7 +8,7 @@ import {ITechnology} from '#utils/types'
 
 interface ITechnologyListProps {
   technologies: ITechnology[]
-  firstTechnologyActionRef?: RefObject<ButtonBaseActions>
+  firstTechnologyActionRef?: RefObject<ButtonBaseActions | null>
 }
 
 export default function TechnologyList({

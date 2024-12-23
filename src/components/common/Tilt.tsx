@@ -1,4 +1,4 @@
-import {AllHTMLAttributes} from 'react'
+import {AllHTMLAttributes, JSX} from 'react'
 import ReactTilt from 'react-parallax-tilt'
 
 import {DETECT} from '#utils/constants'

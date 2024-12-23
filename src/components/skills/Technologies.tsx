@@ -19,8 +19,8 @@ import TechnologyList from './TechnologyList'
 
 interface ITechnologiesProps {
   expanded: TKey[]
-  sectionRef: RefObject<HTMLElement>
-  firstTechnologyActionRef: RefObject<ButtonBaseActions>
+  sectionRef: RefObject<HTMLElement | null>
+  firstTechnologyActionRef: RefObject<ButtonBaseActions | null>
   setExpanded: Dispatch<SetStateAction<TKey[]>>
 }
 

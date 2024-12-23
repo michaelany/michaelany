@@ -1,3 +1,4 @@
+import {JSX} from 'react'
 import {Grid} from '@mui/material'
 
 import './Sections.scss'

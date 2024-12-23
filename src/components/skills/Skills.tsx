@@ -26,8 +26,8 @@ import Technologies from './Technologies'
 
 export default function Skills() {
   const [expanded, setExpanded] = useState<TKey[]>(initialExpanded)
-  const sectionRef = useRef<HTMLElement>(null)
-  const firstTechnologyActionRef = useRef<ButtonBaseActions>(null)
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const firstTechnologyActionRef = useRef<ButtonBaseActions | null>(null)
   const featuresRef = useRef<IFeature[]>([
     {
       tKey: 'interface',

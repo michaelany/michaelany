@@ -21,7 +21,7 @@ import {IPeriod} from '#utils/types'
 import {COMPANY, CONTACT_LINK} from '#data/common'
 
 interface IStepperProps {
-  sectionRef: RefObject<HTMLElement>
+  sectionRef: RefObject<HTMLElement | null>
 }
 
 interface IStep {
