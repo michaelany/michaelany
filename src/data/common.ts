@@ -185,6 +185,7 @@ export const TECHNOLOGY_TITLE = {
   bootstrap: 'Bootstrap',
   semantic: 'Semantic UI',
   npm: 'npm',
+  pnpm: 'pnpm',
   yarn: 'Yarn',
   vite: 'Vite',
   webpack: 'webpack',
@@ -640,6 +641,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           publicImg('technologies/npm@2x.png'),
         ],
         href: 'https://npmjs.com',
+      },
+      {
+        name: 'pnpm',
+        label: TECHNOLOGY_TITLE.pnpm,
+        color: 'yellow',
+        images: [
+          publicImg('technologies/pnpm.png'),
+          publicImg('technologies/pnpm@2x.png'),
+        ],
+        href: 'https://pnpm.io',
       },
       {
         name: 'yarn',
