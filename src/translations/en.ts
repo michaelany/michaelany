@@ -10,7 +10,7 @@ const common = {
     language: 'English',
   },
   occupation: {
-    lead: 'Lead Frontend Engineer',
+    lead: 'Lead Frontend Developer',
     teamLead: 'Frontend Team Lead',
     senior: 'Senior Frontend Developer',
     middle: 'Frontend Developer',
@@ -53,20 +53,20 @@ const EN = {
     iam: "I'm",
     occupation: {
       part1: 'a frontend',
-      part2: 'developer',
+      part2: 'engineer',
       part3: 'YouTuber',
     },
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a passionate software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity from scratch, bringing {{0}} ideas to life. I have my own <2>${common.title.vlog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
+    text: `I'm a passionate software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity & bring {{0}} ideas to life. I have my own <2>${common.title.vlog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
         text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to complex web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Lead software engineer',
+        label: 'Lead frontend developer',
         text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       vlogger: {
@@ -295,7 +295,7 @@ const EN = {
       step21:
         'I moved to New Zealand on a work visa from the {{0}} company. Worked, settled in, built relationships with hobbits and alpacas',
       step22: `I agreed with {{0}} on a gradual search for a new job, as the company began shutting down its core business. I passed an interview, completed a technical assessment and received an offer from {{1}} for the position of <0>${common.occupation.lead}</0>. I was waiting for an update on my work visa while continuing to collaborate with {{2}} on projects`,
-      step23: `I received an updated work visa and started as a <0>${common.occupation.lead}</0> at {{0}}. Working, settling in, building relationships with hobbits and alpacas`,
+      step23: `I received an updated work visa and started as a <0>${common.occupation.lead}</0> at {{0}}`,
     },
   },
   portfolio: {
@@ -477,7 +477,7 @@ const EN = {
   },
   vlog: {
     description:
-      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity from scratch, bringing UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand, since then I have been building relationships with hobbits and alpacas {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity and bring UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',

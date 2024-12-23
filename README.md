@@ -6,15 +6,15 @@
 
 <h1 align="center">Michael Any</h1>
 
-## Hi there! 👋<br>I'm [Michael Any][website] 🦸‍♂️<br>Lead Frontend Engineer 👨‍💻<br>[YouTuber][youtube] 📹
+## Hi there! 👋<br>I'm [Michael Any][website] 🦸‍♂️<br>Frontend Engineer 👨‍💻<br>[YouTuber][youtube] 📹
 
 ## [About](https://michaelany.com/#/about)
 
-- 🚀 &nbsp;Creating [projects](https://michaelany.com/#/portfolio) of any complexity from scratch
+- 🚀 &nbsp;Creating [projects](https://michaelany.com/#/portfolio) of any complexity
 - 💡 &nbsp;Bringing UI/UX ideas to life
 - 💼 &nbsp;9 years of [experience](https://michaelany.com/#/experience)
-- 📹 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube]
-- 🇳🇿 &nbsp;Based in Auckland, New Zealand
+- 📺 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube]
+- 🐑 &nbsp;Based in Auckland, New Zealand
 
 <details>
   <summary>🔽 &nbsp;<strong>More</strong></summary>

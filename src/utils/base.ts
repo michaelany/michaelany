@@ -12,7 +12,7 @@ export const logConsoleWelcomeMessage = () => {
   const consoleTextStyle = 'font-size: 16px;'
   const consoleBoldTextStyle = `${consoleTextStyle} font-weight: bold;`
   console.log(
-    `%cHi there! 👋\nI'm %c${MY_NAME}%c, a %cLead Frontend Engineer%c & %cYouTuber%c 👨‍💻📹\nDetails about this project ${CONTACT_LINK.gitHub.href}/michaelany#portfolio-project 🚀\nMy YouTube channel ${CONTACT_LINK.youTube.href} 📹`,
+    `%cHi there! 👋\nI'm %c${MY_NAME}%c, a %cLead Frontend Engineer%c 👨‍💻 | %cYouTuber%c 📹\nDetails about this project ${CONTACT_LINK.gitHub.href}/michaelany#portfolio-project 🚀\nMy YouTube channel ${CONTACT_LINK.youTube.href} 📺`,
     consoleTextStyle,
     consoleBoldTextStyle,
     consoleTextStyle,

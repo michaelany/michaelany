@@ -6,9 +6,9 @@ import {EN, RU} from '#translations/index'
 import {TLng} from '#utils/types'
 
 i18n.on('languageChanged', (lng: TLng) => {
-  const translation = lng === 'ru' ? RU : EN
+  const isRU = lng === 'ru'
   document.documentElement.setAttribute('lang', lng)
-  document.title = `Michael Any | ${translation.experience.occupation.middle}`
+  document.title = `Michael Any | ${isRU ? 'Фронтенд разработчик' : 'Frontend Engineer'} | ${isRU ? 'Ютубер' : 'YouTuber'}`
 })
 
 const options: InitOptions = {
