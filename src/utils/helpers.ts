@@ -6,7 +6,7 @@ import {TProjectType, IPeriodPart, IWidth} from './types'
 
 // new URL does not work well with template literals `...${...}`
 export const importImg = (path: string): string =>
-  new URL('/src/assets/img/' + path, import.meta.url).href
+  new URL('../assets/img/' + path, import.meta.url).href
 
 export const getListDelay = (order: number): number =>
   (order * DURATION.shorter) / 2
