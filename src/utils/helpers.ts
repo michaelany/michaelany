@@ -5,10 +5,8 @@ import {DURATION} from '#styles/theme'
 import {TProjectType, IPeriodPart, IWidth} from './types'
 
 // new URL does not work well with template literals `...${...}`
-export const importImg = (path: string): string => {
-  const imagePath = `../assets/img/${path}`
-  return new URL(imagePath, import.meta.url).href
-}
+export const importImg = (path: string): string =>
+  new URL(`../assets/img/${path}`, import.meta.url).href
 
 export const getListDelay = (order: number): number =>
   (order * DURATION.shorter) / 2
