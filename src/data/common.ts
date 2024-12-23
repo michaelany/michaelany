@@ -216,7 +216,7 @@ export const TECHNOLOGY_TITLE = {
   jira: 'Jira',
   notes: 'Notes',
   fcpx: 'Final Cut Pro',
-  macos: 'macOS Sonoma',
+  macos: 'macOS Sequoia',
   gpt: 'ChatGPT',
   reactnative: 'React Native',
   expo: 'Expo',
@@ -1061,12 +1061,12 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'macos',
         label: TECHNOLOGY_TITLE.macos,
-        color: 'grass',
+        color: 'yellow',
         images: [
           importImg('technologies/macos.png'),
           importImg('technologies/macos@2x.png'),
         ],
-        href: 'https://apple.com/macos/sonoma',
+        href: 'https://apple.com/macos/macos-sequoia',
       },
     ],
   },

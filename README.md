@@ -116,7 +116,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 - 🗄 &nbsp;Some UI data stores in the `localStorage`
 - 🧹 &nbsp;Clean & unified code style, also use `prettier` & `eslint`
 - 🌄 &nbsp;All images optimized & ready for retina
-- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `macOS Sonoma`
+- 🔨 &nbsp;Base tools used: `Visual Studio Code`, `Chrome DevTools`, `Sketch`, `ImageOptim`, `macOS Sequoia`
 - 💪🏻 &nbsp;Everything is done by myself: design, code, texts, integrations, deployment etc.
 - 🏎 &nbsp;Google Page Speed score `~96`:
 
