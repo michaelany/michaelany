@@ -38,7 +38,7 @@ $projects: 'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around',
   height: 100%;
   @each $project in $projects {
     &_name_#{$project}::after {
-      @include m.retinaImg('#{$project}', 'jpg', 'assets/projects');
+      @include m.retinaImg($project, 'jpg', '/assets/projects');
     }
   }
   &::after {

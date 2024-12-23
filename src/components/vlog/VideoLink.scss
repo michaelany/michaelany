@@ -31,7 +31,7 @@ $videos: 'day-in-a-life-montenegro', 'my-dreamdesk',
   height: 100%;
   @each $video in $videos {
     &_name_#{$video}::after {
-      @include m.retinaImg('assets/img/videos/#{$video}', 'jpg');
+      @include m.retinaImg($video, 'jpg', '/assets/videos');
     }
   }
   &::after {
