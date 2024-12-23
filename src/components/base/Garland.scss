@@ -11,6 +11,12 @@
   @include m.md {
     left: 50%;
   }
+  @include m.sm {
+    top: -2px;
+  }
+  @include m.xs {
+    top: -1px;
+  }
 }
 
 .Garland-Item {

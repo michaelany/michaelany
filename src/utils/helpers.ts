@@ -4,9 +4,7 @@ import {TFunction} from 'i18next'
 import {DURATION} from '#styles/theme'
 import {TProjectType, IPeriodPart, IWidth} from './types'
 
-// new URL does not work well with template literals `...${...}`
-export const importImg = (path: string): string =>
-  new URL(`../assets/img/${path}`, import.meta.url).href
+export const publicImg = (path: string): string => `/assets/${path}`
 
 export const getListDelay = (order: number): number =>
   (order * DURATION.shorter) / 2

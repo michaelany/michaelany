@@ -1,57 +1,57 @@
-import {importImg} from '#utils/helpers'
+import {publicImg} from '#utils/helpers'
 import {IProject} from '#utils/types'
 import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
 
 const commonLogo = {
   ally: [
-    importImg('logos/ally_sm.png'),
-    importImg('logos/ally.png'),
-    importImg('logos/ally@2x.png'),
+    publicImg('logos/ally_sm.png'),
+    publicImg('logos/ally.png'),
+    publicImg('logos/ally@2x.png'),
   ],
   pridefit: [
-    importImg('logos/pridefit_sm.png'),
-    importImg('logos/pridefit.png'),
-    importImg('logos/pridefit@2x.png'),
+    publicImg('logos/pridefit_sm.png'),
+    publicImg('logos/pridefit.png'),
+    publicImg('logos/pridefit@2x.png'),
   ],
   madfit: [
-    importImg('logos/madfit_sm.png'),
-    importImg('logos/madfit.png'),
-    importImg('logos/madfit@2x.png'),
+    publicImg('logos/madfit_sm.png'),
+    publicImg('logos/madfit.png'),
+    publicImg('logos/madfit@2x.png'),
   ],
   roadNinja: [
-    importImg('logos/road-ninja_sm.png'),
-    importImg('logos/road-ninja.png'),
-    importImg('logos/road-ninja@2x.png'),
+    publicImg('logos/road-ninja_sm.png'),
+    publicImg('logos/road-ninja.png'),
+    publicImg('logos/road-ninja@2x.png'),
   ],
   presentMe: [
-    importImg('logos/present-me_sm.png'),
-    importImg('logos/present-me.png'),
-    importImg('logos/present-me@2x.png'),
+    publicImg('logos/present-me_sm.png'),
+    publicImg('logos/present-me.png'),
+    publicImg('logos/present-me@2x.png'),
   ],
   vaillant: [
-    importImg('logos/vaillant_sm.png'),
-    importImg('logos/vaillant.png'),
-    importImg('logos/vaillant@2x.png'),
+    publicImg('logos/vaillant_sm.png'),
+    publicImg('logos/vaillant.png'),
+    publicImg('logos/vaillant@2x.png'),
   ],
   sevenGlyphs: [
-    importImg('logos/7glyphs_sm.png'),
-    importImg('logos/7glyphs.png'),
-    importImg('logos/7glyphs@2x.png'),
+    publicImg('logos/7glyphs_sm.png'),
+    publicImg('logos/7glyphs.png'),
+    publicImg('logos/7glyphs@2x.png'),
   ],
   strongher: [
-    importImg('logos/strongher_sm.png'),
-    importImg('logos/strongher.png'),
-    importImg('logos/strongher@2x.png'),
+    publicImg('logos/strongher_sm.png'),
+    publicImg('logos/strongher.png'),
+    publicImg('logos/strongher@2x.png'),
   ],
   foodprint: [
-    importImg('logos/foodprint_sm.png'),
-    importImg('logos/foodprint.png'),
-    importImg('logos/foodprint@2x.png'),
+    publicImg('logos/foodprint_sm.png'),
+    publicImg('logos/foodprint.png'),
+    publicImg('logos/foodprint@2x.png'),
   ],
   lazyaz: [
-    importImg('logos/lazyaz_sm.png'),
-    importImg('logos/lazyaz.png'),
-    importImg('logos/lazyaz@2x.png'),
+    publicImg('logos/lazyaz_sm.png'),
+    publicImg('logos/lazyaz.png'),
+    publicImg('logos/lazyaz@2x.png'),
   ],
 }
 
@@ -90,46 +90,46 @@ const projects: IProject[] = [
       logo: commonLogo.ally,
       desktop: [
         [
-          importImg('projects/ally-2@2x.jpg'),
-          importImg('projects/ally-2-desktop-first@2x.jpg'),
+          publicImg('projects/ally-2@2x.jpg'),
+          publicImg('projects/ally-2-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-desktop-second.jpg'),
-          importImg('projects/ally-2-desktop-second@2x.jpg'),
+          publicImg('projects/ally-2-desktop-second.jpg'),
+          publicImg('projects/ally-2-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-desktop-third.jpg'),
-          importImg('projects/ally-2-desktop-third@2x.jpg'),
+          publicImg('projects/ally-2-desktop-third.jpg'),
+          publicImg('projects/ally-2-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-desktop-fourth.jpg'),
-          importImg('projects/ally-2-desktop-fourth@2x.jpg'),
+          publicImg('projects/ally-2-desktop-fourth.jpg'),
+          publicImg('projects/ally-2-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-desktop-fifth.jpg'),
-          importImg('projects/ally-2-desktop-fifth@2x.jpg'),
+          publicImg('projects/ally-2-desktop-fifth.jpg'),
+          publicImg('projects/ally-2-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/ally-2-mobile-first.jpg'),
-          importImg('projects/ally-2-mobile-first@2x.jpg'),
+          publicImg('projects/ally-2-mobile-first.jpg'),
+          publicImg('projects/ally-2-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-mobile-second.jpg'),
-          importImg('projects/ally-2-mobile-second@2x.jpg'),
+          publicImg('projects/ally-2-mobile-second.jpg'),
+          publicImg('projects/ally-2-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-mobile-third.jpg'),
-          importImg('projects/ally-2-mobile-third@2x.jpg'),
+          publicImg('projects/ally-2-mobile-third.jpg'),
+          publicImg('projects/ally-2-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-mobile-fourth.jpg'),
-          importImg('projects/ally-2-mobile-fourth@2x.jpg'),
+          publicImg('projects/ally-2-mobile-fourth.jpg'),
+          publicImg('projects/ally-2-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/ally-2-mobile-fifth.jpg'),
-          importImg('projects/ally-2-mobile-fifth@2x.jpg'),
+          publicImg('projects/ally-2-mobile-fifth.jpg'),
+          publicImg('projects/ally-2-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -162,24 +162,24 @@ const projects: IProject[] = [
       logo: commonLogo.strongher,
       desktop: [
         [
-          importImg('projects/strongher-cms@2x.jpg'),
-          importImg('projects/strongher-cms-desktop-first@2x.jpg'),
+          publicImg('projects/strongher-cms@2x.jpg'),
+          publicImg('projects/strongher-cms-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-cms-desktop-second.jpg'),
-          importImg('projects/strongher-cms-desktop-second@2x.jpg'),
+          publicImg('projects/strongher-cms-desktop-second.jpg'),
+          publicImg('projects/strongher-cms-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-cms-desktop-third.jpg'),
-          importImg('projects/strongher-cms-desktop-third@2x.jpg'),
+          publicImg('projects/strongher-cms-desktop-third.jpg'),
+          publicImg('projects/strongher-cms-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-cms-desktop-fourth.jpg'),
-          importImg('projects/strongher-cms-desktop-fourth@2x.jpg'),
+          publicImg('projects/strongher-cms-desktop-fourth.jpg'),
+          publicImg('projects/strongher-cms-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-cms-desktop-fifth.jpg'),
-          importImg('projects/strongher-cms-desktop-fifth@2x.jpg'),
+          publicImg('projects/strongher-cms-desktop-fifth.jpg'),
+          publicImg('projects/strongher-cms-desktop-fifth@2x.jpg'),
         ],
       ],
     },
@@ -216,30 +216,30 @@ const projects: IProject[] = [
       logo: commonLogo.pridefit,
       desktop: [
         [
-          importImg('projects/pridefit@2x.jpg'),
-          importImg('projects/pridefit-desktop-first@2x.jpg'),
+          publicImg('projects/pridefit@2x.jpg'),
+          publicImg('projects/pridefit-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-desktop-second.jpg'),
-          importImg('projects/pridefit-desktop-second@2x.jpg'),
+          publicImg('projects/pridefit-desktop-second.jpg'),
+          publicImg('projects/pridefit-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-desktop-third.jpg'),
-          importImg('projects/pridefit-desktop-third@2x.jpg'),
+          publicImg('projects/pridefit-desktop-third.jpg'),
+          publicImg('projects/pridefit-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/pridefit-mobile-first.jpg'),
-          importImg('projects/pridefit-mobile-first@2x.jpg'),
+          publicImg('projects/pridefit-mobile-first.jpg'),
+          publicImg('projects/pridefit-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-mobile-second.jpg'),
-          importImg('projects/pridefit-mobile-second@2x.jpg'),
+          publicImg('projects/pridefit-mobile-second.jpg'),
+          publicImg('projects/pridefit-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-mobile-third.jpg'),
-          importImg('projects/pridefit-mobile-third@2x.jpg'),
+          publicImg('projects/pridefit-mobile-third.jpg'),
+          publicImg('projects/pridefit-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -271,30 +271,30 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/ally-second_sm.png'),
-        importImg('logos/ally-second.png'),
-        importImg('logos/ally-second@2x.png'),
+        publicImg('logos/ally-second_sm.png'),
+        publicImg('logos/ally-second.png'),
+        publicImg('logos/ally-second@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/ally-cms@2x.jpg'),
-          importImg('projects/ally-cms-desktop-first@2x.jpg'),
+          publicImg('projects/ally-cms@2x.jpg'),
+          publicImg('projects/ally-cms-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/ally-cms-desktop-second.jpg'),
-          importImg('projects/ally-cms-desktop-second@2x.jpg'),
+          publicImg('projects/ally-cms-desktop-second.jpg'),
+          publicImg('projects/ally-cms-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/ally-cms-desktop-third.jpg'),
-          importImg('projects/ally-cms-desktop-third@2x.jpg'),
+          publicImg('projects/ally-cms-desktop-third.jpg'),
+          publicImg('projects/ally-cms-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/ally-cms-desktop-fourth.jpg'),
-          importImg('projects/ally-cms-desktop-fourth@2x.jpg'),
+          publicImg('projects/ally-cms-desktop-fourth.jpg'),
+          publicImg('projects/ally-cms-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/ally-cms-desktop-fifth.jpg'),
-          importImg('projects/ally-cms-desktop-fifth@2x.jpg'),
+          publicImg('projects/ally-cms-desktop-fifth.jpg'),
+          publicImg('projects/ally-cms-desktop-fifth@2x.jpg'),
         ],
       ],
     },
@@ -328,24 +328,24 @@ const projects: IProject[] = [
       logo: commonLogo.pridefit,
       desktop: [
         [
-          importImg('projects/pridefit-cms@2x.jpg'),
-          importImg('projects/pridefit-cms-desktop-first@2x.jpg'),
+          publicImg('projects/pridefit-cms@2x.jpg'),
+          publicImg('projects/pridefit-cms-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-cms-desktop-second.jpg'),
-          importImg('projects/pridefit-cms-desktop-second@2x.jpg'),
+          publicImg('projects/pridefit-cms-desktop-second.jpg'),
+          publicImg('projects/pridefit-cms-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-cms-desktop-third.jpg'),
-          importImg('projects/pridefit-cms-desktop-third@2x.jpg'),
+          publicImg('projects/pridefit-cms-desktop-third.jpg'),
+          publicImg('projects/pridefit-cms-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-cms-desktop-fourth.jpg'),
-          importImg('projects/pridefit-cms-desktop-fourth@2x.jpg'),
+          publicImg('projects/pridefit-cms-desktop-fourth.jpg'),
+          publicImg('projects/pridefit-cms-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/pridefit-cms-desktop-fifth.jpg'),
-          importImg('projects/pridefit-cms-desktop-fifth@2x.jpg'),
+          publicImg('projects/pridefit-cms-desktop-fifth.jpg'),
+          publicImg('projects/pridefit-cms-desktop-fifth@2x.jpg'),
         ],
       ],
     },
@@ -383,46 +383,46 @@ const projects: IProject[] = [
       logo: commonLogo.madfit,
       desktop: [
         [
-          importImg('projects/madfit@2x.jpg'),
-          importImg('projects/madfit-desktop-first@2x.jpg'),
+          publicImg('projects/madfit@2x.jpg'),
+          publicImg('projects/madfit-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-desktop-second.jpg'),
-          importImg('projects/madfit-desktop-second@2x.jpg'),
+          publicImg('projects/madfit-desktop-second.jpg'),
+          publicImg('projects/madfit-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-desktop-third.jpg'),
-          importImg('projects/madfit-desktop-third@2x.jpg'),
+          publicImg('projects/madfit-desktop-third.jpg'),
+          publicImg('projects/madfit-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-desktop-fourth.jpg'),
-          importImg('projects/madfit-desktop-fourth@2x.jpg'),
+          publicImg('projects/madfit-desktop-fourth.jpg'),
+          publicImg('projects/madfit-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-desktop-fifth.jpg'),
-          importImg('projects/madfit-desktop-fifth@2x.jpg'),
+          publicImg('projects/madfit-desktop-fifth.jpg'),
+          publicImg('projects/madfit-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/madfit-mobile-first.jpg'),
-          importImg('projects/madfit-mobile-first@2x.jpg'),
+          publicImg('projects/madfit-mobile-first.jpg'),
+          publicImg('projects/madfit-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-mobile-second.jpg'),
-          importImg('projects/madfit-mobile-second@2x.jpg'),
+          publicImg('projects/madfit-mobile-second.jpg'),
+          publicImg('projects/madfit-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-mobile-third.jpg'),
-          importImg('projects/madfit-mobile-third@2x.jpg'),
+          publicImg('projects/madfit-mobile-third.jpg'),
+          publicImg('projects/madfit-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-mobile-fourth.jpg'),
-          importImg('projects/madfit-mobile-fourth@2x.jpg'),
+          publicImg('projects/madfit-mobile-fourth.jpg'),
+          publicImg('projects/madfit-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-mobile-fifth.jpg'),
-          importImg('projects/madfit-mobile-fifth@2x.jpg'),
+          publicImg('projects/madfit-mobile-fifth.jpg'),
+          publicImg('projects/madfit-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -456,24 +456,24 @@ const projects: IProject[] = [
       logo: commonLogo.madfit,
       desktop: [
         [
-          importImg('projects/madfit-cms@2x.jpg'),
-          importImg('projects/madfit-cms-desktop-first@2x.jpg'),
+          publicImg('projects/madfit-cms@2x.jpg'),
+          publicImg('projects/madfit-cms-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-cms-desktop-second.jpg'),
-          importImg('projects/madfit-cms-desktop-second@2x.jpg'),
+          publicImg('projects/madfit-cms-desktop-second.jpg'),
+          publicImg('projects/madfit-cms-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-cms-desktop-third.jpg'),
-          importImg('projects/madfit-cms-desktop-third@2x.jpg'),
+          publicImg('projects/madfit-cms-desktop-third.jpg'),
+          publicImg('projects/madfit-cms-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-cms-desktop-fourth.jpg'),
-          importImg('projects/madfit-cms-desktop-fourth@2x.jpg'),
+          publicImg('projects/madfit-cms-desktop-fourth.jpg'),
+          publicImg('projects/madfit-cms-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/madfit-cms-desktop-fifth.jpg'),
-          importImg('projects/madfit-cms-desktop-fifth@2x.jpg'),
+          publicImg('projects/madfit-cms-desktop-fifth.jpg'),
+          publicImg('projects/madfit-cms-desktop-fifth@2x.jpg'),
         ],
       ],
     },
@@ -508,52 +508,52 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/vibe-media_sm.png'),
-        importImg('logos/vibe-media.png'),
-        importImg('logos/vibe-media@2x.png'),
+        publicImg('logos/vibe-media_sm.png'),
+        publicImg('logos/vibe-media.png'),
+        publicImg('logos/vibe-media@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/vibe-media@2x.jpg'),
-          importImg('projects/vibe-media-desktop-first@2x.jpg'),
+          publicImg('projects/vibe-media@2x.jpg'),
+          publicImg('projects/vibe-media-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-desktop-second.jpg'),
-          importImg('projects/vibe-media-desktop-second@2x.jpg'),
+          publicImg('projects/vibe-media-desktop-second.jpg'),
+          publicImg('projects/vibe-media-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-desktop-third.jpg'),
-          importImg('projects/vibe-media-desktop-third@2x.jpg'),
+          publicImg('projects/vibe-media-desktop-third.jpg'),
+          publicImg('projects/vibe-media-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-desktop-fourth.jpg'),
-          importImg('projects/vibe-media-desktop-fourth@2x.jpg'),
+          publicImg('projects/vibe-media-desktop-fourth.jpg'),
+          publicImg('projects/vibe-media-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-desktop-fifth.jpg'),
-          importImg('projects/vibe-media-desktop-fifth@2x.jpg'),
+          publicImg('projects/vibe-media-desktop-fifth.jpg'),
+          publicImg('projects/vibe-media-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/vibe-media-mobile-first.jpg'),
-          importImg('projects/vibe-media-mobile-first@2x.jpg'),
+          publicImg('projects/vibe-media-mobile-first.jpg'),
+          publicImg('projects/vibe-media-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-mobile-second.jpg'),
-          importImg('projects/vibe-media-mobile-second@2x.jpg'),
+          publicImg('projects/vibe-media-mobile-second.jpg'),
+          publicImg('projects/vibe-media-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-mobile-third.jpg'),
-          importImg('projects/vibe-media-mobile-third@2x.jpg'),
+          publicImg('projects/vibe-media-mobile-third.jpg'),
+          publicImg('projects/vibe-media-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-mobile-fourth.jpg'),
-          importImg('projects/vibe-media-mobile-fourth@2x.jpg'),
+          publicImg('projects/vibe-media-mobile-fourth.jpg'),
+          publicImg('projects/vibe-media-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/vibe-media-mobile-fifth.jpg'),
-          importImg('projects/vibe-media-mobile-fifth@2x.jpg'),
+          publicImg('projects/vibe-media-mobile-fifth.jpg'),
+          publicImg('projects/vibe-media-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -588,44 +588,44 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/tradease_sm.png'),
-        importImg('logos/tradease.png'),
-        importImg('logos/tradease@2x.png'),
+        publicImg('logos/tradease_sm.png'),
+        publicImg('logos/tradease.png'),
+        publicImg('logos/tradease@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/tradease@2x.jpg'),
-          importImg('projects/tradease-desktop-first@2x.jpg'),
+          publicImg('projects/tradease@2x.jpg'),
+          publicImg('projects/tradease-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/tradease-desktop-second.jpg'),
-          importImg('projects/tradease-desktop-second@2x.jpg'),
+          publicImg('projects/tradease-desktop-second.jpg'),
+          publicImg('projects/tradease-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/tradease-desktop-third.jpg'),
-          importImg('projects/tradease-desktop-third@2x.jpg'),
+          publicImg('projects/tradease-desktop-third.jpg'),
+          publicImg('projects/tradease-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/tradease-desktop-fourth.jpg'),
-          importImg('projects/tradease-desktop-fourth@2x.jpg'),
+          publicImg('projects/tradease-desktop-fourth.jpg'),
+          publicImg('projects/tradease-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/tradease-mobile-first.jpg'),
-          importImg('projects/tradease-mobile-first@2x.jpg'),
+          publicImg('projects/tradease-mobile-first.jpg'),
+          publicImg('projects/tradease-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/tradease-mobile-second.jpg'),
-          importImg('projects/tradease-mobile-second@2x.jpg'),
+          publicImg('projects/tradease-mobile-second.jpg'),
+          publicImg('projects/tradease-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/tradease-mobile-third.jpg'),
-          importImg('projects/tradease-mobile-third@2x.jpg'),
+          publicImg('projects/tradease-mobile-third.jpg'),
+          publicImg('projects/tradease-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/tradease-mobile-fourth.jpg'),
-          importImg('projects/tradease-mobile-fourth@2x.jpg'),
+          publicImg('projects/tradease-mobile-fourth.jpg'),
+          publicImg('projects/tradease-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -661,30 +661,30 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/t1_sm.png'),
-        importImg('logos/t1.png'),
-        importImg('logos/t1@2x.png'),
+        publicImg('logos/t1_sm.png'),
+        publicImg('logos/t1.png'),
+        publicImg('logos/t1@2x.png'),
       ],
       mobile: [
         [
-          importImg('projects/t1-online-first.jpg'),
-          importImg('projects/t1-online-first@2x.jpg'),
+          publicImg('projects/t1-online-first.jpg'),
+          publicImg('projects/t1-online-first@2x.jpg'),
         ],
         [
-          importImg('projects/t1-online-second.jpg'),
-          importImg('projects/t1-online-second@2x.jpg'),
+          publicImg('projects/t1-online-second.jpg'),
+          publicImg('projects/t1-online-second@2x.jpg'),
         ],
         [
-          importImg('projects/t1-online-third.jpg'),
-          importImg('projects/t1-online-third@2x.jpg'),
+          publicImg('projects/t1-online-third.jpg'),
+          publicImg('projects/t1-online-third@2x.jpg'),
         ],
         [
-          importImg('projects/t1-online-fourth.jpg'),
-          importImg('projects/t1-online-fourth@2x.jpg'),
+          publicImg('projects/t1-online-fourth.jpg'),
+          publicImg('projects/t1-online-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/t1-online-fifth.jpg'),
-          importImg('projects/t1-online-fifth@2x.jpg'),
+          publicImg('projects/t1-online-fifth.jpg'),
+          publicImg('projects/t1-online-fifth@2x.jpg'),
         ],
       ],
     },
@@ -722,54 +722,54 @@ const projects: IProject[] = [
       logo: commonLogo.roadNinja,
       desktop: [
         [
-          importImg('projects/road-ninja-landing@2x.jpg'),
-          importImg('projects/road-ninja-landing-desktop-first@2x.jpg'),
+          publicImg('projects/road-ninja-landing@2x.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-desktop-second.jpg'),
-          importImg('projects/road-ninja-landing-desktop-second@2x.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-second.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-desktop-third.jpg'),
-          importImg('projects/road-ninja-landing-desktop-third@2x.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-third.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-desktop-fourth.jpg'),
-          importImg('projects/road-ninja-landing-desktop-fourth@2x.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-fourth.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-desktop-fifth.jpg'),
-          importImg('projects/road-ninja-landing-desktop-fifth@2x.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-fifth.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-fifth@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-desktop-sixth.jpg'),
-          importImg('projects/road-ninja-landing-desktop-sixth@2x.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-sixth.jpg'),
+          publicImg('projects/road-ninja-landing-desktop-sixth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/road-ninja-landing-mobile-first.jpg'),
-          importImg('projects/road-ninja-landing-mobile-first@2x.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-first.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-mobile-second.jpg'),
-          importImg('projects/road-ninja-landing-mobile-second@2x.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-second.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-mobile-third.jpg'),
-          importImg('projects/road-ninja-landing-mobile-third@2x.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-third.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-mobile-fourth.jpg'),
-          importImg('projects/road-ninja-landing-mobile-fourth@2x.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-fourth.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-mobile-fifth.jpg'),
-          importImg('projects/road-ninja-landing-mobile-fifth@2x.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-fifth.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-fifth@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-landing-mobile-sixth.jpg'),
-          importImg('projects/road-ninja-landing-mobile-sixth@2x.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-sixth.jpg'),
+          publicImg('projects/road-ninja-landing-mobile-sixth@2x.jpg'),
         ],
       ],
     },
@@ -806,20 +806,20 @@ const projects: IProject[] = [
       logo: commonLogo.roadNinja,
       desktop: [
         [
-          importImg('projects/road-ninja@2x.jpg'),
-          importImg('projects/road-ninja-desktop-first@2x.jpg'),
+          publicImg('projects/road-ninja@2x.jpg'),
+          publicImg('projects/road-ninja-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-desktop-second.jpg'),
-          importImg('projects/road-ninja-desktop-second@2x.jpg'),
+          publicImg('projects/road-ninja-desktop-second.jpg'),
+          publicImg('projects/road-ninja-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-desktop-third.jpg'),
-          importImg('projects/road-ninja-desktop-third@2x.jpg'),
+          publicImg('projects/road-ninja-desktop-third.jpg'),
+          publicImg('projects/road-ninja-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/road-ninja-desktop-fourth.jpg'),
-          importImg('projects/road-ninja-desktop-fourth@2x.jpg'),
+          publicImg('projects/road-ninja-desktop-fourth.jpg'),
+          publicImg('projects/road-ninja-desktop-fourth@2x.jpg'),
         ],
       ],
     },
@@ -853,36 +853,36 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/celebration_sm.png'),
-        importImg('logos/celebration.png'),
-        importImg('logos/celebration@2x.png'),
+        publicImg('logos/celebration_sm.png'),
+        publicImg('logos/celebration.png'),
+        publicImg('logos/celebration@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/celebration@2x.jpg'),
-          importImg('projects/celebration-desktop-first@2x.jpg'),
+          publicImg('projects/celebration@2x.jpg'),
+          publicImg('projects/celebration-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/celebration-desktop-second.jpg'),
-          importImg('projects/celebration-desktop-second@2x.jpg'),
+          publicImg('projects/celebration-desktop-second.jpg'),
+          publicImg('projects/celebration-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/celebration-desktop-third.jpg'),
-          importImg('projects/celebration-desktop-third@2x.jpg'),
+          publicImg('projects/celebration-desktop-third.jpg'),
+          publicImg('projects/celebration-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/celebration-mobile-first.jpg'),
-          importImg('projects/celebration-mobile-first@2x.jpg'),
+          publicImg('projects/celebration-mobile-first.jpg'),
+          publicImg('projects/celebration-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/celebration-mobile-second.jpg'),
-          importImg('projects/celebration-mobile-second@2x.jpg'),
+          publicImg('projects/celebration-mobile-second.jpg'),
+          publicImg('projects/celebration-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/celebration-mobile-third.jpg'),
-          importImg('projects/celebration-mobile-third@2x.jpg'),
+          publicImg('projects/celebration-mobile-third.jpg'),
+          publicImg('projects/celebration-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -920,30 +920,30 @@ const projects: IProject[] = [
       logo: commonLogo.ally,
       desktop: [
         [
-          importImg('projects/ally@2x.jpg'),
-          importImg('projects/ally-desktop-first@2x.jpg'),
+          publicImg('projects/ally@2x.jpg'),
+          publicImg('projects/ally-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/ally-desktop-second.jpg'),
-          importImg('projects/ally-desktop-second@2x.jpg'),
+          publicImg('projects/ally-desktop-second.jpg'),
+          publicImg('projects/ally-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/ally-desktop-third.jpg'),
-          importImg('projects/ally-desktop-third@2x.jpg'),
+          publicImg('projects/ally-desktop-third.jpg'),
+          publicImg('projects/ally-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/ally-mobile-first.jpg'),
-          importImg('projects/ally-mobile-first@2x.jpg'),
+          publicImg('projects/ally-mobile-first.jpg'),
+          publicImg('projects/ally-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/ally-mobile-second.jpg'),
-          importImg('projects/ally-mobile-second@2x.jpg'),
+          publicImg('projects/ally-mobile-second.jpg'),
+          publicImg('projects/ally-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/ally-mobile-third.jpg'),
-          importImg('projects/ally-mobile-third@2x.jpg'),
+          publicImg('projects/ally-mobile-third.jpg'),
+          publicImg('projects/ally-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -981,38 +981,38 @@ const projects: IProject[] = [
       logo: commonLogo.presentMe,
       desktop: [
         [
-          importImg('projects/present-me-landing@2x.jpg'),
-          importImg('projects/present-me-landing-desktop-first@2x.jpg'),
+          publicImg('projects/present-me-landing@2x.jpg'),
+          publicImg('projects/present-me-landing-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-landing-desktop-second.jpg'),
-          importImg('projects/present-me-landing-desktop-second@2x.jpg'),
+          publicImg('projects/present-me-landing-desktop-second.jpg'),
+          publicImg('projects/present-me-landing-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-landing-desktop-third.jpg'),
-          importImg('projects/present-me-landing-desktop-third@2x.jpg'),
+          publicImg('projects/present-me-landing-desktop-third.jpg'),
+          publicImg('projects/present-me-landing-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-landing-desktop-fourth.jpg'),
-          importImg('projects/present-me-landing-desktop-fourth@2x.jpg'),
+          publicImg('projects/present-me-landing-desktop-fourth.jpg'),
+          publicImg('projects/present-me-landing-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/present-me-landing-mobile-first.jpg'),
-          importImg('projects/present-me-landing-mobile-first@2x.jpg'),
+          publicImg('projects/present-me-landing-mobile-first.jpg'),
+          publicImg('projects/present-me-landing-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-landing-mobile-second.jpg'),
-          importImg('projects/present-me-landing-mobile-second@2x.jpg'),
+          publicImg('projects/present-me-landing-mobile-second.jpg'),
+          publicImg('projects/present-me-landing-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-landing-mobile-third.jpg'),
-          importImg('projects/present-me-landing-mobile-third@2x.jpg'),
+          publicImg('projects/present-me-landing-mobile-third.jpg'),
+          publicImg('projects/present-me-landing-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-landing-mobile-fourth.jpg'),
-          importImg('projects/present-me-landing-mobile-fourth@2x.jpg'),
+          publicImg('projects/present-me-landing-mobile-fourth.jpg'),
+          publicImg('projects/present-me-landing-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1046,16 +1046,16 @@ const projects: IProject[] = [
       logo: commonLogo.presentMe,
       desktop: [
         [
-          importImg('projects/present-me-portal@2x.jpg'),
-          importImg('projects/present-me-portal-desktop-first@2x.jpg'),
+          publicImg('projects/present-me-portal@2x.jpg'),
+          publicImg('projects/present-me-portal-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-portal-desktop-second.jpg'),
-          importImg('projects/present-me-portal-desktop-second@2x.jpg'),
+          publicImg('projects/present-me-portal-desktop-second.jpg'),
+          publicImg('projects/present-me-portal-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-portal-desktop-third.jpg'),
-          importImg('projects/present-me-portal-desktop-third@2x.jpg'),
+          publicImg('projects/present-me-portal-desktop-third.jpg'),
+          publicImg('projects/present-me-portal-desktop-third@2x.jpg'),
         ],
       ],
     },
@@ -1092,46 +1092,46 @@ const projects: IProject[] = [
       logo: commonLogo.presentMe,
       desktop: [
         [
-          importImg('projects/present-me@2x.jpg'),
-          importImg('projects/present-me-desktop-first@2x.jpg'),
+          publicImg('projects/present-me@2x.jpg'),
+          publicImg('projects/present-me-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-desktop-second.jpg'),
-          importImg('projects/present-me-desktop-second@2x.jpg'),
+          publicImg('projects/present-me-desktop-second.jpg'),
+          publicImg('projects/present-me-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-desktop-third.jpg'),
-          importImg('projects/present-me-desktop-third@2x.jpg'),
+          publicImg('projects/present-me-desktop-third.jpg'),
+          publicImg('projects/present-me-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-desktop-fourth.jpg'),
-          importImg('projects/present-me-desktop-fourth@2x.jpg'),
+          publicImg('projects/present-me-desktop-fourth.jpg'),
+          publicImg('projects/present-me-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-desktop-fifth.jpg'),
-          importImg('projects/present-me-desktop-fifth@2x.jpg'),
+          publicImg('projects/present-me-desktop-fifth.jpg'),
+          publicImg('projects/present-me-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/present-me-mobile-first.jpg'),
-          importImg('projects/present-me-mobile-first@2x.jpg'),
+          publicImg('projects/present-me-mobile-first.jpg'),
+          publicImg('projects/present-me-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-mobile-second.jpg'),
-          importImg('projects/present-me-mobile-second@2x.jpg'),
+          publicImg('projects/present-me-mobile-second.jpg'),
+          publicImg('projects/present-me-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-mobile-third.jpg'),
-          importImg('projects/present-me-mobile-third@2x.jpg'),
+          publicImg('projects/present-me-mobile-third.jpg'),
+          publicImg('projects/present-me-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-mobile-fourth.jpg'),
-          importImg('projects/present-me-mobile-fourth@2x.jpg'),
+          publicImg('projects/present-me-mobile-fourth.jpg'),
+          publicImg('projects/present-me-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/present-me-mobile-fifth.jpg'),
-          importImg('projects/present-me-mobile-fifth@2x.jpg'),
+          publicImg('projects/present-me-mobile-fifth.jpg'),
+          publicImg('projects/present-me-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -1165,45 +1165,45 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/dropdrone_sm.png'),
-        importImg('logos/dropdrone.png'),
-        importImg('logos/dropdrone@2x.png'),
+        publicImg('logos/dropdrone_sm.png'),
+        publicImg('logos/dropdrone.png'),
+        publicImg('logos/dropdrone@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/dropdrone@2x.jpg'),
-          importImg('projects/dropdrone-desktop-first@2x.jpg'),
+          publicImg('projects/dropdrone@2x.jpg'),
+          publicImg('projects/dropdrone-desktop-first@2x.jpg'),
         ],
 
         [
-          importImg('projects/dropdrone-desktop-second.jpg'),
-          importImg('projects/dropdrone-desktop-second@2x.jpg'),
+          publicImg('projects/dropdrone-desktop-second.jpg'),
+          publicImg('projects/dropdrone-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/dropdrone-desktop-third.jpg'),
-          importImg('projects/dropdrone-desktop-third@2x.jpg'),
+          publicImg('projects/dropdrone-desktop-third.jpg'),
+          publicImg('projects/dropdrone-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/dropdrone-desktop-fourth.jpg'),
-          importImg('projects/dropdrone-desktop-fourth@2x.jpg'),
+          publicImg('projects/dropdrone-desktop-fourth.jpg'),
+          publicImg('projects/dropdrone-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/dropdrone-mobile-first.jpg'),
-          importImg('projects/dropdrone-mobile-first@2x.jpg'),
+          publicImg('projects/dropdrone-mobile-first.jpg'),
+          publicImg('projects/dropdrone-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/dropdrone-mobile-second.jpg'),
-          importImg('projects/dropdrone-mobile-second@2x.jpg'),
+          publicImg('projects/dropdrone-mobile-second.jpg'),
+          publicImg('projects/dropdrone-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/dropdrone-mobile-third.jpg'),
-          importImg('projects/dropdrone-mobile-third@2x.jpg'),
+          publicImg('projects/dropdrone-mobile-third.jpg'),
+          publicImg('projects/dropdrone-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/dropdrone-mobile-fourth.jpg'),
-          importImg('projects/dropdrone-mobile-fourth@2x.jpg'),
+          publicImg('projects/dropdrone-mobile-fourth.jpg'),
+          publicImg('projects/dropdrone-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1239,44 +1239,44 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/just-hatched_sm.png'),
-        importImg('logos/just-hatched.png'),
-        importImg('logos/just-hatched@2x.png'),
+        publicImg('logos/just-hatched_sm.png'),
+        publicImg('logos/just-hatched.png'),
+        publicImg('logos/just-hatched@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/just-hatched@2x.jpg'),
-          importImg('projects/just-hatched-desktop-first@2x.jpg'),
+          publicImg('projects/just-hatched@2x.jpg'),
+          publicImg('projects/just-hatched-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/just-hatched-desktop-second.jpg'),
-          importImg('projects/just-hatched-desktop-second@2x.jpg'),
+          publicImg('projects/just-hatched-desktop-second.jpg'),
+          publicImg('projects/just-hatched-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/just-hatched-desktop-third.jpg'),
-          importImg('projects/just-hatched-desktop-third@2x.jpg'),
+          publicImg('projects/just-hatched-desktop-third.jpg'),
+          publicImg('projects/just-hatched-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/just-hatched-desktop-fourth.jpg'),
-          importImg('projects/just-hatched-desktop-fourth@2x.jpg'),
+          publicImg('projects/just-hatched-desktop-fourth.jpg'),
+          publicImg('projects/just-hatched-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/just-hatched-mobile-first.jpg'),
-          importImg('projects/just-hatched-mobile-first@2x.jpg'),
+          publicImg('projects/just-hatched-mobile-first.jpg'),
+          publicImg('projects/just-hatched-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/just-hatched-mobile-second.jpg'),
-          importImg('projects/just-hatched-mobile-second@2x.jpg'),
+          publicImg('projects/just-hatched-mobile-second.jpg'),
+          publicImg('projects/just-hatched-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/just-hatched-mobile-third.jpg'),
-          importImg('projects/just-hatched-mobile-third@2x.jpg'),
+          publicImg('projects/just-hatched-mobile-third.jpg'),
+          publicImg('projects/just-hatched-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/just-hatched-mobile-fourth.jpg'),
-          importImg('projects/just-hatched-mobile-fourth@2x.jpg'),
+          publicImg('projects/just-hatched-mobile-fourth.jpg'),
+          publicImg('projects/just-hatched-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1313,30 +1313,30 @@ const projects: IProject[] = [
       logo: commonLogo.vaillant,
       desktop: [
         [
-          importImg('projects/uls@2x.jpg'),
-          importImg('projects/uls-desktop-first@2x.jpg'),
+          publicImg('projects/uls@2x.jpg'),
+          publicImg('projects/uls-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/uls-desktop-second.jpg'),
-          importImg('projects/uls-desktop-second@2x.jpg'),
+          publicImg('projects/uls-desktop-second.jpg'),
+          publicImg('projects/uls-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/uls-desktop-third.jpg'),
-          importImg('projects/uls-desktop-third@2x.jpg'),
+          publicImg('projects/uls-desktop-third.jpg'),
+          publicImg('projects/uls-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/uls-mobile-first.jpg'),
-          importImg('projects/uls-mobile-first@2x.jpg'),
+          publicImg('projects/uls-mobile-first.jpg'),
+          publicImg('projects/uls-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/uls-mobile-second.jpg'),
-          importImg('projects/uls-mobile-second@2x.jpg'),
+          publicImg('projects/uls-mobile-second.jpg'),
+          publicImg('projects/uls-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/uls-mobile-third.jpg'),
-          importImg('projects/uls-mobile-third@2x.jpg'),
+          publicImg('projects/uls-mobile-third.jpg'),
+          publicImg('projects/uls-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -1370,37 +1370,37 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/proximal-coffee_sm.png'),
-        importImg('logos/proximal-coffee.png'),
-        importImg('logos/proximal-coffee@2x.png'),
+        publicImg('logos/proximal-coffee_sm.png'),
+        publicImg('logos/proximal-coffee.png'),
+        publicImg('logos/proximal-coffee@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/proximal-coffee@2x.jpg'),
-          importImg('projects/proximal-coffee-desktop-first@2x.jpg'),
+          publicImg('projects/proximal-coffee@2x.jpg'),
+          publicImg('projects/proximal-coffee-desktop-first@2x.jpg'),
         ],
 
         [
-          importImg('projects/proximal-coffee-desktop-second.jpg'),
-          importImg('projects/proximal-coffee-desktop-second@2x.jpg'),
+          publicImg('projects/proximal-coffee-desktop-second.jpg'),
+          publicImg('projects/proximal-coffee-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/proximal-coffee-desktop-third.jpg'),
-          importImg('projects/proximal-coffee-desktop-third@2x.jpg'),
+          publicImg('projects/proximal-coffee-desktop-third.jpg'),
+          publicImg('projects/proximal-coffee-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/proximal-coffee-mobile-first.jpg'),
-          importImg('projects/proximal-coffee-mobile-first@2x.jpg'),
+          publicImg('projects/proximal-coffee-mobile-first.jpg'),
+          publicImg('projects/proximal-coffee-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/proximal-coffee-mobile-second.jpg'),
-          importImg('projects/proximal-coffee-mobile-second@2x.jpg'),
+          publicImg('projects/proximal-coffee-mobile-second.jpg'),
+          publicImg('projects/proximal-coffee-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/proximal-coffee-mobile-third.jpg'),
-          importImg('projects/proximal-coffee-mobile-third@2x.jpg'),
+          publicImg('projects/proximal-coffee-mobile-third.jpg'),
+          publicImg('projects/proximal-coffee-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -1431,30 +1431,30 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/vtb_sm.png'),
-        importImg('logos/vtb.png'),
-        importImg('logos/vtb@2x.png'),
+        publicImg('logos/vtb_sm.png'),
+        publicImg('logos/vtb.png'),
+        publicImg('logos/vtb@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/embp@2x.jpg'),
-          importImg('projects/embp-desktop-first@2x.jpg'),
+          publicImg('projects/embp@2x.jpg'),
+          publicImg('projects/embp-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/embp-desktop-second.jpg'),
-          importImg('projects/embp-desktop-second@2x.jpg'),
+          publicImg('projects/embp-desktop-second.jpg'),
+          publicImg('projects/embp-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/embp-desktop-third.jpg'),
-          importImg('projects/embp-desktop-third@2x.jpg'),
+          publicImg('projects/embp-desktop-third.jpg'),
+          publicImg('projects/embp-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/embp-desktop-fourth.jpg'),
-          importImg('projects/embp-desktop-fourth@2x.jpg'),
+          publicImg('projects/embp-desktop-fourth.jpg'),
+          publicImg('projects/embp-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/embp-desktop-fifth.jpg'),
-          importImg('projects/embp-desktop-fifth@2x.jpg'),
+          publicImg('projects/embp-desktop-fifth.jpg'),
+          publicImg('projects/embp-desktop-fifth@2x.jpg'),
         ],
       ],
     },
@@ -1490,52 +1490,52 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/tmf_sm.png'),
-        importImg('logos/tmf.png'),
-        importImg('logos/tmf@2x.png'),
+        publicImg('logos/tmf_sm.png'),
+        publicImg('logos/tmf.png'),
+        publicImg('logos/tmf@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/tmf@2x.jpg'),
-          importImg('projects/tmf-desktop-first@2x.jpg'),
+          publicImg('projects/tmf@2x.jpg'),
+          publicImg('projects/tmf-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-desktop-second.jpg'),
-          importImg('projects/tmf-desktop-second@2x.jpg'),
+          publicImg('projects/tmf-desktop-second.jpg'),
+          publicImg('projects/tmf-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-desktop-third.jpg'),
-          importImg('projects/tmf-desktop-third@2x.jpg'),
+          publicImg('projects/tmf-desktop-third.jpg'),
+          publicImg('projects/tmf-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-desktop-fourth.jpg'),
-          importImg('projects/tmf-desktop-fourth@2x.jpg'),
+          publicImg('projects/tmf-desktop-fourth.jpg'),
+          publicImg('projects/tmf-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-desktop-fifth.jpg'),
-          importImg('projects/tmf-desktop-fifth@2x.jpg'),
+          publicImg('projects/tmf-desktop-fifth.jpg'),
+          publicImg('projects/tmf-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/tmf-mobile-first.jpg'),
-          importImg('projects/tmf-mobile-first@2x.jpg'),
+          publicImg('projects/tmf-mobile-first.jpg'),
+          publicImg('projects/tmf-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-mobile-second.jpg'),
-          importImg('projects/tmf-mobile-second@2x.jpg'),
+          publicImg('projects/tmf-mobile-second.jpg'),
+          publicImg('projects/tmf-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-mobile-third.jpg'),
-          importImg('projects/tmf-mobile-third@2x.jpg'),
+          publicImg('projects/tmf-mobile-third.jpg'),
+          publicImg('projects/tmf-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-mobile-fourth.jpg'),
-          importImg('projects/tmf-mobile-fourth@2x.jpg'),
+          publicImg('projects/tmf-mobile-fourth.jpg'),
+          publicImg('projects/tmf-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/tmf-mobile-fifth.jpg'),
-          importImg('projects/tmf-mobile-fifth@2x.jpg'),
+          publicImg('projects/tmf-mobile-fifth.jpg'),
+          publicImg('projects/tmf-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -1571,38 +1571,38 @@ const projects: IProject[] = [
       logo: commonLogo.sevenGlyphs,
       desktop: [
         [
-          importImg('projects/7glyphs-lite@2x.jpg'),
-          importImg('projects/7glyphs-lite-desktop-first@2x.jpg'),
+          publicImg('projects/7glyphs-lite@2x.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-lite-desktop-second.jpg'),
-          importImg('projects/7glyphs-lite-desktop-second@2x.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-second.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-lite-desktop-third.jpg'),
-          importImg('projects/7glyphs-lite-desktop-third@2x.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-third.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-lite-desktop-fourth.jpg'),
-          importImg('projects/7glyphs-lite-desktop-fourth@2x.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-fourth.jpg'),
+          publicImg('projects/7glyphs-lite-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/7glyphs-lite-mobile-first.jpg'),
-          importImg('projects/7glyphs-lite-mobile-first@2x.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-first.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-lite-mobile-second.jpg'),
-          importImg('projects/7glyphs-lite-mobile-second@2x.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-second.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-lite-mobile-third.jpg'),
-          importImg('projects/7glyphs-lite-mobile-third@2x.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-third.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-lite-mobile-fourth.jpg'),
-          importImg('projects/7glyphs-lite-mobile-fourth@2x.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-fourth.jpg'),
+          publicImg('projects/7glyphs-lite-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1640,30 +1640,30 @@ const projects: IProject[] = [
       logo: commonLogo.strongher,
       desktop: [
         [
-          importImg('projects/melissa-chalmers@2x.jpg'),
-          importImg('projects/melissa-chalmers-desktop-first@2x.jpg'),
+          publicImg('projects/melissa-chalmers@2x.jpg'),
+          publicImg('projects/melissa-chalmers-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/melissa-chalmers-desktop-second.jpg'),
-          importImg('projects/melissa-chalmers-desktop-second@2x.jpg'),
+          publicImg('projects/melissa-chalmers-desktop-second.jpg'),
+          publicImg('projects/melissa-chalmers-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/melissa-chalmers-desktop-third.jpg'),
-          importImg('projects/melissa-chalmers-desktop-third@2x.jpg'),
+          publicImg('projects/melissa-chalmers-desktop-third.jpg'),
+          publicImg('projects/melissa-chalmers-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/melissa-chalmers-mobile-first.jpg'),
-          importImg('projects/melissa-chalmers-mobile-first@2x.jpg'),
+          publicImg('projects/melissa-chalmers-mobile-first.jpg'),
+          publicImg('projects/melissa-chalmers-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/melissa-chalmers-mobile-second.jpg'),
-          importImg('projects/melissa-chalmers-mobile-second@2x.jpg'),
+          publicImg('projects/melissa-chalmers-mobile-second.jpg'),
+          publicImg('projects/melissa-chalmers-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/melissa-chalmers-mobile-third.jpg'),
-          importImg('projects/melissa-chalmers-mobile-third@2x.jpg'),
+          publicImg('projects/melissa-chalmers-mobile-third.jpg'),
+          publicImg('projects/melissa-chalmers-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -1702,24 +1702,24 @@ const projects: IProject[] = [
       logo: commonLogo.foodprint,
       mobile: [
         [
-          importImg('projects/foodprint-first.jpg'),
-          importImg('projects/foodprint-first@2x.jpg'),
+          publicImg('projects/foodprint-first.jpg'),
+          publicImg('projects/foodprint-first@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-second.jpg'),
-          importImg('projects/foodprint-second@2x.jpg'),
+          publicImg('projects/foodprint-second.jpg'),
+          publicImg('projects/foodprint-second@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-third.jpg'),
-          importImg('projects/foodprint-third@2x.jpg'),
+          publicImg('projects/foodprint-third.jpg'),
+          publicImg('projects/foodprint-third@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-fourth.jpg'),
-          importImg('projects/foodprint-fourth@2x.jpg'),
+          publicImg('projects/foodprint-fourth.jpg'),
+          publicImg('projects/foodprint-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-fifth.jpg'),
-          importImg('projects/foodprint-fifth@2x.jpg'),
+          publicImg('projects/foodprint-fifth.jpg'),
+          publicImg('projects/foodprint-fifth@2x.jpg'),
         ],
       ],
     },
@@ -1753,24 +1753,24 @@ const projects: IProject[] = [
       logo: commonLogo.foodprint,
       desktop: [
         [
-          importImg('projects/foodprint-portal@2x.jpg'),
-          importImg('projects/foodprint-portal-desktop-first@2x.jpg'),
+          publicImg('projects/foodprint-portal@2x.jpg'),
+          publicImg('projects/foodprint-portal-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-portal-desktop-second.jpg'),
-          importImg('projects/foodprint-portal-desktop-second@2x.jpg'),
+          publicImg('projects/foodprint-portal-desktop-second.jpg'),
+          publicImg('projects/foodprint-portal-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-portal-desktop-third.jpg'),
-          importImg('projects/foodprint-portal-desktop-third@2x.jpg'),
+          publicImg('projects/foodprint-portal-desktop-third.jpg'),
+          publicImg('projects/foodprint-portal-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-portal-desktop-fourth.jpg'),
-          importImg('projects/foodprint-portal-desktop-fourth@2x.jpg'),
+          publicImg('projects/foodprint-portal-desktop-fourth.jpg'),
+          publicImg('projects/foodprint-portal-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-portal-desktop-fifth.jpg'),
-          importImg('projects/foodprint-portal-desktop-fifth@2x.jpg'),
+          publicImg('projects/foodprint-portal-desktop-fifth.jpg'),
+          publicImg('projects/foodprint-portal-desktop-fifth@2x.jpg'),
         ],
       ],
     },
@@ -1807,38 +1807,38 @@ const projects: IProject[] = [
       logo: commonLogo.foodprint,
       desktop: [
         [
-          importImg('projects/foodprint-landing@2x.jpg'),
-          importImg('projects/foodprint-landing-desktop-first@2x.jpg'),
+          publicImg('projects/foodprint-landing@2x.jpg'),
+          publicImg('projects/foodprint-landing-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-landing-desktop-second.jpg'),
-          importImg('projects/foodprint-landing-desktop-second@2x.jpg'),
+          publicImg('projects/foodprint-landing-desktop-second.jpg'),
+          publicImg('projects/foodprint-landing-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-landing-desktop-third.jpg'),
-          importImg('projects/foodprint-landing-desktop-third@2x.jpg'),
+          publicImg('projects/foodprint-landing-desktop-third.jpg'),
+          publicImg('projects/foodprint-landing-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-landing-desktop-fourth.jpg'),
-          importImg('projects/foodprint-landing-desktop-fourth@2x.jpg'),
+          publicImg('projects/foodprint-landing-desktop-fourth.jpg'),
+          publicImg('projects/foodprint-landing-desktop-fourth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/foodprint-landing-mobile-first.jpg'),
-          importImg('projects/foodprint-landing-mobile-first@2x.jpg'),
+          publicImg('projects/foodprint-landing-mobile-first.jpg'),
+          publicImg('projects/foodprint-landing-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-landing-mobile-second.jpg'),
-          importImg('projects/foodprint-landing-mobile-second@2x.jpg'),
+          publicImg('projects/foodprint-landing-mobile-second.jpg'),
+          publicImg('projects/foodprint-landing-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-landing-mobile-third.jpg'),
-          importImg('projects/foodprint-landing-mobile-third@2x.jpg'),
+          publicImg('projects/foodprint-landing-mobile-third.jpg'),
+          publicImg('projects/foodprint-landing-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/foodprint-landing-mobile-fourth.jpg'),
-          importImg('projects/foodprint-landing-mobile-fourth@2x.jpg'),
+          publicImg('projects/foodprint-landing-mobile-fourth.jpg'),
+          publicImg('projects/foodprint-landing-mobile-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1871,20 +1871,20 @@ const projects: IProject[] = [
       logo: commonLogo.vaillant,
       desktop: [
         [
-          importImg('projects/sds@2x.jpg'),
-          importImg('projects/sds-desktop-first@2x.jpg'),
+          publicImg('projects/sds@2x.jpg'),
+          publicImg('projects/sds-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/sds-desktop-second.jpg'),
-          importImg('projects/sds-desktop-second@2x.jpg'),
+          publicImg('projects/sds-desktop-second.jpg'),
+          publicImg('projects/sds-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/sds-desktop-third.jpg'),
-          importImg('projects/sds-desktop-third@2x.jpg'),
+          publicImg('projects/sds-desktop-third.jpg'),
+          publicImg('projects/sds-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/sds-desktop-fourth.jpg'),
-          importImg('projects/sds-desktop-fourth@2x.jpg'),
+          publicImg('projects/sds-desktop-fourth.jpg'),
+          publicImg('projects/sds-desktop-fourth@2x.jpg'),
         ],
       ],
     },
@@ -1922,46 +1922,46 @@ const projects: IProject[] = [
       logo: commonLogo.strongher,
       desktop: [
         [
-          importImg('projects/strongher@2x.jpg'),
-          importImg('projects/strongher-desktop-first@2x.jpg'),
+          publicImg('projects/strongher@2x.jpg'),
+          publicImg('projects/strongher-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-desktop-second.jpg'),
-          importImg('projects/strongher-desktop-second@2x.jpg'),
+          publicImg('projects/strongher-desktop-second.jpg'),
+          publicImg('projects/strongher-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-desktop-third.jpg'),
-          importImg('projects/strongher-desktop-third@2x.jpg'),
+          publicImg('projects/strongher-desktop-third.jpg'),
+          publicImg('projects/strongher-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-desktop-fourth.jpg'),
-          importImg('projects/strongher-desktop-fourth@2x.jpg'),
+          publicImg('projects/strongher-desktop-fourth.jpg'),
+          publicImg('projects/strongher-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-desktop-fifth.jpg'),
-          importImg('projects/strongher-desktop-fifth@2x.jpg'),
+          publicImg('projects/strongher-desktop-fifth.jpg'),
+          publicImg('projects/strongher-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/strongher-mobile-first.jpg'),
-          importImg('projects/strongher-mobile-first@2x.jpg'),
+          publicImg('projects/strongher-mobile-first.jpg'),
+          publicImg('projects/strongher-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-mobile-second.jpg'),
-          importImg('projects/strongher-mobile-second@2x.jpg'),
+          publicImg('projects/strongher-mobile-second.jpg'),
+          publicImg('projects/strongher-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-mobile-third.jpg'),
-          importImg('projects/strongher-mobile-third@2x.jpg'),
+          publicImg('projects/strongher-mobile-third.jpg'),
+          publicImg('projects/strongher-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-mobile-fourth.jpg'),
-          importImg('projects/strongher-mobile-fourth@2x.jpg'),
+          publicImg('projects/strongher-mobile-fourth.jpg'),
+          publicImg('projects/strongher-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/strongher-mobile-fifth.jpg'),
-          importImg('projects/strongher-mobile-fifth@2x.jpg'),
+          publicImg('projects/strongher-mobile-fifth.jpg'),
+          publicImg('projects/strongher-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -1998,46 +1998,46 @@ const projects: IProject[] = [
       logo: commonLogo.sevenGlyphs,
       desktop: [
         [
-          importImg('projects/7glyphs-2@2x.jpg'),
-          importImg('projects/7glyphs-2-desktop-first@2x.jpg'),
+          publicImg('projects/7glyphs-2@2x.jpg'),
+          publicImg('projects/7glyphs-2-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-desktop-second.jpg'),
-          importImg('projects/7glyphs-2-desktop-second@2x.jpg'),
+          publicImg('projects/7glyphs-2-desktop-second.jpg'),
+          publicImg('projects/7glyphs-2-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-desktop-third.jpg'),
-          importImg('projects/7glyphs-2-desktop-third@2x.jpg'),
+          publicImg('projects/7glyphs-2-desktop-third.jpg'),
+          publicImg('projects/7glyphs-2-desktop-third@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-desktop-fourth.jpg'),
-          importImg('projects/7glyphs-2-desktop-fourth@2x.jpg'),
+          publicImg('projects/7glyphs-2-desktop-fourth.jpg'),
+          publicImg('projects/7glyphs-2-desktop-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-desktop-fifth.jpg'),
-          importImg('projects/7glyphs-2-desktop-fifth@2x.jpg'),
+          publicImg('projects/7glyphs-2-desktop-fifth.jpg'),
+          publicImg('projects/7glyphs-2-desktop-fifth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/7glyphs-2-mobile-first.jpg'),
-          importImg('projects/7glyphs-2-mobile-first@2x.jpg'),
+          publicImg('projects/7glyphs-2-mobile-first.jpg'),
+          publicImg('projects/7glyphs-2-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-mobile-second.jpg'),
-          importImg('projects/7glyphs-2-mobile-second@2x.jpg'),
+          publicImg('projects/7glyphs-2-mobile-second.jpg'),
+          publicImg('projects/7glyphs-2-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-mobile-third.jpg'),
-          importImg('projects/7glyphs-2-mobile-third@2x.jpg'),
+          publicImg('projects/7glyphs-2-mobile-third.jpg'),
+          publicImg('projects/7glyphs-2-mobile-third@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-mobile-fourth.jpg'),
-          importImg('projects/7glyphs-2-mobile-fourth@2x.jpg'),
+          publicImg('projects/7glyphs-2-mobile-fourth.jpg'),
+          publicImg('projects/7glyphs-2-mobile-fourth@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-2-mobile-fifth.jpg'),
-          importImg('projects/7glyphs-2-mobile-fifth@2x.jpg'),
+          publicImg('projects/7glyphs-2-mobile-fifth.jpg'),
+          publicImg('projects/7glyphs-2-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -2072,22 +2072,22 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/rogue-travel.png'),
-        importImg('logos/rogue-travel.png'),
-        importImg('logos/rogue-travel@2x.png'),
+        publicImg('logos/rogue-travel.png'),
+        publicImg('logos/rogue-travel.png'),
+        publicImg('logos/rogue-travel@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/rogue-travel@2x.jpg'),
-          importImg('projects/rogue-travel-desktop-first@2x.jpg'),
+          publicImg('projects/rogue-travel@2x.jpg'),
+          publicImg('projects/rogue-travel-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/rogue-travel-desktop-second.jpg'),
-          importImg('projects/rogue-travel-desktop-second@2x.jpg'),
+          publicImg('projects/rogue-travel-desktop-second.jpg'),
+          publicImg('projects/rogue-travel-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/rogue-travel-desktop-third.jpg'),
-          importImg('projects/rogue-travel-desktop-third@2x.jpg'),
+          publicImg('projects/rogue-travel-desktop-third.jpg'),
+          publicImg('projects/rogue-travel-desktop-third@2x.jpg'),
         ],
       ],
     },
@@ -2120,22 +2120,22 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/querry-trucks_sm.png'),
-        importImg('logos/querry-trucks.png'),
-        importImg('logos/querry-trucks@2x.png'),
+        publicImg('logos/querry-trucks_sm.png'),
+        publicImg('logos/querry-trucks.png'),
+        publicImg('logos/querry-trucks@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/quarry-trucks@2x.jpg'),
-          importImg('projects/quarry-trucks-desktop-first@2x.jpg'),
+          publicImg('projects/quarry-trucks@2x.jpg'),
+          publicImg('projects/quarry-trucks-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/quarry-trucks-desktop-second.jpg'),
-          importImg('projects/quarry-trucks-desktop-second@2x.jpg'),
+          publicImg('projects/quarry-trucks-desktop-second.jpg'),
+          publicImg('projects/quarry-trucks-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/quarry-trucks-desktop-third.jpg'),
-          importImg('projects/quarry-trucks-desktop-third@2x.jpg'),
+          publicImg('projects/quarry-trucks-desktop-third.jpg'),
+          publicImg('projects/quarry-trucks-desktop-third@2x.jpg'),
         ],
       ],
     },
@@ -2172,30 +2172,30 @@ const projects: IProject[] = [
       logo: commonLogo.sevenGlyphs,
       desktop: [
         [
-          importImg('projects/service-packages@2x.jpg'),
-          importImg('projects/service-packages-desktop-first@2x.jpg'),
+          publicImg('projects/service-packages@2x.jpg'),
+          publicImg('projects/service-packages-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/service-packages-desktop-second.jpg'),
-          importImg('projects/service-packages-desktop-second@2x.jpg'),
+          publicImg('projects/service-packages-desktop-second.jpg'),
+          publicImg('projects/service-packages-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/service-packages-desktop-third.jpg'),
-          importImg('projects/service-packages-desktop-third@2x.jpg'),
+          publicImg('projects/service-packages-desktop-third.jpg'),
+          publicImg('projects/service-packages-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/service-packages-mobile-first.jpg'),
-          importImg('projects/service-packages-mobile-first@2x.jpg'),
+          publicImg('projects/service-packages-mobile-first.jpg'),
+          publicImg('projects/service-packages-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/service-packages-mobile-second.jpg'),
-          importImg('projects/service-packages-mobile-second@2x.jpg'),
+          publicImg('projects/service-packages-mobile-second.jpg'),
+          publicImg('projects/service-packages-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/service-packages-mobile-third.jpg'),
-          importImg('projects/service-packages-mobile-third@2x.jpg'),
+          publicImg('projects/service-packages-mobile-third.jpg'),
+          publicImg('projects/service-packages-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -2227,22 +2227,22 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/fcdc_sm.png'),
-        importImg('logos/fcdc.png'),
-        importImg('logos/fcdc@2x.png'),
+        publicImg('logos/fcdc_sm.png'),
+        publicImg('logos/fcdc.png'),
+        publicImg('logos/fcdc@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/fcdc@2x.jpg'),
-          importImg('projects/fcdc-desktop-first@2x.jpg'),
+          publicImg('projects/fcdc@2x.jpg'),
+          publicImg('projects/fcdc-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/fcdc-desktop-second.jpg'),
-          importImg('projects/fcdc-desktop-second@2x.jpg'),
+          publicImg('projects/fcdc-desktop-second.jpg'),
+          publicImg('projects/fcdc-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/fcdc-desktop-third.jpg'),
-          importImg('projects/fcdc-desktop-third@2x.jpg'),
+          publicImg('projects/fcdc-desktop-third.jpg'),
+          publicImg('projects/fcdc-desktop-third@2x.jpg'),
         ],
       ],
     },
@@ -2277,36 +2277,36 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/12-saffron_sm.png'),
-        importImg('logos/12-saffron.png'),
-        importImg('logos/12-saffron@2x.png'),
+        publicImg('logos/12-saffron_sm.png'),
+        publicImg('logos/12-saffron.png'),
+        publicImg('logos/12-saffron@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/12-saffron@2x.jpg'),
-          importImg('projects/12-saffron-desktop-first@2x.jpg'),
+          publicImg('projects/12-saffron@2x.jpg'),
+          publicImg('projects/12-saffron-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/12-saffron-desktop-second.jpg'),
-          importImg('projects/12-saffron-desktop-second@2x.jpg'),
+          publicImg('projects/12-saffron-desktop-second.jpg'),
+          publicImg('projects/12-saffron-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/12-saffron-desktop-third.jpg'),
-          importImg('projects/12-saffron-desktop-third@2x.jpg'),
+          publicImg('projects/12-saffron-desktop-third.jpg'),
+          publicImg('projects/12-saffron-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/12-saffron-mobile-first.jpg'),
-          importImg('projects/12-saffron-mobile-first@2x.jpg'),
+          publicImg('projects/12-saffron-mobile-first.jpg'),
+          publicImg('projects/12-saffron-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/12-saffron-mobile-second.jpg'),
-          importImg('projects/12-saffron-mobile-second@2x.jpg'),
+          publicImg('projects/12-saffron-mobile-second.jpg'),
+          publicImg('projects/12-saffron-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/12-saffron-mobile-third.jpg'),
-          importImg('projects/12-saffron-mobile-third@2x.jpg'),
+          publicImg('projects/12-saffron-mobile-third.jpg'),
+          publicImg('projects/12-saffron-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -2347,20 +2347,20 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/whip-around_sm.png'),
-        importImg('logos/whip-around.png'),
-        importImg('logos/whip-around@2x.png'),
+        publicImg('logos/whip-around_sm.png'),
+        publicImg('logos/whip-around.png'),
+        publicImg('logos/whip-around@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/whip-around@2x.jpg'),
-          importImg('projects/whip-around-desktop@2x.jpg'),
+          publicImg('projects/whip-around@2x.jpg'),
+          publicImg('projects/whip-around-desktop@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/whip-around-mobile.jpg'),
-          importImg('projects/whip-around-mobile@2x.jpg'),
+          publicImg('projects/whip-around-mobile.jpg'),
+          publicImg('projects/whip-around-mobile@2x.jpg'),
         ],
       ],
     },
@@ -2402,14 +2402,14 @@ const projects: IProject[] = [
       logo: commonLogo.lazyaz,
       desktop: [
         [
-          importImg('projects/lazyaz-dashboard@2x.jpg'),
-          importImg('projects/lazyaz-dashboard-desktop@2x.jpg'),
+          publicImg('projects/lazyaz-dashboard@2x.jpg'),
+          publicImg('projects/lazyaz-dashboard-desktop@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/lazyaz-dashboard-mobile.jpg'),
-          importImg('projects/lazyaz-dashboard-mobile@2x.jpg'),
+          publicImg('projects/lazyaz-dashboard-mobile.jpg'),
+          publicImg('projects/lazyaz-dashboard-mobile@2x.jpg'),
         ],
       ],
     },
@@ -2446,30 +2446,30 @@ const projects: IProject[] = [
       logo: commonLogo.lazyaz,
       desktop: [
         [
-          importImg('projects/lazyaz@2x.jpg'),
-          importImg('projects/lazyaz-desktop-first@2x.jpg'),
+          publicImg('projects/lazyaz@2x.jpg'),
+          publicImg('projects/lazyaz-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/lazyaz-desktop-second.jpg'),
-          importImg('projects/lazyaz-desktop-second@2x.jpg'),
+          publicImg('projects/lazyaz-desktop-second.jpg'),
+          publicImg('projects/lazyaz-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/lazyaz-desktop-third.jpg'),
-          importImg('projects/lazyaz-desktop-third@2x.jpg'),
+          publicImg('projects/lazyaz-desktop-third.jpg'),
+          publicImg('projects/lazyaz-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/lazyaz-mobile-first@2x.jpg'),
-          importImg('projects/lazyaz-mobile-first@2x.jpg'),
+          publicImg('projects/lazyaz-mobile-first@2x.jpg'),
+          publicImg('projects/lazyaz-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/lazyaz-mobile-second.jpg'),
-          importImg('projects/lazyaz-mobile-second@2x.jpg'),
+          publicImg('projects/lazyaz-mobile-second.jpg'),
+          publicImg('projects/lazyaz-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/lazyaz-mobile-third.jpg'),
-          importImg('projects/lazyaz-mobile-third@2x.jpg'),
+          publicImg('projects/lazyaz-mobile-third.jpg'),
+          publicImg('projects/lazyaz-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -2506,30 +2506,30 @@ const projects: IProject[] = [
       logo: commonLogo.sevenGlyphs,
       desktop: [
         [
-          importImg('projects/7glyphs@2x.jpg'),
-          importImg('projects/7glyphs-desktop-first@2x.jpg'),
+          publicImg('projects/7glyphs@2x.jpg'),
+          publicImg('projects/7glyphs-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-desktop-second.jpg'),
-          importImg('projects/7glyphs-desktop-second@2x.jpg'),
+          publicImg('projects/7glyphs-desktop-second.jpg'),
+          publicImg('projects/7glyphs-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-desktop-third.jpg'),
-          importImg('projects/7glyphs-desktop-third@2x.jpg'),
+          publicImg('projects/7glyphs-desktop-third.jpg'),
+          publicImg('projects/7glyphs-desktop-third@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          importImg('projects/7glyphs-mobile-first.jpg'),
-          importImg('projects/7glyphs-mobile-first@2x.jpg'),
+          publicImg('projects/7glyphs-mobile-first.jpg'),
+          publicImg('projects/7glyphs-mobile-first@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-mobile-second.jpg'),
-          importImg('projects/7glyphs-mobile-second@2x.jpg'),
+          publicImg('projects/7glyphs-mobile-second.jpg'),
+          publicImg('projects/7glyphs-mobile-second@2x.jpg'),
         ],
         [
-          importImg('projects/7glyphs-mobile-third.jpg'),
-          importImg('projects/7glyphs-mobile-third@2x.jpg'),
+          publicImg('projects/7glyphs-mobile-third.jpg'),
+          publicImg('projects/7glyphs-mobile-third@2x.jpg'),
         ],
       ],
     },
@@ -2561,22 +2561,22 @@ const projects: IProject[] = [
     ],
     images: {
       logo: [
-        importImg('logos/msp_sm.png'),
-        importImg('logos/msp.png'),
-        importImg('logos/msp@2x.png'),
+        publicImg('logos/msp_sm.png'),
+        publicImg('logos/msp.png'),
+        publicImg('logos/msp@2x.png'),
       ],
       desktop: [
         [
-          importImg('projects/msp@2x.jpg'),
-          importImg('projects/msp-desktop-first@2x.jpg'),
+          publicImg('projects/msp@2x.jpg'),
+          publicImg('projects/msp-desktop-first@2x.jpg'),
         ],
         [
-          importImg('projects/msp-desktop-second.jpg'),
-          importImg('projects/msp-desktop-second@2x.jpg'),
+          publicImg('projects/msp-desktop-second.jpg'),
+          publicImg('projects/msp-desktop-second@2x.jpg'),
         ],
         [
-          importImg('projects/msp-desktop-third.jpg'),
-          importImg('projects/msp-desktop-third@2x.jpg'),
+          publicImg('projects/msp-desktop-third.jpg'),
+          publicImg('projects/msp-desktop-third@2x.jpg'),
         ],
       ],
     },
