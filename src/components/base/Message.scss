@@ -4,6 +4,10 @@
     color: v.$color_text;
     border: 1px solid v.$color_text;
     padding: 6px 72px 6px 16px;
+    min-width: 330px;
+    @include m.xs {
+      min-width: auto;
+    }
   }
 
   .MuiSnackbarContent-message {

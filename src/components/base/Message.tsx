@@ -1,14 +1,21 @@
 import {useState, useEffect} from 'react'
 import {Trans} from 'react-i18next'
-import {Snackbar, SnackbarOrigin, IconButton} from '@mui/material'
+import {
+  Snackbar,
+  SnackbarOrigin,
+  IconButton,
+  useMediaQuery,
+} from '@mui/material'
 import {CloseRounded as CloseIcon} from '@mui/icons-material'
 
 import './Message.scss'
 import santaImg from '#assets/img/pictures/santa.png'
+import {QUERY_BREAKPOINT} from '#utils/constants'
 import {DURATION} from '#styles/theme'
 
 export default function Message() {
   const [open, setOpen] = useState<boolean>(false)
+  const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   useEffect(() => {
     if (sessionStorage.messageChecked) return
@@ -18,6 +25,11 @@ export default function Message() {
   const handleClose = () => {
     sessionStorage.setItem('messageChecked', JSON.stringify(true))
     setOpen(false)
+  }
+
+  const anchorOrigin: SnackbarOrigin = {
+    vertical: 'top',
+    horizontal: md ? 'center' : 'right',
   }
 
   return (
@@ -42,11 +54,6 @@ export default function Message() {
       }
     />
   )
-}
-
-const anchorOrigin: SnackbarOrigin = {
-  vertical: 'top',
-  horizontal: 'right',
 }
 
 const transComponents = [<strong />]
