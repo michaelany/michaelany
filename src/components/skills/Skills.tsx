@@ -14,6 +14,7 @@ import {
   LoopRounded as LoopIcon,
   PaletteRounded as PaletteIcon,
   ExtensionRounded as ExtensionIcon,
+  DnsRounded as DnsIcon,
   MovieRounded as MovieIcon,
 } from '@mui/icons-material'
 
@@ -37,7 +38,7 @@ export default function Skills() {
       tKey: 'performance',
       Icon: SpeedIcon,
       textValues: [
-        'ES6-ES13',
+        'ES6-ES14',
         `${TECHNOLOGY_TITLE.ts} 5`,
         `${TECHNOLOGY_TITLE.react} Hooks`,
         'CSS Grid',
@@ -55,6 +56,10 @@ export default function Skills() {
     {
       tKey: 'patterns',
       Icon: ExtensionIcon,
+    },
+    {
+      tKey: 'requests',
+      Icon: DnsIcon,
     },
     {
       tKey: 'modules',

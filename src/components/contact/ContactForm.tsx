@@ -89,8 +89,6 @@ export default function ContactForm() {
       setSuccessDialogOpen(true)
       changeValues(initialValues)
     } catch (error: any) {
-      console.log('error', JSON.stringify(error))
-
       setSnackbar({open: true, message: error?.text || t('other.error')})
     } finally {
       setLoading(false)

@@ -82,6 +82,7 @@ const countriesVisited = [
   'Cyprus',
   'Latvia',
   'Montenegro',
+  'Serbia',
   'Albania',
   'Bosnia & Herzegovina',
 ]

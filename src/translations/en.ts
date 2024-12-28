@@ -67,7 +67,7 @@ const EN = {
       },
       position: {
         label: 'Lead frontend developer',
-        text: `I develop projects from scratch, write business logic, create layout, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
+        text: `I develop projects from scratch, write business logic, create layout, test, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       vlogger: {
         label: '{{0}} content creator',
@@ -99,7 +99,7 @@ const EN = {
         text: 'Graduated from the "Moscow State University of Instrument Engineering and Computer Science" and "Russian State University of Cinematography". Studying in the latter boosted my soft skills well',
       },
       actor: {
-        label: 'Former professional actor',
+        label: 'Former actor',
         text: 'I used to act in movies, TV series and commercials, hosted events, worked as an animator and performed in educational theater. But then I came to my senses and switched to programming',
       },
       sport: {
@@ -122,7 +122,7 @@ const EN = {
     subtitle: 'Avatar and social',
   },
   skills: {
-    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I create <5>{{4}} videos</5> in {{5}}',
+    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I edit <5>{{4}} videos</5> in {{5}}',
     feature: {
       interface: {
         label: 'Creating reliable & well-functioning interfaces',
@@ -142,7 +142,11 @@ const EN = {
       },
       patterns: {
         label: 'Using a lot of patterns & techniques',
-        text: 'I use memoization, virtualization, lazy loading, destructuring, decorator, currying, delegation, recursion, module, factory, observer, proxy, mixin, throttling, debounce..',
+        text: 'Memoization, virtualization, lazy loading, optimistic update, hydration, destructuring, decorator, currying, delegation, recursion, module, observer, proxy, mixin, throttling, debounce..',
+      },
+      requests: {
+        label: 'Handling server requests',
+        text: 'Deduplication, interceptor, caching, prefetching, aborting, retrying, authentication, mutation, pagination, infinite scrolling, progress tracking, offline, parallel and dependent queries..',
       },
       modules: {
         label: 'Building a modular & optimal project architecture',
@@ -162,15 +166,15 @@ const EN = {
       },
       test: {
         label: 'Optimizing, testing & refactoring',
-        text: 'I check project perfomance in various browsers and devices. I measure and speed up the loading of resources. Minifing and optimizing files, images. Refactoring code',
+        text: 'I check project perfomance in various browsers and devices. I measure and speed up the loading of resources. Minifing and optimizing files, images. Writing unit, functional, and end-to-end tests. Refactoring code',
       },
       tasks: {
         label: 'Planing & decomposing tasks',
-        text: 'I plan the backlog, group, decompose and evaluate tasks. I use {{0}} and {{1}} methodologies. Using task managers',
+        text: 'I plan the backlog, group, decompose and evaluate tasks. I use {{0}} and {{1}} methodologies. Using task managers and my own planning system',
       },
       mentor: {
         label: 'Making code reviews & teaching',
-        text: "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. Have experience in recruitment",
+        text: "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. I have experience in recruitment",
       },
       vlog: {
         label: 'Creating {{0}} videos',
@@ -208,6 +212,7 @@ const EN = {
         restSocket: 'Working with {{0}} and {{1}}',
         refactor: 'Refactoring and maintaining the code',
         scratch: 'Developing projects from scratch',
+        tests: 'Writing unit, functional, and end-to-end tests',
         support: 'Supporting projects',
         tasks: 'Decomposing and evaluating tasks',
         tasksTeam: 'Planning, decomposing and evaluating team tasks',
