@@ -43,7 +43,7 @@ export const COMPANY: ICompanyData = {
     title: 'GO Rentals',
     name: 'goRentals',
     images: [
-      publicImg('companies/gorentals'),
+      publicImg('companies/gorentals.png'),
       publicImg('companies/gorentals@2x.png'),
     ],
     color: 'red',
