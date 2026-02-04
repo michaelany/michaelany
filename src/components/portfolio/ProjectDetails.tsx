@@ -1,6 +1,5 @@
 import {useTranslation} from 'react-i18next'
 import {Link} from '@mui/material'
-
 import {
   CodeRounded as CodeIcon,
   EventRounded as EventIcon,
@@ -16,11 +15,10 @@ import {
 import './ProjectDetails.scss'
 import {Features, Company, Section} from '#components/common'
 import {tProjectTypes} from '#utils/helpers'
-import {IFeature} from '#utils/types'
 import {COMPANY} from '#data/common'
 import {BLANK_LINK_PROPS} from '#utils/constants'
-import {IProject} from '#utils/types'
 import ProjectActions from './ProjectActions'
+import type {IFeature, IProject} from '#utils/types'
 
 interface IProjectDetailsProps {
   project: IProject

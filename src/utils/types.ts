@@ -1,5 +1,5 @@
-import {ReactNode, FunctionComponent, SVGProps} from 'react'
 import {SvgIcon} from '@mui/material'
+import type {ReactNode, FunctionComponent, SVGProps} from 'react'
 
 export type TLng = 'ru' | 'eng'
 

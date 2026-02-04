@@ -1,5 +1,5 @@
-import {JSX} from 'react'
 import {Grid} from '@mui/material'
+import type {JSX} from 'react'
 
 import './Sections.scss'
 

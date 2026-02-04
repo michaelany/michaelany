@@ -1,4 +1,4 @@
-import {ThemeOptions, Shadows} from '@mui/material'
+import type {ThemeOptions, Shadows} from '@mui/material'
 
 const darkAlpha = 0.7
 

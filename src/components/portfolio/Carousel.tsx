@@ -1,9 +1,9 @@
-import {Dispatch, SetStateAction} from 'react'
-import {TFunction} from 'i18next'
 import SwiperCore from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Autoplay, Controller} from 'swiper/modules'
-import {SwiperModule, SwiperOptions} from 'swiper/types'
+import type {Dispatch, SetStateAction} from 'react'
+import type {TFunction} from 'i18next'
+import type {SwiperModule, SwiperOptions} from 'swiper/types'
 
 import './Carousel.scss'
 import PhoneSvg from '#assets/img/shapes/phone.svg?react'

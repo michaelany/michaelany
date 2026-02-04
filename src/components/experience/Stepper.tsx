@@ -1,4 +1,4 @@
-import {useState, RefObject} from 'react'
+import {useState, type RefObject} from 'react'
 import {useTranslation, Trans} from 'react-i18next'
 import {
   Stepper as MuiStepper,
@@ -17,8 +17,8 @@ import {
 import './Stepper.scss'
 import {scrollToView, tPeriodPart} from '#utils/helpers'
 import {CAREER_START_PARTS} from '#utils/constants'
-import {IPeriod} from '#utils/types'
 import {COMPANY, CONTACT_LINK} from '#data/common'
+import type {IPeriod} from '#utils/types'
 
 interface IStepperProps {
   sectionRef: RefObject<HTMLElement | null>

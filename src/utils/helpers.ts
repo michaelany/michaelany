@@ -1,8 +1,8 @@
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
-import {TFunction} from 'i18next'
+import type {TFunction} from 'i18next'
 
 import {DURATION} from '#styles/theme'
-import {TProjectType, IPeriodPart, IWidth} from './types'
+import type {TProjectType, IPeriodPart, IWidth} from '#utils/types'
 
 export const publicImg = (path: string): string => `/assets/${path}`
 

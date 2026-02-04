@@ -1,6 +1,5 @@
 import {Fragment, useState} from 'react'
 import {Link} from 'react-router-dom'
-import {TFunction} from 'i18next'
 import cn from 'clsx'
 import {
   Chip,
@@ -17,6 +16,7 @@ import {
   WidgetsRounded as WidgetsIcon,
   BuildRounded as BuildIcon,
 } from '@mui/icons-material'
+import type {TFunction} from 'i18next'
 
 import './Job.scss'
 import {Tooltip, Company} from '#components/common'
@@ -26,7 +26,13 @@ import PROJECTS, {
   PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT,
 } from '#data/projects'
 import {ROUTE} from '#utils/constants'
-import {IJob, IJobFeature, ITechnology, TKey, TKeyObject} from '#utils/types'
+import type {
+  IJob,
+  IJobFeature,
+  ITechnology,
+  TKey,
+  TKeyObject,
+} from '#utils/types'
 
 interface IJobProps {
   job: IJob

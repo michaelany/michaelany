@@ -1,5 +1,5 @@
-import {AllHTMLAttributes, JSX} from 'react'
 import ReactTilt from 'react-parallax-tilt'
+import type {AllHTMLAttributes, JSX} from 'react'
 
 import {DETECT} from '#utils/constants'
 import {DURATION} from '#styles/theme'

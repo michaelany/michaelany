@@ -1,14 +1,14 @@
 import {useState} from 'react'
 import {useTranslation} from 'react-i18next'
-import {TFunction} from 'i18next'
 import SwiperCore from 'swiper'
 import {useMediaQuery} from '@mui/material'
+import type {TFunction} from 'i18next'
 
 import './ProjectAssets.scss'
 import {Animate, Section} from '#components/common'
 import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
-import {IProject, IProjectImages} from '#utils/types'
 import Carousel from './Carousel'
+import type {IProject, IProjectImages} from '#utils/types'
 
 interface IProjectAssetsProps {
   project: IProject

@@ -1,4 +1,10 @@
-import {useState, useRef, ChangeEvent, SyntheticEvent, RefObject} from 'react'
+import {
+  useState,
+  useRef,
+  type ChangeEvent,
+  type SyntheticEvent,
+  type RefObject,
+} from 'react'
 import {useTranslation} from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 import emailjs from 'emailjs-com'
@@ -7,10 +13,10 @@ import {
   Button,
   Grid,
   InputAdornment,
-  InputProps,
   Fade,
   CircularProgress,
   Snackbar,
+  type InputProps,
 } from '@mui/material'
 import {
   PersonRounded as PersonIcon,

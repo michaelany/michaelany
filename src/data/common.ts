@@ -9,7 +9,7 @@ import VKIcon from '#assets/icons/vk.svg?react'
 import DuolingoIcon from '#assets/icons/duolingo.svg?react'
 import FacebookIcon from '#assets/icons/facebook.svg?react'
 import TelegramIcon from '#assets/icons/telegram.svg?react'
-import {
+import type {
   ISocialLink,
   ICompany,
   ITechnologyGroup,

@@ -8,9 +8,9 @@ import './Info.scss'
 import {Section} from '#components/common'
 import {scrollToView} from '#utils/helpers'
 import {ROOT} from '#utils/constants'
-import {IFeature} from '#utils/types'
 import Features from './Features'
 import Animate from './Animate'
+import type {IFeature} from '#utils/types'
 
 interface IInfoProps {
   type: string

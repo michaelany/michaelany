@@ -5,7 +5,7 @@ import {
   createTheme,
   StyledEngineProvider,
   ThemeProvider,
-  Theme,
+  type Theme,
 } from '@mui/material'
 
 import '#styles/index.scss'

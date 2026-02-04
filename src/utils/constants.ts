@@ -3,7 +3,7 @@ import {differenceInYears, format} from 'date-fns'
 import {BREAKPOINT} from '#styles/theme'
 import PROJECTS from '#data/projects'
 import VIDEOS from '#data/videos'
-import {TRoute, TColor, TProjectFilter, TEffect} from './types'
+import type {TRoute, TColor, TProjectFilter, TEffect} from '#utils/types'
 
 interface IDetect {
   mobile: boolean

@@ -1,5 +1,5 @@
-import {JSX} from 'react'
 import cn from 'clsx'
+import type {JSX} from 'react'
 
 import './Panel.scss'
 import DesktopSvg from '#assets/img/shapes/desktop.svg?react'

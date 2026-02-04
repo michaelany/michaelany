@@ -1,11 +1,11 @@
-import {MouseEvent} from 'react'
 import cn from 'clsx'
 import {ButtonBase} from '@mui/material'
+import type {MouseEvent} from 'react'
 
 import './Company.scss'
 import {BLANK_LINK_PROPS} from '#utils/constants'
-import {ICompany} from '#utils/types'
 import Tooltip from './Tooltip'
+import type {ICompany} from '#utils/types'
 
 interface ICompanyProps extends ICompany {
   animated?: boolean

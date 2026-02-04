@@ -1,6 +1,6 @@
 import {useState, useRef} from 'react'
 import {Link} from 'react-router-dom'
-import {Link as MuiLink, ButtonBaseActions} from '@mui/material'
+import {Link as MuiLink, type ButtonBaseActions} from '@mui/material'
 import {
   PsychologyRounded as PsychologyIcon,
   SpeedRounded as SpeedIcon,
@@ -21,9 +21,9 @@ import {
 import {Sections, Info} from '#components/common'
 import {scrollToView} from '#utils/helpers'
 import {BLANK_LINK_PROPS, PROJECT_FILTERS, ROUTE} from '#utils/constants'
-import {IFeature, ITechnologyGroup, TKey} from '#utils/types'
 import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS, CONTACT_LINK} from '#data/common'
 import Technologies from './Technologies'
+import type {IFeature, ITechnologyGroup, TKey} from '#utils/types'
 
 export default function Skills() {
   const [expanded, setExpanded] = useState<TKey[]>(initialExpanded)

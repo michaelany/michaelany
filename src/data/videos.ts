@@ -1,4 +1,4 @@
-import {IVideo} from '#utils/types'
+import type {IVideo} from '#utils/types'
 
 const VIDEOS: IVideo[] = [
   {

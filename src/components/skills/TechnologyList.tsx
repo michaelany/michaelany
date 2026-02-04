@@ -1,10 +1,10 @@
-import {RefObject} from 'react'
-import {Grid, ButtonBase, ButtonBaseActions} from '@mui/material'
+import {Grid, ButtonBase, type ButtonBaseActions} from '@mui/material'
+import type {RefObject} from 'react'
 
 import './TechnologyList.scss'
 import {Tooltip} from '#components/common'
 import {BLANK_LINK_PROPS} from '#utils/constants'
-import {ITechnology} from '#utils/types'
+import type {ITechnology} from '#utils/types'
 
 interface ITechnologyListProps {
   technologies: ITechnology[]

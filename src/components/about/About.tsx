@@ -28,8 +28,8 @@ import {
   ROUTE,
   BLANK_LINK_PROPS,
 } from '#utils/constants'
-import {IFeature} from '#utils/types'
 import Social from './Social'
+import type {IFeature} from '#utils/types'
 
 export default function About() {
   return (

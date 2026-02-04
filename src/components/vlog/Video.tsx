@@ -5,8 +5,8 @@ import './Video.scss'
 import {Panel, Animate, Section} from '#components/common'
 import VIDEOS from '#data/videos'
 import {ROUTE} from '#utils/constants'
-import {TLng} from '#utils/types'
 import VideoDate from './VideoDate'
+import type {TLng} from '#utils/types'
 
 export default function Video() {
   const params = useParams()
@@ -28,7 +28,6 @@ export default function Video() {
               className="Video-Frame"
               src={video.src}
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
             />
           </Panel>

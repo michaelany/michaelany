@@ -1,10 +1,10 @@
-import {FunctionComponent, SVGProps} from 'react'
 import {useTranslation} from 'react-i18next'
 import {Link} from '@mui/material'
 import {
   CopyrightRounded as CopyrightIcon,
   FavoriteRounded as FavoriteIcon,
 } from '@mui/icons-material'
+import type {FunctionComponent, SVGProps} from 'react'
 
 import './Copyright.scss'
 import ReactIcon from '#assets/icons/react.svg?react'

@@ -1,12 +1,12 @@
-import {useState, ChangeEvent} from 'react'
+import {useState, type ChangeEvent} from 'react'
 import {useLocation} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
 
 import {QUERY_BREAKPOINT, PROJECT_FILTERS} from '#utils/constants'
-import {IProject, TProjectType, TProjectFilter, IWidth} from '#utils/types'
 import PROJECTS from '#data/projects'
 import ProjectLink from './ProjectLink'
+import type {IProject, TProjectType, TProjectFilter, IWidth} from '#utils/types'
 
 export default function Projects() {
   const location = useLocation()

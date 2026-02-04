@@ -10,8 +10,8 @@ import meExcitedImg from '#assets/img/pictures/me-excited.jpg'
 import meExcited2xImg from '#assets/img/pictures/me-excited@2x.jpg'
 import {Section, Animate, SocialLinks, Tilt} from '#components/common'
 import {ROUTE, QUERY_BREAKPOINT, DETECT} from '#utils/constants'
-import {ISocialLink} from '#utils/types'
 import {MY_NAME, CONTACT_LINK} from '#data/common'
+import type {ISocialLink} from '#utils/types'
 
 export default function Social() {
   const {t} = useTranslation()

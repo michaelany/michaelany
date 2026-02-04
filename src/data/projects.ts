@@ -1,6 +1,6 @@
 import {publicImg} from '#utils/helpers'
-import {IProject} from '#utils/types'
-import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from './common'
+import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from '#data/common'
+import type {IProject} from '#utils/types'
 
 const commonLogo = {
   ally: [

@@ -3,10 +3,10 @@ import {Link} from '@mui/material'
 
 import {Sections, SocialLinks, Section} from '#components/common'
 import {BLANK_LINK_PROPS, ROUTE} from '#utils/constants'
-import {ISocialLink} from '#utils/types'
 import {CONTACT_LINK} from '#data/common'
 import ContactForm from './ContactForm'
 import Map from './Map'
+import type {ISocialLink} from '#utils/types'
 
 export default function Contact() {
   const {t} = useTranslation()

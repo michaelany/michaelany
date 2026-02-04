@@ -1,4 +1,4 @@
-import {COLOR} from './theme'
+import {COLOR} from '#styles/theme'
 
 const STYLES = [
   {

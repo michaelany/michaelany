@@ -1,5 +1,4 @@
 import {useTranslation} from 'react-i18next'
-import {TFunction} from 'i18next'
 import {NavLink} from 'react-router-dom'
 import {Button, SvgIcon} from '@mui/material'
 import {
@@ -11,11 +10,12 @@ import {
   CameraAltRounded as CameraAltIcon,
   MailRounded as MailIcon,
 } from '@mui/icons-material'
+import type {TFunction} from 'i18next'
 
 import './Navigation.scss'
 import {ROUTE} from '#utils/constants'
-import {TRoute} from '#utils/types'
 import Tooltip from './Tooltip'
+import type {TRoute} from '#utils/types'
 
 interface INavigationProps {
   onClose?: () => void

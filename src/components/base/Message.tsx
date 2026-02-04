@@ -2,9 +2,9 @@ import {useState, useEffect} from 'react'
 import {Trans} from 'react-i18next'
 import {
   Snackbar,
-  SnackbarOrigin,
   IconButton,
   useMediaQuery,
+  type SnackbarOrigin,
 } from '@mui/material'
 import {CloseRounded as CloseIcon} from '@mui/icons-material'
 

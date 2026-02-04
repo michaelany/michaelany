@@ -10,7 +10,6 @@ import {
 
 import './Work.scss'
 import {Animate, Section} from '#components/common'
-import {IJob} from '#utils/types'
 import {
   YEARS_OF_EXPERIENCE,
   CAREER_START_PARTS,
@@ -19,6 +18,7 @@ import {
 } from '#utils/constants'
 import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '#data/common'
 import Job from './Job'
+import type {IJob} from '#utils/types'
 
 export default function Work() {
   const {t} = useTranslation()

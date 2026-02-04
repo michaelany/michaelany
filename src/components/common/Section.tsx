@@ -1,11 +1,11 @@
-import {ReactNode, RefObject} from 'react'
 import cn from 'clsx'
+import type {ReactNode, RefObject} from 'react'
 
 import './Section.scss'
 import Snowfall from '#components/base/Snowfall'
 import {Pagination, Copyright} from '#components/common'
 import {IS_NEW_YEAR_MODE} from '#utils/constants'
-import {TRoute} from '#utils/types'
+import type {TRoute} from '#utils/types'
 
 interface ISectionProps {
   children: ReactNode

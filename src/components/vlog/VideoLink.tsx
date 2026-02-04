@@ -1,14 +1,14 @@
 import {useMemo} from 'react'
 import {Link} from 'react-router-dom'
-import {TFunction} from 'i18next'
 import {Grid, ButtonBase} from '@mui/material'
+import type {TFunction} from 'i18next'
 
 import './VideoLink.scss'
 import {Animate, Tilt, Panel} from '#components/common'
 import {getGridAnimationDelay} from '#utils/helpers'
 import {DETECT, RANDOM_EFFECTS, ROUTE} from '#utils/constants'
-import {IWidth, TLng, IVideo} from '#utils/types'
 import VideoDate from './VideoDate'
+import type {IWidth, TLng, IVideo} from '#utils/types'
 
 interface IVideoLinkProps {
   t: TFunction

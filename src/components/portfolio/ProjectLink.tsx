@@ -1,13 +1,13 @@
 import {useMemo} from 'react'
 import {Link} from 'react-router-dom'
-import {TFunction} from 'i18next'
 import {Grid, ButtonBase} from '@mui/material'
+import type {TFunction} from 'i18next'
 
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '#components/common'
 import {getGridAnimationDelay, tProjectTypes} from '#utils/helpers'
 import {DETECT, ROUTE, RANDOM_EFFECTS} from '#utils/constants'
-import {IWidth, IProject} from '#utils/types'
+import type {IWidth, IProject} from '#utils/types'
 
 interface IProjectLinkProps {
   t: TFunction

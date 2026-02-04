@@ -1,11 +1,11 @@
-import {useState, ChangeEvent} from 'react'
+import {useState, type ChangeEvent} from 'react'
 import {useTranslation} from 'react-i18next'
 import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
 
 import VIDEOS from '#data/videos'
 import {QUERY_BREAKPOINT} from '#utils/constants'
-import {IWidth, TLng, IVideo} from '#utils/types'
 import VideoLink from './VideoLink'
+import type {IWidth, TLng, IVideo} from '#utils/types'
 
 type TSort = 'new' | 'old'
 

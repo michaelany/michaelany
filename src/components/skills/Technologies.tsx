@@ -1,12 +1,12 @@
-import {Dispatch, SetStateAction, RefObject} from 'react'
 import {useTranslation} from 'react-i18next'
+import type {Dispatch, SetStateAction, RefObject} from 'react'
 
 import {
   useMediaQuery,
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  ButtonBaseActions,
+  type ButtonBaseActions,
 } from '@mui/material'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
@@ -14,8 +14,8 @@ import './Technologies.scss'
 import {Animate, Section} from '#components/common'
 import {TECHNOLOGY_GROUPS} from '#data/common'
 import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
-import {TKey} from '#utils/types'
 import TechnologyList from './TechnologyList'
+import type {TKey} from '#utils/types'
 
 interface ITechnologiesProps {
   expanded: TKey[]

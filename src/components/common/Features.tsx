@@ -1,13 +1,13 @@
-import {memo, JSX} from 'react'
+import {memo, type JSX} from 'react'
 import {Trans} from 'react-i18next'
-import {TFunction} from 'i18next'
 import {useMediaQuery, Collapse, Grid} from '@mui/material'
+import type {TFunction} from 'i18next'
 
 import './Features.scss'
 import {Animate} from '#components/common'
 import {QUERY_BREAKPOINT} from '#utils/constants'
-import {IFeature, TEffect} from '#utils/types'
 import {DURATION} from '#styles/theme'
+import type {IFeature, TEffect} from '#utils/types'
 
 interface IFeaturesProps {
   items: IFeature[]

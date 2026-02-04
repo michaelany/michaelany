@@ -1,10 +1,10 @@
-import {useState, ReactNode, AllHTMLAttributes} from 'react'
+import {useState, type ReactNode, type AllHTMLAttributes} from 'react'
 import cn from 'clsx'
 import {Waypoint} from 'react-waypoint'
 
 import './Animate.scss'
-import {TEffect} from '#utils/types'
 import {DURATION, EASING} from '#styles/theme'
+import type {TEffect} from '#utils/types'
 
 interface IAnimateProps extends AllHTMLAttributes<HTMLElement> {
   children: ReactNode

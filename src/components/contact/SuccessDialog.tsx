@@ -1,8 +1,8 @@
 import {forwardRef} from 'react'
-import {TFunction} from 'i18next'
 import {Dialog, Button, Grow} from '@mui/material'
-import {TransitionProps} from '@mui/material/transitions'
 import {ThumbUpRounded as ThumbUpIcon} from '@mui/icons-material'
+import type {TFunction} from 'i18next'
+import type {TransitionProps} from '@mui/material/transitions'
 
 import './SuccessDialog.scss'
 import messageSentImg from '#assets/img/pictures/message-sent.svg'

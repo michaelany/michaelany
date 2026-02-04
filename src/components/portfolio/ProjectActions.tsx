@@ -1,7 +1,7 @@
-import {ReactNode} from 'react'
 import {useTranslation} from 'react-i18next'
 import {Button} from '@mui/material'
 import {VisibilityRounded as VisibilityIcon} from '@mui/icons-material'
+import type {ReactNode} from 'react'
 
 import './ProjectActions.scss'
 import SevenGlyphsIcon from '#assets/icons/7glyphs.svg?react'
@@ -10,7 +10,7 @@ import AppleIcon from '#assets/icons/apple.svg?react'
 import GooglePlayIcon from '#assets/icons/googleplay.svg?react'
 import {Animate} from '#components/common'
 import {BLANK_LINK_PROPS} from '#utils/constants'
-import {TCompanyName} from '#utils/types'
+import type {TCompanyName} from '#utils/types'
 
 interface IProjectActionsProps {
   url?: string

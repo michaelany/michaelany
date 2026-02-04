@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'
 import cn from 'clsx'
-
 import {useTranslation} from 'react-i18next'
 import {Grid, Button} from '@mui/material'
 import {
@@ -10,7 +9,7 @@ import {
 
 import './Pagination.scss'
 import {ROUTE} from '#utils/constants'
-import {TRoute} from '#utils/types'
+import type {TRoute} from '#utils/types'
 
 interface IPaginationProps {
   halfWidth?: boolean

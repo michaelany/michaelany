@@ -3,7 +3,7 @@ import cn from 'clsx'
 import {EventRounded as EventIcon} from '@mui/icons-material'
 
 import './VideoDate.scss'
-import {TLng} from '#utils/types'
+import type {TLng} from '#utils/types'
 
 interface IVideoDateProps {
   className?: string
