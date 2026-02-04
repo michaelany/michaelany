@@ -21,7 +21,7 @@ jobs:
           pnpm i --frozen-lockfile --silent 
           pnpm build
         env:
-          VITE_NEW_YEAR_MODE: true
+          VITE_NEW_YEAR_MODE: false
           VITE_EMAIL_JS_SERVICE_ID: ${{ secrets.EMAIL_JS_SERVICE_ID }}
           VITE_EMAIL_JS_TEMPLATE_ID: ${{ secrets.EMAIL_JS_TEMPLATE_ID }}
           VITE_EMAIL_JS_USER_ID: ${{ secrets.EMAIL_JS_USER_ID }}
