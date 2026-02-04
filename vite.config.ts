@@ -21,7 +21,7 @@ export default defineConfig({
         short_name: 'Michael Any',
         description:
           'Personal website of Michael Any, a frontend developer & lead software engineer',
-        start_url: '.',
+        start_url: '/',
         display: 'standalone',
         orientation: 'portrait',
         theme_color: '#ffffff',
@@ -42,7 +42,7 @@ export default defineConfig({
           {
             src: 'assets/preview.jpg',
             sizes: '1200x630',
-            type: 'image/jpg',
+            type: 'image/jpeg',
           },
         ],
       },
@@ -60,7 +60,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler',
         additionalData: `
           @use 'styles/variables' as v;
           @use 'styles/mixins' as m;
