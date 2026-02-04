@@ -1,6 +1,11 @@
 @use 'styles/variables' as v;
 @use 'styles/mixins' as m;
 
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 html {
   font-size: v.$font-size_base;
   @include m.lg {
@@ -12,11 +17,6 @@ html {
   @include m.sm {
     font-size: v.$font-size_smaller;
   }
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
 }
 
 p,
