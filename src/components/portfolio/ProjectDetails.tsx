@@ -37,7 +37,7 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
             : `${feature.text ? `${feature.text}, ` : ''}${
                 feature.tKeys
                   ? feature.tKeys
-                      .map((tKey) => t(`portfolio.feature.${tKey}`))
+                      .map(tKey => t(`portfolio.feature.${tKey}`))
                       .join(', ')
                   : t(`portfolio.feature.${feature.tKey}`, {
                       replace: feature.values,

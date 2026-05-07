@@ -38,7 +38,7 @@ export default function Technologies({
     () =>
       setExpanded((expanded: TKey[]) =>
         expanded.includes(tKey)
-          ? expanded.filter((item) => item !== tKey)
+          ? expanded.filter(item => item !== tKey)
           : [...expanded, tKey]
       )
 

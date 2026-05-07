@@ -10,8 +10,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -37,18 +39,20 @@
     "swiper": "11.1.15"
   },
   "devDependencies": {
+    "@eslint/js": "10.0.1",
     "@types/node": "22.10.2",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "@types/react-google-recaptcha": "2.1.9",
-    "@typescript-eslint/eslint-plugin": "8.18.1",
-    "@typescript-eslint/parser": "8.18.1",
+    "@typescript-eslint/eslint-plugin": "8.59.2",
+    "@typescript-eslint/parser": "8.59.2",
     "@vitejs/plugin-react": "4.3.4",
-    "eslint": "9.17.0",
-    "eslint-plugin-react-hooks": "5.1.0",
-    "eslint-plugin-react-refresh": "0.4.16",
+    "eslint": "10.3.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.2",
     "gh-pages": "6.3.0",
-    "prettier": "3.8.1",
+    "globals": "17.6.0",
+    "prettier": "3.8.3",
     "sass-embedded": "1.97.3",
     "typescript": "5.9.3",
     "vite": "7.3.1",

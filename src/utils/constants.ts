@@ -82,7 +82,7 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.skills]: 'blue',
   [ROUTE.experience]: 'violet',
   ...Object.fromEntries(
-    PROJECTS.map((project) => [`/${project.name}`, project.color])
+    PROJECTS.map(project => [`/${project.name}`, project.color])
   ),
 }
 
@@ -90,7 +90,7 @@ export const PATH_BACKGROUND_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.portfolio]: 'blue',
   [ROUTE.vlog]: 'red',
   [ROUTE.contact]: 'green',
-  ...Object.fromEntries(VIDEOS.map((video) => [`/${video.name}`, video.color])),
+  ...Object.fromEntries(VIDEOS.map(video => [`/${video.name}`, video.color])),
 }
 
 export const QUERY_BREAKPOINT: IQueryBreakpoint = {

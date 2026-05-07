@@ -51,7 +51,7 @@ const MacScreen = () => {
 
   useEffect(() => {
     const handleAutoShowSet = () => {
-      setShow((show) => (show < images.length - 1 ? show + 1 : 0))
+      setShow(show => (show < images.length - 1 ? show + 1 : 0))
       timer.current = setTimeout(handleAutoShowSet, DURATION.longest)
     }
     timer.current = setTimeout(handleAutoShowSet, DURATION.longest)

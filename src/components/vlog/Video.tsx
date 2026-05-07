@@ -12,7 +12,7 @@ export default function Video() {
   const params = useParams()
   const {t, i18n} = useTranslation()
 
-  const video = VIDEOS.find((video) => video.name === params.video)
+  const video = VIDEOS.find(video => video.name === params.video)
 
   if (!video) return <Navigate to={ROUTE.vlog} replace={true} />
 

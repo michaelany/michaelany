@@ -42,7 +42,7 @@ export default function Projects() {
   return (
     <>
       <Tabs className="Tabs" value={filter} onChange={handleChange}>
-        {PROJECT_FILTERS.map((filter) => (
+        {PROJECT_FILTERS.map(filter => (
           <Tab
             key={filter}
             value={filter}

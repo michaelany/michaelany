@@ -28,7 +28,8 @@ export default function Animate({
   const [reached, setReached] = useState<boolean>(false)
 
   const onWaypointEnter = () => {
-    !reached && setReached(true)
+    if (reached) return
+    setReached(true)
   }
 
   return (
@@ -39,9 +40,7 @@ export default function Animate({
         style={
           reached
             ? {
-                animation: `${getEffectAnimation(effect)} ${
-                  DURATION[duration]
-                }ms ${EASING[easing]} ${delay}ms both`,
+                animation: `${getEffectAnimation(effect)} ${DURATION[duration]}ms ${EASING[easing]} ${delay}ms both`,
               }
             : undefined
         }

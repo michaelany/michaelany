@@ -69,7 +69,7 @@ export default function ContactForm() {
       }
     })
     if (Object.values(newErrors).includes(true)) {
-      Object.keys(newErrors).some((key) => {
+      Object.keys(newErrors).some(key => {
         if (newErrors[key]) {
           const inputElement = fieldElements[key].current as HTMLInputElement
           inputElement.focus()
@@ -124,7 +124,7 @@ export default function ContactForm() {
   }
 
   const handleSnackbarClose = () => {
-    setSnackbar((state) => ({...state, open: false}))
+    setSnackbar(state => ({...state, open: false}))
   }
 
   return (

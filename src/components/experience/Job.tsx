@@ -173,7 +173,7 @@ const Features = ({t, features}: IFeaturesProps) => {
 
 const Projects = ({t, companyName}: IProjectsProps) => {
   const projects = PROJECTS.filter(
-    (project) => project.companyName === companyName
+    project => project.companyName === companyName
   )
 
   const privateAndOteherProjectsCount =
@@ -186,7 +186,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
         <span className="Job-SubTitleText">{t('experience.projects')}</span>
       </h4>
       <ul className="Job-Features">
-        {projects.map((project) => (
+        {projects.map(project => (
           <li key={project.name}>
             <Chip
               clickable
@@ -232,7 +232,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
 
 const Tools = ({t, tools}: IToolsProps) => {
   const technologies: ITechnology[] = tools.map(
-    (tool) => TECHNOLOGY.find((item) => item.name === tool) as ITechnology
+    tool => TECHNOLOGY.find(item => item.name === tool) as ITechnology
   )
 
   return (
@@ -242,7 +242,7 @@ const Tools = ({t, tools}: IToolsProps) => {
         <span className="Job-SubTitleText">{t('experience.tools')}</span>
       </h4>
       <ul className="Job-Features">
-        {technologies.map((technology) => (
+        {technologies.map(technology => (
           <Chip
             key={technology.name}
             component="li"

@@ -2595,11 +2595,10 @@ export const PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT = {
   goRentals: 3,
   sevenGlyphs:
     2 +
-    PRIVATE_PROJECTS.filter((project) => project.companyName === 'sevenGlyphs')
+    PRIVATE_PROJECTS.filter(project => project.companyName === 'sevenGlyphs')
       .length,
   t1:
-    2 +
-    PRIVATE_PROJECTS.filter((project) => project.companyName === 't1').length,
+    2 + PRIVATE_PROJECTS.filter(project => project.companyName === 't1').length,
 }
 
 export const PROJECTS_COUNT: number =

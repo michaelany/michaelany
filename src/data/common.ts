@@ -1209,5 +1209,5 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
 ]
 
 export const TECHNOLOGY: ITechnology[] = TECHNOLOGY_GROUPS.map(
-  (group) => group.technologies
+  group => group.technologies
 ).flat()

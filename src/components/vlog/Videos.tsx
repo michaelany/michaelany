@@ -28,7 +28,7 @@ export default function Videos() {
   return (
     <>
       <Tabs className="Tabs" value={sort} onChange={handleChange}>
-        {sorts.map((type) => (
+        {sorts.map(type => (
           <Tab key={type} value={type} label={t(`vlog.sort.${type}`)} />
         ))}
       </Tabs>
