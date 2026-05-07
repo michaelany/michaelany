@@ -15,7 +15,7 @@ export default function Contact() {
     <Sections
       contact
       firstSection={
-        <Section prevTo={ROUTE.vlog}>
+        <Section prevTo={ROUTE.home}>
           <div>
             <h1 className="Title">{t('title.contact')}</h1>
             <p className="MainText MainText_dark">
