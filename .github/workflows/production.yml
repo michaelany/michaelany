@@ -12,10 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v2
-      - name: Build the project
+      - name: Build and test the project
         run: |
           bun install --frozen-lockfile
+          bunx playwright install --with-deps chromium
           bun run build
+          bun run e2e
         env:
           VITE_NEW_YEAR_MODE: false
           VITE_EMAIL_JS_SERVICE_ID: ${{ secrets.EMAIL_JS_SERVICE_ID }}
