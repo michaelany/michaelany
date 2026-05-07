@@ -17,7 +17,7 @@ jobs:
           bun install --frozen-lockfile
           bunx playwright install --with-deps chromium
           bun run build
-          bun run e2e
+          bun run test
         env:
           VITE_NEW_YEAR_MODE: false
           VITE_EMAIL_JS_SERVICE_ID: ${{ secrets.EMAIL_JS_SERVICE_ID }}
