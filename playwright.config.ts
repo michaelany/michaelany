@@ -5,6 +5,7 @@ const BASE_URL = `http://127.0.0.1:${PORT}`
 
 export default defineConfig({
   testDir: './tests',
+  reporter: 'list',
   webServer: {
     command: `CI=1 bun run dev -- --host 127.0.0.1 --port ${PORT} --strictPort`,
     url: BASE_URL,
