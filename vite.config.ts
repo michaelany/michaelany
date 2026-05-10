@@ -1,12 +1,10 @@
 import {defineConfig} from 'vite'
-import tsconfigPaths from 'vite-tsconfig-paths'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 import {VitePWA} from 'vite-plugin-pwa'
 
 export default defineConfig({
   plugins: [
-    tsconfigPaths(),
     react(),
     svgr(),
     VitePWA({
@@ -56,6 +54,7 @@ export default defineConfig({
     port: 3000,
   },
   resolve: {
+    tsconfigPaths: true,
     alias: {
       styles: '/src/styles',
     },
