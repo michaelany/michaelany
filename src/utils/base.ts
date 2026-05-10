@@ -3,8 +3,8 @@ import {DURATION} from '#styles/theme'
 
 export const handleAppLoaded = () => {
   const preloader = document.getElementById('preloader') as HTMLElement
-  preloader.classList.remove('Preloader_show')
   document.body.style.overflow = 'auto'
+  preloader.classList.remove('Preloader_show')
   setTimeout(() => preloader.remove(), DURATION.longer)
 }
 

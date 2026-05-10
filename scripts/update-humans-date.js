@@ -21,8 +21,6 @@ function formatDate(date, timeZone) {
     timeZone,
     year: 'numeric',
   }).formatToParts(date)
-
   const values = Object.fromEntries(parts.map(({type, value}) => [type, value]))
-
   return `${values.year}-${values.month}-${values.day}`
 }
