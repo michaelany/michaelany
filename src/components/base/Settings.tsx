@@ -8,7 +8,8 @@ import {Tooltip} from '#components/common'
 
 export default function Settings() {
   const {t, i18n} = useTranslation()
-  const ruLng = i18n.language === 'ru'
+
+  const ruLng = i18n.resolvedLanguage === 'ru'
 
   const handleLanguageSwitch = () => i18n.changeLanguage(ruLng ? 'en' : 'ru')
 

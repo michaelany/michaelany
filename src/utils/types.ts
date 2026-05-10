@@ -1,7 +1,7 @@
 import {SvgIcon} from '@mui/material'
 import type {ReactNode, FunctionComponent, SVGProps} from 'react'
 
-export type TLng = 'ru' | 'eng'
+export type TLng = 'ru' | 'en'
 
 type TSvgIcon = typeof SvgIcon
 
