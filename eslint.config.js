@@ -11,6 +11,14 @@ export default [
   js.configs.recommended,
   ...tsPlugin.configs['flat/recommended'],
   {
+    files: ['scripts/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: globals.node,
+    },
+  },
+  {
     files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',

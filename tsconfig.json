@@ -18,15 +18,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "baseUrl": "./src",
     "paths": {
-      "#/*": ["*"],
-      "#assets/*": ["assets/*"],
-      "#components/*": ["components/*"],
-      "#data/*": ["data/*"],
-      "#styles/*": ["styles/*"],
-      "#utils/*": ["utils/*"],
-      "#translations/*": ["translations/*"]
+      "#assets/*": ["./src/assets/*"],
+      "#components/*": ["./src/components/*"],
+      "#data/*": ["./src/data/*"],
+      "#styles/*": ["./src/styles/*"],
+      "#utils/*": ["./src/utils/*"],
+      "#translations/*": ["./src/translations/*"]
     }
   },
   "include": ["src"],

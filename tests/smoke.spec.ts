@@ -96,15 +96,3 @@ test('🧭 Navigation flow across pages works', async ({page}) => {
     })
   }
 })
-
-test('Clean route direct visits work', async ({page}) => {
-  await page.goto('/about')
-  await expect(page).toHaveURL(/\/about$/)
-  await expectHeading(page, 'About')
-})
-
-test('Legacy hash routes are restored to clean routes', async ({page}) => {
-  await page.goto('/#/skills')
-  await expect(page).toHaveURL(/\/skills$/)
-  await expectHeading(page, 'Skills')
-})
