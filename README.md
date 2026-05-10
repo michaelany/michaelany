@@ -8,12 +8,12 @@
 
 ## Hi there! 👋<br>I'm [Michael Any][website] 🦸‍♂️<br>Frontend Engineer 👨‍💻<br>[YouTuber][youtube] 📹
 
-## [About](https://michaelany.com/#/about)
+## [About](https://michaelany.com/about)
 
-- 🚀 &nbsp;Creating [projects](https://michaelany.com/#/portfolio) of any complexity
+- 🚀 &nbsp;Creating [projects](https://michaelany.com/portfolio) of any complexity
 - 💡 &nbsp;Bringing UI/UX ideas to life
-- 💼 &nbsp;9 years of [experience](https://michaelany.com/#/experience)
-- 📺 &nbsp;Have my own [vlog](https://michaelany.com/#/vlog) on [YouTube][youtube]
+- 💼 &nbsp;9 years of [experience](https://michaelany.com/experience)
+- 📺 &nbsp;Have my own [vlog](https://michaelany.com/vlog) on [YouTube][youtube]
 - 🐑 &nbsp;Based in Auckland, New Zealand
 
 <details>
@@ -39,9 +39,9 @@
 [<img src="https://img.shields.io/badge/-Duolingo-58cc02?logo=duolingo&logoColor=white" alt="Duolingo" />][duolingo]
 [<img src="https://img.shields.io/badge/-Instagram-df7f57?logo=instagram&logoColor=white" alt="LinkedIn" />][instagram]
 
-## [Skills](https://michaelany.com/#/skills)
+## [Skills](https://michaelany.com/skills)
 
-- 👾 &nbsp;Crafting [applications](https://michaelany.com/#/portfolio#app), [multi-page sites](https://michaelany.com/#/portfolio#site), [landing pages](https://michaelany.com/#/portfolio#landing) & [admin panels](https://michaelany.com/#/portfolio#admin)
+- 👾 &nbsp;Crafting [applications](https://michaelany.com/portfolio#app), [multi-page sites](https://michaelany.com/portfolio#site), [landing pages](https://michaelany.com/portfolio#landing) & [admin panels](https://michaelany.com/portfolio#admin)
 - 🛠 &nbsp;Favorite stack is `TypeScript` + `React` + `React Query` + `Material UI`
 - 🏎 &nbsp;Writing modern & productive code
 - 🎨 &nbsp;Creating semantic, cross-browser & pixel-perfect markup
@@ -87,7 +87,7 @@
 ![Figma](https://img.shields.io/badge/-Figma-282828?logo=figma&logoColor=f24e1e)
 ![macOS](https://img.shields.io/badge/-macOS-282828?logo=macos&logoColor=white)
 
-## [Contact](https://michaelany.com/#/contact)
+## [Contact](https://michaelany.com/contact)
 
 Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany.it@gmail.com or use links below:
 

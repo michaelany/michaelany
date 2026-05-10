@@ -1,10 +1,10 @@
 /* TEAM */
 	Author: Michael Any
   GitHub: https://github.com/michaelany
-	Contact: michaelany.it@gmail.com | https://michaelany.com/#/contact
+	Contact: michaelany.it@gmail.com | https://michaelany.com/contact
 
 /* SITE */
-	Last update: 04/02/2026
+	Last update: 10/05/2026
  	Language: Russian | English
 	Components: TypeScript, React, Material UI, Sass, Vite
 	Software: Visual Studio Code, Chrome DevTools, Sketch, ImageOptim, macOS Sequoia
