@@ -32,7 +32,7 @@ const steps: IStep[] = [
   },
   {
     name: 'MadFit',
-    action: {type: 'selector', target: 'a[href="#/portfolio/madfit"]'},
+    action: {type: 'selector', target: 'a[href="/portfolio/madfit"]'},
   },
   {
     name: 'Portfolio',
@@ -45,7 +45,7 @@ const steps: IStep[] = [
   {
     name: 'My dreamdesk',
     heading: 'My dreamdesk | New no monitors setup',
-    action: {type: 'selector', target: 'a[href="#/vlog/my-dreamdesk"]'},
+    action: {type: 'selector', target: 'a[href="/vlog/my-dreamdesk"]'},
   },
   {
     name: 'Vlog',
@@ -95,4 +95,16 @@ test('🧭 Navigation flow across pages works', async ({page}) => {
       await expectHeading(page, heading ?? name)
     })
   }
+})
+
+test('Clean route direct visits work', async ({page}) => {
+  await page.goto('/about')
+  await expect(page).toHaveURL(/\/about$/)
+  await expectHeading(page, 'About')
+})
+
+test('Legacy hash routes are restored to clean routes', async ({page}) => {
+  await page.goto('/#/skills')
+  await expect(page).toHaveURL(/\/skills$/)
+  await expectHeading(page, 'Skills')
 })
