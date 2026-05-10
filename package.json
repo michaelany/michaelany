@@ -38,7 +38,7 @@
     "react-snowfall": "2.4.0",
     "react-waypoint": "10.3.0",
     "smooth-scroll-into-view-if-needed": "2.0.2",
-    "swiper": "11.1.15"
+    "swiper": "12.1.4"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
