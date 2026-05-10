@@ -9,7 +9,7 @@ import meNormal2xImg from '#assets/img/pictures/me-normal@2x.jpg'
 import meExcitedImg from '#assets/img/pictures/me-excited.jpg'
 import meExcited2xImg from '#assets/img/pictures/me-excited@2x.jpg'
 import {Section, Animate, SocialLinks, Tilt} from '#components/common'
-import {ROUTE, QUERY_BREAKPOINT, DETECT} from '#utils/constants'
+import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
 import {MY_NAME, CONTACT_LINK} from '#data/common'
 import type {ISocialLink} from '#utils/types'
 
@@ -57,7 +57,6 @@ const Photo = () => {
       <Tilt
         el="figure"
         className="Social-Photo"
-        enable={!DETECT.safari}
         onMouseOver={handlePhotoOver}
         onMouseOut={handlePhotoOut}
       >

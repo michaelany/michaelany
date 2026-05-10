@@ -6,7 +6,7 @@ import type {TFunction} from 'i18next'
 import './VideoLink.scss'
 import {Animate, Tilt, Panel} from '#components/common'
 import {getGridAnimationDelay} from '#utils/helpers'
-import {DETECT, RANDOM_EFFECTS, ROUTE} from '#utils/constants'
+import {IS_MOBILE_DEVICE, RANDOM_EFFECTS, ROUTE} from '#utils/constants'
 import VideoDate from './VideoDate'
 import type {IWidth, TLng, IVideo} from '#utils/types'
 
@@ -34,7 +34,7 @@ export default function VideoLink({
   return (
     <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
       <Animate
-        className={DETECT.mobile ? 'VideoLink-Tilt' : undefined}
+        className={IS_MOBILE_DEVICE ? 'VideoLink-Tilt' : undefined}
         effect={effect}
         delay={getGridAnimationDelay(index, width)}
       >

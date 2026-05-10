@@ -1,9 +1,9 @@
 import {Tooltip as MuiTooltip, type TooltipProps} from '@mui/material'
 
-import {DETECT} from '#utils/constants'
+import {IS_MOBILE_DEVICE} from '#utils/constants'
 
 export default function Tooltip({children, ...props}: TooltipProps) {
-  return DETECT.mobile ? (
+  return IS_MOBILE_DEVICE ? (
     children
   ) : (
     <MuiTooltip {...props}>{children}</MuiTooltip>

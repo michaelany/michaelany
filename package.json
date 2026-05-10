@@ -33,9 +33,9 @@
     "react-dom": "19.2.6",
     "react-google-recaptcha": "3.1.0",
     "react-i18next": "15.2.0",
-    "react-parallax-tilt": "1.7.267",
+    "react-parallax-tilt": "1.7.327",
     "react-router-dom": "7.15.0",
-    "react-snowfall": "2.2.0",
+    "react-snowfall": "2.4.0",
     "react-waypoint": "10.3.0",
     "smooth-scroll-into-view-if-needed": "2.0.2",
     "swiper": "11.1.15"

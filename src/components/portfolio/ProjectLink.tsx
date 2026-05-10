@@ -6,7 +6,7 @@ import type {TFunction} from 'i18next'
 import './ProjectLink.scss'
 import {Animate, Tilt, Panel} from '#components/common'
 import {getGridAnimationDelay, tProjectTypes} from '#utils/helpers'
-import {DETECT, ROUTE, RANDOM_EFFECTS} from '#utils/constants'
+import {IS_MOBILE_DEVICE, ROUTE, RANDOM_EFFECTS} from '#utils/constants'
 import type {IWidth, IProject} from '#utils/types'
 
 interface IProjectLinkProps {
@@ -34,7 +34,7 @@ export default function ProjectLink({
   return (
     <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
       <Animate
-        className={DETECT.mobile ? 'ProjectLink-Tilt' : undefined}
+        className={IS_MOBILE_DEVICE ? 'ProjectLink-Tilt' : undefined}
         effect={effect}
         delay={getGridAnimationDelay(index, width)}
       >

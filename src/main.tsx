@@ -18,19 +18,12 @@ import THEME from '#styles/theme'
 
 const theme: Theme = createTheme(THEME as object)
 
-const routerOptions = {
-  future: {
-    v7_relativeSplatPath: true,
-    v7_startTransition: true,
-  },
-}
-
 logConsoleWelcomeMessage()
 
 createRoot(ROOT).render(
   <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
-      <Router {...routerOptions}>
+      <Router>
         <CssBaseline />
         <ScrollToTop />
         <App />
