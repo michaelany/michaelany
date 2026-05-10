@@ -11,6 +11,9 @@ export default defineConfig({
     svgr(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        navigateFallbackDenylist: [/^\/.*\.[^/]+$/],
+      },
       includeAssets: [
         'assets/logo.svg',
         'assets/safari-pinned-tab.svg',
