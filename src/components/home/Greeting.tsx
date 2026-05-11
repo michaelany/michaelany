@@ -38,34 +38,30 @@ export default function Greeting() {
 
   return (
     <Section className="Greeting">
-      <div>
-        <p className="Greeting-Text Greeting-First Title">
-          {t(`home.hi.${getDayTime()}`)}
-          <span className="Greeting-Nowrap">
-            !
-            <span className="Greeting-Second">
-              <HelloIcon className="Greeting-Icon" />
-            </span>
-          </span>
-        </p>
-      </div>
-      <h1 className="Greeting-Text Title">
-        <span className="Greeting-Part Greeting-Text Greeting-Third Title">
-          {t('home.iam')}
-        </span>{' '}
-        <span className="Greeting-Part Greeting-Third Greeting-Third_order_second">
-          <span className="Greeting-Main">Michael</span>
-        </span>{' '}
-        <span className="Greeting-Part Greeting-Third Greeting-Third_order_third">
-          <span className="Greeting-Main">Any</span>
-          <span className="Greeting-Part Greeting-Fourth Greeting-Fourth_first">
-            ,
+      <p className="Greeting-Text Greeting-One Title">
+        {t(`home.hi.${getDayTime()}`)}
+        <span className="Greeting-Nowrap">
+          !
+          <span className="Greeting-Two">
+            <HelloIcon className="Greeting-Icon" />
           </span>
         </span>
+      </p>
+      <h1 className="Greeting-Text Title">
+        <span className="Greeting-Part Greeting-Text Greeting-Three Title">
+          {t('home.iam')}
+        </span>{' '}
+        <span className="Greeting-Part Greeting-Three Greeting-Three_order_second">
+          <span className="Greeting-Main">Michael</span>
+        </span>{' '}
+        <span className="Greeting-Part Greeting-Three Greeting-Three_order_third">
+          <span className="Greeting-Main">Any</span>
+          <span className="Greeting-Part Greeting-Four">,</span>
+        </span>
       </h1>
-      <p className="Greeting-Text Greeting-Fifth Title">
-        <strong>
-          <span className="Greeting-Word">
+      <p className="Greeting-Text Title">
+        <span className="Greeting-Part Greeting-Five">
+          <strong className="Greeting-Word">
             {t('home.occupation.part1')}
             <Link
               className="Greeting-Extra Greeting-Extra_first"
@@ -79,35 +75,36 @@ export default function Greeting() {
                 alt="Frontend"
               />
             </Link>
-          </span>
+          </strong>
           <br />
-          {t('home.occupation.part2')}
-        </strong>
-        <span className="Greeting-Part Greeting-Fourth Greeting-Fourth_second">
-          ,
+          <strong>{t('home.occupation.part2')}</strong>{' '}
+          <span className="Greeting-Part Greeting-Six">
+            {t('home.occupation.part3')}
+          </span>
+        </span>
+        <br />
+        <span className="Greeting-Part Greeting-Seven">
+          <strong>
+            <span className="Greeting-Word">
+              {t('home.occupation.part4')}
+              <a
+                {...BLANK_LINK_PROPS}
+                className="Greeting-Extra Greeting-Extra_second"
+                href={CONTACT_LINK.youTube.href}
+              >
+                <img
+                  className="Greeting-ExtraImg"
+                  width={65}
+                  height={46}
+                  src={youtubeImg}
+                  alt={CONTACT_LINK.youTube.title}
+                />
+              </a>
+            </span>
+          </strong>
         </span>
       </p>
-      <p className="Greeting-Text Greeting-Sixth Title">
-        <strong>
-          <span className="Greeting-Word">
-            {t('home.occupation.part3')}
-            <a
-              {...BLANK_LINK_PROPS}
-              className="Greeting-Extra Greeting-Extra_second"
-              href={CONTACT_LINK.youTube.href}
-            >
-              <img
-                className="Greeting-ExtraImg"
-                width={65}
-                height={46}
-                src={youtubeImg}
-                alt={CONTACT_LINK.youTube.title}
-              />
-            </a>
-          </span>
-        </strong>
-      </p>
-      <p className="Greeting-SubText Greeting-Seventh MainText">
+      <p className="Greeting-SubText Greeting-Eight MainText">
         {t('about.feature.position.label')}{' '}
         {t('about.feature.vlogger.extraLabel', {
           replace: [CONTACT_LINK.youTube.title],
@@ -161,9 +158,9 @@ const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
 }
 
 const links = [
-  {key: 'portfolio', color: 'blue', order: 'Eighth', Icon: WidgetsIcon},
-  {key: 'contact', color: 'green', order: 'Nineth', Icon: MailIcon},
-  {key: 'vlog', color: 'red', order: 'Tenth', Icon: CameraAltIcon},
+  {key: 'portfolio', color: 'blue', order: 'Nine', Icon: WidgetsIcon},
+  {key: 'contact', color: 'green', order: 'Ten', Icon: MailIcon},
+  {key: 'vlog', color: 'red', order: 'Eleven', Icon: CameraAltIcon},
 ]
 
 const me = {

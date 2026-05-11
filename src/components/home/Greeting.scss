@@ -48,18 +48,18 @@
   @include m.animationAlternate;
 }
 
-.Greeting-First {
+.Greeting-One {
   @include m.animation(fadeInZoomInSm);
 }
 
-.Greeting-Second {
+.Greeting-Two {
   @include m.animation(fadeInLeft, 300ms);
   position: relative;
   top: 0.05em;
   margin-left: 0.2em;
 }
 
-.Greeting-Third {
+.Greeting-Three {
   @include m.animation(fadeInBottom, 1s);
   &_order_second {
     animation-delay: 1250ms;
@@ -69,36 +69,35 @@
   }
 }
 
-.Greeting-Fourth {
-  &_first {
-    @include m.animation(fadeInTop, 1750ms);
-  }
-  &_second {
-    @include m.animation(fadeInTop, 2650ms);
-  }
+.Greeting-Four {
+  @include m.animation(fadeInTop, 1750ms);
 }
 
-.Greeting-Fifth {
+.Greeting-Five {
   @include m.animation(fadeInRight, 2250ms);
 }
 
-.Greeting-Sixth {
+.Greeting-Six {
+  @include m.animation(fadeInBottom, 2650ms);
+}
+
+.Greeting-Seven {
   @include m.animation(fadeInRight, 2850ms);
 }
 
-.Greeting-Seventh {
+.Greeting-Eight {
   @include m.animation(fadeInBottom, 3250ms);
 }
 
-.Greeting-Eighth {
+.Greeting-Nine {
   @include m.animation(fadeInBottom, 3450ms);
 }
 
-.Greeting-Nineth {
+.Greeting-Ten {
   @include m.animation(fadeInBottom, 3600ms);
 }
 
-.Greeting-Tenth {
+.Greeting-Eleven {
   @include m.animation(fadeInBottom, 3750ms);
 }
 
@@ -110,11 +109,12 @@
   align-self: flex-start;
   display: flex;
   position: relative;
-  left: 0.25em;
+  z-index: 1;
+  left: 0.35em;
   transition: transform v.$duration_standard v.$easing_out;
   &_first {
     outline-color: v.$color_yellow;
-    top: 0.22em;
+    top: 0.2em;
     transform: rotate(20deg);
   }
   &_second {

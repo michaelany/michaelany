@@ -10,7 +10,7 @@ const common = {
     language: 'English',
   },
   occupation: {
-    lead: 'Lead Frontend Developer',
+    lead: 'Lead Frontend Engineer',
     teamLead: 'Frontend Team Lead',
     senior: 'Senior Frontend Developer',
     middle: 'Frontend Developer',
@@ -52,9 +52,10 @@ const EN = {
     },
     iam: "I'm",
     occupation: {
-      part1: 'a frontend',
+      part1: 'frontend',
       part2: 'engineer',
-      part3: 'YouTuber',
+      part3: '&',
+      part4: 'YouTuber',
     },
     subtitle: 'Banner',
   },
@@ -66,12 +67,12 @@ const EN = {
         text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to complex web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
       },
       position: {
-        label: 'Lead frontend developer',
+        label: 'Lead Frontend Engineer',
         text: `I develop projects from scratch, write business logic, create layout, test, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       vlogger: {
-        label: '{{0}} content creator',
-        extraLabel: '& {{0}} content creator',
+        label: '{{0}} creator',
+        extraLabel: '& {{0}} creator',
         text: `I've launched my own channel on YouTube. I share my journey in programming and life, as well as provide insights and knowledge. More details in the <0>${common.title.vlog}</0> or on <1>{{1}}</1>`,
       },
       experience: {

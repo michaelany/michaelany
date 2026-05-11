@@ -21,7 +21,7 @@ export default defineConfig({
         name: 'Michael Any',
         short_name: 'Michael Any',
         description:
-          'Personal website of Michael Any, a frontend developer & lead software engineer',
+          'Personal website of Michael Any, a Frontend Engineer & YouTuber',
         start_url: '/',
         display: 'standalone',
         orientation: 'portrait',
