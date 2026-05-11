@@ -20,13 +20,8 @@ export default function TechnologyList({
       {technologies.map((technology, index) => (
         <Grid
           key={index}
-          item
           component="li"
-          xs={6}
-          sm={4}
-          md={3}
-          lg={4}
-          xl={3}
+          size={{xs: 6, sm: 4, md: 3, lg: 4, xl: 3}}
         >
           <Tooltip title={technology.label}>
             <ButtonBase

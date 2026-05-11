@@ -32,7 +32,7 @@ export default function VideoLink({
   )
 
   return (
-    <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
+    <Grid component="li" size={{xs: 12, md: 6, lg: 4, xl: 3}}>
       <Animate
         className={IS_MOBILE_DEVICE ? 'VideoLink-Tilt' : undefined}
         effect={effect}

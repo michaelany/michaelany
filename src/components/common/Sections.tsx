@@ -19,20 +19,16 @@ export default function Sections({
   return (
     <Grid container className="Sections" spacing={0}>
       <Grid
-        item
         className={notContact ? 'Sections-SectionWrapper' : undefined}
-        xs={12}
-        lg={6}
+        size={{xs: 12, lg: 6}}
       >
         {firstSection}
       </Grid>
       <Grid
-        item
         className={
           notContact ? 'Sections-SectionWrapper Sections-Animated' : undefined
         }
-        xs={12}
-        lg={6}
+        size={{xs: 12, lg: 6}}
       >
         {secondSection}
       </Grid>

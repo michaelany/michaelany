@@ -131,7 +131,7 @@ export default function ContactForm() {
     <>
       <Animate noValidate el="form" effect="bottom" onSubmit={handleSubmit}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6} lg={12} xl={6}>
+          <Grid size={{xs: 12, md: 6, lg: 12, xl: 6}}>
             <TextField
               fullWidth
               name={field.name}
@@ -144,7 +144,7 @@ export default function ContactForm() {
               onChange={handleChange}
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={12} xl={6}>
+          <Grid size={{xs: 12, md: 6, lg: 12, xl: 6}}>
             <TextField
               fullWidth
               name={field.email}
@@ -158,7 +158,7 @@ export default function ContactForm() {
               onChange={handleChange}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <TextField
               fullWidth
               multiline

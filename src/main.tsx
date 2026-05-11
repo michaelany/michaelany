@@ -1,12 +1,12 @@
 import {createRoot} from 'react-dom/client'
 import {BrowserRouter as Router} from 'react-router-dom'
 import {
-  CssBaseline,
   createTheme,
-  StyledEngineProvider,
   ThemeProvider,
+  StyledEngineProvider,
   type Theme,
-} from '@mui/material'
+} from '@mui/material/styles'
+import {CssBaseline} from '@mui/material'
 
 import '#styles/index.scss'
 import '#utils/i18n'

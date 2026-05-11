@@ -39,7 +39,7 @@ export default function Pagination({
         justifyContent="center"
       >
         {prevTo && (
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs: 12, sm: 6}}>
             <Button
               fullWidth
               className="Pagination-Link"
@@ -52,7 +52,7 @@ export default function Pagination({
           </Grid>
         )}
         {nextTo && (
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs: 12, sm: 6}}>
             <Button
               fullWidth
               className="Pagination-Link"

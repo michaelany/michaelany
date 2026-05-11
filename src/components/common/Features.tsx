@@ -30,11 +30,9 @@ const Features = memo(({t, type, extra, items}: IFeaturesProps) => {
       {items.map(({Icon, ...item}, index) => (
         <Grid
           key={index}
-          item
           component="li"
           className="Features-Item"
-          xs={12}
-          sm={6}
+          size={{xs: 12, sm: 6}}
         >
           <Animate effect={getEffect(xs, index)}>
             <Icon className="Features-Icon Colorful Colorful_dark" />

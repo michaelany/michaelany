@@ -32,7 +32,7 @@ export default function ProjectLink({
     project.title ?? t(`portfolio.project.${project.name}.title`)
 
   return (
-    <Grid item component="li" xs={12} md={6} lg={4} xl={3}>
+    <Grid component="li" size={{xs: 12, md: 6, lg: 4, xl: 3}}>
       <Animate
         className={IS_MOBILE_DEVICE ? 'ProjectLink-Tilt' : undefined}
         effect={effect}
