@@ -32,12 +32,7 @@ export default function Pagination({
         'Actions'
       )}
     >
-      <Grid
-        container
-        className="Pagination-Links"
-        spacing={2}
-        justifyContent="center"
-      >
+      <Grid container className="Pagination-Links" spacing={2}>
         {prevTo && (
           <Grid size={{xs: 12, sm: 6}}>
             <Button

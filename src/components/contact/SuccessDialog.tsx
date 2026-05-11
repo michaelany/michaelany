@@ -18,7 +18,7 @@ export default function SuccessDialog({t, open, onClose}: ISuccessDialogProps) {
     <Dialog
       open={open}
       maxWidth="lg"
-      TransitionComponent={Transition}
+      slots={{transition: Transition}}
       onClose={onClose}
     >
       <div className="SuccessDialog">

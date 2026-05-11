@@ -137,8 +137,10 @@ export default function ContactForm() {
               name={field.name}
               label={t('contact.form.name')}
               variant="filled"
-              InputProps={inputProps[field.name]}
-              inputProps={{ref: fieldElements[field.name]}}
+              slotProps={{
+                input: inputProps[field.name],
+                htmlInput: {ref: fieldElements[field.name]},
+              }}
               value={values.name}
               error={errors.name}
               onChange={handleChange}
@@ -151,8 +153,10 @@ export default function ContactForm() {
               type="email"
               label="Email"
               variant="filled"
-              InputProps={inputProps[field.email]}
-              inputProps={{ref: fieldElements[field.email]}}
+              slotProps={{
+                input: inputProps[field.email],
+                htmlInput: {ref: fieldElements[field.email]},
+              }}
               value={values.email}
               error={errors.email}
               onChange={handleChange}
@@ -166,8 +170,10 @@ export default function ContactForm() {
               label={t('contact.form.message')}
               minRows={5}
               variant="filled"
-              InputProps={inputProps[field.message]}
-              inputProps={{ref: fieldElements[field.message]}}
+              slotProps={{
+                input: inputProps[field.message],
+                htmlInput: {ref: fieldElements[field.message]},
+              }}
               value={values.message}
               error={errors.message}
               onChange={handleChange}

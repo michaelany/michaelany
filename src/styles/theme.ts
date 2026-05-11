@@ -121,12 +121,30 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           padding: '8px 24px',
+          '&.MuiButton-sizeLarge': {
+            '& > .MuiButton-icon .MuiSvgIcon-root': {
+              fontSize: '1.5rem',
+            },
+          },
+          variants: [
+            {
+              props: {variant: 'text', size: 'large'},
+              style: {
+                padding: '12px 24px',
+                fontSize: '1.2rem',
+              },
+            },
+          ],
         },
-        textSizeLarge: {
-          padding: '12px 24px',
-          fontSize: '1.2rem',
-        },
-        iconSizeLarge: {
+        icon: {
+          variants: [
+            {
+              props: {size: 'large'},
+              style: {
+                fontSize: '1.5rem',
+              },
+            },
+          ],
           '.MuiSvgIcon-root': {
             fontSize: '1.5rem',
           },
@@ -231,7 +249,10 @@ const THEME: ThemeOptions = {
       },
     },
     MuiAccordion: {
-      defaultProps: {elevation: 0, TransitionProps: {unmountOnExit: true}},
+      defaultProps: {
+        elevation: 0,
+        slotProps: {transition: {unmountOnExit: true}},
+      },
     },
     MuiDrawer: {
       defaultProps: {keepMounted: true, disablePortal: true, elevation: 0},
@@ -244,7 +265,7 @@ const THEME: ThemeOptions = {
     MuiDialog: {
       defaultProps: {
         scroll: 'body',
-        PaperProps: {elevation: 0},
+        slotProps: {paper: {elevation: 0}},
       },
     },
     MuiTextField: {
@@ -328,7 +349,7 @@ const THEME: ThemeOptions = {
     },
     MuiSnackbar: {
       defaultProps: {
-        ContentProps: {elevation: 0},
+        slotProps: {content: {elevation: 0}},
         anchorOrigin: {
           vertical: 'bottom',
           horizontal: 'left',
