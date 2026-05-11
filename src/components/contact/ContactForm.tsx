@@ -179,6 +179,9 @@ export default function ContactForm() {
               onChange={handleChange}
             />
           </Grid>
+          <Grid size={12}>
+            <p>This site is protected by reCAPTCHA.</p>
+          </Grid>
         </Grid>
         <Button
           fullWidth

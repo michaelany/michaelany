@@ -112,7 +112,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 - 📱 &nbsp;Responsive markup tested on every pixel of the screen width
 - 🎞 &nbsp;Uses my own scroll animation component `Animate` for the `CSS` animations
 - 🇺🇸 &nbsp;Supports English & Russian languages, used `react-i18next`
-- 📨 &nbsp;Uses `EmailJS` & `reCaptcha` to send contact form emails
+- 📨 &nbsp;Uses `EmailJS` & `reCAPTCHA` to send contact form emails
 - 🗄 &nbsp;Some UI data stores in the `localStorage`
 - 🧹 &nbsp;Clean & unified code style, also use `prettier` & `eslint`
 - 🌄 &nbsp;All images optimized & ready for retina
