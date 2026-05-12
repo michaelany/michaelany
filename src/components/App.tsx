@@ -23,8 +23,8 @@ const Skills = lazy(() => import('./skills/Skills'))
 const Experience = lazy(() => import('./experience/Experience'))
 const Portfolio = lazy(() => import('./portfolio/Portfolio'))
 const Project = lazy(() => import('./portfolio/Project'))
-const Vlog = lazy(() => import('./vlog/Vlog'))
-const Video = lazy(() => import('./vlog/Video'))
+const Blog = lazy(() => import('./blog/Blog'))
+const Video = lazy(() => import('./blog/Video'))
 const Contact = lazy(() => import('./contact/Contact'))
 
 export default function App() {
@@ -58,8 +58,8 @@ export default function App() {
                 <Route index element={<Portfolio />} />
                 <Route path=":project" element={<Project />} />
               </Route>
-              <Route path={ROUTE.vlog}>
-                <Route index element={<Vlog />} />
+              <Route path={ROUTE.blog}>
+                <Route index element={<Blog />} />
                 <Route path=":video" element={<Video />} />
               </Route>
               <Route path={ROUTE.contact} element={<Contact />} />

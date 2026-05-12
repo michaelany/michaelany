@@ -43,14 +43,14 @@ export default function VideoLink({
             focusRipple
             component={Link}
             className={`VideoLink-Item ColorInteract ColorInteract_color_${video.color}`}
-            to={`${ROUTE.vlog}/${video.name}`}
+            to={`${ROUTE.blog}/${video.name}`}
           >
             <Panel
               className={`VideoLink-View VideoLink-View_name_${video.name}`}
             />
             <div className="VideoLink-Content">
               <h3 className="VideoLink-Title">
-                {t(`vlog.video.${video.name}.title`, {replace: ['|']})}
+                {t(`blog.video.${video.name}.title`, {replace: ['|']})}
               </h3>
               <VideoDate
                 className="VideoLink-Date"

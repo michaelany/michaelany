@@ -11,7 +11,7 @@ export default function Portfolio() {
   const {t} = useTranslation()
 
   return (
-    <Section wide prevTo={ROUTE.experience} nextTo={ROUTE.vlog}>
+    <Section wide prevTo={ROUTE.experience} nextTo={ROUTE.blog}>
       <div>
         <h1 className="Title Title_withIcon">
           {t('title.portfolio')}

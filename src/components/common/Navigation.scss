@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:math';
 
-$pages: 'about', 'skills', 'experience', 'portfolio', 'vlog', 'contact';
+$pages: 'about', 'skills', 'experience', 'portfolio', 'blog', 'contact';
 
 .Navigation {
   position: relative;

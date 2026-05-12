@@ -11,7 +11,7 @@ interface IRoute {
   skills: TRoute
   experience: TRoute
   portfolio: TRoute
-  vlog: TRoute
+  blog: TRoute
   contact: TRoute
 }
 
@@ -50,13 +50,16 @@ export const TODAY = new Date()
 export const YEARS_OF_EXPERIENCE =
   differenceInYears(TODAY, CAREER_START_DATE) + 1
 
+export const YEARS_OF_RELOCATION =
+  differenceInYears(TODAY, CAREER_START_DATE) + 1
+
 export const ROUTE: IRoute = {
   home: '/',
   about: '/about',
   skills: '/skills',
   experience: '/experience',
   portfolio: '/portfolio',
-  vlog: '/vlog',
+  blog: '/blog',
   contact: '/contact',
 }
 
@@ -80,7 +83,7 @@ export const PATH_COLOR: Record<TRoute | string, TColor> = {
 
 export const PATH_BACKGROUND_COLOR: Record<TRoute | string, TColor> = {
   [ROUTE.portfolio]: 'blue',
-  [ROUTE.vlog]: 'red',
+  [ROUTE.blog]: 'red',
   [ROUTE.contact]: 'green',
   ...Object.fromEntries(VIDEOS.map(video => [`/${video.name}`, video.color])),
 }

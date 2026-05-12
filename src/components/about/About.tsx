@@ -1,25 +1,29 @@
 import {differenceInYears} from 'date-fns'
 import {Link} from 'react-router-dom'
 import {Link as MuiLink} from '@mui/material'
+import type {ReactNode} from 'react'
 
+import './About.scss'
 import {
-  DirectionsBikeRounded as DirectionsBikeIcon,
+  SurfingRounded as SurfingIcon,
   SchoolRounded as SchoolIcon,
-  LocalCafeRounded as LocalCafeIcon,
+  CoffeeMakerRounded as CoffeeMakerIcon,
   FavoriteRounded as FavoriteIcon,
-  AppsRounded as AppsIcon,
-  SupervisorAccountRounded as SupervisorAccountIcon,
-  AllInclusiveRounded as AllInclusiveIcon,
+  DashboardCustomizeRounded as DashboardCustomizeIcon,
+  LogoDevRounded as LogoDevIcon,
+  AutoStoriesRounded as AutoStoriesIcon,
   CodeRounded as CodeIcon,
   SquareFootRounded as SquareFootIcon,
-  GroupWorkRounded as GroupWorkIcon,
+  CenterFocusStrongRounded as CenterFocusStrongIcon,
   BusinessCenterRounded as BusinessCenterIcon,
   ExploreRounded as ExploreIcon,
-  VideocamRounded as VideocamIcon,
+  VideoCameraFrontRounded as VideoCameraFrontIcon,
   TheaterComedyRounded as TheaterComedyIcon,
+  PersonPinCircleRounded as PersonPinCircleIcon,
+  SportsEsportsRounded as SportsEsportsIcon,
 } from '@mui/icons-material'
 
-import {Sections, Info} from '#components/common'
+import {Sections, Info, Tooltip} from '#components/common'
 import {PROJECTS_COUNT} from '#data/projects'
 import {TECHNOLOGY_TITLE, CONTACT_LINK} from '#data/common'
 import {
@@ -30,6 +34,10 @@ import {
 } from '#utils/constants'
 import Social from './Social'
 import type {IFeature} from '#utils/types'
+
+interface ICountriesVisitedProps {
+  children?: ReactNode
+}
 
 export default function About() {
   return (
@@ -47,12 +55,36 @@ export default function About() {
   )
 }
 
-const textValues = ['UI/UX', 'title.vlog', CONTACT_LINK.youTube.title]
+const CountriesVisited = ({children}: ICountriesVisitedProps) => (
+  <Tooltip
+    slotProps={{
+      tooltip: {
+        sx: {
+          maxWidth: 'none',
+        },
+      },
+    }}
+    title={
+      <ul className="About-Countries">
+        {countriesVisited.map(country => (
+          <li key={country}>{country}</li>
+        ))}
+      </ul>
+    }
+    enterDelay={0}
+  >
+    <MuiLink component="span" className="About-TooltipElement Link">
+      {children}
+    </MuiLink>
+  </Tooltip>
+)
+
+const textValues = ['UI/UX', 'title.blog', CONTACT_LINK.youTube.title]
 
 const transComponents = [
   <strong />,
   <MuiLink component={Link} className="Link" to={ROUTE.portfolio} />,
-  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.vlog} />,
+  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.blog} />,
   <MuiLink
     {...BLANK_LINK_PROPS}
     className="Link"
@@ -61,43 +93,44 @@ const transComponents = [
 ]
 
 const countriesVisited = [
-  'New Zealand',
-  'Japan',
-  'Russian Federation',
-  'Ukraine',
-  'Belarus',
-  'Abkhazia',
-  'Turkey',
-  'Maldives',
-  'Greece',
-  'Czech Republic',
-  'Egypt',
-  'Germany',
-  'Sri Lanka',
-  'Thailand',
-  'Italy',
-  'Vatican City',
-  'France',
-  'Spain',
-  'Cyprus',
-  'Latvia',
-  'Montenegro',
-  'Serbia',
-  'Albania',
-  'Bosnia & Herzegovina',
+  '🏳️ Abkhazia',
+  '🇦🇱 Albania',
+  '🇦🇺 Australia',
+  '🇧🇾 Belarus',
+  '🇧🇦 Bosnia & Herzegovina',
+  '🇨🇾 Cyprus',
+  '🇨🇿 Czech Republic',
+  '🇪🇬 Egypt',
+  '🇫🇷 France',
+  '🇩🇪 Germany',
+  '🇬🇷 Greece',
+  '🇮🇹 Italy',
+  '🇯🇵 Japan',
+  '🇱🇻 Latvia',
+  '🇲🇻 Maldives',
+  '🇲🇪 Montenegro',
+  '🇳🇿 New Zealand',
+  '🇷🇺 Russian Federation',
+  '🇷🇸 Serbia',
+  '🇪🇸 Spain',
+  '🇱🇰 Sri Lanka',
+  '🇹🇭 Thailand',
+  '🇹🇷 Turkey',
+  '🇺🇦 Ukraine',
+  '🇻🇦 Vatican City',
 ]
 
 const features: IFeature[] = [
   {
     tKey: 'projects',
-    Icon: AppsIcon,
+    Icon: DashboardCustomizeIcon,
     labelValues: [PROJECTS_COUNT],
-    textValues: [PROJECTS_COUNT, 'title.portfolio'],
+    textValues: ['title.portfolio'],
     links: [<MuiLink component={Link} className="Link" to={ROUTE.portfolio} />],
   },
   {
     tKey: 'position',
-    Icon: SupervisorAccountIcon,
+    Icon: CodeIcon,
     links: [<MuiLink component={Link} className="Link" to={ROUTE.skills} />],
   },
   {
@@ -111,25 +144,21 @@ const features: IFeature[] = [
   },
   {
     tKey: 'organizing',
-    Icon: GroupWorkIcon,
+    Icon: CenterFocusStrongIcon,
   },
   {
     tKey: 'programming',
-    Icon: CodeIcon,
-    textValues: [
-      TECHNOLOGY_TITLE.js,
-      TECHNOLOGY_TITLE.css,
-      CONTACT_LINK.youTube.title,
-    ],
-    links: [<MuiLink component={Link} className="Link" to={ROUTE.vlog} />],
+    Icon: LogoDevIcon,
+    textValues: [TECHNOLOGY_TITLE.js, TECHNOLOGY_TITLE.css],
+    links: [<MuiLink component={Link} className="Link" to={ROUTE.blog} />],
   },
   {
-    tKey: 'vlogger',
-    Icon: VideocamIcon,
+    tKey: 'blogger',
+    Icon: VideoCameraFrontIcon,
     labelValues: [CONTACT_LINK.youTube.title],
-    textValues: ['Год назад', CONTACT_LINK.youTube.title],
+    textValues: [CONTACT_LINK.youTube.title],
     links: [
-      <MuiLink component={Link} className="Link" to={ROUTE.vlog} />,
+      <MuiLink component={Link} className="Link" to={ROUTE.blog} />,
       <MuiLink
         {...BLANK_LINK_PROPS}
         className="Link"
@@ -139,7 +168,7 @@ const features: IFeature[] = [
   },
   {
     tKey: 'growing',
-    Icon: AllInclusiveIcon,
+    Icon: AutoStoriesIcon,
   },
   {
     tKey: 'perfect',
@@ -154,13 +183,34 @@ const features: IFeature[] = [
     Icon: TheaterComedyIcon,
   },
   {
+    tKey: 'geek',
+    Icon: SportsEsportsIcon,
+    textValues: ['digital', 'Nintendo', 'Mario', 'Zelda'],
+    links: [
+      <MuiLink
+        component={Link}
+        className="Link"
+        to={`${ROUTE.blog}/my-dreamdesk`}
+      />,
+    ],
+  },
+  {
     tKey: 'sport',
-    Icon: DirectionsBikeIcon,
+    Icon: SurfingIcon,
+  },
+  {
+    tKey: 'resident',
+    Icon: PersonPinCircleIcon,
+    textValues: [
+      differenceInYears(TODAY, new Date(2023, 3)),
+      'Software Engineer',
+    ],
   },
   {
     tKey: 'travel',
-    textValues: [countriesVisited.length],
     Icon: ExploreIcon,
+    textValues: [countriesVisited.length],
+    links: [<CountriesVisited />],
   },
   {
     tKey: 'love',
@@ -176,6 +226,7 @@ const features: IFeature[] = [
   },
   {
     tKey: 'coffee',
-    Icon: LocalCafeIcon,
+    Icon: CoffeeMakerIcon,
+    textValues: ['Breville the Barista'],
   },
 ]

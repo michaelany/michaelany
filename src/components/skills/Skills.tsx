@@ -112,7 +112,7 @@ export default function Skills() {
       Icon: ChildFriendlyIcon,
     },
     {
-      tKey: 'vlog',
+      tKey: 'blog',
       labelValues: [CONTACT_LINK.youTube.title],
       Icon: MovieIcon,
     },

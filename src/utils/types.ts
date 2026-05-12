@@ -11,7 +11,7 @@ export type TRoute =
   | '/skills'
   | '/experience'
   | '/portfolio'
-  | '/vlog'
+  | '/blog'
   | '/contact'
 
 export type TColor =

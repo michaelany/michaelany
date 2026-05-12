@@ -70,6 +70,6 @@ const pathKeys = {
   [ROUTE.skills]: 'skills',
   [ROUTE.experience]: 'experience',
   [ROUTE.portfolio]: 'portfolio',
-  [ROUTE.vlog]: 'vlog',
+  [ROUTE.blog]: 'blog',
   [ROUTE.contact]: 'contact',
 }

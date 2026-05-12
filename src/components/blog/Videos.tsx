@@ -29,7 +29,7 @@ export default function Videos() {
     <>
       <Tabs className="Tabs" value={sort} onChange={handleChange}>
         {sorts.map(type => (
-          <Tab key={type} value={type} label={t(`vlog.sort.${type}`)} />
+          <Tab key={type} value={type} label={t(`blog.sort.${type}`)} />
         ))}
       </Tabs>
       <Grid container component="ul" spacing={2}>

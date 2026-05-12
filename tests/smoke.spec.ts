@@ -39,17 +39,17 @@ const steps: IStep[] = [
     action: {type: 'pagination', target: 'Portfolio'},
   },
   {
-    name: 'Vlog',
-    action: {type: 'pagination', target: 'Vlog'},
+    name: 'Blog',
+    action: {type: 'pagination', target: 'Blog'},
   },
   {
     name: 'My dreamdesk',
     heading: 'My dreamdesk | New no monitors setup',
-    action: {type: 'selector', target: 'a[href="/vlog/my-dreamdesk"]'},
+    action: {type: 'selector', target: 'a[href="/blog/my-dreamdesk"]'},
   },
   {
-    name: 'Vlog',
-    action: {type: 'pagination', target: 'Vlog'},
+    name: 'Blog',
+    action: {type: 'pagination', target: 'Blog'},
   },
   {
     name: 'Contact',

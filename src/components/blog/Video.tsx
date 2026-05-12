@@ -14,12 +14,12 @@ export default function Video() {
 
   const video = VIDEOS.find(video => video.name === params.video)
 
-  if (!video) return <Navigate to={ROUTE.vlog} replace={true} />
+  if (!video) return <Navigate to={ROUTE.blog} replace={true} />
 
-  const videoKey = `vlog.video.${video.name}`
+  const videoKey = `blog.video.${video.name}`
 
   return (
-    <Section prevTo={ROUTE.vlog}>
+    <Section prevTo={ROUTE.blog}>
       <div className="Video-Content">
         <div className="Video-Player">
           <Panel className="Video-Panel">

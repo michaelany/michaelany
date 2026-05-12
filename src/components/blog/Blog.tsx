@@ -7,18 +7,18 @@ import {ROUTE, YEARS_OF_EXPERIENCE} from '#utils/constants'
 import {DURATION} from '#styles/theme'
 import Videos from './Videos'
 
-export default function Vlog() {
+export default function Blog() {
   const {t} = useTranslation()
 
   return (
     <Section wide prevTo={ROUTE.portfolio} nextTo={ROUTE.contact}>
       <div>
         <h1 className="Title Title_withIcon">
-          {t('title.vlog')}
+          {t('title.blog')}
           <Tooltip
             title={
               <Trans
-                i18nKey="vlog.description"
+                i18nKey="blog.description"
                 values={['👋', YEARS_OF_EXPERIENCE, '👨‍💻', '🐑', '😉', '✌️']}
                 components={[<p className="TooltipParagraph" />]}
               />

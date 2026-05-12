@@ -7,7 +7,7 @@ import {
   BuildRounded as BuildIcon,
   WorkRounded as WorkIcon,
   WidgetsRounded as WidgetsIcon,
-  CameraAltRounded as CameraAltIcon,
+  SmartDisplayRounded as SmartDisplayIcon,
   MailRounded as MailIcon,
 } from '@mui/icons-material'
 import type {TFunction} from 'i18next'
@@ -73,6 +73,6 @@ const navLinks: INavLink[] = [
   {tKey: 'skills', to: ROUTE.skills, Icon: BuildIcon},
   {tKey: 'experience', to: ROUTE.experience, Icon: WorkIcon},
   {tKey: 'portfolio', to: ROUTE.portfolio, Icon: WidgetsIcon},
-  {tKey: 'vlog', to: ROUTE.vlog, Icon: CameraAltIcon},
+  {tKey: 'blog', to: ROUTE.blog, Icon: SmartDisplayIcon},
   {tKey: 'contact', to: ROUTE.contact, Icon: MailIcon},
 ]

@@ -50,7 +50,7 @@ const transComponents = [
     className="Link"
     href={COMPANY.goRentals.href}
   />,
-  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.vlog} />,
+  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.blog} />,
 ]
 
 const jobs: IJob[] = [

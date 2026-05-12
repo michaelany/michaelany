@@ -106,7 +106,7 @@ export default function Greeting() {
       </p>
       <p className="Greeting-SubText Greeting-Eight MainText">
         {t('about.feature.position.label')}{' '}
-        {t('about.feature.vlogger.extraLabel', {
+        {t('about.feature.blogger.extraLabel', {
           replace: [CONTACT_LINK.youTube.title],
         })}
         .
@@ -160,7 +160,7 @@ const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
 const links = [
   {key: 'portfolio', color: 'blue', order: 'Nine', Icon: WidgetsIcon},
   {key: 'contact', color: 'green', order: 'Ten', Icon: MailIcon},
-  {key: 'vlog', color: 'red', order: 'Eleven', Icon: CameraAltIcon},
+  {key: 'blog', color: 'red', order: 'Eleven', Icon: CameraAltIcon},
 ]
 
 const me = {

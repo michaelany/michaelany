@@ -5,7 +5,7 @@ const common = {
     skills: 'Skills',
     experience: 'Experience',
     portfolio: 'Portfolio',
-    vlog: 'Vlog',
+    blog: 'Blog',
     contact: 'Contact',
     language: 'English',
   },
@@ -60,7 +60,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a passionate software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity & bring {{0}} ideas to life. I have my own <2>${common.title.vlog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
+    text: `I'm a passionate software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity & bring {{0}} ideas to life. I have my own <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: 'Developed {{0}} commercial projects',
@@ -70,10 +70,10 @@ const EN = {
         label: 'Lead Frontend Engineer',
         text: `I develop projects from scratch, write business logic, create layout, test, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
-      vlogger: {
+      blogger: {
         label: '{{0}} creator',
         extraLabel: '& {{0}} creator',
-        text: `I've launched my own channel on YouTube. I share my journey in programming and life, as well as provide insights and knowledge. More details in the <0>${common.title.vlog}</0> or on <1>{{1}}</1>`,
+        text: `I've launched my own channel on YouTube. I share my journey in programming and life, as well as provide insights and knowledge. More details in the <0>${common.title.blog}</0> or on <1>{{1}}</1>`,
       },
       experience: {
         label: '{{0}} years of experience',
@@ -85,7 +85,11 @@ const EN = {
       },
       programming: {
         label: 'Love to code',
-        text: `Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. My <0>${common.title.vlog}</0> is also related to programming`,
+        text: `Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. My <0>${common.title.blog}</0> is also related to programming`,
+      },
+      geek: {
+        label: 'Geek & tech enthusiast',
+        text: 'I love tech, games, anime and digital culture. As a kid, I spent a lot of time with Nintendo, especially Mario and Zelda. I also like tinkering with hardware, configuring software and building ideal setups. One of them is my <0>dream desk</0>',
       },
       growing: {
         label: 'Constantly learning',
@@ -110,6 +114,10 @@ const EN = {
       travel: {
         label: 'Traveler',
         text: 'Visited {{0}} countries. I relocated to New Zealand. Once I climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the wild bear at the Dyatlov Pass',
+      },
+      resident: {
+        label: 'New Zealand resident',
+        text: 'I relocated to New Zealand {{0}} and received residency as a Software Engineer. New Zealand is now the home I always dreamed of. The best country in the world',
       },
       love: {
         label: 'Happy husband',
@@ -177,7 +185,7 @@ const EN = {
         label: 'Making code reviews & teaching',
         text: "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. I have experience in recruitment",
       },
-      vlog: {
+      blog: {
         label: 'Creating {{0}} videos',
         text: 'I write and edit scripts, plan shoots, film, edit, make color correction, process audio, create thumbnails and publish videos',
       },
@@ -194,7 +202,7 @@ const EN = {
     },
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming & life, as well as my experience & knowledge in my <2>${common.title.vlog}</2>`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming & life, as well as my experience & knowledge in my <2>${common.title.blog}</2>`,
     projects: 'Projects',
     tools: 'Base tools',
     duties: 'Key duties',
@@ -481,7 +489,7 @@ const EN = {
     mobile: 'mobile',
     screen: 'project screen',
   },
-  vlog: {
+  blog: {
     description:
       "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity and bring UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
