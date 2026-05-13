@@ -59,51 +59,51 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a software engineer focused on <0>frontend development</0>. I build <1>projects</1> of varying complexity and bring {{0}} ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. I live in Auckland, New Zealand`,
+    text: `I'm a software engineer with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes and complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: '{{0}} commercial projects',
-        text: `My portfolio includes commercial projects of different scales: from one-page landing pages to large web applications. Most of them are available in <0>${common.title.portfolio}</0>`,
+        text: `My portfolio includes commercial projects of different sizes: from one-page landing pages to large web applications. Most of them are available in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Lead Frontend Engineer',
-        text: `I develop projects from scratch, write business logic, build layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
+        text: `I build projects from scratch, write business logic, create layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
-        label: '{{0}} years of commercial experience',
-        text: `I built my first website at age {{0}}. I went from markup developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        label: '{{0}} years of experience',
+        text: `I built my first website at age {{0}}. I went from junior markup developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
-        label: 'Organized and autonomous',
-        text: 'I have handled most projects independently. I like being responsible for the entire client side: from discussing the concept to implementation, launch and production support',
+        label: 'Organized and independent',
+        text: 'I have built most projects on my own. I like being responsible for the entire client side: from discussing the concept to implementation, launch and production support',
       },
       programming: {
         label: 'Love to code',
-        text: 'Frontend is my main hobby. I experiment with {{0}}, {{1}} and neural networks. I am interested in interface design, language models and cross-platform development',
+        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in interface design, language models and cross-platform development",
       },
       blogger: {
         label: '{{0}} channel creator',
-        text: `I run a channel on {{0}}. I talk about my journey in programming and life, and share experience and knowledge. More in the <0>${common.title.blog}</0> or on <1>{{0}}</1>`,
+        text: `I run a channel on <1>{{0}}</1>. I talk about my journey in programming and life, and share experience and knowledge. I enjoy the whole process of making a video: from idea and script to editing and publishing. More in the <0>${common.title.blog}</0>`,
       },
       growing: {
         label: 'Constantly learning',
-        text: 'I regularly "sharpen the saw": I study new technologies, documentation, articles, courses, videos, books and talks. I look for methods and tools that help me be more effective',
+        text: 'I keep sharpening the saw: I study new technologies, documentation, articles, courses, videos, books and talks. I look for methods and tools that help me work more effectively',
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'Quality is my main principle. I put as much as I can into every project, but experience and deadlines help me keep the balance between speed and the final result',
+        text: 'Quality is my main standard. I pay attention to every detail of a project, while experience and deadlines help me balance speed and the final result. I value consistency, a systematic approach, thoughtful structure and order in everything',
       },
       education: {
         label: 'Two higher education degrees',
-        text: 'I graduated from Moscow State University of Instrument Engineering and Computer Science and the Russian State Institute of Cinematography. The second degree gave my soft skills a solid boost',
+        text: 'I graduated from Moscow State University of Instrument Engineering and Computer Science and the Russian State Institute of Cinematography. My second degree helped me improve my soft skills',
       },
       actor: {
         label: 'Former actor',
-        text: 'I used to act in movies, TV series and commercials, host events, work as an animator and perform in a student theater. Then I came to my senses and switched to development',
+        text: 'I used to act in movies, TV series and commercials, host events, work as an animator and perform in a student theater. There was a period when I wrote {{0}} at the office during the day and performed on stage in a play in the evening. More in the <0>video</0>',
       },
       geek: {
         label: 'Tech geek',
-        text: 'I love technology, games, anime and {{0}} culture. I adore {{1}}, especially the {{2}} and {{3}} series. I am a huge fan of Arcane. I am interested in gadgets and hardware. I built my ideal <0>setup</0>',
+        text: "I like technology, games, anime and {{0}} culture. I love {{1}}, especially the {{2}} and {{3}} games, and I'm a huge fan of Arcane. I'm also interested in gadgets and hardware. I built my ideal <0>setup</0>",
       },
       resident: {
         label: 'New Zealand resident',
@@ -111,7 +111,7 @@ const EN = {
       },
       sport: {
         label: 'Into sports',
-        text: 'Physical activity is especially important for a developer, so I exercise every day. I enjoy surfing, calisthenics, fitness and hiking. I recently discovered climbing',
+        text: 'Physical activity is especially important for a developer, so I exercise every day. I love calisthenics, fitness and hiking. When all tasks are done and the ocean has a good surf forecast, you can find me on a board among the waves',
       },
       travel: {
         label: 'Love to travel',
@@ -123,7 +123,7 @@ const EN = {
       },
       coffee: {
         label: 'Coffee lover',
-        text: '"A programmer is a person who turns coffee into code." I start my workday with a cup of aromatic coffee. I like grinding whole beans and making flat whites on my {{0}}',
+        text: '"A programmer is a person who turns coffee into code." I start my workday with a cup of fresh coffee. I like grinding whole beans and making flat whites on my {{0}}',
       },
     },
     subtitle: 'Avatar and social media',
