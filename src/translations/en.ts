@@ -54,81 +54,79 @@ const EN = {
     occupation: {
       part1: 'frontend',
       part2: 'engineer',
-      part3: '&',
-      part4: 'YouTuber',
+      part3: 'YouTuber',
     },
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a passionate software engineer specializing in <0>frontend development</0>. I create <1>projects</1> of any complexity & bring {{0}} ideas to life. I have my own <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
+    text: `I'm a software engineer focused on <0>frontend development</0>. I build <1>projects</1> of varying complexity and bring {{0}} ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. I live in Auckland, New Zealand`,
     feature: {
       projects: {
-        label: 'Developed {{0}} commercial projects',
-        text: `My portfolio includes a variety of commercial projects, ranging from one-page landing pages to complex web applications. Most of them can be found in <0>${common.title.portfolio}</0>`,
+        label: '{{0}} commercial projects',
+        text: `My portfolio includes commercial projects of different scales: from one-page landing pages to large web applications. Most of them are available in <0>${common.title.portfolio}</0>`,
       },
       position: {
         label: 'Lead Frontend Engineer',
-        text: `I develop projects from scratch, write business logic, create layout, test, optimize and maintain the code. I plan and evaluate tasks, make code reviews and teach. More in <0>${common.title.skills}</0>`,
-      },
-      blogger: {
-        label: '{{0}} creator',
-        extraLabel: '& {{0}} creator',
-        text: `I've launched my own channel on YouTube. I share my journey in programming and life, as well as provide insights and knowledge. More details in the <0>${common.title.blog}</0> or on <1>{{1}}</1>`,
+        text: `I develop projects from scratch, write business logic, build layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
-        label: '{{0}} years of experience',
-        text: `Made my first website at the age of {{0}}. I went from junior coder to lead developer. I work for the New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        label: '{{0}} years of commercial experience',
+        text: `I built my first website at age {{0}}. I went from markup developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
-        label: 'Organized & standalone',
-        text: 'Most of the projects were developed by me independently. I like to take over the entire client part of the project from discussing the concept to the final implementation and support in production',
+        label: 'Organized and autonomous',
+        text: 'I have handled most projects independently. I like being responsible for the entire client side: from discussing the concept to implementation, launch and production support',
       },
       programming: {
         label: 'Love to code',
-        text: `Frontend is my main hobby. I like to experiment with {{0}} and {{1}}. I am interested in cross-platform and back-end development. My <0>${common.title.blog}</0> is also related to programming`,
+        text: 'Frontend is my main hobby. I experiment with {{0}}, {{1}} and neural networks. I am interested in interface design, language models and cross-platform development',
       },
-      geek: {
-        label: 'Geek & tech enthusiast',
-        text: 'I love tech, games, anime and digital culture. As a kid, I spent a lot of time with Nintendo, especially Mario and Zelda. I also like tinkering with hardware, configuring software and building ideal setups. One of them is my <0>dream desk</0>',
+      blogger: {
+        label: '{{0}} channel creator',
+        text: `I run a channel on {{0}}. I talk about my journey in programming and life, and share experience and knowledge. More in the <0>${common.title.blog}</0> or on <1>{{0}}</1>`,
       },
       growing: {
         label: 'Constantly learning',
-        text: 'I regularly "sharpen the saw", study new technologies, documentations, articles, courses, books and reports. I am constantly looking for new methods and tools to improve my efficiency',
+        text: 'I regularly "sharpen the saw": I study new technologies, documentation, articles, courses, videos, books and talks. I look for methods and tools that help me be more effective',
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'High quality is my main principle. I put all of myself into every project. The strength of the deadline, experience and the thought of "all is well in moderation" helps me focus on speed and result. I\'m a bit nerd',
+        text: 'Quality is my main principle. I put as much as I can into every project, but experience and deadlines help me keep the balance between speed and the final result',
       },
       education: {
-        label: 'Two higher educations',
-        text: 'Graduated from the "Moscow State University of Instrument Engineering and Computer Science" and "Russian State University of Cinematography". Studying in the latter boosted my soft skills well',
+        label: 'Two higher education degrees',
+        text: 'I graduated from Moscow State University of Instrument Engineering and Computer Science and the Russian State Institute of Cinematography. The second degree gave my soft skills a solid boost',
       },
       actor: {
         label: 'Former actor',
-        text: 'I used to act in movies, TV series and commercials, hosted events, worked as an animator and performed in educational theater. But then I came to my senses and switched to programming',
+        text: 'I used to act in movies, TV series and commercials, host events, work as an animator and perform in a student theater. Then I came to my senses and switched to development',
       },
-      sport: {
-        label: 'Sports lover',
-        text: 'Physical activity is especially relevant for the developer and every day I go in for sports. I like calisthenics, cycling, running, hiking and fitness. Recently discovered surfing',
-      },
-      travel: {
-        label: 'Traveler',
-        text: 'Visited {{0}} countries. I relocated to New Zealand. Once I climbed to the top of Fujiyama, visited Hobbiton and survived after meeting with the wild bear at the Dyatlov Pass',
+      geek: {
+        label: 'Tech geek',
+        text: 'I love technology, games, anime and {{0}} culture. I adore {{1}}, especially the {{2}} and {{3}} series. I am a huge fan of Arcane. I am interested in gadgets and hardware. I built my ideal <0>setup</0>',
       },
       resident: {
         label: 'New Zealand resident',
-        text: 'I relocated to New Zealand {{0}} and received residency as a Software Engineer. New Zealand is now the home I always dreamed of. The best country in the world',
+        text: 'I moved to New Zealand {{0}} years ago. I received residency as a {{1}}. Now I live in the country I always dreamed of',
+      },
+      sport: {
+        label: 'Into sports',
+        text: 'Physical activity is especially important for a developer, so I exercise every day. I enjoy surfing, calisthenics, fitness and hiking. I recently discovered climbing',
+      },
+      travel: {
+        label: 'Love to travel',
+        text: 'I have visited <0>{{0}} countries</0>. Once I climbed to the top of Mount Fuji, had a pint at the Green Dragon Inn in Hobbiton and survived an encounter with a wild bear at Dyatlov Pass',
       },
       love: {
         label: 'Happy husband',
-        text: "<0>She</0> is my main source of inspiration and best friend. We've been together for {{0}} years. I once developed a progressive web application to offer her a hand and heart",
+        text: '<0>She</0> is my main source of inspiration and my best friend. We have been together for {{0}} years. Once I developed a progressive web application to propose to her',
       },
       coffee: {
         label: 'Coffee lover',
-        text: '"Programmer is an organism that turns coffee into code". I start my working day with a cup of aromatic coffee. After a trip to Japan, I fell in love with matcha tea',
+        text: '"A programmer is a person who turns coffee into code." I start my workday with a cup of aromatic coffee. I like grinding whole beans and making flat whites on my {{0}}',
       },
     },
-    subtitle: 'Avatar and social',
+    subtitle: 'Avatar and social media',
   },
   skills: {
     text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I edit <5>{{4}} videos</5> in {{5}}',

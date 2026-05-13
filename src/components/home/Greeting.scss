@@ -3,7 +3,6 @@
   @include m.lg {
     padding-bottom: 80px;
   }
-
   @include m.xs {
     .Sections-SectionWrapper:first-child > & {
       padding-bottom: 0;
@@ -16,8 +15,24 @@
   margin-bottom: 0;
 }
 
+.Greeting-Subtext {
+  font-size: 48px;
+  @include m.lg {
+    font-size: 36px;
+  }
+  @include m.xs {
+    font-size: 28px;
+  }
+}
+
 .Greeting-Nowrap {
   white-space: nowrap;
+}
+
+.Greeting-IconWrapper {
+  position: relative;
+  top: 0.05em;
+  margin-left: 0.2em;
 }
 
 .Greeting-Icon {
@@ -32,13 +47,6 @@
   }
 }
 
-.Greeting-SubText {
-  margin-top: 16px;
-  margin-bottom: 0;
-  align-self: flex-start;
-  max-width: 400px;
-}
-
 .Greeting-Part {
   display: inline-block;
 }
@@ -48,64 +56,11 @@
   @include m.animationAlternate;
 }
 
-.Greeting-One {
-  @include m.animation(fadeInZoomInSm);
-}
-
-.Greeting-Two {
-  @include m.animation(fadeInLeft, 300ms);
-  position: relative;
-  top: 0.05em;
-  margin-left: 0.2em;
-}
-
-.Greeting-Three {
-  @include m.animation(fadeInBottom, 1s);
-  &_order_second {
-    animation-delay: 1250ms;
-  }
-  &_order_third {
-    animation-delay: 1500ms;
-  }
-}
-
-.Greeting-Four {
-  @include m.animation(fadeInTop, 1750ms);
-}
-
-.Greeting-Five {
-  @include m.animation(fadeInRight, 2250ms);
-}
-
-.Greeting-Six {
-  @include m.animation(fadeInBottom, 2650ms);
-}
-
-.Greeting-Seven {
-  @include m.animation(fadeInRight, 2850ms);
-}
-
-.Greeting-Eight {
-  @include m.animation(fadeInBottom, 3250ms);
-}
-
-.Greeting-Nine {
-  @include m.animation(fadeInBottom, 3450ms);
-}
-
-.Greeting-Ten {
-  @include m.animation(fadeInBottom, 3600ms);
-}
-
-.Greeting-Eleven {
-  @include m.animation(fadeInBottom, 3750ms);
-}
-
 .Greeting-Word {
   display: inline-flex;
 }
 
-.Greeting-Extra {
+.Greeting-Badge {
   align-self: flex-start;
   display: flex;
   position: relative;
@@ -130,13 +85,13 @@
   }
 }
 
-.Greeting-ExtraImg {
-  .Greeting-Extra_first > & {
+.Greeting-BadgeImg {
+  .Greeting-Badge_first > & {
     @include m.animation(fadeInZoomOut, 2450ms);
     width: 0.83em;
     height: 0.94em;
   }
-  .Greeting-Extra_second > & {
+  .Greeting-Badge_second > & {
     @include m.animation(fadeInZoomIn, 3050ms);
     width: 0.91em;
     height: 0.64em;
@@ -156,6 +111,15 @@
 
 .Greeting-Button {
   margin-bottom: 16px;
+  &:nth-child(1) {
+    @include m.animation(fadeInBottom, 3250ms);
+  }
+  &:nth-child(2) {
+    @include m.animation(fadeInBottom, 3350ms);
+  }
+  &:nth-child(3) {
+    @include m.animation(fadeInBottom, 3450ms);
+  }
   @include m.xs {
     &:first-child {
       order: -1;
@@ -173,7 +137,7 @@
   right: 10%;
   bottom: 0;
   width: 42%;
-  min-width: 320px;
+  min-width: 280px;
   max-width: 480px;
   @include m.lg {
     min-width: 200px;
@@ -194,4 +158,40 @@
     width: 180px;
     margin: auto;
   }
+}
+
+.Greeting-One {
+  @include m.animation(fadeInZoomInSm);
+}
+
+.Greeting-Two {
+  @include m.animation(fadeInLeft, 300ms);
+}
+
+.Greeting-Three {
+  @include m.animation(fadeInBottom, 1s);
+}
+
+.Greeting-Four {
+  @include m.animation(fadeInBottom, 1250ms);
+}
+
+.Greeting-Five {
+  @include m.animation(fadeInBottom, 1500ms);
+}
+
+.Greeting-Six {
+  @include m.animation(fadeInBottom, 1750ms);
+}
+
+.Greeting-Seven {
+  @include m.animation(fadeInRight, 2250ms);
+}
+
+.Greeting-Eight {
+  @include m.animation(fadeInRight, 2650ms);
+}
+
+.Greeting-Nine {
+  @include m.animation(fadeInRight, 2850ms);
 }

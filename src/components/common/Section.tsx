@@ -11,7 +11,7 @@ interface ISectionProps {
   children: ReactNode
   sectionRef?: RefObject<any>
   className?: string
-  contentClassName?: string
+  centeredContent?: boolean
   aside?: boolean
   wide?: boolean
   colorful?: boolean
@@ -23,7 +23,7 @@ export default function Section({
   children,
   sectionRef,
   className,
-  contentClassName,
+  centeredContent,
   aside,
   wide,
   colorful,
@@ -37,6 +37,7 @@ export default function Section({
       ref={sectionRef}
       className={cn(
         'Section',
+        centeredContent && 'Section_centeredContent',
         wide && 'Section_wide',
         colorful && 'Section_colorful',
         className
@@ -46,11 +47,7 @@ export default function Section({
         <Snowfall type={aside ? 'absolute' : undefined} />
       )}
       <div
-        className={cn(
-          contentClassName,
-          'Section-Content',
-          isFooter && 'Section-Content_footer'
-        )}
+        className={cn('Section-Content', isFooter && 'Section-Content_footer')}
       >
         {children}
         {isFooter && (

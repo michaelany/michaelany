@@ -28,7 +28,7 @@ export default function Banner() {
   const {t} = useTranslation()
 
   return (
-    <Section aside colorful contentClassName="Banner" nextTo={ROUTE.about}>
+    <Section aside colorful centeredContent nextTo={ROUTE.about}>
       <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
       <div className="Banner-Content">
         <Animate effect="zoomIn" duration="longest" easing="out">

@@ -181,6 +181,14 @@ const features: IFeature[] = [
   {
     tKey: 'actor',
     Icon: TheaterComedyIcon,
+    textValues: [TECHNOLOGY_TITLE.js],
+    links: [
+      <MuiLink
+        component={Link}
+        className="Link"
+        to={`${ROUTE.blog}/how-i-became-software-engineer`}
+      />,
+    ],
   },
   {
     tKey: 'geek',

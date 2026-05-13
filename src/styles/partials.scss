@@ -32,11 +32,11 @@
 }
 
 .Title {
+  @include m.animation(fadeIn);
   font-size: 72px;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 0.5em;
-  @include m.animation(fadeIn);
   &_mediumIndent {
     margin-bottom: 0.32em;
   }

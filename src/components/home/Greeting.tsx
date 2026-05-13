@@ -5,7 +5,7 @@ import {Button} from '@mui/material'
 import {
   WidgetsRounded as WidgetsIcon,
   MailRounded as MailIcon,
-  CameraAltRounded as CameraAltIcon,
+  SmartDisplayRounded as SmartDisplayIcon,
 } from '@mui/icons-material'
 
 import './Greeting.scss'
@@ -37,12 +37,12 @@ export default function Greeting() {
   const {t} = useTranslation()
 
   return (
-    <Section className="Greeting">
+    <Section centeredContent className="Greeting">
       <p className="Greeting-Text Greeting-One Title">
         {t(`home.hi.${getDayTime()}`)}
         <span className="Greeting-Nowrap">
           !
-          <span className="Greeting-Two">
+          <span className="Greeting-IconWrapper Greeting-Two">
             <HelloIcon className="Greeting-Icon" />
           </span>
         </span>
@@ -51,24 +51,24 @@ export default function Greeting() {
         <span className="Greeting-Part Greeting-Text Greeting-Three Title">
           {t('home.iam')}
         </span>{' '}
-        <span className="Greeting-Part Greeting-Three Greeting-Three_order_second">
+        <span className="Greeting-Part Greeting-Four">
           <span className="Greeting-Main">Michael</span>
         </span>{' '}
-        <span className="Greeting-Part Greeting-Three Greeting-Three_order_third">
+        <span className="Greeting-Part Greeting-Five">
           <span className="Greeting-Main">Any</span>
-          <span className="Greeting-Part Greeting-Four">,</span>
+          <span className="Greeting-Part Greeting-Six">,</span>
         </span>
       </h1>
       <p className="Greeting-Text Title">
-        <span className="Greeting-Part Greeting-Five">
+        <span className="Greeting-Part Greeting-Seven">
           <strong className="Greeting-Word">
             {t('home.occupation.part1')}
             <Link
-              className="Greeting-Extra Greeting-Extra_first"
+              className="Greeting-Badge Greeting-Badge_first"
               to={ROUTE.skills}
             >
               <img
-                className="Greeting-ExtraImg"
+                className="Greeting-BadgeImg"
                 width={60}
                 height={68}
                 src={frontendImg}
@@ -78,22 +78,22 @@ export default function Greeting() {
           </strong>
           <br />
           <strong>{t('home.occupation.part2')}</strong>{' '}
-          <span className="Greeting-Part Greeting-Six">
-            {t('home.occupation.part3')}
+          <span className="Greeting-Part Greeting-Subtext Greeting-Eight">
+            &&
           </span>
         </span>
         <br />
-        <span className="Greeting-Part Greeting-Seven">
+        <span className="Greeting-Part Greeting-Nine">
           <strong>
             <span className="Greeting-Word">
-              {t('home.occupation.part4')}
+              {t('home.occupation.part3')}
               <a
                 {...BLANK_LINK_PROPS}
-                className="Greeting-Extra Greeting-Extra_second"
+                className="Greeting-Badge Greeting-Badge_second"
                 href={CONTACT_LINK.youTube.href}
               >
                 <img
-                  className="Greeting-ExtraImg"
+                  className="Greeting-BadgeImg"
                   width={65}
                   height={46}
                   src={youtubeImg}
@@ -104,18 +104,11 @@ export default function Greeting() {
           </strong>
         </span>
       </p>
-      <p className="Greeting-SubText Greeting-Eight MainText">
-        {t('about.feature.position.label')}{' '}
-        {t('about.feature.blogger.extraLabel', {
-          replace: [CONTACT_LINK.youTube.title],
-        })}
-        .
-      </p>
       <div className="Greeting-Actions Actions">
         {links.map(({Icon, ...link}) => (
           <Button
             key={link.key}
-            className={`Greeting-${link.order} Greeting-Button Button Button_color_${link.color}`}
+            className={`Greeting-Button Button Button_color_${link.color}`}
             component={Link}
             to={ROUTE[link.key]}
             size="large"
@@ -150,7 +143,7 @@ export default function Greeting() {
 }
 
 const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
-  const hours: number = getHours(new Date())
+  const hours = getHours(new Date())
   if (hours >= 0 && hours < 6) return 'night'
   if (hours >= 6 && hours < 12) return 'morning'
   if (hours >= 12 && hours < 18) return 'afternoon'
@@ -158,9 +151,9 @@ const getDayTime = (): 'night' | 'morning' | 'afternoon' | 'evening' => {
 }
 
 const links = [
-  {key: 'portfolio', color: 'blue', order: 'Nine', Icon: WidgetsIcon},
-  {key: 'contact', color: 'green', order: 'Ten', Icon: MailIcon},
-  {key: 'blog', color: 'red', order: 'Eleven', Icon: CameraAltIcon},
+  {key: 'portfolio', color: 'blue', Icon: WidgetsIcon},
+  {key: 'contact', color: 'green', Icon: MailIcon},
+  {key: 'blog', color: 'red', Icon: SmartDisplayIcon},
 ]
 
 const me = {
