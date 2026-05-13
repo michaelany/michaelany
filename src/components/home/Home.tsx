@@ -7,7 +7,7 @@ import Banner from './Banner'
 
 export default function Home() {
   // matches for key to responsive alternate animations reset
-  const md: boolean = useMediaQuery(QUERY_BREAKPOINT.md)
+  const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
     <Sections

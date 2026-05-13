@@ -1,4 +1,5 @@
 import {differenceInYears} from 'date-fns'
+import {useTranslation} from 'react-i18next'
 import {Link} from 'react-router-dom'
 import {Link as MuiLink} from '@mui/material'
 import type {ReactNode} from 'react'
@@ -55,29 +56,35 @@ export default function About() {
   )
 }
 
-const CountriesVisited = ({children}: ICountriesVisitedProps) => (
-  <Tooltip
-    slotProps={{
-      tooltip: {
-        sx: {
-          maxWidth: 'none',
+const CountriesVisited = ({children}: ICountriesVisitedProps) => {
+  const {t} = useTranslation()
+
+  return (
+    <Tooltip
+      slotProps={{
+        tooltip: {
+          sx: {
+            maxWidth: 'none',
+          },
         },
-      },
-    }}
-    title={
-      <ul className="About-Countries">
-        {countriesVisited.map(country => (
-          <li key={country}>{country}</li>
-        ))}
-      </ul>
-    }
-    enterDelay={0}
-  >
-    <MuiLink component="span" className="About-TooltipElement Link">
-      {children}
-    </MuiLink>
-  </Tooltip>
-)
+      }}
+      title={
+        <ul className="About-Countries">
+          {countriesVisited.map(({key, flag}) => (
+            <li key={key}>
+              {flag} {t(`about.country.${key}`)}
+            </li>
+          ))}
+        </ul>
+      }
+      enterDelay={0}
+    >
+      <MuiLink component="span" className="About-TooltipElement Link">
+        {children}
+      </MuiLink>
+    </Tooltip>
+  )
+}
 
 const textValues = ['UI/UX', 'title.blog', CONTACT_LINK.youTube.title]
 
@@ -93,31 +100,31 @@ const transComponents = [
 ]
 
 const countriesVisited = [
-  '🏳️ Abkhazia',
-  '🇦🇱 Albania',
-  '🇦🇺 Australia',
-  '🇧🇾 Belarus',
-  '🇧🇦 Bosnia & Herzegovina',
-  '🇨🇾 Cyprus',
-  '🇨🇿 Czech Republic',
-  '🇪🇬 Egypt',
-  '🇫🇷 France',
-  '🇩🇪 Germany',
-  '🇬🇷 Greece',
-  '🇮🇹 Italy',
-  '🇯🇵 Japan',
-  '🇱🇻 Latvia',
-  '🇲🇻 Maldives',
-  '🇲🇪 Montenegro',
-  '🇳🇿 New Zealand',
-  '🇷🇺 Russian Federation',
-  '🇷🇸 Serbia',
-  '🇪🇸 Spain',
-  '🇱🇰 Sri Lanka',
-  '🇹🇭 Thailand',
-  '🇹🇷 Turkey',
-  '🇺🇦 Ukraine',
-  '🇻🇦 Vatican City',
+  {key: 'abkhazia', flag: '🏳️'},
+  {key: 'albania', flag: '🇦🇱'},
+  {key: 'australia', flag: '🇦🇺'},
+  {key: 'belarus', flag: '🇧🇾'},
+  {key: 'bosniaHerzegovina', flag: '🇧🇦'},
+  {key: 'cyprus', flag: '🇨🇾'},
+  {key: 'czechRepublic', flag: '🇨🇿'},
+  {key: 'egypt', flag: '🇪🇬'},
+  {key: 'france', flag: '🇫🇷'},
+  {key: 'germany', flag: '🇩🇪'},
+  {key: 'greece', flag: '🇬🇷'},
+  {key: 'italy', flag: '🇮🇹'},
+  {key: 'japan', flag: '🇯🇵'},
+  {key: 'latvia', flag: '🇱🇻'},
+  {key: 'maldives', flag: '🇲🇻'},
+  {key: 'montenegro', flag: '🇲🇪'},
+  {key: 'newZealand', flag: '🇳🇿'},
+  {key: 'russianFederation', flag: '🇷🇺'},
+  {key: 'serbia', flag: '🇷🇸'},
+  {key: 'spain', flag: '🇪🇸'},
+  {key: 'sriLanka', flag: '🇱🇰'},
+  {key: 'thailand', flag: '🇹🇭'},
+  {key: 'turkey', flag: '🇹🇷'},
+  {key: 'ukraine', flag: '🇺🇦'},
+  {key: 'vaticanCity', flag: '🇻🇦'},
 ]
 
 const features: IFeature[] = [
