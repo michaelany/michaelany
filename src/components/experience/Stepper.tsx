@@ -50,8 +50,8 @@ export default function Stepper({sectionRef}: IStepperProps) {
             <time className="Time">
               {tPeriodPart(t, item.period.from)}
               {item.period.to
-                ? ` - ${tPeriodPart(t, item.period.to)}`
-                : index === steps.length - 1 && ' - ...'}
+                ? ` — ${tPeriodPart(t, item.period.to)}`
+                : index === steps.length - 1 && ' — ...'}
             </time>
           </StepLabel>
           <StepContent>

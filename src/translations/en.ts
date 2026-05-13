@@ -103,7 +103,7 @@ const EN = {
       },
       geek: {
         label: 'Tech geek',
-        text: "I like technology, games, anime and {{0}} culture. I love {{1}}, especially the {{2}} and {{3}} games, and I'm a huge fan of Arcane. I'm also interested in gadgets and hardware. I built my ideal <0>setup</0>",
+        text: "I like technology, games, anime and {{0}} culture. I love {{1}}, especially the {{2}} and {{3}} series, and I'm a huge fan of Arcane. I'm also interested in gadgets and hardware. I built my ideal <0>setup</0>",
       },
       resident: {
         label: 'New Zealand resident',
@@ -275,7 +275,7 @@ const EN = {
           'Studied and applied in practice a lot technologies and tools',
         technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}}',
         speed:
-          'Set a personal record for the speed of completion of a project - {{0}} day',
+          'Set a personal record for the speed of completion of a project — {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
         visa: 'Relocated to New Zealand on a work visa by the company',
         work: 'Improved teamwork skills',
@@ -529,7 +529,7 @@ const EN = {
       },
       'my-dreamdesk': {
         title: 'My dreamdesk {{0}} New no monitors setup',
-        text: "I've finally fulfilled my dream - created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing, and why I don't need a large monitor",
+        text: "I've finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing, and why I don't need a large monitor",
       },
       'day-in-a-life-new-zealand': {
         title:
