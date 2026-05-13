@@ -67,7 +67,7 @@ const EN = {
       },
       position: {
         label: 'Lead Frontend Engineer',
-        text: `I build projects from scratch, write business logic, create layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
+        text: `I build projects from scratch, design architecture, write business logic, create layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
         label: '{{0}} years of experience',
@@ -75,11 +75,11 @@ const EN = {
       },
       organizing: {
         label: 'Organized and independent',
-        text: 'I have built most projects on my own. I like being responsible for the entire client side: from discussing the concept to implementation, launch and production support',
+        text: 'I have built most projects on my own. I like being responsible for the entire client side: from discussing the concept, research and prototyping to implementation, launch and production support',
       },
       programming: {
         label: 'Love to code',
-        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in interface design, language models and cross-platform development",
+        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in interface design, cross-platform development and language models",
       },
       blogger: {
         label: '{{0}} channel creator',
@@ -91,7 +91,7 @@ const EN = {
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'Quality is my main standard. I pay attention to every detail of a project, while experience and deadlines help me balance speed and the final result. I value consistency, a systematic approach, thoughtful structure and order in everything',
+        text: 'Quality is my main principle. I pay close attention to every detail of a project, but experience and deadlines help me balance speed and quality. I value consistency and a systematic approach. I like to keep things simple and organized',
       },
       education: {
         label: 'Two higher education degrees',
