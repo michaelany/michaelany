@@ -59,7 +59,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a software engineer with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes and complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
+    text: `I'm a <0>software engineer</0> with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes and complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: '{{0}} commercial projects',
