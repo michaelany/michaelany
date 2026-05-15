@@ -91,7 +91,7 @@ const EN = {
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'Quality is my main principle. I pay close attention to every detail of a project, but experience and deadlines help me balance speed and quality. I value consistency and a systematic approach. I like to keep things simple and organized',
+        text: 'Quality is my main principle. I pay close attention to every detail of a project, but experience and deadlines help me balance speed and quality. I like to keep things consistent, simple and organized',
       },
       education: {
         label: 'Two higher education degrees',
