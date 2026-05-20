@@ -159,60 +159,84 @@ const EN = {
     text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I create <5>{{4}} videos</5> and edit them in <4>{{5}}</4>',
     feature: {
       interface: {
-        label: 'Creating reliable & well-functioning interfaces',
-        text: 'I implement a system of interface elements with convenient interaction and well-thought-out business logic. I care about cross-browser compatibility, security and handle possible errors',
+        label: 'Creating usable and reliable interfaces',
+        text: 'I build polished interfaces with clear interactions and well-thought-out business logic. I understand when to use a specific element, component, or widget. I handle errors and care about security and {{0}}',
       },
       performance: {
-        label: 'Writing modern & productive code',
-        text: 'I use {{0}} standards, {{1}}, {{2}}, {{3}}... Optimizing heavy computations. I avoid unnecessary operations and memory leaks. Applying productivity techniques',
+        label: 'Writing modern and performant code',
+        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}} and other modern standards. I avoid unnecessary operations and memory leaks. I memoize heavy computations and optimize performance and rendering',
       },
-      efficient: {
-        label: 'Choosing a simple way to solve the problem',
-        text: 'I try to find a clear and optimal solution for any task. I know when to use a specific method, pattern, library or tool',
-      },
-      markup: {
-        label: 'Creating semantic, cross-browser & {{0}} markup',
-        text: 'I make pixel-by-pixel layouts. I use semantic tags and don\'t suffer from "divatosis". I test in all modern browsers, care about accessibility and also build HTML emails',
-      },
-      patterns: {
-        label: 'Using a lot of patterns & techniques',
-        text: 'Memoization, virtualization, lazy loading, optimistic update, hydration, destructuring, decorator, currying, delegation, recursion, module, observer, proxy, mixin, throttling, debounce..',
-      },
-      requests: {
-        label: 'Handling server requests',
-        text: 'Deduplication, interceptor, caching, prefetching, aborting, retrying, authentication, mutation, pagination, infinite scrolling, progress tracking, offline, parallel and dependent queries..',
-      },
-      modules: {
-        label: 'Building a modular & optimal project architecture',
-        text: 'I avoid over-nesting, follow the principle of separation of concerns, {{0}} and {{1}}. Each module, class or component is responsible for one functionality type. Configuring the project build system',
-      },
-      tools: {
-        label: 'Using modern frameworks, libraries, and tools',
-        text: 'I regularly follow the technology updates and in constant search for new ones. In addition to <0>general</0> I use many additional libraries and tools',
-      },
-      responsive: {
-        label: 'Implementing responsive interface & animations',
-        text: 'I use {{0}} approaches, test the interface at every pixel from the minimum to the maximum screen width, create productive {{1}}, {{2}} and {{3}} animations',
+      architecture: {
+        label: 'Designing modular and scalable architecture',
+        text: 'I think through architecture for each project. I use a modular approach, custom {{0}}, and {{1}} principles. I create a clear code structure with separated responsibilities that is easy to maintain and extend',
       },
       code: {
-        label: 'Following a consistent code style',
-        text: 'I write self-documenting and declarative code, explore popular style guides practices, use {{0}} and {{1}}. Human-readable code is more important than the fast one',
+        label: 'Writing clean and maintainable code',
+        text: 'I write self-documenting code in a declarative style. I use {{0}}, {{1}}, and proven style guides. I follow {{2}}, {{3}}, and {{4}} principles. I refactor regularly. Readable code matters more than a quick fix',
+      },
+      state: {
+        label: 'Managing application state',
+        text: 'I separate local, global, server, and {{0}} state. I build predictable data flow without duplication. I think through data loading, caching, synchronization, and updates',
+      },
+      tools: {
+        label: 'Using modern libraries and tools',
+        text: 'I keep up with technology changes. I like the {{0}} ecosystem. I add dependencies intentionally, so each one solves a specific problem. I choose frameworks, libraries, utilities, and tools based on the project. My <0>core toolkit</0>',
+      },
+      patterns: {
+        label: 'Using many patterns and techniques',
+        text: 'Memoization, virtualization, lazy loading, optimistic updates, destructuring, decorator, currying, delegation, recursion, module, observer, proxy, mixin, throttling, debouncing, hydration..',
+      },
+      server: {
+        label: 'Handling server requests',
+        text: 'Deduplication, interceptors, caching, prefetching, aborting, retries, authentication, mutations, pagination, infinite scroll, progress tracking, offline mode, streams, parallel and dependent requests..',
+      },
+      markup: {
+        label: 'Creating semantic, cross-browser and {{0}} markup',
+        text: 'I build layouts pixel by pixel. I use modern {{0}} features and semantic {{1}} tags. I avoid div soup. I account for browser differences, care about accessibility, and build email templates',
+      },
+      responsive: {
+        label: 'Adapting interfaces for different devices',
+        text: 'I use {{0}} approaches. I set up breakpoints and create flexible responsive layouts for different devices and resolutions. I test interfaces across screen widths down to the minimum size',
+      },
+      animation: {
+        label: 'Creating advanced animations',
+        text: 'I create performant {{0}}, {{1}}, {{2}}, and {{3}} animations: smooth transitions, microinteractions, interactive scenarios, scroll animations, and 3D effects. I keep them smooth and purposeful. I like {{4}}, {{5}}, and {{6}}',
+      },
+      media: {
+        label: 'Working with media and design',
+        text: 'I work with raster and vector images, video, and documents. I choose suitable file formats and optimize media without quality loss. I prototype layouts and contribute to design work. I work in {{0}} and {{1}}',
       },
       test: {
-        label: 'Optimizing, testing & refactoring',
-        text: 'I check project perfomance in various browsers and devices. I measure and speed up the loading of resources. Minifing and optimizing files, images. Writing unit, functional, and end-to-end tests. Refactoring code',
+        label: 'Testing and optimizing',
+        text: 'I write unit, integration, and end-to-end tests. I prefer {{0}} and {{1}}. I create and integrate {{2}} tests to validate product hypotheses. I optimize resource loading, {{3}}, and {{4}}',
+      },
+      ai: {
+        label: 'Using {{0}} tools',
+        text: 'I use {{0}} agents for development, reviews, and analysis. I like {{1}} and {{2}}. I do prompt engineering, validate {{0}} output, and work with {{3}}. I understand the capabilities and limits of generative {{0}}',
+      },
+      integrations: {
+        label: 'Integrating third-party services',
+        text: 'I connect payment systems, {{0}}, analytics, and external platforms. I have experience integrating {{1}}s and {{2}}s for {{3}}, {{4}}, {{5}}, {{6}}, {{7}}, and {{8}} services. I adapt integrations to project requirements',
+      },
+      cicd: {
+        label: 'Working with infrastructure and {{0}}',
+        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}}, {{5}}, and other cloud services for deployment. I set up build pipelines, test and script automation, environments, and supporting processes for stable releases',
       },
       tasks: {
-        label: 'Planing & decomposing tasks',
-        text: 'I plan the backlog, group, decompose and evaluate tasks. I use {{0}} and {{1}} methodologies. Using task managers and my own planning system',
+        label: 'Planning and decomposing tasks',
+        text: 'I plan the backlog, decompose, and estimate tasks. I account for priorities, dependencies, risks, and acceptance criteria. I turn ideas into a clear work plan. I combine {{0}}, {{1}}, and my own planning system',
+      },
+      ownership: {
+        label: 'Taking responsibility for the result',
+        text: 'I do not wait for step-by-step instructions. I clarify requirements, notice problems, and propose solutions. I care about project quality and consistency. I work directly with the team and stakeholders',
       },
       mentor: {
-        label: 'Making code reviews & teaching',
-        text: "I'm mentoring, giving feedback on pull requests and sharing my experience with colleagues. Developed a corporate internship program. I have experience in recruitment",
+        label: 'Doing code reviews and teaching',
+        text: 'I mentor developers, give constructive feedback in pull requests, and share experience with the team. I developed a corporate internship program and have experience conducting technical interviews',
       },
       blog: {
-        label: 'Creating {{0}} videos',
-        text: 'I write and edit scripts, plan shoots, film, edit, make color correction, process audio, create thumbnails and publish videos',
+        label: 'Creating content for {{0}}',
+        text: 'I write and edit scripts, speak on camera, and think through video structure. I shoot, edit, process audio, color grade, and create thumbnails. I prepare publications and communicate with subscribers',
       },
     },
     subtitle: 'Technologies',

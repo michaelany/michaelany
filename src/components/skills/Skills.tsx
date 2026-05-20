@@ -39,6 +39,7 @@ export default function Skills() {
     {
       tKey: 'interface',
       Icon: ViewQuiltIcon,
+      textValues: ['SEO'],
     },
     {
       tKey: 'performance',
@@ -53,21 +54,29 @@ export default function Skills() {
     },
     {
       tKey: 'architecture',
-      textValues: ['DRY', 'KISS'],
+      textValues: ['FSD', 'SOLID'],
       Icon: AccountTreeIcon,
     },
     {
       tKey: 'code',
       Icon: AutoFixHighIcon,
-      textValues: [TECHNOLOGY_TITLE.eslint, TECHNOLOGY_TITLE.prettier],
+      textValues: [
+        TECHNOLOGY_TITLE.eslint,
+        TECHNOLOGY_TITLE.prettier,
+        'DRY',
+        'KISS',
+        'YAGNI',
+      ],
     },
     {
       tKey: 'state',
       Icon: HubIcon,
+      textValues: ['URL'],
     },
     {
       tKey: 'tools',
       Icon: ConstructionIcon,
+      textValues: [TECHNOLOGY_TITLE.react],
       links: [
         <MuiLink
           component="button"
@@ -93,41 +102,76 @@ export default function Skills() {
     {
       tKey: 'markup',
       labelValues: ['pixel-perfect'],
+      textValues: [TECHNOLOGY_TITLE.css, TECHNOLOGY_TITLE.html],
       Icon: DesignServicesIcon,
     },
     {
       tKey: 'responsive',
       Icon: DevicesIcon,
-      textValues: [
-        'desktop / mobile first',
-        TECHNOLOGY_TITLE.js,
-        TECHNOLOGY_TITLE.css,
-        TECHNOLOGY_TITLE.svg,
-      ],
+      textValues: ['desktop / mobile first'],
     },
     {
       tKey: 'animation',
       Icon: AnimationIcon,
+      textValues: [
+        TECHNOLOGY_TITLE.js,
+        TECHNOLOGY_TITLE.css,
+        TECHNOLOGY_TITLE.svg,
+        'WebGL',
+        TECHNOLOGY_TITLE.gsap,
+        'Motion',
+        'Three.js',
+      ],
     },
     {
       tKey: 'media',
       Icon: PermMediaIcon,
+      textValues: [TECHNOLOGY_TITLE.sketch, TECHNOLOGY_TITLE.figma],
     },
     {
       tKey: 'test',
       Icon: ScienceIcon,
+      textValues: [
+        'Vitest',
+        'Playwright',
+        'A/B',
+        'Lighthouse score',
+        'Core Web Vitals',
+      ],
     },
     {
       tKey: 'ai',
       Icon: SmartToyIcon,
+      labelValues: ['AI'],
+      textValues: ['AI', 'Claude Code', 'Codex', 'MCP'],
     },
     {
       tKey: 'integrations',
       Icon: IntegrationInstructionsIcon,
+      textValues: [
+        'headless CMS',
+        'SDK',
+        'API',
+        'Stripe',
+        'Airwallex',
+        'Strapi',
+        'Firebase',
+        'Amplitude',
+        'Google',
+      ],
     },
     {
       tKey: 'cicd',
       Icon: PublishedWithChangesIcon,
+      labelValues: ['CI/CD'],
+      textValues: [
+        'CI/CD',
+        'GitHub Actions',
+        'Cloudflare',
+        'Azure',
+        'Vercel',
+        'AWS',
+      ],
     },
     {
       tKey: 'tasks',
