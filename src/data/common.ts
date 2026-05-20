@@ -147,7 +147,7 @@ export const TECHNOLOGY_TITLE = {
   js: 'JavaScript',
   ts: 'TypeScript',
   react: 'React',
-  reactquery: 'React Query',
+  reactquery: 'TanStack Query',
   redux: 'Redux',
   zustand: 'Zustand',
   mobx: 'MobX',

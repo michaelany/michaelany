@@ -2,20 +2,26 @@ import {useState, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import {Link as MuiLink, type ButtonBaseActions} from '@mui/material'
 import {
-  PsychologyRounded as PsychologyIcon,
   SpeedRounded as SpeedIcon,
-  BuildRounded as BuildIcon,
+  ConstructionRounded as ConstructionIcon,
   AccountTreeRounded as AccountTreeIcon,
-  DevicesOtherRounded as DevicesOtherIcon,
-  BrushRounded as BrushIcon,
-  VerifiedUserRounded as VerifiedUserIcon,
-  ChildFriendlyRounded as ChildFriendlyIcon,
-  ListAltRounded as ListAltIcon,
-  LoopRounded as LoopIcon,
-  PaletteRounded as PaletteIcon,
+  DevicesRounded as DevicesIcon,
+  AutoFixHighRounded as AutoFixHighIcon,
+  ViewQuiltRounded as ViewQuiltIcon,
+  GroupsRounded as GroupsIcon,
+  ChecklistRounded as ChecklistIcon,
+  ScienceRounded as ScienceIcon,
+  DesignServicesRounded as DesignServicesIcon,
   ExtensionRounded as ExtensionIcon,
   DnsRounded as DnsIcon,
   MovieRounded as MovieIcon,
+  HubRounded as HubIcon,
+  AnimationRounded as AnimationIcon,
+  PermMediaRounded as PermMediaIcon,
+  SmartToyRounded as SmartToyIcon,
+  IntegrationInstructionsRounded as IntegrationInstructionsIcon,
+  PublishedWithChangesRounded as PublishedWithChangesIcon,
+  AssignmentTurnedInRounded as AssignmentTurnedInIcon,
 } from '@mui/icons-material'
 
 import {Sections, Info} from '#components/common'
@@ -32,43 +38,36 @@ export default function Skills() {
   const featuresRef = useRef<IFeature[]>([
     {
       tKey: 'interface',
-      Icon: VerifiedUserIcon,
+      Icon: ViewQuiltIcon,
     },
     {
       tKey: 'performance',
       Icon: SpeedIcon,
       textValues: [
-        'ES6-ES14',
-        `${TECHNOLOGY_TITLE.ts} 5`,
-        `${TECHNOLOGY_TITLE.react} Hooks`,
+        'ES6-ES15',
+        `${TECHNOLOGY_TITLE.ts} 6`,
+        `${TECHNOLOGY_TITLE.react} 19`,
+        'Vue 3',
         'CSS Grid',
       ],
     },
     {
-      tKey: 'efficient',
-      Icon: PsychologyIcon,
-    },
-    {
-      tKey: 'markup',
-      labelValues: ['pixel-perfect'],
-      Icon: PaletteIcon,
-    },
-    {
-      tKey: 'patterns',
-      Icon: ExtensionIcon,
-    },
-    {
-      tKey: 'requests',
-      Icon: DnsIcon,
-    },
-    {
-      tKey: 'modules',
+      tKey: 'architecture',
       textValues: ['DRY', 'KISS'],
       Icon: AccountTreeIcon,
     },
     {
+      tKey: 'code',
+      Icon: AutoFixHighIcon,
+      textValues: [TECHNOLOGY_TITLE.eslint, TECHNOLOGY_TITLE.prettier],
+    },
+    {
+      tKey: 'state',
+      Icon: HubIcon,
+    },
+    {
       tKey: 'tools',
-      Icon: BuildIcon,
+      Icon: ConstructionIcon,
       links: [
         <MuiLink
           component="button"
@@ -84,8 +83,21 @@ export default function Skills() {
       ],
     },
     {
+      tKey: 'patterns',
+      Icon: ExtensionIcon,
+    },
+    {
+      tKey: 'server',
+      Icon: DnsIcon,
+    },
+    {
+      tKey: 'markup',
+      labelValues: ['pixel-perfect'],
+      Icon: DesignServicesIcon,
+    },
+    {
       tKey: 'responsive',
-      Icon: DevicesOtherIcon,
+      Icon: DevicesIcon,
       textValues: [
         'desktop / mobile first',
         TECHNOLOGY_TITLE.js,
@@ -94,22 +106,41 @@ export default function Skills() {
       ],
     },
     {
-      tKey: 'code',
-      Icon: BrushIcon,
-      textValues: [TECHNOLOGY_TITLE.eslint, TECHNOLOGY_TITLE.prettier],
+      tKey: 'animation',
+      Icon: AnimationIcon,
+    },
+    {
+      tKey: 'media',
+      Icon: PermMediaIcon,
     },
     {
       tKey: 'test',
-      Icon: LoopIcon,
+      Icon: ScienceIcon,
+    },
+    {
+      tKey: 'ai',
+      Icon: SmartToyIcon,
+    },
+    {
+      tKey: 'integrations',
+      Icon: IntegrationInstructionsIcon,
+    },
+    {
+      tKey: 'cicd',
+      Icon: PublishedWithChangesIcon,
     },
     {
       tKey: 'tasks',
       textValues: ['Kanban / Scrum', 'GTD'],
-      Icon: ListAltIcon,
+      Icon: ChecklistIcon,
+    },
+    {
+      tKey: 'ownership',
+      Icon: AssignmentTurnedInIcon,
     },
     {
       tKey: 'mentor',
-      Icon: ChildFriendlyIcon,
+      Icon: GroupsIcon,
     },
     {
       tKey: 'blog',
@@ -173,7 +204,7 @@ const textValues = [
   TECHNOLOGY_TITLE.ts,
   TECHNOLOGY_TITLE.react,
   TECHNOLOGY_TITLE.reactquery,
-  TECHNOLOGY_TITLE.mui,
+  TECHNOLOGY_TITLE.zustand,
   CONTACT_LINK.youTube.title,
   TECHNOLOGY_TITLE.fcpx,
 ]

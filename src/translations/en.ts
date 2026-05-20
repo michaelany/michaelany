@@ -59,7 +59,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a <0>software engineer</0> with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes and complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
+    text: `I'm a <0>software engineer</0> with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes && complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: '{{0}} commercial projects',
@@ -156,7 +156,7 @@ const EN = {
     subtitle: 'Avatar and social media',
   },
   skills: {
-    text: 'I craft <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> & <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I edit <5>{{4}} videos</5> in {{5}}',
+    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I create <5>{{4}} videos</5> and edit them in <4>{{5}}</4>',
     feature: {
       interface: {
         label: 'Creating reliable & well-functioning interfaces',
