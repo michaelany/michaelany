@@ -54,7 +54,7 @@ const EN = {
     occupation: {
       part1: 'frontend',
       part2: 'engineer',
-      part3: 'YouTuber',
+      part3: 'creator',
     },
     subtitle: 'Banner',
   },
@@ -103,7 +103,7 @@ const EN = {
       },
       geek: {
         label: 'Tech geek',
-        text: "I like technology, games, anime and {{0}} culture. I love {{1}}, especially the {{2}} and {{3}} series, and I'm a huge fan of Arcane. I'm also interested in gadgets and hardware. I built my ideal <0>setup</0>",
+        text: "I like technology, games, anime and {{0}} culture. I love {{1}}, especially the {{2}} and {{3}} series, and I'm a huge fan of Arcane. I'm also interested in gadgets and hardware. I built my <0>dreamdesk</0>",
       },
       resident: {
         label: 'New Zealand resident',
@@ -156,34 +156,34 @@ const EN = {
     subtitle: 'Avatar and social media',
   },
   skills: {
-    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I create <5>{{4}} videos</5> and edit them in <4>{{5}}</4>',
+    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I prefer <4>{{4}}</4> && <4>{{5}}</4> as AI assistants. I create <5>{{6}} videos</5> and edit them in <4>{{7}}</4>',
     feature: {
       interface: {
         label: 'Creating usable and reliable interfaces',
-        text: 'I build polished interfaces with clear interactions and well-thought-out business logic. I understand when to use a specific element, component, or widget. I handle errors and care about security and {{0}}',
+        text: 'I build polished interfaces with clear interactions and well-thought-out business logic. I understand when to use a specific element, component or widget. I handle edge cases and pay attention to security and {{0}}',
       },
       performance: {
         label: 'Writing modern and performant code',
-        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}} and other modern standards. I avoid unnecessary operations and memory leaks. I memoize heavy computations and optimize performance and rendering',
+        text: 'I work with {{0}}, {{1}}, {{2}}, {{3}}, {{4}} and etc. I avoid unnecessary operations and memory leaks. I memoize heavy computations and optimize performance',
       },
       architecture: {
         label: 'Designing modular and scalable architecture',
-        text: 'I think through architecture for each project. I use a modular approach, custom {{0}}, and {{1}} principles. I create a clear code structure with separated responsibilities that is easy to maintain and extend',
+        text: 'I think through architecture for each project. I use a modular approach, custom {{0}} and {{1}} principles. I create clear code structure with a clean separation of responsibilities, so it is easy to maintain and extend',
       },
       code: {
         label: 'Writing clean and maintainable code',
-        text: 'I write self-documenting code in a declarative style. I use {{0}}, {{1}}, and proven style guides. I follow {{2}}, {{3}}, and {{4}} principles. I refactor regularly. Readable code matters more than a quick fix',
+        text: 'I write self-documenting code in a declarative style. I use {{0}}, {{1}} and proven style guides. I follow {{2}}, {{3}} and {{4}} principles. I refactor regularly. Readable code matters more than micro-optimizations',
       },
       state: {
         label: 'Managing application state',
-        text: 'I separate local, global, server, and {{0}} state. I build predictable data flow without duplication. I think through data loading, caching, synchronization, and updates',
+        text: 'I separate local, global, server and {{0}} state. I build predictable data flow without duplication. I think through data loading, caching, synchronization and updates',
       },
       tools: {
         label: 'Using modern libraries and tools',
-        text: 'I keep up with technology changes. I like the {{0}} ecosystem. I add dependencies intentionally, so each one solves a specific problem. I choose frameworks, libraries, utilities, and tools based on the project. My <0>core toolkit</0>',
+        text: 'I keep up with technology changes. I like the {{0}} ecosystem. I add dependencies intentionally, so each one solves a specific problem. I choose frameworks, libraries, utilities and tools based on the project. My <0>core toolkit</0>',
       },
       patterns: {
-        label: 'Using many patterns and techniques',
+        label: 'Applying various patterns and techniques',
         text: 'Memoization, virtualization, lazy loading, optimistic updates, destructuring, decorator, currying, delegation, recursion, module, observer, proxy, mixin, throttling, debouncing, hydration..',
       },
       server: {
@@ -192,7 +192,7 @@ const EN = {
       },
       markup: {
         label: 'Creating semantic, cross-browser and {{0}} markup',
-        text: 'I build layouts pixel by pixel. I use modern {{0}} features and semantic {{1}} tags. I avoid div soup. I account for browser differences, care about accessibility, and build email templates',
+        text: 'I build layouts pixel by pixel. I use modern {{0}} features and semantic {{1}} tags. I avoid "div soup". I account for browser differences, care about accessibility and build email templates',
       },
       responsive: {
         label: 'Adapting interfaces for different devices',
@@ -200,43 +200,43 @@ const EN = {
       },
       animation: {
         label: 'Creating advanced animations',
-        text: 'I create performant {{0}}, {{1}}, {{2}}, and {{3}} animations: smooth transitions, microinteractions, interactive scenarios, scroll animations, and 3D effects. I keep them smooth and purposeful. I like {{4}}, {{5}}, and {{6}}',
+        text: 'I create performant {{0}}, {{1}}, {{2}} and {{3}} animations: smooth transitions, microinteractions, interactive flows, scroll animations and 3D effects. I keep them smooth and purposeful. I like {{4}}, {{5}} and {{6}}',
       },
       media: {
         label: 'Working with media and design',
-        text: 'I work with raster and vector images, video, and documents. I choose suitable file formats and optimize media without quality loss. I prototype layouts and contribute to design work. I work in {{0}} and {{1}}',
+        text: 'I work with raster and vector images, video and documents. I choose suitable file formats and optimize media without visible quality loss. I prototype layouts and contribute to design work. I work in {{0}} and {{1}}',
       },
       test: {
         label: 'Testing and optimizing',
-        text: 'I write unit, integration, and end-to-end tests. I prefer {{0}} and {{1}}. I create and integrate {{2}} tests to validate product hypotheses. I optimize resource loading, {{3}}, and {{4}}',
+        text: 'I write unit, integration and end-to-end tests. I prefer {{0}} and {{1}}. I create and integrate {{2}} tests to validate product hypotheses. I optimize resource loading, {{3}} and {{4}}',
       },
       ai: {
         label: 'Using {{0}} tools',
-        text: 'I use {{0}} agents for development, reviews, and analysis. I like {{1}} and {{2}}. I do prompt engineering, validate {{0}} output, and work with {{3}}. I understand the capabilities and limits of generative {{0}}',
+        text: 'I use {{0}} agents for development, mainly {{1}} and {{2}}. I use prompt engineering, validate {{0}} output, create skills and work with {{3}}. I understand the capabilities and limits of generative {{0}}',
       },
       integrations: {
         label: 'Integrating third-party services',
-        text: 'I connect payment systems, {{0}}, analytics, and external platforms. I have experience integrating {{1}}s and {{2}}s for {{3}}, {{4}}, {{5}}, {{6}}, {{7}}, and {{8}} services. I adapt integrations to project requirements',
+        text: 'I connect payment systems, {{0}}, analytics and external platforms. I have experience integrating {{1}}s and {{2}}s such as {{3}}, {{4}}, {{5}}, {{6}}, {{7}} and {{8}} services. I adapt integrations to project requirements',
       },
       cicd: {
         label: 'Working with infrastructure and {{0}}',
-        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}}, {{5}}, and other cloud services for deployment. I set up build pipelines, test and script automation, environments, and supporting processes for stable releases',
+        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}}, {{5}} and other cloud services for deployment. I set up build pipelines, test and script automation, environments and supporting processes for stable releases',
       },
       tasks: {
         label: 'Planning and decomposing tasks',
-        text: 'I plan the backlog, decompose, and estimate tasks. I account for priorities, dependencies, risks, and acceptance criteria. I turn ideas into a clear work plan. I combine {{0}}, {{1}}, and my own planning system',
+        text: 'I plan the backlog, decompose and estimate tasks. I account for priorities, dependencies, risks and acceptance criteria. I turn ideas into a clear work plan. I combine {{0}}, {{1}} and my own planning system',
       },
       ownership: {
         label: 'Taking responsibility for the result',
-        text: 'I do not wait for step-by-step instructions. I clarify requirements, notice problems, and propose solutions. I care about project quality and consistency. I work directly with the team and stakeholders',
+        text: 'I do not wait for step-by-step instructions. I clarify requirements, notice problems and propose solutions. I care about project quality and consistency. I work directly with the team and stakeholders',
       },
       mentor: {
         label: 'Doing code reviews and teaching',
-        text: 'I mentor developers, give constructive feedback in pull requests, and share experience with the team. I developed a corporate internship program and have experience conducting technical interviews',
+        text: 'I mentor developers, give constructive feedback in pull requests and share experience with the team. I developed a corporate internship program and have experience conducting technical interviews',
       },
       blog: {
         label: 'Creating content for {{0}}',
-        text: 'I write and edit scripts, speak on camera, and think through video structure. I shoot, edit, process audio, color grade, and create thumbnails. I prepare publications and communicate with subscribers',
+        text: 'I write and edit scripts, speak on camera and think through video structure. I shoot, edit, process audio, color grade and create thumbnails. I prepare publications and communicate with subscribers',
       },
     },
     subtitle: 'Technologies',

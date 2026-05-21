@@ -47,14 +47,14 @@ export default function Skills() {
       textValues: [
         'ES6-ES15',
         `${TECHNOLOGY_TITLE.ts} 6`,
-        `${TECHNOLOGY_TITLE.react} 19`,
-        'Vue 3',
+        `${TECHNOLOGY_TITLE.react} 19 (Hooks)`,
+        'Vue 3 (Composition API)',
         'CSS Grid',
       ],
     },
     {
       tKey: 'architecture',
-      textValues: ['FSD', 'SOLID'],
+      textValues: ['Feature-Sliced Design', 'SOLID'],
       Icon: AccountTreeIcon,
     },
     {
@@ -249,6 +249,8 @@ const textValues = [
   TECHNOLOGY_TITLE.react,
   TECHNOLOGY_TITLE.reactquery,
   TECHNOLOGY_TITLE.zustand,
+  'Claude Code',
+  'Codex',
   CONTACT_LINK.youTube.title,
   TECHNOLOGY_TITLE.fcpx,
 ]
