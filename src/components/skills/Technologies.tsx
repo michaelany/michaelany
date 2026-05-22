@@ -1,14 +1,16 @@
 import {useTranslation} from 'react-i18next'
 import type {Dispatch, SetStateAction, RefObject} from 'react'
-
 import {
   useMediaQuery,
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Button,
   type ButtonBaseActions,
 } from '@mui/material'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
+import {UnfoldMoreRounded as UnfoldMoreIcon} from '@mui/icons-material'
+import {UnfoldLessRounded as UnfoldLessIcon} from '@mui/icons-material'
 
 import './Technologies.scss'
 import {Animate, Section} from '#components/common'
@@ -36,11 +38,16 @@ export default function Technologies({
   const handleExpand =
     (tKey: TKey): (() => void) =>
     () =>
-      setExpanded((expanded: TKey[]) =>
-        expanded.includes(tKey)
-          ? expanded.filter(item => item !== tKey)
-          : [...expanded, tKey]
+      setExpanded((state: TKey[]) =>
+        state.includes(tKey)
+          ? state.filter(item => item !== tKey)
+          : [...state, tKey]
       )
+
+  const isAllExpanded = expanded.length === TECHNOLOGY_GROUPS.length
+
+  const handleExpandAll = () =>
+    setExpanded(isAllExpanded ? [] : TECHNOLOGY_GROUPS.map(group => group.tKey))
 
   return (
     <Section
@@ -51,35 +58,47 @@ export default function Technologies({
       nextTo={ROUTE.experience}
     >
       <h2 className="VisuallyHidden">{t('skills.subtitle')}</h2>
-      <Animate
-        el="ul"
-        className="Technologies-Groups"
-        effect={md ? undefined : 'right'}
-        duration={md ? undefined : 'longer'}
-      >
-        {TECHNOLOGY_GROUPS.map((group, index) => (
-          <Accordion
-            key={group.tKey as string}
-            component="li"
-            expanded={expanded.includes(group.tKey)}
-            onChange={handleExpand(group.tKey)}
+      <div>
+        <Animate
+          el="ul"
+          className="Technologies-Groups"
+          effect={md ? undefined : 'right'}
+          duration={md ? undefined : 'longer'}
+        >
+          {TECHNOLOGY_GROUPS.map((group, index) => (
+            <Accordion
+              key={group.tKey as string}
+              component="li"
+              expanded={expanded.includes(group.tKey)}
+              onChange={handleExpand(group.tKey)}
+            >
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <h3 className="Technologies-Title">
+                  {t(`skills.technologyGroup.${group.tKey}`)}
+                </h3>
+              </AccordionSummary>
+              <AccordionDetails>
+                <TechnologyList
+                  technologies={group.technologies}
+                  firstTechnologyActionRef={
+                    index === 0 ? firstTechnologyActionRef : undefined
+                  }
+                />
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </Animate>
+        <div className="Technologies-Actions">
+          <Button
+            variant="outlined"
+            color="info"
+            endIcon={isAllExpanded ? <UnfoldLessIcon /> : <UnfoldMoreIcon />}
+            onClick={handleExpandAll}
           >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <h3 className="Technologies-Title">
-                {t(`skills.technologyGroup.${group.tKey}`)}
-              </h3>
-            </AccordionSummary>
-            <AccordionDetails>
-              <TechnologyList
-                technologies={group.technologies}
-                firstTechnologyActionRef={
-                  index === 0 ? firstTechnologyActionRef : undefined
-                }
-              />
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </Animate>
+            {t(`skills.${isAllExpanded ? 'collapse' : 'expand'}`)}
+          </Button>
+        </div>
+      </div>
     </Section>
   )
 }

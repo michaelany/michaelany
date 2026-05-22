@@ -3,6 +3,7 @@ import type {ThemeOptions, Shadows} from '@mui/material'
 const darkAlpha = 0.7
 
 export const COLOR = {
+  white: '#fff',
   green: '#2fd0c8',
   darkGreen: '#2caca6',
   grass: '#6ed485',
@@ -94,6 +95,11 @@ const THEME: ThemeOptions = {
       main: COLOR.green,
       dark: COLOR.darkGreen,
     },
+    info: {
+      light: COLOR.white,
+      main: COLOR.white,
+      dark: COLOR.white,
+    },
     error: {
       light: COLOR.error,
       main: COLOR.error,
@@ -121,10 +127,8 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           padding: '8px 24px',
-          '&.MuiButton-sizeLarge': {
-            '& > .MuiButton-icon .MuiSvgIcon-root': {
-              fontSize: '1.5rem',
-            },
+          '.MuiButton-icon .MuiSvgIcon-root': {
+            fontSize: '1.5rem',
           },
           variants: [
             {
@@ -170,7 +174,7 @@ const THEME: ThemeOptions = {
           fontSize: fontSize.smaller,
           fontWeight: 'normal',
           color: COLOR.text,
-          backgroundColor: 'white',
+          backgroundColor: COLOR.white,
           border: `1px solid ${COLOR.text}`,
           padding: '6px 12px',
         },
@@ -225,7 +229,7 @@ const THEME: ThemeOptions = {
         text: {
           fontSize: 14,
           fontWeight: 'bold',
-          fill: 'white',
+          fill: COLOR.white,
         },
       },
     },
@@ -236,7 +240,7 @@ const THEME: ThemeOptions = {
           fontWeight: 'normal',
         },
         avatar: {
-          backgroundColor: 'white',
+          backgroundColor: COLOR.white,
           padding: 5,
           '.MuiAvatar-img': {
             objectFit: 'contain',
@@ -271,7 +275,7 @@ const THEME: ThemeOptions = {
     MuiTextField: {
       styleOverrides: {
         root: {
-          backgroundColor: 'white',
+          backgroundColor: COLOR.white,
           borderRadius: borderRadius,
         },
       },
@@ -320,7 +324,7 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         indicator: {
-          backgroundColor: 'white',
+          backgroundColor: COLOR.white,
           height: 4,
           borderRadius: borderRadiusQuarter,
           transition: `all ${DURATION.mediumLong}ms ${EASING.out}`,
@@ -331,7 +335,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           fontSize: fontSize.base,
-          color: 'white',
+          color: COLOR.white,
           borderTopLeftRadius: borderRadius,
           borderTopRightRadius: borderRadius,
           borderBottomLeftRadius: borderRadiusQuarter,
@@ -343,7 +347,7 @@ const THEME: ThemeOptions = {
       defaultProps: {thickness: 3},
       styleOverrides: {
         root: {
-          color: 'white',
+          color: COLOR.white,
         },
       },
     },

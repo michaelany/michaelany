@@ -4,7 +4,6 @@ import cn from 'clsx'
 import {Button} from '@mui/material'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
-import './Info.scss'
 import {Section} from '#components/common'
 import {scrollToView} from '#utils/helpers'
 import {ROOT} from '#utils/constants'
@@ -52,10 +51,7 @@ const Info = memo(
             className="Button"
             endIcon={
               <ExpandMoreIcon
-                className={cn(
-                  'Info-DropdownIcon',
-                  open && 'Info-DropdownIcon_open'
-                )}
+                className={cn('DropdownIcon', open && 'DropdownIcon_open')}
               />
             }
             onClick={handleToggle}

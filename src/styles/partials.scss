@@ -264,3 +264,10 @@
     margin-bottom: 8px;
   }
 }
+
+.DropdownIcon {
+  transition: transform v.$duration_short v.$easing_in-out;
+  &_open {
+    transform: rotate(180deg);
+  }
+}

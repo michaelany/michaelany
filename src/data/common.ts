@@ -1200,6 +1200,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
   },
 ]
 
-export const TECHNOLOGY: ITechnology[] = TECHNOLOGY_GROUPS.map(
+export const TECHNOLOGIES: ITechnology[] = TECHNOLOGY_GROUPS.map(
   group => group.technologies
 ).flat()

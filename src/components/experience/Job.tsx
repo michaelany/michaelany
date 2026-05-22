@@ -21,7 +21,7 @@ import type {TFunction} from 'i18next'
 import './Job.scss'
 import {Tooltip, Company} from '#components/common'
 import {tPeriodPart} from '#utils/helpers'
-import {TECHNOLOGY} from '#data/common'
+import {TECHNOLOGIES} from '#data/common'
 import PROJECTS, {
   PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT,
 } from '#data/projects'
@@ -232,7 +232,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
 
 const Tools = ({t, tools}: IToolsProps) => {
   const technologies: ITechnology[] = tools.map(
-    tool => TECHNOLOGY.find(item => item.name === tool) as ITechnology
+    tool => TECHNOLOGIES.find(item => item.name === tool) as ITechnology
   )
 
   return (
