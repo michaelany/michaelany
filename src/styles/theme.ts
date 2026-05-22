@@ -120,7 +120,7 @@ const THEME: ThemeOptions = {
   },
   shadows: Array(25).fill('none') as Shadows,
   shape: {
-    borderRadius: borderRadius,
+    borderRadius,
   },
   components: {
     MuiButton: {
@@ -254,8 +254,14 @@ const THEME: ThemeOptions = {
     },
     MuiAccordion: {
       defaultProps: {
-        elevation: 0,
         slotProps: {transition: {unmountOnExit: true}},
+      },
+      styleOverrides: {
+        root: {
+          '&.Mui-expanded + .MuiAccordion-root::before': {
+            opacity: 0,
+          },
+        },
       },
     },
     MuiDrawer: {
