@@ -147,7 +147,7 @@ const projects: IProject[] = [
       {
         tKey: 'soloWork',
       },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.figma}`,
       {
@@ -258,7 +258,7 @@ const projects: IProject[] = [
       {
         tKey: 'soloWork',
       },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
       {
@@ -571,7 +571,7 @@ const projects: IProject[] = [
       {
         tKey: 'soloWork',
       },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.reactquery}, ${TECHNOLOGY_TITLE.html}`,
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.html}`,
       {
         tKey: 'responsive',
         text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}`,
@@ -579,7 +579,7 @@ const projects: IProject[] = [
       `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.figma}`,
       {
         tKey: 'tryOne',
-        values: [TECHNOLOGY_TITLE.reactquery],
+        values: [TECHNOLOGY_TITLE.tanstack],
       },
       {
         tKey: 'november',

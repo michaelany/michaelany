@@ -156,7 +156,7 @@ const EN = {
     subtitle: 'Avatar and social media',
   },
   skills: {
-    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I work with AI assistants like <4>{{4}}</4> && <4>{{5}}</4>. I create <5>{{6}} videos</5> and edit them in <4>{{7}}</4>',
+    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I work with AI coding agents like <4>{{4}}</4> && <4>{{5}}</4>. I create <5>{{6}} videos</5> and edit them in <4>{{7}}</4>',
     feature: {
       interface: {
         label: 'Creating usable and reliable interfaces',
@@ -242,10 +242,14 @@ const EN = {
     subtitle: 'Technologies',
     technologyGroup: {
       logic: 'Logic',
+      ai: 'AI',
       markup: 'Markup',
       styles: 'Styles',
-      tools: 'Utilities',
-      misc: 'Miscellaneous',
+      utils: 'Utils',
+      build: 'Build',
+      deploy: 'Deploy',
+      services: 'Services',
+      misc: 'Misc',
       software: 'Software',
       hardware: 'Hardware',
     },

@@ -247,7 +247,7 @@ const transComponents = [
 const textValues = [
   TECHNOLOGY_TITLE.ts,
   TECHNOLOGY_TITLE.react,
-  TECHNOLOGY_TITLE.reactquery,
+  TECHNOLOGY_TITLE.tanstack,
   TECHNOLOGY_TITLE.zustand,
   'Claude Code',
   'Codex',
@@ -255,4 +255,4 @@ const textValues = [
   TECHNOLOGY_TITLE.fcpx,
 ]
 
-const initialExpanded = [TECHNOLOGY_GROUPS[0].tKey]
+const initialExpanded = TECHNOLOGY_GROUPS.map(group => group.tKey)

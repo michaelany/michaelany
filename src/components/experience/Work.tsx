@@ -114,7 +114,7 @@ const jobs: IJob[] = [
       'ts',
       'react',
       'redux',
-      'reactquery',
+      'tanstack',
       'zustand',
       'mobx',
       'next',
