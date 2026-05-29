@@ -249,10 +249,14 @@ const textValues = [
   TECHNOLOGY_TITLE.react,
   TECHNOLOGY_TITLE.tanstack,
   TECHNOLOGY_TITLE.zustand,
-  'Claude Code',
-  'Codex',
+  TECHNOLOGY_TITLE.claudecode,
+  TECHNOLOGY_TITLE.codex,
   CONTACT_LINK.youTube.title,
-  TECHNOLOGY_TITLE.fcpx,
+  TECHNOLOGY_TITLE.finalcut,
 ]
 
-const initialExpanded = TECHNOLOGY_GROUPS.map(group => group.tKey)
+const initialExpanded = [
+  TECHNOLOGY_GROUPS[0].tKey,
+  TECHNOLOGY_GROUPS[1].tKey,
+  TECHNOLOGY_GROUPS.at(-1)!.tKey,
+]
