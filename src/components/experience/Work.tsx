@@ -16,7 +16,8 @@ import {
   BLANK_LINK_PROPS,
   ROUTE,
 } from '#utils/constants'
-import {COMPANY, TECHNOLOGY_TITLE, FEATURE} from '#data/common'
+import {COMPANY, FEATURE} from '#data/common'
+import {TECHNOLOGY_TITLE} from '#data/technologies'
 import Job from './Job'
 import type {IJob} from '#utils/types'
 

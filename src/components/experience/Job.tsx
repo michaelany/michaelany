@@ -21,7 +21,7 @@ import type {TFunction} from 'i18next'
 import './Job.scss'
 import {Tooltip, Company} from '#components/common'
 import {tPeriodPart} from '#utils/helpers'
-import {TECHNOLOGIES} from '#data/common'
+import TECHNOLOGIES from '#data/technologies'
 import PROJECTS, {
   PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT,
 } from '#data/projects'

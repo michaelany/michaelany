@@ -26,7 +26,8 @@ import {
 
 import {Sections, Info, Tooltip} from '#components/common'
 import {PROJECTS_COUNT} from '#data/projects'
-import {TECHNOLOGY_TITLE, CONTACT_LINK} from '#data/common'
+import {CONTACT_LINK} from '#data/common'
+import {TECHNOLOGY_TITLE} from '#data/technologies'
 import {
   YEARS_OF_EXPERIENCE,
   TODAY,

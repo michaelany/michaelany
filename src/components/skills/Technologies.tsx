@@ -14,7 +14,7 @@ import {UnfoldLessRounded as UnfoldLessIcon} from '@mui/icons-material'
 
 import './Technologies.scss'
 import {Animate, Section} from '#components/common'
-import {TECHNOLOGY_GROUPS} from '#data/common'
+import {TECHNOLOGY_GROUPS} from '#data/technologies'
 import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
 import TechnologyList from './TechnologyList'
 import type {TKey} from '#utils/types'

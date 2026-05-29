@@ -1,5 +1,6 @@
 import {publicImg} from '#utils/helpers'
-import {COMPANY, FEATURE, TECHNOLOGY_TITLE} from '#data/common'
+import {COMPANY, FEATURE} from '#data/common'
+import {TECHNOLOGY_TITLE} from '#data/technologies'
 import type {IProject} from '#utils/types'
 
 const commonLogo = {

@@ -11,11 +11,8 @@ import ReactIcon from '#assets/icons/react.svg?react'
 import MuiIcon from '#assets/icons/mui.svg?react'
 import {Tooltip} from '#components/common'
 import {TODAY, BLANK_LINK_PROPS} from '#utils/constants'
-import {
-  CONTACT_LINK,
-  TECHNOLOGY_TITLE,
-  MAIN_TECHNOLOGY_LINK,
-} from '#data/common'
+import {CONTACT_LINK} from '#data/common'
+import {TECHNOLOGY_TITLE, MAIN_TECHNOLOGY_LINK} from '#data/technologies'
 
 interface ILink {
   title: string

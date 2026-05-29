@@ -27,7 +27,8 @@ import {
 import {Sections, Info} from '#components/common'
 import {scrollToView} from '#utils/helpers'
 import {BLANK_LINK_PROPS, PROJECT_FILTERS, ROUTE} from '#utils/constants'
-import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS, CONTACT_LINK} from '#data/common'
+import {CONTACT_LINK} from '#data/common'
+import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '#data/technologies'
 import Technologies from './Technologies'
 import type {IFeature, ITechnologyGroup, TKey} from '#utils/types'
 
