@@ -258,6 +258,6 @@ const textValues = [
 
 const initialExpanded = [
   TECHNOLOGY_GROUPS[0].tKey,
-  TECHNOLOGY_GROUPS[1].tKey,
+  TECHNOLOGY_GROUPS[5].tKey,
   TECHNOLOGY_GROUPS.at(-1)!.tKey,
 ]
