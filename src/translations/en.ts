@@ -107,15 +107,15 @@ const EN = {
       },
       resident: {
         label: 'New Zealand resident',
-        text: 'I moved to New Zealand {{0}} years ago. I received residency as a {{1}}. Now I live in the country I always dreamed of',
+        text: 'I moved to New Zealand {{0}} years ago. I received residency as a {{1}}. Now it’s my home, and I live in the country I’ve always dreamed of',
       },
       sport: {
         label: 'Into sports',
-        text: 'Physical activity is especially important for a developer, so I exercise every day. I love calisthenics, fitness and hiking. When all tasks are done and the ocean has a good surf forecast, you can find me on a board among the waves',
+        text: 'Physical activity is especially important for a developer, so I exercise every day. I love calisthenics, fitness and hiking. And when all the tasks are done and the surf forecast looks good, you’ll find me out among the waves on my board',
       },
       travel: {
         label: 'Love to travel',
-        text: 'I have visited <0>{{0}} countries</0>. Once I climbed to the top of Mount Fuji, had a pint at the Green Dragon Inn in Hobbiton and survived an encounter with a wild bear at Dyatlov Pass',
+        text: 'I have visited <0>{{0}} countries</0>. Once I climbed to the top of Mount Fuji, had an ale at the Green Dragon Inn in Hobbiton, went to an Oasis concert in Australia and survived an encounter with a wild bear at Dyatlov Pass',
       },
       love: {
         label: 'Happy husband',

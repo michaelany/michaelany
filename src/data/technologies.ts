@@ -131,6 +131,7 @@ export const TECHNOLOGY_TITLE = {
   glasses: 'Qukan W1',
   mascot: 'LEGO Star Wars Stormtrooper',
   coffee: 'Breville the Barista Express',
+  cup: 'Smoco Short Tumbler 2.0',
 }
 
 export const MAIN_TECHNOLOGY_LINK = {
@@ -1439,6 +1440,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://rode.com/en/microphones/usb/nt-usb-plus',
       },
       {
+        name: 'gopro',
+        label: TECHNOLOGY_TITLE.gopro,
+        color: 'blue',
+        images: [
+          publicImg('technologies/gopro.png'),
+          publicImg('technologies/gopro@2x.png'),
+        ],
+        href: 'https://gopro.com/en/us/shop/cameras/hero11-black/CHDHX-111-master.html',
+      },
+      {
         name: 'glasses',
         label: TECHNOLOGY_TITLE.glasses,
         color: 'default',
@@ -1449,14 +1460,14 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://www.aliexpress.com/item/1005006565514712.html',
       },
       {
-        name: 'gopro',
-        label: TECHNOLOGY_TITLE.gopro,
-        color: 'blue',
+        name: 'mascot',
+        label: TECHNOLOGY_TITLE.mascot,
+        color: 'default',
         images: [
-          publicImg('technologies/gopro.png'),
-          publicImg('technologies/gopro@2x.png'),
+          publicImg('technologies/mascot.png'),
+          publicImg('technologies/mascot@2x.png'),
         ],
-        href: 'https://gopro.com/en/us/shop/cameras/hero11-black/CHDHX-111-master.html',
+        href: 'https://media.entertainmentearth.com/assets/images/cfa66064858142faaa7f0cc9cbaa8c98lg.jpg',
       },
       {
         name: 'coffee',
@@ -1469,14 +1480,14 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://www.breville.com/en-nz/product/bes870',
       },
       {
-        name: 'mascot',
-        label: TECHNOLOGY_TITLE.mascot,
+        name: 'cup',
+        label: TECHNOLOGY_TITLE.cup,
         color: 'default',
         images: [
-          publicImg('technologies/mascot.png'),
-          publicImg('technologies/mascot@2x.png'),
+          publicImg('technologies/cup.png'),
+          publicImg('technologies/cup@2x.png'),
         ],
-        href: 'https://media.entertainmentearth.com/assets/images/cfa66064858142faaa7f0cc9cbaa8c98lg.jpg',
+        href: 'https://smoco.co.nz',
       },
     ],
   },

@@ -21,9 +21,7 @@ import babelImg from '#assets/img/main-technologies/babel.svg'
 import nodeImg from '#assets/img/main-technologies/node.svg'
 import vscodeImg from '#assets/img/main-technologies/vscode.svg'
 import claudeImg from '#assets/img/main-technologies/claude.svg'
-import claudecodeImg from '#assets/img/main-technologies/claudecode.svg'
 import gptImg from '#assets/img/main-technologies/gpt.svg'
-import codexImg from '#assets/img/main-technologies/codex.svg'
 import figmaImg from '#assets/img/main-technologies/figma.svg'
 import sketchImg from '#assets/img/main-technologies/sketch.png'
 import finalcutImg from '#assets/img/main-technologies/finalcut.png'
@@ -111,9 +109,7 @@ const images = [
   nodeImg,
   vscodeImg,
   claudeImg,
-  claudecodeImg,
   gptImg,
-  codexImg,
   figmaImg,
   sketchImg,
   finalcutImg,
