@@ -1,4 +1,4 @@
-import {Fragment, useState} from 'react'
+import {Fragment} from 'react'
 import {Link} from 'react-router-dom'
 import cn from 'clsx'
 import {
@@ -32,12 +32,14 @@ import type {
   ITechnology,
   TKey,
   TKeyObject,
+  TCompanyName,
 } from '#utils/types'
 
 interface IJobProps {
   job: IJob
   t: TFunction
-  index: number
+  expanded: boolean
+  onExpand: (companyName: TCompanyName) => void
 }
 
 interface IOccupationsProps {
@@ -67,32 +69,19 @@ interface IFeaturesProps {
   features: IJobFeature[]
 }
 
-export default function Job({job, t, index}: IJobProps) {
-  const storageProp = `job${index}Expanded`
-  const [expanded, setExpanded] = useState<boolean>(
-    localStorage[storageProp]
-      ? JSON.parse(localStorage[storageProp])
-      : index === 0
-        ? true
-        : false
-  )
+export default function Job({job, t, expanded, onExpand}: IJobProps) {
+  const handleExpandToggle = () => onExpand(job.name)
 
-  const handleExpand = (_: any, value: boolean) => {
-    localStorage.setItem(storageProp, JSON.stringify(value))
-    setExpanded(value)
-  }
+  const showProjects = job.name !== 'mVideo' && job.name !== 'goRentals'
 
-  const showProjects =
-    job.company.name !== 'mVideo' && job.company.name !== 'goRentals'
-
-  const showTools = job.company.name !== 'mVideo'
+  const showTools = job.name !== 'mVideo'
 
   return (
     <Accordion
       component="li"
       className="Job"
       expanded={expanded}
-      onChange={handleExpand}
+      onChange={handleExpandToggle}
     >
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <div className="Job-Company">
@@ -106,7 +95,7 @@ export default function Job({job, t, index}: IJobProps) {
           occupations={job.occupations}
         />
         <Features t={t} features={job.features} />
-        {showProjects && <Projects t={t} companyName={job.company.name} />}
+        {showProjects && <Projects t={t} companyName={job.name} />}
         {job.duties && <Block t={t} isDuties items={job.duties} />}
         {job.achievements && <Block t={t} items={job.achievements} />}
         {showTools && <Tools t={t} tools={job.tools!} />}

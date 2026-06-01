@@ -300,7 +300,7 @@ const steps: IStep[] = [
         year: 2021,
       },
       to: {
-        tKey: 'december',
+        tKey: 'january',
         year: 2021,
       },
     },

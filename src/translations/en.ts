@@ -253,8 +253,6 @@ const EN = {
       software: 'Software',
       hardware: 'Hardware',
     },
-    expand: 'Expand all',
-    collapse: 'Collapse all',
   },
   experience: {
     text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I built my <0>first website</0> at the age of {{1}}. I have been working <0>professionally</0> in frontend development since {{2}}. I worked my way up from a <0>junior developer</0> to a <0>team lead</0>. In my <2>${common.title.blog}</2>, I share my journey in programming && life, as well as my experience && knowledge`,
@@ -324,10 +322,13 @@ const EN = {
           'Developed a large-scale financial application with extensive business logic on the client side',
         publicWebsiteDevelopment:
           'Developed components, widgets and pages for the public website and internal portal, improving user experience and conversion',
+        partnerProjects:
+          "Created pages and mini-applications for the company's partners, supporting long-term collaboration",
         seoRoadmap:
           'Implemented an {{0}} optimization plan, contributing to sales growth during the winter period',
         strapiMigration:
           'Migrated content from {{0}} to {{1}} and implemented {{2}} pages with {{3}}, making content management easier for the marketing team',
+        docs: 'Created an internal documentation project for the corporate portal using {{0}}',
         flp: 'Completed the corporate {{0}} and developed organizational and communication skills',
         resident:
           "Obtained a New Zealand resident visa through the {{0}} pathway with the company's support",
@@ -348,8 +349,7 @@ const EN = {
     refresh: 'Reset',
     continue: 'To be continued',
     stepper: {
-      step1:
-        'I created my first multi-page website at the age of {{0}}. After finishing school, I enrolled in the "Moscow State University of Instrument Engineering and Computer Science". Alongside my studies at the university, I got a job as a <0>technical support engineer</0> at the {{1}} company',
+      step1: `I created my first multi-page website at the age of {{0}}. After finishing school, I enrolled in the "Moscow State University of Instrument Engineering and Computer Science". Alongside my studies at the university, I got a job as a <0>${common.occupation.support}</0> at the {{1}} company`,
       step2: `Worked as a <0>${common.occupation.support}</0> in the {{0}} company`,
       step3:
         'I graduated from university. Expanded my horizons in other areas of activity. I decided to become an actor and enrolled in the "Russian State University of Cinematography"',
@@ -360,7 +360,7 @@ const EN = {
       step7: `I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
       step8: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
       step9: `I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
-      step10: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. Graduated from VGIK and obtained a second higher education.`,
+      step10: `Worked remotely as a <0>${common.occupation.middle}</0> in the {{0}}. Graduated from VGIK and obtained a second higher education`,
       step11: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.middle}</0>, chose the {{1}} company`,
       step12: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
       step13: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
@@ -370,9 +370,9 @@ const EN = {
       step17:
         'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
       step18: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
-      step19: `Worked as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}}. I also provided frontend development consultations`,
+      step19: `Worked remotely as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}}. I also provided frontend development consultations`,
       step20:
-        'I moved to Montenegro. Collected documents for a work visa to New Zealand from the company {{0}}. Launched my <0>{{1}} channel</0>. Obtained a work visa',
+        'I moved to Montenegro and continued working remotely. Collected documents for a work visa to New Zealand from the company {{0}}. Launched my <0>{{1}} channel</0>. Obtained a work visa',
       step21:
         'I moved to New Zealand on a work visa from the {{0}} company. Worked, settled in, built relationships with hobbits and alpacas',
       step22: `I agreed with {{0}} on a gradual search for a new job, as the company began shutting down its core business. I passed an interview, completed a technical assessment and received an offer from {{1}} for the position of <0>${common.occupation.lead}</0>. I was waiting for an update on my work visa while continuing to collaborate with {{2}} on projects`,
@@ -611,6 +611,8 @@ const EN = {
   },
   other: {
     more: 'Details',
+    expand: 'Expand all',
+    collapse: 'Collapse all',
     see: 'See it live',
     error: 'Server connection error',
   },

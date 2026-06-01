@@ -5,15 +5,12 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Button,
   type ButtonBaseActions,
 } from '@mui/material'
 import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
-import {UnfoldMoreRounded as UnfoldMoreIcon} from '@mui/icons-material'
-import {UnfoldLessRounded as UnfoldLessIcon} from '@mui/icons-material'
 
 import './Technologies.scss'
-import {Animate, Section} from '#components/common'
+import {Animate, Section, ExpandAction} from '#components/common'
 import {TECHNOLOGY_GROUPS} from '#data/technologies'
 import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
 import TechnologyList from './TechnologyList'
@@ -88,16 +85,12 @@ export default function Technologies({
             </Accordion>
           ))}
         </Animate>
-        <div className="Technologies-Actions">
-          <Button
-            variant="outlined"
-            color="info"
-            endIcon={isAllExpanded ? <UnfoldLessIcon /> : <UnfoldMoreIcon />}
-            onClick={handleExpandAll}
-          >
-            {t(`skills.${isAllExpanded ? 'collapse' : 'expand'}`)}
-          </Button>
-        </div>
+        <ExpandAction
+          isWhite
+          type="second"
+          expanded={isAllExpanded}
+          onToggle={handleExpandAll}
+        />
       </div>
     </Section>
   )

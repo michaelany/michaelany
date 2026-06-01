@@ -112,6 +112,7 @@ export interface IJobFeature {
 }
 
 export interface IJob {
+  name: TCompanyName
   current?: boolean
   company: ICompany
   occupations: TKey[]

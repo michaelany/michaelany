@@ -1,14 +1,11 @@
 import {useState, memo} from 'react'
 import {useTranslation, Trans} from 'react-i18next'
-import cn from 'clsx'
-import {Button} from '@mui/material'
-import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 
 import {Section} from '#components/common'
 import {scrollToView} from '#utils/helpers'
 import {ROOT} from '#utils/constants'
 import Features from './Features'
-import Animate from './Animate'
+import ExpandAction from './ExpandAction'
 import type {IFeature} from '#utils/types'
 
 interface IInfoProps {
@@ -22,9 +19,10 @@ const Info = memo(
   ({type, textValues, transComponents, features}: IInfoProps) => {
     const {t} = useTranslation()
     const storageProp = `${type}Extra`
-    const [open, toggleOpen] = useState<boolean>(
-      localStorage[storageProp] ? JSON.parse(localStorage[storageProp]) : false
-    )
+    const [open, toggleOpen] = useState<boolean>(() => {
+      const storedOpen = localStorage.getItem(storageProp)
+      return storedOpen ? JSON.parse(storedOpen) : false
+    })
 
     const handleToggle = () => {
       const value = !open
@@ -46,19 +44,7 @@ const Info = memo(
           .
         </p>
         <Features t={t} type={type} extra={open} items={features} />
-        <Animate className="Actions Actions_center" effect="bottom">
-          <Button
-            className="Button"
-            endIcon={
-              <ExpandMoreIcon
-                className={cn('DropdownIcon', open && 'DropdownIcon_open')}
-              />
-            }
-            onClick={handleToggle}
-          >
-            {t('other.more')}
-          </Button>
-        </Animate>
+        <ExpandAction expanded={open} onToggle={handleToggle} />
       </Section>
     )
   }

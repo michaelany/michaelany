@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react'
 import {useTranslation, Trans} from 'react-i18next'
 import {Link} from 'react-router-dom'
 import {Link as MuiLink} from '@mui/material'
@@ -9,7 +10,7 @@ import {
 } from '@mui/icons-material'
 
 import './Work.scss'
-import {Animate, Section} from '#components/common'
+import {Animate, Section, ExpandAction} from '#components/common'
 import {
   FIRST_WEBSITE_AGE,
   CAREER_START_YEAR,
@@ -20,10 +21,30 @@ import {
 import {COMPANY, FEATURE} from '#data/common'
 import {TECHNOLOGY_TITLE} from '#data/technologies'
 import Job from './Job'
-import type {IJob} from '#utils/types'
+import type {IJob, TCompanyName} from '#utils/types'
 
 export default function Work() {
   const {t} = useTranslation()
+  const [expanded, setExpanded] = useState<TCompanyName[]>(() => {
+    const storedExpanded = localStorage.getItem('expanded')
+    return storedExpanded ? JSON.parse(storedExpanded) : [jobs[0].name]
+  })
+
+  useEffect(() => {
+    localStorage.setItem('expanded', JSON.stringify(expanded))
+  }, [expanded])
+
+  const handleExpand = (companyName: TCompanyName) =>
+    setExpanded(state =>
+      state.includes(companyName)
+        ? state.filter(name => name !== companyName)
+        : [...state, companyName]
+    )
+
+  const isAllExpanded = jobs.every(job => expanded.includes(job.name))
+
+  const handleExpandAll = () =>
+    setExpanded(isAllExpanded ? [] : jobs.map(job => job.name))
 
   return (
     <Section>
@@ -36,31 +57,45 @@ export default function Work() {
             FIRST_WEBSITE_AGE,
             CAREER_START_YEAR,
           ]}
-          components={transComponents}
+          components={[
+            <strong />,
+            <MuiLink
+              {...BLANK_LINK_PROPS}
+              className="Link"
+              href={COMPANY.goRentals.href}
+            />,
+            <MuiLink
+              component={Link}
+              className="Link Lowercase"
+              to={ROUTE.blog}
+            />,
+          ]}
         />
         .
       </p>
       <Animate el="ul" className="Work">
-        {jobs.map((job, index) => (
-          <Job key={index} job={job} t={t} index={index} />
+        {jobs.map(job => (
+          <Job
+            key={job.name}
+            job={job}
+            t={t}
+            expanded={expanded.includes(job.name)}
+            onExpand={handleExpand}
+          />
         ))}
       </Animate>
+      <ExpandAction
+        type="second"
+        expanded={isAllExpanded}
+        onToggle={handleExpandAll}
+      />
     </Section>
   )
 }
 
-const transComponents = [
-  <strong />,
-  <MuiLink
-    {...BLANK_LINK_PROPS}
-    className="Link"
-    href={COMPANY.goRentals.href}
-  />,
-  <MuiLink component={Link} className="Link Lowercase" to={ROUTE.blog} />,
-]
-
 const jobs: IJob[] = [
   {
+    name: COMPANY.goRentals.name,
     current: true,
     company: COMPANY.goRentals,
     occupations: ['lead'],
@@ -115,6 +150,7 @@ const jobs: IJob[] = [
     ],
     achievements: [
       'publicWebsiteDevelopment',
+      'partnerProjects',
       {tKey: 'seoRoadmap', values: ['SEO']},
       {
         tKey: 'strapiMigration',
@@ -124,6 +160,10 @@ const jobs: IJob[] = [
           'SSR',
           TECHNOLOGY_TITLE.nuxt,
         ],
+      },
+      {
+        tKey: 'docs',
+        values: [TECHNOLOGY_TITLE.docusaurus],
       },
       {tKey: 'flp', values: ['Future Leadership Program']},
       {tKey: 'resident', values: ['Straight to Residence Visa']},
@@ -144,6 +184,7 @@ const jobs: IJob[] = [
     ],
   },
   {
+    name: COMPANY.sevenGlyphs.name,
     company: COMPANY.sevenGlyphs,
     occupations: ['lead', 'senior', 'middle'],
     tools: [
@@ -231,12 +272,12 @@ const jobs: IJob[] = [
       },
       {tKey: 'busyFull', Icon: ScheduleIcon},
       {tKey: 'busyPart', Icon: ScheduleIcon},
-      {tKey: 'office', Icon: MyLocationIcon},
       {tKey: 'remote', Icon: MyLocationIcon},
       {tKey: 'auckland', Icon: RoomIcon},
     ],
   },
   {
+    name: COMPANY.t1.name,
     company: COMPANY.t1,
     occupations: ['consult', 'teamLead', 'senior', 'middle'],
     tools: [
@@ -310,6 +351,7 @@ const jobs: IJob[] = [
     ],
   },
   {
+    name: COMPANY.everpoint.name,
     company: COMPANY.everpoint,
     occupations: ['middle', 'junior'],
     tools: [
@@ -367,6 +409,7 @@ const jobs: IJob[] = [
     ],
   },
   {
+    name: COMPANY.mVideo.name,
     company: COMPANY.mVideo,
     occupations: ['support'],
     duties: [

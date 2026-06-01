@@ -148,6 +148,14 @@
           background-color: rgba($value, 0.4);
         }
       }
+      &.MuiButton-outlined:not(.MuiButton-colorInfo) {
+        color: $second-value;
+        border-color: rgba($second-value, 0.5);
+        @include m.hover {
+          border-color: $second-value;
+          background-color: rgba($second-value, 0.04);
+        }
+      }
     }
   }
   @include m.xs {
@@ -202,8 +210,14 @@
   &_center {
     text-align: center;
   }
+  &_second {
+    margin-top: 36px;
+  }
   @include m.md {
     margin-top: 48px;
+    &_second {
+      margin-top: 24px;
+    }
   }
 }
 
@@ -262,12 +276,5 @@
 .TooltipParagraph {
   &:not(:last-child) {
     margin-bottom: 8px;
-  }
-}
-
-.DropdownIcon {
-  transition: transform v.$duration_short v.$easing_in-out;
-  &_open {
-    transform: rotate(180deg);
   }
 }
