@@ -39,7 +39,11 @@ export const IS_MOBILE_DEVICE = [
   /Windows Phone/i,
 ].some((device: RegExp) => navigator.userAgent.match(device))
 
-export const CAREER_START_DATE = new Date(2016, 6)
+export const FIRST_WEBSITE_AGE = 13
+
+export const CAREER_START_YEAR = 2016
+
+export const CAREER_START_DATE = new Date(CAREER_START_YEAR, 6)
 
 export const CAREER_START_PARTS = format(CAREER_START_DATE, 'LLLL yyyy')
   .toLowerCase()

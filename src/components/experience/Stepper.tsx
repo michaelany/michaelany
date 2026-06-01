@@ -16,7 +16,7 @@ import {
 
 import './Stepper.scss'
 import {scrollToView, tPeriodPart} from '#utils/helpers'
-import {CAREER_START_PARTS} from '#utils/constants'
+import {FIRST_WEBSITE_AGE, CAREER_START_PARTS} from '#utils/constants'
 import {COMPANY, CONTACT_LINK} from '#data/common'
 import type {IPeriod} from '#utils/types'
 
@@ -118,7 +118,7 @@ const steps: IStep[] = [
         year: 2008,
       },
     },
-    values: [13, COMPANY.mVideo.title],
+    values: [FIRST_WEBSITE_AGE, COMPANY.mVideo.title],
   },
   {
     period: {
@@ -378,6 +378,6 @@ const steps: IStep[] = [
         year: 2024,
       },
     },
-    values: [COMPANY.goRentals.title],
+    values: [COMPANY.goRentals.title, 'Straight to Residence Visa'],
   },
 ]

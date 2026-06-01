@@ -13,8 +13,8 @@ import {
   ForwardRounded as ForwardIcon,
   BusinessCenterRounded as BusinessCenterIcon,
   EmojiEventsRounded as EmojiEventsIcon,
-  WidgetsRounded as WidgetsIcon,
-  BuildRounded as BuildIcon,
+  DashboardCustomizeRounded as DashboardCustomizeIcon,
+  ConstructionRounded as ConstructionIcon,
 } from '@mui/icons-material'
 import type {TFunction} from 'i18next'
 
@@ -182,7 +182,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
   return (
     <div className="Job-Block">
       <h4 className="Job-SubTitle">
-        <WidgetsIcon />
+        <DashboardCustomizeIcon />
         <span className="Job-SubTitleText">{t('experience.projects')}</span>
       </h4>
       <ul className="Job-Features">
@@ -193,11 +193,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
               component={Link}
               className={`Job-Project Job-Project_color_${project.color}`}
               avatar={
-                <Avatar
-                  src={project.images.logo[0]}
-                  srcSet={`${project.images.logo[1]} 2x`}
-                  alt={project.name}
-                />
+                <Avatar src={project.images.logo[0]} alt={project.name} />
               }
               label={
                 project.title ?? t(`portfolio.project.${project.name}.title`)
@@ -216,12 +212,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
                   <strong>+{privateAndOteherProjectsCount}</strong>
                 </Avatar>
               }
-              label={
-                <>
-                  NDA{' '}
-                  <span className="Lowercase">{t('experience.projects')}</span>
-                </>
-              }
+              label="NDA"
             />
           </li>
         )}
@@ -238,7 +229,7 @@ const Tools = ({t, tools}: IToolsProps) => {
   return (
     <div className="Job-Block">
       <h4 className="Job-SubTitle">
-        <BuildIcon />
+        <ConstructionIcon />
         <span className="Job-SubTitleText">{t('experience.tools')}</span>
       </h4>
       <ul className="Job-Features">
@@ -248,11 +239,7 @@ const Tools = ({t, tools}: IToolsProps) => {
             component="li"
             className={`Job-Tool Job-Tool_color_${technology.color}`}
             avatar={
-              <Avatar
-                src={technology.images[0]}
-                srcSet={`${technology.images[1]} 2x`}
-                alt={technology.label}
-              />
+              <Avatar src={technology.images[0]} alt={technology.label} />
             }
             label={technology.label}
           />

@@ -45,6 +45,7 @@ export const TECHNOLOGY_TITLE = {
   materialize: 'Materialize',
   bootstrap: 'Bootstrap',
   semantic: 'Semantic UI',
+  foundationemails: 'Foundation for Emails',
   npm: 'npm',
   bun: 'Bun',
   pnpm: 'pnpm',
@@ -114,6 +115,7 @@ export const TECHNOLOGY_TITLE = {
   firebase: 'Firebase',
   mailchimp: 'Mailchimp',
   squarespace: 'Squarespace',
+  keycloak: 'Keycloak',
   csharp: 'C#',
   dotnet: '.NET',
   epidemic: 'Epidemic Sound',
@@ -535,6 +537,26 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         ],
         href: 'https://semantic-ui.com',
       },
+      {
+        name: 'reactemail',
+        label: TECHNOLOGY_TITLE.reactemail,
+        color: 'default',
+        images: [
+          publicImg('technologies/reactemail.png'),
+          publicImg('technologies/reactemail@2x.png'),
+        ],
+        href: 'https://react.email',
+      },
+      {
+        name: 'foundationemails',
+        label: TECHNOLOGY_TITLE.foundationemails,
+        color: 'red',
+        images: [
+          publicImg('technologies/foundationemails.png'),
+          publicImg('technologies/foundationemails@2x.png'),
+        ],
+        href: 'https://get.foundation/emails.html',
+      },
     ],
   },
   {
@@ -651,16 +673,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://swagger.io',
       },
       {
-        name: 'docusaurus',
-        label: TECHNOLOGY_TITLE.docusaurus,
-        color: 'grass',
-        images: [
-          publicImg('technologies/docusaurus.png'),
-          publicImg('technologies/docusaurus@2x.png'),
-        ],
-        href: 'https://docusaurus.io',
-      },
-      {
         name: 'gsap',
         label: TECHNOLOGY_TITLE.gsap,
         color: 'grass',
@@ -689,16 +701,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           publicImg('technologies/threejs@2x.png'),
         ],
         href: 'https://threejs.org',
-      },
-      {
-        name: 'reactemail',
-        label: TECHNOLOGY_TITLE.reactemail,
-        color: 'default',
-        images: [
-          publicImg('technologies/reactemail.png'),
-          publicImg('technologies/reactemail@2x.png'),
-        ],
-        href: 'https://react.email',
       },
     ],
   },
@@ -886,6 +888,26 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://strapi.io',
       },
       {
+        name: 'wordpress',
+        label: TECHNOLOGY_TITLE.wordpress,
+        color: 'default',
+        images: [
+          publicImg('technologies/wordpress.png'),
+          publicImg('technologies/wordpress@2x.png'),
+        ],
+        href: 'https://wordpress.com',
+      },
+      {
+        name: 'docusaurus',
+        label: TECHNOLOGY_TITLE.docusaurus,
+        color: 'grass',
+        images: [
+          publicImg('technologies/docusaurus.png'),
+          publicImg('technologies/docusaurus@2x.png'),
+        ],
+        href: 'https://docusaurus.io',
+      },
+      {
         name: 'stripe',
         label: TECHNOLOGY_TITLE.stripe,
         color: 'violet',
@@ -944,16 +966,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           publicImg('technologies/testmuai@2x.png'),
         ],
         href: 'https://www.testmuai.com',
-      },
-      {
-        name: 'wordpress',
-        label: TECHNOLOGY_TITLE.wordpress,
-        color: 'default',
-        images: [
-          publicImg('technologies/wordpress.png'),
-          publicImg('technologies/wordpress@2x.png'),
-        ],
-        href: 'https://wordpress.com',
       },
     ],
   },
@@ -1118,6 +1130,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           publicImg('technologies/dotnet@2x.png'),
         ],
         href: 'https://dotnet.microsoft.com',
+      },
+      {
+        name: 'keycloak',
+        label: TECHNOLOGY_TITLE.keycloak,
+        color: 'default',
+        images: [
+          publicImg('technologies/keycloak.png'),
+          publicImg('technologies/keycloak@2x.png'),
+        ],
+        href: 'https://www.keycloak.org',
       },
       {
         name: 'squarespace',

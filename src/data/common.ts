@@ -53,11 +53,11 @@ export const COMPANY: ICompanyData = {
     href: 'https://7glyphs.com',
   },
   t1: {
-    title: 'T1 Consulting',
+    title: 'T1',
     name: 't1',
     images: [publicImg('companies/t1.png'), publicImg('companies/t1@2x.png')],
     color: 'blue',
-    href: 'http://t1-consulting.ru',
+    href: 'https://t1.ru',
   },
   everpoint: {
     title: 'Everpoint',

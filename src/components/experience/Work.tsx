@@ -11,7 +11,8 @@ import {
 import './Work.scss'
 import {Animate, Section} from '#components/common'
 import {
-  YEARS_OF_EXPERIENCE,
+  FIRST_WEBSITE_AGE,
+  CAREER_START_YEAR,
   CAREER_START_PARTS,
   BLANK_LINK_PROPS,
   ROUTE,
@@ -30,7 +31,11 @@ export default function Work() {
       <p className="MainText">
         <Trans
           i18nKey="experience.text"
-          values={[COMPANY.goRentals.title, YEARS_OF_EXPERIENCE]}
+          values={[
+            COMPANY.goRentals.title,
+            FIRST_WEBSITE_AGE,
+            CAREER_START_YEAR,
+          ]}
           components={transComponents}
         />
         .
@@ -66,18 +71,33 @@ const jobs: IJob[] = [
       'ts',
       'vue',
       'nuxt',
+      'pinia',
       'sass',
-      'bem',
       'tailwind',
       'bulma',
+      'shadcn',
+      'vite',
       'npm',
       'git',
-      'wordpress',
+      'bun',
       'strapi',
+      'wordpress',
       'cypress',
+      'playwright',
+      'vitest',
+      'sentry',
+      'swagger',
+      'browserstack',
+      'testmuai',
+      'docusaurus',
+      'mailchimp',
       'vscode',
-      'sketch',
+      'claudecode',
+      'antigravity',
       'figma',
+      'sketch',
+      'keycloak',
+      'docker',
       'azure',
     ],
     duties: [
@@ -89,6 +109,24 @@ const jobs: IJob[] = [
       'tests',
       'support',
       'tasks',
+      'design',
+      {tKey: 'integration', values: ['CMS']},
+      'collaboration',
+    ],
+    achievements: [
+      'publicWebsiteDevelopment',
+      {tKey: 'seoRoadmap', values: ['SEO']},
+      {
+        tKey: 'strapiMigration',
+        values: [
+          TECHNOLOGY_TITLE.wordpress,
+          TECHNOLOGY_TITLE.strapi,
+          'SSR',
+          TECHNOLOGY_TITLE.nuxt,
+        ],
+      },
+      {tKey: 'flp', values: ['Future Leadership Program']},
+      {tKey: 'resident', values: ['Straight to Residence Visa']},
     ],
     features: [
       {
@@ -123,6 +161,7 @@ const jobs: IJob[] = [
       'sass',
       'bem',
       'modules',
+      'emotion',
       'styled',
       'mui',
       'ant',
@@ -132,10 +171,17 @@ const jobs: IJob[] = [
       'vite',
       'webpack',
       'gulp',
-      'stripe',
       'npm',
+      'pnpm',
+      'bun',
       'git',
+      'stripe',
+      'airwallex',
+      'amplitude',
+      'firebase',
+      'browserstack',
       'vscode',
+      'codex',
       'phpstorm',
       'sketch',
       'figma',
@@ -144,6 +190,8 @@ const jobs: IJob[] = [
       'reactnative',
       'php',
       'laravel',
+      'github',
+      'aws',
     ],
     duties: [
       'logicAppsSites',
@@ -154,6 +202,8 @@ const jobs: IJob[] = [
       'scratch',
       'support',
       'tasks',
+      'design',
+      'partIntegration',
     ],
     achievements: [
       'resultForeign',
@@ -162,7 +212,6 @@ const jobs: IJob[] = [
       'animations',
       'architecture',
       'technologies',
-      {tKey: 'speed', values: [1]},
       'independent',
       'visa',
     ],
@@ -205,7 +254,6 @@ const jobs: IJob[] = [
       'ant',
       'webpack',
       'npm',
-      'docker',
       'jest',
       'git',
       'vscode',
@@ -213,6 +261,8 @@ const jobs: IJob[] = [
       'figma',
       'reactnative',
       'expo',
+      'keycloak',
+      'docker',
     ],
     duties: [
       'logicApps',
@@ -222,6 +272,7 @@ const jobs: IJob[] = [
       'refactor',
       'scratch',
       'support',
+      'design',
       'tasksTeam',
       'manage',
       'review',

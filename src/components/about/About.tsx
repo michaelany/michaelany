@@ -29,6 +29,7 @@ import {PROJECTS_COUNT} from '#data/projects'
 import {CONTACT_LINK} from '#data/common'
 import {TECHNOLOGY_TITLE} from '#data/technologies'
 import {
+  FIRST_WEBSITE_AGE,
   YEARS_OF_EXPERIENCE,
   TODAY,
   ROUTE,
@@ -145,7 +146,7 @@ const features: IFeature[] = [
     tKey: 'experience',
     Icon: BusinessCenterIcon,
     labelValues: [YEARS_OF_EXPERIENCE],
-    textValues: [13],
+    textValues: [FIRST_WEBSITE_AGE],
     links: [
       <MuiLink component={Link} className="Link" to={ROUTE.experience} />,
     ],

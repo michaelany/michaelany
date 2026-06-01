@@ -71,7 +71,7 @@ const EN = {
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `I built my first website at age {{0}}. I went from junior markup developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        text: `I built my first website at age {{0}}. I went from junior developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized and independent',
@@ -156,7 +156,7 @@ const EN = {
     subtitle: 'Avatar and social media',
   },
   skills: {
-    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I work with AI coding agents like <4>{{4}}</4> && <4>{{5}}</4>. I create <5>{{6}} videos</5> and edit them in <4>{{7}}</4>',
+    text: 'I develop <0>applications</0>, <1>multi-page websites</1>, <2>landing pages</2> && <3>admin panels</3>. My favourite stack is <4>{{0}}</4> + <4>{{1}}</4> + <4>{{2}}</4> + <4>{{3}}</4>. I also work with <4>Vue.js</4>. For SSR projects, I use <4>Next.js</4> || <4>Nuxt</4>. I work with AI coding agents like <4>{{4}}</4> && <4>{{5}}</4>. I create <5>{{6}} videos</5> && edit them in <4>{{7}}</4>',
     feature: {
       interface: {
         label: 'Creating usable and reliable interfaces',
@@ -257,10 +257,10 @@ const EN = {
     collapse: 'Collapse all',
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I've been professionally engaged in frontend development for {{1}} years. I also share my journey in programming & life, as well as my experience & knowledge in my <2>${common.title.blog}</2>`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I built my <0>first website</0> at the age of {{1}}. I have been working <0>professionally</0> in frontend development since {{2}}. I worked my way up from a <0>junior developer</0> to a <0>team lead</0>. In my <2>${common.title.blog}</2>, I share my journey in programming && life, as well as my experience && knowledge`,
     projects: 'Projects',
-    tools: 'Base tools',
-    duties: 'Key duties',
+    tools: 'Tools',
+    duties: 'Duties',
     achievements: 'Achievements',
     current: 'Current position',
     occupation: common.occupation,
@@ -276,7 +276,7 @@ const EN = {
         restSocket: 'Working with {{0}} and {{1}}',
         refactor: 'Refactoring and maintaining the code',
         scratch: 'Developing projects from scratch',
-        tests: 'Writing unit, functional, and end-to-end tests',
+        tests: 'Writing unit, functional and end-to-end tests',
         support: 'Supporting projects',
         tasks: 'Decomposing and evaluating tasks',
         tasksTeam: 'Planning, decomposing and evaluating team tasks',
@@ -286,6 +286,12 @@ const EN = {
         hardwareFix: 'Solving software and hardware issues',
         hardwareInstall: 'Installing, configuring software and hardware',
         consult: 'Advising employees on technical issues',
+        collaboration:
+          'Collaborating with the marketing department and stakeholders',
+        design: 'Prototyping and making design decisions',
+        integration:
+          'Configuring and integrating {{0}} platforms and third-party services',
+        partIntegration: 'Configuring and integrating third-party services',
       },
       achievement: {
         resultCorporate:
@@ -299,13 +305,11 @@ const EN = {
         internship: 'Created a corporate internship program',
         mentor: 'Trained several juniors',
         mobile:
-          'Developed a corporate mobile application on {{0}} and independently released it to the app stores',
+          'Developed a corporate mobile application on {{0}} and released it to the app stores',
         interview: 'Conducted many interviews and hired a dozen developers',
         technologies:
           'Studied and applied in practice a lot technologies and tools',
         technologiesBase: 'Pumped the {{0}}, {{1}} and {{2}}',
-        speed:
-          'Set a personal record for the speed of completion of a project — {{0}} day',
         independent: 'Reached a high level of autonomy and organization',
         visa: 'Relocated to New Zealand on a work visa by the company',
         work: 'Improved teamwork skills',
@@ -313,12 +317,20 @@ const EN = {
         hardware: 'Gained extensive experience with software and hardware',
         softSkills: 'Improved soft skills',
         architecture: 'Created my own ideal architecture for web applications',
-        animations:
-          'Developed several landing pages with advanced and beautiful animations',
+        animations: 'Developed several landing pages with advanced animations',
         interfaces:
-          'Created a large number of multifunctional interfaces with custom charts, analytics, tables, forms, and dashboards',
+          'Created a large number of multifunctional interfaces with custom charts, analytics, tables, forms and dashboards',
         businessLogic:
-          'Developed a large-scale financial application with extensive business logic and complex mathematical calculations and formulas on the client side',
+          'Developed a large-scale financial application with extensive business logic on the client side',
+        publicWebsiteDevelopment:
+          'Developed components, widgets and pages for the public website and internal portal, improving user experience and conversion',
+        seoRoadmap:
+          'Implemented an {{0}} optimization plan, contributing to sales growth during the winter period',
+        strapiMigration:
+          'Migrated content from {{0}} to {{1}} and implemented {{2}} pages with {{3}}, making content management easier for the marketing team',
+        flp: 'Completed the corporate {{0}} and developed organizational and communication skills',
+        resident:
+          "Obtained a New Zealand resident visa through the {{0}} pathway with the company's support",
       },
       feature: {
         busyFull: 'full-time',
@@ -364,7 +376,7 @@ const EN = {
       step21:
         'I moved to New Zealand on a work visa from the {{0}} company. Worked, settled in, built relationships with hobbits and alpacas',
       step22: `I agreed with {{0}} on a gradual search for a new job, as the company began shutting down its core business. I passed an interview, completed a technical assessment and received an offer from {{1}} for the position of <0>${common.occupation.lead}</0>. I was waiting for an update on my work visa while continuing to collaborate with {{2}} on projects`,
-      step23: `I received an updated work visa and started as a <0>${common.occupation.lead}</0> at {{0}}`,
+      step23: `I received an updated work visa and started as a <0>${common.occupation.lead}</0> at {{0}}. Obtained a New Zealand resident visa through the {{1}} pathway with the company's support`,
     },
   },
   portfolio: {
@@ -559,7 +571,7 @@ const EN = {
       },
       'my-dreamdesk': {
         title: 'My dreamdesk {{0}} New no monitors setup',
-        text: "I've finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing, and why I don't need a large monitor",
+        text: "I've finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing and why I don't need a large monitor",
       },
       'day-in-a-life-new-zealand': {
         title:
@@ -569,7 +581,7 @@ const EN = {
       'how-i-became-software-engineer': {
         title:
           'How I became a software engineer at 27 {{0}} From actor to developer',
-        text: "In this video, I'll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I'll talk about myself, the challenges I faced, where and how I learned, what helped me along the way, and how I found my first job in {{0}}",
+        text: "In this video, I'll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I'll talk about myself, the challenges I faced, where and how I learned, what helped me along the way and how I found my first job in {{0}}",
       },
     },
   },
