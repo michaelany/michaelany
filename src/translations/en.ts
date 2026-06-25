@@ -59,7 +59,7 @@ const EN = {
     subtitle: 'Banner',
   },
   about: {
-    text: `I'm a <0>software engineer</0> with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes && complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
+    text: `I'm a <0>software engineer</0> with 10 years of experience in <0>frontend development</0>. I build <1>projects</1> of different scale && complexity, bringing <0>{{0}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
     feature: {
       projects: {
         label: '{{0}} commercial projects',
@@ -67,7 +67,7 @@ const EN = {
       },
       position: {
         label: 'Lead Frontend Engineer',
-        text: `I build projects from scratch, design architecture, write business logic, create layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
+        text: `I build projects from scratch, design, write business logic, create layouts, test, optimize and maintain code. I plan tasks, do code reviews and teach. More in <0>${common.title.skills}</0>`,
       },
       experience: {
         label: '{{0}} years of experience',
@@ -75,7 +75,7 @@ const EN = {
       },
       organizing: {
         label: 'Organized and independent',
-        text: 'I have built most projects on my own. I like being responsible for the entire client side: from discussing the concept, research and prototyping to implementation, launch and production support',
+        text: 'I have built most projects independently. I like owning the client side end to end: from discussing the idea and doing research to prototyping, development, launch and production support',
       },
       programming: {
         label: 'Love to code',
@@ -83,18 +83,18 @@ const EN = {
       },
       blogger: {
         label: '{{0}} channel creator',
-        text: `I run a channel on <1>{{0}}</1>. I talk about my journey in programming and life, and share experience and knowledge. I enjoy the whole process of making a video: from idea and script to editing and publishing. More in the <0>${common.title.blog}</0>`,
+        text: `I run a channel on <1>{{0}}</1>. I talk about my life and share experience and knowledge. I enjoy the whole process of making a video: from idea and script to editing and publishing. More in <0>${common.title.blog}</0>`,
       },
       growing: {
         label: 'Constantly learning',
-        text: 'I keep sharpening the saw: I study new technologies, documentation, articles, courses, videos, books and talks. I look for methods and tools that help me work more effectively',
+        text: 'I keep sharpening the saw: I study new technologies, documentation, articles, courses, videos, books and talks. I am interested in science and self-development literature. I look for methods and tools that help me be more productive',
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'Quality is my main principle. I pay close attention to every detail of a project, but experience and deadlines help me balance speed and quality. I like to keep things consistent, simple and organized',
+        text: 'Quality is my core principle. I pay close attention to every project detail, but experience and deadlines help me balance speed and quality. I value consistency, simplicity and order',
       },
       education: {
-        label: 'Two higher education degrees',
+        label: 'Two university degrees',
         text: 'I graduated from Moscow State University of Instrument Engineering and Computer Science and the Russian State Institute of Cinematography. My second degree helped me improve my soft skills',
       },
       actor: {
@@ -107,7 +107,7 @@ const EN = {
       },
       resident: {
         label: 'New Zealand resident',
-        text: 'I moved to New Zealand {{0}} years ago. I received residency as a {{1}}. Now it’s my home, and I live in the country I’ve always dreamed of',
+        text: "I moved to New Zealand {{0}} years ago. I got residency as a {{1}}. New Zealand is my home now, and I live in the country I've always dreamed of",
       },
       sport: {
         label: 'Into sports',
@@ -119,7 +119,7 @@ const EN = {
       },
       love: {
         label: 'Happy husband',
-        text: '<0>She</0> is my main source of inspiration and my best friend. We have been together for {{0}} years. Once I developed a progressive web application to propose to her',
+        text: '<0>She</0> is my best friend and main source of inspiration. We have been together for {{0}} years. Once I built a progressive web application to ask her to marry me',
       },
       coffee: {
         label: 'Coffee lover',
@@ -132,6 +132,7 @@ const EN = {
       australia: 'Australia',
       belarus: 'Belarus',
       bosniaHerzegovina: 'Bosnia & Herzegovina',
+      china: 'China',
       cyprus: 'Cyprus',
       czechRepublic: 'Czech Republic',
       egypt: 'Egypt',
@@ -144,7 +145,7 @@ const EN = {
       maldives: 'Maldives',
       montenegro: 'Montenegro',
       newZealand: 'New Zealand',
-      russianFederation: 'Russian Federation',
+      russia: 'Russia',
       serbia: 'Serbia',
       spain: 'Spain',
       sriLanka: 'Sri Lanka',
@@ -216,7 +217,7 @@ const EN = {
       },
       integrations: {
         label: 'Integrating third-party services',
-        text: 'I connect payment systems, {{0}}, analytics and external platforms. I have experience integrating {{1}}s and {{2}}s such as {{3}}, {{4}}, {{5}}, {{6}}, {{7}} and {{8}} services. I adapt integrations to project requirements',
+        text: 'I connect payment systems, {{0}}, analytics and external platforms. I have experience integrating {{1}}s and {{2}}s such as {{3}}, {{4}}, {{5}}, {{6}}, {{7}}, {{8}}, {{9}} services and other. I adapt integrations to project requirements',
       },
       cicd: {
         label: 'Working with infrastructure and {{0}}',
@@ -255,7 +256,7 @@ const EN = {
     },
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. I built my <0>first website</0> at the age of {{1}}. I have been working <0>professionally</0> in frontend development since {{2}}. I worked my way up from a <0>junior developer</0> to a <0>team lead</0>. In my <2>${common.title.blog}</2>, I share my journey in programming && life, as well as my experience && knowledge`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. Built my <0>first website</0> at {{1}}. I’ve been working <0>professionally</0> in frontend development since {{2}}. Went from <0>junior developer</0> to <0>team lead</0>. On my <2>${common.title.blog}</2>, I talk about life && share my experience && knowledge`,
     projects: 'Projects',
     tools: 'Tools',
     duties: 'Duties',

@@ -107,6 +107,7 @@ const countriesVisited = [
   {key: 'australia', flag: '🇦🇺'},
   {key: 'belarus', flag: '🇧🇾'},
   {key: 'bosniaHerzegovina', flag: '🇧🇦'},
+  {key: 'china', flag: '🇨🇳'},
   {key: 'cyprus', flag: '🇨🇾'},
   {key: 'czechRepublic', flag: '🇨🇿'},
   {key: 'egypt', flag: '🇪🇬'},
@@ -119,7 +120,7 @@ const countriesVisited = [
   {key: 'maldives', flag: '🇲🇻'},
   {key: 'montenegro', flag: '🇲🇪'},
   {key: 'newZealand', flag: '🇳🇿'},
-  {key: 'russianFederation', flag: '🇷🇺'},
+  {key: 'russia', flag: '🇷🇺'},
   {key: 'serbia', flag: '🇷🇸'},
   {key: 'spain', flag: '🇪🇸'},
   {key: 'sriLanka', flag: '🇱🇰'},
@@ -244,6 +245,6 @@ const features: IFeature[] = [
   {
     tKey: 'coffee',
     Icon: CoffeeMakerIcon,
-    textValues: ['Breville the Barista'],
+    textValues: [TECHNOLOGY_TITLE.coffee],
   },
 ]
