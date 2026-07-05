@@ -136,7 +136,7 @@ export default function Skills() {
         TECHNOLOGY_TITLE.vitest,
         TECHNOLOGY_TITLE.playwright,
         'A/B',
-        'Lighthouse score',
+        'Lighthouse',
         'Core Web Vitals',
       ],
     },
@@ -252,10 +252,11 @@ const transComponents = [
 ]
 
 const textValues = [
-  TECHNOLOGY_TITLE.ts,
   TECHNOLOGY_TITLE.react,
-  TECHNOLOGY_TITLE.tanstack,
-  TECHNOLOGY_TITLE.zustand,
+  TECHNOLOGY_TITLE.vue,
+  'SSR',
+  TECHNOLOGY_TITLE.next,
+  TECHNOLOGY_TITLE.nuxt,
   TECHNOLOGY_TITLE.claudecode,
   TECHNOLOGY_TITLE.codex,
   CONTACT_LINK.youTube.title,

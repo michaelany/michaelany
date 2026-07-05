@@ -88,7 +88,7 @@ const CountriesVisited = ({children}: ICountriesVisitedProps) => {
   )
 }
 
-const textValues = ['UI/UX', 'title.blog', CONTACT_LINK.youTube.title]
+const textValues = [YEARS_OF_EXPERIENCE, 'UI/UX', CONTACT_LINK.youTube.title]
 
 const transComponents = [
   <strong />,
