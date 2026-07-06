@@ -100,7 +100,6 @@ export const TECHNOLOGY_TITLE = {
   wordpress: 'WordPress',
   strapi: 'Strapi',
   storyblok: 'Storyblok',
-  mongo: 'MongoDB',
   mysql: 'MySQL',
   php: 'PHP',
   laravel: 'Laravel',
@@ -118,7 +117,6 @@ export const TECHNOLOGY_TITLE = {
   squarespace: 'Squarespace',
   keycloak: 'Keycloak',
   csharp: 'C#',
-  dotnet: '.NET',
   epidemic: 'Epidemic Sound',
   mac: 'Apple MacBook M1 Pro (16-inch)',
   ipad: 'Apple iPad Pro (12.9-inch, 5th generation)',
@@ -561,6 +559,91 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
     ],
   },
   {
+    tKey: 'ai',
+    technologies: [
+      {
+        name: 'claude',
+        label: TECHNOLOGY_TITLE.claude,
+        color: 'red',
+        images: [
+          publicImg('technologies/claude.png'),
+          publicImg('technologies/claude@2x.png'),
+        ],
+        href: 'https://claude.com/product/overview',
+      },
+      {
+        name: 'claudecode',
+        label: TECHNOLOGY_TITLE.claudecode,
+        color: 'red',
+        images: [
+          publicImg('technologies/claudecode.png'),
+          publicImg('technologies/claudecode@2x.png'),
+        ],
+        href: 'https://claude.com/product/claude-code',
+      },
+      {
+        name: 'gpt',
+        label: TECHNOLOGY_TITLE.gpt,
+        color: 'default',
+        images: [
+          publicImg('technologies/gpt.png'),
+          publicImg('technologies/gpt@2x.png'),
+        ],
+        href: 'https://openai.com/chatgpt',
+      },
+      {
+        name: 'codex',
+        label: TECHNOLOGY_TITLE.codex,
+        color: 'violet',
+        images: [
+          publicImg('technologies/codex.png'),
+          publicImg('technologies/codex@2x.png'),
+        ],
+        href: 'https://openai.com/codex',
+      },
+      {
+        name: 'gemini',
+        label: TECHNOLOGY_TITLE.gemini,
+        color: 'blue',
+        images: [
+          publicImg('technologies/gemini.png'),
+          publicImg('technologies/gemini@2x.png'),
+        ],
+        href: 'https://gemini.google.com',
+      },
+      {
+        name: 'antigravity',
+        label: TECHNOLOGY_TITLE.antigravity,
+        color: 'blue',
+        images: [
+          publicImg('technologies/antigravity.png'),
+          publicImg('technologies/antigravity@2x.png'),
+        ],
+        href: 'https://antigravity.google',
+      },
+      {
+        name: 'cursor',
+        label: TECHNOLOGY_TITLE.cursor,
+        color: 'default',
+        images: [
+          publicImg('technologies/cursor.png'),
+          publicImg('technologies/cursor@2x.png'),
+        ],
+        href: 'https://cursor.com',
+      },
+      {
+        name: 'copilot',
+        label: TECHNOLOGY_TITLE.copilot,
+        color: 'default',
+        images: [
+          publicImg('technologies/copilot.png'),
+          publicImg('technologies/copilot@2x.png'),
+        ],
+        href: 'https://github.com/copilot',
+      },
+    ],
+  },
+  {
     tKey: 'utils',
     technologies: [
       {
@@ -791,91 +874,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
     ],
   },
   {
-    tKey: 'ai',
-    technologies: [
-      {
-        name: 'claude',
-        label: TECHNOLOGY_TITLE.claude,
-        color: 'red',
-        images: [
-          publicImg('technologies/claude.png'),
-          publicImg('technologies/claude@2x.png'),
-        ],
-        href: 'https://claude.com/product/overview',
-      },
-      {
-        name: 'claudecode',
-        label: TECHNOLOGY_TITLE.claudecode,
-        color: 'red',
-        images: [
-          publicImg('technologies/claudecode.png'),
-          publicImg('technologies/claudecode@2x.png'),
-        ],
-        href: 'https://claude.com/product/claude-code',
-      },
-      {
-        name: 'gpt',
-        label: TECHNOLOGY_TITLE.gpt,
-        color: 'default',
-        images: [
-          publicImg('technologies/gpt.png'),
-          publicImg('technologies/gpt@2x.png'),
-        ],
-        href: 'https://openai.com/chatgpt',
-      },
-      {
-        name: 'codex',
-        label: TECHNOLOGY_TITLE.codex,
-        color: 'violet',
-        images: [
-          publicImg('technologies/codex.png'),
-          publicImg('technologies/codex@2x.png'),
-        ],
-        href: 'https://openai.com/codex',
-      },
-      {
-        name: 'gemini',
-        label: TECHNOLOGY_TITLE.gemini,
-        color: 'blue',
-        images: [
-          publicImg('technologies/gemini.png'),
-          publicImg('technologies/gemini@2x.png'),
-        ],
-        href: 'https://gemini.google.com',
-      },
-      {
-        name: 'antigravity',
-        label: TECHNOLOGY_TITLE.antigravity,
-        color: 'blue',
-        images: [
-          publicImg('technologies/antigravity.png'),
-          publicImg('technologies/antigravity@2x.png'),
-        ],
-        href: 'https://antigravity.google',
-      },
-      {
-        name: 'cursor',
-        label: TECHNOLOGY_TITLE.cursor,
-        color: 'default',
-        images: [
-          publicImg('technologies/cursor.png'),
-          publicImg('technologies/cursor@2x.png'),
-        ],
-        href: 'https://cursor.com',
-      },
-      {
-        name: 'copilot',
-        label: TECHNOLOGY_TITLE.copilot,
-        color: 'default',
-        images: [
-          publicImg('technologies/copilot.png'),
-          publicImg('technologies/copilot@2x.png'),
-        ],
-        href: 'https://github.com/copilot',
-      },
-    ],
-  },
-  {
     tKey: 'services',
     technologies: [
       {
@@ -1086,16 +1084,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
         href: 'https://expo.dev',
       },
       {
-        name: 'mongo',
-        label: TECHNOLOGY_TITLE.mongo,
-        color: 'grass',
-        images: [
-          publicImg('technologies/mongo.png'),
-          publicImg('technologies/mongo@2x.png'),
-        ],
-        href: 'https://mongodb.com',
-      },
-      {
         name: 'mysql',
         label: TECHNOLOGY_TITLE.mysql,
         color: 'yellow',
@@ -1131,16 +1119,6 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           publicImg('technologies/csharp@2x.png'),
         ],
         href: 'https://dotnet.microsoft.com/languages/csharp',
-      },
-      {
-        name: 'dotnet',
-        label: TECHNOLOGY_TITLE.dotnet,
-        color: 'violet',
-        images: [
-          publicImg('technologies/dotnet.png'),
-          publicImg('technologies/dotnet@2x.png'),
-        ],
-        href: 'https://dotnet.microsoft.com',
       },
       {
         name: 'keycloak',

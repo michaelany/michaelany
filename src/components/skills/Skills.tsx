@@ -143,13 +143,7 @@ export default function Skills() {
     {
       tKey: 'ai',
       Icon: SmartToyIcon,
-      labelValues: ['AI'],
-      textValues: [
-        'AI',
-        TECHNOLOGY_TITLE.claudecode,
-        TECHNOLOGY_TITLE.codex,
-        'MCP',
-      ],
+      textValues: [TECHNOLOGY_TITLE.claudecode, TECHNOLOGY_TITLE.codex, 'MCP'],
     },
     {
       tKey: 'integrations',
@@ -265,6 +259,6 @@ const textValues = [
 
 const initialExpanded = [
   TECHNOLOGY_GROUPS[0].tKey,
-  TECHNOLOGY_GROUPS[5].tKey,
+  TECHNOLOGY_GROUPS[3].tKey,
   TECHNOLOGY_GROUPS.at(-1)!.tKey,
 ]

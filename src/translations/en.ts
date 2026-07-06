@@ -67,31 +67,31 @@ const EN = {
       },
       position: {
         label: 'Lead Frontend Engineer',
-        text: `I build projects from scratch: design architecture, write business logic, create layouts, test, optimize and maintain code. I plan tasks, review code and mentor teammates. More in <0>${common.title.skills}</0>`,
+        text: `I build projects from scratch: design architecture, write business logic, create layouts, test, optimize and maintain code. Plan tasks, review code and mentor teammates. More in <0>${common.title.skills}</0>`,
       },
       experience: {
         label: '{{0}} years of experience',
-        text: `I built my first website at {{0}}. I went from junior developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
+        text: `Built my first website at {{0}}. Went from junior developer to team lead. I work for a New Zealand company and consult on frontend development. More in <0>${common.title.experience}</0>`,
       },
       organizing: {
         label: 'Organized and independent',
-        text: 'I have built most projects independently. I like owning the client side end to end: from discussing the idea and research to prototyping, development, launch and production support',
+        text: 'I have built most projects independently and like owning the client side end to end: from discussing the idea and research to prototyping, development, launch and production support',
       },
       programming: {
         label: 'Love coding',
-        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in interface design, cross-platform development and language models",
+        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in web design, cross-platform development and language models",
       },
       blogger: {
         label: '{{0}} creator',
-        text: `I run a channel on <1>{{0}}</1>, where I share my life, experience and knowledge. I enjoy the whole process of making a video: from the idea and script to editing and publishing. More on the <0>${common.title.blog}</0>`,
+        text: `I run a channel on <1>{{0}}</1>, where I share my life, experience and knowledge. Enjoy the whole process of making a video: from the idea and script to editing and publishing. More on the <0>${common.title.blog}</0>`,
       },
       growing: {
         label: 'Constantly learning',
-        text: "I keep sharpening the saw: I study new technologies, documentation, articles, courses, videos, books and talks. I'm interested in popular science and personal development books. I look for methods and tools that help me be more productive",
+        text: 'I keep sharpening the saw by studying new technologies, documentation, articles, courses, videos, books and talks. Interested in popular science and personal development books. Always look for methods and tools that help me be more productive',
       },
       perfect: {
         label: 'Prone to perfectionism',
-        text: 'Quality is my core principle. I care about every detail of a project, but experience and deadlines help me balance speed and results. I value consistency, simplicity and order',
+        text: 'Quality is my core principle. I care about every detail of a project, but experience and deadlines help me balance speed and results. Value consistency, simplicity and order',
       },
       education: {
         label: 'Two university degrees',
@@ -107,23 +107,23 @@ const EN = {
       },
       resident: {
         label: 'New Zealand resident',
-        text: "I moved to New Zealand {{0}} years ago. I got residency as a {{1}}. New Zealand is now my home, and I live in the country I've always dreamed of",
+        text: "I moved to New Zealand {{0}} years ago and got residency as a {{1}}. New Zealand is now my home, the country I've always dreamed of",
       },
       sport: {
         label: 'Into sports',
-        text: 'Physical activity is especially important for a developer, so I move every day. I love calisthenics, fitness and hiking. When all the tasks are done and the surf forecast looks good, you’ll find me out on my board in the waves',
+        text: "Physical activity is especially important for a developer, so I move every day. Love calisthenics, fitness and hiking. When all the tasks are done and the surf forecast looks good, you'll find me out on my board in the waves",
       },
       travel: {
         label: 'Love traveling',
-        text: 'I’ve visited <0>{{0}} countries</0>. I’ve climbed Mount Fuji, had an ale at the Green Dragon Inn in Hobbiton, seen Oasis live in Australia and encountered a wild bear at Dyatlov Pass',
+        text: "Visited <0>{{0}} countries</0>. Once I climbed Mount Fuji, had an ale at Hobbiton's Green Dragon Inn, saw Oasis live in Australia and encountered a wild bear at Dyatlov Pass",
       },
       love: {
         label: 'Happy husband',
-        text: '<0>She</0> is my best friend and biggest source of inspiration. We’ve been together for {{0}} years. I once built a progressive web app to ask her to marry me',
+        text: "<0>She</0> is my best friend and biggest source of inspiration. We've been together for {{0}} years. I once built a progressive web app to ask her to marry me",
       },
       coffee: {
         label: 'Coffee lover',
-        text: '"A programmer is someone who turns coffee into code." I start my workday with a cup of freshly brewed coffee. I like grinding whole beans and making flat whites on my {{0}}',
+        text: '"A programmer is someone who turns coffee into code." I start my workday with a cup of freshly brewed coffee. Like grinding whole beans and making flat whites on my {{0}}',
       },
     },
     country: {
@@ -161,27 +161,27 @@ const EN = {
     feature: {
       interface: {
         label: 'Creating usable and reliable interfaces',
-        text: 'I build polished interfaces with clear interactions and well-thought-out business logic. I understand when to use a specific element, component or widget. I handle edge cases and pay attention to security and {{0}}',
+        text: 'I build polished interfaces with clear interactions and well-thought-out business logic. Understand when to use a specific element, component or widget. Handle edge cases and pay attention to security and {{0}}',
       },
       performance: {
         label: 'Writing modern and performant code',
-        text: 'I work with {{0}}, {{1}}, {{2}}, {{3}}, {{4}} and other modern technologies. I avoid unnecessary operations and memory leaks. I memoize heavy computations and optimize performance',
+        text: 'I work with {{0}}, {{1}}, {{2}}, {{3}}, {{4}} and other modern technologies. Avoid unnecessary operations and memory leaks. Memoize heavy computations and optimize performance',
       },
       architecture: {
         label: 'Designing modular and scalable architecture',
-        text: 'I think through architecture for each project. I use a modular approach, {{0}} and {{1}} principles. I create a clear code structure with a clean separation of responsibilities, so it is easy to maintain and extend',
+        text: 'I think through architecture for each project. Use a modular approach, custom {{0}} and {{1}} principles. Create a clear code structure with a clean separation of concerns, so it is easy to maintain and extend',
       },
       code: {
         label: 'Writing clean and maintainable code',
-        text: 'I write self-documenting code in a declarative style. I use {{0}}, {{1}} and proven style guides. I follow {{2}}, {{3}} and {{4}} principles. I refactor regularly. Readable code matters more than micro-optimizations',
+        text: 'I write self-documenting code in a declarative style. Use {{0}}, {{1}} and proven style guides. Follow {{2}}, {{3}} and {{4}} principles. Refactor regularly. Readable code matters more than micro-optimizations',
       },
       state: {
         label: 'Managing application state',
-        text: 'I separate local, global, server and {{0}} state. I build predictable data flow without duplication. I think through data loading, caching, synchronization and updates',
+        text: 'I separate local, global, server and {{0}} state. Build predictable data flow without duplication. Think through data loading, caching, synchronization and updates',
       },
       tools: {
         label: 'Using modern libraries and tools',
-        text: 'I keep up with technology changes. I like the {{0}} ecosystem. I add dependencies intentionally, so each one solves a specific problem. I choose frameworks, libraries, utilities and tools based on the project. My <0>core toolkit</0>',
+        text: 'I keep up with technology updates. Like the {{0}} ecosystem. Add dependencies intentionally, so each one solves a specific problem. Choose frameworks, libraries, utilities and tools based on the project. My <0>core toolkit</0>',
       },
       patterns: {
         label: 'Applying various patterns and techniques',
@@ -193,51 +193,51 @@ const EN = {
       },
       markup: {
         label: 'Creating semantic, cross-browser and {{0}} markup',
-        text: 'I build layouts pixel by pixel. I use modern {{0}} features and semantic {{1}} tags. I avoid "div soup". I account for browser differences, care about accessibility and build email templates',
+        text: 'I build layouts pixel by pixel. Use modern {{0}} features and semantic {{1}} tags. Avoid "div soup". Account for browser differences, care about accessibility and build email templates',
       },
       responsive: {
         label: 'Adapting interfaces for different devices',
-        text: 'I use {{0}} approaches. I set up breakpoints and create flexible responsive layouts for different devices and resolutions. I test interfaces across screen widths down to the minimum size',
+        text: 'I use {{0}} approaches. Set up breakpoints and create flexible responsive layouts for different devices and resolutions. Test interfaces across screen widths down to the minimum size',
       },
       animation: {
         label: 'Creating advanced animations',
-        text: 'I create performant {{0}}, {{1}}, {{2}} and {{3}} animations: smooth transitions, microinteractions, interactive flows, scroll animations and 3D effects. I keep them smooth and purposeful. I like {{4}}, {{5}} and {{6}}',
+        text: 'I create performant {{0}}, {{1}}, {{2}} and {{3}} animations: smooth transitions, interactive flows, scroll animations and 3D effects. Keep them smooth and purposeful. Like {{4}}, {{5}} and {{6}}',
       },
       media: {
         label: 'Working with media and design',
-        text: 'I work with raster and vector images, video and documents. I choose suitable file formats and optimize media without visible quality loss. I prototype layouts and contribute to design work. I work in {{0}} and {{1}}',
+        text: 'I work with raster and vector images, video and documents. Choose suitable file formats and optimize media without visible quality loss. Prototype layouts and contribute to design. Work in {{0}} and {{1}}',
       },
       test: {
         label: 'Testing and optimizing',
-        text: 'I write unit, integration and end-to-end tests. I prefer {{0}} and {{1}}. I create and integrate {{2}} tests to validate product hypotheses. I optimize resource loading, {{3}} scores and {{4}}',
+        text: 'I write unit, integration and end-to-end tests. Prefer {{0}} and {{1}}. Create and integrate {{2}} tests to validate product hypotheses. Optimize resource loading, {{3}} scores and {{4}}',
       },
       ai: {
-        label: 'Using {{0}} tools',
-        text: 'I use {{0}} agents for development, mainly {{1}} and {{2}}. I use prompt engineering, validate {{0}} responses, create skills and work with {{3}}. I understand the capabilities and limits of generative {{0}}',
+        label: 'Using AI tools',
+        text: 'I use AI agents for development, mainly {{0}} and {{1}}. Use prompt engineering, validate AI output, create skills and work with {{2}}. Integrate AI into workflows. Understand the capabilities and limits of generative AI',
       },
       integrations: {
         label: 'Integrating third-party services',
-        text: 'I connect payment systems, {{0}}, analytics and external platforms. I have experience integrating {{1}}s and {{2}}s for {{3}}, {{4}}, {{5}}, {{6}}, {{7}}, {{8}}, {{9}} and other services. I adapt integrations to project requirements',
+        text: 'I connect payment systems, {{0}}, analytics and external platforms. Have experience integrating {{1}}s and {{2}}s for {{3}}, {{4}}, {{5}}, {{6}}, {{7}}, {{8}}, {{9}} and other services. Adapt integrations to project requirements',
       },
       cicd: {
         label: 'Working with infrastructure and {{0}}',
-        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}}, {{5}} and other cloud services for deployment. I set up build pipelines, automated tests and scripts, environments and supporting processes for stable releases',
+        text: 'I use {{0}}, {{1}}, {{2}}, {{3}}, {{4}}, {{5}} and other cloud services for deployment. Set up build pipelines, automated tests, scripts and environments for stable releases',
       },
       tasks: {
         label: 'Planning and decomposing tasks',
-        text: 'I plan the backlog, decompose and estimate tasks. I account for priorities, dependencies, risks and acceptance criteria. I turn ideas into a clear work plan. I combine {{0}}, {{1}} and my own planning system',
+        text: 'I plan the backlog, decompose and estimate tasks. Account for priorities, dependencies, risks and acceptance criteria. Turn ideas into a clear work plan. Combine {{0}}, {{1}} and my own planning system',
       },
       ownership: {
         label: 'Taking responsibility for the result',
-        text: 'I don’t wait for step-by-step instructions. I clarify requirements, notice problems and propose solutions. I own tasks end to end and bring them to a finished result. I care about project quality and consistency. I work directly with the team and stakeholders',
+        text: "I don't wait for step-by-step instructions. Clarify requirements, notice problems and propose solutions. Own tasks end to end and bring them to a finished result. Care about project quality and consistency. Work directly with the team and stakeholders",
       },
       mentor: {
         label: 'Reviewing code and mentoring',
-        text: 'I mentor developers, give constructive feedback in pull requests and share experience with the team. I developed a corporate internship program and have experience conducting technical interviews',
+        text: 'I mentor developers, give constructive feedback in pull requests and share experience with the team. Developed a corporate internship program and have experience conducting technical interviews',
       },
       blog: {
         label: 'Creating content for {{0}}',
-        text: 'I write and edit scripts, speak on camera and think through video structure. I shoot, edit, process audio, color grade and create thumbnails. I prepare publications and communicate with subscribers',
+        text: 'I write and edit scripts, speak on camera and think through video structure. Shoot, edit, process audio, color grade and create thumbnails. Prepare publications and communicate with subscribers',
       },
     },
     subtitle: 'Technologies',
@@ -256,7 +256,7 @@ const EN = {
     },
   },
   experience: {
-    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. Built my <0>first website</0> at {{1}}. I’ve been working <0>professionally</0> in frontend development since {{2}}. Went from <0>junior developer</0> to <0>team lead</0>. I share my life, experience && knowledge on my <2>${common.title.blog}</2>`,
+    text: `<0>${common.occupation.lead}</0> at <1>{{0}}</1>. Built my <0>first website</0> at {{1}}. I've been working <0>professionally</0> in frontend development since {{2}}. Went from <0>junior developer</0> to <0>team lead</0>. I share my life, experience && knowledge on my <2>${common.title.blog}</2>`,
     projects: 'Projects',
     tools: 'Tools',
     duties: 'Duties',
