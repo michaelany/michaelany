@@ -1,11 +1,11 @@
-.Stepper-Title {
+.Timeline-Title {
   font-size: 1.2rem;
   padding-top: 20px;
   padding-inline: 24px;
   font-weight: bold;
 }
 
-.Stepper-Text {
+.Timeline-Text {
   padding-top: 8px;
   margin-bottom: 24px;
   &_last {
@@ -14,13 +14,13 @@
   }
 }
 
-.Stepper-Actions {
+.Timeline-Actions {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
 
-.Stepper-Button {
+.Timeline-Button {
   color: v.$color_dark-violet;
   background-color: rgba(v.$color_violet, 0.2);
   &:not(:first-child) {
@@ -28,7 +28,7 @@
   }
   @include m.hover {
     background-color: rgba(v.$color_violet, 0.4);
-    .Stepper-ButtonIcon {
+    .Timeline-ButtonIcon {
       transform: rotate(90deg);
       &_refresh {
         transform: rotate(360deg) scale(1.3);
@@ -37,7 +37,7 @@
   }
 }
 
-.Stepper-ButtonIcon {
+.Timeline-ButtonIcon {
   font-size: 24px;
   transform: rotate(0deg);
   transition: transform v.$duration_short v.$easing_in-out;

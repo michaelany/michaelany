@@ -1,6 +1,7 @@
-import {useState, type RefObject} from 'react'
+import {useRef, useState} from 'react'
 import {useTranslation, Trans} from 'react-i18next'
 import {
+  useMediaQuery,
   Stepper as MuiStepper,
   Step,
   StepLabel,
@@ -14,23 +15,27 @@ import {
   RefreshRounded as RefreshIcon,
 } from '@mui/icons-material'
 
-import './Stepper.scss'
+import './Timeline.scss'
+import {Animate, Section} from '#components/common'
 import {getPeriodDateTime, scrollToView, tPeriodPart} from '#utils/helpers'
-import {FIRST_WEBSITE_AGE, CAREER_START_PARTS} from '#utils/constants'
+import {
+  FIRST_WEBSITE_AGE,
+  CAREER_START_PARTS,
+  QUERY_BREAKPOINT,
+  ROUTE,
+} from '#utils/constants'
 import {COMPANY, CONTACT_LINK} from '#data/common'
 import type {IPeriod} from '#utils/types'
-
-interface IStepperProps {
-  sectionRef: RefObject<HTMLElement | null>
-}
 
 interface IStep {
   period: IPeriod
   values?: (string | number)[]
 }
 
-export default function Stepper({sectionRef}: IStepperProps) {
+export default function Timeline() {
   const {t} = useTranslation()
+  const md = useMediaQuery(QUERY_BREAKPOINT.md)
+  const sectionRef = useRef<HTMLElement | null>(null)
   const [step, changeStep] = useState<number>(steps.length - 1)
 
   const handleNext = () => changeStep(step + 1)
@@ -43,76 +48,89 @@ export default function Stepper({sectionRef}: IStepperProps) {
   }
 
   return (
-    <Paper>
-      <h2 className="Stepper-Title">{t('experience.subtitle')}</h2>
-      <MuiStepper activeStep={step} orientation="vertical">
-        {steps.map((item, index) => (
-          <Step key={index}>
-            <StepLabel>
-              <span className="Time">
-                <time dateTime={getPeriodDateTime(item.period.from)}>
-                  {tPeriodPart(t, item.period.from)}
-                </time>
-                {item.period.to ? (
-                  <>
-                    {' — '}
-                    <time dateTime={getPeriodDateTime(item.period.to)}>
-                      {tPeriodPart(t, item.period.to)}
+    <Section
+      aside
+      colorful
+      sectionRef={sectionRef}
+      prevTo={ROUTE.skills}
+      nextTo={ROUTE.portfolio}
+    >
+      <Animate
+        effect={md ? undefined : 'right'}
+        duration={md ? undefined : 'longer'}
+      >
+        <Paper>
+          <h2 className="Timeline-Title">{t('experience.subtitle')}</h2>
+          <MuiStepper activeStep={step} orientation="vertical">
+            {steps.map((item, index) => (
+              <Step key={index}>
+                <StepLabel>
+                  <span className="Time">
+                    <time dateTime={getPeriodDateTime(item.period.from)}>
+                      {tPeriodPart(t, item.period.from)}
                     </time>
-                  </>
-                ) : (
-                  index === steps.length - 1 && ' — ...'
-                )}
-              </span>
-            </StepLabel>
-            <StepContent>
-              <p className="Stepper-Text">
-                <Trans
-                  i18nKey={`experience.stepper.step${index + 1}`}
-                  values={item.values}
-                  components={transComponents}
-                />
-                .{index === steps.length - 1 && '..'}
-              </p>
-              <div className="Stepper-Actions">
+                    {item.period.to ? (
+                      <>
+                        {' — '}
+                        <time dateTime={getPeriodDateTime(item.period.to)}>
+                          {tPeriodPart(t, item.period.to)}
+                        </time>
+                      </>
+                    ) : (
+                      index === steps.length - 1 && ' — ...'
+                    )}
+                  </span>
+                </StepLabel>
+                <StepContent>
+                  <p className="Timeline-Text">
+                    <Trans
+                      i18nKey={`experience.stepper.step${index + 1}`}
+                      values={item.values}
+                      components={transComponents}
+                    />
+                    .{index === steps.length - 1 && '..'}
+                  </p>
+                  <div className="Timeline-Actions">
+                    <Fab
+                      className="Timeline-Button"
+                      size="medium"
+                      aria-label={t('experience.next')}
+                      onClick={handleNext}
+                    >
+                      <ArrowForwardIcon className="Timeline-ButtonIcon" />
+                    </Fab>
+                    <Fab
+                      className="Timeline-Button"
+                      size="medium"
+                      aria-label={t('experience.back')}
+                      disabled={step === 0}
+                      onClick={handleBack}
+                    >
+                      <ArrowBackIcon className="Timeline-ButtonIcon" />
+                    </Fab>
+                  </div>
+                </StepContent>
+              </Step>
+            ))}
+            {step === steps.length && (
+              <>
+                <p className="Timeline-Text Timeline-Text_last">
+                  {t('experience.continue')} ✌️...
+                </p>
                 <Fab
-                  className="Stepper-Button"
+                  className="Timeline-Button"
                   size="medium"
-                  aria-label={t('experience.next')}
-                  onClick={handleNext}
+                  aria-label={t('experience.refresh')}
+                  onClick={handleReset}
                 >
-                  <ArrowForwardIcon className="Stepper-ButtonIcon" />
+                  <RefreshIcon className="Timeline-ButtonIcon Timeline-ButtonIcon_refresh" />
                 </Fab>
-                <Fab
-                  className="Stepper-Button"
-                  size="medium"
-                  aria-label={t('experience.back')}
-                  disabled={step === 0}
-                  onClick={handleBack}
-                >
-                  <ArrowBackIcon className="Stepper-ButtonIcon" />
-                </Fab>
-              </div>
-            </StepContent>
-          </Step>
-        ))}
-        {step === steps.length && (
-          <>
-            <p className="Stepper-Text Stepper-Text_last">
-              {t('experience.continue')} ✌️...
-            </p>
-            <Fab
-              className="Stepper-Button"
-              size="medium"
-              aria-label={t('experience.refresh')}
-              onClick={handleReset}
-            >
-              <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />
-            </Fab>
-          </>
-        )}
-      </MuiStepper>
-    </Paper>
+              </>
+            )}
+          </MuiStepper>
+        </Paper>
+      </Animate>
+    </Section>
   )
 }
 
