@@ -15,7 +15,7 @@ import {
 } from '@mui/icons-material'
 
 import './Stepper.scss'
-import {scrollToView, tPeriodPart} from '#utils/helpers'
+import {getPeriodDateTime, scrollToView, tPeriodPart} from '#utils/helpers'
 import {FIRST_WEBSITE_AGE, CAREER_START_PARTS} from '#utils/constants'
 import {COMPANY, CONTACT_LINK} from '#data/common'
 import type {IPeriod} from '#utils/types'
@@ -43,64 +43,76 @@ export default function Stepper({sectionRef}: IStepperProps) {
   }
 
   return (
-    <MuiStepper component={Paper} activeStep={step} orientation="vertical">
-      {steps.map((item, index) => (
-        <Step key={index}>
-          <StepLabel>
-            <time className="Time">
-              {tPeriodPart(t, item.period.from)}
-              {item.period.to
-                ? ` — ${tPeriodPart(t, item.period.to)}`
-                : index === steps.length - 1 && ' — ...'}
-            </time>
-          </StepLabel>
-          <StepContent>
-            <p className="Stepper-Text">
-              <Trans
-                i18nKey={`experience.stepper.step${index + 1}`}
-                values={item.values}
-                components={transComponents}
-              />
-              .{index === steps.length - 1 && '..'}
+    <Paper>
+      <h2 className="Stepper-Title">{t('experience.subtitle')}</h2>
+      <MuiStepper activeStep={step} orientation="vertical">
+        {steps.map((item, index) => (
+          <Step key={index}>
+            <StepLabel>
+              <span className="Time">
+                <time dateTime={getPeriodDateTime(item.period.from)}>
+                  {tPeriodPart(t, item.period.from)}
+                </time>
+                {item.period.to ? (
+                  <>
+                    {' — '}
+                    <time dateTime={getPeriodDateTime(item.period.to)}>
+                      {tPeriodPart(t, item.period.to)}
+                    </time>
+                  </>
+                ) : (
+                  index === steps.length - 1 && ' — ...'
+                )}
+              </span>
+            </StepLabel>
+            <StepContent>
+              <p className="Stepper-Text">
+                <Trans
+                  i18nKey={`experience.stepper.step${index + 1}`}
+                  values={item.values}
+                  components={transComponents}
+                />
+                .{index === steps.length - 1 && '..'}
+              </p>
+              <div className="Stepper-Actions">
+                <Fab
+                  className="Stepper-Button"
+                  size="medium"
+                  aria-label={t('experience.next')}
+                  onClick={handleNext}
+                >
+                  <ArrowForwardIcon className="Stepper-ButtonIcon" />
+                </Fab>
+                <Fab
+                  className="Stepper-Button"
+                  size="medium"
+                  aria-label={t('experience.back')}
+                  disabled={step === 0}
+                  onClick={handleBack}
+                >
+                  <ArrowBackIcon className="Stepper-ButtonIcon" />
+                </Fab>
+              </div>
+            </StepContent>
+          </Step>
+        ))}
+        {step === steps.length && (
+          <>
+            <p className="Stepper-Text Stepper-Text_last">
+              {t('experience.continue')} ✌️...
             </p>
-            <div className="Stepper-Actions">
-              <Fab
-                className="Stepper-Button"
-                size="medium"
-                aria-label={t('experience.next')}
-                onClick={handleNext}
-              >
-                <ArrowForwardIcon className="Stepper-ButtonIcon" />
-              </Fab>
-              <Fab
-                className="Stepper-Button"
-                size="medium"
-                aria-label={t('experience.back')}
-                disabled={step === 0}
-                onClick={handleBack}
-              >
-                <ArrowBackIcon className="Stepper-ButtonIcon" />
-              </Fab>
-            </div>
-          </StepContent>
-        </Step>
-      ))}
-      {step === steps.length && (
-        <>
-          <p className="Stepper-Text Stepper-Text_last">
-            {t('experience.continue')} ✌️...
-          </p>
-          <Fab
-            className="Stepper-Button"
-            size="medium"
-            aria-label={t('experience.refresh')}
-            onClick={handleReset}
-          >
-            <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />
-          </Fab>
-        </>
-      )}
-    </MuiStepper>
+            <Fab
+              className="Stepper-Button"
+              size="medium"
+              aria-label={t('experience.refresh')}
+              onClick={handleReset}
+            >
+              <RefreshIcon className="Stepper-ButtonIcon Stepper-ButtonIcon_refresh" />
+            </Fab>
+          </>
+        )}
+      </MuiStepper>
+    </Paper>
   )
 }
 
@@ -301,7 +313,7 @@ const steps: IStep[] = [
       },
       to: {
         tKey: 'january',
-        year: 2021,
+        year: 2022,
       },
     },
     values: ['AppStore', 'Google Play'],

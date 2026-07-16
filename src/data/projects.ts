@@ -2609,4 +2609,8 @@ export const PROJECTS_COUNT: number =
     0
   )
 
+export const SEVEN_GLYPHS_PROJECTS_COUNT =
+  PUBLIC_PROJECTS.filter(project => project.companyName === 'sevenGlyphs')
+    .length + PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT.sevenGlyphs
+
 export default PUBLIC_PROJECTS

@@ -20,7 +20,7 @@ import type {TFunction} from 'i18next'
 
 import './Job.scss'
 import {Tooltip, Company} from '#components/common'
-import {tPeriodPart} from '#utils/helpers'
+import {getPeriodDateTime, tPeriodPart} from '#utils/helpers'
 import TECHNOLOGIES from '#data/technologies'
 import PROJECTS, {
   PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT,
@@ -146,10 +146,19 @@ const Features = ({t, features}: IFeaturesProps) => {
           icon={<Icon />}
           label={
             feature.period ? (
-              <time>
-                {tPeriodPart(t, feature.period.from)} -{' '}
-                {feature.period.to ? tPeriodPart(t, feature.period.to) : '...'}
-              </time>
+              <>
+                <time dateTime={getPeriodDateTime(feature.period.from)}>
+                  {tPeriodPart(t, feature.period.from)}
+                </time>{' '}
+                —{' '}
+                {feature.period.to ? (
+                  <time dateTime={getPeriodDateTime(feature.period.to)}>
+                    {tPeriodPart(t, feature.period.to)}
+                  </time>
+                ) : (
+                  '...'
+                )}
+              </>
             ) : (
               t(`experience.job.feature.${feature.tKey}`)
             )
