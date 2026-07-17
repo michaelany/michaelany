@@ -28,31 +28,24 @@ export default function VideoDate({
   )
 }
 
+const relativeTimeFormatters: Record<TLng, Intl.RelativeTimeFormat> = {
+  en: new Intl.RelativeTimeFormat('en'),
+  ru: new Intl.RelativeTimeFormat('ru'),
+}
+
 const getTimeSince = (date: Date, lng: TLng): string => {
   const currentDate = new Date()
-  const days = differenceInDays(currentDate, date)
   const months = differenceInMonths(currentDate, date)
-  const ruLng = lng === 'ru'
   if (months >= 12) {
-    const years = months / 12
-    return ruLng
-      ? `${Math.floor(years)} год${Math.floor(years) % 10 === 1 && Math.floor(years) !== 11 ? '' : Math.floor(years) % 10 === 2 && Math.floor(years) !== 12 ? 'а' : 'ов'} назад`
-      : `${Math.floor(years)} year${Math.floor(years) > 1 ? 's' : ''} ago`
-  } else if (months > 0) {
-    const russianMonthsEnding =
-      months === 1 ? 'месяц' : months < 5 ? 'месяца' : 'месяцев'
-    return ruLng
-      ? `${months} ${russianMonthsEnding} назад`
-      : `${months} month${months > 1 ? 's' : ''} ago`
-  } else if (days > 0) {
-    const russianDaysEnding =
-      days === 1 || days === 21
-        ? 'день'
-        : days < 5 || (days > 21 && days < 25)
-          ? 'дня'
-          : 'дней'
-    return ruLng
-      ? `${days} ${russianDaysEnding} назад`
-      : `${days} day${days > 1 ? 's' : ''} ago`
-  } else return ruLng ? 'Сегодня' : 'Today'
+    return relativeTimeFormatters[lng].format(-Math.floor(months / 12), 'year')
+  }
+  if (months > 0) {
+    return relativeTimeFormatters[lng].format(-months, 'month')
+  }
+  const days = differenceInDays(currentDate, date)
+  return days > 0
+    ? relativeTimeFormatters[lng].format(-days, 'day')
+    : lng === 'ru'
+      ? 'Сегодня'
+      : 'Today'
 }

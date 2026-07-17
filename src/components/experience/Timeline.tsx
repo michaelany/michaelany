@@ -2,7 +2,7 @@ import {useRef, useState} from 'react'
 import {useTranslation, Trans} from 'react-i18next'
 import {
   useMediaQuery,
-  Stepper as MuiStepper,
+  Stepper,
   Step,
   StepLabel,
   StepContent,
@@ -18,12 +18,7 @@ import {
 import './Timeline.scss'
 import {Animate, Section} from '#components/common'
 import {getPeriodDateTime, scrollToView, tPeriodPart} from '#utils/helpers'
-import {
-  FIRST_WEBSITE_AGE,
-  CAREER_START_PARTS,
-  QUERY_BREAKPOINT,
-  ROUTE,
-} from '#utils/constants'
+import {CAREER_START_PARTS, QUERY_BREAKPOINT, ROUTE} from '#utils/constants'
 import {COMPANY, CONTACT_LINK} from '#data/common'
 import type {IPeriod} from '#utils/types'
 
@@ -61,7 +56,7 @@ export default function Timeline() {
       >
         <Paper>
           <h2 className="Timeline-Title">{t('experience.subtitle')}</h2>
-          <MuiStepper activeStep={step} orientation="vertical">
+          <Stepper activeStep={step} orientation="vertical">
             {steps.map((item, index) => (
               <Step key={index}>
                 <StepLabel>
@@ -88,7 +83,7 @@ export default function Timeline() {
                       values={item.values}
                       components={transComponents}
                     />
-                    .{index === steps.length - 1 && '..'}
+                    .
                   </p>
                   <div className="Timeline-Actions">
                     <Fab
@@ -127,7 +122,7 @@ export default function Timeline() {
                 </Fab>
               </>
             )}
-          </MuiStepper>
+          </Stepper>
         </Paper>
       </Animate>
     </Section>
@@ -148,7 +143,7 @@ const steps: IStep[] = [
         year: 2008,
       },
     },
-    values: [FIRST_WEBSITE_AGE, COMPANY.mVideo.title],
+    values: [COMPANY.mVideo.title],
   },
   {
     period: {

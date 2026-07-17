@@ -353,39 +353,38 @@ const EN = {
     refresh: 'Reset',
     continue: 'To be continued',
     stepper: {
-      step1: `I created my first multi-page website at the age of {{0}}. After finishing school, I enrolled in the "Moscow State University of Instrument Engineering and Computer Science". Alongside my studies at the university, I got a job as a <0>${common.occupation.support}</0> at the {{1}} company`,
-      step2: `Worked as a <0>${common.occupation.support}</0> in the {{0}} company`,
+      step1: `Built my first multi-page website. Graduated from high school and enrolled at Moscow State University of Instrument Engineering and Computer Science. While studying, I started working as a <0>${common.occupation.support}</0> at {{0}}`,
+      step2: `Worked as a <0>${common.occupation.support}</0> at {{0}}`,
       step3:
         'I graduated from university. Expanded my horizons in other areas of activity. I decided to become an actor and enrolled in the "Russian State University of Cinematography"',
       step4:
-        'In parallel with my study at the university, I created pet projects and learned programming',
+        'While studying at VGIK, I built personal projects and learned to code',
       step5: `Passed the interview, completed the test tasks and I got a job as a <0>${common.occupation.junior}</0> in the {{0}} company`,
       step6: `Worked as a <0>${common.occupation.junior}</0> in the {{0}}`,
-      step7: `I was promoted to a <0>${common.occupation.middle}</0> in the {{0}} company`,
-      step8: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}. In my spare time I did a commercial project for the {{1}} company`,
+      step7: `Was promoted to <0>${common.occupation.middle}</0> at {{0}}`,
+      step8: `Worked as a <0>${common.occupation.middle}</0> at {{0}}. In my spare time, I built a project for {{1}}`,
       step9: `I was invited to the company {{0}} for the position of a <0>${common.occupation.middle}</0>. Made a decision to move from {{1}} to {{2}}`,
       step10: `Worked remotely as a <0>${common.occupation.middle}</0> in the {{0}}. Graduated from VGIK and obtained a second higher education`,
       step11: `Agreed with the {{0}} to continue working on projects in part-time mode. Received several offers for the position of a <0>${common.occupation.middle}</0>, chose the {{1}} company`,
-      step12: `Worked as a <0>${common.occupation.middle}</0> in the {{0}}`,
-      step13: `Received a promotion to the <0>${common.occupation.senior}</0> in the {{0}}`,
+      step12: `Worked as a <0>${common.occupation.middle}</0> at {{0}}`,
+      step13: `Became a <0>${common.occupation.senior}</0> at {{0}}`,
       step14: `Worked as a <0>${common.occupation.senior}</0> in the {{0}}`,
-      step15: `Expanded my area of the responsibility and I was promoted to <0>${common.occupation.teamLead}</0> in the {{0}} company`,
+      step15: `Expanded my responsibilities and was promoted to <0>${common.occupation.teamLead}</0> at {{0}}`,
       step16: `Worked as a <0>${common.occupation.teamLead}</0> in the {{0}}. Continued to collaborate on projects with the {{1}}`,
       step17:
-        'Switched to mobile development. Developed a cross-platform corporate mobile application from scratch and released it in {{0}} and {{1}} stores. Recruited a team for the further development of the application',
+        'Switched to mobile development. Built a cross-platform corporate mobile app from scratch and released it on {{0}} and {{1}}. Recruited a team to continue developing the app',
       step18: `Received an offer from the {{0}} for the position of <0>${common.occupation.lead}</0> with the possibility of relocation to New Zealand. Completed all tasks, handed over projects to successor at {{1}}. Accepted the offer from {{0}}`,
       step19: `Worked remotely as a <0>${common.occupation.lead}</0> in the New Zealand company {{0}}. I also provided frontend development consultations`,
       step20:
-        'I moved to Montenegro and continued working remotely. Collected documents for a work visa to New Zealand from the company {{0}}. Launched my <0>{{1}} channel</0>. Obtained a work visa',
+        'Moved to Montenegro and continued working remotely. Prepared the documents needed to relocate to New Zealand on a work visa sponsored by {{0}}. Launched my <0>{{1}} channel</0> and received the visa',
       step21:
         'I moved to New Zealand on a work visa from the {{0}} company. Worked, settled in, built relationships with hobbits and alpacas',
-      step22: `I agreed with {{0}} on a gradual search for a new job, as the company began shutting down its core business. I passed an interview, completed a technical assessment and received an offer from {{1}} for the position of <0>${common.occupation.lead}</0>. I was waiting for an update on my work visa while continuing to collaborate with {{2}} on projects`,
+      step22: `Agreed with {{0}} to look for a new role as the company began winding down its core business. Completed the interview process and a technical assessment, then received an offer from {{1}} for a <0>${common.occupation.lead}</0> position. While waiting for my updated work visa, I continued working on projects with {{2}}`,
       step23: `I received an updated work visa and started as a <0>${common.occupation.lead}</0> at {{0}}. Obtained a New Zealand resident visa through the {{1}} pathway with the company's support`,
     },
   },
   portfolio: {
-    limit:
-      "Here are some of the projects I've worked on that have no {{0}}, which I can showcase {{1}}",
+    limit: 'Projects without an {{0}} that I can showcase {{1}}',
     developed: 'Developed in',
     filter: {
       all: 'All',
