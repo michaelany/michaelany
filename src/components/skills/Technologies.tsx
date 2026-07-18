@@ -57,40 +57,40 @@ export default function Technologies({
       <h2 className="VisuallyHidden">{t('skills.subtitle')}</h2>
       <div>
         <Animate
-          el="ul"
-          className="Technologies-Groups"
           effect={md ? undefined : 'right'}
           duration={md ? undefined : 'longer'}
         >
-          {TECHNOLOGY_GROUPS.map((group, index) => (
-            <Accordion
-              key={group.tKey as string}
-              component="li"
-              expanded={expanded.includes(group.tKey)}
-              onChange={handleExpand(group.tKey)}
-            >
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <h3 className="Technologies-Title">
-                  {t(`skills.technologyGroup.${group.tKey}`)}
-                </h3>
-              </AccordionSummary>
-              <AccordionDetails>
-                <TechnologyList
-                  technologies={group.technologies}
-                  firstTechnologyActionRef={
-                    index === 0 ? firstTechnologyActionRef : undefined
-                  }
-                />
-              </AccordionDetails>
-            </Accordion>
-          ))}
+          <ul className="Technologies-Groups">
+            {TECHNOLOGY_GROUPS.map((group, index) => (
+              <Accordion
+                key={group.tKey as string}
+                component="li"
+                expanded={expanded.includes(group.tKey)}
+                onChange={handleExpand(group.tKey)}
+              >
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <h3 className="Technologies-Title">
+                    {t(`skills.technologyGroup.${group.tKey}`)}
+                  </h3>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TechnologyList
+                    technologies={group.technologies}
+                    firstTechnologyActionRef={
+                      index === 0 ? firstTechnologyActionRef : undefined
+                    }
+                  />
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </ul>
+          <ExpandAction
+            isWhite
+            type="second"
+            expanded={isAllExpanded}
+            onToggle={handleExpandAll}
+          />
         </Animate>
-        <ExpandAction
-          isWhite
-          type="second"
-          expanded={isAllExpanded}
-          onToggle={handleExpandAll}
-        />
       </div>
     </Section>
   )

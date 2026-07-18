@@ -28,11 +28,6 @@ export default function VideoDate({
   )
 }
 
-const relativeTimeFormatters: Record<TLng, Intl.RelativeTimeFormat> = {
-  en: new Intl.RelativeTimeFormat('en'),
-  ru: new Intl.RelativeTimeFormat('ru'),
-}
-
 const getTimeSince = (date: Date, lng: TLng): string => {
   const currentDate = new Date()
   const months = differenceInMonths(currentDate, date)
@@ -48,4 +43,9 @@ const getTimeSince = (date: Date, lng: TLng): string => {
     : lng === 'ru'
       ? 'Сегодня'
       : 'Today'
+}
+
+const relativeTimeFormatters: Record<TLng, Intl.RelativeTimeFormat> = {
+  en: new Intl.RelativeTimeFormat('en'),
+  ru: new Intl.RelativeTimeFormat('ru'),
 }

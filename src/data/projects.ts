@@ -56,7 +56,7 @@ const commonLogo = {
   ],
 }
 
-const projects: IProject[] = [
+const PROJECTS: IProject[] = [
   {
     name: 'ally-2',
     color: 'red',
@@ -1407,7 +1407,6 @@ const projects: IProject[] = [
     },
   },
   {
-    private: true,
     name: 'embp',
     color: 'blue',
     types: ['admin', 'app'],
@@ -1456,87 +1455,6 @@ const projects: IProject[] = [
         [
           publicImg('projects/embp-desktop-fifth.jpg'),
           publicImg('projects/embp-desktop-fifth@2x.jpg'),
-        ],
-      ],
-    },
-  },
-  {
-    private: true,
-    name: 'tmf',
-    color: 'blue',
-    title: 'Ted Manson Foundation',
-    types: ['site'],
-    companyName: 'sevenGlyphs',
-    url: 'https://tmfoundation.co.nz',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.photoshop}`,
-      {
-        tKey: 'animations',
-      },
-      {
-        tKey: 'october',
-        text: 2019,
-      },
-    ],
-    images: {
-      logo: [
-        publicImg('logos/tmf_sm.png'),
-        publicImg('logos/tmf.png'),
-        publicImg('logos/tmf@2x.png'),
-      ],
-      desktop: [
-        [
-          publicImg('projects/tmf@2x.jpg'),
-          publicImg('projects/tmf-desktop-first@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-desktop-second.jpg'),
-          publicImg('projects/tmf-desktop-second@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-desktop-third.jpg'),
-          publicImg('projects/tmf-desktop-third@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-desktop-fourth.jpg'),
-          publicImg('projects/tmf-desktop-fourth@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-desktop-fifth.jpg'),
-          publicImg('projects/tmf-desktop-fifth@2x.jpg'),
-        ],
-      ],
-      mobile: [
-        [
-          publicImg('projects/tmf-mobile-first.jpg'),
-          publicImg('projects/tmf-mobile-first@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-mobile-second.jpg'),
-          publicImg('projects/tmf-mobile-second@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-mobile-third.jpg'),
-          publicImg('projects/tmf-mobile-third@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-mobile-fourth.jpg'),
-          publicImg('projects/tmf-mobile-fourth@2x.jpg'),
-        ],
-        [
-          publicImg('projects/tmf-mobile-fifth.jpg'),
-          publicImg('projects/tmf-mobile-fifth@2x.jpg'),
         ],
       ],
     },
@@ -2202,53 +2120,6 @@ const projects: IProject[] = [
     },
   },
   {
-    private: true,
-    name: 'fcdc',
-    color: 'blue',
-    title: 'FCDC',
-    types: ['admin', 'app'],
-    companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      {
-        tKey: 'formsTables',
-      },
-      {
-        tKey: 'january',
-        text: 2018,
-      },
-    ],
-    images: {
-      logo: [
-        publicImg('logos/fcdc_sm.png'),
-        publicImg('logos/fcdc.png'),
-        publicImg('logos/fcdc@2x.png'),
-      ],
-      desktop: [
-        [
-          publicImg('projects/fcdc@2x.jpg'),
-          publicImg('projects/fcdc-desktop-first@2x.jpg'),
-        ],
-        [
-          publicImg('projects/fcdc-desktop-second.jpg'),
-          publicImg('projects/fcdc-desktop-second@2x.jpg'),
-        ],
-        [
-          publicImg('projects/fcdc-desktop-third.jpg'),
-          publicImg('projects/fcdc-desktop-third@2x.jpg'),
-        ],
-      ],
-    },
-  },
-  {
     name: '12-saffron',
     color: 'yellow',
     title: '12 Saffron',
@@ -2313,7 +2184,6 @@ const projects: IProject[] = [
     },
   },
   {
-    private: true,
     name: 'whip-around',
     color: 'default',
     title: 'Whip Around',
@@ -2584,33 +2454,21 @@ const projects: IProject[] = [
   },
 ]
 
-const PUBLIC_PROJECTS: IProject[] = projects.filter(
-  (project: IProject) => !project.private
-)
-
-export const PRIVATE_PROJECTS: IProject[] = projects.filter(
-  (project: IProject) => project.private
-)
-
 export const PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT = {
-  goRentals: 3,
-  sevenGlyphs:
-    2 +
-    PRIVATE_PROJECTS.filter(project => project.companyName === 'sevenGlyphs')
-      .length,
-  t1:
-    2 + PRIVATE_PROJECTS.filter(project => project.companyName === 't1').length,
+  goRentals: ['GO Rentals', 'TanGO', 'TanGO New'].length,
+  sevenGlyphs: ['PCNZ', 'PCNZ Landing', 'Ted Manson Foundation', 'FCDC'].length,
+  t1: ['Dinamo Promo', 'Inter RAO'].length + 2,
 }
 
 export const PROJECTS_COUNT: number =
-  PUBLIC_PROJECTS.length +
+  PROJECTS.length +
   Object.values(PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT).reduce(
     (sum, count) => sum + count,
     0
   )
 
 export const SEVEN_GLYPHS_PROJECTS_COUNT =
-  PUBLIC_PROJECTS.filter(project => project.companyName === 'sevenGlyphs')
-    .length + PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT.sevenGlyphs
+  PROJECTS.filter(project => project.companyName === 'sevenGlyphs').length +
+  PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT.sevenGlyphs
 
-export default PUBLIC_PROJECTS
+export default PROJECTS

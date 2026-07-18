@@ -11,6 +11,7 @@ import Animate from './Animate'
 interface IExpandActionProps {
   type?: 'first' | 'second'
   isWhite?: boolean
+  animated?: boolean
   expanded: boolean
   onToggle: () => void
 }
@@ -18,46 +19,54 @@ interface IExpandActionProps {
 export default function ExpandAction({
   type = 'first',
   isWhite = false,
+  animated = false,
   expanded,
   onToggle,
 }: IExpandActionProps) {
   const {t} = useTranslation()
 
   const isFirstType = type === 'first'
+  const className = cn(
+    'Actions Actions_center',
+    !isFirstType && 'Actions_second'
+  )
 
-  return (
-    <Animate
-      className={cn('Actions Actions_center', !isFirstType && 'Actions_second')}
-      effect="bottom"
+  const button = (
+    <Button
+      className="Button"
+      variant="outlined"
+      color={isWhite ? 'info' : undefined}
+      endIcon={
+        isFirstType ? (
+          <ExpandMoreIcon
+            className={cn(
+              'ExpandAction-Icon',
+              expanded && 'ExpandAction-Icon_open'
+            )}
+          />
+        ) : expanded ? (
+          <UnfoldLessIcon />
+        ) : (
+          <UnfoldMoreIcon />
+        )
+      }
+      onClick={onToggle}
     >
-      <Button
-        className="Button"
-        variant="outlined"
-        color={isWhite ? 'info' : undefined}
-        endIcon={
-          isFirstType ? (
-            <ExpandMoreIcon
-              className={cn(
-                'ExpandAction-Icon',
-                expanded && 'ExpandAction-Icon_open'
-              )}
-            />
-          ) : expanded ? (
-            <UnfoldLessIcon />
-          ) : (
-            <UnfoldMoreIcon />
-          )
-        }
-        onClick={onToggle}
-      >
-        {t(
-          isFirstType
-            ? 'other.more'
-            : expanded
-              ? 'other.collapse'
-              : 'other.expand'
-        )}
-      </Button>
+      {t(
+        isFirstType
+          ? 'other.more'
+          : expanded
+            ? 'other.collapse'
+            : 'other.expand'
+      )}
+    </Button>
+  )
+
+  return animated ? (
+    <Animate className={className} effect="bottom">
+      {button}
     </Animate>
+  ) : (
+    <div className={className}>{button}</div>
   )
 }

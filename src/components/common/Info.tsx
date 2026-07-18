@@ -44,7 +44,7 @@ const Info = memo(
           .
         </p>
         <Features t={t} type={type} extra={open} items={features} />
-        <ExpandAction expanded={open} onToggle={handleToggle} />
+        <ExpandAction animated expanded={open} onToggle={handleToggle} />
       </Section>
     )
   }

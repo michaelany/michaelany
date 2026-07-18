@@ -74,22 +74,24 @@ export default function Work() {
         />
         .
       </p>
-      <Animate el="ul" className="Work">
-        {jobs.map(job => (
-          <Job
-            key={job.name}
-            job={job}
-            t={t}
-            expanded={expanded.includes(job.name)}
-            onExpand={handleExpand}
-          />
-        ))}
+      <Animate>
+        <ul className="Work">
+          {jobs.map(job => (
+            <Job
+              key={job.name}
+              job={job}
+              t={t}
+              expanded={expanded.includes(job.name)}
+              onExpand={handleExpand}
+            />
+          ))}
+        </ul>
+        <ExpandAction
+          type="second"
+          expanded={isAllExpanded}
+          onToggle={handleExpandAll}
+        />
       </Animate>
-      <ExpandAction
-        type="second"
-        expanded={isAllExpanded}
-        onToggle={handleExpandAll}
-      />
     </Section>
   )
 }

@@ -210,7 +210,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
                   <strong>+{privateAndOteherProjectsCount}</strong>
                 </Avatar>
               }
-              label="NDA"
+              label={`NDA/${t('experience.other')}`}
             />
           </li>
         )}

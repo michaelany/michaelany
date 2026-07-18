@@ -352,6 +352,7 @@ const EN = {
     back: 'Back',
     refresh: 'Reset',
     continue: 'To be continued',
+    other: 'Other',
     stepper: {
       step1: `Built my first multi-page website. Graduated from high school and enrolled at Moscow State University of Instrument Engineering and Computer Science. While studying, I started working as a <0>${common.occupation.support}</0> at {{0}}`,
       step2: `Worked as a <0>${common.occupation.support}</0> at {{0}}`,
@@ -495,9 +496,6 @@ const EN = {
         title: 'EMBP',
         text: 'Admin panel of the biometric platform for VTB Bank',
       },
-      tmf: {
-        text: 'Construction company website',
-      },
       '7glyphs-lite': {
         text: 'Landing page for the digital agency service',
       },
@@ -530,9 +528,6 @@ const EN = {
       },
       'service-packages': {
         text: 'Landing page for complex services of the digital agency',
-      },
-      fcdc: {
-        text: 'Event management service admin panel',
       },
       '12-saffron': {
         text: 'Landing page for sale of the private home in New Zealand',
