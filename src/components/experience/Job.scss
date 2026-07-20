@@ -139,39 +139,10 @@
   }
 }
 
-.Job-Feature {
-  background-color: transparent;
-  border: 1px solid rgba(v.$color_dark-violet, v.$dark-alfa);
-  color: v.$color_text;
+.Job-Count {
+  border-color: rgba(v.$color_dark-violet, v.$dark-alfa);
   .MuiAvatar-root {
+    background-color: transparent;
     color: v.$color_dark-violet;
-  }
-}
-
-.Job-Project {
-  font-weight: bold;
-  @each $key, $value, $secondValue in v.$colors-map {
-    &_color_#{$key} {
-      color: $secondValue;
-      background-color: rgba($value, 0.2);
-      &.Mui-focusVisible {
-        background-color: rgba($value, 0.4);
-      }
-      @include m.hover {
-        background-color: rgba($value, 0.4);
-      }
-    }
-  }
-}
-
-.Job-Tool {
-  background-color: transparent;
-  @each $key, $_, $secondValue in v.$colors-map {
-    &_color_#{$key} {
-      border: 1px solid rgba($secondValue, v.$dark-alfa);
-      .MuiAvatar-root {
-        background-color: rgba($secondValue, 0.1);
-      }
-    }
   }
 }

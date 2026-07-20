@@ -142,7 +142,7 @@ const Features = ({t, features}: IFeaturesProps) => {
       {features.map(({Icon, ...feature}, index) => (
         <Chip
           key={index}
-          className="Job-Feature"
+          className="Chip Chip_color_violet"
           icon={<Icon />}
           label={
             feature.period ? (
@@ -189,7 +189,8 @@ const Projects = ({t, companyName}: IProjectsProps) => {
             <Chip
               clickable
               component={Link}
-              className={`Job-Project Job-Project_color_${project.color}`}
+              className={`Chip Chip_color_${project.color}`}
+              variant="filled"
               avatar={
                 <Avatar src={project.images.logo[0]} alt={project.name} />
               }
@@ -203,8 +204,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
         {privateAndOteherProjectsCount && (
           <li>
             <Chip
-              className="Job-Feature"
-              variant="outlined"
+              className="Job-Count Chip"
               avatar={
                 <Avatar>
                   <strong>+{privateAndOteherProjectsCount}</strong>
@@ -235,7 +235,7 @@ const Tools = ({t, tools}: IToolsProps) => {
           <Chip
             key={technology.name}
             component="li"
-            className={`Job-Tool Job-Tool_color_${technology.color}`}
+            className={`Chip Chip_color_${technology.color}`}
             avatar={
               <Avatar src={technology.images[0]} alt={technology.label} />
             }

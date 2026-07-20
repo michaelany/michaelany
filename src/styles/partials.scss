@@ -205,6 +205,42 @@
   }
 }
 
+.Chip {
+  background-color: transparent;
+  color: v.$color_text;
+  &.MuiChip-filled {
+    font-weight: bold;
+  }
+  @each $key, $value, $second-value in v.$colors-map {
+    &_color_#{$key} {
+      &.MuiChip-filled {
+        color: $second-value;
+        background-color: rgba($value, 0.2);
+        .MuiChip-icon {
+          color: $second-value;
+        }
+        &.Mui-focusVisible {
+          background-color: rgba($value, 0.4);
+        }
+        &.MuiChip-clickable {
+          @include m.hover {
+            background-color: rgba($value, 0.4);
+          }
+        }
+      }
+      &.MuiChip-outlined {
+        border-color: rgba($second-value, v.$dark-alfa);
+        .MuiChip-icon {
+          color: rgba($second-value, v.$dark-alfa);
+        }
+        .MuiAvatar-root {
+          background-color: rgba($second-value, 0.1);
+        }
+      }
+    }
+  }
+}
+
 .Actions {
   margin-top: 56px;
   &_center {

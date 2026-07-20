@@ -1,7 +1,5 @@
 import type {ThemeOptions, Shadows} from '@mui/material'
 
-const darkAlpha = 0.7
-
 export const COLOR = {
   white: '#fff',
   green: '#2fd0c8',
@@ -10,7 +8,6 @@ export const COLOR = {
   blue: '#64a6fc',
   darkBlue: '#568bd0',
   darkRed: '#cf7e63',
-  darkVioletAlpha: `rgba(135, 116, 198, ${darkAlpha})`,
   default: '#b0b0b0',
   text: '#282c34',
   secondText: '#6d6d6d',
@@ -234,6 +231,9 @@ const THEME: ThemeOptions = {
       },
     },
     MuiChip: {
+      defaultProps: {
+        variant: 'outlined',
+      },
       styleOverrides: {
         root: {
           fontSize: fontSize.smaller,
@@ -247,7 +247,6 @@ const THEME: ThemeOptions = {
           },
         },
         icon: {
-          color: COLOR.darkVioletAlpha,
           fontSize: 24,
         },
       },

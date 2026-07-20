@@ -12,6 +12,7 @@ playwright-report
 test-results
 *.local
 .env
+AGENTS.md
 .vscode/*
 !.vscode/extensions.json
 .idea
