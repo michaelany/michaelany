@@ -410,10 +410,10 @@ const RU = {
     },
     mobileApp: 'Мобильное приложение',
     feature: {
-      wholeDevelopment: `${common.portfolio.scratchDevelopment}, развитие, ${common.portfolio.support}`,
-      scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, ${common.portfolio.support}`,
+      wholeDevelopment: `${common.portfolio.scratchDevelopment}, развитие и ${common.portfolio.support}`,
+      scratchSupportDevelopment: `${common.portfolio.scratchDevelopment} и ${common.portfolio.support}`,
       scratchDevelopment: common.portfolio.scratchDevelopment,
-      growthSupportDevelopment: `Развитие, ${common.portfolio.support}`,
+      growthSupportDevelopment: `Развитие и ${common.portfolio.support}`,
       markupBusinessLogic: 'Верстка и разработка части бизнес-логики',
       jqueryReact: 'Переписывание кодовой базы с {{0}} на {{1}}',
       leadWork: 'Тимлид команды фронтенд-разработки',

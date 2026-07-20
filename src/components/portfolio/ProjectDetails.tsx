@@ -32,17 +32,15 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
     return {
       label:
         typeof feature === 'object'
-          ? isTime
-            ? `${t(`month.${feature.tKey}`)} ${feature.text}`
-            : `${feature.text ? `${feature.text}, ` : ''}${
-                feature.tKeys
-                  ? feature.tKeys
-                      .map(tKey => t(`portfolio.feature.${tKey}`))
-                      .join(', ')
-                  : t(`portfolio.feature.${feature.tKey}`, {
-                      replace: feature.values,
-                    })
-              }`
+          ? `${feature.text ? `${feature.text}, ` : ''}${
+              feature.tKeys
+                ? feature.tKeys
+                    .map(tKey => t(`portfolio.feature.${tKey}`))
+                    .join(', ')
+                : t(`portfolio.feature.${feature.tKey}`, {
+                    replace: feature.values,
+                  })
+            }`
           : feature,
       Icon: featureIcons[index],
       time: isTime,

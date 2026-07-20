@@ -58,6 +58,84 @@ const commonLogo = {
 
 const PROJECTS: IProject[] = [
   {
+    name: 'reps-rest',
+    color: 'yellow',
+    title: 'Reps & Rest',
+    types: ['app'],
+    companyName: 'sevenGlyphs',
+    url: 'https://app.repsandrest.com',
+    details: 'https://7glyphs.com/portfolio/projects/repsandrest',
+    features: [
+      {
+        tKey: 'scratchDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
+      },
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKeys: ['pwa'],
+      },
+      '2024',
+    ],
+    images: {
+      logo: [
+        publicImg('logos/reps-rest_sm.png'),
+        publicImg('logos/reps-rest.png'),
+        publicImg('logos/reps-rest@2x.png'),
+      ],
+      desktop: [
+        [
+          publicImg('projects/ally-2@2x.jpg'),
+          publicImg('projects/ally-2-desktop-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-desktop-second.jpg'),
+          publicImg('projects/ally-2-desktop-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-desktop-third.jpg'),
+          publicImg('projects/ally-2-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-desktop-fourth.jpg'),
+          publicImg('projects/ally-2-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-desktop-fifth.jpg'),
+          publicImg('projects/ally-2-desktop-fifth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          publicImg('projects/ally-2-mobile-first.jpg'),
+          publicImg('projects/ally-2-mobile-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-mobile-second.jpg'),
+          publicImg('projects/ally-2-mobile-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-mobile-third.jpg'),
+          publicImg('projects/ally-2-mobile-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-mobile-fourth.jpg'),
+          publicImg('projects/ally-2-mobile-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-mobile-fifth.jpg'),
+          publicImg('projects/ally-2-mobile-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
     name: 'ally-2',
     color: 'red',
     title: 'Ally 2.0',
@@ -65,7 +143,7 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://ally.ninja',
-    details: 'https://7glyphs.com/portfolio/projects/ally',
+    details: 'https://7glyphs.com/portfolio/projects/allyproweb',
     features: [
       {
         tKey: 'wholeDevelopment',
@@ -82,10 +160,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'march',
-        text: 2024,
-      },
+      '2024',
     ],
     images: {
       logo: commonLogo.ally,
@@ -154,10 +229,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'formsTables',
       },
-      {
-        tKey: 'january',
-        text: 2024,
-      },
+      '2024',
     ],
     images: {
       logo: commonLogo.strongher,
@@ -208,10 +280,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'fastDevelopment',
       },
-      {
-        tKey: 'october',
-        text: 2023,
-      },
+      '2023',
     ],
     images: {
       logo: commonLogo.pridefit,
@@ -265,10 +334,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'newArchitecture',
       },
-      {
-        tKey: 'september',
-        text: 2023,
-      },
+      '2023',
     ],
     images: {
       logo: [
@@ -320,10 +386,7 @@ const PROJECTS: IProject[] = [
         tKey: 'tryOne',
         values: ['ffmpeg.wasm'],
       },
-      {
-        tKey: 'may',
-        text: 2023,
-      },
+      '2023',
     ],
     images: {
       logo: commonLogo.pridefit,
@@ -352,6 +415,83 @@ const PROJECTS: IProject[] = [
     },
   },
   {
+    name: 'vibe-media',
+    color: 'yellow',
+    title: 'Vibe Media',
+    types: ['landing'],
+    companyName: 'sevenGlyphs',
+    url: 'https://vibemedia.app',
+    features: [
+      {
+        tKey: 'scratchSupportDevelopment',
+      },
+      {
+        tKey: 'soloWork',
+      },
+      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
+      {
+        tKey: 'responsive',
+        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, GSAP`,
+      },
+      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
+      {
+        tKey: 'animations',
+      },
+      '2021',
+    ],
+    images: {
+      logo: [
+        publicImg('logos/vibe-media_sm.png'),
+        publicImg('logos/vibe-media.png'),
+        publicImg('logos/vibe-media@2x.png'),
+      ],
+      desktop: [
+        [
+          publicImg('projects/vibe-media@2x.jpg'),
+          publicImg('projects/vibe-media-desktop-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-desktop-second.jpg'),
+          publicImg('projects/vibe-media-desktop-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-desktop-third.jpg'),
+          publicImg('projects/vibe-media-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-desktop-fourth.jpg'),
+          publicImg('projects/vibe-media-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-desktop-fifth.jpg'),
+          publicImg('projects/vibe-media-desktop-fifth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          publicImg('projects/vibe-media-mobile-first.jpg'),
+          publicImg('projects/vibe-media-mobile-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-mobile-second.jpg'),
+          publicImg('projects/vibe-media-mobile-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-mobile-third.jpg'),
+          publicImg('projects/vibe-media-mobile-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-mobile-fourth.jpg'),
+          publicImg('projects/vibe-media-mobile-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/vibe-media-mobile-fifth.jpg'),
+          publicImg('projects/vibe-media-mobile-fifth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
     name: 'madfit',
     color: 'green',
     title: 'MadFit',
@@ -375,10 +515,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'january',
-        text: 2022,
-      },
+      '2021',
     ],
     images: {
       logo: commonLogo.madfit,
@@ -448,10 +585,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: '≈',
       },
-      {
-        tKey: 'january',
-        text: 2021,
-      },
+      '2021',
     ],
     images: {
       logo: commonLogo.madfit,
@@ -480,86 +614,6 @@ const PROJECTS: IProject[] = [
     },
   },
   {
-    name: 'vibe-media',
-    color: 'yellow',
-    title: 'Vibe Media',
-    types: ['landing'],
-    companyName: 'sevenGlyphs',
-    url: 'https://vibemedia.app',
-    features: [
-      {
-        tKey: 'scratchSupportDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, GSAP`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      {
-        tKey: 'december',
-        text: 2021,
-      },
-    ],
-    images: {
-      logo: [
-        publicImg('logos/vibe-media_sm.png'),
-        publicImg('logos/vibe-media.png'),
-        publicImg('logos/vibe-media@2x.png'),
-      ],
-      desktop: [
-        [
-          publicImg('projects/vibe-media@2x.jpg'),
-          publicImg('projects/vibe-media-desktop-first@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-desktop-second.jpg'),
-          publicImg('projects/vibe-media-desktop-second@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-desktop-third.jpg'),
-          publicImg('projects/vibe-media-desktop-third@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-desktop-fourth.jpg'),
-          publicImg('projects/vibe-media-desktop-fourth@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-desktop-fifth.jpg'),
-          publicImg('projects/vibe-media-desktop-fifth@2x.jpg'),
-        ],
-      ],
-      mobile: [
-        [
-          publicImg('projects/vibe-media-mobile-first.jpg'),
-          publicImg('projects/vibe-media-mobile-first@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-mobile-second.jpg'),
-          publicImg('projects/vibe-media-mobile-second@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-mobile-third.jpg'),
-          publicImg('projects/vibe-media-mobile-third@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-mobile-fourth.jpg'),
-          publicImg('projects/vibe-media-mobile-fourth@2x.jpg'),
-        ],
-        [
-          publicImg('projects/vibe-media-mobile-fifth.jpg'),
-          publicImg('projects/vibe-media-mobile-fifth@2x.jpg'),
-        ],
-      ],
-    },
-  },
-  {
     name: 'tradease',
     color: 'red',
     title: 'Tradease',
@@ -582,10 +636,7 @@ const PROJECTS: IProject[] = [
         tKey: 'tryOne',
         values: [TECHNOLOGY_TITLE.tanstack],
       },
-      {
-        tKey: 'november',
-        text: 2021,
-      },
+      '2021',
     ],
     images: {
       logo: [
@@ -655,10 +706,7 @@ const PROJECTS: IProject[] = [
         tKey: 'mobileDevelopment',
         values: ['AppStore', 'Google Play'],
       },
-      {
-        tKey: 'october',
-        text: 2021,
-      },
+      '2021',
     ],
     images: {
       logo: [
@@ -714,10 +762,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'april',
-        text: 2021,
-      },
+      '2021',
     ],
     images: {
       logo: commonLogo.roadNinja,
@@ -798,10 +843,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'businessLogic',
       },
-      {
-        tKey: 'april',
-        text: 2021,
-      },
+      '2021',
     ],
     images: {
       logo: commonLogo.roadNinja,
@@ -847,10 +889,7 @@ const PROJECTS: IProject[] = [
       {
         tKeys: ['animations', 'pwa'],
       },
-      {
-        tKey: 'december',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: [
@@ -912,10 +951,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'october',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: commonLogo.ally,
@@ -973,10 +1009,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'september',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: commonLogo.presentMe,
@@ -1038,10 +1071,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'businessLogic',
       },
-      {
-        tKey: 'august',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: commonLogo.presentMe,
@@ -1084,10 +1114,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'dynamicFormsRouting',
       },
-      {
-        tKey: 'august',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: commonLogo.presentMe,
@@ -1159,10 +1186,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'june',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: [
@@ -1233,10 +1257,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'may',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: [
@@ -1300,15 +1321,12 @@ const PROJECTS: IProject[] = [
         tKey: 'responsive',
         text: `${TECHNOLOGY_TITLE.sass}`,
       },
-      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${FEATURE.keycloak}, ${TECHNOLOGY_TITLE.docker}`,
+      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${TECHNOLOGY_TITLE.keycloak}, ${TECHNOLOGY_TITLE.docker}`,
       {
         tKey: 'tryTwo',
-        values: [FEATURE.keycloak, TECHNOLOGY_TITLE.docker],
+        values: [TECHNOLOGY_TITLE.keycloak, TECHNOLOGY_TITLE.docker],
       },
-      {
-        tKey: 'february',
-        text: 2020,
-      },
+      '2020',
     ],
     images: {
       logo: commonLogo.vaillant,
@@ -1364,10 +1382,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'december',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: [
@@ -1424,10 +1439,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'darkTheme',
       },
-      {
-        tKey: 'july',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: [
@@ -1481,10 +1493,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'september',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.sevenGlyphs,
@@ -1550,10 +1559,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'september',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.strongher,
@@ -1612,10 +1618,7 @@ const PROJECTS: IProject[] = [
         tKey: 'tryOne',
         values: [TECHNOLOGY_TITLE.reactnative],
       },
-      {
-        tKey: 'june',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.foodprint,
@@ -1663,10 +1666,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'businessLogic',
       },
-      {
-        tKey: 'june',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.foodprint,
@@ -1717,10 +1717,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'june',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.foodprint,
@@ -1777,14 +1774,11 @@ const PROJECTS: IProject[] = [
       },
       `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
       `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${FEATURE.keycloak}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
+      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.keycloak}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
       {
         tKey: 'businessLogic',
       },
-      {
-        tKey: 'april',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.vaillant,
@@ -1832,10 +1826,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'february',
-        text: 2019,
-      },
+      '2019',
     ],
     images: {
       logo: commonLogo.strongher,
@@ -1908,10 +1899,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'january',
-        text: 2018,
-      },
+      '2018',
     ],
     images: {
       logo: commonLogo.sevenGlyphs,
@@ -1984,10 +1972,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'businessLogic',
       },
-      {
-        tKey: 'november',
-        text: 2018,
-      },
+      '2018',
     ],
     images: {
       logo: [
@@ -2032,10 +2017,7 @@ const PROJECTS: IProject[] = [
         tKey: 'tryOneGraph',
         values: [TECHNOLOGY_TITLE.mobx],
       },
-      {
-        tKey: 'may',
-        text: 2018,
-      },
+      '2018',
     ],
     images: {
       logo: [
@@ -2082,10 +2064,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'animations',
       },
-      {
-        tKey: 'february',
-        text: 2018,
-      },
+      '2018',
     ],
     images: {
       logo: commonLogo.sevenGlyphs,
@@ -2142,10 +2121,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'sellHouse',
       },
-      {
-        tKey: 'august',
-        text: 2017,
-      },
+      '2017',
     ],
     images: {
       logo: [
@@ -2211,10 +2187,7 @@ const PROJECTS: IProject[] = [
           TECHNOLOGY_TITLE.blade,
         ],
       },
-      {
-        tKey: 'september',
-        text: 2017,
-      },
+      '2017',
     ],
     images: {
       logo: [
@@ -2264,10 +2237,7 @@ const PROJECTS: IProject[] = [
           TECHNOLOGY_TITLE.blade,
         ],
       },
-      {
-        tKey: 'may',
-        text: 2017,
-      },
+      '2017',
     ],
     images: {
       logo: commonLogo.lazyaz,
@@ -2308,10 +2278,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'firstScratchProject',
       },
-      {
-        tKey: 'march',
-        text: 2017,
-      },
+      '2017',
     ],
     images: {
       logo: commonLogo.lazyaz,
@@ -2368,10 +2335,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'spa',
       },
-      {
-        tKey: 'january',
-        text: 2017,
-      },
+      '2017',
     ],
     images: {
       logo: commonLogo.sevenGlyphs,
@@ -2425,10 +2389,7 @@ const PROJECTS: IProject[] = [
       {
         tKey: 'firstProject',
       },
-      {
-        tKey: 'august',
-        text: 2016,
-      },
+      '2016',
     ],
     images: {
       logo: [

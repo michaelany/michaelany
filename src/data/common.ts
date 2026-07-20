@@ -134,6 +134,5 @@ export const CONTACT_LINK: IContactLink = {
 
 export const FEATURE = {
   rest: 'REST API',
-  keycloak: 'Keycloak',
   socket: 'WebSocket',
 }
