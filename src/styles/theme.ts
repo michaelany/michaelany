@@ -230,6 +230,19 @@ const THEME: ThemeOptions = {
         },
       },
     },
+    MuiStack: {
+      defaultProps: {
+        direction: 'row',
+        spacing: 1,
+        useFlexGap: true,
+      },
+      styleOverrides: {
+        root: {
+          alignItems: 'center',
+          flexWrap: 'wrap',
+        },
+      },
+    },
     MuiChip: {
       defaultProps: {
         variant: 'outlined',

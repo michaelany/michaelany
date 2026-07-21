@@ -14,18 +14,9 @@
   }
 }
 
-.Timeline-Actions {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
-
 .Timeline-Button {
   color: v.$color_dark-violet;
   background-color: rgba(v.$color_violet, 0.2);
-  &:not(:first-child) {
-    margin-right: 8px;
-  }
   @include m.hover {
     background-color: rgba(v.$color_violet, 0.4);
     .Timeline-ButtonIcon {

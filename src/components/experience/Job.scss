@@ -128,17 +128,6 @@
   }
 }
 
-.Job-Features {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  &_main {
-    justify-content: center;
-    margin-bottom: 24px;
-  }
-}
-
 .Job-Count {
   border-color: rgba(v.$color_dark-violet, v.$dark-alfa);
   .MuiAvatar-root {

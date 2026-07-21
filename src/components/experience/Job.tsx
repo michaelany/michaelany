@@ -7,6 +7,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Avatar,
+  Stack,
 } from '@mui/material'
 import {
   ExpandMoreRounded as ExpandMoreIcon,
@@ -138,10 +139,17 @@ const Occupations = ({t, current, occupations}: IOccupationsProps) => (
 
 const Features = ({t, features}: IFeaturesProps) => {
   return (
-    <div className="Job-Features Job-Features_main">
+    <Stack
+      component="ul"
+      sx={{
+        justifyContent: 'center',
+        mb: 3,
+      }}
+    >
       {features.map(({Icon, ...feature}, index) => (
         <Chip
           key={index}
+          component="li"
           className="Chip Chip_color_violet"
           icon={<Icon />}
           label={
@@ -165,7 +173,7 @@ const Features = ({t, features}: IFeaturesProps) => {
           }
         />
       ))}
-    </div>
+    </Stack>
   )
 }
 
@@ -183,7 +191,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
         <DashboardCustomizeIcon />
         <span className="Job-SubTitleText">{t('experience.projects')}</span>
       </h4>
-      <ul className="Job-Features">
+      <Stack component="ul">
         {projects.map(project => (
           <li key={project.name}>
             <Chip
@@ -214,7 +222,7 @@ const Projects = ({t, companyName}: IProjectsProps) => {
             />
           </li>
         )}
-      </ul>
+      </Stack>
     </div>
   )
 }
@@ -230,7 +238,7 @@ const Tools = ({t, tools}: IToolsProps) => {
         <ConstructionIcon />
         <span className="Job-SubTitleText">{t('experience.tools')}</span>
       </h4>
-      <ul className="Job-Features">
+      <Stack component="ul">
         {technologies.map(technology => (
           <Chip
             key={technology.name}
@@ -242,7 +250,7 @@ const Tools = ({t, tools}: IToolsProps) => {
             label={technology.label}
           />
         ))}
-      </ul>
+      </Stack>
     </div>
   )
 }

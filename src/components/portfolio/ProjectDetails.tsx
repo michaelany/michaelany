@@ -13,7 +13,7 @@ import {
 } from '@mui/icons-material'
 
 import './ProjectDetails.scss'
-import {Features, Company, Section} from '#components/common'
+import {Company, Section} from '#components/common'
 import {tProjectTypes} from '#utils/helpers'
 import {COMPANY} from '#data/common'
 import {BLANK_LINK_PROPS} from '#utils/constants'
@@ -70,7 +70,6 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
         </Link>
         .
       </p>
-      <Features items={featureItems} />
       <ProjectActions
         url={project.url}
         details={project.details}

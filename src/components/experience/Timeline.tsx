@@ -8,6 +8,7 @@ import {
   StepContent,
   Fab,
   Paper,
+  Stack,
 } from '@mui/material'
 import {
   ArrowForwardRounded as ArrowForwardIcon,
@@ -85,15 +86,7 @@ export default function Timeline() {
                     />
                     .
                   </p>
-                  <div className="Timeline-Actions">
-                    <Fab
-                      className="Timeline-Button"
-                      size="medium"
-                      aria-label={t('experience.next')}
-                      onClick={handleNext}
-                    >
-                      <ArrowForwardIcon className="Timeline-ButtonIcon" />
-                    </Fab>
+                  <Stack>
                     <Fab
                       className="Timeline-Button"
                       size="medium"
@@ -103,7 +96,15 @@ export default function Timeline() {
                     >
                       <ArrowBackIcon className="Timeline-ButtonIcon" />
                     </Fab>
-                  </div>
+                    <Fab
+                      className="Timeline-Button"
+                      size="medium"
+                      aria-label={t('experience.next')}
+                      onClick={handleNext}
+                    >
+                      <ArrowForwardIcon className="Timeline-ButtonIcon" />
+                    </Fab>
+                  </Stack>
                 </StepContent>
               </Step>
             ))}
