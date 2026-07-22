@@ -65,24 +65,20 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://app.repsandrest.com',
     details: 'https://7glyphs.com/portfolio/projects/repsandrest',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKeys: ['pwa'],
-      },
-      '2024',
+    tools: [
+      'ts',
+      'react',
+      'tanstack',
+      'zustand',
+      'html',
+      'sass',
+      'modules',
+      'mui',
+      'vite',
+      'stripe',
+      'sketch',
     ],
+    year: 2024,
     images: {
       logo: [
         publicImg('logos/reps-rest_sm.png'),
@@ -139,29 +135,13 @@ const PROJECTS: IProject[] = [
     name: 'ally-2',
     color: 'red',
     title: 'Ally 2.0',
-    textValues: ['Nintendo amiibo'],
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://ally.ninja',
     details: 'https://7glyphs.com/portfolio/projects/allyproweb',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2024',
-    ],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'vite', 'sketch'],
+    year: 2024,
+    textValues: ['Nintendo amiibo'],
     images: {
       logo: commonLogo.ally,
       desktop: [
@@ -216,21 +196,18 @@ const PROJECTS: IProject[] = [
     title: 'StrongHer CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKeys: ['wholeDevelopment', 'design'],
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.figma}`,
-      {
-        tKey: 'formsTables',
-      },
-      '2024',
+    tools: [
+      'ts',
+      'react',
+      'tanstack',
+      'zustand',
+      'html',
+      'sass',
+      'mui',
+      'vite',
+      'figma',
     ],
+    year: 2024,
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -264,24 +241,18 @@ const PROJECTS: IProject[] = [
     types: ['landing', 'app'],
     companyName: 'sevenGlyphs',
     url: 'https://app.pridefit.com',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.next}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'fastDevelopment',
-      },
-      '2023',
+    tools: [
+      'ts',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'next',
+      'stripe',
+      'sketch',
     ],
+    year: 2023,
     images: {
       logo: commonLogo.pridefit,
       desktop: [
@@ -318,24 +289,21 @@ const PROJECTS: IProject[] = [
     name: 'ally-cms',
     color: 'red',
     title: 'Ally CMS',
-    textValues: ['Nintendo amiibo'],
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKeys: ['wholeDevelopment', 'design'],
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.zustand}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.vite}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'newArchitecture',
-      },
-      '2023',
+    tools: [
+      'ts',
+      'react',
+      'tanstack',
+      'zustand',
+      'html',
+      'sass',
+      'mui',
+      'vite',
+      'sketch',
     ],
+    year: 2023,
+    textValues: ['Nintendo amiibo'],
     images: {
       logo: [
         publicImg('logos/ally-second_sm.png'),
@@ -372,22 +340,19 @@ const PROJECTS: IProject[] = [
     title: 'Pridefit CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKeys: ['wholeDevelopment', 'design'],
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'tryOne',
-        values: ['ffmpeg.wasm'],
-      },
-      '2023',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'modules',
+      'sass',
+      'mui',
+      'webpack',
+      'sketch',
     ],
+    year: 2023,
+    descriptionValues: ['ffmpeg.wasm'],
     images: {
       logo: commonLogo.pridefit,
       desktop: [
@@ -421,24 +386,18 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://vibemedia.app',
-    features: [
-      {
-        tKey: 'scratchSupportDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, GSAP`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2021',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'sass',
+      'bem',
+      'gsap',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2021,
     images: {
       logo: [
         publicImg('logos/vibe-media_sm.png'),
@@ -499,24 +458,19 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://maddielymburner.co',
     details: 'https://7glyphs.com/portfolio/projects/madfit',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, GSAP`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'animations',
-      },
-      '2021',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'css',
+      'sass',
+      'bem',
+      'gsap',
+      'webpack',
+      'stripe',
+      'zeplin',
     ],
+    year: 2021,
     images: {
       logo: commonLogo.madfit,
       desktop: [
@@ -572,21 +526,17 @@ const PROJECTS: IProject[] = [
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/madfit',
-    features: [
-      {
-        tKeys: ['wholeDevelopment', 'design'],
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: '≈',
-      },
-      '2021',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'modules',
+      'mui',
+      'webpack',
+      'zeplin',
     ],
+    year: 2021,
     images: {
       logo: commonLogo.madfit,
       desktop: [
@@ -619,25 +569,17 @@ const PROJECTS: IProject[] = [
     title: 'Tradease',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'scratchSupportDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.tanstack}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.figma}`,
-      {
-        tKey: 'tryOne',
-        values: [TECHNOLOGY_TITLE.tanstack],
-      },
-      '2021',
+    tools: [
+      'ts',
+      'react',
+      'tanstack',
+      'html',
+      'modules',
+      'sass',
+      'webpack',
+      'figma',
     ],
+    year: 2021,
     images: {
       logo: [
         publicImg('logos/tradease_sm.png'),
@@ -683,31 +625,18 @@ const PROJECTS: IProject[] = [
     },
   },
   {
-    mobileApp: true,
     name: 't1-online',
     color: 'blue',
     types: ['app'],
+    mobileApp: true,
     companyName: 't1',
     stores: [
       'https://apps.apple.com/ru/app/%D1%821-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/id1592700568?l=en',
       'https://play.google.com/store/apps/details?id=com.t1consulting.t1online',
     ],
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'leadWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.reactnative}`,
-      `${TECHNOLOGY_TITLE.reactnative} styles`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.expo}, Xcode, Android Studio, ${TECHNOLOGY_TITLE.figma}`,
-      {
-        tKey: 'mobileDevelopment',
-        values: ['AppStore', 'Google Play'],
-      },
-      '2021',
-    ],
+    tools: ['ts', 'reactnative', 'expo', 'figma'],
+    year: 2021,
+    descriptionValues: ['App Store', 'Google Play'],
     images: {
       logo: [
         publicImg('logos/t1_sm.png'),
@@ -746,24 +675,18 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://roadninja.co.nz',
     details: 'https://7glyphs.com/portfolio/projects/roadninja',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, GSAP`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2021',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'sass',
+      'bem',
+      'gsap',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2021,
     images: {
       logo: commonLogo.roadNinja,
       desktop: [
@@ -827,24 +750,20 @@ const PROJECTS: IProject[] = [
     types: ['app', 'site'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/roadninja',
-    features: [
-      {
-        tKey: 'markupBusinessLogic',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${FEATURE.rest}, ${FEATURE.socket}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'businessLogic',
-      },
-      '2021',
+    tools: [
+      'ts',
+      'react',
+      'redux',
+      'html',
+      'modules',
+      'sass',
+      'mui',
+      'webpack',
+      'stripe',
+      'zeplin',
+      'sketch',
     ],
+    year: 2021,
     images: {
       logo: commonLogo.roadNinja,
       desktop: [
@@ -873,24 +792,17 @@ const PROJECTS: IProject[] = [
     title: 'Сelebration',
     types: ['app'],
     companyName: 't1',
-    features: [
-      {
-        tKeys: ['scratchDevelopment', 'design'],
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKeys: ['animations', 'pwa'],
-      },
-      '2020',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'modules',
+      'mui',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2020,
     images: {
       logo: [
         publicImg('logos/celebration_sm.png'),
@@ -931,28 +843,21 @@ const PROJECTS: IProject[] = [
     name: 'ally',
     color: 'default',
     title: 'Ally',
-    textValues: ['Nintendo amiibo'],
     types: ['landing'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/ally',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2020',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2020,
+    textValues: ['Nintendo amiibo'],
     images: {
       logo: commonLogo.ally,
       desktop: [
@@ -993,24 +898,17 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://business.present.me',
     details: 'https://7glyphs.com/portfolio/projects/presentme',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2020',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2020,
     images: {
       logo: commonLogo.presentMe,
       desktop: [
@@ -1058,21 +956,18 @@ const PROJECTS: IProject[] = [
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/presentme',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'businessLogic',
-      },
-      '2020',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'webpack',
+      'zeplin',
     ],
+    year: 2020,
     images: {
       logo: commonLogo.presentMe,
       desktop: [
@@ -1098,24 +993,19 @@ const PROJECTS: IProject[] = [
     types: ['app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/presentme',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'dynamicFormsRouting',
-      },
-      '2020',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2020,
     images: {
       logo: commonLogo.presentMe,
       desktop: [
@@ -1170,24 +1060,8 @@ const PROJECTS: IProject[] = [
     title: 'Dropdrone',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2020',
-    ],
+    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'zeplin', 'sketch'],
+    year: 2020,
     images: {
       logo: [
         publicImg('logos/dropdrone_sm.png'),
@@ -1241,24 +1115,17 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://justhatched.app',
     details: 'https://7glyphs.com/portfolio/projects/justhatched',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.preact}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2020',
+    tools: [
+      'js',
+      'preact',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2020,
     images: {
       logo: [
         publicImg('logos/just-hatched_sm.png'),
@@ -1309,25 +1176,9 @@ const PROJECTS: IProject[] = [
     title: 'Vaillant United Login System',
     types: ['app'],
     companyName: 't1',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${FEATURE.rest}, ${TECHNOLOGY_TITLE.keycloak}, ${TECHNOLOGY_TITLE.docker}`,
-      {
-        tKey: 'tryTwo',
-        values: [TECHNOLOGY_TITLE.keycloak, TECHNOLOGY_TITLE.docker],
-      },
-      '2020',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'webpack', 'keycloak', 'docker'],
+    year: 2020,
+    descriptionValues: ['Keycloak', 'Docker'],
     images: {
       logo: commonLogo.vaillant,
       desktop: [
@@ -1366,24 +1217,8 @@ const PROJECTS: IProject[] = [
     title: 'Proximal Coffee',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2019',
-    ],
+    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'zeplin', 'sketch'],
+    year: 2019,
     images: {
       logo: [
         publicImg('logos/proximal-coffee_sm.png'),
@@ -1426,21 +1261,8 @@ const PROJECTS: IProject[] = [
     color: 'blue',
     types: ['admin', 'app'],
     companyName: 't1',
-    features: [
-      {
-        tKeys: ['wholeDevelopment', 'design'],
-      },
-      {
-        tKey: 'leadWork',
-      },
-      `${TECHNOLOGY_TITLE.ts}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.jest}`,
-      {
-        tKey: 'darkTheme',
-      },
-      '2019',
-    ],
+    tools: ['ts', 'react', 'redux', 'html', 'styled', 'mui', 'webpack', 'jest'],
+    year: 2019,
     images: {
       logo: [
         publicImg('logos/vtb_sm.png'),
@@ -1477,24 +1299,18 @@ const PROJECTS: IProject[] = [
     title: '7 glyphs Lite',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2019',
+    tools: [
+      'js',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2019,
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -1543,24 +1359,17 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://melissachalmers.app',
     details: 'https://7glyphs.com/portfolio/projects/melissachalmers',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2019',
+    tools: [
+      'js',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'zeplin',
+      'sketch',
     ],
+    year: 2019,
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -1594,32 +1403,19 @@ const PROJECTS: IProject[] = [
     },
   },
   {
-    mobileApp: true,
     name: 'foodprint',
     color: 'violet',
     title: 'Foodprint',
     types: ['app'],
+    mobileApp: true,
     companyName: 'sevenGlyphs',
     stores: [
       'https://apps.apple.com/nz/app/foodprint/id1462596522',
       'https://play.google.com/store/apps/details?id=com.foodprint',
     ],
-    features: [
-      {
-        tKey: 'growthSupportDevelopment',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.reactnative}`,
-      `${TECHNOLOGY_TITLE.reactnative} styles`,
-      `${FEATURE.rest}, Xcode, Android Studio, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'tryOne',
-        values: [TECHNOLOGY_TITLE.reactnative],
-      },
-      '2019',
-    ],
+    tools: ['js', 'reactnative', 'zeplin'],
+    year: 2019,
+    descriptionValues: ['React Native'],
     images: {
       logo: commonLogo.foodprint,
       mobile: [
@@ -1653,21 +1449,18 @@ const PROJECTS: IProject[] = [
     types: ['site', 'app', 'admin'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/foodprint',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'businessLogic',
-      },
-      '2019',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'webpack',
+      'zeplin',
     ],
+    year: 2019,
     images: {
       logo: commonLogo.foodprint,
       desktop: [
@@ -1702,23 +1495,8 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://foodprint.app',
     details: 'https://7glyphs.com/portfolio/projects/foodprint',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      {
-        tKey: 'animations',
-      },
-      '2019',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem'],
+    year: 2019,
     images: {
       logo: commonLogo.foodprint,
       desktop: [
@@ -1765,21 +1543,18 @@ const PROJECTS: IProject[] = [
     title: 'Vaillant Sales Digital System',
     types: ['app'],
     companyName: 't1',
-    features: [
-      {
-        tKeys: ['wholeDevelopment', 'design'],
-      },
-      {
-        tKey: 'leadWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.styled}, ${TECHNOLOGY_TITLE.mui}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.keycloak}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'businessLogic',
-      },
-      '2019',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'styled',
+      'mui',
+      'keycloak',
+      'webpack',
+      'sketch',
     ],
+    year: 2019,
     images: {
       logo: commonLogo.vaillant,
       desktop: [
@@ -1810,24 +1585,18 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://strongherapp.com',
     details: 'https://7glyphs.com/portfolio/projects/strongher',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'animations',
-      },
-      '2019',
+    tools: [
+      'js',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'stripe',
+      'zeplin',
+      'sketch',
     ],
+    year: 2019,
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -1883,24 +1652,8 @@ const PROJECTS: IProject[] = [
     types: ['site'],
     companyName: 'sevenGlyphs',
     url: COMPANY.sevenGlyphs.href,
-    features: [
-      {
-        tKey: 'growthSupportDevelopment',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}, ${TECHNOLOGY_TITLE.mui}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'animations',
-      },
-      '2018',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'mui', 'webpack', 'zeplin'],
+    year: 2018,
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -1956,24 +1709,19 @@ const PROJECTS: IProject[] = [
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/rogue-travel',
-    features: [
-      {
-        tKey: 'scratchSupportDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'emails',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.stripe}, ${TECHNOLOGY_TITLE.zeplin}, ${TECHNOLOGY_TITLE.sketch}`,
-      {
-        tKey: 'businessLogic',
-      },
-      '2018',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'stripe',
+      'zeplin',
+      'sketch',
     ],
+    year: 2018,
     images: {
       logo: [
         publicImg('logos/rogue-travel.png'),
@@ -2003,22 +1751,9 @@ const PROJECTS: IProject[] = [
     types: ['app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
-    features: [
-      {
-        tKey: 'markupBusinessLogic',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.mobx}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'tryOneGraph',
-        values: [TECHNOLOGY_TITLE.mobx],
-      },
-      '2018',
-    ],
+    tools: ['js', 'react', 'mobx', 'html', 'sass', 'bem', 'zeplin'],
+    year: 2018,
+    descriptionValues: ['MobX'],
     images: {
       logo: [
         publicImg('logos/querry-trucks_sm.png'),
@@ -2048,24 +1783,8 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://7glyphs.com/approach/packages',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'animations',
-      },
-      '2018',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'zeplin'],
+    year: 2018,
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -2105,24 +1824,8 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/12-saffron',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.pug}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'sellHouse',
-      },
-      '2017',
-    ],
+    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'zeplin'],
+    year: 2017,
     images: {
       logo: [
         publicImg('logos/12-saffron_sm.png'),
@@ -2166,29 +1869,18 @@ const PROJECTS: IProject[] = [
     types: ['admin'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/whip-around',
-    features: [
-      {
-        tKey: 'growthSupportDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.blade}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.laravel}`,
-      {
-        tKey: 'tryThree',
-        values: [
-          TECHNOLOGY_TITLE.php,
-          TECHNOLOGY_TITLE.laravel,
-          TECHNOLOGY_TITLE.blade,
-        ],
-      },
-      '2017',
+    tools: [
+      'php',
+      'js',
+      'jquery',
+      'blade',
+      'html',
+      'css',
+      'bootstrap',
+      'laravel',
     ],
+    year: 2017,
+    descriptionValues: ['PHP', 'Laravel', 'Blade'],
     images: {
       logo: [
         publicImg('logos/whip-around_sm.png'),
@@ -2216,28 +1908,24 @@ const PROJECTS: IProject[] = [
     types: ['admin'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/lazyaz',
-    features: [
-      {
-        tKey: 'scratchDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.php}, ${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.blade}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.css}, ${TECHNOLOGY_TITLE.bootstrap}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.laravel}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'tryThree',
-        values: [
-          TECHNOLOGY_TITLE.php,
-          TECHNOLOGY_TITLE.laravel,
-          TECHNOLOGY_TITLE.blade,
-        ],
-      },
-      '2017',
+    tools: [
+      'php',
+      'js',
+      'jquery',
+      'blade',
+      'html',
+      'css',
+      'bootstrap',
+      'laravel',
+      'zeplin',
+    ],
+    year: 2017,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.laravel,
+      TECHNOLOGY_TITLE.blade,
+      TECHNOLOGY_TITLE.bootstrap,
+      FEATURE.rest,
+      TECHNOLOGY_TITLE.php,
     ],
     images: {
       logo: commonLogo.lazyaz,
@@ -2262,24 +1950,19 @@ const PROJECTS: IProject[] = [
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/lazyaz',
-    features: [
-      {
-        tKey: 'wholeDevelopment',
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKeys: ['responsive', 'emails'],
-        text: `${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.bem}`,
-      },
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.zeplin}`,
-      {
-        tKey: 'firstScratchProject',
-      },
-      '2017',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'jquery',
+      'html',
+      'sass',
+      'bem',
+      'gulp',
+      'webpack',
     ],
+    year: 2017,
+    descriptionValues: [TECHNOLOGY_TITLE.redux, 'UI'],
     images: {
       logo: commonLogo.lazyaz,
       desktop: [
@@ -2318,25 +2001,9 @@ const PROJECTS: IProject[] = [
     title: '7 glyphs',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    features: [
-      {
-        tKey: 'jqueryReact',
-        values: [TECHNOLOGY_TITLE.jquery, TECHNOLOGY_TITLE.react],
-      },
-      {
-        tKey: 'soloWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
-      {
-        tKey: 'responsive',
-        text: `${TECHNOLOGY_TITLE.sass}`,
-      },
-      `${TECHNOLOGY_TITLE.gulp}, ${TECHNOLOGY_TITLE.webpack}`,
-      {
-        tKey: 'spa',
-      },
-      '2017',
-    ],
+    tools: ['js', 'react', 'jquery', 'html', 'sass', 'bem', 'gulp', 'webpack'],
+    year: 2017,
+    descriptionValues: [TECHNOLOGY_TITLE.jquery, TECHNOLOGY_TITLE.react],
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -2376,20 +2043,25 @@ const PROJECTS: IProject[] = [
     companyName: 'everpoint',
     url: 'https://navigator.smbn.ru',
     details: 'https://everpoint.ru/msp',
-    features: [
-      {
-        tKey: 'growthSupportDevelopment',
-      },
-      {
-        tKey: 'teamWork',
-      },
-      `${TECHNOLOGY_TITLE.js}, ${TECHNOLOGY_TITLE.react}, ${TECHNOLOGY_TITLE.redux}, ${TECHNOLOGY_TITLE.handlebars}, ${TECHNOLOGY_TITLE.jquery}, ${TECHNOLOGY_TITLE.html}`,
-      `${TECHNOLOGY_TITLE.modules}, ${TECHNOLOGY_TITLE.sass}, ${TECHNOLOGY_TITLE.semantic}`,
-      `${FEATURE.rest}, ${TECHNOLOGY_TITLE.webpack}, ${TECHNOLOGY_TITLE.photoshop}`,
-      {
-        tKey: 'firstProject',
-      },
-      '2016',
+    tools: [
+      'js',
+      'react',
+      'redux',
+      'handlebars',
+      'jquery',
+      'html',
+      'sass',
+      'modules',
+      'semantic',
+      'webpack',
+    ],
+    year: 2016,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.js,
+      TECHNOLOGY_TITLE.css,
+      'Django',
+      'PDF',
     ],
     images: {
       logo: [

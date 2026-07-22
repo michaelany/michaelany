@@ -1,3 +1,13 @@
 .ProjectDetails-Block {
   margin-bottom: 12px;
 }
+
+.ProjectDetails-Features {
+  @include m.animation(fadeInBottom);
+}
+
+.ProjectDetails-Text {
+  font-size: 1.15rem;
+  padding-top: 2em;
+  margin-bottom: 1.5em;
+}

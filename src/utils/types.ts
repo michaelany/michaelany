@@ -49,10 +49,8 @@ export type TProjectFilter = 'all' | TProjectType
 export type TKey = string | TKeyObject
 
 export interface TKeyObject {
-  tKey?: string
-  tKeys?: string[]
+  tKey: string
   values?: (string | number)[]
-  text?: string | number
 }
 
 export interface ISocialLink {
@@ -64,9 +62,7 @@ export interface ISocialLink {
 
 export interface IFeature {
   Icon: TSvgIcon
-  label?: string
-  time?: boolean
-  tKey?: TKey
+  tKey: string
   labelValues?: (string | number)[]
   textValues?: (string | number)[]
   links?: ReactNode[]
@@ -129,18 +125,20 @@ export interface IProjectImages {
 }
 
 export interface IProject {
-  private?: boolean
-  mobileApp?: boolean
   name: string
   color: TColor
   title?: string
-  textValues?: (string | number)[]
   types: TProjectType[]
+  mobileApp?: boolean
+  private?: boolean
   companyName: TCompanyName
   url?: string
   details?: string
   stores?: string[]
-  features: TKey[]
+  tools: string[]
+  year: number
+  textValues?: (string | number)[]
+  descriptionValues?: (string | number)[]
   images: IProjectImages
 }
 

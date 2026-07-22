@@ -18,9 +18,6 @@ const common = {
     consult: 'Frontend Development Consultant',
     support: 'Technical Support Engineer',
   },
-  portfolio: {
-    scratchDevelopment: 'Development from scratch',
-  },
   projects: {
     ally: 'Landing page of the mobile application for the interactive {{0}} figures',
     cmsFit: 'Content management system for the mobile fitness application',
@@ -297,6 +294,10 @@ const EN = {
         foreignProjects: 'Developed {{0}} diverse international projects',
         complexApp:
           'Developed dozens of components and sections for a large-scale application',
+        analyticsCharts:
+          'Built a complete analytics section with custom charts',
+        businessPlanPdf:
+          'Created {{0}} templates for generating a multi-page business plan as a {{1}}',
         pathLead: 'Progressed from developer to team lead',
         pathFront: 'Progressed from HTML/CSS developer to frontend developer',
         internship: 'Created a corporate internship program',
@@ -395,158 +396,209 @@ const EN = {
       admin: 'Admin panel',
     },
     mobileApp: 'Mobile application',
-    feature: {
-      wholeDevelopment: `${common.portfolio.scratchDevelopment}, project improvement & support`,
-      scratchSupportDevelopment: `${common.portfolio.scratchDevelopment}, project support`,
-      scratchDevelopment: common.portfolio.scratchDevelopment,
-      growthSupportDevelopment: 'Project improvement & support',
-      markupBusinessLogic: 'Markup & development of a part of business logic',
-      jqueryReact: 'Rewriting the codebase from {{0}} to {{1}}',
-      leadWork: 'Frontend Development team lead',
-      teamWork: 'Development team member',
-      soloWork: 'Standalone development',
-      responsive: 'Responsive interface',
-      emails: 'email markup',
-      design: 'prototyping & design',
-      animations: 'Animations',
-      businessLogic: 'Extensive business logic',
-      pwa: 'Progressive Web Application',
-      firstProject: 'First commercial project',
-      firstScratchProject:
-        'The first commercial project developed from scratch',
-      spa: 'Turned the site into a Single Page Application',
-      tryOne: `Worked with {{0}}`,
-      tryTwo: `Worked with {{0}}, & {{1}}`,
-      tryThree: `Worked with {{0}}, {{1}} & {{2}}`,
-      tryOneGraph: `Worked with {{0}} & charts`,
-      sellHouse: 'House sold successfully',
-      formsTables: 'Many forms & tables',
-      darkTheme: 'Dark theme',
-      dynamicFormsRouting: 'Dynamic forms, own routing',
-      mobileDevelopment: 'Released the application to {{0}} & {{1}}',
-      fastDevelopment: 'Fast development',
-      newArchitecture: 'Try new module project architecture',
-    },
     project: {
+      'reps-rest': {
+        text: 'Fitness training planner and workout tracking application',
+        description:
+          'I designed and developed the application independently from scratch. The work included a responsive interface, REST API integration and PWA support',
+      },
       'ally-2': {
         text: common.projects.ally,
+        description:
+          'I independently developed the landing page from scratch, then improved and supported it. I also built its responsive interface and animations',
       },
       'strongher-cms': {
         text: common.projects.cmsFit,
+        description:
+          'I independently designed and developed the admin panel from scratch, then improved and supported it. The interface includes many forms and tables',
       },
       pridefit: {
         text: 'Subscription landing page for the mobile fitness application',
+        description:
+          'I independently developed the subscription flow from scratch, then improved and supported it. The responsive interface was delivered on a tight schedule',
       },
       'ally-cms': {
         text: 'Content management system for the mobile application to manage {{0}} figures',
+        description:
+          'I independently designed and developed the admin panel from scratch, then improved and supported it. I also tried a new modular architecture for the project',
       },
       'pridefit-cms': {
         text: common.projects.cmsFit,
+        description:
+          'I independently designed and developed the admin panel from scratch, then improved and supported it. The project also gave me hands-on experience with {{0}}',
       },
       madfit: {
         text: 'Landing page & subscription service for the mobile fitness application',
+        description:
+          'I independently developed the landing page and subscription flow from scratch, then improved and supported them. The work included a responsive animated interface and payment integration',
       },
       'madfit-cms': {
         text: common.projects.cmsFit,
+        description:
+          'I independently designed and developed the admin panel from scratch, then improved and supported it. The interface was built for managing mobile fitness app content',
       },
       'vibe-media': {
         text: 'Landing page of the digital marketing agency',
+        description:
+          'I independently developed the landing page from scratch and continued supporting it. I built a responsive interface with custom animations',
       },
       tradease: {
         text: 'Building order management website',
+        description:
+          'I independently developed the service from scratch and continued improving and supporting it. The work included a responsive interface and REST API integration',
       },
       't1-online': {
         title: 'T1 Online',
         text: 'Corporate mobile application for company employees',
+        description:
+          'I led the frontend team and developed the corporate mobile application from scratch. We released it in {{0}} and {{1}}',
       },
       'road-ninja-landing': {
         text: 'Landing page for the truck drivers hire service',
+        description:
+          'I independently developed the landing page from scratch. I built its responsive interface and custom animations',
       },
       'road-ninja': {
         text: 'Truck drivers hire service',
+        description:
+          'As part of the development team, I built the markup and part of the business logic. The service includes a responsive interface, email templates, payments, REST API and WebSocket integrations',
       },
       celebration: {
         text: "New Year's mini application for congratulating company employees",
+        description:
+          'I independently designed and developed the mini application from scratch. I built a responsive animated interface and added PWA support',
       },
       ally: {
         text: common.projects.ally,
+        description:
+          'I independently developed the landing page from scratch, then improved and supported it. I also built its responsive interface and animations',
       },
       'present-me-landing': {
         text: 'Landing page for the jobseeker profile creation service',
+        description:
+          'I independently developed the landing page from scratch. I built its responsive interface and animations',
       },
       'present-me-portal': {
         text: 'Admin panel of the job seeker creating profile service',
+        description:
+          'As part of the development team, I worked on the complete frontend implementation. The admin panel contains extensive business logic',
       },
       'present-me': {
         text: 'Service for creating a job seeker profile',
+        description:
+          'I independently developed the service from scratch, then improved and supported it. I built a responsive interface, email templates, dynamic forms and custom routing',
       },
       dropdrone: {
         text: 'Agricultural startup website',
+        description:
+          'I independently developed the website from scratch. I built its responsive interface and animations',
       },
       'just-hatched': {
         text: 'Landing page for the mobile application tracker for newborn babies',
+        description:
+          'As part of the development team, I built the landing page from scratch, including its responsive interface and animations',
       },
       uls: {
         text: 'Single user account of the company',
+        description:
+          'I independently developed the application from scratch, then improved and supported it. The work included a responsive interface, REST API integration, authentication with {{0}} and containerisation with {{1}}',
       },
       'proximal-coffee': {
         text: 'Landing page for the coffee shop',
+        description:
+          'I independently developed the landing page from scratch. I built its responsive interface and animations',
       },
       embp: {
         title: 'EMBP',
         text: 'Admin panel of the biometric platform for VTB Bank',
+        description:
+          'I led frontend development and handled the interface design while building the admin panel from scratch. The application includes extensive business logic and a dark theme',
       },
       '7glyphs-lite': {
         text: 'Landing page for the digital agency service',
+        description:
+          'I independently developed the landing page from scratch. I built its responsive interface and animations',
       },
       'melissa-chalmers': {
         text: 'Fitness blogger landing page',
+        description:
+          'I independently developed the landing page from scratch. I built its responsive interface and animations',
       },
       foodprint: {
         text: 'Discount food ordering service in restaurants mobile application',
+        description:
+          'As part of the development team, I improved and supported the mobile application. This was my first commercial experience with {{0}}',
       },
       'foodprint-portal': {
         text: 'Portal of the discount food ordering service in restaurants',
+        description:
+          'I independently developed the portal from scratch, then improved and supported it. The application contains extensive business logic',
       },
       'foodprint-landing': {
         text: 'Landing page of the service for ordering discount food in restaurants',
+        description:
+          'I independently developed the landing page from scratch, then improved and supported it. I built a responsive interface, email templates and animations',
       },
       sds: {
         text: 'Enterprise service to work with the company document flow',
+        description:
+          'I led frontend development and designed the interface while building the service from scratch, then improved and supported it. The application contains extensive business logic',
       },
       strongher: {
         text: 'Mobile fitness application website',
+        description:
+          'I independently developed the website from scratch, then improved and supported it. I built a responsive animated interface, email templates and payment integration',
       },
       '7glyphs-2': {
         text: 'Home website of the digital agency',
+        description:
+          'As part of the development team, I improved and supported the website. I worked on its responsive interface and animations',
       },
       'rogue-travel': {
         text: 'Flight & hotel group booking service',
+        description:
+          'I independently developed the service from scratch and continued supporting it. The work included email templates, payment integration and extensive business logic',
       },
       'quarry-trucks': {
         text: 'Truck traffic monitoring service',
+        description:
+          'As part of the development team, I built the markup and part of the business logic. The project gave me hands-on experience with {{0}} and data visualisation charts',
       },
       'service-packages': {
         text: 'Landing page for complex services of the digital agency',
+        description:
+          'I independently developed the landing page from scratch. I built its responsive interface and animations',
       },
       '12-saffron': {
         text: 'Landing page for sale of the private home in New Zealand',
+        description:
+          'I independently developed the landing page from scratch and built its responsive interface. The website successfully helped sell the house',
       },
       'whip-around': {
         text: 'Vehicle inspection service',
+        description:
+          'I independently improved and supported the service, working across its responsive frontend and backend. The project gave me hands-on experience with {{0}}, {{1}} and {{2}}',
       },
       'lazyaz-dashboard': {
-        text: 'Admin panel of the delivery service',
+        text: 'Admin panel for a delivery service',
+        description:
+          "I adapted a {{0}} admin panel built with {{1}} and {{2}} to the project's needs. I built a lot of the UI, wrote scripts for interactive elements and set up {{3}} requests. I also worked with {{4}}",
       },
       lazyaz: {
-        text: 'Web platform for the delivery service',
+        text: 'Web platform for a delivery service',
+        description:
+          'For the first time, I built the frontend of a commercial project from scratch. I implemented global state management with {{0}}, handled data from the server and created a complete {{1}} kit for the application',
       },
       '7glyphs': {
-        text: 'Home site of the digital agency',
+        text: 'Digital agency website',
+        description:
+          'I rewrote the website from {{0}} to {{1}} and turned it into a single-page application. I made the interface responsive and added animations',
       },
       msp: {
         title: 'Business navigator MSP',
-        text: 'Service for entrepreneurs who want to open or expand their business',
+        text: 'Service for entrepreneurs looking to start or grow a business',
+        description:
+          'My first commercial project as part of a frontend team. I built a lot of the interface and greatly improved my {{0}}, {{1}} and {{2}} skills. I developed dozens of components and application screens, including a complete analytics section with custom charts. I also created {{3}} templates for generating a multi-page business plan as a {{4}}',
       },
     },
     subtitle: 'Screenshots',

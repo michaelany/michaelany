@@ -48,7 +48,7 @@ export default function App() {
         {md ? <Header /> : <Sidebar />}
         <main className="App-Main">
           {IS_NEW_YEAR_MODE && !md && <Garland />}
-          <Suspense fallback={<Fallback />}>
+          <Suspense>
             <Routes>
               <Route path={ROUTE.home} element={<Home />} />
               <Route path={ROUTE.about} element={<About />} />
@@ -73,8 +73,6 @@ export default function App() {
     </>
   )
 }
-
-const Fallback = () => <div>Loading...</div>
 
 const LazyRouteLoaded = () => {
   useEffect(() => {

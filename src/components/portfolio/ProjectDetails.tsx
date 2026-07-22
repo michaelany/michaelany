@@ -1,24 +1,21 @@
 import {useTranslation} from 'react-i18next'
-import {Link} from '@mui/material'
+import {Avatar, Chip, Link, Stack} from '@mui/material'
+import WebRoundedIcon from '@mui/icons-material/WebRounded'
 import {
-  CodeRounded as CodeIcon,
-  EventRounded as EventIcon,
-  PaletteRounded as PaletteIcon,
-  GroupWorkRounded as GroupWorkIcon,
-  BuildRounded as BuildIcon,
-  StarRounded as StarIcon,
-  CheckCircleRounded as CheckCircleIcon,
-  WebRounded as WebIcon,
-  PhoneIphone as PhoneIphoneIcon,
+  CalendarMonthRounded as CalendarIcon,
+  WebAssetRounded as LandingIcon,
+  AppsRounded as AppIcon,
+  SpaceDashboardRounded as AdminIcon,
+  PhoneIphoneRounded as MobileAppIcon,
 } from '@mui/icons-material'
 
 import './ProjectDetails.scss'
-import {Company, Section} from '#components/common'
-import {tProjectTypes} from '#utils/helpers'
+import {Company, Section, Animate} from '#components/common'
 import {COMPANY} from '#data/common'
+import TECHNOLOGIES from '#data/technologies'
 import {BLANK_LINK_PROPS} from '#utils/constants'
 import ProjectActions from './ProjectActions'
-import type {IFeature, IProject} from '#utils/types'
+import type {IProject, ITechnology} from '#utils/types'
 
 interface IProjectDetailsProps {
   project: IProject
@@ -27,30 +24,9 @@ interface IProjectDetailsProps {
 export default function ProjectDetails({project}: IProjectDetailsProps) {
   const {t} = useTranslation()
 
-  const featureItems: IFeature[] = project.features.map((feature, index) => {
-    const isTime = index === project.features.length - 1
-    return {
-      label:
-        typeof feature === 'object'
-          ? `${feature.text ? `${feature.text}, ` : ''}${
-              feature.tKeys
-                ? feature.tKeys
-                    .map(tKey => t(`portfolio.feature.${tKey}`))
-                    .join(', ')
-                : t(`portfolio.feature.${feature.tKey}`, {
-                    replace: feature.values,
-                  })
-            }`
-          : feature,
-      Icon: featureIcons[index],
-      time: isTime,
-    }
-  })
-  featureItems.push({
-    label: tProjectTypes(t, project.types, project.mobileApp),
-    Icon: project.mobileApp ? PhoneIphoneIcon : WebIcon,
-  })
-
+  const technologies: ITechnology[] = project.tools.map(
+    tool => TECHNOLOGIES.find(item => item.name === tool) as ITechnology
+  )
   const projectKey = `portfolio.project.${project.name}`
   const company = COMPANY[project.companyName]
 
@@ -62,7 +38,7 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
         </h1>
         <Company animated {...company} />
       </div>
-      <p className="MainText">
+      <p className="MainText MainText_smallIndent">
         {t(`${projectKey}.text`, {replace: project.textValues})}.{' '}
         {t('portfolio.developed')}{' '}
         <Link {...BLANK_LINK_PROPS} className="Link" href={company.href}>
@@ -70,6 +46,54 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
         </Link>
         .
       </p>
+      <Stack component="ul" className="ProjectDetails-Features">
+        <Chip
+          component="li"
+          className={`Chip Chip_color_${project.color}`}
+          icon={<CalendarIcon />}
+          label={<time dateTime={`${project.year}`}>{project.year}</time>}
+        />
+        {project.types.map(type => {
+          const Icon = project.mobileApp
+            ? MobileAppIcon
+            : PROJECT_TYPE_ICONS[type]
+
+          return (
+            <Chip
+              key={type}
+              component="li"
+              className={`Chip Chip_color_${project.color}`}
+              icon={<Icon />}
+              label={
+                project.mobileApp
+                  ? t('portfolio.mobileApp')
+                  : t(`portfolio.filter.${type}`)
+              }
+            />
+          )
+        })}
+      </Stack>
+      <Animate el="p" className="ProjectDetails-Text">
+        {t(`${projectKey}.description`, {
+          replace: project.descriptionValues,
+        })}
+        .
+      </Animate>
+      <Animate>
+        <Stack component="ul">
+          {technologies.map(technology => (
+            <Chip
+              key={technology.name}
+              component="li"
+              className={`Chip Chip_color_${technology.color}`}
+              avatar={
+                <Avatar src={technology.images[0]} alt={technology.label} />
+              }
+              label={technology.label}
+            />
+          ))}
+        </Stack>
+      </Animate>
       <ProjectActions
         url={project.url}
         details={project.details}
@@ -80,12 +104,9 @@ export default function ProjectDetails({project}: IProjectDetailsProps) {
   )
 }
 
-const featureIcons = [
-  CheckCircleIcon,
-  GroupWorkIcon,
-  CodeIcon,
-  PaletteIcon,
-  BuildIcon,
-  StarIcon,
-  EventIcon,
-]
+const PROJECT_TYPE_ICONS = {
+  site: WebRoundedIcon,
+  landing: LandingIcon,
+  app: AppIcon,
+  admin: AdminIcon,
+}

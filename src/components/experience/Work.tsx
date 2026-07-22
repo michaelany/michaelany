@@ -387,6 +387,8 @@ const jobs: IJob[] = [
     ],
     achievements: [
       'complexApp',
+      'analyticsCharts',
+      {tKey: 'businessPlanPdf', values: ['Django', 'PDF']},
       'pathFront',
       {
         tKey: 'technologiesBase',

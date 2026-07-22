@@ -94,13 +94,13 @@
   &_noAnimation {
     animation: none;
   }
+  &_smallIndent {
+    margin-bottom: 0.8em;
+  }
 }
 
 .Button {
   color: white;
-  &:not(:last-child) {
-    margin-right: 16px;
-  }
   &_color_blue {
     &.MuiButton-text {
       color: v.$color_dark-blue;
