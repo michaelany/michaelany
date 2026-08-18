@@ -266,7 +266,6 @@ const EN = {
         logicAppsSites:
           'Developing business logic for applications and websites',
         logicModules: 'Developing business logic for application components',
-        structureApps: 'Designing application architecture',
         structureProjects: 'Designing project architecture',
         responsive: 'Building cross-browser, responsive layouts',
         rest: 'Working with {{0}}',
@@ -279,9 +278,9 @@ const EN = {
         tasksTeam: 'Planning, breaking down and estimating team tasks',
         manage: 'Managing and developing the team',
         review: 'Conducting code reviews and interviews',
-        serviceDesk: 'Registering and processing requests in {{0}}',
-        hardwareFix: 'Resolving software and peripheral hardware issues',
-        hardwareInstall: 'Installing and configuring software and peripherals',
+        serviceDesk: 'Handling {{0}} requests',
+        hardwareInstall:
+          'Installing, configuring and troubleshooting software and hardware',
         consult: 'Advising employees on technical issues',
         stakeholders: 'Working with stakeholders',
         marketingStakeholders:
@@ -290,37 +289,39 @@ const EN = {
         integration: 'Integrating and configuring third-party services',
       },
       achievement: {
-        corporateApps: 'Developed several applications for major clients',
+        frontendOwnership: 'Handle all frontend development at the company',
+        frontendOwnershipPast:
+          'Handled all frontend development at the company',
+        corporateApps: 'Developed several projects for major clients',
         foreignProjects: 'Developed {{0}} diverse international projects',
         complexApp:
-          'Developed dozens of components and sections for a large-scale application',
-        analyticsCharts:
-          'Built a complete analytics section with custom charts',
+          'Developed dozens of components and sections for the application',
+        analyticsCharts: 'Built an analytics section with custom charts',
         businessPlanPdf:
-          'Created {{0}} templates for generating a multi-page business plan as a {{1}}',
+          'Created {{0}} templates for generating multi-page business plans in {{1}} format',
         pathLead: 'Progressed from developer to team lead',
-        pathFront: 'Progressed from HTML/CSS developer to frontend developer',
+        pathFront: 'Progressed from junior to frontend developer',
         internship: 'Created a corporate internship program',
         mentor: 'Mentored several interns',
         mobile:
-          'Built a corporate mobile app from scratch using {{0}} and released it to app stores',
+          'Built a corporate mobile app from scratch with {{0}} and released it on the {{1}} and {{2}}',
         interview:
           'Conducted dozens of interviews and hired a dozen developers',
         technologies:
           'Learned and applied a wide range of technologies and libraries',
-        technologiesBase: 'Improved my {{0}}, {{1}} and {{2}} skills',
+        technologiesBase: 'Got better at {{0}}, {{1}} and {{2}}',
         independent: 'Became highly autonomous and organized',
         visa: 'Relocated to New Zealand on a company-sponsored work visa',
         work: 'Improved my teamwork skills',
-        orders: 'Processed thousands of requests',
+        orders: 'Handled thousands of support requests',
         hardware: 'Gained experience with software and hardware',
         softSkills: 'Improved my communication skills',
-        architecture: 'Designed my ideal architecture for web applications',
+        architecture: 'Tried different approaches to web application architecture',
         animations: 'Built dozens of sections with advanced animations',
         interfaces:
-          'Built multifunctional interfaces with advanced analytics, charts, tables, forms and dashboards',
+          'Built multifunctional interfaces with analytics, charts, tables, forms and dashboards',
         financeApp:
-          'Built a large-scale financial application from scratch with extensive client-side business logic',
+          'Built a financial application from scratch with extensive client-side business logic',
         pagesComponents: 'Developed hundreds of components and pages',
         seoRoadmap:
           'Optimized the website for {{0}} and increased organic traffic',
@@ -598,7 +599,7 @@ const EN = {
         title: 'Business navigator MSP',
         text: 'Service for entrepreneurs looking to start or grow a business',
         description:
-          'My first commercial project as part of a frontend team. I built a lot of the interface and greatly improved my {{0}}, {{1}} and {{2}} skills. I developed dozens of components and application screens, including a complete analytics section with custom charts. I also created {{3}} templates for generating a multi-page business plan as a {{4}}',
+          'My first commercial project as part of a frontend team. I improved my {{0}}, {{1}} and {{2}} skills. I developed dozens of components and application screens, including an analytics section with custom charts. I also created {{3}} templates for generating multi-page business plans in {{4}} format',
       },
     },
     subtitle: 'Screenshots',

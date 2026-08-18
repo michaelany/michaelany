@@ -330,7 +330,7 @@ const steps: IStep[] = [
         year: 2022,
       },
     },
-    values: ['AppStore', 'Google Play'],
+    values: ['App Store', 'Google Play'],
   },
   {
     period: {
