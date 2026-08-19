@@ -1958,10 +1958,17 @@ const PROJECTS: IProject[] = [
       'bem',
       'gulp',
       'webpack',
-      'yarn',
+      'npm',
     ],
     year: 2017,
-    descriptionValues: [TECHNOLOGY_TITLE.redux, 'UI'],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.redux,
+      'UI',
+      'Google Places API',
+      TECHNOLOGY_TITLE.html,
+      TECHNOLOGY_TITLE.gulp,
+      TECHNOLOGY_TITLE.webpack,
+    ],
     images: {
       logo: commonLogo.lazyaz,
       desktop: [
@@ -2009,10 +2016,15 @@ const PROJECTS: IProject[] = [
       'bem',
       'gulp',
       'webpack',
-      'yarn',
+      'npm',
     ],
     year: 2017,
-    descriptionValues: [TECHNOLOGY_TITLE.jquery, TECHNOLOGY_TITLE.react],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.jquery,
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.gulp,
+      TECHNOLOGY_TITLE.webpack,
+    ],
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [

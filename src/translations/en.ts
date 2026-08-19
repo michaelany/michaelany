@@ -289,9 +289,8 @@ const EN = {
         integration: 'Integrating and configuring third-party services',
       },
       achievement: {
-        frontendOwnership: 'Handle all frontend development at the company',
-        frontendOwnershipPast:
-          'Handled all frontend development at the company',
+        frontendOwnership: 'Own all frontend development at the company',
+        frontendOwnershipPast: 'Owned all frontend development at the company',
         corporateApps: 'Developed several projects for major clients',
         foreignProjects: 'Developed {{0}} diverse international projects',
         complexApp:
@@ -335,9 +334,9 @@ const EN = {
           "Obtained a New Zealand resident visa with the company's support",
         ai: 'Introduced AI tools into team workflows',
         optimization:
-          'Optimized performance across the public website and internal portal',
+          'Improved performance across the public website and internal web platform',
         newPortal:
-          'Built the frontend for the internal portal from scratch using a modern tech stack',
+          'Built a new version of the internal business platform from scratch using a modern tech stack',
       },
       feature: {
         busyFull: 'full-time',
@@ -588,18 +587,18 @@ const EN = {
       lazyaz: {
         text: 'Web platform for a delivery service',
         description:
-          'For the first time, I built the frontend of a commercial project from scratch. I implemented global state management with {{0}}, handled data from the server and created a complete {{1}} kit for the application',
+          'This was the first commercial project I built from scratch. I implemented the application’s business logic, set up global state management with {{0}} and handled server data. I integrated an interactive map and added address search using the {{2}}. I built a design system with custom {{1}} components and created {{3}} email templates. I created a custom build pipeline using {{4}} and {{5}}',
       },
       '7glyphs': {
         text: 'Digital agency website',
         description:
-          'I rewrote the website from {{0}} to {{1}} and turned it into a single-page application. I made the interface responsive and added animations',
+          'I rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. I set up client-side routing, made the layout responsive and added animations. I created a custom build pipeline using {{2}} and {{3}}',
       },
       msp: {
         title: 'Business navigator MSP',
         text: 'Service for entrepreneurs looking to start or grow a business',
         description:
-          'My first commercial project as part of a frontend team. I improved my {{0}}, {{1}} and {{2}} skills. I developed dozens of components and application screens, including an analytics section with custom charts. I also created {{3}} templates for generating multi-page business plans in {{4}} format',
+          'My first commercial project as part of a frontend team. I improved my {{0}}, {{1}} and {{2}} skills. I developed dozens of components and application screens, including an analytics section with custom charts. I created {{3}} templates for generating multi-page business plans in {{4}} format',
       },
     },
     subtitle: 'Screenshots',
