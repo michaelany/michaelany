@@ -166,6 +166,7 @@ const jobs: IJob[] = [
         ],
       },
       {tKey: 'cmsIntegration', values: [TECHNOLOGY_TITLE.storyblok, 'CMS']},
+      'externalBugFixes',
       {tKey: 'seoRoadmap', values: ['SEO']},
       {
         tKey: 'docs',
@@ -261,7 +262,6 @@ const jobs: IJob[] = [
       'interfaces',
       'financeApp',
       'animations',
-      'architecture',
       'technologies',
       'independent',
       'visa',

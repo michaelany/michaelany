@@ -289,8 +289,8 @@ const EN = {
         integration: 'Integrating and configuring third-party services',
       },
       achievement: {
-        frontendOwnership: 'Own all frontend development at the company',
-        frontendOwnershipPast: 'Owned all frontend development at the company',
+        frontendOwnership: 'Own frontend development across the company',
+        frontendOwnershipPast: 'Owned frontend development across the company',
         corporateApps: 'Developed several projects for major clients',
         foreignProjects: 'Developed {{0}} diverse international projects',
         complexApp:
@@ -315,7 +315,6 @@ const EN = {
         orders: 'Handled thousands of support requests',
         hardware: 'Gained experience with software and hardware',
         softSkills: 'Improved my communication skills',
-        architecture: 'Tried different approaches to web application architecture',
         animations: 'Built dozens of sections with advanced animations',
         interfaces:
           'Built multifunctional interfaces with analytics, charts, tables, forms and dashboards',
@@ -327,9 +326,12 @@ const EN = {
         wordpressMigration:
           'Migrated content from a legacy {{0}} website to a server-rendered {{1}} application with a {{2}}',
         cmsIntegration:
-          'Integrated {{0}} {{1}} with a visual editor and scalable component architecture',
+          'Integrated {{0}} {{1}}, configured the visual editor and designed a scalable architecture for blocks and components',
+        externalBugFixes:
+          'Initiated bug fixes in third-party plugins and widgets',
         docs: 'Created corporate documentation using {{0}}',
-        flp: 'Completed a corporate leadership development program',
+        flp:
+          'Completed a corporate program focused on leadership, communication and teamwork',
         resident:
           "Obtained a New Zealand resident visa with the company's support",
         ai: 'Introduced AI tools into team workflows',
@@ -582,23 +584,23 @@ const EN = {
       'lazyaz-dashboard': {
         text: 'Admin panel for a delivery service',
         description:
-          "I adapted a {{0}} admin panel built with {{1}} and {{2}} to the project's needs. I built a lot of the UI, wrote scripts for interactive elements and set up {{3}} requests. I also worked with {{4}}",
+          "I adapted a {{0}} admin panel built with {{1}} and {{2}} to the project's needs. Built the UI, wrote scripts for interactive elements and set up {{3}} requests, gaining hands-on experience with {{4}}",
       },
       lazyaz: {
         text: 'Web platform for a delivery service',
         description:
-          'This was the first commercial project I built from scratch. I implemented the application’s business logic, set up global state management with {{0}} and handled server data. I integrated an interactive map and added address search using the {{2}}. I built a design system with custom {{1}} components and created {{3}} email templates. I created a custom build pipeline using {{4}} and {{5}}',
+          'This was the first commercial project I built from scratch. I designed the application architecture, implemented its business logic, set up global state management with {{0}} and handled server data. Integrated an interactive map and added address search using the {{2}}. Built a design system with custom {{1}} components, created {{3}} email templates and set up the project build using {{4}} and {{5}}',
       },
       '7glyphs': {
         text: 'Digital agency website',
         description:
-          'I rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. I set up client-side routing, made the layout responsive and added animations. I created a custom build pipeline using {{2}} and {{3}}',
+          'I rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. Set up client-side routing, made the layout responsive, added animations and configured the project build using {{2}} and {{3}}',
       },
       msp: {
         title: 'Business navigator MSP',
         text: 'Service for entrepreneurs looking to start or grow a business',
         description:
-          'My first commercial project as part of a frontend team. I improved my {{0}}, {{1}} and {{2}} skills. I developed dozens of components and application screens, including an analytics section with custom charts. I created {{3}} templates for generating multi-page business plans in {{4}} format',
+          'This was my first commercial project as part of a frontend team. I strengthened my {{0}}, {{1}} and {{2}} skills while developing dozens of components and application screens, including an analytics section with custom charts. Also created {{3}} templates for generating multi-page business plans in {{4}} format',
       },
     },
     subtitle: 'Screenshots',
