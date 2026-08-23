@@ -1591,10 +1591,10 @@ const PROJECTS: IProject[] = [
       'html',
       'sass',
       'bem',
-      'webpack',
       'stripe',
-      'zeplin',
-      'sketch',
+      'webpack',
+      'yarn',
+      'foundationemails',
     ],
     year: 2019,
     images: {
@@ -1652,7 +1652,7 @@ const PROJECTS: IProject[] = [
     types: ['site'],
     companyName: 'sevenGlyphs',
     url: COMPANY.sevenGlyphs.href,
-    tools: ['js', 'react', 'html', 'sass', 'bem', 'mui', 'webpack', 'zeplin'],
+    tools: ['js', 'react', 'redux', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2018,
     images: {
       logo: commonLogo.sevenGlyphs,
@@ -1716,10 +1716,10 @@ const PROJECTS: IProject[] = [
       'html',
       'sass',
       'bem',
-      'webpack',
       'stripe',
-      'zeplin',
-      'sketch',
+      'webpack',
+      'yarn',
+      'foundationemails',
     ],
     year: 2018,
     images: {
@@ -1751,7 +1751,7 @@ const PROJECTS: IProject[] = [
     types: ['app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
-    tools: ['js', 'react', 'mobx', 'html', 'sass', 'bem', 'zeplin'],
+    tools: ['js', 'react', 'mobx', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2018,
     descriptionValues: ['MobX'],
     images: {
@@ -1783,7 +1783,7 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://7glyphs.com/approach/packages',
-    tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'zeplin'],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2018,
     images: {
       logo: commonLogo.sevenGlyphs,
@@ -1824,7 +1824,7 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/12-saffron',
-    tools: ['js', 'react', 'html', 'sass', 'bem', 'gulp', 'yarn'],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'gulp', 'webpack', 'npm'],
     year: 2017,
     images: {
       logo: [
@@ -1880,7 +1880,7 @@ const PROJECTS: IProject[] = [
       'laravel',
     ],
     year: 2017,
-    descriptionValues: ['PHP', 'Laravel', 'Blade'],
+    descriptionValues: ['Laravel', 'Blade', 'Bootstrap', 'PHP'],
     images: {
       logo: [
         publicImg('logos/whip-around_sm.png'),

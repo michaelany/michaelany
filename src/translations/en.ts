@@ -47,7 +47,7 @@ const EN = {
       evening: 'Good evening',
       night: 'Good night',
     },
-    iam: "I'm",
+    iam: 'I\'m',
     occupation: {
       part1: 'frontend',
       part2: 'engineer',
@@ -76,7 +76,7 @@ const EN = {
       },
       programming: {
         label: 'Love coding',
-        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in web design, cross-platform development and language models",
+        text: 'Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I\'m interested in web design, cross-platform development and language models',
       },
       blogger: {
         label: '{{0}} creator',
@@ -100,23 +100,23 @@ const EN = {
       },
       geek: {
         label: 'Tech geek',
-        text: "I like technology, games, anime and {{0}} culture. Love {{1}}, especially the {{2}} and {{3}} series, and I'm a huge fan of Arcane. Also interested in gadgets and hardware. Built my <0>dreamdesk</0>",
+        text: 'I like technology, games, anime and {{0}} culture. Love {{1}}, especially the {{2}} and {{3}} series, and I\'m a huge fan of Arcane. Also interested in gadgets and hardware. Built my <0>dreamdesk</0>',
       },
       resident: {
         label: 'New Zealand resident',
-        text: "I moved to New Zealand {{0}} years ago and got residency as a {{1}}. New Zealand is now my home, the country I've always dreamed of",
+        text: 'I moved to New Zealand {{0}} years ago and got residency as a {{1}}. New Zealand is now my home, the country I\'ve always dreamed of',
       },
       sport: {
         label: 'Into sports',
-        text: "Physical activity is especially important for a developer, so I move every day. Love calisthenics, fitness and hiking. When all the tasks are done and the surf forecast looks good, you'll find me out on my board in the waves",
+        text: 'Physical activity is especially important for a developer, so I move every day. Love calisthenics, fitness and hiking. When all the tasks are done and the surf forecast looks good, you\'ll find me out on my board in the waves',
       },
       travel: {
         label: 'Love traveling',
-        text: "Visited <0>{{0}} countries</0>. Once I climbed Mount Fuji, had an ale at Hobbiton's Green Dragon Inn, saw Oasis live in Australia and encountered a wild bear at Dyatlov Pass",
+        text: 'Visited <0>{{0}} countries</0>. Once I climbed Mount Fuji, had an ale at Hobbiton\'s Green Dragon Inn, saw Oasis live in Australia and encountered a wild bear at Dyatlov Pass',
       },
       love: {
         label: 'Happy husband',
-        text: "<0>She</0> is my best friend and biggest source of inspiration. We've been together for {{0}} years. I once built a progressive web app to ask her to marry me",
+        text: '<0>She</0> is my best friend and biggest source of inspiration. We\'ve been together for {{0}} years. I once built a progressive web app to ask her to marry me',
       },
       coffee: {
         label: 'Coffee lover',
@@ -226,7 +226,7 @@ const EN = {
       },
       ownership: {
         label: 'Taking responsibility for the result',
-        text: "I don't wait for step-by-step instructions. Clarify requirements, notice problems and propose solutions. Own tasks end to end and bring them to a finished result. Care about project quality and consistency. Work directly with the team and stakeholders",
+        text: 'I don\'t wait for step-by-step instructions. Clarify requirements, notice problems and propose solutions. Own tasks end to end and bring them to a finished result. Care about project quality and consistency. Work directly with the team and stakeholders',
       },
       mentor: {
         label: 'Reviewing code and mentoring',
@@ -330,10 +330,9 @@ const EN = {
         externalBugFixes:
           'Initiated bug fixes in third-party plugins and widgets',
         docs: 'Created corporate documentation using {{0}}',
-        flp:
-          'Completed a corporate program focused on leadership, communication and teamwork',
+        flp: 'Completed a corporate program focused on leadership, communication and teamwork',
         resident:
-          "Obtained a New Zealand resident visa with the company's support",
+          'Obtained a New Zealand resident visa with the company\'s support',
         ai: 'Introduced AI tools into team workflows',
         optimization:
           'Improved performance across the public website and internal web platform',
@@ -389,7 +388,7 @@ const EN = {
   },
   portfolio: {
     limit: 'Projects without an {{0}} that I can showcase {{1}}',
-    developed: 'Developed in',
+    developed: 'Developed at',
     filter: {
       all: 'All',
       app: 'Application',
@@ -466,7 +465,7 @@ const EN = {
           'As part of the development team, I built the markup and part of the business logic. The service includes a responsive interface, email templates, payments, REST API and WebSocket integrations',
       },
       celebration: {
-        text: "New Year's mini application for congratulating company employees",
+        text: 'New Year\'s mini application for congratulating company employees',
         description:
           'I independently designed and developed the mini application from scratch. I built a responsive animated interface and added PWA support',
       },
@@ -547,44 +546,44 @@ const EN = {
           'I led frontend development and designed the interface while building the service from scratch, then improved and supported it. The application contains extensive business logic',
       },
       strongher: {
-        text: 'Mobile fitness application website',
+        text: 'Website for a mobile fitness app',
         description:
-          'I independently developed the website from scratch, then improved and supported it. I built a responsive animated interface, email templates and payment integration',
+          'I developed the website from scratch using React, then continued improving and maintaining it. Set up client-side routing. Built a pixel-perfect, responsive interface with smooth animations. Created a blog section and a subscription management section with Stripe payments. Developed email templates',
       },
       '7glyphs-2': {
-        text: 'Home website of the digital agency',
+        text: 'Digital agency website',
         description:
-          'As part of the development team, I improved and supported the website. I worked on its responsive interface and animations',
+          'I improved and maintained the website. Built new responsive sections and added animations. Implemented the blog section. Integrated the services page I had previously developed as a standalone landing page into the website',
       },
       'rogue-travel': {
-        text: 'Flight & hotel group booking service',
+        text: 'Group booking service for flights and hotels',
         description:
-          'I independently developed the service from scratch and continued supporting it. The work included email templates, payment integration and extensive business logic',
+          'I developed a large application from scratch using React and Redux. Designed an extensible architecture and implemented routing and business logic. Set up asynchronous data handling with Redux Thunk and optimised computations with Reselect. Integrated third-party services, including payments through Stripe. Created a UI kit and built the interface and email templates. Implemented virtualisation for large lists to improve performance',
       },
       'quarry-trucks': {
         text: 'Truck traffic monitoring service',
         description:
-          'As part of the development team, I built the markup and part of the business logic. The project gave me hands-on experience with {{0}} and data visualisation charts',
+          'I joined the project when it had basic markup and partially implemented business logic. Created a UI kit, completed the UI implementation and took the application to production. Optimised the business logic and improved performance. Gained hands-on experience with {{0}}',
       },
       'service-packages': {
-        text: 'Landing page for complex services of the digital agency',
+        text: 'Landing page for a digital agency\'s service packages',
         description:
-          'I independently developed the landing page from scratch. I built its responsive interface and animations',
+          'I developed the landing page from scratch using React. Built a pixel-perfect, responsive interface with smooth animations and a distinctive layout featuring side navigation. The landing page later became part of the agency\'s main website',
       },
       '12-saffron': {
         text: 'Landing page for sale of the private home in New Zealand',
         description:
-          'I independently developed the landing page from scratch and built its responsive interface. The website successfully helped sell the house',
+          'I developed the landing page from scratch using React. Built a pixel-perfect, responsive interface from the design and added smooth animations. Configured the project build using Gulp and webpack. The website helped sell the house',
       },
       'whip-around': {
         text: 'Vehicle inspection service',
         description:
-          'I independently improved and supported the service, working across its responsive frontend and backend. The project gave me hands-on experience with {{0}}, {{1}} and {{2}}',
+          'I worked on maintaining a {{0}} project. Built interfaces using {{1}} and {{2}} and wrote scripts for interactive elements. Gained hands-on experience with {{3}}',
       },
       'lazyaz-dashboard': {
         text: 'Admin panel for a delivery service',
         description:
-          "I adapted a {{0}} admin panel built with {{1}} and {{2}} to the project's needs. Built the UI, wrote scripts for interactive elements and set up {{3}} requests, gaining hands-on experience with {{4}}",
+          'I adapted a {{0}} admin panel based on {{1}} and {{2}} to the project\'s needs. Built the UI, wrote scripts for interactive elements and set up {{3}} requests, gaining hands-on experience with {{4}}',
       },
       lazyaz: {
         text: 'Web platform for a delivery service',
@@ -594,7 +593,7 @@ const EN = {
       '7glyphs': {
         text: 'Digital agency website',
         description:
-          'I rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. Set up client-side routing, made the layout responsive, added animations and configured the project build using {{2}} and {{3}}',
+          'I rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. Implemented client-side routing, made the layout responsive and added animations. Configured the project build using {{2}} and {{3}}',
       },
       msp: {
         title: 'Business navigator MSP',
@@ -610,7 +609,7 @@ const EN = {
   },
   blog: {
     description:
-      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity and bring UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
+      '<0>Hi there! {{0}}</0><0>My name is Michael. I\'ve been professionally engaged in frontend development for {{1}} years. I create projects of any complexity and bring UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}',
     sort: {
       new: 'Latest',
       old: 'Oldest',
@@ -623,17 +622,17 @@ const EN = {
       },
       'my-dreamdesk': {
         title: 'My dreamdesk {{0}} New no monitors setup',
-        text: "I've finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing and why I don't need a large monitor",
+        text: 'I\'ve finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I\'ll provide a detailed explanation and showcase how it\'s set up, the devices I use, why I often work standing and why I don\'t need a large monitor',
       },
       'day-in-a-life-new-zealand': {
         title:
           'A day in the life of a software engineer in New Zealand {{0}} POV',
-        text: "I was gifted the {{0}}, and someday I'll be filming myself surfing the waves of the Pacific Ocean in New Zealand. But for now, I invite you to spend a typical day with me in this distant and beautiful country through my eyes, that is, from a first-person point of view",
+        text: 'I was gifted the {{0}}, and someday I\'ll be filming myself surfing the waves of the Pacific Ocean in New Zealand. But for now, I invite you to spend a typical day with me in this distant and beautiful country through my eyes, that is, from a first-person point of view',
       },
       'how-i-became-software-engineer': {
         title:
           'How I became a software engineer at 27 {{0}} From actor to developer',
-        text: "In this video, I'll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I'll talk about myself, the challenges I faced, where and how I learned, what helped me along the way and how I found my first job in {{0}}",
+        text: 'In this video, I\'ll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I\'ll talk about myself, the challenges I faced, where and how I learned, what helped me along the way and how I found my first job in {{0}}',
       },
     },
   },
