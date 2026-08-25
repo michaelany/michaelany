@@ -1550,11 +1550,17 @@ const PROJECTS: IProject[] = [
       'html',
       'styled',
       'mui',
-      'keycloak',
       'webpack',
-      'sketch',
+      'yarn',
+      'keycloak',
     ],
     year: 2019,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.redux,
+      TECHNOLOGY_TITLE.mui,
+      TECHNOLOGY_TITLE.keycloak,
+    ],
     images: {
       logo: commonLogo.vaillant,
       desktop: [
@@ -1597,6 +1603,7 @@ const PROJECTS: IProject[] = [
       'foundationemails',
     ],
     year: 2019,
+    descriptionValues: [TECHNOLOGY_TITLE.react, TECHNOLOGY_TITLE.stripe],
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -1722,6 +1729,13 @@ const PROJECTS: IProject[] = [
       'foundationemails',
     ],
     year: 2018,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.redux,
+      'Redux Thunk',
+      'Reselect',
+      TECHNOLOGY_TITLE.stripe,
+    ],
     images: {
       logo: [
         publicImg('logos/rogue-travel.png'),
@@ -1753,7 +1767,7 @@ const PROJECTS: IProject[] = [
     details: 'https://7glyphs.com/portfolio/projects/quarry-trucks',
     tools: ['js', 'react', 'mobx', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2018,
-    descriptionValues: ['MobX'],
+    descriptionValues: [TECHNOLOGY_TITLE.react, TECHNOLOGY_TITLE.mobx],
     images: {
       logo: [
         publicImg('logos/querry-trucks_sm.png'),
@@ -1785,6 +1799,7 @@ const PROJECTS: IProject[] = [
     url: 'https://7glyphs.com/approach/packages',
     tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2018,
+    descriptionValues: [TECHNOLOGY_TITLE.react],
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -1826,6 +1841,11 @@ const PROJECTS: IProject[] = [
     details: 'https://7glyphs.com/portfolio/projects/12-saffron',
     tools: ['js', 'react', 'html', 'sass', 'bem', 'gulp', 'webpack', 'npm'],
     year: 2017,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.gulp,
+      TECHNOLOGY_TITLE.webpack,
+    ],
     images: {
       logo: [
         publicImg('logos/12-saffron_sm.png'),
@@ -1880,7 +1900,12 @@ const PROJECTS: IProject[] = [
       'laravel',
     ],
     year: 2017,
-    descriptionValues: ['Laravel', 'Blade', 'Bootstrap', 'PHP'],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.laravel,
+      TECHNOLOGY_TITLE.blade,
+      TECHNOLOGY_TITLE.bootstrap,
+      TECHNOLOGY_TITLE.php,
+    ],
     images: {
       logo: [
         publicImg('logos/whip-around_sm.png'),
@@ -1968,6 +1993,7 @@ const PROJECTS: IProject[] = [
       TECHNOLOGY_TITLE.html,
       TECHNOLOGY_TITLE.gulp,
       TECHNOLOGY_TITLE.webpack,
+      TECHNOLOGY_TITLE.react,
     ],
     images: {
       logo: commonLogo.lazyaz,

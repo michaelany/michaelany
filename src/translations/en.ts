@@ -317,7 +317,7 @@ const EN = {
         softSkills: 'Improved my communication skills',
         animations: 'Built dozens of sections with advanced animations',
         interfaces:
-          'Built multifunctional interfaces with analytics, charts, tables, forms and dashboards',
+          'Built interfaces with analytics, charts, tables, forms and dashboards',
         financeApp:
           'Built a financial application from scratch with extensive client-side business logic',
         pagesComponents: 'Developed hundreds of components and pages',
@@ -326,7 +326,9 @@ const EN = {
         wordpressMigration:
           'Migrated content from a legacy {{0}} website to a server-rendered {{1}} application with a {{2}}',
         cmsIntegration:
-          'Integrated {{0}} {{1}}, configured the visual editor and designed a scalable architecture for blocks and components',
+          'Integrated {{0}} {{1}} and configured the visual editor, enabling the marketing team to manage content independently',
+        cmsArchitecture:
+          'Designed a scalable architecture for blocks and components',
         externalBugFixes:
           'Initiated bug fixes in third-party plugins and widgets',
         docs: 'Created corporate documentation using {{0}}',
@@ -541,14 +543,14 @@ const EN = {
           'I independently developed the landing page from scratch, then improved and supported it. I built a responsive interface, email templates and animations',
       },
       sds: {
-        text: 'Enterprise service to work with the company document flow',
+        text: 'Enterprise document management system',
         description:
-          'I led frontend development and designed the interface while building the service from scratch, then improved and supported it. The application contains extensive business logic',
+          'I developed the project from scratch using {{0}} and {{1}}. Led the frontend team that developed and maintained it. Designed the architecture, set up routing and implemented the application\'s business logic. Prototyped the interface and built it with {{2}}. Integrated {{3}} and implemented role-based access control with role-specific functionality',
       },
       strongher: {
         text: 'Website for a mobile fitness app',
         description:
-          'I developed the website from scratch using React, then continued improving and maintaining it. Set up client-side routing. Built a pixel-perfect, responsive interface with smooth animations. Created a blog section and a subscription management section with Stripe payments. Developed email templates',
+          'I developed the website from scratch using {{0}}, then continued improving and maintaining it. Set up routing and built a pixel-perfect, responsive interface with smooth animations. Created a blog section and a subscription management section with {{1}} payments. Developed email templates',
       },
       '7glyphs-2': {
         text: 'Digital agency website',
@@ -558,27 +560,27 @@ const EN = {
       'rogue-travel': {
         text: 'Group booking service for flights and hotels',
         description:
-          'I developed a large application from scratch using React and Redux. Designed an extensible architecture and implemented routing and business logic. Set up asynchronous data handling with Redux Thunk and optimised computations with Reselect. Integrated third-party services, including payments through Stripe. Created a UI kit and built the interface and email templates. Implemented virtualisation for large lists to improve performance',
+          'I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented routing and business logic. Set up asynchronous data handling with {{2}} and optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Created a UI kit and built the interface and email templates. Implemented virtualisation for large lists to improve performance',
       },
       'quarry-trucks': {
         text: 'Truck traffic monitoring service',
         description:
-          'I joined the project when it had basic markup and partially implemented business logic. Created a UI kit, completed the UI implementation and took the application to production. Optimised the business logic and improved performance. Gained hands-on experience with {{0}}',
+          'I joined a {{0}} and {{1}} project with a basic interface and existing functionality. Built a new interface, implemented the application\'s full business logic and improved its performance',
       },
       'service-packages': {
         text: 'Landing page for a digital agency\'s service packages',
         description:
-          'I developed the landing page from scratch using React. Built a pixel-perfect, responsive interface with smooth animations and a distinctive layout featuring side navigation. The landing page later became part of the agency\'s main website',
+          'I developed the landing page from scratch using {{0}}. Built a pixel-perfect, responsive interface with smooth animations. The landing page later became part of the agency\'s main website',
       },
       '12-saffron': {
         text: 'Landing page for sale of the private home in New Zealand',
         description:
-          'I developed the landing page from scratch using React. Built a pixel-perfect, responsive interface from the design and added smooth animations. Configured the project build using Gulp and webpack. The website helped sell the house',
+          'I developed the landing page from scratch using {{0}}. Built a pixel-perfect, responsive interface from the design and added smooth animations. Configured the project build using {{1}} and {{2}}. The website helped sell the house',
       },
       'whip-around': {
         text: 'Vehicle inspection service',
         description:
-          'I worked on maintaining a {{0}} project. Built interfaces using {{1}} and {{2}} and wrote scripts for interactive elements. Gained hands-on experience with {{3}}',
+          'I worked on maintaining a {{0}} project. Built interfaces using {{1}} and {{2}}, adding scripts for interactive elements. Gained hands-on experience with {{3}}',
       },
       'lazyaz-dashboard': {
         text: 'Admin panel for a delivery service',
@@ -588,7 +590,7 @@ const EN = {
       lazyaz: {
         text: 'Web platform for a delivery service',
         description:
-          'This was the first commercial project I built from scratch. I designed the application architecture, implemented its business logic, set up global state management with {{0}} and handled server data. Integrated an interactive map and added address search using the {{2}}. Built a design system with custom {{1}} components, created {{3}} email templates and set up the project build using {{4}} and {{5}}',
+          'This was the first commercial project I built from scratch and later continued to develop and maintain. I designed the architecture for the {{6}} application and implemented its business logic. Set up routing, configured global state management with {{0}} and handled server data. Integrated an interactive map and added address search using the {{2}}. Built a design system with custom {{1}} components, created {{3}} email templates and set up the project build using {{4}} and {{5}}',
       },
       '7glyphs': {
         text: 'Digital agency website',

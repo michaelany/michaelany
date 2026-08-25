@@ -166,7 +166,7 @@ const jobs: IJob[] = [
         ],
       },
       {tKey: 'cmsIntegration', values: [TECHNOLOGY_TITLE.storyblok, 'CMS']},
-      'externalBugFixes',
+      'cmsArchitecture',
       {tKey: 'seoRoadmap', values: ['SEO']},
       {
         tKey: 'docs',
@@ -174,6 +174,7 @@ const jobs: IJob[] = [
       },
       'newPortal',
       'ai',
+      'externalBugFixes',
       {tKey: 'flp', values: ['Future Leadership Program']},
       {tKey: 'resident', values: ['Straight to Residence Visa']},
     ],
