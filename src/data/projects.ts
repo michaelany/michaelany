@@ -1495,7 +1495,16 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://foodprint.app',
     details: 'https://7glyphs.com/portfolio/projects/foodprint',
-    tools: ['js', 'react', 'html', 'sass', 'bem'],
+    tools: [
+      'js',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'webpack',
+      'yarn',
+      'foundationemails',
+    ],
     year: 2019,
     images: {
       logo: commonLogo.foodprint,
@@ -1603,7 +1612,11 @@ const PROJECTS: IProject[] = [
       'foundationemails',
     ],
     year: 2019,
-    descriptionValues: [TECHNOLOGY_TITLE.react, TECHNOLOGY_TITLE.stripe],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.stripe,
+      TECHNOLOGY_TITLE.html,
+    ],
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -1735,10 +1748,11 @@ const PROJECTS: IProject[] = [
       'Redux Thunk',
       'Reselect',
       TECHNOLOGY_TITLE.stripe,
+      TECHNOLOGY_TITLE.html,
     ],
     images: {
       logo: [
-        publicImg('logos/rogue-travel.png'),
+        publicImg('logos/rogue-travel_sm.png'),
         publicImg('logos/rogue-travel.png'),
         publicImg('logos/rogue-travel@2x.png'),
       ],
@@ -1754,6 +1768,18 @@ const PROJECTS: IProject[] = [
         [
           publicImg('projects/rogue-travel-desktop-third.jpg'),
           publicImg('projects/rogue-travel-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/rogue-travel-desktop-fourth.jpg'),
+          publicImg('projects/rogue-travel-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/rogue-travel-desktop-fifth.jpg'),
+          publicImg('projects/rogue-travel-desktop-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/rogue-travel-desktop-sixth.jpg'),
+          publicImg('projects/rogue-travel-desktop-sixth@2x.jpg'),
         ],
       ],
     },

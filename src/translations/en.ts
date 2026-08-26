@@ -306,8 +306,6 @@ const EN = {
           'Built a corporate mobile app from scratch with {{0}} and released it on the {{1}} and {{2}}',
         interview:
           'Conducted dozens of interviews and hired a dozen developers',
-        technologies:
-          'Learned and applied a wide range of technologies and libraries',
         technologiesBase: 'Got better at {{0}}, {{1}} and {{2}}',
         independent: 'Became highly autonomous and organized',
         visa: 'Relocated to New Zealand on a company-sponsored work visa',
@@ -317,7 +315,7 @@ const EN = {
         softSkills: 'Improved my communication skills',
         animations: 'Built dozens of sections with advanced animations',
         interfaces:
-          'Built interfaces with analytics, charts, tables, forms and dashboards',
+          'Built interfaces with multi-step forms, interactive maps, virtualised lists, drag-and-drop interactions, content editors, analytics and data visualisation',
         financeApp:
           'Built a financial application from scratch with extensive client-side business logic',
         pagesComponents: 'Developed hundreds of components and pages',
@@ -538,9 +536,9 @@ const EN = {
           'I independently developed the portal from scratch, then improved and supported it. The application contains extensive business logic',
       },
       'foodprint-landing': {
-        text: 'Landing page of the service for ordering discount food in restaurants',
+        text: 'Landing page for a service that lets users order food from restaurants at a discount',
         description:
-          'I independently developed the landing page from scratch, then improved and supported it. I built a responsive interface, email templates and animations',
+          'I developed the landing page from scratch, then continued improving and maintaining it. Built a pixel-perfect, responsive interface from the design and added smooth animations. Created HTML email templates',
       },
       sds: {
         text: 'Enterprise document management system',
@@ -550,7 +548,7 @@ const EN = {
       strongher: {
         text: 'Website for a mobile fitness app',
         description:
-          'I developed the website from scratch using {{0}}, then continued improving and maintaining it. Set up routing and built a pixel-perfect, responsive interface with smooth animations. Created a blog section and a subscription management section with {{1}} payments. Developed email templates',
+          'I developed the website from scratch, then continued improving and maintaining it. Set up routing and built a pixel-perfect, responsive interface with smooth animations. Created a blog section and a subscription management section with {{1}} payments. Built {{2}} email templates',
       },
       '7glyphs-2': {
         text: 'Digital agency website',
@@ -560,7 +558,7 @@ const EN = {
       'rogue-travel': {
         text: 'Group booking service for flights and hotels',
         description:
-          'I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented routing and business logic. Set up asynchronous data handling with {{2}} and optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Created a UI kit and built the interface and email templates. Implemented virtualisation for large lists to improve performance',
+          'I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented routing and the application\'s business logic. Set up asynchronous data handling with {{2}} and optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Built a pixel-perfect interface from the design and created {{5}} email templates. Implemented virtualisation for large lists to improve performance',
       },
       'quarry-trucks': {
         text: 'Truck traffic monitoring service',
@@ -590,7 +588,7 @@ const EN = {
       lazyaz: {
         text: 'Web platform for a delivery service',
         description:
-          'This was the first commercial project I built from scratch and later continued to develop and maintain. I designed the architecture for the {{6}} application and implemented its business logic. Set up routing, configured global state management with {{0}} and handled server data. Integrated an interactive map and added address search using the {{2}}. Built a design system with custom {{1}} components, created {{3}} email templates and set up the project build using {{4}} and {{5}}',
+          'This was the first commercial project I built from scratch and later continued to develop and maintain. I designed the architecture for the {{6}} application and implemented its business logic. Set up routing, configured global state management with {{0}} and handled server data. Integrated an interactive map and added address search using the {{2}}. Implemented a design system with a library of {{1}} components. Created {{3}} email templates and set up the project build using {{4}} and {{5}}',
       },
       '7glyphs': {
         text: 'Digital agency website',

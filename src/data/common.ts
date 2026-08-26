@@ -135,4 +135,5 @@ export const CONTACT_LINK: IContactLink = {
 export const FEATURE = {
   rest: 'REST API',
   socket: 'WebSocket',
+  seo: 'SEO',
 }
