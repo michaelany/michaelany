@@ -27,7 +27,7 @@ import {
 import {Sections, Info} from '#components/common'
 import {scrollToView} from '#utils/helpers'
 import {BLANK_LINK_PROPS, PROJECT_FILTERS, ROUTE} from '#utils/constants'
-import {CONTACT_LINK} from '#data/common'
+import {CONTACT_LINK, FEATURE} from '#data/common'
 import {TECHNOLOGY_TITLE, TECHNOLOGY_GROUPS} from '#data/technologies'
 import Technologies from './Technologies'
 import type {IFeature, ITechnologyGroup, TKey} from '#utils/types'
@@ -102,7 +102,7 @@ export default function Skills() {
     },
     {
       tKey: 'markup',
-      labelValues: ['pixel-perfect'],
+      labelValues: [FEATURE.pixelPerfect],
       textValues: [TECHNOLOGY_TITLE.css, TECHNOLOGY_TITLE.html],
       Icon: DesignServicesIcon,
     },

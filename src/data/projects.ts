@@ -1413,7 +1413,7 @@ const PROJECTS: IProject[] = [
       'https://apps.apple.com/nz/app/foodprint/id1462596522',
       'https://play.google.com/store/apps/details?id=com.foodprint',
     ],
-    tools: ['js', 'reactnative', 'zeplin'],
+    tools: ['js', 'reactnative', 'redux', 'npm'],
     year: 2019,
     descriptionValues: ['React Native'],
     images: {
@@ -1446,7 +1446,7 @@ const PROJECTS: IProject[] = [
     name: 'foodprint-portal',
     color: 'violet',
     title: 'Foodprint Portal',
-    types: ['site', 'app', 'admin'],
+    types: ['app', 'admin'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/foodprint',
     tools: [
@@ -1455,12 +1455,21 @@ const PROJECTS: IProject[] = [
       'redux',
       'html',
       'sass',
-      'bem',
+      'modules',
       'mui',
       'webpack',
-      'zeplin',
+      'vite',
+      'yarn',
     ],
     year: 2019,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.redux,
+      FEATURE.reduxThunk,
+      TECHNOLOGY_TITLE.mui,
+      TECHNOLOGY_TITLE.webpack,
+      TECHNOLOGY_TITLE.vite,
+    ],
     images: {
       logo: commonLogo.foodprint,
       desktop: [
@@ -1506,6 +1515,7 @@ const PROJECTS: IProject[] = [
       'foundationemails',
     ],
     year: 2019,
+    descriptionValues: [FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.foodprint,
       desktop: [
@@ -1569,6 +1579,8 @@ const PROJECTS: IProject[] = [
       TECHNOLOGY_TITLE.redux,
       TECHNOLOGY_TITLE.mui,
       TECHNOLOGY_TITLE.keycloak,
+      FEATURE.reduxThunk,
+      'Reselect',
     ],
     images: {
       logo: commonLogo.vaillant,
@@ -1612,11 +1624,7 @@ const PROJECTS: IProject[] = [
       'foundationemails',
     ],
     year: 2019,
-    descriptionValues: [
-      TECHNOLOGY_TITLE.react,
-      TECHNOLOGY_TITLE.stripe,
-      TECHNOLOGY_TITLE.html,
-    ],
+    descriptionValues: [TECHNOLOGY_TITLE.stripe, FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -1745,10 +1753,10 @@ const PROJECTS: IProject[] = [
     descriptionValues: [
       TECHNOLOGY_TITLE.react,
       TECHNOLOGY_TITLE.redux,
-      'Redux Thunk',
+      FEATURE.reduxThunk,
       'Reselect',
       TECHNOLOGY_TITLE.stripe,
-      TECHNOLOGY_TITLE.html,
+      FEATURE.pixelPerfect,
     ],
     images: {
       logo: [
@@ -1825,7 +1833,7 @@ const PROJECTS: IProject[] = [
     url: 'https://7glyphs.com/approach/packages',
     tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2018,
-    descriptionValues: [TECHNOLOGY_TITLE.react],
+    descriptionValues: [FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -1868,9 +1876,9 @@ const PROJECTS: IProject[] = [
     tools: ['js', 'react', 'html', 'sass', 'bem', 'gulp', 'webpack', 'npm'],
     year: 2017,
     descriptionValues: [
-      TECHNOLOGY_TITLE.react,
       TECHNOLOGY_TITLE.gulp,
       TECHNOLOGY_TITLE.webpack,
+      FEATURE.pixelPerfect,
     ],
     images: {
       logo: [
@@ -1931,6 +1939,7 @@ const PROJECTS: IProject[] = [
       TECHNOLOGY_TITLE.blade,
       TECHNOLOGY_TITLE.bootstrap,
       TECHNOLOGY_TITLE.php,
+      FEATURE.rest,
     ],
     images: {
       logo: [
@@ -2014,12 +2023,12 @@ const PROJECTS: IProject[] = [
     year: 2017,
     descriptionValues: [
       TECHNOLOGY_TITLE.redux,
-      'UI',
       'Google Places API',
-      TECHNOLOGY_TITLE.html,
       TECHNOLOGY_TITLE.gulp,
       TECHNOLOGY_TITLE.webpack,
       TECHNOLOGY_TITLE.react,
+      FEATURE.reduxThunk,
+      FEATURE.pixelPerfect,
     ],
     images: {
       logo: commonLogo.lazyaz,

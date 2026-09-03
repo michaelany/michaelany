@@ -136,4 +136,6 @@ export const FEATURE = {
   rest: 'REST API',
   socket: 'WebSocket',
   seo: 'SEO',
+  pixelPerfect: 'pixel-perfect',
+  reduxThunk: 'Redux Thunk',
 }
