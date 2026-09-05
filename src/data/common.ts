@@ -141,4 +141,5 @@ export const FEATURE = {
   reduxToolkit: 'Redux Toolkit',
   appStore: 'App Store',
   googlePlay: 'Google Play',
+  ffmpeg: 'FFmpeg',
 }

@@ -18,10 +18,6 @@ const common = {
     consult: 'Frontend Development Consultant',
     support: 'Technical Support Engineer',
   },
-  projects: {
-    ally: 'Landing page for a mobile app with interactive {{0}} figures',
-    cmsFit: 'Content management system for the mobile fitness application',
-  },
 }
 
 const EN = {
@@ -404,12 +400,12 @@ const EN = {
           'I designed and developed the application independently from scratch. The work included a responsive interface, REST API integration and PWA support',
       },
       'ally-2': {
-        text: common.projects.ally,
+        text: 'Landing page for a mobile app with interactive {{0}} figures',
         description:
           'I independently developed the landing page from scratch, then improved and supported it. I also built its responsive interface and animations',
       },
       'strongher-cms': {
-        text: common.projects.cmsFit,
+        text: 'Content management system for a mobile fitness app',
         description:
           'I independently designed and developed the admin panel from scratch, then improved and supported it. The interface includes many forms and tables',
       },
@@ -424,19 +420,19 @@ const EN = {
           'I independently designed and developed the admin panel from scratch, then improved and supported it. I also tried a new modular architecture for the project',
       },
       'pridefit-cms': {
-        text: common.projects.cmsFit,
+        text: 'Content management system for a mobile fitness app',
         description:
-          'I independently designed and developed the admin panel from scratch, then improved and supported it. The project also gave me hands-on experience with {{0}}',
+          'I independently designed and developed the admin panel from scratch, then improved and supported it. The project also gave me hands-on experience with the WebAssembly version of {{0}}',
       },
       madfit: {
-        text: 'Landing page & subscription service for the mobile fitness application',
+        text: 'Landing page and subscription service for a mobile fitness app',
         description:
-          'I independently developed the landing page and subscription flow from scratch, then improved and supported them. The work included a responsive animated interface and payment integration',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations. Implemented a separate subscription management app with {{2}} payments',
       },
       'madfit-cms': {
-        text: common.projects.cmsFit,
+        text: 'Content management system for a mobile fitness app',
         description:
-          'I independently designed and developed the admin panel from scratch, then improved and supported it. The interface was built for managing mobile fitness app content',
+          'I developed the admin panel from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up global state management and asynchronous data handling with {{1}}. Prototyped the interface and built it with {{2}}. Developed video processing and conversion functionality using the WebAssembly version of {{3}}',
       },
       'vibe-media': {
         text: 'Landing page of the digital marketing agency',
@@ -444,9 +440,9 @@ const EN = {
           'I independently developed the landing page from scratch and continued supporting it. I built a responsive interface with custom animations',
       },
       tradease: {
-        text: 'Building order management website',
+        text: 'Construction order management service',
         description:
-          'I independently developed the service from scratch and continued improving and supporting it. The work included a responsive interface and REST API integration',
+          'I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{2}}. Built a {{3}}, responsive interface from the design',
       },
       't1-online': {
         title: 'T1 Online',
@@ -462,7 +458,7 @@ const EN = {
       'road-ninja': {
         text: 'Truck driver hiring service',
         description:
-          'I developed the project from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{3}}. Integrated {{4}} for real-time data exchange. Built the {{5}} interface from the design and added {{6}} components. Implemented a subscription management section with {{7}} payments',
+          'I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{2}}. Integrated {{3}} for real-time data exchange. Built the {{4}} interface from the design and added {{5}} components. Implemented a subscription management section with {{6}} payments',
       },
       celebration: {
         text: 'New Year\'s mini app for sending greetings to company employees',
@@ -470,7 +466,7 @@ const EN = {
           'I developed the mini app from scratch using {{0}}. Prototyped the interface and built it with {{1}}. Implemented the business logic and added {{2}} support',
       },
       ally: {
-        text: common.projects.ally,
+        text: 'Landing page for a mobile app with interactive {{0}} figures',
         description:
           'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
       },
@@ -513,7 +509,7 @@ const EN = {
         title: 'EMBP',
         text: 'Admin panel for a biometric platform',
         description:
-          'I developed the project from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{3}}. Prototyped the interface, built it with {{4}} and added a dark theme. Implemented a role system with a dedicated interface for each role',
+          'I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{2}}. Prototyped the interface, built it with {{3}} and added a dark theme. Implemented a role system with a dedicated interface for each role',
       },
       '7glyphs-lite': {
         text: 'Landing page for a website development service',
@@ -543,7 +539,7 @@ const EN = {
       sds: {
         text: 'Enterprise document management system',
         description:
-          'I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up asynchronous data handling with {{4}} and optimised computations with {{5}}. Prototyped the interface and built it with {{2}}. Integrated {{3}} and implemented role-based access control with a dedicated interface for each role',
+          'I developed the project from scratch using {{0}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Configured global state management with {{1}} and asynchronous data handling with {{4}}. Optimised computations with {{5}}. Prototyped the interface and built it with {{2}}. Integrated {{3}} and implemented role-based access control with a dedicated interface for each role',
       },
       strongher: {
         text: 'Website for a mobile fitness app',
@@ -558,7 +554,7 @@ const EN = {
       'rogue-travel': {
         text: 'Group booking service for flights and hotels',
         description:
-          'I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented the application\'s business logic. Set up asynchronous data handling with {{2}} and optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Developed a design system with a UI component library and built a {{5}}, responsive interface from the design. Added virtualisation for large lists to improve performance',
+          'I developed the project from scratch using {{0}}. Designed the architecture and implemented the application\'s business logic. Configured global state management with {{1}} and asynchronous data handling with {{2}}. Optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Developed a design system with a UI component library and built a {{5}}, responsive interface from the design. Added virtualisation for large lists to improve performance',
       },
       'quarry-trucks': {
         text: 'Truck traffic monitoring service',

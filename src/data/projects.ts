@@ -352,7 +352,7 @@ const PROJECTS: IProject[] = [
       'sketch',
     ],
     year: 2023,
-    descriptionValues: ['ffmpeg.wasm'],
+    descriptionValues: [FEATURE.ffmpeg],
     images: {
       logo: commonLogo.pridefit,
       desktop: [
@@ -456,7 +456,6 @@ const PROJECTS: IProject[] = [
     title: 'MadFit',
     types: ['landing', 'app'],
     companyName: 'sevenGlyphs',
-    url: 'https://maddielymburner.co',
     details: 'https://7glyphs.com/portfolio/projects/madfit',
     tools: [
       'js',
@@ -466,11 +465,16 @@ const PROJECTS: IProject[] = [
       'sass',
       'bem',
       'gsap',
-      'webpack',
       'stripe',
-      'zeplin',
+      'webpack',
+      'yarn',
     ],
     year: 2021,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.preact,
+      FEATURE.pixelPerfect,
+      TECHNOLOGY_TITLE.stripe,
+    ],
     images: {
       logo: commonLogo.madfit,
       desktop: [
@@ -527,16 +531,23 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/madfit',
     tools: [
-      'js',
+      'ts',
       'react',
       'redux',
       'html',
+      'sass',
       'modules',
       'mui',
       'webpack',
-      'zeplin',
+      'yarn',
     ],
     year: 2021,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      FEATURE.reduxToolkit,
+      TECHNOLOGY_TITLE.mui,
+      FEATURE.ffmpeg,
+    ],
     images: {
       logo: commonLogo.madfit,
       desktop: [
@@ -580,6 +591,12 @@ const PROJECTS: IProject[] = [
       'yarn',
     ],
     year: 2021,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.ts,
+      TECHNOLOGY_TITLE.react,
+      FEATURE.reduxToolkit,
+      FEATURE.pixelPerfect,
+    ],
     images: {
       logo: [
         publicImg('logos/tradease_sm.png'),
@@ -761,7 +778,6 @@ const PROJECTS: IProject[] = [
     descriptionValues: [
       TECHNOLOGY_TITLE.ts,
       TECHNOLOGY_TITLE.react,
-      TECHNOLOGY_TITLE.redux,
       FEATURE.reduxToolkit,
       FEATURE.socket,
       FEATURE.pixelPerfect,
@@ -1284,7 +1300,6 @@ const PROJECTS: IProject[] = [
     descriptionValues: [
       TECHNOLOGY_TITLE.ts,
       TECHNOLOGY_TITLE.react,
-      TECHNOLOGY_TITLE.redux,
       FEATURE.reduxToolkit,
       TECHNOLOGY_TITLE.mui,
     ],
