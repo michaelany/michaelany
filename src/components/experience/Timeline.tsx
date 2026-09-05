@@ -20,7 +20,7 @@ import './Timeline.scss'
 import {Animate, Section} from '#components/common'
 import {getPeriodDateTime, scrollToView, tPeriodPart} from '#utils/helpers'
 import {CAREER_START_PARTS, QUERY_BREAKPOINT, ROUTE} from '#utils/constants'
-import {COMPANY, CONTACT_LINK} from '#data/common'
+import {COMPANY, CONTACT_LINK, FEATURE} from '#data/common'
 import type {IPeriod} from '#utils/types'
 
 interface IStep {
@@ -330,7 +330,7 @@ const steps: IStep[] = [
         year: 2022,
       },
     },
-    values: ['App Store', 'Google Play'],
+    values: [FEATURE.appStore, FEATURE.googlePlay],
   },
   {
     period: {

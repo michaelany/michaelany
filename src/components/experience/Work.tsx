@@ -333,7 +333,11 @@ const jobs: IJob[] = [
       'corporateApps',
       {
         tKey: 'mobile',
-        values: [TECHNOLOGY_TITLE.reactnative, 'App Store', 'Google Play'],
+        values: [
+          TECHNOLOGY_TITLE.reactnative,
+          FEATURE.appStore,
+          FEATURE.googlePlay,
+        ],
       },
       'pathLead',
       'internship',

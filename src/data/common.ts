@@ -139,4 +139,6 @@ export const FEATURE = {
   pixelPerfect: 'pixel-perfect',
   reduxThunk: 'Redux Thunk',
   reduxToolkit: 'Redux Toolkit',
+  appStore: 'App Store',
+  googlePlay: 'Google Play',
 }

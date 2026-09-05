@@ -450,19 +450,19 @@ const EN = {
       },
       't1-online': {
         title: 'T1 Online',
-        text: 'Corporate mobile application for company employees',
+        text: 'Corporate mobile app for employees',
         description:
-          'I led the frontend team and developed the corporate mobile application from scratch. We released it in {{0}} and {{1}}',
+          'I developed the mobile app from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the business logic. Set up global state management and asynchronous data handling with {{3}}. Prototyped and built the interface. Independently released the app on {{4}} and {{5}}',
       },
       'road-ninja-landing': {
-        text: 'Landing page for the truck drivers hire service',
+        text: 'Landing page for a truck driver hiring service',
         description:
-          'I independently developed the landing page from scratch. I built its responsive interface and custom animations',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
       },
       'road-ninja': {
-        text: 'Truck drivers hire service',
+        text: 'Truck driver hiring service',
         description:
-          'As part of the development team, I built the markup and part of the business logic. The service includes a responsive interface, payments, REST API and WebSocket integrations',
+          'I developed the project from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{3}}. Integrated {{4}} for real-time data exchange. Built the {{5}} interface from the design and added {{6}} components. Implemented a subscription management section with {{7}} payments',
       },
       celebration: {
         text: 'New Year\'s mini app for sending greetings to company employees',
@@ -513,7 +513,7 @@ const EN = {
         title: 'EMBP',
         text: 'Admin panel for a biometric platform',
         description:
-          'I developed the project from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{3}}. Prototyped the interface and built it with {{4}}. Implemented a role system with a dedicated interface for each role',
+          'I developed the project from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{3}}. Prototyped the interface, built it with {{4}} and added a dark theme. Implemented a role system with a dedicated interface for each role',
       },
       '7glyphs-lite': {
         text: 'Landing page for a website development service',

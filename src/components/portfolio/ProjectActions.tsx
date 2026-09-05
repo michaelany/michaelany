@@ -9,6 +9,7 @@ import EverpointIcon from '#assets/icons/everpoint.svg?react'
 import AppleIcon from '#assets/icons/apple.svg?react'
 import GooglePlayIcon from '#assets/icons/googleplay.svg?react'
 import {Animate} from '#components/common'
+import {FEATURE} from '#data/common'
 import {BLANK_LINK_PROPS} from '#utils/constants'
 import type {TCompanyName} from '#utils/types'
 
@@ -62,10 +63,10 @@ export default function ProjectActions({
             icon={<AppleIcon className="ProjectActions-AppleIcon" />}
             href={stores[0]}
           >
-            AppStore
+            {FEATURE.appStore}
           </Link>
           <Link icon={<GooglePlayIcon />} href={stores[1]}>
-            Google Play
+            {FEATURE.googlePlay}
           </Link>
         </>
       )}

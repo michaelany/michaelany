@@ -565,19 +565,19 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'tradease',
-    color: 'red',
+    color: 'blue',
     title: 'Tradease',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     tools: [
       'ts',
       'react',
-      'tanstack',
+      'redux',
       'html',
-      'modules',
       'sass',
+      'modules',
       'webpack',
-      'figma',
+      'yarn',
     ],
     year: 2021,
     images: {
@@ -630,13 +630,16 @@ const PROJECTS: IProject[] = [
     types: ['app'],
     mobileApp: true,
     companyName: 't1',
-    stores: [
-      'https://apps.apple.com/ru/app/%D1%821-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/id1592700568?l=en',
-      'https://play.google.com/store/apps/details?id=com.t1consulting.t1online',
-    ],
-    tools: ['ts', 'reactnative', 'expo', 'figma'],
+    tools: ['ts', 'reactnative', 'expo', 'redux', 'yarn'],
     year: 2021,
-    descriptionValues: ['App Store', 'Google Play'],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.ts,
+      TECHNOLOGY_TITLE.reactnative,
+      TECHNOLOGY_TITLE.expo,
+      FEATURE.reduxToolkit,
+      FEATURE.appStore,
+      FEATURE.googlePlay,
+    ],
     images: {
       logo: [
         publicImg('logos/t1_sm.png'),
@@ -675,18 +678,9 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://roadninja.co.nz',
     details: 'https://7glyphs.com/portfolio/projects/roadninja',
-    tools: [
-      'js',
-      'preact',
-      'html',
-      'sass',
-      'bem',
-      'gsap',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'gsap', 'webpack', 'yarn'],
     year: 2021,
+    descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.roadNinja,
       desktop: [
@@ -747,7 +741,7 @@ const PROJECTS: IProject[] = [
     name: 'road-ninja',
     color: 'red',
     title: 'Road Ninja',
-    types: ['app', 'site'],
+    types: ['site', 'app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/roadninja',
     tools: [
@@ -755,15 +749,25 @@ const PROJECTS: IProject[] = [
       'react',
       'redux',
       'html',
-      'modules',
       'sass',
+      'modules',
       'mui',
-      'webpack',
       'stripe',
-      'zeplin',
-      'sketch',
+      'webpack',
+      'yarn',
+      'foundationemails',
     ],
     year: 2021,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.ts,
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.redux,
+      FEATURE.reduxToolkit,
+      FEATURE.socket,
+      FEATURE.pixelPerfect,
+      TECHNOLOGY_TITLE.mui,
+      TECHNOLOGY_TITLE.stripe,
+    ],
     images: {
       logo: commonLogo.roadNinja,
       desktop: [
@@ -788,17 +792,13 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'celebration',
-    color: 'violet',
+    color: 'red',
     title: 'Сelebration',
     types: ['app'],
     companyName: 't1',
     tools: ['js', 'preact', 'html', 'styled', 'mui', 'webpack', 'npm'],
     year: 2020,
-    descriptionValues: [
-      TECHNOLOGY_TITLE.preact,
-      TECHNOLOGY_TITLE.mui,
-      'PWA',
-    ],
+    descriptionValues: [TECHNOLOGY_TITLE.preact, TECHNOLOGY_TITLE.mui, 'PWA'],
     images: {
       logo: [
         publicImg('logos/celebration_sm.png'),
@@ -988,6 +988,7 @@ const PROJECTS: IProject[] = [
       'mui',
       'webpack',
       'yarn',
+      'foundationemails',
     ],
     year: 2020,
     descriptionValues: [
@@ -1160,7 +1161,7 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'uls',
-    color: 'blue',
+    color: 'green',
     title: 'Vaillant United Login System',
     types: ['app'],
     companyName: 't1',
@@ -1453,7 +1454,7 @@ const PROJECTS: IProject[] = [
     name: 'foodprint-portal',
     color: 'violet',
     title: 'Foodprint Portal',
-    types: ['app', 'admin'],
+    types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/foodprint',
     tools: [
@@ -1467,6 +1468,7 @@ const PROJECTS: IProject[] = [
       'webpack',
       'vite',
       'yarn',
+      'foundationemails',
     ],
     year: 2019,
     descriptionValues: [
@@ -1511,16 +1513,7 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://foodprint.app',
     details: 'https://7glyphs.com/portfolio/projects/foodprint',
-    tools: [
-      'js',
-      'react',
-      'html',
-      'sass',
-      'bem',
-      'webpack',
-      'yarn',
-      'foundationemails',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2019,
     descriptionValues: [FEATURE.pixelPerfect],
     images: {
@@ -1970,7 +1963,7 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'lazyaz-dashboard',
-    color: 'default',
+    color: 'red',
     title: 'LazyAz Dashboard',
     types: ['admin'],
     companyName: 'sevenGlyphs',
@@ -2026,6 +2019,7 @@ const PROJECTS: IProject[] = [
       'gulp',
       'webpack',
       'npm',
+      'foundationemails',
     ],
     year: 2017,
     descriptionValues: [
