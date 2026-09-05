@@ -19,7 +19,7 @@ const common = {
     support: 'Technical Support Engineer',
   },
   projects: {
-    ally: 'Landing page of the mobile application for the interactive {{0}} figures',
+    ally: 'Landing page for a mobile app with interactive {{0}} figures',
     cmsFit: 'Content management system for the mobile fitness application',
   },
 }
@@ -465,65 +465,65 @@ const EN = {
           'As part of the development team, I built the markup and part of the business logic. The service includes a responsive interface, payments, REST API and WebSocket integrations',
       },
       celebration: {
-        text: 'New Year\'s mini application for congratulating company employees',
+        text: 'New Year\'s mini app for sending greetings to company employees',
         description:
-          'I independently designed and developed the mini application from scratch. I built a responsive animated interface and added PWA support',
+          'I developed the mini app from scratch using {{0}}. Prototyped the interface and built it with {{1}}. Implemented the business logic and added {{2}} support',
       },
       ally: {
         text: common.projects.ally,
         description:
-          'I independently developed the landing page from scratch, then improved and supported it. I also built its responsive interface and animations',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
       },
       'present-me-landing': {
-        text: 'Landing page for the jobseeker profile creation service',
+        text: 'Landing page for a jobseeker profile creation service',
         description:
-          'I independently developed the landing page from scratch. I built its responsive interface and animations',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
       },
       'present-me-portal': {
-        text: 'Admin panel of the job seeker creating profile service',
+        text: 'Portal for a jobseeker profile creation service',
         description:
-          'As part of the development team, I worked on the complete frontend implementation. The admin panel contains extensive business logic',
+          'I developed the portal from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up global state management and asynchronous data handling with {{1}}. Prototyped the interface and built it with {{2}}',
       },
       'present-me': {
-        text: 'Service for creating a job seeker profile',
+        text: 'Service for creating a jobseeker profile',
         description:
-          'I independently developed the service from scratch, then improved and supported it. I built a responsive interface, dynamic forms and custom routing',
+          'I developed the service from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up global state management and asynchronous data handling with {{1}}. Built a {{2}}, responsive interface from the design and added {{3}} components. Implemented custom routing and dynamic forms',
       },
       dropdrone: {
         text: 'Agricultural startup website',
         description:
-          'I independently developed the website from scratch. I built its responsive interface and animations',
+          'I developed the website from scratch using the {{0}} template engine. Built a {{3}}, responsive interface from the design and added animations. Set up the project build using {{1}} and {{2}}',
       },
       'just-hatched': {
-        text: 'Landing page for the mobile application tracker for newborn babies',
+        text: 'Landing page for a newborn baby tracker app',
         description:
-          'As part of the development team, I built the landing page from scratch, including its responsive interface and animations',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
       },
       uls: {
-        text: 'Single user account of the company',
+        text: 'Unified account for a company\'s services',
         description:
-          'I independently developed the application from scratch, then improved and supported it. The work included a responsive interface, REST API integration, authentication with {{0}} and containerisation with {{1}}',
+          'I developed the project from scratch and led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented business logic for the {{0}} application. Prototyped the interface and built it with {{1}}. Integrated authentication with {{2}}',
       },
       'proximal-coffee': {
-        text: 'Landing page for the coffee shop',
+        text: 'Landing page for a coffee shop',
         description:
-          'I independently developed the landing page from scratch. I built its responsive interface and animations',
+          'I developed the landing page from scratch using the {{0}} template engine. Built a {{3}}, responsive interface from the design and added animations. Set up the project build using {{1}} and {{2}}',
       },
       embp: {
         title: 'EMBP',
-        text: 'Admin panel of the biometric platform for VTB Bank',
+        text: 'Admin panel for a biometric platform',
         description:
-          'I led frontend development and handled the interface design while building the admin panel from scratch. The application includes extensive business logic and a dark theme',
+          'I developed the project from scratch using {{0}}, {{1}} and {{2}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{3}}. Prototyped the interface and built it with {{4}}. Implemented a role system with a dedicated interface for each role',
       },
       '7glyphs-lite': {
-        text: 'Landing page for the digital agency service',
+        text: 'Landing page for a website development service',
         description:
-          'I independently developed the landing page from scratch. I built its responsive interface and animations',
+          'I developed the landing page from scratch. Built a {{0}}, responsive interface from the design and added animations',
       },
       'melissa-chalmers': {
-        text: 'Fitness blogger landing page',
+        text: 'Landing page for a fitness trainer',
         description:
-          'I independently developed the landing page from scratch. I built its responsive interface and animations',
+          'I developed the landing page from scratch. Built a {{0}}, responsive interface from the design and added animations',
       },
       foodprint: {
         text: 'Mobile app for a service that lets users order food from restaurants at a discount',

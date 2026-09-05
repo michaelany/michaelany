@@ -792,17 +792,13 @@ const PROJECTS: IProject[] = [
     title: 'Сelebration',
     types: ['app'],
     companyName: 't1',
-    tools: [
-      'js',
-      'preact',
-      'html',
-      'modules',
-      'mui',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'preact', 'html', 'styled', 'mui', 'webpack', 'npm'],
     year: 2020,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.preact,
+      TECHNOLOGY_TITLE.mui,
+      'PWA',
+    ],
     images: {
       logo: [
         publicImg('logos/celebration_sm.png'),
@@ -841,23 +837,15 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'ally',
-    color: 'default',
+    color: 'red',
     title: 'Ally',
     types: ['landing'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/ally',
-    tools: [
-      'js',
-      'preact',
-      'html',
-      'sass',
-      'bem',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2020,
     textValues: ['Nintendo amiibo'],
+    descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.ally,
       desktop: [
@@ -898,17 +886,9 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://business.present.me',
     details: 'https://7glyphs.com/portfolio/projects/presentme',
-    tools: [
-      'js',
-      'preact',
-      'html',
-      'sass',
-      'bem',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2020,
+    descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.presentMe,
       desktop: [
@@ -962,12 +942,17 @@ const PROJECTS: IProject[] = [
       'redux',
       'html',
       'sass',
-      'bem',
+      'modules',
       'mui',
       'webpack',
-      'zeplin',
+      'yarn',
     ],
     year: 2020,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      FEATURE.reduxToolkit,
+      TECHNOLOGY_TITLE.mui,
+    ],
     images: {
       logo: commonLogo.presentMe,
       desktop: [
@@ -1002,10 +987,15 @@ const PROJECTS: IProject[] = [
       'bem',
       'mui',
       'webpack',
-      'zeplin',
-      'sketch',
+      'yarn',
     ],
     year: 2020,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      FEATURE.reduxToolkit,
+      FEATURE.pixelPerfect,
+      TECHNOLOGY_TITLE.mui,
+    ],
     images: {
       logo: commonLogo.presentMe,
       desktop: [
@@ -1060,8 +1050,14 @@ const PROJECTS: IProject[] = [
     title: 'Dropdrone',
     types: ['site'],
     companyName: 'sevenGlyphs',
-    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'zeplin', 'sketch'],
+    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'webpack', 'yarn'],
     year: 2020,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.pug,
+      TECHNOLOGY_TITLE.gulp,
+      TECHNOLOGY_TITLE.webpack,
+      FEATURE.pixelPerfect,
+    ],
     images: {
       logo: [
         publicImg('logos/dropdrone_sm.png'),
@@ -1115,17 +1111,9 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://justhatched.app',
     details: 'https://7glyphs.com/portfolio/projects/justhatched',
-    tools: [
-      'js',
-      'preact',
-      'html',
-      'sass',
-      'bem',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2020,
+    descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
     images: {
       logo: [
         publicImg('logos/just-hatched_sm.png'),
@@ -1176,9 +1164,22 @@ const PROJECTS: IProject[] = [
     title: 'Vaillant United Login System',
     types: ['app'],
     companyName: 't1',
-    tools: ['js', 'react', 'html', 'sass', 'webpack', 'keycloak', 'docker'],
+    tools: [
+      'js',
+      'react',
+      'html',
+      'styled',
+      'mui',
+      'webpack',
+      'npm',
+      'keycloak',
+    ],
     year: 2020,
-    descriptionValues: ['Keycloak', 'Docker'],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.mui,
+      TECHNOLOGY_TITLE.keycloak,
+    ],
     images: {
       logo: commonLogo.vaillant,
       desktop: [
@@ -1217,8 +1218,14 @@ const PROJECTS: IProject[] = [
     title: 'Proximal Coffee',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'zeplin', 'sketch'],
+    tools: ['js', 'pug', 'html', 'sass', 'bem', 'gulp', 'webpack', 'yarn'],
     year: 2019,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.pug,
+      TECHNOLOGY_TITLE.gulp,
+      TECHNOLOGY_TITLE.webpack,
+      FEATURE.pixelPerfect,
+    ],
     images: {
       logo: [
         publicImg('logos/proximal-coffee_sm.png'),
@@ -1261,8 +1268,25 @@ const PROJECTS: IProject[] = [
     color: 'blue',
     types: ['admin', 'app'],
     companyName: 't1',
-    tools: ['ts', 'react', 'redux', 'html', 'styled', 'mui', 'webpack', 'jest'],
+    tools: [
+      'ts',
+      'react',
+      'redux',
+      'html',
+      'styled',
+      'mui',
+      'webpack',
+      'yarn',
+      'jest',
+    ],
     year: 2019,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.ts,
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.redux,
+      FEATURE.reduxToolkit,
+      TECHNOLOGY_TITLE.mui,
+    ],
     images: {
       logo: [
         publicImg('logos/vtb_sm.png'),
@@ -1299,18 +1323,9 @@ const PROJECTS: IProject[] = [
     title: '7 glyphs Lite',
     types: ['landing'],
     companyName: 'sevenGlyphs',
-    tools: [
-      'js',
-      'react',
-      'html',
-      'sass',
-      'bem',
-      'mui',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2019,
+    descriptionValues: [FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.sevenGlyphs,
       desktop: [
@@ -1359,17 +1374,9 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://melissachalmers.app',
     details: 'https://7glyphs.com/portfolio/projects/melissachalmers',
-    tools: [
-      'js',
-      'react',
-      'html',
-      'sass',
-      'bem',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2019,
+    descriptionValues: [FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -1675,7 +1682,7 @@ const PROJECTS: IProject[] = [
   },
   {
     name: '7glyphs-2',
-    color: 'default',
+    color: 'grass',
     title: '7 glyphs 2.0',
     types: ['site'],
     companyName: 'sevenGlyphs',

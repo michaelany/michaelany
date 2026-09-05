@@ -138,4 +138,5 @@ export const FEATURE = {
   seo: 'SEO',
   pixelPerfect: 'pixel-perfect',
   reduxThunk: 'Redux Thunk',
+  reduxToolkit: 'Redux Toolkit',
 }
