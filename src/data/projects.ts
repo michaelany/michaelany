@@ -254,6 +254,108 @@ const PROJECTS: IProject[] = [
     },
   },
   {
+    name: 'help-ai',
+    color: 'violet',
+    title: 'Help AI',
+    types: ['app'],
+    companyName: 'sevenGlyphs',
+    url: 'https://help-ai.app',
+    details: 'https://7glyphs.com/portfolio/projects/helpai',
+    tools: [
+      'js',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'stripe',
+      'vite',
+      'pnpm',
+    ],
+    year: 2024,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      'OpenAI',
+      TECHNOLOGY_TITLE.mui,
+      TECHNOLOGY_TITLE.stripe,
+    ],
+    images: {
+      logo: [
+        publicImg('logos/help-ai_sm.png'),
+        publicImg('logos/help-ai.png'),
+        publicImg('logos/help-ai@2x.png'),
+      ],
+      desktop: [
+        [
+          publicImg('projects/help-ai@2x.jpg'),
+          publicImg('projects/help-ai-desktop-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-second.jpg'),
+          publicImg('projects/help-ai-desktop-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-third.jpg'),
+          publicImg('projects/help-ai-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-fourth.jpg'),
+          publicImg('projects/help-ai-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-fifth.jpg'),
+          publicImg('projects/help-ai-desktop-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-sixth.jpg'),
+          publicImg('projects/help-ai-desktop-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-seventh.jpg'),
+          publicImg('projects/help-ai-desktop-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-desktop-eighth.jpg'),
+          publicImg('projects/help-ai-desktop-eighth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          publicImg('projects/help-ai-mobile-first.jpg'),
+          publicImg('projects/help-ai-mobile-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-second.jpg'),
+          publicImg('projects/help-ai-mobile-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-third.jpg'),
+          publicImg('projects/help-ai-mobile-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-fourth.jpg'),
+          publicImg('projects/help-ai-mobile-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-fifth.jpg'),
+          publicImg('projects/help-ai-mobile-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-sixth.jpg'),
+          publicImg('projects/help-ai-mobile-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-seventh.jpg'),
+          publicImg('projects/help-ai-mobile-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/help-ai-mobile-eighth.jpg'),
+          publicImg('projects/help-ai-mobile-eighth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
     name: 'strongher-cms',
     color: 'red',
     title: 'StrongHer CMS',

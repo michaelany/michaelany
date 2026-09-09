@@ -394,6 +394,11 @@ const EN = {
     },
     mobileApp: 'Mobile application',
     project: {
+      'help-ai': {
+        text: 'AI assistant for personal growth',
+        description:
+          'I developed the application from scratch using {{0}}. Designed the architecture and implemented business logic. Integrated {{1}} assistants through the backend to generate questions and personalised content based on user responses. Set up response streaming. Built a responsive interface with {{2}}. Added subscription payments through {{3}}',
+      },
       'reps-rest': {
         text: 'Interval training application',
         description:
