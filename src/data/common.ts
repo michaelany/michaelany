@@ -137,9 +137,11 @@ export const FEATURE = {
   socket: 'WebSocket',
   seo: 'SEO',
   pixelPerfect: 'pixel-perfect',
+  pwa: 'PWA',
   reduxThunk: 'Redux Thunk',
   reduxToolkit: 'Redux Toolkit',
   appStore: 'App Store',
   googlePlay: 'Google Play',
   ffmpeg: 'FFmpeg',
+  nintendoAmiibo: 'Nintendo amiibo',
 }

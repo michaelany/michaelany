@@ -63,7 +63,6 @@ const PROJECTS: IProject[] = [
     title: 'Reps & Rest',
     types: ['app'],
     companyName: 'sevenGlyphs',
-    url: 'https://app.repsandrest.com',
     details: 'https://7glyphs.com/portfolio/projects/repsandrest',
     tools: [
       'ts',
@@ -72,13 +71,23 @@ const PROJECTS: IProject[] = [
       'zustand',
       'html',
       'sass',
-      'modules',
+      'bem',
       'mui',
-      'vite',
       'stripe',
-      'sketch',
+      'vite',
+      'pnpm',
     ],
     year: 2024,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.ts,
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.tanstack,
+      TECHNOLOGY_TITLE.zustand,
+      FEATURE.pixelPerfect,
+      'IndexedDB',
+      FEATURE.pwa,
+      TECHNOLOGY_TITLE.stripe,
+    ],
     images: {
       logo: [
         publicImg('logos/reps-rest_sm.png'),
@@ -87,46 +96,70 @@ const PROJECTS: IProject[] = [
       ],
       desktop: [
         [
-          publicImg('projects/ally-2@2x.jpg'),
-          publicImg('projects/ally-2-desktop-first@2x.jpg'),
+          publicImg('projects/reps-rest@2x.jpg'),
+          publicImg('projects/reps-rest-desktop-first@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-desktop-second.jpg'),
-          publicImg('projects/ally-2-desktop-second@2x.jpg'),
+          publicImg('projects/reps-rest-desktop-second.jpg'),
+          publicImg('projects/reps-rest-desktop-second@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-desktop-third.jpg'),
-          publicImg('projects/ally-2-desktop-third@2x.jpg'),
+          publicImg('projects/reps-rest-desktop-third.jpg'),
+          publicImg('projects/reps-rest-desktop-third@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-desktop-fourth.jpg'),
-          publicImg('projects/ally-2-desktop-fourth@2x.jpg'),
+          publicImg('projects/reps-rest-desktop-fourth.jpg'),
+          publicImg('projects/reps-rest-desktop-fourth@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-desktop-fifth.jpg'),
-          publicImg('projects/ally-2-desktop-fifth@2x.jpg'),
+          publicImg('projects/reps-rest-desktop-fifth.jpg'),
+          publicImg('projects/reps-rest-desktop-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/reps-rest-desktop-sixth.jpg'),
+          publicImg('projects/reps-rest-desktop-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/reps-rest-desktop-seventh.jpg'),
+          publicImg('projects/reps-rest-desktop-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/reps-rest-desktop-eighth.jpg'),
+          publicImg('projects/reps-rest-desktop-eighth@2x.jpg'),
         ],
       ],
       mobile: [
         [
-          publicImg('projects/ally-2-mobile-first.jpg'),
-          publicImg('projects/ally-2-mobile-first@2x.jpg'),
+          publicImg('projects/reps-rest-mobile-first.jpg'),
+          publicImg('projects/reps-rest-mobile-first@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-mobile-second.jpg'),
-          publicImg('projects/ally-2-mobile-second@2x.jpg'),
+          publicImg('projects/reps-rest-mobile-second.jpg'),
+          publicImg('projects/reps-rest-mobile-second@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-mobile-third.jpg'),
-          publicImg('projects/ally-2-mobile-third@2x.jpg'),
+          publicImg('projects/reps-rest-mobile-third.jpg'),
+          publicImg('projects/reps-rest-mobile-third@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-mobile-fourth.jpg'),
-          publicImg('projects/ally-2-mobile-fourth@2x.jpg'),
+          publicImg('projects/reps-rest-mobile-fourth.jpg'),
+          publicImg('projects/reps-rest-mobile-fourth@2x.jpg'),
         ],
         [
-          publicImg('projects/ally-2-mobile-fifth.jpg'),
-          publicImg('projects/ally-2-mobile-fifth@2x.jpg'),
+          publicImg('projects/reps-rest-mobile-fifth.jpg'),
+          publicImg('projects/reps-rest-mobile-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/reps-rest-mobile-sixth.jpg'),
+          publicImg('projects/reps-rest-mobile-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/reps-rest-mobile-seventh.jpg'),
+          publicImg('projects/reps-rest-mobile-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/reps-rest-mobile-eighth.jpg'),
+          publicImg('projects/reps-rest-mobile-eighth@2x.jpg'),
         ],
       ],
     },
@@ -139,9 +172,15 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://ally.ninja',
     details: 'https://7glyphs.com/portfolio/projects/allyproweb',
-    tools: ['js', 'preact', 'html', 'sass', 'bem', 'vite', 'sketch'],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'gsap', 'vite', 'pnpm'],
     year: 2024,
-    textValues: ['Nintendo amiibo'],
+    textValues: [FEATURE.nintendoAmiibo],
+    descriptionValues: [
+      FEATURE.pixelPerfect,
+      TECHNOLOGY_TITLE.html,
+      TECHNOLOGY_TITLE.css,
+      'Mario',
+    ],
     images: {
       logo: commonLogo.ally,
       desktop: [
@@ -165,6 +204,18 @@ const PROJECTS: IProject[] = [
           publicImg('projects/ally-2-desktop-fifth.jpg'),
           publicImg('projects/ally-2-desktop-fifth@2x.jpg'),
         ],
+        [
+          publicImg('projects/ally-2-desktop-sixth.jpg'),
+          publicImg('projects/ally-2-desktop-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-desktop-seventh.jpg'),
+          publicImg('projects/ally-2-desktop-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-desktop-eighth.jpg'),
+          publicImg('projects/ally-2-desktop-eighth@2x.jpg'),
+        ],
       ],
       mobile: [
         [
@@ -187,6 +238,18 @@ const PROJECTS: IProject[] = [
           publicImg('projects/ally-2-mobile-fifth.jpg'),
           publicImg('projects/ally-2-mobile-fifth@2x.jpg'),
         ],
+        [
+          publicImg('projects/ally-2-mobile-sixth.jpg'),
+          publicImg('projects/ally-2-mobile-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-mobile-seventh.jpg'),
+          publicImg('projects/ally-2-mobile-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/ally-2-mobile-eighth.jpg'),
+          publicImg('projects/ally-2-mobile-eighth@2x.jpg'),
+        ],
       ],
     },
   },
@@ -203,11 +266,19 @@ const PROJECTS: IProject[] = [
       'zustand',
       'html',
       'sass',
+      'modules',
       'mui',
       'vite',
-      'figma',
+      'pnpm',
     ],
     year: 2024,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.tanstack,
+      TECHNOLOGY_TITLE.zustand,
+      TECHNOLOGY_TITLE.mui,
+      FEATURE.ffmpeg,
+    ],
     images: {
       logo: commonLogo.strongher,
       desktop: [
@@ -240,19 +311,10 @@ const PROJECTS: IProject[] = [
     title: 'Pridefit',
     types: ['landing', 'app'],
     companyName: 'sevenGlyphs',
-    url: 'https://app.pridefit.com',
-    tools: [
-      'ts',
-      'react',
-      'html',
-      'sass',
-      'bem',
-      'mui',
-      'next',
-      'stripe',
-      'sketch',
-    ],
+    details: 'https://7glyphs.com/portfolio/projects/pridefit',
+    tools: ['js', 'react', 'next', 'html', 'sass', 'modules', 'stripe', 'pnpm'],
     year: 2023,
+    descriptionValues: [FEATURE.pixelPerfect, TECHNOLOGY_TITLE.stripe],
     images: {
       logo: commonLogo.pridefit,
       desktop: [
@@ -264,10 +326,6 @@ const PROJECTS: IProject[] = [
           publicImg('projects/pridefit-desktop-second.jpg'),
           publicImg('projects/pridefit-desktop-second@2x.jpg'),
         ],
-        [
-          publicImg('projects/pridefit-desktop-third.jpg'),
-          publicImg('projects/pridefit-desktop-third@2x.jpg'),
-        ],
       ],
       mobile: [
         [
@@ -278,10 +336,6 @@ const PROJECTS: IProject[] = [
           publicImg('projects/pridefit-mobile-second.jpg'),
           publicImg('projects/pridefit-mobile-second@2x.jpg'),
         ],
-        [
-          publicImg('projects/pridefit-mobile-third.jpg'),
-          publicImg('projects/pridefit-mobile-third@2x.jpg'),
-        ],
       ],
     },
   },
@@ -291,6 +345,7 @@ const PROJECTS: IProject[] = [
     title: 'Ally CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
+    details: 'https://7glyphs.com/portfolio/projects/allypro',
     tools: [
       'ts',
       'react',
@@ -298,12 +353,19 @@ const PROJECTS: IProject[] = [
       'zustand',
       'html',
       'sass',
+      'modules',
       'mui',
       'vite',
-      'sketch',
+      'pnpm',
     ],
     year: 2023,
-    textValues: ['Nintendo amiibo'],
+    textValues: [FEATURE.nintendoAmiibo],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.tanstack,
+      TECHNOLOGY_TITLE.zustand,
+      TECHNOLOGY_TITLE.mui,
+    ],
     images: {
       logo: [
         publicImg('logos/ally-second_sm.png'),
@@ -340,19 +402,27 @@ const PROJECTS: IProject[] = [
     title: 'Pridefit CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
+    details: 'https://7glyphs.com/portfolio/projects/pridefit',
     tools: [
-      'js',
+      'ts',
       'react',
-      'redux',
+      'tanstack',
+      'zustand',
       'html',
-      'modules',
       'sass',
+      'modules',
       'mui',
-      'webpack',
-      'sketch',
+      'vite',
+      'yarn',
     ],
     year: 2023,
-    descriptionValues: [FEATURE.ffmpeg],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      TECHNOLOGY_TITLE.tanstack,
+      TECHNOLOGY_TITLE.zustand,
+      TECHNOLOGY_TITLE.mui,
+      FEATURE.ffmpeg,
+    ],
     images: {
       logo: commonLogo.pridefit,
       desktop: [
@@ -386,18 +456,9 @@ const PROJECTS: IProject[] = [
     types: ['landing'],
     companyName: 'sevenGlyphs',
     url: 'https://vibemedia.app',
-    tools: [
-      'js',
-      'preact',
-      'html',
-      'sass',
-      'bem',
-      'gsap',
-      'webpack',
-      'zeplin',
-      'sketch',
-    ],
+    tools: ['js', 'preact', 'html', 'sass', 'bem', 'gsap', 'webpack', 'npm'],
     year: 2021,
+    descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
     images: {
       logo: [
         publicImg('logos/vibe-media_sm.png'),
@@ -461,7 +522,6 @@ const PROJECTS: IProject[] = [
       'js',
       'preact',
       'html',
-      'css',
       'sass',
       'bem',
       'gsap',
@@ -470,11 +530,7 @@ const PROJECTS: IProject[] = [
       'yarn',
     ],
     year: 2021,
-    descriptionValues: [
-      TECHNOLOGY_TITLE.preact,
-      FEATURE.pixelPerfect,
-      TECHNOLOGY_TITLE.stripe,
-    ],
+    descriptionValues: [FEATURE.pixelPerfect, TECHNOLOGY_TITLE.stripe],
     images: {
       logo: commonLogo.madfit,
       desktop: [
@@ -814,7 +870,11 @@ const PROJECTS: IProject[] = [
     companyName: 't1',
     tools: ['js', 'preact', 'html', 'styled', 'mui', 'webpack', 'npm'],
     year: 2020,
-    descriptionValues: [TECHNOLOGY_TITLE.preact, TECHNOLOGY_TITLE.mui, 'PWA'],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.preact,
+      TECHNOLOGY_TITLE.mui,
+      FEATURE.pwa,
+    ],
     images: {
       logo: [
         publicImg('logos/celebration_sm.png'),
@@ -860,7 +920,7 @@ const PROJECTS: IProject[] = [
     details: 'https://7glyphs.com/portfolio/projects/ally',
     tools: ['js', 'preact', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2020,
-    textValues: ['Nintendo amiibo'],
+    textValues: [FEATURE.nintendoAmiibo],
     descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.ally,

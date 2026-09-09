@@ -395,39 +395,39 @@ const EN = {
     mobileApp: 'Mobile application',
     project: {
       'reps-rest': {
-        text: 'Fitness training planner and workout tracking application',
+        text: 'Interval training application',
         description:
-          'I designed and developed the application independently from scratch. The work included a responsive interface, REST API integration and PWA support',
+          'I developed the application from scratch using {{0}} and {{1}}. Designed the architecture and implemented business logic. Set up server-state management with {{2}} and global state management with {{3}}. Built a {{4}}, responsive interface from the design. Implemented an offline-first approach with data stored in {{5}} and synchronised with the backend. Added {{6}} support and subscription management with payments through {{7}}',
       },
       'ally-2': {
         text: 'Landing page for a mobile app with interactive {{0}} figures',
         description:
-          'I independently developed the landing page from scratch, then improved and supported it. I also built its responsive interface and animations',
+          'I developed the landing page from scratch, then continued improving and maintaining it. Built a {{0}}, responsive interface from the design. Created advanced scroll-driven animations. Animated a {{3}} game scene using native {{1}} elements and {{2}} properties',
       },
       'strongher-cms': {
         text: 'Content management system for a mobile fitness app',
         description:
-          'I independently designed and developed the admin panel from scratch, then improved and supported it. The interface includes many forms and tables',
+          'I developed the admin panel from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up server-state management with {{1}} and global state management with {{2}}. Prototyped the interface and built it with {{3}}. Developed video processing and conversion functionality using the WebAssembly version of {{4}}',
       },
       pridefit: {
-        text: 'Subscription landing page for the mobile fitness application',
+        text: 'Subscription landing page for a mobile fitness app',
         description:
-          'I independently developed the subscription flow from scratch, then improved and supported it. The responsive interface was delivered on a tight schedule',
+          'I developed the landing page from scratch, then continued improving and maintaining it. Built a {{0}}, responsive interface from the design and implemented subscription management with {{1}} payments',
       },
       'ally-cms': {
-        text: 'Content management system for the mobile application to manage {{0}} figures',
+        text: 'Content management system for a mobile app with interactive {{0}} figures',
         description:
-          'I independently designed and developed the admin panel from scratch, then improved and supported it. I also tried a new modular architecture for the project',
+          'I developed the admin panel from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up server-state management with {{1}} and global state management with {{2}}. Prototyped the interface and built it with {{3}}',
       },
       'pridefit-cms': {
         text: 'Content management system for a mobile fitness app',
         description:
-          'I independently designed and developed the admin panel from scratch, then improved and supported it. The project also gave me hands-on experience with the WebAssembly version of {{0}}',
+          'I developed the admin panel from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up server-state management with {{1}} and global state management with {{2}}. Prototyped the interface and built it with {{3}}. Developed video processing and conversion functionality using the WebAssembly version of {{4}}',
       },
       madfit: {
         text: 'Landing page and subscription service for a mobile fitness app',
         description:
-          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations. Implemented a separate subscription management app with {{2}} payments',
+          'I developed the landing page from scratch, then continued improving and maintaining it. Built a {{0}}, responsive interface from the design and added animations. Implemented a separate subscription management app with {{1}} payments',
       },
       'madfit-cms': {
         text: 'Content management system for a mobile fitness app',
@@ -435,9 +435,9 @@ const EN = {
           'I developed the admin panel from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up global state management and asynchronous data handling with {{1}}. Prototyped the interface and built it with {{2}}. Developed video processing and conversion functionality using the WebAssembly version of {{3}}',
       },
       'vibe-media': {
-        text: 'Landing page of the digital marketing agency',
+        text: 'Landing page for a digital marketing agency',
         description:
-          'I independently developed the landing page from scratch and continued supporting it. I built a responsive interface with custom animations',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design. Created advanced scroll-driven animations',
       },
       tradease: {
         text: 'Construction order management service',
@@ -589,7 +589,7 @@ const EN = {
       '7glyphs': {
         text: 'Digital agency website',
         description:
-          'I rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. Implemented client-side routing, made the layout responsive and added animations. Configured the project build using {{2}} and {{3}}',
+          'I improved and maintained the website. Rewrote the codebase from {{0}} to {{1}} and converted the multi-page website into a single-page application. Implemented client-side routing, made the layout responsive and added animations. Configured the project build using {{2}} and {{3}}',
       },
       msp: {
         title: 'Business navigator MSP',
