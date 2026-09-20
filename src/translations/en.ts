@@ -43,7 +43,7 @@ const EN = {
       evening: 'Good evening',
       night: 'Good night',
     },
-    iam: 'I\'m',
+    iam: "I'm",
     occupation: {
       part1: 'frontend',
       part2: 'engineer',
@@ -72,7 +72,7 @@ const EN = {
       },
       programming: {
         label: 'Love coding',
-        text: 'Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I\'m interested in web design, cross-platform development and language models',
+        text: "Frontend is my main hobby. I experiment with {{0}}, {{1}} and AI tools. I'm interested in web design, cross-platform development and language models",
       },
       blogger: {
         label: '{{0}} creator',
@@ -96,23 +96,23 @@ const EN = {
       },
       geek: {
         label: 'Tech geek',
-        text: 'I like technology, games, anime and {{0}} culture. Love {{1}}, especially the {{2}} and {{3}} series, and I\'m a huge fan of Arcane. Also interested in gadgets and hardware. Built my <0>dreamdesk</0>',
+        text: "I like technology, games, anime and {{0}} culture. Love {{1}}, especially the {{2}} and {{3}} series, and I'm a huge fan of Arcane. Also interested in gadgets and hardware. Built my <0>dreamdesk</0>",
       },
       resident: {
         label: 'New Zealand resident',
-        text: 'I moved to New Zealand {{0}} years ago and got residency as a {{1}}. New Zealand is now my home, the country I\'ve always dreamed of',
+        text: "I moved to New Zealand {{0}} years ago and got residency as a {{1}}. New Zealand is now my home, the country I've always dreamed of",
       },
       sport: {
         label: 'Into sports',
-        text: 'Physical activity is especially important for a developer, so I move every day. Love calisthenics, fitness and hiking. When all the tasks are done and the surf forecast looks good, you\'ll find me out on my board in the waves',
+        text: "Physical activity is especially important for a developer, so I move every day. Love calisthenics, fitness and hiking. When all the tasks are done and the surf forecast looks good, you'll find me out on my board in the waves",
       },
       travel: {
         label: 'Love traveling',
-        text: 'Visited <0>{{0}} countries</0>. Once I climbed Mount Fuji, had an ale at Hobbiton\'s Green Dragon Inn, saw Oasis live in Australia and encountered a wild bear at Dyatlov Pass',
+        text: "Visited <0>{{0}} countries</0>. Once I climbed Mount Fuji, had an ale at Hobbiton's Green Dragon Inn, saw Oasis live in Australia and encountered a wild bear at Dyatlov Pass",
       },
       love: {
         label: 'Happy husband',
-        text: '<0>She</0> is my best friend and biggest source of inspiration. We\'ve been together for {{0}} years. I once built a progressive web app to ask her to marry me',
+        text: "<0>She</0> is my best friend and biggest source of inspiration. We've been together for {{0}} years. I once built a progressive web app to ask her to marry me",
       },
       coffee: {
         label: 'Coffee lover',
@@ -222,7 +222,7 @@ const EN = {
       },
       ownership: {
         label: 'Taking responsibility for the result',
-        text: 'I don\'t wait for step-by-step instructions. Clarify requirements, notice problems and propose solutions. Own tasks end to end and bring them to a finished result. Care about project quality and consistency. Work directly with the team and stakeholders',
+        text: "I don't wait for step-by-step instructions. Clarify requirements, notice problems and propose solutions. Own tasks end to end and bring them to a finished result. Care about project quality and consistency. Work directly with the team and stakeholders",
       },
       mentor: {
         label: 'Reviewing code and mentoring',
@@ -281,8 +281,11 @@ const EN = {
         stakeholders: 'Working with stakeholders',
         marketingStakeholders:
           'Working with the marketing team and stakeholders',
-        design: 'Prototyping and making design decisions',
+        design: 'Prototyping, making design decisions and improving UX',
+        graphics: 'Preparing graphics and editing images and PDF documents',
+        graphicsImages: 'Preparing graphics and editing images',
         integration: 'Integrating and configuring third-party services',
+        aiAgents: 'Integrating and configuring AI agents in workflows',
       },
       achievement: {
         frontendOwnership: 'Own frontend development across the company',
@@ -314,9 +317,12 @@ const EN = {
           'Built multi-step forms, interactive maps, virtualised lists, drag-and-drop interactions, content editors and interfaces for analytics and data visualisation',
         financeApp:
           'Built a financial application from scratch with extensive business logic',
-        pagesComponents: 'Developed hundreds of components and pages',
+        pagesComponents:
+          'Created new pages and components, expanded functionality and improved performance across the public website and internal platform',
         seoRoadmap:
           'Optimized the website for {{0}} and increased organic traffic',
+        convertExperiments:
+          'Integrated and configured {{0}} on the public website for {{1}} tests run by the SEO team',
         wordpressMigration:
           'Migrated content from a legacy {{0}} website to a server-rendered {{1}} application with a {{2}}',
         cmsIntegration:
@@ -328,10 +334,9 @@ const EN = {
         docs: 'Created corporate documentation using {{0}}',
         flp: 'Completed a corporate program focused on leadership, communication and teamwork',
         resident:
-          'Obtained a New Zealand resident visa with the company\'s support',
-        ai: 'Introduced AI tools into team workflows',
-        optimization:
-          'Improved performance across the public website and internal web platform',
+          "Obtained a New Zealand resident visa with the company's support",
+        ai: 'Built and rolled out AI agent infrastructure for the team by configuring skills, {{0}} servers, access to third-party services and structured documentation covering the architecture and codebase',
+        aiQa: 'Developed an AI tool for automated website content validation and report generation for the {{0}} team',
         newPortal:
           'Built a new version of the internal business platform from scratch using a modern tech stack',
       },
@@ -394,10 +399,24 @@ const EN = {
     },
     mobileApp: 'Mobile application',
     project: {
+      'go-rentals': {
+        text: 'Car rental and New Zealand trip planning website',
+        description: '..',
+      },
+      'madfit-2': {
+        text: 'Website for a fitness creator and mobile fitness app',
+        description:
+          'I developed the website from scratch using {{0}}. Built a {{1}}, responsive interface from the design. Created advanced scroll-driven animations. Implemented a subscription management section with payments through {{2}}',
+      },
+      'best-me': {
+        text: 'AI service for creating personalised action plans',
+        description:
+          'I developed the application from scratch using {{0}}. Designed the architecture and implemented business logic. Integrated the backend API for working with {{1}} assistants, which generate questions and personalised plans based on user responses. Set up response streaming. Created an engine for building quizzes with branching flows from {{2}} configurations. Built a responsive interface with {{3}}. Set up {{4}} testing for user flows in {{5}}. Added {{6}} and {{7}} subscription payments',
+      },
       'help-ai': {
         text: 'AI assistant for personal growth',
         description:
-          'I developed the application from scratch using {{0}}. Designed the architecture and implemented business logic. Integrated {{1}} assistants through the backend to generate questions and personalised content based on user responses. Set up response streaming. Built a responsive interface with {{2}}. Added subscription payments through {{3}}',
+          'I developed the application from scratch using {{0}}. Designed the architecture and implemented business logic. Integrated the backend API for working with {{1}} assistants, which generate questions and personalised content based on user responses. Set up response streaming. Built a responsive interface with {{2}}. Added {{3}} subscription payments',
       },
       'reps-rest': {
         text: 'Interval training application',
@@ -407,7 +426,7 @@ const EN = {
       'ally-2': {
         text: 'Landing page for a mobile app with interactive {{0}} figures',
         description:
-          'I developed the landing page from scratch, then continued improving and maintaining it. Built a {{0}}, responsive interface from the design. Created advanced scroll-driven animations. Animated a {{3}} game scene using native {{1}} elements and {{2}} properties',
+          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design. Created advanced scroll-driven animations. Animated a {{4}} game scene using native {{2}} elements and {{3}} properties',
       },
       'strongher-cms': {
         text: 'Content management system for a mobile fitness app',
@@ -415,9 +434,9 @@ const EN = {
           'I developed the admin panel from scratch, then continued improving and maintaining it. Designed the architecture and implemented business logic for the {{0}} application. Set up server-state management with {{1}} and global state management with {{2}}. Prototyped the interface and built it with {{3}}. Developed video processing and conversion functionality using the WebAssembly version of {{4}}',
       },
       pridefit: {
-        text: 'Subscription landing page for a mobile fitness app',
+        text: 'Subscription management service for a mobile fitness app',
         description:
-          'I developed the landing page from scratch, then continued improving and maintaining it. Built a {{0}}, responsive interface from the design and implemented subscription management with {{1}} payments',
+          'I developed the application from scratch. Built a {{0}}, responsive interface from the design and implemented subscription management with payments through {{1}}',
       },
       'ally-cms': {
         text: 'Content management system for a mobile app with interactive {{0}} figures',
@@ -447,7 +466,7 @@ const EN = {
       tradease: {
         text: 'Construction order management service',
         description:
-          'I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{2}}. Built a {{3}}, responsive interface from the design',
+          "I developed the project from scratch using {{0}} and {{1}}. Designed the architecture and implemented the application's business logic. Set up global state management and asynchronous data handling with {{2}}. Built a {{3}}, responsive interface from the design",
       },
       't1-online': {
         title: 'T1 Online',
@@ -463,17 +482,17 @@ const EN = {
       'road-ninja': {
         text: 'Truck driver hiring service',
         description:
-          'I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{2}}. Integrated {{3}} for real-time data exchange. Built the {{4}} interface from the design and added {{5}} components. Implemented a subscription management section with {{6}} payments',
+          "I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application's business logic. Set up global state management and asynchronous data handling with {{2}}. Integrated {{3}} for real-time data exchange. Built the {{4}} interface from the design and added {{5}} components. Implemented a subscription management section with {{6}} payments",
       },
       celebration: {
-        text: 'New Year\'s mini app for sending greetings to company employees',
+        text: "New Year's mini app for sending greetings to company employees",
         description:
           'I developed the mini app from scratch using {{0}}. Prototyped the interface and built it with {{1}}. Implemented the business logic and added {{2}} support',
       },
       ally: {
         text: 'Landing page for a mobile app with interactive {{0}} figures',
         description:
-          'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
+          'I developed the landing page from scratch, then continued improving and maintaining it. Built a {{0}}, responsive interface from the design and added animations',
       },
       'present-me-landing': {
         text: 'Landing page for a jobseeker profile creation service',
@@ -501,7 +520,7 @@ const EN = {
           'I developed the landing page from scratch using {{0}}. Built a {{1}}, responsive interface from the design and added animations',
       },
       uls: {
-        text: 'Unified account for a company\'s services',
+        text: "Unified account for a company's services",
         description:
           'I developed the project from scratch and led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented business logic for the {{0}} application. Prototyped the interface and built it with {{1}}. Integrated authentication with {{2}}',
       },
@@ -514,7 +533,7 @@ const EN = {
         title: 'EMBP',
         text: 'Admin panel for a biometric platform',
         description:
-          'I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Set up global state management and asynchronous data handling with {{2}}. Prototyped the interface, built it with {{3}} and added a dark theme. Implemented a role system with a dedicated interface for each role',
+          "I developed the project from scratch using {{0}} and {{1}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application's business logic. Set up global state management and asynchronous data handling with {{2}}. Prototyped the interface, built it with {{3}} and added a dark theme. Implemented a role system with a dedicated interface for each role",
       },
       '7glyphs-lite': {
         text: 'Landing page for a website development service',
@@ -544,7 +563,7 @@ const EN = {
       sds: {
         text: 'Enterprise document management system',
         description:
-          'I developed the project from scratch using {{0}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application\'s business logic. Configured global state management with {{1}} and asynchronous data handling with {{4}}. Optimised computations with {{5}}. Prototyped the interface and built it with {{2}}. Integrated {{3}} and implemented role-based access control with a dedicated interface for each role',
+          "I developed the project from scratch using {{0}}. Led the frontend team responsible for its ongoing development and maintenance. Designed the architecture and implemented the application's business logic. Configured global state management with {{1}} and asynchronous data handling with {{4}}. Optimised computations with {{5}}. Prototyped the interface and built it with {{2}}. Integrated {{3}} and implemented role-based access control with a dedicated interface for each role",
       },
       strongher: {
         text: 'Website for a mobile fitness app',
@@ -559,17 +578,17 @@ const EN = {
       'rogue-travel': {
         text: 'Group booking service for flights and hotels',
         description:
-          'I developed the project from scratch using {{0}}. Designed the architecture and implemented the application\'s business logic. Configured global state management with {{1}} and asynchronous data handling with {{2}}. Optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Developed a design system with a UI component library and built a {{5}}, responsive interface from the design. Added virtualisation for large lists to improve performance',
+          "I developed the project from scratch using {{0}}. Designed the architecture and implemented the application's business logic. Configured global state management with {{1}} and asynchronous data handling with {{2}}. Optimised computations with {{3}}. Integrated third-party services, including payments through {{4}}. Developed a design system with a UI component library and built a {{5}}, responsive interface from the design. Added virtualisation for large lists to improve performance",
       },
       'quarry-trucks': {
         text: 'Truck traffic monitoring service',
         description:
-          'I joined a {{0}} and {{1}} project with basic markup and functionality. Built a new interface, implemented the application\'s full business logic and improved its performance',
+          "I joined a {{0}} and {{1}} project with basic markup and functionality. Built a new interface, implemented the application's full business logic and improved its performance",
       },
       'service-packages': {
-        text: 'Landing page for a digital agency\'s service packages',
+        text: "Landing page for a digital agency's service packages",
         description:
-          'I developed the landing page from scratch. Built a {{0}}, responsive interface from the design and added animations. The landing page later became part of the agency\'s main website',
+          "I developed the landing page from scratch. Built a {{0}}, responsive interface from the design and added animations. The landing page later became part of the agency's main website",
       },
       '12-saffron': {
         text: 'Landing page for sale of the private home in New Zealand',
@@ -584,7 +603,7 @@ const EN = {
       'lazyaz-dashboard': {
         text: 'Admin panel for a delivery service',
         description:
-          'I adapted a {{0}} admin panel based on {{1}} and {{2}} to the project\'s needs. Built the UI, wrote scripts for interactive elements and set up {{3}} requests, gaining hands-on experience with {{4}}',
+          "I adapted a {{0}} admin panel based on {{1}} and {{2}} to the project's needs. Built the UI, wrote scripts for interactive elements and set up {{3}} requests, gaining hands-on experience with {{4}}",
       },
       lazyaz: {
         text: 'Web platform for a delivery service',
@@ -610,7 +629,7 @@ const EN = {
   },
   blog: {
     description:
-      '<0>Hi there! {{0}}</0><0>My name is Michael. I\'ve been professionally engaged in frontend development for {{1}} years. I create projects of any complexity and bring UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}',
+      "<0>Hi there! {{0}}</0><0>My name is Michael. I've been professionally engaged in frontend development for {{1}} years. I create projects of any complexity and bring UI/UX ideas to life. I went from junior coder to lead developer. Working at the New Zealand company {{2}}</0><0>In April 2023 I moved from Russia to New Zealand {{3}}</0><0>On this channel, I share my journey in programming and life, as well as my experience and knowledge. I hope it will be interesting and, perhaps, even a little useful {{4}}</0><0>Peace and love to everyone {{5}}",
     sort: {
       new: 'Latest',
       old: 'Oldest',
@@ -623,17 +642,17 @@ const EN = {
       },
       'my-dreamdesk': {
         title: 'My dreamdesk {{0}} New no monitors setup',
-        text: 'I\'ve finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I\'ll provide a detailed explanation and showcase how it\'s set up, the devices I use, why I often work standing and why I don\'t need a large monitor',
+        text: "I've finally fulfilled my dream — created a beautiful and convenient workspace. In this video, I'll provide a detailed explanation and showcase how it's set up, the devices I use, why I often work standing and why I don't need a large monitor",
       },
       'day-in-a-life-new-zealand': {
         title:
           'A day in the life of a software engineer in New Zealand {{0}} POV',
-        text: 'I was gifted the {{0}}, and someday I\'ll be filming myself surfing the waves of the Pacific Ocean in New Zealand. But for now, I invite you to spend a typical day with me in this distant and beautiful country through my eyes, that is, from a first-person point of view',
+        text: "I was gifted the {{0}}, and someday I'll be filming myself surfing the waves of the Pacific Ocean in New Zealand. But for now, I invite you to spend a typical day with me in this distant and beautiful country through my eyes, that is, from a first-person point of view",
       },
       'how-i-became-software-engineer': {
         title:
           'How I became a software engineer at 27 {{0}} From actor to developer',
-        text: 'In this video, I\'ll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I\'ll talk about myself, the challenges I faced, where and how I learned, what helped me along the way and how I found my first job in {{0}}',
+        text: "In this video, I'll share the story of how I made a drastic career change at the age of 27 and became a front-end developer. I'll talk about myself, the challenges I faced, where and how I learned, what helped me along the way and how I found my first job in {{0}}",
       },
     },
   },

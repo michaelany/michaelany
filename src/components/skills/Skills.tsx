@@ -135,7 +135,7 @@ export default function Skills() {
       textValues: [
         TECHNOLOGY_TITLE.vitest,
         TECHNOLOGY_TITLE.playwright,
-        'A/B',
+        FEATURE.ab,
         'Lighthouse',
         'Core Web Vitals',
       ],
@@ -143,7 +143,7 @@ export default function Skills() {
     {
       tKey: 'ai',
       Icon: SmartToyIcon,
-      textValues: [TECHNOLOGY_TITLE.claudecode, TECHNOLOGY_TITLE.codex, 'MCP'],
+      textValues: [TECHNOLOGY_TITLE.claudecode, TECHNOLOGY_TITLE.codex, FEATURE.mcp],
     },
     {
       tKey: 'integrations',

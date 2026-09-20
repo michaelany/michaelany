@@ -58,6 +58,308 @@ const commonLogo = {
 
 const PROJECTS: IProject[] = [
   {
+    name: 'go-rentals',
+    color: 'red',
+    title: 'GO Rentals',
+    types: ['site', 'app'],
+    companyName: 'goRentals',
+    url: 'https://www.gorentals.co.nz',
+    tools: [
+      'js',
+      'vue',
+      'nuxt',
+      'html',
+      'sass',
+      'tailwind',
+      'storyblok',
+      'strapi',
+      'npm',
+    ],
+    year: 2025,
+    descriptionValues: [],
+    images: {
+      logo: [
+        publicImg('logos/go-rentals_sm.png'),
+        publicImg('logos/go-rentals.png'),
+        publicImg('logos/go-rentals@2x.png'),
+      ],
+      desktop: [
+        [
+          publicImg('projects/go-rentals@2x.jpg'),
+          publicImg('projects/go-rentals-desktop-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-second.jpg'),
+          publicImg('projects/go-rentals-desktop-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-third.jpg'),
+          publicImg('projects/go-rentals-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-fourth.jpg'),
+          publicImg('projects/go-rentals-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-fifth.jpg'),
+          publicImg('projects/go-rentals-desktop-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-sixth.jpg'),
+          publicImg('projects/go-rentals-desktop-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-seventh.jpg'),
+          publicImg('projects/go-rentals-desktop-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-desktop-eighth.jpg'),
+          publicImg('projects/go-rentals-desktop-eighth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          publicImg('projects/go-rentals-mobile-first.jpg'),
+          publicImg('projects/go-rentals-mobile-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-second.jpg'),
+          publicImg('projects/go-rentals-mobile-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-third.jpg'),
+          publicImg('projects/go-rentals-mobile-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-fourth.jpg'),
+          publicImg('projects/go-rentals-mobile-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-fifth.jpg'),
+          publicImg('projects/go-rentals-mobile-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-sixth.jpg'),
+          publicImg('projects/go-rentals-mobile-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-seventh.jpg'),
+          publicImg('projects/go-rentals-mobile-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/go-rentals-mobile-eighth.jpg'),
+          publicImg('projects/go-rentals-mobile-eighth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
+    name: 'madfit-2',
+    color: 'green',
+    title: 'MadFit 2.0',
+    types: ['site', 'app'],
+    companyName: 'sevenGlyphs',
+    url: 'https://maddielymburner.co',
+    details: 'https://7glyphs.com/portfolio/projects/madfit-website',
+    tools: [
+      'js',
+      'react',
+      'next',
+      'html',
+      'sass',
+      'bem',
+      'gsap',
+      'stripe',
+      'pnpm',
+    ],
+    year: 2025,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.next,
+      FEATURE.pixelPerfect,
+      TECHNOLOGY_TITLE.stripe,
+    ],
+    images: {
+      logo: commonLogo.madfit,
+      desktop: [
+        [
+          publicImg('projects/madfit-2@2x.jpg'),
+          publicImg('projects/madfit-2-desktop-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-second.jpg'),
+          publicImg('projects/madfit-2-desktop-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-third.jpg'),
+          publicImg('projects/madfit-2-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-fourth.jpg'),
+          publicImg('projects/madfit-2-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-fifth.jpg'),
+          publicImg('projects/madfit-2-desktop-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-sixth.jpg'),
+          publicImg('projects/madfit-2-desktop-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-seventh.jpg'),
+          publicImg('projects/madfit-2-desktop-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-desktop-eighth.jpg'),
+          publicImg('projects/madfit-2-desktop-eighth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          publicImg('projects/madfit-2-mobile-first.jpg'),
+          publicImg('projects/madfit-2-mobile-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-second.jpg'),
+          publicImg('projects/madfit-2-mobile-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-third.jpg'),
+          publicImg('projects/madfit-2-mobile-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-fourth.jpg'),
+          publicImg('projects/madfit-2-mobile-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-fifth.jpg'),
+          publicImg('projects/madfit-2-mobile-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-sixth.jpg'),
+          publicImg('projects/madfit-2-mobile-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-seventh.jpg'),
+          publicImg('projects/madfit-2-mobile-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/madfit-2-mobile-eighth.jpg'),
+          publicImg('projects/madfit-2-mobile-eighth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
+    name: 'best-me',
+    color: 'red',
+    title: 'Best Me',
+    types: ['app'],
+    companyName: 'sevenGlyphs',
+    url: 'https://bestme-ai.com/',
+    details: 'https://7glyphs.com/portfolio/projects/bestme',
+    tools: [
+      'js',
+      'react',
+      'html',
+      'sass',
+      'bem',
+      'mui',
+      'stripe',
+      'airwallex',
+      'firebase',
+      'amplitude',
+      'vite',
+      'pnpm',
+    ],
+    year: 2025,
+    descriptionValues: [
+      TECHNOLOGY_TITLE.react,
+      'OpenAI',
+      'JSON',
+      TECHNOLOGY_TITLE.mui,
+      FEATURE.ab,
+      TECHNOLOGY_TITLE.amplitude,
+      TECHNOLOGY_TITLE.stripe,
+      TECHNOLOGY_TITLE.airwallex,
+    ],
+    images: {
+      logo: [
+        publicImg('logos/best-me_sm.png'),
+        publicImg('logos/best-me.png'),
+        publicImg('logos/best-me@2x.png'),
+      ],
+      desktop: [
+        [
+          publicImg('projects/best-me@2x.jpg'),
+          publicImg('projects/best-me-desktop-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-second.jpg'),
+          publicImg('projects/best-me-desktop-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-third.jpg'),
+          publicImg('projects/best-me-desktop-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-fourth.jpg'),
+          publicImg('projects/best-me-desktop-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-fifth.jpg'),
+          publicImg('projects/best-me-desktop-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-sixth.jpg'),
+          publicImg('projects/best-me-desktop-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-seventh.jpg'),
+          publicImg('projects/best-me-desktop-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-desktop-eighth.jpg'),
+          publicImg('projects/best-me-desktop-eighth@2x.jpg'),
+        ],
+      ],
+      mobile: [
+        [
+          publicImg('projects/best-me-mobile-first.jpg'),
+          publicImg('projects/best-me-mobile-first@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-second.jpg'),
+          publicImg('projects/best-me-mobile-second@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-third.jpg'),
+          publicImg('projects/best-me-mobile-third@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-fourth.jpg'),
+          publicImg('projects/best-me-mobile-fourth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-fifth.jpg'),
+          publicImg('projects/best-me-mobile-fifth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-sixth.jpg'),
+          publicImg('projects/best-me-mobile-sixth@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-seventh.jpg'),
+          publicImg('projects/best-me-mobile-seventh@2x.jpg'),
+        ],
+        [
+          publicImg('projects/best-me-mobile-eighth.jpg'),
+          publicImg('projects/best-me-mobile-eighth@2x.jpg'),
+        ],
+      ],
+    },
+  },
+  {
     name: 'reps-rest',
     color: 'yellow',
     title: 'Reps & Rest',
@@ -176,6 +478,7 @@ const PROJECTS: IProject[] = [
     year: 2024,
     textValues: [FEATURE.nintendoAmiibo],
     descriptionValues: [
+      TECHNOLOGY_TITLE.preact,
       FEATURE.pixelPerfect,
       TECHNOLOGY_TITLE.html,
       TECHNOLOGY_TITLE.css,
@@ -411,10 +714,10 @@ const PROJECTS: IProject[] = [
     name: 'pridefit',
     color: 'violet',
     title: 'Pridefit',
-    types: ['landing', 'app'],
+    types: ['app'],
     companyName: 'sevenGlyphs',
     details: 'https://7glyphs.com/portfolio/projects/pridefit',
-    tools: ['js', 'react', 'next', 'html', 'sass', 'modules', 'stripe', 'pnpm'],
+    tools: ['js', 'react', 'html', 'sass', 'modules', 'stripe', 'yarn'],
     year: 2023,
     descriptionValues: [FEATURE.pixelPerfect, TECHNOLOGY_TITLE.stripe],
     images: {
@@ -458,7 +761,7 @@ const PROJECTS: IProject[] = [
       'modules',
       'mui',
       'vite',
-      'pnpm',
+      'yarn',
     ],
     year: 2023,
     textValues: [FEATURE.nintendoAmiibo],
@@ -1023,7 +1326,7 @@ const PROJECTS: IProject[] = [
     tools: ['js', 'preact', 'html', 'sass', 'bem', 'webpack', 'yarn'],
     year: 2020,
     textValues: [FEATURE.nintendoAmiibo],
-    descriptionValues: [TECHNOLOGY_TITLE.preact, FEATURE.pixelPerfect],
+    descriptionValues: [FEATURE.pixelPerfect],
     images: {
       logo: commonLogo.ally,
       desktop: [

@@ -112,6 +112,7 @@ export const TECHNOLOGY_TITLE = {
   stripe: 'Stripe',
   airwallex: 'Airwallex',
   amplitude: 'Amplitude',
+  convert: 'Convert',
   firebase: 'Firebase',
   mailchimp: 'Mailchimp',
   squarespace: 'Squarespace',
@@ -935,6 +936,16 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
           publicImg('technologies/amplitude@2x.png'),
         ],
         href: 'https://amplitude.com',
+      },
+      {
+        name: 'convert',
+        label: TECHNOLOGY_TITLE.convert,
+        color: 'default',
+        images: [
+          publicImg('technologies/convert.png'),
+          publicImg('technologies/convert@2x.png'),
+        ],
+        href: 'https://convert.com',
       },
       {
         name: 'firebase',
