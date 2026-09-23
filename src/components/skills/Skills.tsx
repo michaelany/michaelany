@@ -143,7 +143,11 @@ export default function Skills() {
     {
       tKey: 'ai',
       Icon: SmartToyIcon,
-      textValues: [TECHNOLOGY_TITLE.claudecode, TECHNOLOGY_TITLE.codex, FEATURE.mcp],
+      textValues: [
+        TECHNOLOGY_TITLE.codex,
+        TECHNOLOGY_TITLE.claudecode,
+        FEATURE.mcp,
+      ],
     },
     {
       tKey: 'integrations',
@@ -251,8 +255,8 @@ const textValues = [
   'SSR',
   TECHNOLOGY_TITLE.next,
   TECHNOLOGY_TITLE.nuxt,
-  TECHNOLOGY_TITLE.claudecode,
   TECHNOLOGY_TITLE.codex,
+  TECHNOLOGY_TITLE.claudecode,
   CONTACT_LINK.youTube.title,
   TECHNOLOGY_TITLE.finalcut,
 ]
