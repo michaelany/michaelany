@@ -73,10 +73,24 @@ const PROJECTS: IProject[] = [
       'tailwind',
       'storyblok',
       'strapi',
+      'convert',
       'npm',
+      'cypress',
+      'wordpress',
     ],
     year: 2025,
-    descriptionValues: [],
+    descriptionValues: [
+      TECHNOLOGY_TITLE.nuxt,
+      TECHNOLOGY_TITLE.vue,
+      TECHNOLOGY_TITLE.tailwind,
+      TECHNOLOGY_TITLE.wordpress,
+      FEATURE.headlessCms,
+      TECHNOLOGY_TITLE.storyblok,
+      FEATURE.seo,
+      FEATURE.e2e,
+      TECHNOLOGY_TITLE.cypress,
+      FEATURE.mcp,
+    ],
     images: {
       logo: [
         publicImg('logos/go-rentals_sm.png'),
@@ -1233,7 +1247,6 @@ const PROJECTS: IProject[] = [
       'stripe',
       'webpack',
       'yarn',
-      'foundationemails',
     ],
     year: 2021,
     descriptionValues: [
@@ -1469,7 +1482,6 @@ const PROJECTS: IProject[] = [
       'mui',
       'webpack',
       'yarn',
-      'foundationemails',
     ],
     year: 2020,
     descriptionValues: [
@@ -1948,7 +1960,6 @@ const PROJECTS: IProject[] = [
       'webpack',
       'vite',
       'yarn',
-      'foundationemails',
     ],
     year: 2019,
     descriptionValues: [
@@ -2092,17 +2103,7 @@ const PROJECTS: IProject[] = [
     companyName: 'sevenGlyphs',
     url: 'https://strongherapp.com',
     details: 'https://7glyphs.com/portfolio/projects/strongher',
-    tools: [
-      'js',
-      'react',
-      'html',
-      'sass',
-      'bem',
-      'stripe',
-      'webpack',
-      'yarn',
-      'foundationemails',
-    ],
+    tools: ['js', 'react', 'html', 'sass', 'bem', 'stripe', 'webpack', 'yarn'],
     year: 2019,
     descriptionValues: [TECHNOLOGY_TITLE.stripe, FEATURE.pixelPerfect],
     images: {
@@ -2227,7 +2228,6 @@ const PROJECTS: IProject[] = [
       'stripe',
       'webpack',
       'yarn',
-      'foundationemails',
     ],
     year: 2018,
     descriptionValues: [
@@ -2499,7 +2499,6 @@ const PROJECTS: IProject[] = [
       'gulp',
       'webpack',
       'npm',
-      'foundationemails',
     ],
     year: 2017,
     descriptionValues: [

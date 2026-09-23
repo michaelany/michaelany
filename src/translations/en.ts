@@ -401,7 +401,8 @@ const EN = {
     project: {
       'go-rentals': {
         text: 'Car rental and New Zealand trip planning website',
-        description: '..',
+        description:
+          'I develop and maintain the project using {{0}}. Build new pages and {{1}} components, using {{2}} for styling. Design sections and create prototypes aligned with the corporate brand guidelines and overall visual direction. Expand functionality and improve performance. Migrated content from a legacy {{3}} website to a server-rendered application with a {{4}}. Integrated {{5}}, configured the visual editor and designed a scalable architecture for content blocks and components. Optimize the website for {{6}}. Implemented application-level support for page caching at the edge. Update {{7}} tests in {{8}} and adapt them for automated execution in the pipeline. Develop and roll out infrastructure for AI agents: create skills, connect {{9}} servers, configure agent access to systems used by the team and maintain structured documentation covering the architecture and codebase',
       },
       'madfit-2': {
         text: 'Website for a fitness creator and mobile fitness app',

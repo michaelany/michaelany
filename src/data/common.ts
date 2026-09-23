@@ -139,6 +139,8 @@ export const FEATURE = {
   qa: 'QA',
   mcp: 'MCP',
   ab: 'A/B',
+  e2e: 'E2E',
+  headlessCms: 'headless CMS',
   pixelPerfect: 'pixel-perfect',
   pwa: 'PWA',
   reduxThunk: 'Redux Thunk',
