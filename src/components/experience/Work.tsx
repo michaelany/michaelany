@@ -166,7 +166,7 @@ const jobs: IJob[] = [
         values: [
           TECHNOLOGY_TITLE.wordpress,
           TECHNOLOGY_TITLE.nuxt,
-          'headless CMS',
+          FEATURE.headlessCms,
         ],
       },
       {tKey: 'cmsIntegration', values: [TECHNOLOGY_TITLE.storyblok, 'CMS']},
@@ -182,7 +182,7 @@ const jobs: IJob[] = [
       },
       'newPortal',
       {tKey: 'ai', values: [FEATURE.mcp]},
-      {tKey: 'aiQa', values: [FEATURE.qa]},
+      {tKey: 'aiQa', values: ['QA']},
       'externalBugFixes',
       {tKey: 'flp', values: ['Future Leadership Program']},
       {tKey: 'resident', values: ['Straight to Residence Visa']},

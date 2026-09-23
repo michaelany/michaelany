@@ -87,7 +87,7 @@ const PROJECTS: IProject[] = [
       FEATURE.headlessCms,
       TECHNOLOGY_TITLE.storyblok,
       FEATURE.seo,
-      FEATURE.e2e,
+      'E2E',
       TECHNOLOGY_TITLE.cypress,
       FEATURE.mcp,
     ],

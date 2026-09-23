@@ -149,7 +149,7 @@ export default function Skills() {
       tKey: 'integrations',
       Icon: IntegrationInstructionsIcon,
       textValues: [
-        'headless CMS',
+        FEATURE.headlessCms,
         'SDK',
         'API',
         TECHNOLOGY_TITLE.strapi,
