@@ -3,8 +3,7 @@ $videos:
   'how-i-became-software-engineer';
 
 .VideoLink-Tilt {
-  overflow: hidden;
-  border-radius: v.$border-radius;
+  transform-style: preserve-3d;
 }
 
 .VideoLink-Item {
@@ -12,14 +11,20 @@ $videos:
   width: 100%;
   background-color: white;
   border-radius: v.$border-radius;
-  overflow: hidden;
+  transform-style: preserve-3d;
   &.Mui-focusVisible {
+    .VideoLink-View {
+      opacity: 0;
+    }
     .VideoLink-Content {
       opacity: 1;
     }
   }
   @media (hover: hover) {
     &:hover {
+      .VideoLink-View {
+        opacity: 0;
+      }
       .VideoLink-Content {
         opacity: 1;
       }
@@ -30,6 +35,9 @@ $videos:
 .VideoLink-View {
   width: 100%;
   height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: opacity v.$duration_short v.$easing_in-out;
   @each $video in $videos {
     &_name_#{$video}::after {
       @include m.retinaImg($video, 'jpg', '/assets/videos');
@@ -54,8 +62,8 @@ $videos:
   width: 100%;
   height: 100%;
   padding: 24px;
-  background-color: white;
   opacity: 0;
+  transform: translateZ(24px);
   transition: opacity v.$duration_short v.$easing_in-out;
 }
 

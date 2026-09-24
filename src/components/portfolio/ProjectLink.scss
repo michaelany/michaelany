@@ -10,8 +10,7 @@ $projects:
   'ally-2', 'reps-rest', 'best-me', 'madfit-2', 'go-rentals';
 
 .ProjectLink-Tilt {
-  overflow: hidden;
-  border-radius: v.$border-radius;
+  transform-style: preserve-3d;
 }
 
 .ProjectLink-Item {
@@ -19,14 +18,20 @@ $projects:
   width: 100%;
   background-color: white;
   border-radius: v.$border-radius;
-  overflow: hidden;
+  transform-style: preserve-3d;
   &.Mui-focusVisible {
+    .ProjectLink-View {
+      opacity: 0;
+    }
     .ProjectLink-Content {
       opacity: 1;
     }
   }
   @media (hover: hover) {
     &:hover {
+      .ProjectLink-View {
+        opacity: 0;
+      }
       .ProjectLink-Content {
         opacity: 1;
       }
@@ -37,6 +42,9 @@ $projects:
 .ProjectLink-View {
   width: 100%;
   height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: opacity v.$duration_short v.$easing_in-out;
   @each $project in $projects {
     &_name_#{$project}::after {
       @include m.retinaImg($project, 'jpg', '/assets/projects');
@@ -60,8 +68,8 @@ $projects:
   width: 100%;
   height: 100%;
   padding: 24px;
-  background-color: white;
   opacity: 0;
+  transform: translateZ(24px);
   transition: opacity v.$duration_short v.$easing_in-out;
 }
 
