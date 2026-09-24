@@ -12,7 +12,8 @@ import {ExpandMoreRounded as ExpandMoreIcon} from '@mui/icons-material'
 import './Technologies.scss'
 import {Animate, Section, ExpandAction} from '#components/common'
 import {TECHNOLOGY_GROUPS} from '#data/technologies'
-import {ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
+import {ROOT, ROUTE, QUERY_BREAKPOINT} from '#utils/constants'
+import {scrollToView} from '#utils/helpers'
 import TechnologyList from './TechnologyList'
 import type {TKey} from '#utils/types'
 
@@ -43,8 +44,11 @@ export default function Technologies({
 
   const isAllExpanded = expanded.length === TECHNOLOGY_GROUPS.length
 
-  const handleExpandAll = () =>
+  const handleExpandAll = () => {
     setExpanded(isAllExpanded ? [] : TECHNOLOGY_GROUPS.map(group => group.tKey))
+    if (isAllExpanded) return
+    scrollToView(ROOT)
+  }
 
   return (
     <Section

@@ -16,8 +16,10 @@ import {
   CAREER_START_YEAR,
   CAREER_START_PARTS,
   BLANK_LINK_PROPS,
+  ROOT,
   ROUTE,
 } from '#utils/constants'
+import {scrollToView} from '#utils/helpers'
 import {COMPANY, FEATURE} from '#data/common'
 import {SEVEN_GLYPHS_PROJECTS_COUNT} from '#data/projects'
 import {TECHNOLOGY_TITLE} from '#data/technologies'
@@ -44,8 +46,11 @@ export default function Work() {
 
   const isAllExpanded = jobs.every(job => expanded.includes(job.name))
 
-  const handleExpandAll = () =>
+  const handleExpandAll = () => {
     setExpanded(isAllExpanded ? [] : jobs.map(job => job.name))
+    if (isAllExpanded) return
+    scrollToView(ROOT)
+  }
 
   return (
     <Section>

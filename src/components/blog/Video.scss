@@ -3,11 +3,14 @@
 }
 
 .Video-Player {
+  @include m.animation(fadeInZoomOutSm);
   background-color: black;
   border-radius: v.$border-radius;
   overflow: hidden;
   margin-bottom: 40px;
-  @include m.animation(fadeIn);
+  @include m.md {
+    @include m.animation(fadeIn);
+  }
 }
 
 .Video-Panel {

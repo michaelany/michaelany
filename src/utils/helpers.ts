@@ -1,4 +1,3 @@
-import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import type {TFunction} from 'i18next'
 
 import {DURATION} from '#styles/theme'
@@ -51,7 +50,7 @@ export const getPeriodDateTime = ({tKey, year}: IPeriodPart): string =>
   `${year}-${monthNumber[tKey]}`
 
 export const scrollToView = (el: HTMLElement) =>
-  scrollIntoView(el, {
+  el.scrollIntoView({
     behavior: 'smooth',
     block: 'start',
   })
