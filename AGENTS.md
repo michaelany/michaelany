@@ -34,6 +34,11 @@ loaded. Reuse the path aliases from `tsconfig.json`, such as `#components`,
 - Create a separate React component when it owns meaningful child structure,
   logic, state, or behavior that changes how it works.
 - Prefer the simplest implementation that fits the existing architecture.
+- Declare exported components with an inline export and a function declaration,
+  such as `export default function Component()`. For components wrapped in `memo`
+  or another wrapper, assign the wrapped component to a `const` and export it at
+  the bottom of the file.
+- Use arrow functions for local helper components within a file.
 
 ## Styling Rules
 
@@ -64,6 +69,13 @@ loaded. Reuse the path aliases from `tsconfig.json`, such as `#components`,
   from another library version.
 - Follow the configured formatting: single quotes, no semicolons, no spaces
   inside braces, and trailing commas where supported.
+- Match the surrounding project conventions when writing or changing code.
+  Prefer `const`, clear inferred types, and arrow functions for helpers and
+  callbacks. Follow the component declaration rules above; do not convert
+  exported components to arrow functions merely for stylistic modernization.
+- Apply KISS: keep control flow straightforward, avoid speculative abstractions,
+  and add helpers only when they remove duplication or clarify responsibility.
+  Keep style changes scoped to the code being worked on.
 - When adding translatable interface text, update both `src/translations/en.ts`
   and `src/translations/ru.ts` and keep their key structures aligned.
 - Follow the existing image conventions, including responsive and retina assets,

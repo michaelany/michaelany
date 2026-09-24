@@ -1,6 +1,6 @@
-import {useState, type ReactNode, type AllHTMLAttributes} from 'react'
+import type {ReactNode, AllHTMLAttributes} from 'react'
 import cn from 'clsx'
-import {Waypoint} from 'react-waypoint'
+import {useInView} from 'react-intersection-observer'
 
 import './Animate.scss'
 import {DURATION, EASING} from '#styles/theme'
@@ -25,29 +25,27 @@ export default function Animate({
   easing = 'inOut',
   ...props
 }: IAnimateProps) {
-  const [reached, setReached] = useState<boolean>(false)
-
-  const onWaypointEnter = () => {
-    if (reached) return
-    setReached(true)
-  }
+  const {ref, inView} = useInView({
+    triggerOnce: true,
+    fallbackInView: true,
+    rootMargin: '0px 0px -24px 0px',
+  })
 
   return (
-    <Waypoint bottomOffset="5%" onEnter={onWaypointEnter}>
-      <Element
-        {...props}
-        className={cn(className, 'Animate')}
-        style={
-          reached
-            ? {
-                animation: `${getEffectAnimation(effect)} ${DURATION[duration]}ms ${EASING[easing]} ${delay}ms both`,
-              }
-            : undefined
-        }
-      >
-        {children}
-      </Element>
-    </Waypoint>
+    <Element
+      {...props}
+      ref={ref}
+      className={cn(className, 'Animate')}
+      style={
+        inView
+          ? {
+              animation: `${getEffectAnimation(effect)} ${DURATION[duration]}ms ${EASING[easing]} ${delay}ms both`,
+            }
+          : undefined
+      }
+    >
+      {children}
+    </Element>
   )
 }
 
