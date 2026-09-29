@@ -51,8 +51,12 @@ export const loadLaptopModel = async (signal: AbortSignal) => {
   }
   const screen = laptop.getObjectByName('Display')
   const apple = laptop.getObjectByName('AppleLogo')
+  const lid = laptop.getObjectByName('Lid')
+  const hinge = laptop.getObjectByName('LidHinge')
   if (
     signal.aborted ||
+    !lid ||
+    !hinge ||
     !(screen instanceof Mesh) ||
     !(screen.material instanceof MeshBasicMaterial) ||
     !(apple instanceof Mesh) ||
@@ -60,10 +64,12 @@ export const loadLaptopModel = async (signal: AbortSignal) => {
   ) {
     dispose()
     signal.throwIfAborted()
-    throw new Error('MacBook model is missing its display or logo')
+    throw new Error('MacBook model is missing its hinge, lid, display or logo')
   }
   return {
     laptop,
+    lid,
+    hinge,
     screenMaterial: screen.material,
     appleMaterial: apple.material,
     dispose,

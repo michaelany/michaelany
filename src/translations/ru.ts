@@ -43,6 +43,11 @@ const RU = {
     },
     subtitle: 'Баннер',
     laptop: {
+      open: 'Открыть крышку',
+      close: 'Закрыть крышку',
+      control: 'Ручное вращение и масштаб',
+      enableControl: 'Включить управление',
+      disableControl: 'Выключить управление',
       label:
         '3D-модель MacBook Pro 16″ (2021), Space Gray, с логотипами технологий',
     },

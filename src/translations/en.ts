@@ -51,6 +51,11 @@ const EN = {
     },
     subtitle: 'Banner',
     laptop: {
+      open: 'Open lid',
+      close: 'Close lid',
+      control: 'Manual rotation and zoom',
+      enableControl: 'Enable controls',
+      disableControl: 'Disable controls',
       label: '3D MacBook Pro 16-inch (2021), Space Gray, with technology logos',
     },
   },

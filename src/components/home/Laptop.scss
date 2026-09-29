@@ -8,6 +8,26 @@
   aspect-ratio: 10 / 11;
 }
 
+.Laptop-Controls {
+  position: absolute;
+  z-index: 1;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.Laptop-Control.MuiFab-root {
+  margin: 0;
+  flex-shrink: 0;
+  &[aria-pressed='true'] {
+    outline: 2px solid white;
+    outline-offset: 3px;
+  }
+}
+
 .Laptop-Fallback {
   position: absolute;
   inset: 0;
@@ -21,15 +41,17 @@
   height: 100%;
   visibility: hidden;
   border-radius: v.$border-radius;
-  cursor: grab;
   .Laptop_ready & {
     visibility: visible;
   }
-  &:active {
-    cursor: grabbing;
+  .Laptop_interactive & {
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
   }
   &:focus-visible {
-    outline: 2px solid v.$color_text;
+    outline: 2px solid white;
     outline-offset: -2px;
   }
 }

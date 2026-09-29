@@ -64,10 +64,15 @@ export const createLaptopScene = async (
 
     const model = await loadLaptopModel(signal)
     cleanups.push(model.dispose)
-    const {laptop, appleMaterial, screenMaterial} = model
+    const {laptop, lid, hinge, appleMaterial, screenMaterial} = model
     screenMaterial.map = texture
     screenMaterial.needsUpdate = true
     scene.add(laptop)
+
+    // The GLB hinge groups the screen with its metal mount and plastic trim.
+    const closedAngle = Math.PI / 2 - lid.rotation.x
+    let lidTarget = 0
+    let lidVelocity = 0
 
     const room = new RoomEnvironment()
     const pmrem = new PMREMGenerator(renderer)
@@ -160,13 +165,14 @@ export const createLaptopScene = async (
         [bounds.min.z, bounds.max.z].map(z => new Vector3(x, y, z).sub(center))
       )
     )
-    const maxMagnification = 1.2
     let bottomExtent = 1
     const initialDirection = new Vector3(2.4, 2, 7).normalize()
     let initialDistance = 0
     camera.position.copy(center).addScaledVector(initialDirection, 10)
+    let manualControl = false
     const createControls = () => {
       const controls = new TrackballControls(camera, canvas)
+      controls.enabled = manualControl
       controls.target.copy(center)
       controls.noPan = true
       controls.noZoom = false
@@ -177,7 +183,7 @@ export const createLaptopScene = async (
       controls.mouseButtons.MIDDLE = null
       controls.mouseButtons.RIGHT = null
       // Horizontal dragging rotates on touchscreens; vertical swipes scroll.
-      canvas.style.touchAction = 'pan-y'
+      canvas.style.touchAction = manualControl ? 'pan-y' : 'auto'
       return controls
     }
     let controls = createControls()
@@ -195,9 +201,29 @@ export const createLaptopScene = async (
     const invalidate = () => {
       dirty = true
     }
-    let hovered =
-      canvas.matches(':hover') && window.matchMedia('(hover: hover)').matches
-    let keyboardFocused = false
+    const updateLid = (delta: number) => {
+      if (hinge.rotation.x === lidTarget && lidVelocity === 0) return
+      if (reducedMotion.matches) {
+        hinge.rotation.x = lidTarget
+        lidVelocity = 0
+      } else {
+        // A critically damped spring keeps reversals continuous, even mid-flight.
+        const speed = 8 / DURATION.long
+        const offset = hinge.rotation.x - lidTarget
+        const decay = Math.exp(-speed * delta)
+        const step = (lidVelocity + speed * offset) * delta
+        hinge.rotation.x = lidTarget + (offset + step) * decay
+        lidVelocity = (lidVelocity - speed * step) * decay
+        if (
+          Math.abs(hinge.rotation.x - lidTarget) < 0.0001 &&
+          Math.abs(lidVelocity) < 0.0001
+        ) {
+          hinge.rotation.x = lidTarget
+          lidVelocity = 0
+        }
+      }
+      invalidate()
+    }
     let interacting = false
     let idleElapsed = 0
     let idleWeight = 0
@@ -236,13 +262,12 @@ export const createLaptopScene = async (
     const handleStart = () => {
       cancelReturn()
       stopIdle()
-      keyboardFocused = false
       interacting = true
     }
     const handleEnd = () => {
+      if (!manualControl) return
       interacting = false
       idleCooldown = idleDelay
-      scheduleReturn()
     }
     const bindControls = () => {
       controls.addEventListener('change', invalidate)
@@ -261,31 +286,9 @@ export const createLaptopScene = async (
       camera.lookAt(center)
     }
 
-    const handleEnter = (event: PointerEvent) => {
-      if (event.pointerType !== 'touch') hovered = true
-    }
-    const handleLeave = () => {
-      hovered = false
-      idleCooldown = idleDelay
-    }
-    const handleFocus = () => {
-      keyboardFocused = canvas.matches(':focus-visible')
-    }
-    const handleBlur = () => {
-      keyboardFocused = false
-      idleCooldown = idleDelay
-    }
-    canvas.addEventListener('pointerenter', handleEnter)
-    canvas.addEventListener('pointerleave', handleLeave)
     canvas.addEventListener('pointercancel', handleEnd)
-    canvas.addEventListener('focus', handleFocus)
-    canvas.addEventListener('blur', handleBlur)
     cleanups.push(() => {
-      canvas.removeEventListener('pointerenter', handleEnter)
-      canvas.removeEventListener('pointerleave', handleLeave)
       canvas.removeEventListener('pointercancel', handleEnd)
-      canvas.removeEventListener('focus', handleFocus)
-      canvas.removeEventListener('blur', handleBlur)
     })
 
     const handleMotion = () => {
@@ -314,33 +317,19 @@ export const createLaptopScene = async (
               Math.abs(corner.dot(right)) /
                 (Math.tan(halfFov) * camera.aspect) +
                 depth,
-              Math.abs(corner.dot(up)) / Math.tan(halfFov) + depth
+              corner.dot(up) / Math.tan(halfFov) + depth,
+              -corner.dot(up) / (Math.tan(halfFov) * bottomExtent) + depth
             )
           })
         ) * 1.02
-      )
-    }
-    const getMinimumDistance = (direction: Vector3, cameraUp: Vector3) => {
-      const right = new Vector3().crossVectors(cameraUp, direction).normalize()
-      const up = new Vector3().crossVectors(direction, right).normalize()
-      const bottomSlope = Math.tan((camera.fov * Math.PI) / 360) * bottomExtent
-      const bottomDistance =
-        Math.max(
-          ...corners.map(
-            corner => corner.dot(direction) - corner.dot(up) / bottomSlope
-          )
-        ) * 1.02
-      return Math.max(
-        getFitDistance(direction, cameraUp) / maxMagnification,
-        bottomDistance
       )
     }
     const constrainZoom = () => {
       const offset = camera.position.clone().sub(center)
       const distance = offset.length()
       offset.normalize()
-      controls.minDistance = getMinimumDistance(offset, camera.up)
-      // Cropping is allowed at the top and sides, but keep the bottom in view.
+      controls.minDistance = getFitDistance(offset, camera.up)
+      // Keep every edge inside the canvas, including while rotating at maximum zoom.
       if (distance < controls.minDistance) {
         camera.position
           .copy(center)
@@ -352,8 +341,7 @@ export const createLaptopScene = async (
     const updateIdle = (delta: number) => {
       idleCooldown = Math.max(0, idleCooldown - delta)
       const active =
-        !hovered &&
-        !keyboardFocused &&
+        !manualControl &&
         !interacting &&
         !returnPending &&
         !returning &&
@@ -371,14 +359,14 @@ export const createLaptopScene = async (
       idleApplied = idleWeight > 0
       if (idleApplied) {
         idleElapsed += delta
-        const phase = (idleElapsed / (DURATION.lingering * 3)) * Math.PI * 2
+        const phase = (idleElapsed / (DURATION.lingering * 4)) * Math.PI * 2
         const offset = camera.position.clone().sub(center)
         const right = new Vector3().crossVectors(camera.up, offset).normalize()
-        const yaw = ((Math.sin(phase) * Math.PI) / 30) * idleWeight
-        const pitch = ((Math.sin(phase * 2) * Math.PI) / 90) * idleWeight
+        const yaw = Math.sin(phase) * (Math.PI / 180) * 18 * idleWeight
+        const pitch = Math.sin(phase * 2) * (Math.PI / 180) * 8 * idleWeight
         offset.applyAxisAngle(camera.up, yaw).applyAxisAngle(right, pitch)
         displayCamera.up.applyAxisAngle(right, pitch)
-        const minimumDistance = getMinimumDistance(
+        const minimumDistance = getFitDistance(
           offset.clone().normalize(),
           displayCamera.up
         )
@@ -545,9 +533,10 @@ export const createLaptopScene = async (
           1 - 0.16,
           Math.min(delta || DURATION.longer / 60, 100) / (DURATION.longer / 60)
         )
-      if (!returning) controls.update()
+      if (manualControl && !returning) controls.update()
       if (dirty) constrainZoom()
       updateReturn(Math.min(delta, 100))
+      updateLid(Math.min(delta, 100))
       updateIdle(Math.min(delta, 100))
       // Texture uploads are independent of the full-rate camera animation.
       if (paused || time - previousScreenTime >= DURATION.longer / 30) {
@@ -610,7 +599,24 @@ export const createLaptopScene = async (
 
     return {
       dispose,
+      setManualControl: (enabled: boolean) => {
+        cancelReturn()
+        stopIdle()
+        manualControl = enabled
+        interacting = false
+        replaceControls()
+        if (!enabled) {
+          paused = reducedMotion.matches
+          scheduleReturn()
+          returnDelay = 0
+        }
+      },
+      setLidOpen: (open: boolean) => {
+        lidTarget = open ? 0 : closedAngle
+        invalidate()
+      },
       handleKey: (key: string) => {
+        if (!manualControl) return false
         if (key === ' ') {
           cancelReturn()
           stopIdle()
@@ -625,8 +631,6 @@ export const createLaptopScene = async (
           return false
         cancelReturn()
         stopIdle()
-        scheduleReturn()
-        keyboardFocused = true
         const offset = camera.position.clone().sub(controls.target)
         const horizontal = key === 'ArrowLeft' || key === 'ArrowRight'
         const axis = horizontal
