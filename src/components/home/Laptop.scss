@@ -1,0 +1,35 @@
+.Laptop {
+  width: 100%;
+}
+
+.Laptop-Stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 10 / 11;
+}
+
+.Laptop-Fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.Laptop-Canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  border-radius: v.$border-radius;
+  cursor: grab;
+  .Laptop_ready & {
+    visibility: visible;
+  }
+  &:active {
+    cursor: grabbing;
+  }
+  &:focus-visible {
+    outline: 2px solid v.$color_text;
+    outline-offset: -2px;
+  }
+}

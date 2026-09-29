@@ -50,6 +50,9 @@ const EN = {
       part3: 'creator',
     },
     subtitle: 'Banner',
+    laptop: {
+      label: '3D MacBook Pro 16-inch (2021), Space Gray, with technology logos',
+    },
   },
   about: {
     text: `I'm a <0>software engineer</0> with {{0}} years of experience in <0>frontend development</0>. I build <1>projects</1> of different sizes && complexity, bringing <0>{{1}}</0> ideas to life. I run a <2>${common.title.blog}</2> on <3>{{2}}</3>. Based in Auckland, New Zealand`,
