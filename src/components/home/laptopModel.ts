@@ -1,4 +1,5 @@
 import {
+  AdditiveBlending,
   CanvasTexture,
   CircleGeometry,
   CylinderGeometry,
@@ -7,6 +8,7 @@ import {
   InstancedMesh,
   Mesh,
   MeshBasicMaterial,
+  MeshPhysicalMaterial,
   MeshStandardMaterial,
   Object3D,
   Path,
@@ -25,7 +27,6 @@ import {
 } from 'three/addons/utils/BufferGeometryUtils.js'
 
 import appleSvg from '#assets/icons/apple.svg?raw'
-import {COLOR} from '#styles/theme'
 
 // Procedural approximation of the 16-inch MacBook Pro (2021), in Space Gray.
 // Chassis proportions follow Apple's 35.57 × 24.81 cm dimensions.
@@ -41,24 +42,29 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   const coverJointHeight = -0.054
   // The open lid sits behind the rear wall, with its lower edge below the deck.
   const lidZ = rearEdgeZ - 0.065
+  // Match the lid and frame proportions in Apple's front-view product photo.
+  const lidHeight = bodyDepth - 0.09
+  const lidCornerRadius = 0.15
+  const bezelInset = 0.014
+  const displayInset = 0.052
   const hingeRecessWidth = 3.3
   const hingeRecessDepth = 0.055
   const keyboardWidth = 3.3
-  const keyWidth = keyboardWidth - 0.12
+  const keyWidth = keyboardWidth - 0.06
+  const keyRowPitch = 0.212
+  const trackpadDepth = 1.2
+  const trackpadCenterZ = 0.805
   const aluminum = new MeshStandardMaterial({
-    color: '#777b82',
-    metalness: 0.85,
-    roughness: 0.36,
+    color: '#737474',
+    metalness: 0.9,
+    roughness: 0.46,
+    envMapIntensity: 0.75,
   })
   const edge = new MeshStandardMaterial({
-    color: '#60646b',
-    metalness: 0.85,
-    roughness: 0.3,
-  })
-  const dark = new MeshStandardMaterial({
-    color: '#101216',
-    roughness: 0.75,
-    envMapIntensity: 0.25,
+    color: '#5b5c5e',
+    metalness: 0.8,
+    roughness: 0.48,
+    envMapIntensity: 0.65,
   })
   const rubber = new MeshStandardMaterial({
     color: '#060709',
@@ -180,7 +186,7 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   // flush with the palm rest, instead of covering it with raised plates.
   const chassisOutline = roundedOutline(bodyWidth, bodyDepth, 0.16, true)
   const keyboardOpening = roundedOutline(keyboardWidth + 0.02, 1.33, 0.075)
-  const trackpadOpening = roundedOutline(1.96, 1.12, 0.075)
+  const trackpadOpening = roundedOutline(1.96, trackpadDepth, 0.075)
   const keyboardHole = new Path(
     keyboardOpening.getPoints(16).map(point => {
       point.y += 0.5
@@ -189,7 +195,7 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   )
   const trackpadHole = new Path(
     trackpadOpening.getPoints(16).map(point => {
-      point.y -= 0.78
+      point.y -= trackpadCenterZ
       return point
     })
   )
@@ -243,12 +249,17 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   for (let vertex = 0; vertex < chassisPositions.count; vertex += 3) {
     const holeWall =
       Math.abs(chassisNormals.getZ(vertex)) < 0.999 &&
+      // Only the upper bevel and walls are visible above the recessed inserts.
+      [vertex, vertex + 1, vertex + 2].some(
+        index => chassisPositions.getZ(index) > 0
+      ) &&
       [vertex, vertex + 1, vertex + 2].every(index => {
         const x = chassisPositions.getX(index)
         const y = chassisPositions.getY(index)
         return (
           (Math.abs(x) < 1.68 && Math.abs(y - 0.5) < 0.69) ||
-          (Math.abs(x) < 1 && Math.abs(y + 0.78) < 0.59)
+          (Math.abs(x) < 1 &&
+            Math.abs(y + trackpadCenterZ) < trackpadDepth / 2 + 0.03)
         )
       })
     if (holeWall) {
@@ -256,7 +267,8 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
         const index = vertex + corner
         chassisPositions.setZ(
           index,
-          Math.max(-0.05, chassisPositions.getZ(index))
+          // Stop inside the inserts instead of extending toward the bottom cover.
+          Math.max(0.025, chassisPositions.getZ(index))
         )
       }
       chassisIndices.push(vertex, vertex + 1, vertex + 2)
@@ -489,42 +501,228 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   seam.rotation.x = -Math.PI / 2
   laptop.add(seam)
 
-  const keyboard = slab(keyboardWidth, 1.31, 0.008, 0.07, rubber, 0.003)
+  const keyboardWell = new MeshPhysicalMaterial({
+    color: '#020304',
+    roughness: 0.9,
+    specularIntensity: 0.8,
+    envMapIntensity: 0.1,
+  })
+  const keyMaterial = new MeshPhysicalMaterial({
+    color: '#08090b',
+    roughness: 0.8,
+    specularIntensity: 0.82,
+    envMapIntensity: 0.12,
+  })
+  const keyboard = slab(keyboardWidth, 1.31, 0.008, 0.07, keyboardWell, 0.003)
   keyboard.rotation.x = -Math.PI / 2
   keyboard.position.set(0, 0.034, -0.5)
   laptop.add(keyboard)
 
   const keyCanvas = document.createElement('canvas')
-  keyCanvas.width = 1536
-  keyCanvas.height = 576
+  keyCanvas.width = 2048
+  keyCanvas.height = 804
   const context = keyCanvas.getContext('2d')!
-  context.fillStyle = COLOR.white
+  context.fillStyle = '#d8dadd'
+  context.strokeStyle = '#d8dadd'
   context.textAlign = 'center'
   context.textBaseline = 'middle'
-  context.font = '22px sans-serif'
+
+  // Draw the function symbols as strokes so they remain consistent across fonts.
+  const drawFunctionIcon = (number: number, x: number, y: number) => {
+    context.save()
+    context.translate(x, y)
+    context.lineWidth = 1.8
+    context.lineCap = 'round'
+    context.lineJoin = 'round'
+    const line = (points: number[][]) => {
+      context.beginPath()
+      points.forEach(([x, y], index) => {
+        if (index === 0) context.moveTo(x, y)
+        else context.lineTo(x, y)
+      })
+      context.stroke()
+    }
+    if (number <= 2) {
+      const radius = number === 1 ? 5 : 7
+      context.beginPath()
+      context.arc(0, 0, radius, 0, Math.PI * 2)
+      context.stroke()
+      for (let ray = 0; ray < 8; ray++) {
+        const angle = (ray * Math.PI) / 4
+        line([
+          [Math.cos(angle) * (radius + 4), Math.sin(angle) * (radius + 4)],
+          [Math.cos(angle) * (radius + 7), Math.sin(angle) * (radius + 7)],
+        ])
+      }
+    } else if (number === 3) {
+      context.strokeRect(-13, -10, 10, 8)
+      context.strokeRect(2, -10, 10, 20)
+      context.strokeRect(-13, 3, 10, 7)
+    } else if (number === 4) {
+      context.beginPath()
+      context.arc(-3, -3, 8, 0, Math.PI * 2)
+      context.stroke()
+      line([
+        [3, 3],
+        [11, 11],
+      ])
+    } else if (number === 5) {
+      context.beginPath()
+      context.roundRect(-4, -13, 8, 17, 4)
+      context.stroke()
+      context.beginPath()
+      context.arc(0, 1, 8, 0, Math.PI)
+      context.stroke()
+      line([
+        [0, 9],
+        [0, 14],
+      ])
+      line([
+        [-5, 14],
+        [5, 14],
+      ])
+    } else if (number === 6) {
+      context.beginPath()
+      context.moveTo(2, -12)
+      context.bezierCurveTo(-16, -9, -12, 14, 5, 11)
+      context.bezierCurveTo(9, 10, 11, 8, 12, 5)
+      context.bezierCurveTo(-1, 10, -7, -3, 2, -12)
+      context.stroke()
+    } else if (number === 7 || number === 9) {
+      context.scale(number === 7 ? -1 : 1, 1)
+      for (const offset of [-11, 1])
+        line([
+          [offset, -8],
+          [offset + 10, 0],
+          [offset, 8],
+          [offset, -8],
+        ])
+    } else if (number === 8) {
+      line([
+        [-12, -8],
+        [-2, 0],
+        [-12, 8],
+        [-12, -8],
+      ])
+      line([
+        [4, -8],
+        [4, 8],
+      ])
+      line([
+        [10, -8],
+        [10, 8],
+      ])
+    } else {
+      line([
+        [-12, -4],
+        [-7, -4],
+        [0, -10],
+        [0, 10],
+        [-7, 4],
+        [-12, 4],
+        [-12, -4],
+      ])
+      for (let wave = 0; wave < number - 10; wave++) {
+        context.beginPath()
+        context.arc(0, 0, 7 + wave * 6, -0.8, 0.8)
+        context.stroke()
+      }
+    }
+    context.restore()
+  }
+
   const rows = [
-    ['esc', '☀', '☀', '▣', '⌕', '◉', '☾', '◀', '▶', '▶', '◁', '−', '+', ''],
-    ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '−', '=', '⌫'],
+    [
+      'esc',
+      'F1',
+      'F2',
+      'F3',
+      'F4',
+      'F5',
+      'F6',
+      'F7',
+      'F8',
+      'F9',
+      'F10',
+      'F11',
+      'F12',
+      '',
+    ],
+    ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'delete'],
     ['tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\'],
-    ['caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'return'],
+    [
+      'caps lock',
+      'A',
+      'S',
+      'D',
+      'F',
+      'G',
+      'H',
+      'J',
+      'K',
+      'L',
+      ';',
+      "'",
+      'return',
+    ],
     ['shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'shift'],
-    ['fn', 'ctrl', 'opt', 'cmd', '', 'cmd', 'opt', '◀', '▲', '▼', '▶'],
+    [
+      'fn',
+      'control',
+      'option',
+      'command',
+      '',
+      'command',
+      'option',
+      '◀',
+      '▲',
+      '▼',
+      '▶',
+    ],
   ]
+  // ANSI rows share a 14.5-unit width; modifier sizes determine the staggering.
+  const rowWidths = [
+    [1.5, ...Array<number>(13).fill(1)],
+    [...Array<number>(13).fill(1), 1.5],
+    [1.5, ...Array<number>(13).fill(1)],
+    [1.75, ...Array<number>(11).fill(1), 1.75],
+    [2.25, ...Array<number>(10).fill(1), 2.25],
+    [1, 1, 1, 1.25, 5, 1.25, 1, 1, 0.5, 0.5, 1],
+  ]
+  const shifted: Record<string, string> = {
+    '`': '~',
+    '1': '!',
+    '2': '@',
+    '3': '#',
+    '4': '$',
+    '5': '%',
+    '6': '^',
+    '7': '&',
+    '8': '*',
+    '9': '(',
+    '0': ')',
+    '-': '_',
+    '=': '+',
+    '[': '{',
+    ']': '}',
+    '\\': '|',
+    ';': ':',
+    "'": '"',
+    ',': '<',
+    '.': '>',
+    '/': '?',
+  }
   const keyCount = rows.reduce((sum, row) => sum + row.length, 0)
   const keys = new InstancedMesh(
-    new RoundedBoxGeometry(1, 1, 1, 2, 0.12),
-    dark,
+    new RoundedBoxGeometry(1, 1, 1, 3, 0.09),
+    keyMaterial,
     keyCount
   )
   const transform = new Object3D()
   let index = 0
   let touchIdX = 0
   rows.forEach((row, rowIndex) => {
-    const weights = row.map(label => {
-      if (rowIndex === 0) return label === 'esc' ? 1.5 : 1
-      if (label === '▲' || label === '▼') return 0.5
-      return label === '' ? 5 : label.length > 1 ? 1.4 : 1
-    })
+    const weights = rowWidths[rowIndex]
     const total = weights.reduce((sum, value) => sum + value, 0)
     let left = 0
     row.forEach((label, column) => {
@@ -537,23 +735,73 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
       transform.position.set(
         (center - 0.5) * keyWidth,
         0.061,
-        -0.5 + (rowIndex - 2.5 + rowOffset) * 0.205
+        -0.5 + (rowIndex - 2.5 + rowOffset) * keyRowPitch
       )
       transform.scale.set(
-        width * (stackedArrow ? 2 : 1) * keyWidth - 0.025,
+        width * (stackedArrow ? 2 : 1) * keyWidth - 0.018,
         0.025,
-        arrow ? 0.078 : 0.175
+        arrow ? 0.088 : 0.188
       )
-      if (rowIndex === 0 && column === row.length - 1) {
+      if (rowIndex === 0 && column === row.length - 1)
         touchIdX = transform.position.x
-      }
       transform.updateMatrix()
       keys.setMatrixAt(index++, transform.matrix)
-      context.fillText(
-        label,
-        center * keyCanvas.width,
-        ((rowIndex + 0.5 + rowOffset) * keyCanvas.height) / 6
-      )
+
+      const x = center * keyCanvas.width
+      const y = ((rowIndex + 0.5 + rowOffset) * keyCanvas.height) / 6
+      context.textAlign = 'center'
+      if (rowIndex === 0 && column > 0 && label) {
+        drawFunctionIcon(column, x, y - 17)
+        context.font = '16px sans-serif'
+        context.fillText(label, x, y + 29)
+      } else if (shifted[label]) {
+        context.font = '25px sans-serif'
+        context.fillText(shifted[label], x, y - 23)
+        context.fillText(label, x, y + 24)
+      } else if (label.length > 1 && !arrow) {
+        const rightAligned =
+          label === 'return' ||
+          label === 'delete' ||
+          (label === 'shift' && column > 0)
+        const modifier = rowIndex === 5
+        context.font = '19px sans-serif'
+        context.textAlign = modifier
+          ? 'center'
+          : rightAligned
+            ? 'right'
+            : 'left'
+        const labelX = modifier
+          ? x
+          : (rightAligned ? left + width : left) * keyCanvas.width +
+            (rightAligned ? -17 : 17)
+        if (label !== 'fn') context.fillText(label, labelX, y + 30)
+        const symbol =
+          label === 'command'
+            ? '⌘'
+            : label === 'option'
+              ? '⌥'
+              : label === 'control'
+                ? '⌃'
+                : ''
+        if (symbol) {
+          context.font = '26px sans-serif'
+          context.fillText(symbol, x + 20, y - 27)
+        }
+        if (label === 'fn') {
+          context.beginPath()
+          context.arc(x - 20, y + 27, 10, 0, Math.PI * 2)
+          context.moveTo(x - 30, y + 27)
+          context.lineTo(x - 10, y + 27)
+          context.stroke()
+          context.beginPath()
+          context.ellipse(x - 20, y + 27, 4, 10, 0, 0, Math.PI * 2)
+          context.stroke()
+          context.fillText('fn', x + 22, y - 28)
+        }
+      } else {
+        context.font = arrow ? '19px sans-serif' : '31px sans-serif'
+        context.fillText(label, x, y)
+      }
       left += width
     })
   })
@@ -561,7 +809,7 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   const keyTexture = new CanvasTexture(keyCanvas)
   keyTexture.colorSpace = SRGBColorSpace
   const labels = new Mesh(
-    new PlaneGeometry(keyWidth, 1.23),
+    new PlaneGeometry(keyWidth, keyRowPitch * 6),
     new MeshBasicMaterial({
       map: keyTexture,
       transparent: true,
@@ -573,21 +821,43 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   labels.position.set(0, 0.0745, -0.5)
   laptop.add(labels)
 
-  const touchIdRing = new Mesh(new RingGeometry(0.061, 0.069, 32), edge)
-  const touchId = new Mesh(new CircleGeometry(0.061, 32), rubber)
+  const touchIdMaterial = new MeshStandardMaterial({
+    color: '#1b1d20',
+    metalness: 0.25,
+    roughness: 0.65,
+    envMapIntensity: 0.15,
+  })
+  const touchIdRing = new Mesh(
+    new RingGeometry(0.056, 0.058, 48),
+    touchIdMaterial
+  )
+  const touchId = new Mesh(new CircleGeometry(0.056, 48), keyMaterial)
   for (const part of [touchIdRing, touchId]) {
     part.rotation.x = -Math.PI / 2
-    part.position.set(touchIdX, 0.075, -0.5 - 2.5 * 0.205)
+    part.position.set(touchIdX, 0.075, -0.5 - 2.5 * keyRowPitch)
     laptop.add(part)
   }
 
-  const trackpadBorder = slab(1.96, 1.12, 0.002, 0.075, edge, 0.001)
+  const trackpadBorder = slab(1.96, trackpadDepth, 0.002, 0.075, edge, 0.001)
   trackpadBorder.rotation.x = -Math.PI / 2
-  trackpadBorder.position.set(0, 0.052, 0.78)
+  trackpadBorder.position.set(0, 0.052, trackpadCenterZ)
   laptop.add(trackpadBorder)
-  const trackpad = slab(1.94, 1.1, 0.02, 0.065, aluminum, 0.001)
+  const trackpadMaterial = new MeshStandardMaterial({
+    color: '#6a6b6d',
+    metalness: 0.65,
+    roughness: 0.65,
+    envMapIntensity: 0.6,
+  })
+  const trackpad = slab(
+    1.94,
+    trackpadDepth - 0.02,
+    0.02,
+    0.065,
+    trackpadMaterial,
+    0.001
+  )
   trackpad.rotation.x = -Math.PI / 2
-  trackpad.position.set(0, 0.0665, 0.78)
+  trackpad.position.set(0, 0.0665, trackpadCenterZ)
   laptop.add(trackpad)
 
   // Individual circular perforations avoid the striped texture sampling seen
@@ -675,17 +945,65 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
     laptop.add(port)
     return port
   }
+  const portMetal = new MeshStandardMaterial({
+    color: '#393b3d',
+    metalness: 0.7,
+    roughness: 0.55,
+    envMapIntensity: 0.4,
+  })
+  const contactMetal = new MeshStandardMaterial({
+    color: '#a18d5e',
+    metalness: 0.75,
+    roughness: 0.48,
+    envMapIntensity: 0.45,
+  })
+  const addUsbPort = (side: number, fromRear: number) => {
+    const port = addPort(side, fromRear, 0.108, 0.037)
+    const sleeve = new Mesh(
+      new ShapeGeometry(roundedOutline(0.092, 0.025, 0.012), 16),
+      portMetal
+    )
+    sleeve.position.z = 0.003
+    port.add(sleeve)
+    const socket = new Mesh(
+      new ShapeGeometry(roundedOutline(0.083, 0.019, 0.009), 16),
+      rubber
+    )
+    socket.position.z = 0.0033
+    port.add(socket)
+    const tongue = new Mesh(
+      new ShapeGeometry(roundedOutline(0.068, 0.005, 0.002), 12),
+      portMetal
+    )
+    tongue.position.z = 0.0036
+    port.add(tongue)
+  }
   // Positions and widths follow the supplied top/side dimension drawing.
   // Left, from the hinge: MagSafe 3, two Thunderbolt ports, headphone jack.
   const magSafe = addPort(-1, 0.145, 0.21, 0.039)
-  const contacts = new Mesh(
-    new PlaneGeometry(0.15, 0.012),
-    new MeshStandardMaterial({color: '#9d9172', metalness: 0.8, roughness: 0.4})
+  const magSafeRim = new Mesh(
+    new ShapeGeometry(roundedOutline(0.185, 0.031, 0.012), 24),
+    portMetal
   )
-  contacts.position.z = 0.003
-  magSafe.add(contacts)
-  addPort(-1, 0.22, 0.108, 0.037)
-  addPort(-1, 0.28, 0.108, 0.037)
+  magSafeRim.position.z = 0.003
+  magSafe.add(magSafeRim)
+  const magSafeSocket = new Mesh(
+    new ShapeGeometry(roundedOutline(0.17, 0.023, 0.008), 24),
+    rubber
+  )
+  magSafeSocket.position.z = 0.0033
+  magSafe.add(magSafeSocket)
+  const magSafeContact = new ShapeGeometry(
+    roundedOutline(0.008, 0.012, 0.004),
+    16
+  )
+  for (let pin = 0; pin < 5; pin++) {
+    const contact = new Mesh(magSafeContact, contactMetal)
+    contact.position.set((pin - 2) * 0.03, 0, 0.0036)
+    magSafe.add(contact)
+  }
+  addUsbPort(-1, 0.22)
+  addUsbPort(-1, 0.28)
   const headphone = new Mesh(new CircleGeometry(0.019, 32), rubber)
   headphone.rotation.y = -Math.PI / 2
   headphone.position.set(
@@ -695,12 +1013,56 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   )
   laptop.add(headphone)
 
-  // Right: HDMI, one Thunderbolt port, and the SDXC slot.
-  const hdmi = addPort(1, 0.145, 0.185, 0.05)
-  const hdmiTongue = new Mesh(new PlaneGeometry(0.13, 0.012), edge)
-  hdmiTongue.position.z = 0.003
+  // HDMI has a broad flat top and chamfered lower shoulders, not an oval slot.
+  const hdmiShape = new Shape()
+  hdmiShape.moveTo(-0.0865, 0.028)
+  hdmiShape.lineTo(0.0865, 0.028)
+  hdmiShape.quadraticCurveTo(0.0925, 0.028, 0.0925, 0.022)
+  hdmiShape.lineTo(0.0925, -0.004)
+  hdmiShape.quadraticCurveTo(0.0925, -0.008, 0.089, -0.011)
+  hdmiShape.lineTo(0.071, -0.026)
+  hdmiShape.quadraticCurveTo(0.069, -0.028, 0.065, -0.028)
+  hdmiShape.lineTo(-0.065, -0.028)
+  hdmiShape.quadraticCurveTo(-0.069, -0.028, -0.071, -0.026)
+  hdmiShape.lineTo(-0.089, -0.011)
+  hdmiShape.quadraticCurveTo(-0.0925, -0.008, -0.0925, -0.004)
+  hdmiShape.lineTo(-0.0925, 0.022)
+  hdmiShape.quadraticCurveTo(-0.0925, 0.028, -0.0865, 0.028)
+  hdmiShape.closePath()
+  const hdmiGeometry = new ShapeGeometry(hdmiShape, 16)
+  const hdmi = new Group()
+  hdmi.rotation.y = Math.PI / 2
+  hdmi.position.set(portSurfaceX, portHeight, rearEdgeZ + bodyDepth * 0.145)
+  laptop.add(hdmi)
+  hdmi.add(new Mesh(hdmiGeometry, rubber))
+  const hdmiRim = new Mesh(hdmiGeometry, portMetal)
+  hdmiRim.scale.set(0.93, 0.88, 1)
+  hdmiRim.position.z = 0.0003
+  hdmi.add(hdmiRim)
+  const hdmiSocket = new Mesh(hdmiGeometry, rubber)
+  hdmiSocket.scale.set(0.87, 0.77, 1)
+  hdmiSocket.position.z = 0.0006
+  hdmi.add(hdmiSocket)
+  const hdmiTongue = new Mesh(
+    new ShapeGeometry(roundedOutline(0.132, 0.009, 0.003), 16),
+    portMetal
+  )
+  hdmiTongue.position.set(0, -0.003, 0.001)
   hdmi.add(hdmiTongue)
-  addPort(1, 0.22, 0.108, 0.037)
+  const hdmiContact = new PlaneGeometry(0.003, 0.002)
+  for (let row = 0; row < 2; row++) {
+    const count = row === 0 ? 10 : 9
+    for (let pin = 0; pin < count; pin++) {
+      const contact = new Mesh(hdmiContact, contactMetal)
+      contact.position.set(
+        (pin - (count - 1) / 2) * 0.012,
+        0.001 - row * 0.008,
+        0.0013
+      )
+      hdmi.add(contact)
+    }
+  }
+  addUsbPort(1, 0.22)
   addPort(1, 0.32, 0.32, 0.026)
 
   // Stop ahead of the frontmost port (SDXC), retaining the front foot endpoint.
@@ -768,77 +1130,86 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   hingePlastic.position.set(0, 0.0213, hingeCenterZ)
   laptop.add(hingePlastic)
 
-  // Rear ventilation follows the curved wall below the hinge. The antenna
-  // module divides it into three openings, with fine ribs inside each grille.
-  const rearVentHeight = 0.026
+  // A continuous black vent/antenna insert sits beneath the metal hinge.
+  // Its three grilles use identical apertures: eight, five, and eight.
   const rearVentY = -0.043
+  const rearVentHeight = 0.03
+  const rearVentHoleWidth = 0.104
+  const rearVentHoleHeight = 0.021
+  const rearVentHolePitch = 0.114
   const rearVentSections = [
-    {x: -1.02, width: 0.98},
-    {x: 0, width: 0.94},
-    {x: 1.02, width: 0.98},
+    {x: -1.06, count: 8},
+    {x: 0, count: 5},
+    {x: 1.06, count: 8},
   ]
-  const grilleGeometries: PlaneGeometry[] = []
-  for (const section of rearVentSections) {
-    const opening = new PlaneGeometry(section.width, rearVentHeight, 1, 24)
-    const positions = opening.getAttribute('position')
+  const rearVentSurface = (
+    width: number,
+    height: number,
+    centerX: number,
+    offset: number
+  ) => {
+    const geometry = new PlaneGeometry(width, height, 1, 24)
+    const positions = geometry.getAttribute('position')
+    const cornerRadius = 0.004
     for (let vertex = 0; vertex < positions.count; vertex++) {
       const localY = positions.getY(vertex)
-      const height = rearVentY + localY
-      const cornerRadius = 0.005
-      const cornerY = Math.max(
-        0,
-        Math.abs(localY) - rearVentHeight / 2 + cornerRadius
-      )
+      const y = rearVentY + localY
+      const cornerY = Math.max(0, Math.abs(localY) - height / 2 + cornerRadius)
       const halfWidth =
-        section.width / 2 -
+        width / 2 -
         cornerRadius +
         Math.sqrt(Math.max(0, cornerRadius * cornerRadius - cornerY * cornerY))
       positions.setXYZ(
         vertex,
-        section.x - Math.sign(positions.getX(vertex)) * halfWidth,
-        height,
-        rearEdgeZ - rimOffset(height) - 0.0007
+        centerX - Math.sign(positions.getX(vertex)) * halfWidth,
+        y,
+        rearEdgeZ - rimOffset(y) - offset
       )
     }
-    opening.computeVertexNormals()
-    laptop.add(new Mesh(opening, rubber))
-
-    const ribCount = Math.floor((section.width - 0.02) / 0.022)
-    for (let rib = 0; rib < ribCount; rib++) {
-      const geometry = new PlaneGeometry(0.003, rearVentHeight - 0.004, 1, 4)
-      const positions = geometry.getAttribute('position')
-      const x = section.x + (rib - (ribCount - 1) / 2) * 0.022
-      for (let vertex = 0; vertex < positions.count; vertex++) {
-        const height = rearVentY + positions.getY(vertex)
-        positions.setXYZ(
-          vertex,
-          x - positions.getX(vertex),
-          height,
-          rearEdgeZ - rimOffset(height) - 0.001
+    geometry.computeVertexNormals()
+    return geometry
+  }
+  laptop.add(
+    new Mesh(
+      rearVentSurface(hingeRecessWidth - 0.03, rearVentHeight, 0, 0.0007),
+      rubber
+    )
+  )
+  const grilleGeometries: PlaneGeometry[] = []
+  for (const section of rearVentSections) {
+    for (let hole = 0; hole < section.count; hole++) {
+      grilleGeometries.push(
+        rearVentSurface(
+          rearVentHoleWidth,
+          rearVentHoleHeight,
+          section.x + (hole - (section.count - 1) / 2) * rearVentHolePitch,
+          0.001
         )
-      }
-      geometry.computeVertexNormals()
-      grilleGeometries.push(geometry)
+      )
     }
   }
-  const rearGrille = new Mesh(
-    mergeGeometries(grilleGeometries),
-    new MeshStandardMaterial({
-      color: '#292d32',
-      metalness: 0.35,
-      roughness: 0.72,
-      envMapIntensity: 0.2,
-    })
+  laptop.add(
+    new Mesh(
+      mergeGeometries(grilleGeometries),
+      new MeshBasicMaterial({color: '#010203', toneMapped: false})
+    )
   )
-  laptop.add(rearGrille)
   for (const geometry of grilleGeometries) geometry.dispose()
 
   const lid = new Group()
   lid.position.set(0, -0.02, lidZ)
   lid.rotation.x = -0.2
   laptop.add(lid)
-  const shell = slab(bodyWidth, bodyDepth, 0.05, 0.15, aluminum, 0.008, true)
-  shell.position.y = bodyDepth / 2
+  const shell = slab(
+    bodyWidth,
+    lidHeight,
+    0.05,
+    lidCornerRadius,
+    aluminum,
+    0.008,
+    true
+  )
+  shell.position.y = lidHeight / 2
   lid.add(shell)
   // Reuse the site's vector mark. Keep it on the outer face of the lid and
   // flip SVG's downward Y axis so the logo reads upright when viewed behind.
@@ -859,27 +1230,27 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
   const apple = new Mesh(appleGeometry, appleMaterial)
   apple.scale.set(0.025, -0.025, 0.025)
   apple.rotation.y = Math.PI
-  apple.position.set(0, bodyDepth / 2, -0.034)
+  apple.position.set(0, lidHeight / 2, -0.034)
   lid.add(apple)
   const bezel = slab(
-    4.13,
-    bodyDepth - 0.07,
+    bodyWidth - 2 * bezelInset,
+    lidHeight - 2 * bezelInset,
     0.008,
-    0.12,
+    lidCornerRadius - bezelInset,
     new MeshBasicMaterial({color: '#08090c', toneMapped: false}),
     0.003,
     true
   )
-  bezel.position.set(0, bodyDepth / 2, 0.032)
+  bezel.position.set(0, lidHeight / 2, 0.032)
   lid.add(bezel)
 
-  const screenWidth = 4.01
+  const screenWidth = bodyWidth - 2 * displayInset
   const screenHeight = (screenWidth * 2234) / 3456
   const halfWidth = screenWidth / 2
   const halfHeight = screenHeight / 2
-  // Only the top display corners are rounded. Radii are estimated from Apple's
-  // front-view product photo; the notch is part of the same glass contour.
-  const cornerRadius = 0.065
+  // Keep the upper corners aligned with the lid by subtracting the same inset
+  // from both the outline and its radius. The bottom display corners stay square.
+  const cornerRadius = lidCornerRadius - displayInset
   const notchHalfWidth = 0.215
   const notchDepth = 0.08
   const notchShoulderRadius = 0.012
@@ -950,9 +1321,27 @@ export const createLaptopModel = (screenTexture: CanvasTexture) => {
       toneMapped: false,
     })
   )
-  const screenTop = bodyDepth - 0.105
+  const screenTop = lidHeight - displayInset
   screen.position.set(0, screenTop - halfHeight, 0.041)
   lid.add(screen)
+  // A faint reflective layer adds glass highlights without dimming the display.
+  // Reuse the display contour so reflections respect the notch and corners.
+  const screenGlass = new Mesh(
+    screenGeometry,
+    new MeshPhysicalMaterial({
+      color: '#000000',
+      roughness: 0.28,
+      specularIntensity: 0.45,
+      envMapIntensity: 0.3,
+      transparent: true,
+      opacity: 0.12,
+      blending: AdditiveBlending,
+      depthWrite: false,
+    })
+  )
+  screenGlass.position.copy(screen.position)
+  screenGlass.position.z += 0.0005
+  lid.add(screenGlass)
   const camera = new Mesh(
     new CircleGeometry(0.013, 24),
     new MeshStandardMaterial({
