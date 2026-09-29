@@ -24,6 +24,7 @@ export default function Laptop({fallback}: ILaptopProps) {
     if (!element || !surface) return
 
     let cancelled = false
+    const controller = new AbortController()
     const fail = () => {
       if (cancelled) return
       scene.current?.dispose()
@@ -36,9 +37,18 @@ export default function Laptop({fallback}: ILaptopProps) {
         if (!entries.some(entry => entry.isIntersecting)) return
         observer.disconnect()
         import('./laptopScene')
-          .then(({createLaptopScene}) => {
+          .then(async ({createLaptopScene}) => {
             if (cancelled) return
-            scene.current = createLaptopScene(surface, fail)
+            const nextScene = await createLaptopScene(
+              surface,
+              fail,
+              controller.signal
+            )
+            if (cancelled) {
+              nextScene.dispose()
+              return
+            }
+            scene.current = nextScene
             setReady(true)
           })
           .catch(fail)
@@ -49,6 +59,7 @@ export default function Laptop({fallback}: ILaptopProps) {
 
     return () => {
       cancelled = true
+      controller.abort()
       observer.disconnect()
       scene.current?.dispose()
       scene.current = null

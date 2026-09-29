@@ -16,19 +16,19 @@ import {
   Vector3,
   WebGLRenderer,
 } from 'three'
-import type {Material} from 'three'
 import {TrackballControls} from 'three/addons/controls/TrackballControls.js'
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js'
 
 import {BANNER_IMAGES} from '#data/banner'
 import {COLOR, DURATION} from '#styles/theme'
-import {createLaptopModel} from './laptopModel'
+import {loadLaptopModel} from './loadLaptopModel'
 
-export type LaptopScene = ReturnType<typeof createLaptopScene>
+export type LaptopScene = Awaited<ReturnType<typeof createLaptopScene>>
 
-export const createLaptopScene = (
+export const createLaptopScene = async (
   canvas: HTMLCanvasElement,
-  onError: () => void
+  onError: () => void,
+  signal: AbortSignal
 ) => {
   const renderer = new WebGLRenderer({canvas, alpha: true, antialias: true})
   const cleanups: (() => void)[] = []
@@ -62,26 +62,12 @@ export const createLaptopScene = (
     texture.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 4)
     cleanups.push(() => texture.dispose())
 
-    const {laptop, textures, appleMaterial} = createLaptopModel(texture)
+    const model = await loadLaptopModel(signal)
+    cleanups.push(model.dispose)
+    const {laptop, appleMaterial, screenMaterial} = model
+    screenMaterial.map = texture
+    screenMaterial.needsUpdate = true
     scene.add(laptop)
-    cleanups.push(() => {
-      const geometries = new Set<Mesh['geometry']>()
-      const materials = new Set<Material>()
-      laptop.traverse(object => {
-        if (!(object instanceof Mesh)) return
-        geometries.add(object.geometry)
-        const objectMaterials = Array.isArray(object.material)
-          ? object.material
-          : [object.material]
-        objectMaterials.forEach(material => materials.add(material))
-        // Instanced meshes also own instance buffers.
-        if ('dispose' in object && typeof object.dispose === 'function')
-          object.dispose()
-      })
-      geometries.forEach(geometry => geometry.dispose())
-      materials.forEach(material => material.dispose())
-      textures.forEach(texture => texture.dispose())
-    })
 
     const room = new RoomEnvironment()
     const pmrem = new PMREMGenerator(renderer)

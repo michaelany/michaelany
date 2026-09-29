@@ -10,6 +10,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
+        globPatterns: ['**/*.{js,wasm,css,html,glb}'],
         navigateFallbackDenylist: [/^\/.*\.[^/]+$/],
       },
       includeAssets: [
