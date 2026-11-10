@@ -1,4 +1,8 @@
 import type {ThemeOptions, Shadows} from '@mui/material'
+import {alpha} from '@mui/material/styles'
+
+const textColor = '#282c34'
+const errorColor = '#ef5350'
 
 export const COLOR = {
   white: '#fff',
@@ -9,10 +13,11 @@ export const COLOR = {
   darkBlue: '#568bd0',
   darkRed: '#cf7e63',
   default: '#b0b0b0',
-  text: '#282c34',
+  text: textColor,
+  textAlpha: alpha(textColor, 0.12),
   secondText: '#6d6d6d',
-  error: '#ef5350',
-  errorAlpha: `rgba(239, 83, 80, 0.2)`,
+  error: errorColor,
+  errorAlpha: alpha(errorColor, 0.2),
 }
 
 export const DURATION = {
@@ -185,6 +190,41 @@ const THEME: ThemeOptions = {
       },
       defaultProps: {
         size: 'large',
+      },
+    },
+    MuiSlider: {
+      styleOverrides: {
+        root: {
+          minWidth: 0,
+          color: 'inherit',
+          height: 4,
+        },
+        rail: {
+          opacity: 0.15,
+        },
+        track: {
+          boxSizing: 'border-box',
+        },
+        thumb: {
+          width: 16,
+          height: 16,
+          '@media (hover: hover)': {
+            '&:hover': {
+              boxShadow: `0 0 0 8px ${COLOR.textAlpha}`,
+            },
+          },
+          '@media (hover: none)': {
+            '&:active': {
+              boxShadow: `0 0 0 8px ${COLOR.textAlpha}`,
+            },
+          },
+          '&.Mui-focusVisible': {
+            boxShadow: `0 0 0 8px ${COLOR.textAlpha}`,
+          },
+          '&.Mui-active': {
+            boxShadow: `0 0 0 14px ${COLOR.textAlpha}`,
+          },
+        },
       },
     },
     MuiStepper: {
@@ -404,7 +444,7 @@ const THEME: ThemeOptions = {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backdropFilter: 'blur(8px)',
+          backdropFilter: 'blur(4px)',
         },
       },
     },

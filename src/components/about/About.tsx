@@ -3,8 +3,6 @@ import {useTranslation} from 'react-i18next'
 import {Link} from 'react-router-dom'
 import {Link as MuiLink} from '@mui/material'
 import type {ReactNode} from 'react'
-
-import './About.scss'
 import {
   SurfingRounded as SurfingIcon,
   SchoolRounded as SchoolIcon,
@@ -24,6 +22,7 @@ import {
   SportsEsportsRounded as SportsEsportsIcon,
 } from '@mui/icons-material'
 
+import './About.scss'
 import {Sections, Info, Tooltip} from '#components/common'
 import {PROJECTS_COUNT} from '#data/projects'
 import {CONTACT_LINK} from '#data/common'

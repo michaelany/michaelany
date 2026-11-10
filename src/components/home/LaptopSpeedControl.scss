@@ -1,0 +1,78 @@
+$control-size: 44px;
+
+.LaptopSpeedControl {
+  display: flex;
+}
+
+.LaptopSpeedControl-Popper {
+  z-index: 3;
+}
+
+.LaptopSpeedControl-Panel.MuiPaper-root {
+  width: 288px;
+  max-width: calc(100vw - 32px);
+  padding: 16px;
+  border: 1px solid v.$color_text;
+  border-radius: v.$border-radius * 2;
+}
+
+.LaptopSpeedControl-Value {
+  display: block;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
+
+.LaptopSpeedControl-Adjust.MuiIconButton-root {
+  flex-shrink: 0;
+  width: $control-size;
+  height: $control-size;
+  background-color: rgba(v.$color_text, 0.06);
+  color: inherit;
+  &.Mui-focusVisible {
+    background-color: rgba(v.$color_text, 0.12);
+  }
+  &.Mui-disabled {
+    color: rgba(v.$color_text, 0.3);
+  }
+  @include m.hover {
+    background-color: rgba(v.$color_text, 0.12);
+  }
+}
+
+.LaptopSpeedControl-Presets {
+  margin-top: 12px;
+  .MuiButton-root {
+    min-width: 0;
+    min-height: $control-size;
+    padding: 0;
+    border-color: v.$color_light-grey;
+    font-size: v.$font-size_smaller;
+    &:not(:last-child) {
+      border-right-color: transparent;
+    }
+    &::after {
+      @include m.pseudo;
+      z-index: 1;
+      inset: -1px;
+      border: 1px solid v.$color_text;
+      border-radius: inherit;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity v.$duration_short v.$easing_in-out;
+    }
+    &.Mui-focusVisible {
+      background-color: rgba(v.$color_text, 0.12);
+      &::after {
+        opacity: 1;
+      }
+    }
+    @include m.hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

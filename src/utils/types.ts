@@ -26,6 +26,7 @@ export type TColor =
   | 'violet'
 
 export type TEffect =
+  | 'plain'
   | 'top'
   | 'right'
   | 'bottom'

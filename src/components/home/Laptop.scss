@@ -1,30 +1,28 @@
 .Laptop {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   width: 100%;
 }
 
 .Laptop-Stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 10 / 11;
+  aspect-ratio: 1;
 }
 
-.Laptop-Controls {
+.Laptop-Poster {
   position: absolute;
-  z-index: 1;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.Laptop-Control.MuiFab-root {
-  margin: 0;
-  flex-shrink: 0;
-  &[aria-pressed='true'] {
-    outline: 2px solid white;
-    outline-offset: 3px;
+  inset: 0;
+  pointer-events: none;
+  &::before {
+    @include m.pseudo;
+    @include m.retinaImg('assets/img/shapes/macbook-poster', 'webp');
+    inset: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
   }
 }
 
@@ -35,23 +33,210 @@
   align-items: center;
 }
 
+.Laptop-FallbackFigure {
+  position: relative;
+  &::before {
+    @include m.pseudo;
+    @include m.retinaImg('assets/img/shapes/reflection', 'png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 33%;
+    height: 78%;
+    top: 0.5%;
+    right: 11.5%;
+    z-index: 1;
+  }
+}
+
+.Laptop-FallbackImage {
+  width: 100%;
+  height: auto;
+}
+
+.Laptop-FallbackScreen {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.Laptop-Loading {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  pointer-events: none;
+}
+
 .Laptop-Canvas {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  visibility: hidden;
-  border-radius: v.$border-radius;
-  .Laptop_ready & {
-    visibility: visible;
-  }
+  pointer-events: none;
+  border-radius: v.$border-radius * 2;
+}
+
+.Laptop-Interaction {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   .Laptop_interactive & {
+    pointer-events: auto;
     cursor: grab;
     &:active {
       cursor: grabbing;
     }
   }
   &:focus-visible {
+    outline: none;
+  }
+}
+
+.Laptop-Frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity v.$duration_short v.$easing_in-out;
+  .Laptop_interactive & {
+    opacity: 1;
+  }
+}
+
+.Laptop-FrameCorner {
+  position: absolute;
+  transition: stroke-width v.$duration_short v.$easing_in-out;
+  &:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  &:nth-child(2) {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+  }
+  &:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+  &:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(270deg);
+  }
+  .Laptop-Interaction:focus-visible + .Laptop-Frame & {
+    stroke-width: 4px;
+  }
+}
+
+.Laptop-LidHotspot {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: grab;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity v.$duration_short v.$easing_in-out,
+    visibility 0s v.$duration_short;
+  &_visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
+    .Laptop-LidHotspotMarker {
+      transform: scale(1);
+    }
+  }
+  &_hovered {
+    cursor: pointer;
+  }
+  &_hovered .Laptop-LidHotspotMarker::before,
+  &:focus-visible .Laptop-LidHotspotMarker::before {
+    background-color: rgba(white, 0.3);
+  }
+  @media (hover: none) {
+    &:active .Laptop-LidHotspotMarker::before {
+      background-color: rgba(white, 0.3);
+    }
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.Laptop-LidHotspotMarker {
+  position: absolute;
+  inset: 4px;
+  border-radius: inherit;
+  pointer-events: none;
+  scale: var(--laptop-hotspot-scale, 1);
+  transform: scale(0);
+  transition: transform v.$duration_short v.$easing_in-out;
+  &::before,
+  &::after {
+    @include m.pseudo;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+  }
+  &::before {
+    background-color: rgba(white, 0.16);
+    transition: background-color v.$duration_short v.$easing_in-out;
+  }
+  &::after {
+    animation: laptopHotspotPulse v.$duration_longest v.$easing_in-out infinite;
+  }
+}
+
+.Laptop-Controls {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
+  max-width: 100%;
+}
+
+.Laptop-Control.MuiFab-root {
+  flex-shrink: 0;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  &[aria-pressed='true'] {
     outline: 2px solid white;
-    outline-offset: -2px;
+    outline-offset: 3px;
+  }
+  &.Mui-disabled {
+    opacity: 0.35;
+    color: white;
+    background-color: transparent;
+  }
+  @include m.hover {
+    &:not(.Mui-disabled) {
+      background-color: rgba(white, 0.12);
+    }
   }
 }

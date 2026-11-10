@@ -1,4 +1,4 @@
-# Project Context
+# Project Instructions
 
 ## Overview
 
@@ -6,80 +6,24 @@ This repository is Michael Any's personal portfolio website. It is a responsive,
 accessible SPA and PWA built with React 19, TypeScript, Vite, React Router,
 Material UI, Sass, and i18next. The site supports English and Russian.
 
-## Project Structure
+Consistency and simplicity are the main design priorities. Before choosing an
+implementation, search for features that solve the same problem elsewhere in
+the project. Check their markup, styles, and shared helpers as applicable.
+Reuse the established approach when it meets the requirements, and follow its
+structure and naming. Keep changes scoped to the task. Introduce abstractions
+or dependencies only for a concrete need.
 
-- `src/components/` contains the UI, grouped by page or domain.
-- `src/components/common/` contains components reused across multiple domains.
-- `src/components/base/` contains application-shell components.
-- `src/data/` contains static portfolio, technology, video, and shared data.
-- `src/translations/` contains the English and Russian translation dictionaries.
-- `src/styles/` contains global styles, Sass variables, mixins, MUI overrides,
-  reusable presentational classes, and the MUI theme.
-- `src/utils/` contains shared constants, helpers, i18n setup, and types.
-- `tests/` contains Playwright tests.
-- `public/` contains files served without bundler processing.
+## Required Reading
 
-Routes are declared in `src/components/App.tsx` and page components are lazy
-loaded. Reuse the path aliases from `tsconfig.json`, such as `#components`,
-`#data`, `#styles`, `#translations`, and `#utils`.
+Before changing project code, read and follow both documents:
 
-## Component Rules
+- [Project architecture](docs/architecture.md): directory responsibilities,
+  component boundaries, and shared code placement.
+- [Code style](docs/code-style.md): React patterns, declaration order,
+  naming, TypeScript, styling, and content conventions.
 
-- Keep page-specific components and styles in their existing domain folder.
-- Put a component in `common/` only when it is genuinely reused across domains.
-- Do not create a React component solely to reuse styles.
-- For simple visual patterns applied to MUI or native elements, add a reusable
-  class to `src/styles/partials.scss`. Existing examples are `.Button`, `.Link`,
-  and `.Chip`.
-- Create a separate React component when it owns meaningful child structure,
-  logic, state, or behavior that changes how it works.
-- Prefer the simplest implementation that fits the existing architecture.
-- Declare exported components with an inline export and a function declaration,
-  such as `export default function Component()`. For components wrapped in `memo`
-  or another wrapper, assign the wrapped component to a `const` and export it at
-  the bottom of the file.
-- Use arrow functions for local helper components within a file.
-
-## Styling Rules
-
-- Follow the existing BEM-inspired naming convention:
-  `.Block`, `.Block-Element`, and `.Block_modifier`.
-- Keep domain-specific styles beside their component in a matching `.scss` file.
-- Keep reusable, structure-independent visual classes in
-  `src/styles/partials.scss`.
-- Use values from `src/styles/_variables.scss`, including `$colors-map`, instead
-  of duplicating colors, durations, breakpoints, or other design tokens.
-- Use the responsive and interaction mixins from `src/styles/_mixins.scss`, such
-  as `m.xs`, `m.sm`, `m.md`, `m.lg`, and `m.hover`.
-- Vite automatically makes the Sass `v` and `m` namespaces available to
-  component styles.
-- Put broad Material UI overrides in `src/styles/overrides.scss`; use reusable
-  partial classes for opt-in variants and local SCSS for domain layout.
-- Preserve keyboard navigation, focus states, semantic HTML, and responsive
-  behavior when changing UI.
-
-## TypeScript and Content
-
-- Keep shared types in `src/utils/types.ts` and reuse existing unions such as
-  `TColor` rather than duplicating them.
-- Before using or changing a third-party library API, inspect the installed
-  package version and its local TypeScript declarations first. Use official,
-  version-matched documentation as a secondary source. Treat MCP servers and
-  `llms.txt` as supplementary context, and do not assume an API from memory or
-  from another library version.
-- Follow the configured formatting: single quotes, no semicolons, no spaces
-  inside braces, and trailing commas where supported.
-- Match the surrounding project conventions when writing or changing code.
-  Prefer `const`, clear inferred types, and arrow functions for helpers and
-  callbacks. Follow the component declaration rules above; do not convert
-  exported components to arrow functions merely for stylistic modernization.
-- Apply KISS: keep control flow straightforward, avoid speculative abstractions,
-  and add helpers only when they remove duplication or clarify responsibility.
-  Keep style changes scoped to the code being worked on.
-- When adding translatable interface text, update both `src/translations/en.ts`
-  and `src/translations/ru.ts` and keep their key structures aligned.
-- Follow the existing image conventions, including responsive and retina assets,
-  rather than introducing a new asset-loading pattern.
+These documents are part of the project instructions. Keep task-specific
+user directions authoritative when they differ from documented defaults.
 
 ## Validation
 
@@ -103,3 +47,22 @@ generated files in `dist/` directly.
 - Create commits only when explicitly requested.
 - Never push, publish branches or tags, or create pull requests unless explicitly
   requested in the same turn.
+
+## Maintaining These Instructions
+
+- Treat these instructions and their linked documents as living project
+  documentation. Agents may update them during authorized work to record
+  explicit user agreements, verified recurring conventions, or confirmed
+  changes to the project structure and tooling.
+- Do not turn a one-off implementation or an agent preference into a project
+  rule. Explicit user agreements take precedence over existing code; when
+  inferring a convention, inspect comparable code rather than copying an
+  isolated inconsistency.
+- Update the relevant document instead of appending every detail here.
+  Keep each rule in one place, merge duplicates, and remove outdated guidance.
+- Keep this root file brief. Add another document only when an existing
+  topic becomes difficult to navigate, and link it here with clear reading
+  instructions.
+- Keep documentation changes scoped to the task and mention them in the
+  handoff. Do not use documentation maintenance to relax working agreements
+  or authorize actions the user has not requested.

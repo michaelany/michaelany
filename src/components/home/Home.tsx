@@ -7,13 +7,13 @@ import Banner from './Banner'
 
 export default function Home() {
   // matches for key to responsive alternate animations reset
-  const md = useMediaQuery(QUERY_BREAKPOINT.md)
+  const isMd = useMediaQuery(QUERY_BREAKPOINT.md)
 
   return (
     <Sections
-      key={String(md)}
+      key={String(isMd)}
       firstSection={<Greeting />}
-      secondSection={<Banner />}
+      secondSection={<Banner isMd={isMd} />}
     />
   )
 }
