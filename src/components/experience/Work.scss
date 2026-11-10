@@ -1,4 +1,4 @@
 .Work {
-  border-radius: v.$border-radius;
+  border-radius: var(--mui-shape-borderRadius);
   border: 1px solid rgba(black, 0.12);
 }

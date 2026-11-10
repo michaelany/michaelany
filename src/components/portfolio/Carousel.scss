@@ -1,5 +1,5 @@
 .Carousel {
-  border-radius: v.$border-radius;
+  border-radius: var(--mui-shape-borderRadius);
   overflow: hidden;
   &:not(:last-child) {
     margin-bottom: 40px;

@@ -1,5 +1,4 @@
 @use 'sass:list';
-@use 'sass:math';
 
 $pages: 'about', 'skills', 'experience', 'portfolio', 'blog', 'contact';
 
@@ -13,7 +12,7 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'blog', 'contact';
     right: 0;
     width: 8px;
     height: 54px;
-    border-radius: math.div(v.$border-radius, 2);
+    border-radius: calc(var(--mui-shape-borderRadius) / 2);
     transition:
       transform v.$duration_medium-long v.$easing_out,
       background-color v.$duration_short v.$easing_in-out;

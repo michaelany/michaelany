@@ -17,7 +17,7 @@ $projects:
   aspect-ratio: 1 / 0.7035;
   width: 100%;
   background-color: white;
-  border-radius: v.$border-radius;
+  border-radius: var(--mui-shape-borderRadius);
   transform-style: preserve-3d;
   &.Mui-focusVisible {
     .ProjectLink-View {

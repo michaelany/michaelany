@@ -267,7 +267,7 @@
 
 .ColorInteract {
   position: relative;
-  border-radius: v.$border-radius;
+  border-radius: var(--mui-shape-borderRadius);
   @each $color in v.$accent-colors {
     &_color_#{$color} {
       color: var(--mui-palette-#{$color}-main);
@@ -278,7 +278,7 @@
   }
   &::before {
     @include m.pseudo;
-    border-radius: v.$border-radius;
+    border-radius: var(--mui-shape-borderRadius);
     width: 100%;
     height: 100%;
     opacity: 0;

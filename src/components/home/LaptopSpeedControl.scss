@@ -13,7 +13,7 @@ $control-size: 44px;
   max-width: calc(100vw - 32px);
   padding: 16px;
   border: 1px solid var(--mui-palette-text-primary);
-  border-radius: v.$border-radius * 2;
+  border-radius: calc(var(--mui-shape-borderRadius) * 2);
 }
 
 .LaptopSpeedControl-Value {

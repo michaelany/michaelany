@@ -5,7 +5,7 @@
 .Video-Player {
   @include m.animation(fadeInZoomOutSm);
   background-color: black;
-  border-radius: v.$border-radius;
+  border-radius: var(--mui-shape-borderRadius);
   overflow: hidden;
   margin-bottom: 40px;
   @include m.md {
