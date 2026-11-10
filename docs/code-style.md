@@ -116,8 +116,9 @@ components to guide choices this document leaves open.
 - Follow the existing BEM-inspired naming convention. Use the standalone
   component name for its local block and prefix its elements and modifiers with
   that name, as in `.Block`, `.Block-Element`, and `.Block_modifier`.
-- Use values from `src/styles/_variables.scss`, including `$colors-map`, instead
-  of duplicating colors, durations, breakpoints, or other design tokens.
+- Use MUI palette CSS variables for shared colors. Use values from
+  `src/styles/_variables.scss` for shared durations, breakpoints, and other
+  Sass tokens.
 - Use the responsive and interaction mixins from `src/styles/_mixins.scss`, such
   as `m.xs`, `m.sm`, `m.md`, `m.lg`, and `m.hover`.
 - Place mixin calls at the start of each rule. Put `m.hover` and breakpoint
