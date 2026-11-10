@@ -11,7 +11,7 @@ import {CloseRounded as CloseIcon} from '@mui/icons-material'
 import './Message.scss'
 import santaImg from '#assets/img/pictures/santa.png'
 import {QUERY_BREAKPOINT} from '#utils/constants'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 
 export default function Message() {
   const [open, setOpen] = useState<boolean>(false)

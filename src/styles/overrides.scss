@@ -21,7 +21,7 @@
 .MuiIconButton {
   &-root {
     @include m.hover {
-      background-color: rgba(v.$color_text, 0.04);
+      background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.04);
     }
   }
 }
@@ -50,9 +50,11 @@
     .App_color_white & {
       background-color: rgba(white, v.$backdrop-opacity);
     }
-    @each $key, $value in v.$colors-map {
-      .App_color_#{$key} & {
-        background-color: rgba($value, v.$backdrop-opacity);
+    @each $color in v.$accent-colors {
+      .App_color_#{$color} & {
+        background-color: rgb(
+          var(--mui-palette-#{$color}-mainChannel) / v.$backdrop-opacity
+        );
       }
     }
   }

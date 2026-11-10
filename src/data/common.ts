@@ -49,7 +49,7 @@ export const COMPANY: ICompanyData = {
       publicImg('companies/7glyphs.png'),
       publicImg('companies/7glyphs@2x.png'),
     ],
-    color: 'default',
+    color: 'neutral',
     href: 'https://7glyphs.com',
   },
   t1: {

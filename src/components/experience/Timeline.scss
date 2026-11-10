@@ -15,10 +15,10 @@
 }
 
 .Timeline-Button {
-  color: v.$color_dark-violet;
-  background-color: rgba(v.$color_violet, 0.2);
+  color: var(--mui-palette-violet-dark);
+  background-color: rgb(var(--mui-palette-violet-mainChannel) / 0.2);
   @include m.hover {
-    background-color: rgba(v.$color_violet, 0.4);
+    background-color: rgb(var(--mui-palette-violet-mainChannel) / 0.4);
     .Timeline-ButtonIcon {
       transform: rotate(90deg);
       &_refresh {

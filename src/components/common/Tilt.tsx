@@ -2,7 +2,7 @@ import ReactTilt from 'react-parallax-tilt'
 import type {AllHTMLAttributes, JSX} from 'react'
 
 import {IS_MOBILE_DEVICE} from '#utils/constants'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 
 interface ITiltProps extends AllHTMLAttributes<HTMLElement> {
   children: JSX.Element

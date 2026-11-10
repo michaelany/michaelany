@@ -1,64 +1,37 @@
 import type {ThemeOptions, Shadows} from '@mui/material'
-import {alpha} from '@mui/material/styles'
+import {alpha, type SimplePaletteColorOptions} from '@mui/material/styles'
 
-const textColor = '#282c34'
-const errorColor = '#ef5350'
+import {
+  BORDER_RADIUS,
+  BREAKPOINT,
+  COLOR,
+  DURATION,
+  EASING,
+  FONT_SIZE,
+} from './tokens'
 
-export const COLOR = {
-  white: '#fff',
-  green: '#2fd0c8',
-  darkGreen: '#2caca6',
-  grass: '#6ed485',
-  blue: '#64a6fc',
-  darkBlue: '#568bd0',
-  darkRed: '#cf7e63',
-  default: '#b0b0b0',
-  text: textColor,
-  textAlpha: alpha(textColor, 0.12),
-  secondText: '#6d6d6d',
-  error: errorColor,
-  errorAlpha: alpha(errorColor, 0.2),
+declare module '@mui/material/styles' {
+  interface PaletteOptions {
+    neutral?: SimplePaletteColorOptions
+    blue?: SimplePaletteColorOptions
+    green?: SimplePaletteColorOptions
+    grass?: SimplePaletteColorOptions
+    yellow?: SimplePaletteColorOptions
+    red?: SimplePaletteColorOptions
+    violet?: SimplePaletteColorOptions
+  }
 }
 
-export const DURATION = {
-  shortest: 150,
-  shorter: 200,
-  short: 250,
-  standard: 300,
-  medium: 500,
-  mediumLong: 650,
-  long: 800,
-  longer: 1000,
-  longest: 2000,
-  lingering: 4000,
-  alternate: 20000,
-}
+const borderRadiusQuarter = BORDER_RADIUS / 4
 
-export const EASING = {
-  inOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  out: 'cubic-bezier(0, 0, 0.2, 1)',
-}
-
-export const BREAKPOINT = {
-  xs: 399,
-  sm: 599,
-  md: 959,
-  lg: 1279,
-}
-
-const fontSize = {
-  base: 18,
-  smaller: 16,
-}
-
-const borderRadius = 8
-const borderRadiusQuarter = borderRadius / 4
+const charcoalAlpha = alpha(COLOR.charcoal, 0.12)
 
 const THEME: ThemeOptions = {
+  cssVariables: true,
   typography: {
     fontFamily: '"Neutra Text", sans-serif',
-    htmlFontSize: fontSize.base,
-    fontSize: fontSize.base,
+    htmlFontSize: FONT_SIZE.base,
+    fontSize: FONT_SIZE.base,
     body1: {
       fontSize: '1rem',
       lineHeight: 1.5,
@@ -83,19 +56,52 @@ const THEME: ThemeOptions = {
     },
   },
   palette: {
+    neutral: {
+      main: COLOR.neutral,
+      dark: COLOR.neutralDark,
+      light: COLOR.neutralLight,
+    },
+    blue: {
+      main: COLOR.blue,
+      dark: COLOR.blueDark,
+      light: COLOR.blueLight,
+    },
+    green: {
+      main: COLOR.green,
+      dark: COLOR.greenDark,
+      light: COLOR.greenLight,
+    },
+    grass: {
+      main: COLOR.grass,
+      dark: COLOR.grassDark,
+    },
+    yellow: {
+      main: COLOR.yellow,
+      dark: COLOR.yellowDark,
+      light: COLOR.yellowLight,
+    },
+    red: {
+      main: COLOR.red,
+      dark: COLOR.redDark,
+      light: COLOR.redLight,
+    },
+    violet: {
+      main: COLOR.violet,
+      dark: COLOR.violetDark,
+    },
     text: {
-      primary: COLOR.text,
-      secondary: COLOR.secondText,
+      primary: COLOR.charcoal,
+      secondary: COLOR.grey,
     },
     primary: {
-      light: COLOR.blue,
       main: COLOR.blue,
-      dark: COLOR.darkBlue,
+      dark: COLOR.blueDark,
+      light: COLOR.blue,
     },
     secondary: {
-      light: COLOR.green,
       main: COLOR.green,
-      dark: COLOR.darkGreen,
+      dark: COLOR.greenDark,
+      light: COLOR.green,
     },
     info: {
       light: COLOR.white,
@@ -103,9 +109,9 @@ const THEME: ThemeOptions = {
       dark: COLOR.white,
     },
     error: {
-      light: COLOR.error,
-      main: COLOR.error,
-      dark: COLOR.error,
+      light: COLOR.scarlet,
+      main: COLOR.scarlet,
+      dark: COLOR.scarlet,
     },
   },
   transitions: {
@@ -122,7 +128,7 @@ const THEME: ThemeOptions = {
   },
   shadows: Array(25).fill('none') as Shadows,
   shape: {
-    borderRadius,
+    borderRadius: BORDER_RADIUS,
   },
   components: {
     MuiButton: {
@@ -173,11 +179,11 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         tooltip: {
-          fontSize: fontSize.smaller,
+          fontSize: FONT_SIZE.smaller,
           fontWeight: 'normal',
-          color: COLOR.text,
+          color: COLOR.charcoal,
           backgroundColor: COLOR.white,
-          border: `1px solid ${COLOR.text}`,
+          border: `1px solid ${COLOR.charcoal}`,
           padding: '6px 12px',
         },
       },
@@ -185,7 +191,7 @@ const THEME: ThemeOptions = {
     MuiIconButton: {
       styleOverrides: {
         root: {
-          color: COLOR.secondText,
+          color: COLOR.grey,
         },
       },
       defaultProps: {
@@ -210,19 +216,19 @@ const THEME: ThemeOptions = {
           height: 16,
           '@media (hover: hover)': {
             '&:hover': {
-              boxShadow: `0 0 0 8px ${COLOR.textAlpha}`,
+              boxShadow: `0 0 0 8px ${charcoalAlpha}`,
             },
           },
           '@media (hover: none)': {
             '&:active': {
-              boxShadow: `0 0 0 8px ${COLOR.textAlpha}`,
+              boxShadow: `0 0 0 8px ${charcoalAlpha}`,
             },
           },
           '&.Mui-focusVisible': {
-            boxShadow: `0 0 0 8px ${COLOR.textAlpha}`,
+            boxShadow: `0 0 0 8px ${charcoalAlpha}`,
           },
           '&.Mui-active': {
-            boxShadow: `0 0 0 14px ${COLOR.textAlpha}`,
+            boxShadow: `0 0 0 14px ${charcoalAlpha}`,
           },
         },
       },
@@ -231,7 +237,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           padding: 24,
-          borderRadius: borderRadius,
+          borderRadius: BORDER_RADIUS,
         },
       },
     },
@@ -258,7 +264,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           fontSize: 24,
-          color: COLOR.default,
+          color: COLOR.neutral,
           '&.Mui-completed': {
             fill: COLOR.grass,
           },
@@ -289,7 +295,7 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         root: {
-          fontSize: fontSize.smaller,
+          fontSize: FONT_SIZE.smaller,
           fontWeight: 'normal',
         },
         avatar: {
@@ -334,7 +340,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           backgroundColor: COLOR.white,
-          borderRadius: borderRadius,
+          borderRadius: BORDER_RADIUS,
         },
       },
     },
@@ -342,11 +348,11 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           backgroundColor: 'transparent',
-          borderRadius: borderRadius,
+          borderRadius: BORDER_RADIUS,
           '&.Mui-error': {
-            backgroundColor: COLOR.errorAlpha,
+            backgroundColor: alpha(COLOR.scarlet, 0.2),
             '.MuiSvgIcon-root': {
-              color: COLOR.error,
+              color: COLOR.scarlet,
             },
           },
           '&.Mui-focused:not(.Mui-error)': {
@@ -362,7 +368,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           '&.Mui-focused:not(.Mui-error)': {
-            color: COLOR.darkGreen,
+            color: COLOR.greenDark,
           },
         },
       },
@@ -370,7 +376,7 @@ const THEME: ThemeOptions = {
     MuiInputAdornment: {
       styleOverrides: {
         root: {
-          color: COLOR.default,
+          color: COLOR.neutral,
         },
       },
     },
@@ -392,10 +398,10 @@ const THEME: ThemeOptions = {
     MuiTab: {
       styleOverrides: {
         root: {
-          fontSize: fontSize.base,
+          fontSize: FONT_SIZE.base,
           color: COLOR.white,
-          borderTopLeftRadius: borderRadius,
-          borderTopRightRadius: borderRadius,
+          borderTopLeftRadius: BORDER_RADIUS,
+          borderTopRightRadius: BORDER_RADIUS,
           borderBottomLeftRadius: borderRadiusQuarter,
           borderBottomRightRadius: borderRadiusQuarter,
         },
@@ -422,7 +428,7 @@ const THEME: ThemeOptions = {
     MuiSnackbarContent: {
       styleOverrides: {
         root: {
-          backgroundColor: COLOR.error,
+          backgroundColor: COLOR.scarlet,
         },
       },
     },

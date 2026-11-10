@@ -1,11 +1,11 @@
-import {COLOR} from '#styles/theme'
+import {COLOR} from './tokens'
 
 const STYLES = [
   {
     elementType: 'geometry',
     stylers: [
       {
-        hue: '#fb9674',
+        hue: COLOR.red,
       },
       {
         visibility: 'simplified',
@@ -25,7 +25,7 @@ const STYLES = [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLOR.secondText,
+        color: COLOR.grey,
       },
     ],
   },
@@ -43,7 +43,7 @@ const STYLES = [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLOR.secondText,
+        color: COLOR.grey,
       },
       {
         visibility: 'on',
@@ -76,7 +76,7 @@ const STYLES = [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: COLOR.secondText,
+        color: COLOR.grey,
       },
       {
         visibility: 'on',
@@ -144,7 +144,7 @@ const STYLES = [
     elementType: 'geometry',
     stylers: [
       {
-        color: COLOR.secondText,
+        color: COLOR.grey,
       },
     ],
   },
@@ -174,7 +174,7 @@ const STYLES = [
     elementType: 'labels',
     stylers: [
       {
-        color: '#f8c24f',
+        color: COLOR.yellow,
       },
       {
         visibility: 'on',

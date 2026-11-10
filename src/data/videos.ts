@@ -9,7 +9,7 @@ const VIDEOS: IVideo[] = [
   },
   {
     name: 'my-dreamdesk',
-    color: 'default',
+    color: 'neutral',
     date: new Date(2023, 6, 4),
     src: 'https://youtube.com/embed/pQzEh3D6lHg?si=55gcsn4QUwxmyvN0',
   },

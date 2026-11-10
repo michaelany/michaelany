@@ -29,9 +29,9 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'blog', 'contact';
     .App_color_white & {
       background-color: white;
     }
-    @each $key, $value in v.$colors-map {
-      .App_color_#{$key} & {
-        background-color: $value;
+    @each $color in v.$accent-colors {
+      .App_color_#{$color} & {
+        background-color: var(--mui-palette-#{$color}-main);
       }
     }
   }

@@ -17,7 +17,7 @@ export type TRoute =
 export type TColor =
   | 'alternate'
   | 'white'
-  | 'default'
+  | 'neutral'
   | 'blue'
   | 'green'
   | 'grass'
@@ -37,11 +37,7 @@ export type TEffect =
   | 'zoomOutSm'
 
 export type TCompanyName =
-  | 't1'
-  | 'sevenGlyphs'
-  | 'everpoint'
-  | 'mVideo'
-  | 'goRentals'
+  't1' | 'sevenGlyphs' | 'everpoint' | 'mVideo' | 'goRentals'
 
 export type TProjectType = 'app' | 'site' | 'landing' | 'admin'
 

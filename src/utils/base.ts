@@ -1,5 +1,5 @@
 import {MY_NAME, CONTACT_LINK} from '#data/common'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 
 export const handleAppLoaded = () => {
   const preloader = document.getElementById('preloader') as HTMLElement

@@ -21,7 +21,7 @@ import {TrackballControls} from 'three/addons/controls/TrackballControls.js'
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js'
 
 import {BANNER_IMAGES} from '#data/banner'
-import {COLOR, DURATION} from '#styles/theme'
+import {COLOR, DURATION} from '#styles/tokens'
 import {loadLaptopModel} from './loadLaptopModel'
 
 interface ILaptopSceneOptions {
@@ -109,7 +109,7 @@ const createScreen = () => {
     screenCanvas.width,
     screenCanvas.height
   )
-  screenBackground.addColorStop(0, COLOR.text)
+  screenBackground.addColorStop(0, COLOR.charcoal)
   screenBackground.addColorStop(1, '#10151d')
   const texture = new CanvasTexture(screenCanvas)
   texture.colorSpace = SRGBColorSpace
@@ -317,7 +317,7 @@ export const createLaptopScene = async ({
       room.dispose()
       pmrem.dispose()
     }
-    scene.add(new HemisphereLight(COLOR.white, COLOR.text, 2))
+    scene.add(new HemisphereLight(COLOR.white, COLOR.charcoal, 2))
     const light = new DirectionalLight(COLOR.white, 3)
     light.position.set(-3, 6, 5)
     scene.add(light)

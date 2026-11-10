@@ -20,12 +20,12 @@
     color: white;
     outline-color: white;
   }
-  @each $key, $value, $second-value in v.$colors-map {
-    .App_color_#{$key} & {
-      color: $value;
-      outline-color: $value;
+  @each $color in v.$accent-colors {
+    .App_color_#{$color} & {
+      color: var(--mui-palette-#{$color}-main);
+      outline-color: var(--mui-palette-#{$color}-main);
       &_dark {
-        color: rgba($second-value, v.$dark-alfa);
+        color: rgb(var(--mui-palette-#{$color}-darkChannel) / v.$dark-alfa);
       }
     }
   }
@@ -53,9 +53,9 @@
   .App_color_white & {
     color: white;
   }
-  @each $key, $value in v.$colors-map {
-    .App_color_#{$key} & {
-      color: $value;
+  @each $color in v.$accent-colors {
+    .App_color_#{$color} & {
+      color: var(--mui-palette-#{$color}-main);
     }
   }
   @include m.lg {
@@ -87,9 +87,9 @@
   @extend .Text;
   @include m.animation(fadeInBottom);
   margin-bottom: 2em;
-  color: v.$color_second-text;
+  color: var(--mui-palette-text-secondary);
   &_dark {
-    color: v.$color_text;
+    color: var(--mui-palette-text-primary);
   }
   &_noAnimation {
     animation: none;
@@ -103,57 +103,59 @@
   color: white;
   &_color_blue {
     &.MuiButton-text {
-      color: v.$color_dark-blue;
-      background-color: rgba(v.$color_blue, 0.2);
+      color: var(--mui-palette-blue-dark);
+      background-color: rgb(var(--mui-palette-blue-mainChannel) / 0.2);
       @include m.hover {
-        background-color: rgba(v.$color_blue, 0.4);
+        background-color: rgb(var(--mui-palette-blue-mainChannel) / 0.4);
       }
     }
   }
   &_color_green {
     &.MuiButton-text {
-      color: v.$color_dark-green;
-      background-color: rgba(v.$color_green, 0.2);
+      color: var(--mui-palette-green-dark);
+      background-color: rgb(var(--mui-palette-green-mainChannel) / 0.2);
       @include m.hover {
-        background-color: rgba(v.$color_green, 0.4);
+        background-color: rgb(var(--mui-palette-green-mainChannel) / 0.4);
       }
     }
   }
   &_color_red {
     &.MuiButton-text {
-      color: v.$color_dark-red;
-      background-color: rgba(v.$color_red, 0.2);
+      color: var(--mui-palette-red-dark);
+      background-color: rgb(var(--mui-palette-red-mainChannel) / 0.2);
       @include m.hover {
-        background-color: rgba(v.$color_red, 0.4);
+        background-color: rgb(var(--mui-palette-red-mainChannel) / 0.4);
       }
     }
   }
   &_color_white,
   .App_color_white & {
-    color: v.$color_text;
+    color: var(--mui-palette-text-primary);
     &,
     &:hover {
       background-color: white;
     }
     @include m.hover {
-      background-color: v.$color_light-grey;
+      background-color: var(--mui-palette-neutral-light);
     }
   }
-  @each $key, $value, $second-value in v.$colors-map {
-    .App_color_#{$key} & {
+  @each $color in v.$accent-colors {
+    .App_color_#{$color} & {
       &.MuiButton-text {
-        color: $second-value;
-        background-color: rgba($value, 0.2);
+        color: var(--mui-palette-#{$color}-dark);
+        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.2);
         @include m.hover {
-          background-color: rgba($value, 0.4);
+          background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.4);
         }
       }
       &.MuiButton-outlined:not(.MuiButton-colorInfo) {
-        color: $second-value;
-        border-color: rgba($second-value, 0.5);
+        color: var(--mui-palette-#{$color}-dark);
+        border-color: rgb(var(--mui-palette-#{$color}-darkChannel) / 0.5);
         @include m.hover {
-          border-color: $second-value;
-          background-color: rgba($second-value, 0.04);
+          border-color: var(--mui-palette-#{$color}-dark);
+          background-color: rgb(
+            var(--mui-palette-#{$color}-darkChannel) / 0.04
+          );
         }
       }
     }
@@ -168,7 +170,7 @@
 }
 
 .NavigationButton {
-  color: v.$color_text;
+  color: var(--mui-palette-text-primary);
   font-size: 32px;
   height: 54px;
   &.active {
@@ -193,13 +195,15 @@
       text-decoration-color: white;
     }
   }
-  @each $key, $value, $second-value in v.$colors-map {
-    .App_color_#{$key} &:not(.Link_white) {
-      color: $second-value;
-      outline-color: $second-value;
-      text-decoration-color: rgba($second-value, 0.3);
+  @each $color in v.$accent-colors {
+    .App_color_#{$color} &:not(.Link_white) {
+      color: var(--mui-palette-#{$color}-dark);
+      outline-color: var(--mui-palette-#{$color}-dark);
+      text-decoration-color: rgb(
+        var(--mui-palette-#{$color}-darkChannel) / 0.3
+      );
       @include m.hover {
-        text-decoration-color: $second-value;
+        text-decoration-color: var(--mui-palette-#{$color}-dark);
       }
     }
   }
@@ -207,34 +211,38 @@
 
 .Chip {
   background-color: transparent;
-  color: v.$color_text;
+  color: var(--mui-palette-text-primary);
   &.MuiChip-filled {
     font-weight: bold;
   }
-  @each $key, $value, $second-value in v.$colors-map {
-    &_color_#{$key} {
+  @each $color in v.$accent-colors {
+    &_color_#{$color} {
       &.MuiChip-filled {
-        color: $second-value;
-        background-color: rgba($value, 0.2);
+        color: var(--mui-palette-#{$color}-dark);
+        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.2);
         .MuiChip-icon {
-          color: $second-value;
+          color: var(--mui-palette-#{$color}-dark);
         }
         &.Mui-focusVisible {
-          background-color: rgba($value, 0.4);
+          background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.4);
         }
         &.MuiChip-clickable {
           @include m.hover {
-            background-color: rgba($value, 0.4);
+            background-color: rgb(
+              var(--mui-palette-#{$color}-mainChannel) / 0.4
+            );
           }
         }
       }
       &.MuiChip-outlined {
-        border-color: rgba($second-value, v.$dark-alfa);
+        border-color: rgb(
+          var(--mui-palette-#{$color}-darkChannel) / v.$dark-alfa
+        );
         .MuiChip-icon {
-          color: rgba($second-value, v.$dark-alfa);
+          color: rgb(var(--mui-palette-#{$color}-darkChannel) / v.$dark-alfa);
         }
         .MuiAvatar-root {
-          background-color: rgba($second-value, 0.1);
+          background-color: rgb(var(--mui-palette-#{$color}-darkChannel) / 0.1);
         }
       }
     }
@@ -260,11 +268,11 @@
 .ColorInteract {
   position: relative;
   border-radius: v.$border-radius;
-  @each $key, $value in v.$colors-map {
-    &_color_#{$key} {
-      color: $value;
+  @each $color in v.$accent-colors {
+    &_color_#{$color} {
+      color: var(--mui-palette-#{$color}-main);
       &::before {
-        background-color: rgba($value, 0.12);
+        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.12);
       }
     }
   }

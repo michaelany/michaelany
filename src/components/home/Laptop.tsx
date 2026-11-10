@@ -22,7 +22,7 @@ import macbookImg from '#assets/img/shapes/macbook.png'
 import macbook2xImg from '#assets/img/shapes/macbook@2x.png'
 import {Tooltip} from '#components/common'
 import {BANNER_IMAGES} from '#data/banner'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 import type {TLaptopScene} from '#utils/laptop/laptopScene'
 import LaptopSpeedControl from './LaptopSpeedControl'
 

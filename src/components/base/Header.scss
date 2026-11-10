@@ -11,7 +11,7 @@
   justify-content: space-between;
   padding-left: 8px;
   padding-right: 8px;
-  border-bottom: v.$header_border-width solid v.$color_green;
+  border-bottom: v.$header_border-width solid var(--mui-palette-green-main);
   background-color: rgba(white, 0.95);
   transition:
     color v.$duration_short v.$easing_in-out,
@@ -23,12 +23,12 @@
   .App_color_white & {
     border-color: white;
   }
-  @each $key, $value in v.$colors-map {
-    .App_color_#{$key} & {
-      border-color: $value;
+  @each $color in v.$accent-colors {
+    .App_color_#{$color} & {
+      border-color: var(--mui-palette-#{$color}-main);
     }
-    .App_background_#{$key} & {
-      background-color: rgba($value, 0.95);
+    .App_background_#{$color} & {
+      background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.95);
     }
   }
 }

@@ -1,6 +1,6 @@
 import type {TFunction} from 'i18next'
 
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 import type {TProjectType, IPeriodPart, IWidth} from '#utils/types'
 
 export const publicImg = (path: string): string => `/assets/${path}`

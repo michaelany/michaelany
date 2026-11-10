@@ -12,9 +12,9 @@
   .App_color_alternate &_colorful {
     @include m.animationAlternate(alternateBackgroundColor);
   }
-  @each $key, $value in v.$colors-map {
-    .App_color_#{$key} &_colorful {
-      background-color: $value;
+  @each $color in v.$accent-colors {
+    .App_color_#{$color} &_colorful {
+      background-color: var(--mui-palette-#{$color}-main);
     }
   }
   @include m.md {

@@ -4,7 +4,7 @@ import {ChatRounded as ChatIcon} from '@mui/icons-material'
 
 import {Section} from '#components/common'
 import {ROUTE, YEARS_OF_EXPERIENCE} from '#utils/constants'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 import Videos from './Videos'
 
 export default function Blog() {

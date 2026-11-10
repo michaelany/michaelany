@@ -1,6 +1,6 @@
 import {differenceInYears, format} from 'date-fns'
 
-import {BREAKPOINT} from '#styles/theme'
+import {BREAKPOINT} from '#styles/tokens'
 import PROJECTS from '#data/projects'
 import VIDEOS from '#data/videos'
 import type {TRoute, TColor, TProjectFilter, TEffect} from '#utils/types'

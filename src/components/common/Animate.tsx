@@ -3,7 +3,7 @@ import cn from 'clsx'
 import {useInView} from 'react-intersection-observer'
 
 import './Animate.scss'
-import {DURATION, EASING} from '#styles/theme'
+import {DURATION, EASING} from '#styles/tokens'
 import type {TEffect} from '#utils/types'
 
 interface IAnimateProps extends AllHTMLAttributes<HTMLElement> {

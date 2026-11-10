@@ -12,7 +12,7 @@ $control-size: 44px;
   width: 288px;
   max-width: calc(100vw - 32px);
   padding: 16px;
-  border: 1px solid v.$color_text;
+  border: 1px solid var(--mui-palette-text-primary);
   border-radius: v.$border-radius * 2;
 }
 
@@ -29,16 +29,16 @@ $control-size: 44px;
   flex-shrink: 0;
   width: $control-size;
   height: $control-size;
-  background-color: rgba(v.$color_text, 0.06);
+  background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.06);
   color: inherit;
   &.Mui-focusVisible {
-    background-color: rgba(v.$color_text, 0.12);
+    background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
   }
   &.Mui-disabled {
-    color: rgba(v.$color_text, 0.3);
+    color: rgb(var(--mui-palette-text-primaryChannel) / 0.3);
   }
   @include m.hover {
-    background-color: rgba(v.$color_text, 0.12);
+    background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
   }
 }
 
@@ -48,7 +48,7 @@ $control-size: 44px;
     min-width: 0;
     min-height: $control-size;
     padding: 0;
-    border-color: v.$color_light-grey;
+    border-color: var(--mui-palette-neutral-light);
     font-size: v.$font-size_smaller;
     &:not(:last-child) {
       border-right-color: transparent;
@@ -57,14 +57,14 @@ $control-size: 44px;
       @include m.pseudo;
       z-index: 1;
       inset: -1px;
-      border: 1px solid v.$color_text;
+      border: 1px solid var(--mui-palette-text-primary);
       border-radius: inherit;
       opacity: 0;
       pointer-events: none;
       transition: opacity v.$duration_short v.$easing_in-out;
     }
     &.Mui-focusVisible {
-      background-color: rgba(v.$color_text, 0.12);
+      background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
       &::after {
         opacity: 1;
       }

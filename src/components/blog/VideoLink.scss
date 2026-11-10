@@ -71,14 +71,14 @@ $videos:
   padding-top: 4px;
   font-size: 22px;
   line-height: 1.2;
-  @each $key, $_, $secondValue in v.$colors-map {
-    .ColorInteract_color_#{$key} & {
-      color: $secondValue;
+  @each $color in v.$accent-colors {
+    .ColorInteract_color_#{$color} & {
+      color: var(--mui-palette-#{$color}-dark);
     }
   }
 }
 
 .VideoLink-Date {
-  color: v.$color_second-text;
+  color: var(--mui-palette-text-secondary);
   justify-content: center;
 }

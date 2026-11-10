@@ -1,8 +1,8 @@
 .Message {
   .MuiSnackbarContent-root {
     background-color: white;
-    color: v.$color_text;
-    border: 1px solid v.$color_text;
+    color: var(--mui-palette-text-primary);
+    border: 1px solid var(--mui-palette-text-primary);
     padding: 6px 72px 6px 16px;
     min-width: 330px;
     @include m.xs {

@@ -68,12 +68,12 @@
   left: 0.35em;
   transition: transform v.$duration_standard v.$easing_out;
   &_first {
-    outline-color: v.$color_yellow;
+    outline-color: var(--mui-palette-yellow-main);
     top: 0.2em;
     transform: rotate(20deg);
   }
   &_second {
-    outline-color: v.$color_red;
+    outline-color: var(--mui-palette-red-main);
     top: 0.25em;
     transform: rotate(-15deg);
   }

@@ -6,7 +6,7 @@ import type {TFunction} from 'i18next'
 import './Features.scss'
 import {Animate} from '#components/common'
 import {QUERY_BREAKPOINT} from '#utils/constants'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 import type {IFeature} from '#utils/types'
 
 interface IFeaturesProps {

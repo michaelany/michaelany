@@ -77,9 +77,9 @@ $projects:
   padding-top: 4px;
   font-size: 22px;
   line-height: 1.2;
-  @each $key, $_, $secondValue in v.$colors-map {
-    .ColorInteract_color_#{$key} & {
-      color: $secondValue;
+  @each $color in v.$accent-colors {
+    .ColorInteract_color_#{$color} & {
+      color: var(--mui-palette-#{$color}-dark);
     }
   }
 }
@@ -87,5 +87,5 @@ $projects:
 .ProjectLink-Label {
   font-size: v.$font-size_smaller;
   font-weight: bold;
-  color: v.$color_second-text;
+  color: var(--mui-palette-text-secondary);
 }

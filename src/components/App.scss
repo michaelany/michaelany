@@ -7,24 +7,24 @@
   transition: background-color v.$duration_standard v.$easing_in-out;
   &_color_alternate {
     ::selection {
-      background-color: rgba(v.$color_default, 0.4);
+      background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);
     }
   }
-  @each $key, $value in v.$colors-map {
-    &_color_#{$key} {
+  @each $color in v.$accent-colors {
+    &_color_#{$color} {
       ::selection {
-        background-color: rgba($value, 0.4);
+        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.4);
       }
     }
-    &_background_#{$key} {
-      background-color: $value;
+    &_background_#{$color} {
+      background-color: var(--mui-palette-#{$color}-main);
     }
-    &_background_#{$key} {
+    &_background_#{$color} {
       &::before {
         @include m.pseudoGradient;
       }
       ::selection {
-        background-color: rgba(v.$color_default, 0.4);
+        background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);
       }
     }
   }

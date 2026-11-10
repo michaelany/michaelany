@@ -1,35 +1,4 @@
-$color_text: #282c34;
-$color_second-text: #6d6d6d;
-$color_light-grey: #e6e6e6;
-$color_blue: #64a6fc;
-$color_dark-blue: #568bd0;
-$color_green: #2fd0c8;
-$color_dark-green: #2caca6;
-$color_grass: #6ed485;
-$color_dark-grass: #5eb070;
-$color_yellow: #f8c24f;
-$color_dark-yellow: #cda145;
-$color_red: #fb9674;
-$color_dark-red: #cf7e63;
-$color_violet: #a189f0;
-$color_dark-violet: #8774c6;
-$color_default: #b0b0b0;
-$color_dark-default: #939393;
-$color_red-second: #ef9a9a;
-$color_green-second: #a5d6a7;
-$color_yellow-second: #ffe082;
-$color_blue-second: #90caf9;
-$color_error: #ef5350;
-
-$colors-map: (
-  'default' $color_default $color_dark-default,
-  'blue' $color_blue $color_dark-blue,
-  'green' $color_green $color_dark-green,
-  'grass' $color_grass $color_dark-grass,
-  'yellow' $color_yellow $color_dark-yellow,
-  'red' $color_red $color_dark-red,
-  'violet' $color_violet $color_dark-violet
-);
+$accent-colors: 'neutral', 'blue', 'green', 'grass', 'yellow', 'red', 'violet';
 
 $dark-alfa: 0.7;
 $sidebar-width: 100px;

@@ -1540,7 +1540,7 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'dropdrone',
-    color: 'default',
+    color: 'neutral',
     title: 'Dropdrone',
     types: ['site'],
     companyName: 'sevenGlyphs',
@@ -2398,7 +2398,7 @@ const PROJECTS: IProject[] = [
   },
   {
     name: 'whip-around',
-    color: 'default',
+    color: 'neutral',
     title: 'Whip Around',
     types: ['admin'],
     companyName: 'sevenGlyphs',

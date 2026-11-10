@@ -21,7 +21,7 @@ import {
 
 import './LaptopSpeedControl.scss'
 import {Tooltip} from '#components/common'
-import {DURATION} from '#styles/theme'
+import {DURATION} from '#styles/tokens'
 
 interface ILaptopSpeedControlProps {
   triggerClassName: string

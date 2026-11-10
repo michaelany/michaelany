@@ -14,5 +14,5 @@
 .Features-Description {
   font-size: v.$font-size_smaller;
   padding-top: 12px;
-  color: v.$color_second-text;
+  color: var(--mui-palette-text-secondary);
 }

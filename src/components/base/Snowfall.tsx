@@ -2,7 +2,7 @@ import {useMediaQuery} from '@mui/material'
 
 import ReactSnowfall from 'react-snowfall'
 import {QUERY_BREAKPOINT} from '#utils/constants'
-import {BREAKPOINT} from '#styles/theme'
+import {BREAKPOINT} from '#styles/tokens'
 
 interface ISnowfallProps {
   type?: TPositionType

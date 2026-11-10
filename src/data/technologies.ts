@@ -196,7 +196,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'next',
         label: TECHNOLOGY_TITLE.next,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/next.png'),
           publicImg('technologies/next@2x.png'),
@@ -338,7 +338,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'markdown',
         label: TECHNOLOGY_TITLE.markdown,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/markdown.png'),
           publicImg('technologies/markdown@2x.png'),
@@ -348,7 +348,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'handlebars',
         label: TECHNOLOGY_TITLE.handlebars,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/handlebars.png'),
           publicImg('technologies/handlebars@2x.png'),
@@ -410,7 +410,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'modules',
         label: TECHNOLOGY_TITLE.modules,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/modules.png'),
           publicImg('technologies/modules@2x.png'),
@@ -420,7 +420,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'bem',
         label: TECHNOLOGY_TITLE.bem,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/bem.png'),
           publicImg('technologies/bem@2x.png'),
@@ -470,7 +470,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'shadcn',
         label: TECHNOLOGY_TITLE.shadcn,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/shadcn.png'),
           publicImg('technologies/shadcn@2x.png'),
@@ -540,7 +540,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'reactemail',
         label: TECHNOLOGY_TITLE.reactemail,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/reactemail.png'),
           publicImg('technologies/reactemail@2x.png'),
@@ -585,7 +585,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'gpt',
         label: TECHNOLOGY_TITLE.gpt,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/gpt.png'),
           publicImg('technologies/gpt@2x.png'),
@@ -625,7 +625,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'cursor',
         label: TECHNOLOGY_TITLE.cursor,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/cursor.png'),
           publicImg('technologies/cursor@2x.png'),
@@ -635,7 +635,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'copilot',
         label: TECHNOLOGY_TITLE.copilot,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/copilot.png'),
           publicImg('technologies/copilot@2x.png'),
@@ -660,7 +660,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'prettier',
         label: TECHNOLOGY_TITLE.prettier,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/prettier.png'),
           publicImg('technologies/prettier@2x.png'),
@@ -680,7 +680,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'stylelint',
         label: TECHNOLOGY_TITLE.stylelint,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/stylelint.png'),
           publicImg('technologies/stylelint@2x.png'),
@@ -770,7 +770,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'motion',
         label: TECHNOLOGY_TITLE.motion,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/motion.png'),
           publicImg('technologies/motion@2x.png'),
@@ -780,7 +780,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'threejs',
         label: TECHNOLOGY_TITLE.threejs,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/threejs.png'),
           publicImg('technologies/threejs@2x.png'),
@@ -815,7 +815,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'bun',
         label: TECHNOLOGY_TITLE.bun,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/bun.png'),
           publicImg('technologies/bun@2x.png'),
@@ -890,7 +890,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'storyblok',
         label: TECHNOLOGY_TITLE.storyblok,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/storyblok.png'),
           publicImg('technologies/storyblok@2x.png'),
@@ -940,7 +940,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'convert',
         label: TECHNOLOGY_TITLE.convert,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/convert.png'),
           publicImg('technologies/convert@2x.png'),
@@ -970,7 +970,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'testmuai',
         label: TECHNOLOGY_TITLE.testmuai,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/testmuai.png'),
           publicImg('technologies/testmuai@2x.png'),
@@ -980,7 +980,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'wordpress',
         label: TECHNOLOGY_TITLE.wordpress,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/wordpress.png'),
           publicImg('technologies/wordpress@2x.png'),
@@ -995,7 +995,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'github',
         label: TECHNOLOGY_TITLE.github,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/github.png'),
           publicImg('technologies/github@2x.png'),
@@ -1035,7 +1035,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'vercel',
         label: TECHNOLOGY_TITLE.vercel,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/vercel.png'),
           publicImg('technologies/vercel@2x.png'),
@@ -1055,7 +1055,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'aws',
         label: TECHNOLOGY_TITLE.aws,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/aws.png'),
           publicImg('technologies/aws@2x.png'),
@@ -1087,7 +1087,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'expo',
         label: TECHNOLOGY_TITLE.expo,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/expo.png'),
           publicImg('technologies/expo@2x.png'),
@@ -1134,7 +1134,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'keycloak',
         label: TECHNOLOGY_TITLE.keycloak,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/keycloak.png'),
           publicImg('technologies/keycloak@2x.png'),
@@ -1144,7 +1144,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'squarespace',
         label: TECHNOLOGY_TITLE.squarespace,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/squarespace.png'),
           publicImg('technologies/squarespace@2x.png'),
@@ -1154,7 +1154,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'mailchimp',
         label: TECHNOLOGY_TITLE.mailchimp,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/mailchimp.png'),
           publicImg('technologies/mailchimp@2x.png'),
@@ -1164,7 +1164,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'epidemic',
         label: TECHNOLOGY_TITLE.epidemic,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/epidemic.png'),
           publicImg('technologies/epidemic@2x.png'),
@@ -1239,7 +1239,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'optim',
         label: TECHNOLOGY_TITLE.optim,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/optim.png'),
           publicImg('technologies/optim@2x.png'),
@@ -1364,7 +1364,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'mac',
         label: TECHNOLOGY_TITLE.mac,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/mac.png'),
           publicImg('technologies/mac@2x.png'),
@@ -1374,7 +1374,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'ipad',
         label: TECHNOLOGY_TITLE.ipad,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/ipad.png'),
           publicImg('technologies/ipad@2x.png'),
@@ -1384,7 +1384,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'iphone',
         label: TECHNOLOGY_TITLE.iphone,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/iphone.png'),
           publicImg('technologies/iphone@2x.png'),
@@ -1394,7 +1394,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'airpods',
         label: TECHNOLOGY_TITLE.airpods,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/airpods.png'),
           publicImg('technologies/airpods@2x.png'),
@@ -1404,7 +1404,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'trackpad',
         label: TECHNOLOGY_TITLE.trackpad,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/trackpad.png'),
           publicImg('technologies/trackpad@2x.png'),
@@ -1434,7 +1434,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'dock',
         label: TECHNOLOGY_TITLE.dock,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/dock.png'),
           publicImg('technologies/dock@2x.png'),
@@ -1444,7 +1444,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'wifi',
         label: TECHNOLOGY_TITLE.wifi,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/wifi.png'),
           publicImg('technologies/wifi@2x.png'),
@@ -1454,7 +1454,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'mic',
         label: TECHNOLOGY_TITLE.mic,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/mic.png'),
           publicImg('technologies/mic@2x.png'),
@@ -1474,7 +1474,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'glasses',
         label: TECHNOLOGY_TITLE.glasses,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/glasses.png'),
           publicImg('technologies/glasses@2x.png'),
@@ -1484,7 +1484,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'mascot',
         label: TECHNOLOGY_TITLE.mascot,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/mascot.png'),
           publicImg('technologies/mascot@2x.png'),
@@ -1494,7 +1494,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'coffee',
         label: TECHNOLOGY_TITLE.coffee,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/coffee.png'),
           publicImg('technologies/coffee@2x.png'),
@@ -1504,7 +1504,7 @@ export const TECHNOLOGY_GROUPS: ITechnologyGroup[] = [
       {
         name: 'cup',
         label: TECHNOLOGY_TITLE.cup,
-        color: 'default',
+        color: 'neutral',
         images: [
           publicImg('technologies/cup.png'),
           publicImg('technologies/cup@2x.png'),
