@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   align-items: center;
   column-gap: 6px;
-  font-size: v.$font-size_smaller;
+  font-size: var(--mui-fontSize-small);
   & > span:not(:last-child) {
     font-weight: bold;
   }

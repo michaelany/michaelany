@@ -85,7 +85,7 @@ $projects:
 }
 
 .ProjectLink-Label {
-  font-size: v.$font-size_smaller;
+  font-size: var(--mui-fontSize-small);
   font-weight: bold;
   color: var(--mui-palette-text-secondary);
 }

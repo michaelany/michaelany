@@ -37,7 +37,7 @@
 .MuiTab {
   &-root {
     @include m.sm {
-      font-size: v.$font-size_smaller;
+      font-size: var(--mui-fontSize-small);
     }
   }
 }

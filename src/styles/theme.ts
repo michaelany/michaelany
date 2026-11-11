@@ -14,6 +14,7 @@ declare module '@mui/material/styles' {
   interface ThemeOptions {
     duration?: Record<string, string>
     easing?: typeof EASING
+    fontSize?: Record<keyof typeof FONT_SIZE, string>
   }
 
   interface PaletteOptions {
@@ -37,6 +38,10 @@ const THEME: ThemeOptions = {
     Object.entries(DURATION).map(([name, value]) => [name, `${value}ms`])
   ),
   easing: EASING,
+  fontSize: {
+    base: `${FONT_SIZE.base}px`,
+    small: `${FONT_SIZE.small}px`,
+  },
   typography: {
     fontFamily: '"Neutra Text", sans-serif',
     htmlFontSize: FONT_SIZE.base,
@@ -188,7 +193,7 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         tooltip: {
-          fontSize: FONT_SIZE.smaller,
+          fontSize: FONT_SIZE.small,
           fontWeight: 'normal',
           color: COLOR.charcoal,
           backgroundColor: COLOR.white,
@@ -304,7 +309,7 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         root: {
-          fontSize: FONT_SIZE.smaller,
+          fontSize: FONT_SIZE.small,
           fontWeight: 'normal',
         },
         avatar: {

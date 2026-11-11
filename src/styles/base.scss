@@ -1,4 +1,3 @@
-@use 'styles/variables' as v;
 @use 'styles/mixins' as m;
 
 :root {
@@ -7,15 +6,15 @@
 }
 
 html {
-  font-size: v.$font-size_base;
+  font-size: var(--mui-fontSize-base);
   @include m.lg {
-    font-size: v.$font-size_smaller;
+    font-size: var(--mui-fontSize-small);
   }
   @include m.md {
-    font-size: v.$font-size_base;
+    font-size: var(--mui-fontSize-base);
   }
   @include m.sm {
-    font-size: v.$font-size_smaller;
+    font-size: var(--mui-fontSize-small);
   }
 }
 

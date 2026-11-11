@@ -52,7 +52,7 @@ export const BREAKPOINT = {
 
 export const FONT_SIZE = {
   base: 18,
-  smaller: 16,
+  small: 16,
 }
 
 export const BORDER_RADIUS = 8

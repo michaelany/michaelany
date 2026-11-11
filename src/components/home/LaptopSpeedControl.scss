@@ -49,7 +49,7 @@ $control-size: 44px;
     min-height: $control-size;
     padding: 0;
     border-color: var(--mui-palette-neutral-light);
-    font-size: v.$font-size_smaller;
+    font-size: var(--mui-fontSize-small);
     &:not(:last-child) {
       border-right-color: transparent;
     }

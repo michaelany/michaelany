@@ -12,7 +12,7 @@
 }
 
 .Features-Description {
-  font-size: v.$font-size_smaller;
+  font-size: var(--mui-fontSize-small);
   padding-top: 12px;
   color: var(--mui-palette-text-secondary);
 }
