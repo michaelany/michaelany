@@ -1,3 +1,5 @@
+$max-content-width: 1000px;
+
 .Section {
   position: relative;
   padding: 80px 10% 144px;
@@ -31,7 +33,7 @@
 }
 
 .Section-Content {
-  max-width: v.$max-content-width;
+  max-width: $max-content-width;
   margin: auto;
   height: 100%;
   .Section_centeredContent > & {
@@ -40,7 +42,7 @@
     justify-content: center;
   }
   .Section_wide > & {
-    max-width: v.$max-content-width * 2;
+    max-width: $max-content-width * 2;
   }
   &_footer {
     display: flex;
