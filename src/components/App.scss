@@ -4,7 +4,8 @@
   position: relative;
   display: flex;
   min-width: 320px;
-  transition: background-color v.$duration_standard v.$easing_in-out;
+  transition: background-color var(--mui-duration-standard)
+    var(--mui-easing-inOut);
   &_color_alternate {
     ::selection {
       background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);

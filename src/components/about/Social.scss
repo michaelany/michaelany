@@ -16,8 +16,9 @@
     border-radius: 50%;
     background-color: white;
     opacity: 1;
-    transition: opacity v.$duration_medium v.$easing_in-out;
-    animation: ripple v.$duration_longest v.$easing_in-out infinite;
+    transition: opacity var(--mui-duration-medium) var(--mui-easing-inOut);
+    animation: ripple var(--mui-duration-longest) var(--mui-easing-inOut)
+      infinite;
   }
   &_hovered::after {
     animation-play-state: paused;
@@ -49,7 +50,7 @@
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity v.$duration_standard v.$easing_in-out;
+    transition: opacity var(--mui-duration-standard) var(--mui-easing-inOut);
     .Social-Photo:hover & {
       opacity: 1;
     }

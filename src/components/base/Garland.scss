@@ -32,20 +32,20 @@
 
 .Garland-Lamp {
   animation-name: garlandBlink;
-  animation-duration: v.$duration_longest;
+  animation-duration: var(--mui-duration-longest);
   animation-iteration-count: infinite;
-  animation-timing-function: v.$easing_in-out;
+  animation-timing-function: var(--mui-easing-inOut);
   &:nth-child(1n) {
-    animation-delay: calc(v.$duration_longest / -4 * 3);
+    animation-delay: calc(var(--mui-duration-longest) / -4 * 3);
   }
   &:nth-child(2n) {
-    animation-delay: calc(v.$duration_longest / -4 * 2);
+    animation-delay: calc(var(--mui-duration-longest) / -4 * 2);
   }
   &:nth-child(3n) {
-    animation-delay: calc(v.$duration_longest / -4 * 1);
+    animation-delay: calc(var(--mui-duration-longest) / -4 * 1);
   }
   &:nth-child(4n) {
-    animation-delay: calc(v.$duration_longest / -4 * 0);
+    animation-delay: calc(var(--mui-duration-longest) / -4 * 0);
   }
 }
 

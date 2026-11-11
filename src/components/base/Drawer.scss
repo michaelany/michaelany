@@ -1,7 +1,8 @@
 .Drawer-Content {
   overflow-y: auto;
   height: 100%;
-  transition: background-color v.$duration_standard v.$easing_in-out;
+  transition: background-color var(--mui-duration-standard)
+    var(--mui-easing-inOut);
   @each $color in v.$accent-colors {
     .App_background_#{$color} & {
       background-color: var(--mui-palette-#{$color}-main);

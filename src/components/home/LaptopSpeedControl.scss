@@ -61,7 +61,7 @@ $control-size: 44px;
       border-radius: inherit;
       opacity: 0;
       pointer-events: none;
-      transition: opacity v.$duration_short v.$easing_in-out;
+      transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
     }
     &.Mui-focusVisible {
       background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);

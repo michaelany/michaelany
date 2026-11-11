@@ -37,7 +37,7 @@ $videos:
   height: 100%;
   border-radius: inherit;
   overflow: hidden;
-  transition: opacity v.$duration_short v.$easing_in-out;
+  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
   @each $video in $videos {
     &_name_#{$video}::after {
       @include m.retinaImg($video, 'jpg', '/assets/videos');
@@ -64,7 +64,7 @@ $videos:
   padding: 24px;
   opacity: 0;
   transform: translateZ(24px);
-  transition: opacity v.$duration_short v.$easing_in-out;
+  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
 }
 
 .VideoLink-Title {

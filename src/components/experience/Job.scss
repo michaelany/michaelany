@@ -78,7 +78,8 @@
     height: 100%;
     border-radius: 50%;
     background-color: var(--mui-palette-violet-main);
-    animation: rippleSmall v.$duration_longest v.$easing_in-out infinite;
+    animation: rippleSmall var(--mui-duration-longest) var(--mui-easing-inOut)
+      infinite;
   }
   &::after {
     @include m.pseudo(relative);

@@ -60,9 +60,10 @@
 }
 
 @mixin animation($animation, $delay: 0ms) {
-  animation: $animation v.$duration_long v.$easing_in-out $delay both;
+  animation: $animation var(--mui-duration-long) var(--mui-easing-inOut) $delay
+    both;
 }
 
 @mixin animationAlternate($animation: alternateColor) {
-  animation: $animation v.$duration_alternate linear infinite;
+  animation: $animation var(--mui-duration-alternate) linear infinite;
 }

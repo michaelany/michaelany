@@ -1,5 +1,5 @@
 .ExpandAction-Icon {
-  transition: transform v.$duration_short v.$easing_in-out;
+  transition: transform var(--mui-duration-short) var(--mui-easing-inOut);
   &_open {
     transform: rotate(180deg);
   }

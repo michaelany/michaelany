@@ -185,7 +185,8 @@
   font-weight: bold;
   user-select: auto;
   white-space: nowrap;
-  transition: text-decoration-color v.$duration_shortest v.$easing_out;
+  transition: text-decoration-color var(--mui-duration-shortest)
+    var(--mui-easing-out);
   &_white,
   .App_color_white & {
     color: white;
@@ -285,8 +286,8 @@
     z-index: 1;
     transform: scale(0.8);
     transition:
-      transform v.$duration_short v.$easing_in-out,
-      opacity v.$duration_short v.$easing_in-out;
+      transform var(--mui-duration-short) var(--mui-easing-inOut),
+      opacity var(--mui-duration-short) var(--mui-easing-inOut);
   }
   & > .MuiTouchRipple-root {
     z-index: 1;

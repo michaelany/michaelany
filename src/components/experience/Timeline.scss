@@ -31,9 +31,9 @@
 .Timeline-ButtonIcon {
   font-size: 24px;
   transform: rotate(0deg);
-  transition: transform v.$duration_short v.$easing_in-out;
+  transition: transform var(--mui-duration-short) var(--mui-easing-inOut);
   &_refresh {
     transform: rotate(0deg) scale(1);
-    transition: transform v.$duration_medium v.$easing_in-out;
+    transition: transform var(--mui-duration-medium) var(--mui-easing-inOut);
   }
 }

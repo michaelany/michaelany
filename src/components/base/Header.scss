@@ -14,8 +14,8 @@
   border-bottom: v.$header_border-width solid var(--mui-palette-green-main);
   background-color: rgba(white, 0.95);
   transition:
-    color v.$duration_short v.$easing_in-out,
-    background-color v.$duration_standard v.$easing_in-out;
+    color var(--mui-duration-short) var(--mui-easing-inOut),
+    background-color var(--mui-duration-standard) var(--mui-easing-inOut);
 
   .App_color_alternate & {
     @include m.animationAlternate(alternateBorderColor);

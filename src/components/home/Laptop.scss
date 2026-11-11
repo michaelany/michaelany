@@ -107,7 +107,7 @@
   color: white;
   opacity: 0;
   pointer-events: none;
-  transition: opacity v.$duration_short v.$easing_in-out;
+  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
   .Laptop_interactive & {
     opacity: 1;
   }
@@ -115,7 +115,7 @@
 
 .Laptop-FrameCorner {
   position: absolute;
-  transition: stroke-width v.$duration_short v.$easing_in-out;
+  transition: stroke-width var(--mui-duration-short) var(--mui-easing-inOut);
   &:nth-child(1) {
     top: 0;
     left: 0;
@@ -156,8 +156,8 @@
   opacity: 0;
   pointer-events: none;
   transition:
-    opacity v.$duration_short v.$easing_in-out,
-    visibility 0s v.$duration_short;
+    opacity var(--mui-duration-short) var(--mui-easing-inOut),
+    visibility 0s var(--mui-duration-short);
   &_visible {
     visibility: visible;
     opacity: 1;
@@ -191,7 +191,7 @@
   pointer-events: none;
   scale: var(--laptop-hotspot-scale, 1);
   transform: scale(0);
-  transition: transform v.$duration_short v.$easing_in-out;
+  transition: transform var(--mui-duration-short) var(--mui-easing-inOut);
   &::before,
   &::after {
     @include m.pseudo;
@@ -201,10 +201,12 @@
   }
   &::before {
     background-color: rgba(white, 0.16);
-    transition: background-color v.$duration_short v.$easing_in-out;
+    transition: background-color var(--mui-duration-short)
+      var(--mui-easing-inOut);
   }
   &::after {
-    animation: laptopHotspotPulse v.$duration_longest v.$easing_in-out infinite;
+    animation: laptopHotspotPulse var(--mui-duration-longest)
+      var(--mui-easing-inOut) infinite;
   }
 }
 

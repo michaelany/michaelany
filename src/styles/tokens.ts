@@ -30,7 +30,7 @@ export const DURATION = {
   short: 250,
   standard: 300,
   medium: 500,
-  mediumLong: 650,
+  mediumPlus: 650,
   long: 800,
   longer: 1000,
   longest: 2000,

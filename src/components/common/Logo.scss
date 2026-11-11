@@ -7,8 +7,8 @@
   display: flex;
   justify-content: center;
   transition:
-    transform v.$duration_standard v.$easing_out,
-    color v.$duration_short v.$easing_in-out;
+    transform var(--mui-duration-standard) var(--mui-easing-out),
+    color var(--mui-duration-short) var(--mui-easing-inOut);
   @include m.hover {
     transform: scale(1.15) rotate(-10deg);
   }

@@ -11,6 +11,11 @@ import {
 } from './tokens'
 
 declare module '@mui/material/styles' {
+  interface ThemeOptions {
+    duration?: Record<string, string>
+    easing?: typeof EASING
+  }
+
   interface PaletteOptions {
     neutral?: SimplePaletteColorOptions
     blue?: SimplePaletteColorOptions
@@ -28,6 +33,10 @@ const charcoalAlpha = alpha(COLOR.charcoal, 0.12)
 
 const THEME: ThemeOptions = {
   cssVariables: true,
+  duration: Object.fromEntries(
+    Object.entries(DURATION).map(([name, value]) => [name, `${value}ms`])
+  ),
+  easing: EASING,
   typography: {
     fontFamily: '"Neutra Text", sans-serif',
     htmlFontSize: FONT_SIZE.base,
@@ -391,7 +400,7 @@ const THEME: ThemeOptions = {
           backgroundColor: COLOR.white,
           height: 4,
           borderRadius: borderRadiusQuarter,
-          transition: `all ${DURATION.mediumLong}ms ${EASING.out}`,
+          transition: `all ${DURATION.mediumPlus}ms ${EASING.out}`,
         },
       },
     },

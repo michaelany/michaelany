@@ -14,8 +14,8 @@ $pages: 'about', 'skills', 'experience', 'portfolio', 'blog', 'contact';
     height: 54px;
     border-radius: calc(var(--mui-shape-borderRadius) / 2);
     transition:
-      transform v.$duration_medium-long v.$easing_out,
-      background-color v.$duration_short v.$easing_in-out;
+      transform var(--mui-duration-mediumPlus) var(--mui-easing-out),
+      background-color var(--mui-duration-short) var(--mui-easing-inOut);
     @for $index from 1 through list.length($pages) {
       $page: list.nth($pages, $index);
       .App_page_#{$page} & {
