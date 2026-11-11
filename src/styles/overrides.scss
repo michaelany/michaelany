@@ -1,19 +1,22 @@
 @use 'styles/variables' as v;
 @use 'styles/mixins' as m;
 
+$fab-size_base: 56px;
+$fab-size_mobile: 48px;
+
 .MuiFab {
   &-root:not(.MuiFab-sizeMedium) {
     @include m.lg {
-      width: v.$fab-size_mobile;
-      height: v.$fab-size_mobile;
+      width: $fab-size_mobile;
+      height: $fab-size_mobile;
     }
     @include m.md {
-      width: v.$fab-size_base;
-      height: v.$fab-size_base;
+      width: $fab-size_base;
+      height: $fab-size_base;
     }
     @include m.sm {
-      width: v.$fab-size_mobile;
-      height: v.$fab-size_mobile;
+      width: $fab-size_mobile;
+      height: $fab-size_mobile;
     }
   }
 }

@@ -1,5 +1,7 @@
 @use 'styles/variables' as v;
 
+$effect_delta: 16px;
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -11,7 +13,7 @@
 
 @keyframes fadeInTop {
   from {
-    transform: translate3d(0, -(v.$effect_delta), 0);
+    transform: translate3d(0, -$effect_delta, 0);
     opacity: 0;
   }
   to {
@@ -22,7 +24,7 @@
 
 @keyframes fadeInRight {
   from {
-    transform: translate3d(v.$effect_delta, 0, 0);
+    transform: translate3d($effect_delta, 0, 0);
     opacity: 0;
   }
   to {
@@ -33,7 +35,7 @@
 
 @keyframes fadeInBottom {
   from {
-    transform: translate3d(0, v.$effect_delta, 0);
+    transform: translate3d(0, $effect_delta, 0);
     opacity: 0;
   }
   to {
@@ -44,7 +46,7 @@
 
 @keyframes fadeInLeft {
   from {
-    transform: translate3d(-(v.$effect_delta), 0, 0);
+    transform: translate3d(-$effect_delta, 0, 0);
     opacity: 0;
   }
   to {
