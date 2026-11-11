@@ -5,10 +5,7 @@
     margin-left: auto;
     margin-right: auto;
     @include m.md {
-      .App_background_blue &,
-      .App_background_red & {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 }

@@ -4,29 +4,36 @@
   position: relative;
   display: flex;
   min-width: 320px;
+  background-color: var(--page-background-color);
   transition: background-color var(--mui-duration-standard)
     var(--mui-easing-inOut);
-  &_color_alternate {
+  &_color_white {
+    --page-accent-color: white;
+  }
+  &_color_accent {
+    ::selection {
+      background-color: rgb(var(--page-accent-channel) / 0.4);
+    }
+  }
+  &_color_alternate,
+  &_hasBackground {
     ::selection {
       background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);
     }
   }
+  &_hasBackground::before {
+    @include m.pseudoGradient;
+  }
   @each $color in v.$accent-colors {
     &_color_#{$color} {
-      ::selection {
-        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.4);
-      }
+      --page-accent-color: var(--mui-palette-#{$color}-main);
+      --page-accent-channel: var(--mui-palette-#{$color}-mainChannel);
+      --page-accent-dark-color: var(--mui-palette-#{$color}-dark);
+      --page-accent-dark-channel: var(--mui-palette-#{$color}-darkChannel);
     }
     &_background_#{$color} {
-      background-color: var(--mui-palette-#{$color}-main);
-    }
-    &_background_#{$color} {
-      &::before {
-        @include m.pseudoGradient;
-      }
-      ::selection {
-        background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);
-      }
+      --page-background-color: var(--mui-palette-#{$color}-main);
+      --page-background-channel: var(--mui-palette-#{$color}-mainChannel);
     }
   }
 }

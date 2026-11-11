@@ -1,3 +1,4 @@
+import {PROJECT_COLORS} from './contentColors'
 import {publicImg} from '#utils/helpers'
 import {COMPANY, FEATURE} from '#data/common'
 import {TECHNOLOGY_TITLE} from '#data/technologies'
@@ -56,10 +57,11 @@ const commonLogo = {
   ],
 }
 
-const PROJECTS: IProject[] = [
-  {
-    name: 'go-rentals',
-    color: 'red',
+const projectDetails: Record<
+  keyof typeof PROJECT_COLORS,
+  Omit<IProject, 'name' | 'color'>
+> = {
+  'go-rentals': {
     title: 'GO Rentals',
     types: ['site', 'app'],
     companyName: 'goRentals',
@@ -167,9 +169,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'madfit-2',
-    color: 'green',
+  'madfit-2': {
     title: 'MadFit 2.0',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
@@ -264,9 +264,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'best-me',
-    color: 'red',
+  'best-me': {
     title: 'Best Me',
     types: ['app'],
     companyName: 'sevenGlyphs',
@@ -373,9 +371,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'reps-rest',
-    color: 'yellow',
+  'reps-rest': {
     title: 'Reps & Rest',
     types: ['app'],
     companyName: 'sevenGlyphs',
@@ -480,9 +476,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'ally-2',
-    color: 'red',
+  'ally-2': {
     title: 'Ally 2.0',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -570,9 +564,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'help-ai',
-    color: 'violet',
+  'help-ai': {
     title: 'Help AI',
     types: ['app'],
     companyName: 'sevenGlyphs',
@@ -672,9 +664,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'strongher-cms',
-    color: 'red',
+  'strongher-cms': {
     title: 'StrongHer CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
@@ -724,9 +714,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'pridefit',
-    color: 'violet',
+  pridefit: {
     title: 'Pridefit',
     types: ['app'],
     companyName: 'sevenGlyphs',
@@ -758,9 +746,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'ally-cms',
-    color: 'red',
+  'ally-cms': {
     title: 'Ally CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
@@ -815,9 +801,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'pridefit-cms',
-    color: 'blue',
+  'pridefit-cms': {
     title: 'Pridefit CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
@@ -868,9 +852,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'vibe-media',
-    color: 'yellow',
+  'vibe-media': {
     title: 'Vibe Media',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -930,9 +912,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'madfit',
-    color: 'green',
+  madfit: {
     title: 'MadFit',
     types: ['landing', 'app'],
     companyName: 'sevenGlyphs',
@@ -998,9 +978,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'madfit-cms',
-    color: 'green',
+  'madfit-cms': {
     title: 'MadFit CMS',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
@@ -1049,9 +1027,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'tradease',
-    color: 'blue',
+  tradease: {
     title: 'Tradease',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
@@ -1116,9 +1092,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 't1-online',
-    color: 'blue',
+  't1-online': {
     types: ['app'],
     mobileApp: true,
     companyName: 't1',
@@ -1162,9 +1136,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'road-ninja-landing',
-    color: 'red',
+  'road-ninja-landing': {
     title: 'Road Ninja Landing',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1229,9 +1201,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'road-ninja',
-    color: 'red',
+  'road-ninja': {
     title: 'Road Ninja',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
@@ -1280,9 +1250,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'celebration',
-    color: 'red',
+  celebration: {
     title: 'Сelebration',
     types: ['app'],
     companyName: 't1',
@@ -1329,9 +1297,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'ally',
-    color: 'red',
+  ally: {
     title: 'Ally',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1372,9 +1338,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'present-me-landing',
-    color: 'yellow',
+  'present-me-landing': {
     title: 'Present.me Landing',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1423,9 +1387,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'present-me-portal',
-    color: 'yellow',
+  'present-me-portal': {
     title: 'Present.me Portal',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
@@ -1465,9 +1427,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'present-me',
-    color: 'yellow',
+  'present-me': {
     title: 'Present.me',
     types: ['app'],
     companyName: 'sevenGlyphs',
@@ -1538,9 +1498,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'dropdrone',
-    color: 'neutral',
+  dropdrone: {
     title: 'Dropdrone',
     types: ['site'],
     companyName: 'sevenGlyphs',
@@ -1597,9 +1555,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'just-hatched',
-    color: 'yellow',
+  'just-hatched': {
     title: 'Just Hatched',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1652,9 +1608,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'uls',
-    color: 'green',
+  uls: {
     title: 'Vaillant United Login System',
     types: ['app'],
     companyName: 't1',
@@ -1706,9 +1660,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'proximal-coffee',
-    color: 'yellow',
+  'proximal-coffee': {
     title: 'Proximal Coffee',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1757,9 +1709,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'embp',
-    color: 'blue',
+  embp: {
     types: ['admin', 'app'],
     companyName: 't1',
     tools: [
@@ -1810,9 +1760,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: '7glyphs-lite',
-    color: 'grass',
+  '7glyphs-lite': {
     title: '7 glyphs Lite',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1859,9 +1807,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'melissa-chalmers',
-    color: 'green',
+  'melissa-chalmers': {
     title: 'Melissa Chalmers',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -1902,9 +1848,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'foodprint',
-    color: 'violet',
+  foodprint: {
     title: 'Foodprint',
     types: ['app'],
     mobileApp: true,
@@ -1942,9 +1886,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'foodprint-portal',
-    color: 'violet',
+  'foodprint-portal': {
     title: 'Foodprint Portal',
     types: ['admin', 'app'],
     companyName: 'sevenGlyphs',
@@ -1996,9 +1938,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'foodprint-landing',
-    color: 'violet',
+  'foodprint-landing': {
     title: 'Foodprint Landing',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -2047,9 +1987,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'sds',
-    color: 'green',
+  sds: {
     title: 'Vaillant Sales Digital System',
     types: ['app'],
     companyName: 't1',
@@ -2095,9 +2033,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'strongher',
-    color: 'red',
+  strongher: {
     title: 'StrongHer',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
@@ -2154,9 +2090,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: '7glyphs-2',
-    color: 'grass',
+  '7glyphs-2': {
     title: '7 glyphs 2.0',
     types: ['site'],
     companyName: 'sevenGlyphs',
@@ -2211,9 +2145,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'rogue-travel',
-    color: 'violet',
+  'rogue-travel': {
     title: 'Rogue Travel',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
@@ -2272,9 +2204,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'quarry-trucks',
-    color: 'yellow',
+  'quarry-trucks': {
     title: 'Quarry Trucks',
     types: ['app'],
     companyName: 'sevenGlyphs',
@@ -2304,9 +2234,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'service-packages',
-    color: 'grass',
+  'service-packages': {
     title: 'Service Packages',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -2346,9 +2274,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: '12-saffron',
-    color: 'yellow',
+  '12-saffron': {
     title: '12 Saffron',
     types: ['landing'],
     companyName: 'sevenGlyphs',
@@ -2396,9 +2322,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'whip-around',
-    color: 'neutral',
+  'whip-around': {
     title: 'Whip Around',
     types: ['admin'],
     companyName: 'sevenGlyphs',
@@ -2441,9 +2365,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'lazyaz-dashboard',
-    color: 'red',
+  'lazyaz-dashboard': {
     title: 'LazyAz Dashboard',
     types: ['admin'],
     companyName: 'sevenGlyphs',
@@ -2482,9 +2404,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'lazyaz',
-    color: 'red',
+  lazyaz: {
     title: 'LazyAz',
     types: ['site', 'app'],
     companyName: 'sevenGlyphs',
@@ -2542,9 +2462,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: '7glyphs',
-    color: 'grass',
+  '7glyphs': {
     title: '7 glyphs',
     types: ['site'],
     companyName: 'sevenGlyphs',
@@ -2598,9 +2516,7 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-  {
-    name: 'msp',
-    color: 'blue',
+  msp: {
     types: ['site', 'app'],
     companyName: 'everpoint',
     url: 'https://navigator.smbn.ru',
@@ -2648,7 +2564,15 @@ const PROJECTS: IProject[] = [
       ],
     },
   },
-]
+}
+
+const PROJECTS: IProject[] = (
+  Object.keys(projectDetails) as (keyof typeof projectDetails)[]
+).map(name => ({
+  name,
+  color: PROJECT_COLORS[name],
+  ...projectDetails[name],
+}))
 
 export const PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT = {
   goRentals: ['GO Rentals', 'TanGO', 'TanGO New'].length,

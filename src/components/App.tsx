@@ -31,20 +31,19 @@ export default function App() {
   const {pathname} = useLocation()
   const md = useMediaQuery(QUERY_BREAKPOINT.md)
 
-  const lastSlashIndex = pathname.lastIndexOf('/')
-  const pathnameEnd = pathname.slice(lastSlashIndex)
-
-  const AppClassName = cn(
-    `App App_page_${
-      pathname.slice(1, lastSlashIndex || undefined) || 'home'
-    } App_color_${PATH_COLOR[pathnameEnd] ?? 'white'}`,
-    PATH_BACKGROUND_COLOR[pathnameEnd] &&
-      `App_background_${PATH_BACKGROUND_COLOR[pathnameEnd]}`
+  const path = getPagePath(pathname)
+  const color = PATH_COLOR[path] ?? 'white'
+  const backgroundColor = PATH_BACKGROUND_COLOR[path]
+  const appClassName = cn(
+    'App',
+    `App_color_${color}`,
+    color !== 'white' && color !== 'alternate' && 'App_color_accent',
+    backgroundColor && `App_hasBackground App_background_${backgroundColor}`
   )
 
   return (
     <>
-      <div className={AppClassName}>
+      <div className={appClassName}>
         {md ? <Header /> : <Sidebar />}
         <main className="App-Main">
           {IS_NEW_YEAR_MODE && !md && <Garland />}
@@ -80,4 +79,18 @@ const LazyRouteLoaded = () => {
   }, [])
 
   return null
+}
+
+const getPagePath = (pathname: string) => {
+  let path = pathname
+  try {
+    path = decodeURI(pathname)
+  } catch {
+    // keep the original path
+  }
+  return (
+    path
+      .replace(/^\/[^/]+/, section => section.toLowerCase())
+      .replace(/\/+$/, '') || ROUTE.home
+  )
 }

@@ -8,15 +8,15 @@ $max-content-width: 1000px;
     padding-left: 5%;
     padding-right: 5%;
   }
-  &_colorful::before {
-    @include m.pseudoGradient;
-  }
-  .App_color_alternate &_colorful {
-    @include m.animationAlternate(alternateBackgroundColor);
-  }
-  @each $color in v.$accent-colors {
-    .App_color_#{$color} &_colorful {
-      background-color: var(--mui-palette-#{$color}-main);
+  &_colorful {
+    &::before {
+      @include m.pseudoGradient;
+    }
+    .App_color_accent & {
+      background-color: var(--page-accent-color);
+    }
+    .App_color_alternate & {
+      @include m.animationAlternate(alternateBackgroundColor);
     }
   }
   @include m.md {

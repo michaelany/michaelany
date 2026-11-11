@@ -15,15 +15,9 @@ export type TRoute =
   | '/contact'
 
 export type TColor =
-  | 'alternate'
-  | 'white'
-  | 'neutral'
-  | 'blue'
-  | 'green'
-  | 'grass'
-  | 'red'
-  | 'yellow'
-  | 'violet'
+  'neutral' | 'blue' | 'green' | 'grass' | 'red' | 'yellow' | 'violet'
+
+export type TPageColor = TColor | 'white' | 'alternate'
 
 export type TEffect =
   | 'plain'

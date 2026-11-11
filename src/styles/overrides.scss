@@ -50,15 +50,11 @@ $fab-size_mobile: 48px;
     .App_color_alternate & {
       @include m.animationAlternate(alternateBackgroundOpacityColor);
     }
-    .App_color_white & {
-      background-color: rgba(white, v.$backdrop-opacity);
-    }
-    @each $color in v.$accent-colors {
-      .App_color_#{$color} & {
-        background-color: rgb(
-          var(--mui-palette-#{$color}-mainChannel) / v.$backdrop-opacity
-        );
-      }
+    .App_color_white &,
+    .App_color_accent & {
+      background-color: rgb(
+        var(--page-accent-channel, 255 255 255) / v.$backdrop-opacity
+      );
     }
   }
 }

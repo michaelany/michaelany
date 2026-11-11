@@ -1,6 +1,15 @@
 @use 'styles/variables' as v;
 
 $effect_delta: 16px;
+$alternate-colors: (
+  from: blue,
+  16.66%: green,
+  33.33%: grass,
+  50%: red,
+  66.66%: yellow,
+  83.33%: violet,
+  to: blue,
+);
 
 @keyframes fadeIn {
   from {
@@ -99,121 +108,34 @@ $effect_delta: 16px;
   }
 }
 
+@mixin alternateColorFrames($properties, $opacity: null) {
+  @each $stop, $color in $alternate-colors {
+    #{$stop} {
+      $value: var(--mui-palette-#{$color}-main);
+      @if $opacity != null {
+        $value: rgb(var(--mui-palette-#{$color}-mainChannel) / $opacity);
+      }
+      @each $property in $properties {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
 @keyframes alternateColor {
-  from {
-    color: var(--mui-palette-blue-main);
-    outline-color: var(--mui-palette-blue-main);
-  }
-  16.66% {
-    color: var(--mui-palette-green-main);
-    outline-color: var(--mui-palette-green-main);
-  }
-  33.33% {
-    color: var(--mui-palette-grass-main);
-    outline-color: var(--mui-palette-grass-main);
-  }
-  50% {
-    color: var(--mui-palette-red-main);
-    outline-color: var(--mui-palette-red-main);
-  }
-  66.66% {
-    color: var(--mui-palette-yellow-main);
-    outline-color: var(--mui-palette-yellow-main);
-  }
-  83.33% {
-    color: var(--mui-palette-violet-main);
-    outline-color: var(--mui-palette-violet-main);
-  }
-  to {
-    color: var(--mui-palette-blue-main);
-    outline-color: var(--mui-palette-blue-main);
-  }
+  @include alternateColorFrames(color outline-color);
 }
 
 @keyframes alternateBackgroundColor {
-  from {
-    background-color: var(--mui-palette-blue-main);
-  }
-  16.66% {
-    background-color: var(--mui-palette-green-main);
-  }
-  33.33% {
-    background-color: var(--mui-palette-grass-main);
-  }
-  50% {
-    background-color: var(--mui-palette-red-main);
-  }
-  66.66% {
-    background-color: var(--mui-palette-yellow-main);
-  }
-  83.33% {
-    background-color: var(--mui-palette-violet-main);
-  }
-  to {
-    background-color: var(--mui-palette-blue-main);
-  }
+  @include alternateColorFrames(background-color);
 }
 
 @keyframes alternateBackgroundOpacityColor {
-  from {
-    background-color: rgb(
-      var(--mui-palette-blue-mainChannel) / v.$backdrop-opacity
-    );
-  }
-  16.66% {
-    background-color: rgb(
-      var(--mui-palette-green-mainChannel) / v.$backdrop-opacity
-    );
-  }
-  33.33% {
-    background-color: rgb(
-      var(--mui-palette-grass-mainChannel) / v.$backdrop-opacity
-    );
-  }
-  50% {
-    background-color: rgb(
-      var(--mui-palette-red-mainChannel) / v.$backdrop-opacity
-    );
-  }
-  66.66% {
-    background-color: rgb(
-      var(--mui-palette-yellow-mainChannel) / v.$backdrop-opacity
-    );
-  }
-  83.33% {
-    background-color: rgb(
-      var(--mui-palette-violet-mainChannel) / v.$backdrop-opacity
-    );
-  }
-  to {
-    background-color: rgb(
-      var(--mui-palette-blue-mainChannel) / v.$backdrop-opacity
-    );
-  }
+  @include alternateColorFrames(background-color, v.$backdrop-opacity);
 }
 
 @keyframes alternateBorderColor {
-  from {
-    border-color: var(--mui-palette-blue-main);
-  }
-  16.66% {
-    border-color: var(--mui-palette-green-main);
-  }
-  33.33% {
-    border-color: var(--mui-palette-grass-main);
-  }
-  50% {
-    border-color: var(--mui-palette-red-main);
-  }
-  66.66% {
-    border-color: var(--mui-palette-yellow-main);
-  }
-  83.33% {
-    border-color: var(--mui-palette-violet-main);
-  }
-  to {
-    border-color: var(--mui-palette-blue-main);
-  }
+  @include alternateColorFrames(border-color);
 }
 
 @keyframes hello {

@@ -1,9 +1,14 @@
 import {differenceInYears, format} from 'date-fns'
 
 import {BREAKPOINT} from '#styles/tokens'
-import PROJECTS from '#data/projects'
-import VIDEOS from '#data/videos'
-import type {TRoute, TColor, TProjectFilter, TEffect} from '#utils/types'
+import {PROJECT_COLORS, VIDEO_COLORS} from '#data/contentColors'
+import type {
+  TRoute,
+  TColor,
+  TPageColor,
+  TProjectFilter,
+  TEffect,
+} from '#utils/types'
 
 interface IRoute {
   home: TRoute
@@ -75,21 +80,29 @@ export const PROJECT_FILTERS: TProjectFilter[] = [
   'admin',
 ]
 
-export const PATH_COLOR: Record<TRoute | string, TColor> = {
+export const PATH_COLOR: Partial<Record<string, TPageColor>> = {
   [ROUTE.home]: 'alternate',
   [ROUTE.about]: 'green',
   [ROUTE.skills]: 'blue',
   [ROUTE.experience]: 'violet',
   ...Object.fromEntries(
-    PROJECTS.map(project => [`/${project.name}`, project.color])
+    Object.entries(PROJECT_COLORS).map(([slug, color]) => [
+      `${ROUTE.portfolio}/${slug}`,
+      color,
+    ])
   ),
 }
 
-export const PATH_BACKGROUND_COLOR: Record<TRoute | string, TColor> = {
+export const PATH_BACKGROUND_COLOR: Partial<Record<string, TColor>> = {
   [ROUTE.portfolio]: 'blue',
   [ROUTE.blog]: 'red',
   [ROUTE.contact]: 'green',
-  ...Object.fromEntries(VIDEOS.map(video => [`/${video.name}`, video.color])),
+  ...Object.fromEntries(
+    Object.entries(VIDEO_COLORS).map(([slug, color]) => [
+      `${ROUTE.blog}/${slug}`,
+      color,
+    ])
+  ),
 }
 
 export const QUERY_BREAKPOINT: IQueryBreakpoint = {

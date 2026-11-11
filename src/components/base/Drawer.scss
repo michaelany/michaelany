@@ -1,16 +1,9 @@
 .Drawer-Content {
   overflow-y: auto;
   height: 100%;
+  background-color: var(--page-background-color);
   transition: background-color var(--mui-duration-standard)
     var(--mui-easing-inOut);
-  @each $color in v.$accent-colors {
-    .App_background_#{$color} & {
-      background-color: var(--mui-palette-#{$color}-main);
-    }
-  }
-}
-
-.Drawer-Content {
   padding-bottom: 12px;
   display: flex;
   flex-direction: column;

@@ -116,6 +116,14 @@ components to guide choices this document leaves open.
 - Follow the existing BEM-inspired naming convention. Use the standalone
   component name for its local block and prefix its elements and modifiers with
   that name, as in `.Block`, `.Block-Element`, and `.Block_modifier`.
+- Declare file-level Sass variables at the top of the stylesheet, after
+  `@use` and `@import` directives and before mixins and style rules.
+- Separate top-level SCSS blocks with a blank line. Keep declarations and
+  nested selectors, mixins, and media queries together within each block.
+- When several modifiers share a descendant rule, group the modifiers and nest
+  the descendant once. Use `&` for modifier suffixes and same-element selectors
+  such as `&_wide` and `&::before`. Write a descendant such as `::selection`
+  directly inside the group.
 - Use MUI CSS variables for shared colors, border radii, font sizes, durations,
   and easing. Use values from `src/styles/_variables.scss` for breakpoints and
   other shared Sass tokens.
@@ -140,6 +148,7 @@ components to guide choices this document leaves open.
   directly. Always check that the guidance matches the installed package version.
 - Follow the configured formatting: single quotes, no semicolons, no spaces
   inside braces, and trailing commas where supported.
+- Start code comments with a lowercase letter and omit the final period.
 - In object literals, place shorthand properties before explicitly assigned
   properties. Preserve override semantics and evaluation order around spreads
   and computed properties.

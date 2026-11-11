@@ -1,5 +1,6 @@
 import {useTranslation} from 'react-i18next'
-import {NavLink} from 'react-router-dom'
+import {matchPath, NavLink, useLocation} from 'react-router-dom'
+import type {CSSProperties} from 'react'
 import {Button, SvgIcon} from '@mui/material'
 import {
   HomeRounded as HomeIcon,
@@ -33,9 +34,15 @@ interface IItemProps extends INavigationProps, INavLink {
 
 export default function Navigation({onClose}: INavigationProps) {
   const {t} = useTranslation()
+  const {pathname} = useLocation()
+
+  const activeIndex = navLinks.findIndex(({to}) =>
+    matchPath({path: to, end: to === ROUTE.home}, pathname)
+  )
+  const style = {'--nav-index': Math.max(activeIndex, 0)} as CSSProperties
 
   return (
-    <nav className="Navigation">
+    <nav className="Navigation" style={style}>
       <ul>
         {navLinks.map(link => (
           <Item key={link.tKey} {...link} t={t} onClose={onClose} />

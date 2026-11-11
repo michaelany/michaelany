@@ -71,11 +71,7 @@ $videos:
   padding-top: 4px;
   font-size: 22px;
   line-height: 1.2;
-  @each $color in v.$accent-colors {
-    .ColorInteract_color_#{$color} & {
-      color: var(--mui-palette-#{$color}-dark);
-    }
-  }
+  color: var(--card-accent-dark-color);
 }
 
 .VideoLink-Date {

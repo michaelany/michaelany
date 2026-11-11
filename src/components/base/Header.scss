@@ -11,24 +11,13 @@
   justify-content: space-between;
   padding-left: 8px;
   padding-right: 8px;
-  border-bottom: v.$header_border-width solid var(--mui-palette-green-main);
-  background-color: rgba(white, 0.95);
+  border-bottom: v.$header_border-width solid
+    var(--page-accent-color, var(--mui-palette-green-main));
+  background-color: rgb(var(--page-background-channel, 255 255 255) / 0.95);
   transition:
     color var(--mui-duration-short) var(--mui-easing-inOut),
     background-color var(--mui-duration-standard) var(--mui-easing-inOut);
-
   .App_color_alternate & {
     @include m.animationAlternate(alternateBorderColor);
-  }
-  .App_color_white & {
-    border-color: white;
-  }
-  @each $color in v.$accent-colors {
-    .App_color_#{$color} & {
-      border-color: var(--mui-palette-#{$color}-main);
-    }
-    .App_background_#{$color} & {
-      background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.95);
-    }
   }
 }

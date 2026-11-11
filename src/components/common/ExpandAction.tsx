@@ -33,9 +33,11 @@ export default function ExpandAction({
 
   const button = (
     <Button
-      className="Button"
+      className={cn(
+        'Button ExpandAction-Button',
+        isWhite && 'ExpandAction-Button_white'
+      )}
       variant="outlined"
-      color={isWhite ? 'info' : undefined}
       endIcon={
         isFirstType ? (
           <ExpandMoreIcon

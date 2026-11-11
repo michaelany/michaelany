@@ -117,11 +117,6 @@ const THEME: ThemeOptions = {
       dark: COLOR.greenDark,
       light: COLOR.green,
     },
-    info: {
-      light: COLOR.white,
-      main: COLOR.white,
-      dark: COLOR.white,
-    },
     error: {
       light: COLOR.scarlet,
       main: COLOR.scarlet,

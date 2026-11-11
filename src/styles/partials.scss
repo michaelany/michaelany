@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 @use 'styles/variables' as v;
 @use 'styles/mixins' as m;
 
@@ -16,18 +18,13 @@
   .App_color_alternate & {
     @include m.animationAlternate;
   }
-  .App_color_white & {
-    color: white;
-    outline-color: white;
+  .App_color_white &,
+  .App_color_accent & {
+    color: var(--page-accent-color);
+    outline-color: var(--page-accent-color);
   }
-  @each $color in v.$accent-colors {
-    .App_color_#{$color} & {
-      color: var(--mui-palette-#{$color}-main);
-      outline-color: var(--mui-palette-#{$color}-main);
-      &_dark {
-        color: rgb(var(--mui-palette-#{$color}-darkChannel) / v.$dark-alfa);
-      }
-    }
+  .App_color_accent &_dark {
+    color: rgb(var(--page-accent-dark-channel) / v.$dark-alfa);
   }
 }
 
@@ -50,13 +47,9 @@
   &_fadeInBottom {
     @include m.animation(fadeInBottom);
   }
-  .App_color_white & {
-    color: white;
-  }
-  @each $color in v.$accent-colors {
-    .App_color_#{$color} & {
-      color: var(--mui-palette-#{$color}-main);
-    }
+  .App_color_white &,
+  .App_color_accent & {
+    color: var(--page-accent-color);
   }
   @include m.lg {
     font-size: 56px;
@@ -100,32 +93,17 @@
 }
 
 .Button {
+  $color-modifiers: ();
   color: white;
-  &_color_blue {
-    &.MuiButton-text {
-      color: var(--mui-palette-blue-dark);
-      background-color: rgb(var(--mui-palette-blue-mainChannel) / 0.2);
-      @include m.hover {
-        background-color: rgb(var(--mui-palette-blue-mainChannel) / 0.4);
-      }
-    }
-  }
-  &_color_green {
-    &.MuiButton-text {
-      color: var(--mui-palette-green-dark);
-      background-color: rgb(var(--mui-palette-green-mainChannel) / 0.2);
-      @include m.hover {
-        background-color: rgb(var(--mui-palette-green-mainChannel) / 0.4);
-      }
-    }
-  }
-  &_color_red {
-    &.MuiButton-text {
-      color: var(--mui-palette-red-dark);
-      background-color: rgb(var(--mui-palette-red-mainChannel) / 0.2);
-      @include m.hover {
-        background-color: rgb(var(--mui-palette-red-mainChannel) / 0.4);
-      }
+  @each $color in 'blue', 'green', 'red' {
+    $color-modifiers: list.append(
+      $color-modifiers,
+      '#{&}_color_#{$color}',
+      comma
+    );
+    &_color_#{$color} {
+      --button-accent-dark-color: var(--mui-palette-#{$color}-dark);
+      --button-accent-channel: var(--mui-palette-#{$color}-mainChannel);
     }
   }
   &_color_white,
@@ -139,25 +117,24 @@
       background-color: var(--mui-palette-neutral-light);
     }
   }
-  @each $color in v.$accent-colors {
-    .App_color_#{$color} & {
-      &.MuiButton-text {
-        color: var(--mui-palette-#{$color}-dark);
-        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.2);
-        @include m.hover {
-          background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.4);
-        }
-      }
-      &.MuiButton-outlined:not(.MuiButton-colorInfo) {
-        color: var(--mui-palette-#{$color}-dark);
-        border-color: rgb(var(--mui-palette-#{$color}-darkChannel) / 0.5);
-        @include m.hover {
-          border-color: var(--mui-palette-#{$color}-dark);
-          background-color: rgb(
-            var(--mui-palette-#{$color}-darkChannel) / 0.04
-          );
-        }
-      }
+  &:is(#{$color-modifiers}).MuiButton-text,
+  .App_color_accent &.MuiButton-text:not(.Button_color_white) {
+    color: var(--button-accent-dark-color, var(--page-accent-dark-color));
+    background-color: rgb(
+      var(--button-accent-channel, var(--page-accent-channel)) / 0.2
+    );
+    @include m.hover {
+      background-color: rgb(
+        var(--button-accent-channel, var(--page-accent-channel)) / 0.4
+      );
+    }
+  }
+  :where(.App_color_accent) &.MuiButton-outlined {
+    color: var(--page-accent-dark-color);
+    border-color: rgb(var(--page-accent-dark-channel) / 0.5);
+    @include m.hover {
+      border-color: var(--page-accent-dark-color);
+      background-color: rgb(var(--page-accent-dark-channel) / 0.04);
     }
   }
   @include m.xs {
@@ -196,16 +173,12 @@
       text-decoration-color: white;
     }
   }
-  @each $color in v.$accent-colors {
-    .App_color_#{$color} &:not(.Link_white) {
-      color: var(--mui-palette-#{$color}-dark);
-      outline-color: var(--mui-palette-#{$color}-dark);
-      text-decoration-color: rgb(
-        var(--mui-palette-#{$color}-darkChannel) / 0.3
-      );
-      @include m.hover {
-        text-decoration-color: var(--mui-palette-#{$color}-dark);
-      }
+  .App_color_accent &:not(.Link_white) {
+    color: var(--page-accent-dark-color);
+    outline-color: var(--page-accent-dark-color);
+    text-decoration-color: rgb(var(--page-accent-dark-channel) / 0.3);
+    @include m.hover {
+      text-decoration-color: var(--page-accent-dark-color);
     }
   }
 }
@@ -271,6 +244,7 @@
   border-radius: var(--mui-shape-borderRadius);
   @each $color in v.$accent-colors {
     &_color_#{$color} {
+      --card-accent-dark-color: var(--mui-palette-#{$color}-dark);
       color: var(--mui-palette-#{$color}-main);
       &::before {
         background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.12);

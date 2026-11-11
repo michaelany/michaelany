@@ -1,3 +1,22 @@
+.ExpandAction-Button {
+  &_white.Button.MuiButton-outlined {
+    color: white;
+    &,
+    &:active {
+      border-color: rgba(white, 0.5);
+      background-color: transparent;
+    }
+    @media (hover: hover) {
+      &:hover {
+        border-color: white;
+        background-color: rgb(
+          255 255 255 / var(--mui-palette-action-hoverOpacity)
+        );
+      }
+    }
+  }
+}
+
 .ExpandAction-Icon {
   transition: transform var(--mui-duration-short) var(--mui-easing-inOut);
   &_open {
