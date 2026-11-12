@@ -23,9 +23,8 @@ import './Job.scss'
 import {Tooltip, Company} from '#components/common'
 import {getPeriodDateTime, tPeriodPart} from '#utils/helpers'
 import TECHNOLOGIES from '#data/technologies'
-import PROJECTS, {
-  PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT,
-} from '#data/projects'
+import PROJECTS from '#data/projects'
+import {PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT} from '#data/projectCounts'
 import {ROUTE} from '#utils/constants'
 import type {
   IJob,

@@ -24,7 +24,7 @@ import {
 
 import './About.scss'
 import {Sections, Info, Tooltip} from '#components/common'
-import {PROJECTS_COUNT} from '#data/projects'
+import {PROJECTS_COUNT} from '#data/projectCounts'
 import {CONTACT_LINK} from '#data/common'
 import {TECHNOLOGY_TITLE} from '#data/technologies'
 import {

@@ -1,4 +1,5 @@
 import {PROJECT_COLORS} from './contentColors'
+import {PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT} from './projectCounts'
 import {publicImg} from '#utils/helpers'
 import {COMPANY, FEATURE} from '#data/common'
 import {TECHNOLOGY_TITLE} from '#data/technologies'
@@ -2573,19 +2574,6 @@ const PROJECTS: IProject[] = (
   color: PROJECT_COLORS[name],
   ...projectDetails[name],
 }))
-
-export const PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT = {
-  goRentals: ['GO Rentals', 'TanGO', 'TanGO New'].length,
-  sevenGlyphs: ['PCNZ', 'PCNZ Landing', 'Ted Manson Foundation', 'FCDC'].length,
-  t1: ['Dinamo Promo', 'Inter RAO'].length + 2,
-}
-
-export const PROJECTS_COUNT: number =
-  PROJECTS.length +
-  Object.values(PRIVATE_AND_OTHER_COMPANY_PROJECTS_COUNT).reduce(
-    (sum, count) => sum + count,
-    0
-  )
 
 export const SEVEN_GLYPHS_PROJECTS_COUNT =
   PROJECTS.filter(project => project.companyName === 'sevenGlyphs').length +

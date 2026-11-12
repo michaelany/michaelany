@@ -2,7 +2,7 @@
 
 ## Project catalog
 
-- [ ] Keep the project catalog out of `/about`. Move `PROJECTS_COUNT` and the
+- [x] Keep the project catalog out of `/about`. Move `PROJECTS_COUNT` and the
       existing private and other project counts to a lightweight module. Calculate
       the total from the number of entries in `PROJECT_COLORS` plus those counts,
       so `/about` can display the same total without importing `projects.ts`.
