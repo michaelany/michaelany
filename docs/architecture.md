@@ -1,63 +1,36 @@
 # Project Architecture
 
-## Project Structure
+## Project Layout
 
-- `src/components/` contains React components and their styles, grouped by
-  page or domain.
-- `src/components/common/` contains components reused across multiple domains.
-- `src/components/base/` contains application-shell components.
-- `src/data/` contains static portfolio, technology, video, and shared data.
-- `src/translations/` contains the English and Russian translation dictionaries.
-- `src/styles/` contains global styles, Sass variables, mixins, MUI overrides,
-  reusable presentational classes, and the MUI theme.
-- `src/utils/` contains supporting project code, including constants, helpers,
-  i18n setup, and types. Keep related domain-specific modules in a subfolder,
-  as in `src/utils/laptop/` for the Three.js scene and its model loader.
-- `tests/` contains Playwright tests.
-- `public/` contains files served without bundler processing.
+- `src/components/` groups components and styles by page or domain. Use
+  `base/` for the app shell and `common/` for components shared across domains.
+- `src/data/` holds static content and shared data. Keep page-specific
+  configuration with its page.
+- `src/translations/` holds the English and Russian dictionaries.
+- `src/styles/` holds the MUI theme, global styles and shared Sass.
+- `src/utils/` holds helpers, constants, i18n setup and types. Group related
+  domain utilities in a subfolder, as in `src/utils/laptop/`. Keep shared types
+  in `src/utils/types.ts` and reuse existing types such as `TColor`.
+- `tests/` holds Playwright tests. `public/` holds files served as-is.
 
-Routes are declared in `src/components/App.tsx` and page components are lazy
-loaded. Reuse the path aliases from `tsconfig.json`, such as `#components`,
-`#data`, `#styles`, `#translations`, and `#utils`.
+Declare routes in `src/components/App.tsx` and lazy-load page components. Use
+the import aliases in `tsconfig.json`.
 
-## Components and State
+## Components
 
-- Keep page-specific components and styles in their existing domain folder.
-- Put a component in `common/` only when it is genuinely reused across domains.
-- Do not create a React component solely to reuse styles.
-- For simple visual patterns applied to MUI or native elements, add a reusable
-  class to `src/styles/partials.scss`. Existing examples are `.Button`, `.Link`,
-  and `.Chip`.
-- Create a separate React component when it owns meaningful child structure,
-  logic, state, or behavior that changes how it works.
-- Prefer the simplest implementation that fits the existing architecture.
-- Prefer built-in MUI components, props, interaction states, and transitions,
-  configured through the existing project theme and conventions. Add custom
-  implementations only when MUI does not provide the required capability.
-- Prefer MUI `Stack` for rows and columns and `Grid` for grids when their
-  layout props cover the needed spacing, alignment, and responsiveness. Use
-  semantic HTML with local styles for simple text and headings, and local SCSS
-  for custom elements or layout that MUI primitives do not cover.
-- Describe repeated UI with data arrays and render it with `map`, following
-  patterns such as `navLinks`, `jobs`, and portfolio data. Keep page-specific
-  configuration local; put shared portfolio content in `src/data/`.
-- Prefer local state and explicit props for data and callbacks. Introduce
-  shared state infrastructure only when the actual scope requires it.
-- Reuse the existing interface building blocks, such as `Section`, `Sections`,
-  `Animate`, `Panel`, and `ExpandAction`, when they fit the task.
+- Extract components that own meaningful structure, logic, state or behaviour.
+  Share purely visual patterns through classes in `src/styles/partials.scss`.
+- Reuse building blocks such as `Section`, `Sections`, `Animate`, `Panel` and
+  `ExpandAction`. Prefer built-in MUI components, props, states and transitions.
+- Use MUI `Stack` for rows and columns and `Grid` for grids when their layout
+  props suffice. Use semantic HTML for simple text and headings, and local
+  SCSS for custom elements and layouts.
+- Render repeated UI from data with `map`. Prefer local state and explicit
+  props. Introduce shared state when the feature needs it.
 
-## Styles and Shared Types
+## Styles
 
-- Give each standalone component with local styles a matching `.scss` file
-  beside its `.tsx` file. Import it from the component that owns those styles.
-- Keep reusable, structure-independent visual classes in
-  `src/styles/partials.scss`.
-- When a Material UI component first needs customization, define its project
-  default in `src/styles/theme.ts`. If another use needs a different appearance,
-  decide which appearance should be the theme default and override the exception
-  where it is used. Use reusable partial classes for opt-in variants and local
-  SCSS for domain layout.
-- Use `m.retinaImg` for decorative CSS backgrounds with standard and retina
-  assets, as in `Laptop.scss` and `VideoLink.scss`.
-- Keep shared types in `src/utils/types.ts` and reuse existing unions such as
-  `TColor` rather than duplicating them.
+- Put a standalone component's styles in a matching SCSS file beside it.
+  Import the stylesheet from the component that owns it.
+- Set project-wide MUI defaults in `src/styles/theme.ts` and apply exceptions
+  where they are used. Use `partials.scss` for reusable opt-in classes.
