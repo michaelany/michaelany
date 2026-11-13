@@ -32,6 +32,10 @@ const borderRadiusQuarter = BORDER_RADIUS / 4
 
 const charcoalAlpha = alpha(COLOR.charcoal, 0.12)
 
+const fabCompactSize = 48
+const iconButtonInteractionBackground =
+  'rgb(var(--mui-palette-text-primaryChannel) / 0.04)'
+
 const THEME: ThemeOptions = {
   cssVariables: true,
   duration: Object.fromEntries(
@@ -178,6 +182,20 @@ const THEME: ThemeOptions = {
           '&.Mui-disabled': {
             backgroundColor: 'rgba(0, 0, 0, 0.04)',
           },
+          '&:not(.MuiFab-sizeMedium)': {
+            [`@media (max-width: ${BREAKPOINT.lg}px)`]: {
+              width: fabCompactSize,
+              height: fabCompactSize,
+            },
+            [`@media (max-width: ${BREAKPOINT.md}px)`]: {
+              width: 56,
+              height: 56,
+            },
+            [`@media (max-width: ${BREAKPOINT.sm}px)`]: {
+              width: fabCompactSize,
+              height: fabCompactSize,
+            },
+          },
         },
       },
     },
@@ -201,6 +219,16 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           color: COLOR.grey,
+          '@media (hover: hover)': {
+            '&:hover': {
+              backgroundColor: iconButtonInteractionBackground,
+            },
+          },
+          '@media (hover: none)': {
+            '&:active': {
+              backgroundColor: iconButtonInteractionBackground,
+            },
+          },
         },
       },
       defaultProps: {
@@ -370,6 +398,16 @@ const THEME: ThemeOptions = {
           '.MuiSvgIcon-root': {
             transition: `color ${DURATION.short}ms ${EASING.out}`,
           },
+          '@media (hover: hover)': {
+            '&:hover': {
+              backgroundColor: 'transparent',
+            },
+          },
+          '@media (hover: none)': {
+            '&:active': {
+              backgroundColor: 'transparent',
+            },
+          },
         },
       },
     },
@@ -413,6 +451,9 @@ const THEME: ThemeOptions = {
           borderTopRightRadius: BORDER_RADIUS,
           borderBottomLeftRadius: borderRadiusQuarter,
           borderBottomRightRadius: borderRadiusQuarter,
+          [`@media (max-width: ${BREAKPOINT.sm}px)`]: {
+            fontSize: 'var(--mui-fontSize-small)',
+          },
         },
       },
     },

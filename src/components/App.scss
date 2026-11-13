@@ -21,6 +21,15 @@
       background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);
     }
   }
+  &_color_alternate .MuiBackdrop-root {
+    @include m.animationAlternate(alternateBackgroundOpacityColor);
+  }
+  &_color_white .MuiBackdrop-root,
+  &_color_accent .MuiBackdrop-root {
+    background-color: rgb(
+      var(--page-accent-channel, 255 255 255) / v.$backdrop-opacity
+    );
+  }
   &_hasBackground::before {
     @include m.pseudoGradient;
   }
