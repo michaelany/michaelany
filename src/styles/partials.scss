@@ -187,34 +187,44 @@
   }
   @each $color in v.$accent-colors {
     &_color_#{$color} {
-      &.MuiChip-filled {
-        color: var(--mui-palette-#{$color}-dark);
-        background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.2);
-        .MuiChip-icon {
-          color: var(--mui-palette-#{$color}-dark);
-        }
-        &.Mui-focusVisible {
-          background-color: rgb(var(--mui-palette-#{$color}-mainChannel) / 0.4);
-        }
-        &.MuiChip-clickable {
-          @include m.hover {
-            background-color: rgb(
-              var(--mui-palette-#{$color}-mainChannel) / 0.4
-            );
-          }
-        }
+      --chip-accent-dark-color: var(--mui-palette-#{$color}-dark);
+      --chip-accent-channel: var(--mui-palette-#{$color}-mainChannel);
+      --chip-accent-dark-channel: var(--mui-palette-#{$color}-darkChannel);
+    }
+  }
+}
+
+:is(
+  .Chip_color_neutral,
+  .Chip_color_blue,
+  .Chip_color_green,
+  .Chip_color_grass,
+  .Chip_color_yellow,
+  .Chip_color_red,
+  .Chip_color_violet
+) {
+  &.MuiChip-filled {
+    color: var(--chip-accent-dark-color);
+    background-color: rgb(var(--chip-accent-channel) / 0.2);
+    .MuiChip-icon {
+      color: var(--chip-accent-dark-color);
+    }
+    &.Mui-focusVisible {
+      background-color: rgb(var(--chip-accent-channel) / 0.4);
+    }
+    &.MuiChip-clickable {
+      @include m.hover {
+        background-color: rgb(var(--chip-accent-channel) / 0.4);
       }
-      &.MuiChip-outlined {
-        border-color: rgb(
-          var(--mui-palette-#{$color}-darkChannel) / v.$dark-alfa
-        );
-        .MuiChip-icon {
-          color: rgb(var(--mui-palette-#{$color}-darkChannel) / v.$dark-alfa);
-        }
-        .MuiAvatar-root {
-          background-color: rgb(var(--mui-palette-#{$color}-darkChannel) / 0.1);
-        }
-      }
+    }
+  }
+  &.MuiChip-outlined {
+    border-color: rgb(var(--chip-accent-dark-channel) / v.$dark-alfa);
+    .MuiChip-icon {
+      color: rgb(var(--chip-accent-dark-channel) / v.$dark-alfa);
+    }
+    .MuiAvatar-root {
+      background-color: rgb(var(--chip-accent-dark-channel) / 0.1);
     }
   }
 }

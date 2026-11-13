@@ -161,19 +161,6 @@ const THEME: ThemeOptions = {
             },
           ],
         },
-        icon: {
-          variants: [
-            {
-              props: {size: 'large'},
-              style: {
-                fontSize: '1.5rem',
-              },
-            },
-          ],
-          '.MuiSvgIcon-root': {
-            fontSize: '1.5rem',
-          },
-        },
       },
     },
     MuiFab: {
