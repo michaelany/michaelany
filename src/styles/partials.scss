@@ -1,5 +1,3 @@
-@use 'sass:list';
-
 @use 'styles/variables' as v;
 @use 'styles/mixins' as m;
 
@@ -93,14 +91,8 @@
 }
 
 .Button {
-  $color-modifiers: ();
   color: white;
   @each $color in 'blue', 'green', 'red' {
-    $color-modifiers: list.append(
-      $color-modifiers,
-      '#{&}_color_#{$color}',
-      comma
-    );
     &_color_#{$color} {
       --button-accent-dark-color: var(--mui-palette-#{$color}-dark);
       --button-accent-channel: var(--mui-palette-#{$color}-mainChannel);
@@ -117,7 +109,11 @@
       background-color: var(--mui-palette-neutral-light);
     }
   }
-  &:is(#{$color-modifiers}).MuiButton-text,
+  &:is(
+      .Button_color_blue,
+      .Button_color_green,
+      .Button_color_red
+    ).MuiButton-text,
   .App_color_accent &.MuiButton-text:not(.Button_color_white) {
     color: var(--button-accent-dark-color, var(--page-accent-dark-color));
     background-color: rgb(
@@ -276,11 +272,6 @@
 
 .ButtonIcon {
   font-size: 32px;
-}
-
-.Time {
-  display: inline-block;
-  text-transform: capitalize;
 }
 
 .Tabs {

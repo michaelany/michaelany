@@ -61,7 +61,7 @@ export default function Timeline() {
             {steps.map((item, index) => (
               <Step key={index}>
                 <StepLabel>
-                  <span className="Time">
+                  <span className="Timeline-Time">
                     <time dateTime={getPeriodDateTime(item.period.from)}>
                       {tPeriodPart(t, item.period.from)}
                     </time>
