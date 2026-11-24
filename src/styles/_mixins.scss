@@ -1,5 +1,9 @@
 @use 'styles/variables' as v;
 
+@function spacing($factor) {
+  @return calc(var(--mui-spacing) * $factor);
+}
+
 @mixin pseudo($pos: absolute, $display: block, $content: '') {
   content: $content;
   display: $display;
@@ -36,25 +40,32 @@
 }
 
 @mixin xs {
-  @media (max-width: v.$breakpoint_xs) {
+  @media (width <= v.$breakpoint_xs) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (max-width: v.$breakpoint_sm) {
+  @media (width <= v.$breakpoint_sm) {
     @content;
   }
 }
 
 @mixin md {
-  @media (max-width: v.$breakpoint_md) {
+  @media (width <= v.$breakpoint_md) {
     @content;
   }
 }
 
 @mixin lg {
-  @media (max-width: v.$breakpoint_lg) {
+  @media (width <= v.$breakpoint_lg) {
+    @content;
+  }
+}
+
+@mixin compact {
+  @media (width <= v.$breakpoint_sm),
+    (v.$breakpoint_md < width <= v.$breakpoint_lg) {
     @content;
   }
 }

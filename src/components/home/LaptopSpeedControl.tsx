@@ -2,7 +2,6 @@ import {useEffect, useRef, useState} from 'react'
 import type {TFunction} from 'i18next'
 import {
   Button,
-  ButtonGroup,
   ClickAwayListener,
   Fab,
   Fade,
@@ -136,18 +135,22 @@ export default function LaptopSpeedControl({
                     <AddIcon />
                   </IconButton>
                 </Stack>
-                <ButtonGroup
+                <div
                   className="LaptopSpeedControl-Presets"
-                  fullWidth
-                  color="inherit"
+                  role="group"
                   aria-label={speedLabel}
                 >
                   {speedOptions.presets.map(speed => (
-                    <Button key={speed} onClick={() => onSpeedChange(speed)}>
+                    <Button
+                      key={speed}
+                      variant="outlined"
+                      color="inherit"
+                      onClick={() => onSpeedChange(speed)}
+                    >
                       {speed}
                     </Button>
                   ))}
-                </ButtonGroup>
+                </div>
               </Paper>
             </Fade>
           )}

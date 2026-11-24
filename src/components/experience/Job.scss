@@ -20,7 +20,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-left: 1.8rem;
+  padding-left: m.spacing(4);
+  @include m.compact {
+    padding-left: m.spacing(3.5);
+  }
   @include m.xs {
     justify-content: flex-start;
     padding-left: 0;
@@ -41,13 +44,16 @@
 
 .Job-Occupations {
   text-align: center;
-  padding-top: 0.5em;
-  margin-bottom: 1.75em;
+  padding-top: m.spacing(1);
+  margin-bottom: m.spacing(4);
+  @include m.compact {
+    margin-bottom: m.spacing(3.5);
+  }
 }
 
 .Job-Occupation {
   font-weight: normal;
-  font-size: 1.25rem;
+  font-size: var(--mui-fontSize-large);
   color: var(--mui-palette-text-secondary);
   &_last {
     color: var(--mui-palette-text-primary);
@@ -105,8 +111,8 @@
 }
 
 .Job-SubTitle {
-  margin-bottom: 1em;
-  gap: 0.5em;
+  margin-bottom: m.spacing(2);
+  gap: m.spacing(1);
   display: inline-flex;
   align-items: center;
   & > svg {
@@ -115,17 +121,17 @@
 }
 
 .Job-SubTitleText {
-  padding-top: 0.2em;
+  padding-top: m.spacing(0.5);
 }
 
 .Job-Items {
   list-style: disc;
-  padding-left: 18px;
+  padding-left: m.spacing(2.5);
 }
 
 .Job-Item {
   &:not(:last-child) {
-    margin-bottom: 0.35em;
+    margin-bottom: m.spacing(1);
   }
 }
 

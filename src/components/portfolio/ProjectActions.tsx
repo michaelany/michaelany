@@ -47,9 +47,9 @@ export default function ProjectActions({
         <Link
           icon={
             companyName === 'everpoint' ? (
-              <EverpointIcon />
+              <EverpointIcon className="ProjectActions-DetailsIcon" />
             ) : (
-              <SevenGlyphsIcon width={16} height={16} />
+              <SevenGlyphsIcon className="ProjectActions-DetailsIcon" />
             )
           }
           href={details}

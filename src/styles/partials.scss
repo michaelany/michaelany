@@ -28,15 +28,15 @@
 
 .Title {
   @include m.animation(fadeIn);
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.5em;
+  margin-bottom: m.spacing(4.5);
   &_mediumIndent {
-    margin-bottom: 0.32em;
+    margin-bottom: m.spacing(3);
   }
   &_smallIndent {
-    margin-bottom: 0.16em;
+    margin-bottom: m.spacing(1.5);
   }
   &_withIcon {
     display: flex;
@@ -50,34 +50,51 @@
     color: var(--page-accent-color);
   }
   @include m.lg {
-    font-size: 56px;
+    font-size: 3.5rem;
+    margin-bottom: m.spacing(3.5);
+    &_mediumIndent {
+      margin-bottom: m.spacing(2.5);
+    }
+    &_smallIndent {
+      margin-bottom: m.spacing(1);
+    }
   }
   @include m.xs {
-    font-size: 42px;
+    font-size: 2.625rem;
+    margin-bottom: m.spacing(2.5);
+    &_mediumIndent {
+      margin-bottom: m.spacing(1.5);
+    }
   }
 }
 
 .TitleIconWrapper {
-  padding: 8px;
+  padding: m.spacing(1);
   display: flex;
-  margin-left: 0.2em;
+  margin-left: m.spacing(2);
+  @include m.lg {
+    margin-left: m.spacing(1.5);
+  }
+  @include m.xs {
+    margin-left: m.spacing(1);
+  }
 }
 
 .Text {
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 1.5;
   @include m.lg {
-    font-size: 26px;
+    font-size: 1.625rem;
   }
   @include m.xs {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 
 .MainText {
   @extend .Text;
   @include m.animation(fadeInBottom);
-  margin-bottom: 2em;
+  margin-bottom: m.spacing(7.5);
   color: var(--mui-palette-text-secondary);
   &_dark {
     color: var(--mui-palette-text-primary);
@@ -86,7 +103,19 @@
     animation: none;
   }
   &_smallIndent {
-    margin-bottom: 0.8em;
+    margin-bottom: m.spacing(3);
+  }
+  @include m.lg {
+    margin-bottom: m.spacing(6.5);
+    &_smallIndent {
+      margin-bottom: m.spacing(2.5);
+    }
+  }
+  @include m.xs {
+    margin-bottom: m.spacing(5.5);
+    &_smallIndent {
+      margin-bottom: m.spacing(2);
+    }
   }
 }
 

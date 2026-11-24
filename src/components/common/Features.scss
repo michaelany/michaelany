@@ -3,12 +3,15 @@
 }
 
 .Features-Icon {
-  font-size: 2rem;
-  margin-bottom: 0.16em;
+  font-size: 2.25rem;
+  margin-bottom: m.spacing(0.5);
+  @include m.compact {
+    font-size: 2rem;
+  }
 }
 
 .Features-Label {
-  font-size: 1.15rem;
+  font-size: var(--mui-fontSize-medium);
 }
 
 .Features-Description {

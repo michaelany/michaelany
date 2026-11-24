@@ -16,12 +16,12 @@
 }
 
 .Greeting-Subtext {
-  font-size: 48px;
+  font-size: 3rem;
   @include m.lg {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   @include m.xs {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 
@@ -31,20 +31,28 @@
 
 .Greeting-IconWrapper {
   position: relative;
-  top: 0.05em;
-  margin-left: 0.2em;
+  top: 4px;
+  margin-left: m.spacing(2);
+  @include m.lg {
+    top: 3px;
+    margin-left: m.spacing(1.5);
+  }
+  @include m.xs {
+    top: 2px;
+    margin-left: m.spacing(1);
+  }
 }
 
 .Greeting-Icon {
+  width: calc(60em / 72);
+  height: auto;
   animation: hello var(--mui-duration-lingering) var(--mui-easing-inOut)
     infinite;
   @include m.lg {
-    width: 50px;
-    height: 50px;
+    width: calc(50em / 56);
   }
   @include m.xs {
-    width: 42px;
-    height: 42px;
+    width: 1em;
   }
 }
 
@@ -66,16 +74,16 @@
   display: flex;
   position: relative;
   z-index: 1;
-  left: 0.35em;
+  left: 24px;
   transition: transform var(--mui-duration-standard) var(--mui-easing-out);
   &_first {
     outline-color: var(--mui-palette-yellow-main);
-    top: 0.2em;
+    top: 14px;
     transform: rotate(20deg);
   }
   &_second {
     outline-color: var(--mui-palette-red-main);
-    top: 0.25em;
+    top: 18px;
     transform: rotate(-15deg);
   }
   @include m.hover {
@@ -84,18 +92,52 @@
   &:focus {
     transform: rotate(0) scale(1.2);
   }
+  @include m.lg {
+    left: 20px;
+    &_first {
+      top: 11px;
+    }
+    &_second {
+      top: 14px;
+    }
+  }
+  @include m.xs {
+    left: 15px;
+    &_first {
+      top: 8px;
+    }
+    &_second {
+      top: 11px;
+    }
+  }
 }
 
 .Greeting-BadgeImg {
   .Greeting-Badge_first > & {
     @include m.animation(fadeInZoomOut, 2450ms);
-    width: 0.83em;
-    height: 0.94em;
+    width: 3.75rem;
+    height: 4.25rem;
+    @include m.lg {
+      width: 2.875rem;
+      height: 3.3125rem;
+    }
+    @include m.xs {
+      width: 2.1875rem;
+      height: 2.5rem;
+    }
   }
   .Greeting-Badge_second > & {
     @include m.animation(fadeInZoomIn, 3050ms);
-    width: 0.91em;
-    height: 0.64em;
+    width: 4.125rem;
+    height: 2.875rem;
+    @include m.lg {
+      width: 3.1875rem;
+      height: 2.25rem;
+    }
+    @include m.xs {
+      width: 2.375rem;
+      height: 1.6875rem;
+    }
   }
 }
 
@@ -103,8 +145,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 2em;
+  margin-top: m.spacing(4.5);
   margin-bottom: -16px;
+  @include m.compact {
+    margin-top: m.spacing(4);
+  }
   @include m.xs {
     margin-bottom: 24px;
   }

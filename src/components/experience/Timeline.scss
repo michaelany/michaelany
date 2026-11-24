@@ -1,8 +1,27 @@
 .Timeline-Title {
-  font-size: 1.2rem;
+  font-size: var(--mui-fontSize-large);
   padding-top: 20px;
   padding-inline: 24px;
   font-weight: bold;
+}
+
+.Timeline-Stepper {
+  --timeline-marker-size: 1.5rem;
+  --timeline-marker-radius: calc(var(--timeline-marker-size) / 2);
+
+  .MuiStepIcon-root {
+    font-size: var(--timeline-marker-size);
+  }
+  .MuiStepIcon-text {
+    font-size: 0.875rem;
+  }
+  .MuiStepConnector-vertical,
+  .MuiStepContent-root {
+    margin-left: var(--timeline-marker-radius);
+  }
+  .MuiStepContent-root {
+    padding-left: calc(var(--timeline-marker-radius) + 8px);
+  }
 }
 
 .Timeline-Time {

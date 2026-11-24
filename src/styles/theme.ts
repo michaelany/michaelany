@@ -14,7 +14,7 @@ declare module '@mui/material/styles' {
   interface ThemeOptions {
     duration?: Record<string, string>
     easing?: typeof EASING
-    fontSize?: Record<keyof typeof FONT_SIZE, string>
+    fontSize?: typeof fontSizes
   }
 
   interface PaletteOptions {
@@ -28,11 +28,26 @@ declare module '@mui/material/styles' {
   }
 }
 
+const htmlFontSize = 16
+
+const toRem = (px: number) => `${px / htmlFontSize}rem`
+
+const toResponsiveRem = (basePx: number, compactPx: number) =>
+  `calc(${toRem(basePx)} + ${toRem(compactPx - basePx)} * var(--font-size-compact))`
+
+const fontSizes = {
+  small: toRem(FONT_SIZE.small),
+  body: toResponsiveRem(FONT_SIZE.base, FONT_SIZE.small),
+  medium: toResponsiveRem(21, 18),
+  large: toResponsiveRem(22, 20),
+}
+
 const borderRadiusQuarter = BORDER_RADIUS / 4
 
 const charcoalAlpha = alpha(COLOR.charcoal, 0.12)
 
 const fabCompactSize = 48
+
 const iconButtonInteractionBackground =
   'rgb(var(--mui-palette-text-primaryChannel) / 0.04)'
 
@@ -42,24 +57,21 @@ const THEME: ThemeOptions = {
     Object.entries(DURATION).map(([name, value]) => [name, `${value}ms`])
   ),
   easing: EASING,
-  fontSize: {
-    base: `${FONT_SIZE.base}px`,
-    small: `${FONT_SIZE.small}px`,
-  },
+  fontSize: fontSizes,
   typography: {
+    htmlFontSize,
     fontFamily: '"Neutra Text", sans-serif',
-    htmlFontSize: FONT_SIZE.base,
     fontSize: FONT_SIZE.base,
     body1: {
-      fontSize: '1rem',
+      fontSize: 'var(--mui-fontSize-body)',
       lineHeight: 1.5,
     },
     body2: {
-      fontSize: '1rem',
+      fontSize: 'var(--mui-fontSize-body)',
       lineHeight: 1.5,
     },
     button: {
-      letterSpacing: 0.8,
+      letterSpacing: 1,
       fontWeight: 'bold',
       textTransform: 'none',
     },
@@ -146,21 +158,21 @@ const THEME: ThemeOptions = {
   components: {
     MuiButton: {
       styleOverrides: {
-        root: {
-          padding: '8px 24px',
+        root: ({theme}) => ({
+          padding: theme.spacing(1, 3),
           '.MuiButton-icon .MuiSvgIcon-root': {
-            fontSize: '1.5rem',
+            fontSize: toResponsiveRem(27, 24),
           },
           variants: [
             {
               props: {variant: 'text', size: 'large'},
               style: {
-                padding: '12px 24px',
-                fontSize: '1.2rem',
+                padding: theme.spacing(1.5, 3),
+                fontSize: 'var(--mui-fontSize-large)',
               },
             },
           ],
-        },
+        }),
       },
     },
     MuiFab: {
@@ -170,15 +182,15 @@ const THEME: ThemeOptions = {
             backgroundColor: 'rgba(0, 0, 0, 0.04)',
           },
           '&:not(.MuiFab-sizeMedium)': {
-            [`@media (max-width: ${BREAKPOINT.lg}px)`]: {
+            [`@media (width <= ${BREAKPOINT.lg}px)`]: {
               width: fabCompactSize,
               height: fabCompactSize,
             },
-            [`@media (max-width: ${BREAKPOINT.md}px)`]: {
+            [`@media (width <= ${BREAKPOINT.md}px)`]: {
               width: 56,
               height: 56,
             },
-            [`@media (max-width: ${BREAKPOINT.sm}px)`]: {
+            [`@media (width <= ${BREAKPOINT.sm}px)`]: {
               width: fabCompactSize,
               height: fabCompactSize,
             },
@@ -192,14 +204,14 @@ const THEME: ThemeOptions = {
         enterDelay: DURATION.standard,
       },
       styleOverrides: {
-        tooltip: {
-          fontSize: FONT_SIZE.small,
+        tooltip: ({theme}) => ({
+          fontSize: 'var(--mui-fontSize-small)',
           fontWeight: 'normal',
           color: COLOR.charcoal,
           backgroundColor: COLOR.white,
           border: `1px solid ${COLOR.charcoal}`,
-          padding: '6px 12px',
-        },
+          padding: theme.spacing(1, 1.5),
+        }),
       },
     },
     MuiIconButton: {
@@ -277,24 +289,15 @@ const THEME: ThemeOptions = {
         },
       },
     },
-    MuiStepLabel: {
-      styleOverrides: {
-        label: {
-          fontSize: '1rem',
-        },
-      },
-    },
     MuiStepIcon: {
       styleOverrides: {
         root: {
-          fontSize: 24,
           color: COLOR.neutral,
           '&.Mui-completed': {
             fill: COLOR.grass,
           },
         },
         text: {
-          fontSize: 14,
           fontWeight: 'bold',
           fill: COLOR.white,
         },
@@ -319,18 +322,36 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         root: {
-          fontSize: FONT_SIZE.small,
+          fontSize: 'var(--mui-fontSize-small)',
           fontWeight: 'normal',
         },
-        avatar: {
+        sizeMedium: {
+          minHeight: '2rem',
+          height: 'auto',
+          paddingBlock: '0.1875rem',
+          borderRadius: '1rem',
+          '.MuiChip-avatar': {
+            width: '1.5rem',
+            height: '1.5rem',
+            flexShrink: 0,
+          },
+          '.MuiChip-icon': {
+            flexShrink: 0,
+          },
+          '.MuiChip-label': {
+            whiteSpace: 'normal',
+            overflowWrap: 'anywhere',
+          },
+        },
+        avatar: ({theme}) => ({
           backgroundColor: COLOR.white,
-          padding: 5,
+          padding: theme.spacing(0.5),
           '.MuiAvatar-img': {
             objectFit: 'contain',
           },
-        },
+        }),
         icon: {
-          fontSize: 24,
+          fontSize: '1.5em',
         },
       },
     },
@@ -432,13 +453,13 @@ const THEME: ThemeOptions = {
     MuiTab: {
       styleOverrides: {
         root: {
-          fontSize: FONT_SIZE.base,
+          fontSize: toRem(FONT_SIZE.base),
           color: COLOR.white,
           borderTopLeftRadius: BORDER_RADIUS,
           borderTopRightRadius: BORDER_RADIUS,
           borderBottomLeftRadius: borderRadiusQuarter,
           borderBottomRightRadius: borderRadiusQuarter,
-          [`@media (max-width: ${BREAKPOINT.sm}px)`]: {
+          [`@media (width <= ${BREAKPOINT.sm}px)`]: {
             fontSize: 'var(--mui-fontSize-small)',
           },
         },

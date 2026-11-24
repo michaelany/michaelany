@@ -1,20 +1,12 @@
 @use 'styles/mixins' as m;
 
 :root {
+  font-size: 100%;
+  --font-size-compact: 0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-}
-
-html {
-  font-size: var(--mui-fontSize-base);
-  @include m.lg {
-    font-size: var(--mui-fontSize-small);
-  }
-  @include m.md {
-    font-size: var(--mui-fontSize-base);
-  }
-  @include m.sm {
-    font-size: var(--mui-fontSize-small);
+  @include m.compact {
+    --font-size-compact: 1;
   }
 }
 

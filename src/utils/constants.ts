@@ -106,10 +106,10 @@ export const PATH_BACKGROUND_COLOR: Partial<Record<string, TColor>> = {
 }
 
 export const QUERY_BREAKPOINT: IQueryBreakpoint = {
-  xs: `(max-width: ${BREAKPOINT.xs}px)`,
-  sm: `(max-width: ${BREAKPOINT.sm}px)`,
-  md: `(max-width: ${BREAKPOINT.md}px)`,
-  lg: `(max-width: ${BREAKPOINT.lg}px)`,
+  xs: `(width <= ${BREAKPOINT.xs}px)`,
+  sm: `(width <= ${BREAKPOINT.sm}px)`,
+  md: `(width <= ${BREAKPOINT.md}px)`,
+  lg: `(width <= ${BREAKPOINT.lg}px)`,
 }
 
 export const BLANK_LINK_PROPS: IBlankLinkProps = {

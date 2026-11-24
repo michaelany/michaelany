@@ -20,7 +20,7 @@ $control-size: 44px;
   display: block;
   margin-bottom: 8px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: var(--mui-fontSize-large);
   font-weight: bold;
   font-variant-numeric: tabular-nums;
 }
@@ -31,6 +31,9 @@ $control-size: 44px;
   height: $control-size;
   background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.06);
   color: inherit;
+  > .MuiSvgIcon-root {
+    font-size: 31px;
+  }
   &.Mui-focusVisible {
     background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
   }
@@ -43,16 +46,18 @@ $control-size: 44px;
 }
 
 .LaptopSpeedControl-Presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: m.spacing(0.5);
   margin-top: 12px;
   .MuiButton-root {
-    min-width: 0;
+    flex: 1 0 auto;
+    min-width: $control-size;
     min-height: $control-size;
-    padding: 0;
+    padding: 0 0.25rem;
     border-color: var(--mui-palette-neutral-light);
     font-size: var(--mui-fontSize-small);
-    &:not(:last-child) {
-      border-right-color: transparent;
-    }
+    white-space: nowrap;
     &::after {
       @include m.pseudo;
       z-index: 1;

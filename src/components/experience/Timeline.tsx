@@ -57,7 +57,11 @@ export default function Timeline() {
       >
         <Paper>
           <h2 className="Timeline-Title">{t('experience.subtitle')}</h2>
-          <Stepper activeStep={step} orientation="vertical">
+          <Stepper
+            className="Timeline-Stepper"
+            activeStep={step}
+            orientation="vertical"
+          >
             {steps.map((item, index) => (
               <Step key={index}>
                 <StepLabel>

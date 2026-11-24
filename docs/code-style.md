@@ -42,6 +42,8 @@ guide choices the docs leave open.
 - Use consistent domain names in `camelCase`. Name helpers for what they do
   and use singular names for collection items. Keep established short names
   such as `t`, `md` and `e`.
+- Use action-oriented names for helpers and keep related names consistent,
+  as in `toRem` and `toResponsiveRem`.
 - Use `PascalCase` for components and match the `.tsx` filename to the main
   component. Use contextual names for local helpers and include the domain
   in separately used component names when it helps.
@@ -61,6 +63,18 @@ guide choices the docs leave open.
 
 ## SCSS
 
+- Keep the root font size at `100%`. Set text sizes in `rem` that resolve to
+  whole CSS pixels at the default `16px` root. Set responsive text sizes in
+  typography styles.
+- Use unitless `line-height` in custom styles so it follows the element's font
+  size. The computed line height may be fractional.
+- Use the MUI spacing scale for layout gaps, margins and padding. Its base step
+  is `8px`. Half steps give `4px` increments. Use `theme.spacing()` or MUI
+  spacing props in React and `m.spacing()` in SCSS.
+- Use `em` for sizes that should follow the local font, such as an inline icon
+  at `1em`. Use whole `px` values for fixed dimensions, borders and breakpoints.
+  Flexible layouts, image proportions and user font scaling can produce
+  fractional CSS pixels.
 - Use component-based block names with `.Block-Element` and
   `.Block_modifier` for elements and modifiers.
 - Put file-level variables after `@use` and `@import`, before mixins and rules.
@@ -72,6 +86,7 @@ guide choices the docs leave open.
   and other shared values. Put mixin calls first in a rule, with `m.hover`
   and breakpoint mixins at the end to preserve the cascade. Vite provides
   the `v` and `m` namespaces.
+- Use range syntax for custom width media queries, such as `(width <= 599px)`.
 - Follow existing responsive and retina image patterns. Use `m.retinaImg`
   for decorative CSS backgrounds with standard and retina assets.
 
@@ -83,6 +98,8 @@ guide choices the docs leave open.
   when available and official MUI docs otherwise.
 - Follow the project's Prettier settings. Start comments with a lowercase
   letter and omit the final period.
+- Group related module constants and order them from shared configuration to
+  component-specific values. Declare dependencies before their consumers.
 - Put shorthand object properties first, preserving evaluation and override
   order around spreads and computed keys.
 - Prefer `const`, clear inferred types and arrow functions for helpers and

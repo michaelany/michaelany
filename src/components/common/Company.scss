@@ -1,48 +1,26 @@
-$padding_st: 12px;
-$padding_sm: 10px;
+$spacing_st: 1.5;
+$spacing_sm: 1;
 
 $img-height_st: 36px;
 $img-height_sm: 30px;
 
 .Company {
-  padding: $padding_st;
+  padding: m.spacing($spacing_st);
   &_animated {
     @include m.animation(fadeInZoomOutSm);
-    margin-left: -$padding_st;
-    margin-right: -$padding_st;
+    margin-inline: m.spacing(-$spacing_st);
   }
-  @include m.lg {
-    padding: $padding_sm;
+  @include m.compact {
+    padding: m.spacing($spacing_sm);
     &_animated {
-      margin-left: -$padding_sm;
-      margin-right: -$padding_sm;
-    }
-  }
-  @include m.md {
-    padding: $padding_st;
-    &_animated {
-      margin-left: -$padding_st;
-      margin-right: -$padding_st;
-    }
-  }
-  @include m.sm {
-    padding: $padding_sm;
-    &_animated {
-      margin-left: -$padding_sm;
-      margin-right: -$padding_sm;
+      margin-inline: m.spacing(-$spacing_sm);
     }
   }
 }
 
 .Company-Image {
   height: $img-height_st;
-  @include m.lg {
-    height: $img-height_sm;
-  }
-  @include m.md {
-    height: $img-height_st;
-  }
-  @include m.sm {
+  @include m.compact {
     height: $img-height_sm;
   }
 }

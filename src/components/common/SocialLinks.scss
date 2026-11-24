@@ -30,11 +30,11 @@
     }
     &:nth-child(2) {
       margin-left: 4px;
-      margin-right: 6px;
+      margin-right: m.spacing(1);
     }
     &:nth-child(5) {
       margin-right: 4px;
-      margin-left: 6px;
+      margin-left: m.spacing(1);
     }
     &:nth-child(3),
     &:nth-child(4) {
@@ -46,8 +46,8 @@
     .SocialLinks_about > & {
       &:first-child,
       &:last-child {
-        margin-left: 2px;
-        margin-right: 2px;
+        margin-left: m.spacing(0.5);
+        margin-right: m.spacing(0.5);
       }
       &:nth-child(2),
       &:nth-child(5) {
@@ -80,8 +80,8 @@
     .SocialLinks_about > & {
       &:first-child,
       &:last-child {
-        margin-left: 2px;
-        margin-right: 2px;
+        margin-left: m.spacing(0.5);
+        margin-right: m.spacing(0.5);
       }
       &:nth-child(2),
       &:nth-child(5) {

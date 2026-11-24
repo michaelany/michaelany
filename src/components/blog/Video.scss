@@ -24,5 +24,11 @@
 }
 
 .Video-Text {
-  margin-bottom: 1em;
+  margin-bottom: m.spacing(4);
+  @include m.lg {
+    margin-bottom: m.spacing(3.5);
+  }
+  @include m.xs {
+    margin-bottom: m.spacing(3);
+  }
 }

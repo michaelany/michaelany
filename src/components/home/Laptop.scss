@@ -227,6 +227,9 @@
   border: 2px solid white;
   color: white;
   background-color: transparent;
+  > .MuiSvgIcon-root {
+    font-size: 31px;
+  }
   &[aria-pressed='true'] {
     outline: 2px solid white;
     outline-offset: 3px;

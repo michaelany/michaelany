@@ -7,7 +7,11 @@
 }
 
 .ProjectDetails-Text {
-  font-size: 1.15rem;
-  padding-top: 2em;
-  margin-bottom: 1.5em;
+  font-size: var(--mui-fontSize-medium);
+  padding-top: m.spacing(5);
+  margin-bottom: m.spacing(4);
+  @include m.compact {
+    padding-top: m.spacing(4.5);
+    margin-bottom: m.spacing(3.5);
+  }
 }
