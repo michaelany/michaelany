@@ -7,11 +7,15 @@ $videos:
 }
 
 .VideoLink-Item {
-  aspect-ratio: 1 / 0.64;
+  grid-template-columns: minmax(0, 1fr);
   width: 100%;
   background-color: white;
   border-radius: var(--mui-shape-borderRadius);
   transform-style: preserve-3d;
+  &.MuiButtonBase-root {
+    display: grid;
+    align-items: stretch;
+  }
   &.Mui-focusVisible {
     .VideoLink-View {
       opacity: 0;
@@ -33,8 +37,9 @@ $videos:
 }
 
 .VideoLink-View {
+  grid-area: 1 / 1;
+  aspect-ratio: 1 / 0.64;
   width: 100%;
-  height: 100%;
   border-radius: inherit;
   overflow: hidden;
   transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
@@ -53,14 +58,12 @@ $videos:
 }
 
 .VideoLink-Content {
-  position: absolute;
+  grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  width: 100%;
-  height: 100%;
   padding: 24px;
   opacity: 0;
   transform: translateZ(24px);

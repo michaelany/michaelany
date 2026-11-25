@@ -22,7 +22,7 @@ $max-content-width: 1000px;
   @include m.md {
     padding-left: 7.5%;
     padding-right: 7.5%;
-    .Sections-SectionWrapper:first-child > & {
+    .Sections-Section_compact > & {
       padding-bottom: 80px;
     }
   }
@@ -36,6 +36,7 @@ $max-content-width: 1000px;
   max-width: $max-content-width;
   margin: auto;
   height: 100%;
+  overflow-wrap: anywhere;
   .Section_centeredContent > & {
     display: flex;
     flex-direction: column;

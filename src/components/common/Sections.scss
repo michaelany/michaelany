@@ -1,6 +1,16 @@
 .Sections {
+  display: flex;
+  flex-wrap: wrap;
   height: 100%;
-  overflow: hidden;
+  overflow: clip;
+}
+
+.Sections-Section {
+  flex: 1 1 min(100%, 28rem);
+  min-width: 0;
+  @include m.md {
+    flex-basis: 100%;
+  }
 }
 
 .Sections-Animated {

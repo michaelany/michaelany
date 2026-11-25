@@ -1,4 +1,4 @@
-import {Grid} from '@mui/material'
+import cn from 'clsx'
 import type {JSX} from 'react'
 
 import './Sections.scss'
@@ -14,24 +14,19 @@ export default function Sections({
   firstSection,
   secondSection,
 }: ISectionsProps) {
-  const notContact = !contact
-
   return (
-    <Grid container className="Sections" spacing={0}>
-      <Grid
-        className={notContact ? 'Sections-SectionWrapper' : undefined}
-        size={{xs: 12, lg: 6}}
+    <div className="Sections">
+      <div
+        className={cn(
+          'Sections-Section',
+          !contact && 'Sections-Section_compact'
+        )}
       >
         {firstSection}
-      </Grid>
-      <Grid
-        className={
-          notContact ? 'Sections-SectionWrapper Sections-Animated' : undefined
-        }
-        size={{xs: 12, lg: 6}}
-      >
+      </div>
+      <div className={cn('Sections-Section', !contact && 'Sections-Animated')}>
         {secondSection}
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   )
 }

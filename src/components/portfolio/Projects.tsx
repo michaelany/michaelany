@@ -1,7 +1,7 @@
 import {useState, type ChangeEvent} from 'react'
 import {useLocation} from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
-import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
+import {useMediaQuery, Tabs, Tab} from '@mui/material'
 
 import {QUERY_BREAKPOINT, PROJECT_FILTERS} from '#utils/constants'
 import PROJECTS from '#data/projects'
@@ -50,7 +50,7 @@ export default function Projects() {
           />
         ))}
       </Tabs>
-      <Grid container component="ul" spacing={2}>
+      <ul className="Cards">
         {filteredProjects.map((project, index) => (
           <ProjectLink
             key={`${project.name}-${filter}`}
@@ -60,7 +60,7 @@ export default function Projects() {
             project={project}
           />
         ))}
-      </Grid>
+      </ul>
     </>
   )
 }

@@ -34,3 +34,6 @@ the import aliases in `tsconfig.json`.
   Import the stylesheet from the component that owns it.
 - Set project-wide MUI defaults in `src/styles/theme.ts` and apply exceptions
   where they are used. Use `partials.scss` for reusable opt-in classes.
+- Use `Sections` for split pages and `.Cards` for portfolio and blog lists.
+  Their column widths use `rem` so the layout can reduce its column count as
+  the browser font size grows.

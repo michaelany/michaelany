@@ -1,10 +1,8 @@
 .Map {
   @include m.animation(fadeInRight);
-  position: fixed;
-  width: calc(50% - v.$sidebar-width / 2);
-  height: 100vh;
-  right: 0;
+  position: sticky;
   top: 0;
+  height: 100vh;
   &_loading {
     display: flex;
     align-items: center;
@@ -12,10 +10,7 @@
   }
   @include m.md {
     position: relative;
-    width: 100%;
     height: calc(100vh - #{v.$header_height});
-    right: auto;
-    top: auto;
     animation: none;
   }
 }

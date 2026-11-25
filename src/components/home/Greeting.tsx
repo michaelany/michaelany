@@ -40,11 +40,9 @@ export default function Greeting() {
     <Section centeredContent className="Greeting">
       <p className="Greeting-Text Greeting-One Title">
         {t(`home.hi.${getDayTime()}`)}
-        <span className="Greeting-Nowrap">
-          !
-          <span className="Greeting-IconWrapper Greeting-Two">
-            <HelloIcon className="Greeting-Icon" />
-          </span>
+        !<wbr />
+        <span className="Greeting-IconWrapper Greeting-Two">
+          <HelloIcon className="Greeting-Icon" />
         </span>
       </p>
       <h1 className="Greeting-Text Title">

@@ -1,6 +1,6 @@
 import {useMemo} from 'react'
 import {Link} from 'react-router-dom'
-import {Grid, ButtonBase} from '@mui/material'
+import {ButtonBase} from '@mui/material'
 import type {TFunction} from 'i18next'
 
 import './ProjectLink.scss'
@@ -32,7 +32,7 @@ export default function ProjectLink({
     project.title ?? t(`portfolio.project.${project.name}.title`)
 
   return (
-    <Grid component="li" size={{xs: 12, md: 6, lg: 4, xl: 3}}>
+    <li>
       <Animate
         className={IS_MOBILE_DEVICE ? 'ProjectLink-Tilt' : undefined}
         effect={effect}
@@ -50,6 +50,7 @@ export default function ProjectLink({
             />
             <div className="ProjectLink-Content">
               <img
+                className="ProjectLink-Logo"
                 src={project.images.logo[0]}
                 srcSet={`${project.images.logo[1]} 2x`}
                 alt={projectTitle}
@@ -63,6 +64,6 @@ export default function ProjectLink({
           </ButtonBase>
         </Tilt>
       </Animate>
-    </Grid>
+    </li>
   )
 }

@@ -1,6 +1,6 @@
 import {useMemo} from 'react'
 import {Link} from 'react-router-dom'
-import {Grid, ButtonBase} from '@mui/material'
+import {ButtonBase} from '@mui/material'
 import type {TFunction} from 'i18next'
 
 import './VideoLink.scss'
@@ -32,7 +32,7 @@ export default function VideoLink({
   )
 
   return (
-    <Grid component="li" size={{xs: 12, md: 6, lg: 4, xl: 3}}>
+    <li>
       <Animate
         className={IS_MOBILE_DEVICE ? 'VideoLink-Tilt' : undefined}
         effect={effect}
@@ -61,6 +61,6 @@ export default function VideoLink({
           </ButtonBase>
         </Tilt>
       </Animate>
-    </Grid>
+    </li>
   )
 }

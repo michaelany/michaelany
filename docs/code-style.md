@@ -3,6 +3,10 @@
 Apply these conventions to new and changed code. Use comparable components to
 guide choices the docs leave open.
 
+Start with the simplest readable implementation that meets the requirements.
+Add complexity only when it solves a concrete problem the simpler approach
+cannot handle.
+
 ## React
 
 - Derive values from props and state during render when possible. Use
@@ -39,6 +43,9 @@ guide choices the docs leave open.
 
 ## Naming
 
+- Use the simplest name that clearly describes the role. Add a qualifier when
+  it distinguishes the name from another concept in use, such as a different
+  layout for the same content.
 - Use consistent domain names in `camelCase`. Name helpers for what they do
   and use singular names for collection items. Keep established short names
   such as `t`, `md` and `e`.
@@ -77,11 +84,18 @@ guide choices the docs leave open.
   fractional CSS pixels.
 - Use component-based block names with `.Block-Element` and
   `.Block_modifier` for elements and modifiers.
+- Give child elements their own component class when they need styles. For
+  library components, use the public API to assign a class to the relevant
+  slot when possible. If the markup offers no way to assign a class, scope
+  the descendant selector to the owning component and prefer documented
+  library classes where available.
 - Put file-level variables after `@use` and `@import`, before mixins and rules.
   Keep related declarations and nested rules together. Separate top-level
   blocks with a blank line.
 - Group modifiers that share a descendant rule. Use `&` for suffixes and
   same-element selectors. Write descendant selectors directly.
+- Declare shared design tokens in the MUI theme and component-specific CSS
+  variables in the styles of the component that owns them.
 - Use MUI CSS variables for theme values and Sass `v` tokens for breakpoints
   and other shared values. Put mixin calls first in a rule, with `m.hover`
   and breakpoint mixins at the end to preserve the cascade. Vite provides

@@ -1,6 +1,6 @@
 import {useState, type ChangeEvent} from 'react'
 import {useTranslation} from 'react-i18next'
-import {useMediaQuery, Grid, Tabs, Tab} from '@mui/material'
+import {useMediaQuery, Tabs, Tab} from '@mui/material'
 
 import VIDEOS from '#data/videos'
 import {QUERY_BREAKPOINT} from '#utils/constants'
@@ -32,7 +32,7 @@ export default function Videos() {
           <Tab key={type} value={type} label={t(`blog.sort.${type}`)} />
         ))}
       </Tabs>
-      <Grid container component="ul" spacing={2}>
+      <ul className="Cards">
         {getSortedVideos(VIDEOS, sort).map((video, index) => (
           <VideoLink
             key={`${video.name}-${sort}`}
@@ -43,7 +43,7 @@ export default function Videos() {
             video={video}
           />
         ))}
-      </Grid>
+      </ul>
     </>
   )
 }

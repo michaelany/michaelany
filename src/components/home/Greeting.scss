@@ -4,7 +4,7 @@
     padding-bottom: 80px;
   }
   @include m.xs {
-    .Sections-SectionWrapper:first-child > & {
+    .Sections-Section:first-child > & {
       padding-bottom: 0;
     }
   }
@@ -25,12 +25,9 @@
   }
 }
 
-.Greeting-Nowrap {
-  white-space: nowrap;
-}
-
 .Greeting-IconWrapper {
   position: relative;
+  display: inline-block;
   top: 4px;
   margin-left: m.spacing(2);
   @include m.lg {
@@ -58,6 +55,7 @@
 
 .Greeting-Part {
   display: inline-block;
+  max-width: 100%;
 }
 
 .Greeting-Main {
@@ -67,6 +65,8 @@
 
 .Greeting-Word {
   display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .Greeting-Badge {
@@ -74,7 +74,7 @@
   display: flex;
   position: relative;
   z-index: 1;
-  left: 24px;
+  margin-left: 24px;
   transition: transform var(--mui-duration-standard) var(--mui-easing-out);
   &_first {
     outline-color: var(--mui-palette-yellow-main);
@@ -93,7 +93,7 @@
     transform: rotate(0) scale(1.2);
   }
   @include m.lg {
-    left: 20px;
+    margin-left: 20px;
     &_first {
       top: 11px;
     }
@@ -102,7 +102,7 @@
     }
   }
   @include m.xs {
-    left: 15px;
+    margin-left: 15px;
     &_first {
       top: 8px;
     }

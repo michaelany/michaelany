@@ -186,7 +186,6 @@
 .Link {
   font-weight: bold;
   user-select: auto;
-  white-space: nowrap;
   transition: text-decoration-color var(--mui-duration-shortest)
     var(--mui-easing-out);
   &_white,
@@ -205,6 +204,32 @@
     @include m.hover {
       text-decoration-color: var(--page-accent-dark-color);
     }
+  }
+}
+
+.Cards {
+  --cards-max-columns: 4;
+  --cards-gap: #{m.spacing(2)};
+  --cards-min-width: max(
+    16rem,
+    (100% - (var(--cards-max-columns) - 1) * var(--cards-gap)) /
+      var(--cards-max-columns)
+  );
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--cards-min-width)), 1fr)
+  );
+  gap: var(--cards-gap);
+  @include m.lg {
+    --cards-max-columns: 3;
+  }
+  @include m.md {
+    --cards-max-columns: 2;
+  }
+  @include m.sm {
+    --cards-max-columns: 1;
   }
 }
 
