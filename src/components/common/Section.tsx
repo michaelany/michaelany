@@ -40,6 +40,7 @@ export default function Section({
         centeredContent && 'Section_centeredContent',
         wide && 'Section_wide',
         colorful && 'Section_colorful',
+        isFooter && 'Section_hasFooter',
         className
       )}
     >
@@ -51,7 +52,7 @@ export default function Section({
       >
         {children}
         {isFooter && (
-          <footer>
+          <footer className="Section-Footer">
             <Pagination halfWidth={wide} prevTo={prevTo} nextTo={nextTo} />
             <Copyright />
           </footer>

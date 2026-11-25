@@ -9,8 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 8px;
-  padding-right: 8px;
+  font-size: min(1rem, 11.5vw);
+  padding-inline: 0.5em;
   border-bottom: v.$header_border-width solid
     var(--page-accent-color, var(--mui-palette-green-main));
   background-color: rgb(var(--page-background-channel, 255 255 255) / 0.95);
@@ -20,4 +20,9 @@
   .App_color_alternate & {
     @include m.animationAlternate(alternateBorderColor);
   }
+}
+
+.Header-Menu.MuiIconButton-root {
+  font-size: 2em;
+  padding: 0.375em;
 }

@@ -75,11 +75,17 @@ cannot handle.
   typography styles.
 - Use unitless `line-height` in custom styles so it follows the element's font
   size. The computed line height may be fractional.
-- Use the MUI spacing scale for layout gaps, margins and padding. Its base step
-  is `8px`. Half steps give `4px` increments. Use `theme.spacing()` or MUI
-  spacing props in React and `m.spacing()` in SCSS.
+- Use the shared MUI spacing scale for gaps, margins and padding. Its base step
+  is `0.5rem` (`8px` at the default root), with half steps for `4px` increments
+  at that size. Use `theme.spacing()` or MUI spacing props in React and
+  `m.spacing()` in SCSS. Keep wide gutters responsive to available width.
+- Use `rem` for interface sizes, corner radii and layout breakpoints so they
+  follow the browser's base font size. Let text controls grow with their
+  content and wrap rows when the available space is too small.
 - Use `em` for sizes that should follow the local font, such as an inline icon
-  at `1em`. Use whole `px` values for fixed dimensions, borders and breakpoints.
+  at `1em`. Use percentages and viewport units to constrain elements to the
+  available space. Use `px` for thin strokes, SVG coordinates and APIs that
+  require pixel values.
   Flexible layouts, image proportions and user font scaling can produce
   fractional CSS pixels.
 - Use component-based block names with `.Block-Element` and
@@ -100,7 +106,7 @@ cannot handle.
   and other shared values. Put mixin calls first in a rule, with `m.hover`
   and breakpoint mixins at the end to preserve the cascade. Vite provides
   the `v` and `m` namespaces.
-- Use range syntax for custom width media queries, such as `(width <= 599px)`.
+- Use range syntax for custom width media queries, such as `(width <= 37.4375rem)`.
 - Follow existing responsive and retina image patterns. Use `m.retinaImg`
   for decorative CSS backgrounds with standard and retina assets.
 

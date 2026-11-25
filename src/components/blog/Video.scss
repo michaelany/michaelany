@@ -7,7 +7,7 @@
   background-color: black;
   border-radius: var(--mui-shape-borderRadius);
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: m.spacing(5);
   @include m.md {
     @include m.animation(fadeIn);
   }

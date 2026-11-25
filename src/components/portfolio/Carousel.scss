@@ -2,15 +2,15 @@
   border-radius: var(--mui-shape-borderRadius);
   overflow: hidden;
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: m.spacing(5);
   }
   &_type_desktop {
     background-color: white;
   }
   &_type_mobile {
     position: relative;
-    height: 462px;
-    width: 219px;
+    width: min(13.6875rem, 100%);
+    aspect-ratio: 219 / 462;
     margin: auto;
   }
 }
@@ -22,12 +22,12 @@
   }
   .Carousel_type_mobile & {
     position: relative;
-    top: 64px;
-    width: 193px;
-    height: 335px;
+    top: calc(64 / 462 * 100%);
+    width: calc(193 / 219 * 100%);
+    height: calc(335 / 462 * 100%);
     margin: auto;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     overflow: hidden;
     z-index: 1;
   }

@@ -2,8 +2,8 @@
   position: fixed;
   display: flex;
   z-index: 100;
-  top: -3px;
-  left: calc(50% + 48px);
+  top: -0.1875rem;
+  left: calc(50% + 3rem);
   transform: translateX(-50%);
   &_header {
     position: absolute;
@@ -12,21 +12,21 @@
     left: 50%;
   }
   @include m.sm {
-    top: -2px;
+    top: -0.125rem;
   }
   @include m.xs {
-    top: -1px;
+    top: -0.0625rem;
   }
 }
 
 .Garland-Item {
-  width: 476px;
+  width: min(29.75rem, 50vw);
   height: auto;
   @include m.sm {
-    width: 272px;
+    width: min(17rem, 100vw);
   }
   @include m.xs {
-    width: 204px;
+    width: min(12.75rem, 100vw);
   }
 }
 

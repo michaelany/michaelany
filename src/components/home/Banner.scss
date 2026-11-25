@@ -3,11 +3,12 @@
     padding-top: 7.5%;
   }
   @include m.sm {
-    padding-top: 24px;
+    padding-top: min(m.spacing(3), 7.5vw);
   }
 }
 
 .Banner-Content {
+  z-index: 1;
   display: flex;
   flex: 1;
   flex-direction: column;

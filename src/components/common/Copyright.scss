@@ -1,8 +1,4 @@
 .Copyright {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 32px;
   color: white;
   text-align: center;
   font-size: 0.875rem;
@@ -10,12 +6,12 @@
 
 .Copyright-Icon {
   position: relative;
-  top: 2px;
+  top: 0.125rem;
   font-size: 1em;
 }
 
 .Copyright-Links {
-  padding-top: 12px;
+  padding-top: m.spacing(1.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +21,11 @@
   display: inline-flex;
   color: white;
   outline-color: white;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: m.spacing(1);
+  margin-right: m.spacing(1);
+}
+
+.Copyright-LinkIcon {
+  width: 1.5rem;
+  height: auto;
 }

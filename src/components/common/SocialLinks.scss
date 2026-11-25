@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     padding-left: 25%;
     padding-right: 25%;
-    margin-bottom: -16px;
+    margin-bottom: m.spacing(-2);
     &_about {
       padding-left: 14.5%;
       padding-right: 14.5%;
@@ -14,32 +14,32 @@
 }
 
 .SocialLinks-Item {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: m.spacing(1);
+  margin-right: m.spacing(1);
   .SocialLinks_about > & {
     position: relative;
     &:first-child,
     &:last-child {
       margin-left: 0;
       margin-right: 0;
-      bottom: 62px;
+      bottom: 3.875rem;
     }
     &:nth-child(2),
     &:nth-child(5) {
-      bottom: 20px;
+      bottom: 1.25rem;
     }
     &:nth-child(2) {
-      margin-left: 4px;
+      margin-left: m.spacing(0.5);
       margin-right: m.spacing(1);
     }
     &:nth-child(5) {
-      margin-right: 4px;
+      margin-right: m.spacing(0.5);
       margin-left: m.spacing(1);
     }
     &:nth-child(3),
     &:nth-child(4) {
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: m.spacing(1);
+      margin-right: m.spacing(1);
     }
   }
   @include m.lg {
@@ -51,11 +51,11 @@
       }
       &:nth-child(2),
       &:nth-child(5) {
-        bottom: 26px;
+        bottom: 1.625rem;
       }
       &:nth-child(3),
       &:nth-child(4) {
-        bottom: 8px;
+        bottom: 0.5rem;
       }
     }
   }
@@ -68,7 +68,7 @@
       }
       &:nth-child(2),
       &:nth-child(5) {
-        bottom: 20px;
+        bottom: 1.25rem;
       }
       &:nth-child(3),
       &:nth-child(4) {
@@ -85,16 +85,16 @@
       }
       &:nth-child(2),
       &:nth-child(5) {
-        bottom: 26px;
+        bottom: 1.625rem;
       }
       &:nth-child(3),
       &:nth-child(4) {
-        bottom: 8px;
+        bottom: 0.5rem;
       }
     }
   }
   @include m.xs {
-    margin-bottom: 16px;
+    margin-bottom: m.spacing(2);
     .SocialLinks_about > & {
       &:first-child,
       &:last-child,
@@ -102,7 +102,7 @@
       &:nth-child(3),
       &:nth-child(4),
       &:nth-child(5) {
-        margin: 0 8px 16px 8px;
+        margin: 0 m.spacing(1) m.spacing(2) m.spacing(1);
         bottom: auto;
       }
     }
@@ -111,45 +111,45 @@
 
 .SocialLinks-Icon {
   &_size_xs {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
   &_size_sm {
-    width: 22px;
-    height: 22px;
+    width: 1.375rem;
+    height: 1.375rem;
   }
   &_size_md {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   &_size_lg {
-    width: 28px;
-    height: 28px;
+    width: 1.75rem;
+    height: 1.75rem;
   }
   &_size_xl {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
   }
   @include m.sm {
     &_size_xs {
-      width: 18px;
-      height: 18px;
+      width: 1.125rem;
+      height: 1.125rem;
     }
     &_size_sm {
-      width: 19px;
-      height: 19px;
+      width: 1.1875rem;
+      height: 1.1875rem;
     }
     &_size_md {
-      width: 21px;
-      height: 21px;
+      width: 1.3125rem;
+      height: 1.3125rem;
     }
     &_size_lg {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
     }
     &_size_xl {
-      width: 28px;
-      height: 28px;
+      width: 1.75rem;
+      height: 1.75rem;
     }
   }
 }

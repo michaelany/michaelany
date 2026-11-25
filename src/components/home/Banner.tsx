@@ -6,10 +6,10 @@ import {ROUTE} from '#utils/constants'
 import Laptop from './Laptop'
 
 interface IBannerProps {
-  isMd: boolean
+  isStacked: boolean
 }
 
-export default function Banner({isMd}: IBannerProps) {
+export default function Banner({isStacked}: IBannerProps) {
   const {t} = useTranslation()
 
   return (
@@ -17,9 +17,9 @@ export default function Banner({isMd}: IBannerProps) {
       <h2 className="VisuallyHidden">{t('home.subtitle')}</h2>
       <Animate
         className="Banner-Content"
-        isAnimatedOnMount={!isMd}
-        effect={isMd ? undefined : 'plain'}
-        duration={isMd ? undefined : 'longer'}
+        isAnimatedOnMount={!isStacked}
+        effect={isStacked ? undefined : 'plain'}
+        duration={isStacked ? undefined : 'longer'}
       >
         <Laptop />
       </Animate>

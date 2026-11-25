@@ -1,21 +1,16 @@
 .Sections {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   height: 100%;
   overflow: clip;
-}
-
-.Sections-Section {
-  flex: 1 1 min(100%, 28rem);
-  min-width: 0;
-  @include m.md {
-    flex-basis: 100%;
+  .App_stacked & {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 .Sections-Animated {
   @include m.animation(fadeInRight);
-  @include m.md {
+  .App_stacked & {
     animation: none;
   }
 }

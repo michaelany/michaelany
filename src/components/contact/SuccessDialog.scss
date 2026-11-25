@@ -1,18 +1,27 @@
+$dialog-margin: min(m.spacing(4), 10vw);
+
+.SuccessDialog-Paper.MuiPaper-root {
+  margin: $dialog-margin;
+  max-width: min(60rem, 100% - 2 * $dialog-margin);
+}
+
 .SuccessDialog {
-  padding: 48px;
+  padding: m.spacing(6) min(m.spacing(6), 15%);
   text-align: center;
   @include m.sm {
-    padding: 32px;
+    padding: m.spacing(4) min(m.spacing(4), 15%);
   }
 }
 
 .SuccessDialog-Image {
+  width: 5rem;
+  max-width: 100%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: m.spacing(2);
   @include m.sm {
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
   }
 }
 

@@ -64,14 +64,14 @@ $videos:
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  padding: 24px;
+  padding: m.spacing(3) min(m.spacing(3), 12%);
   opacity: 0;
-  transform: translateZ(24px);
+  transform: translateZ(1.5rem);
   transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
 }
 
 .VideoLink-Title {
-  padding-top: 4px;
+  padding-top: m.spacing(0.5);
   font-size: 1.375rem;
   line-height: 1.2;
   color: var(--card-accent-dark-color);

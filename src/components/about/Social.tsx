@@ -66,7 +66,8 @@ const Photo = () => {
             width={imgSize}
             height={imgSize}
             src={meNormalImg}
-            srcSet={`${meNormal2xImg} 2x`}
+            srcSet={`${meNormalImg} ${imgSize}w, ${meNormal2xImg} ${imgSize * 2}w`}
+            sizes={imgSizes}
             alt={MY_NAME}
             loading="lazy"
           />
@@ -75,7 +76,8 @@ const Photo = () => {
             width={imgSize}
             height={imgSize}
             src={meExcitedImg}
-            srcSet={`${meExcited2xImg} 2x`}
+            srcSet={`${meExcitedImg} ${imgSize}w, ${meExcited2xImg} ${imgSize * 2}w`}
+            sizes={imgSizes}
             alt={MY_NAME}
             loading="lazy"
           />
@@ -90,8 +92,9 @@ const links: ISocialLink[] = [
   CONTACT_LINK.youTube,
   CONTACT_LINK.linkedIn,
   CONTACT_LINK.telegram,
-  CONTACT_LINK.duolingo,
+  CONTACT_LINK.airbnb,
   CONTACT_LINK.instagram,
 ]
 
 const imgSize = 320
+const imgSizes = '(max-width: 20rem) 100vw, 20rem'

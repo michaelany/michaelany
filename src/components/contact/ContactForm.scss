@@ -1,13 +1,57 @@
+$field-padding-inline: m.spacing(1.5);
+$field-padding-block: m.spacing(3.5) m.spacing(1);
+
+.ContactForm {
+  container-type: inline-size;
+}
+
+.ContactForm-Fields {
+  display: grid;
+  gap: m.spacing(2);
+}
+
+.ContactForm-Row {
+  display: grid;
+  gap: inherit;
+  @container (width >= 29rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.ContactForm-Label {
+  max-width: calc(100% - 2 * $field-padding-inline);
+  transform: translate($field-padding-inline, 1rem);
+  &.MuiInputLabel-shrink {
+    max-width: calc(133% - 2 * $field-padding-inline);
+    transform: translate($field-padding-inline, 0.4375rem) scale(0.75);
+  }
+}
+
+.ContactForm-Input {
+  &.MuiInputBase-adornedEnd {
+    padding-right: $field-padding-inline;
+  }
+  &.MuiInputBase-multiline {
+    padding-block: $field-padding-block;
+    padding-inline: $field-padding-inline;
+  }
+}
+
+.ContactForm-Value {
+  padding-block: $field-padding-block;
+  padding-left: $field-padding-inline;
+}
+
 .ContactForm-Submit {
   position: relative;
-  margin-top: 24px;
-  margin-bottom: 80px;
+  margin-top: m.spacing(3);
+  margin-bottom: m.spacing(10);
   overflow: hidden;
   @include m.md {
-    margin-bottom: 64px;
+    margin-bottom: m.spacing(8);
   }
   @include m.sm {
-    margin-bottom: 56px;
+    margin-bottom: m.spacing(7);
   }
 }
 

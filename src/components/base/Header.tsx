@@ -1,4 +1,4 @@
-import {useState, memo} from 'react'
+import {useState, useRef, memo} from 'react'
 import {useScrollTrigger, Slide, IconButton} from '@mui/material'
 import {MenuRounded as MenuIcon} from '@mui/icons-material'
 
@@ -10,11 +10,19 @@ import {IS_NEW_YEAR_MODE} from '#utils/constants'
 
 const Header = memo(() => {
   const [open, setOpen] = useState<boolean>(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
   const trigger = useScrollTrigger()
 
-  const handleOpen = () => setOpen(true)
+  const handleOpen = () => {
+    const {activeElement} = document
+    if (activeElement instanceof HTMLElement) activeElement.blur()
+    setOpen(true)
+  }
 
   const handleClose = () => setOpen(false)
+
+  const handleDrawerExited = () =>
+    menuButtonRef.current?.focus({preventScroll: true})
 
   return (
     <>
@@ -23,17 +31,18 @@ const Header = memo(() => {
           {IS_NEW_YEAR_MODE && <Garland isHeader />}
           <div className="Header-Content">
             <IconButton
-              className="Colorful"
+              ref={menuButtonRef}
+              className="Header-Menu Colorful"
               aria-label="Show"
               onClick={handleOpen}
             >
-              <MenuIcon className="ButtonIcon" />
+              <MenuIcon fontSize="inherit" />
             </IconButton>
             <Logo />
           </div>
         </header>
       </Slide>
-      <Drawer open={open} onClose={handleClose} />
+      <Drawer open={open} onClose={handleClose} onExited={handleDrawerExited} />
     </>
   )
 })

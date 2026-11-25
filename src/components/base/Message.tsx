@@ -39,7 +39,13 @@ export default function Message() {
       anchorOrigin={anchorOrigin}
       message={
         <>
-          <img width={64} height={64} src={santaImg} alt="Santa Claus" />
+          <img
+            className="Message-Icon"
+            width={64}
+            height={64}
+            src={santaImg}
+            alt="Santa Claus"
+          />
           <p>
             <Trans i18nKey="message.newYear" components={transComponents} />
           </p>
@@ -48,7 +54,7 @@ export default function Message() {
             aria-label="Close"
             onClick={handleClose}
           >
-            <CloseIcon className="ButtonIcon" />
+            <CloseIcon className="Message-CloseIcon" />
           </IconButton>
         </>
       }

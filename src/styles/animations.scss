@@ -1,6 +1,6 @@
 @use 'styles/variables' as v;
 
-$effect_delta: 16px;
+$effect_delta: 1rem;
 $alternate-colors: (
   from: blue,
   16.66%: green,
@@ -140,28 +140,28 @@ $alternate-colors: (
 
 @keyframes hello {
   from {
-    transform: rotate(8deg) translate3d(2px, 0, 0);
+    transform: rotate(8deg) translate3d(0.125rem, 0, 0);
   }
   12% {
-    transform: rotate(-12deg) translate3d(-3px, 0, 0);
+    transform: rotate(-12deg) translate3d(-0.1875rem, 0, 0);
   }
   24% {
-    transform: rotate(16deg) translate3d(4px, 0, 0);
+    transform: rotate(16deg) translate3d(0.25rem, 0, 0);
   }
   36% {
-    transform: rotate(-16deg) translate3d(-4px, 0, 0);
+    transform: rotate(-16deg) translate3d(-0.25rem, 0, 0);
   }
   48% {
-    transform: rotate(12deg) translate3d(3px, 0, 0);
+    transform: rotate(12deg) translate3d(0.1875rem, 0, 0);
   }
   60% {
-    transform: rotate(-12deg) translate3d(-3px, 0, 0);
+    transform: rotate(-12deg) translate3d(-0.1875rem, 0, 0);
   }
   72% {
-    transform: rotate(8deg) translate3d(2px, 0, 0);
+    transform: rotate(8deg) translate3d(0.125rem, 0, 0);
   }
   to {
-    transform: rotate(8deg) translate3d(2px, 0, 0);
+    transform: rotate(8deg) translate3d(0.125rem, 0, 0);
   }
 }
 

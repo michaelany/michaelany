@@ -36,6 +36,7 @@
 [<img src="https://img.shields.io/badge/-YouTube-f70000?logo=youtube&logoColor=white" alt="LinkedIn" />][youtube]
 [<img src="https://img.shields.io/badge/-LinkedIn-0a66c2?logo=linkedin&logoColor=white" alt="LinkedIn" />][linkedin]
 [<img src="https://img.shields.io/badge/-Telegram-26a5e4?logo=telegram&logoColor=white" alt="Telegram" />](telegram)
+[<img src="https://img.shields.io/badge/-Airbnb-ff385c?logo=airbnb&logoColor=white" alt="Airbnb" />][airbnb]
 [<img src="https://img.shields.io/badge/-Duolingo-58cc02?logo=duolingo&logoColor=white" alt="Duolingo" />][duolingo]
 [<img src="https://img.shields.io/badge/-Instagram-df7f57?logo=instagram&logoColor=white" alt="LinkedIn" />][instagram]
 
@@ -134,6 +135,7 @@ Do you need my **help**? Have a **suggestion** for me? Send a mail to michaelany
 [youtube]: https://youtube.com/@michaelany
 [linkedin]: https://linkedin.com/in/michaelany
 [telegram]: https://t.me/michaelany
-[instagram]: https://instagram.com/anymichael
+[instagram]: https://www.instagram.com/anymichael/tagged
 [email]: mailto:michaelany.it@gmail.com
+[airbnb]: https://www.airbnb.co.nz/users/profile/1496122520349253877
 [duolingo]: https://duolingo.com/profile/michael.any

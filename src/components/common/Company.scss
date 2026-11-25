@@ -1,10 +1,11 @@
 $spacing_st: 1.5;
 $spacing_sm: 1;
 
-$img-height_st: 36px;
-$img-height_sm: 30px;
+$img-height_st: 2.25rem;
+$img-height_sm: 1.875rem;
 
 .Company {
+  max-width: 100%;
   padding: m.spacing($spacing_st);
   &_animated {
     @include m.animation(fadeInZoomOutSm);
@@ -20,6 +21,8 @@ $img-height_sm: 30px;
 
 .Company-Image {
   height: $img-height_st;
+  max-width: 100%;
+  object-fit: contain;
   @include m.compact {
     height: $img-height_sm;
   }

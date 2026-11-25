@@ -48,6 +48,7 @@ export default function Laptop() {
   const [isManualControlEnabled, setIsManualControlEnabled] = useState(false)
   const [isPlaying, setIsPlaying] = useState(true)
   const [animationSpeed, setAnimationSpeed] = useState(1)
+  const [isSpeedPanelOpen, setIsSpeedPanelOpen] = useState(false)
   const {ref: containerRef, inView: isInView} = useInView({
     triggerOnce: true,
     rootMargin: '150px',
@@ -55,6 +56,7 @@ export default function Laptop() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const interactionRef = useRef<HTMLDivElement>(null)
   const lidHotspotRef = useRef<HTMLButtonElement>(null)
+  const controlsRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<TLaptopScene | null>(null)
 
   useEffect(() => {
@@ -73,6 +75,7 @@ export default function Laptop() {
       controller.abort()
       sceneRef.current = null
       setIsManualControlEnabled(false)
+      setIsSpeedPanelOpen(false)
       setStatus('failed')
     }
 
@@ -139,6 +142,7 @@ export default function Laptop() {
         {isLoading && (
           <div className="Laptop-Loading">
             <CircularProgress
+              size="2.5rem"
               color="inherit"
               aria-label={t('home.laptop.loading')}
             />
@@ -157,13 +161,17 @@ export default function Laptop() {
           onLidToggle={handleLidToggle}
         />
       </div>
-      <div className="Laptop-Controls">
+      <div ref={controlsRef} className="Laptop-Controls">
         <Tooltip
-          title={t(
-            isManualControlEnabled
-              ? 'home.laptop.disableControl'
-              : 'home.laptop.enableControl'
-          )}
+          title={
+            isSpeedPanelOpen
+              ? ''
+              : t(
+                  isManualControlEnabled
+                    ? 'home.laptop.disableControl'
+                    : 'home.laptop.enableControl'
+                )
+          }
         >
           <Fab
             className="Laptop-Control"
@@ -176,7 +184,11 @@ export default function Laptop() {
           </Fab>
         </Tooltip>
         <Tooltip
-          title={t(isPlaying ? 'home.laptop.pause' : 'home.laptop.play')}
+          title={
+            isSpeedPanelOpen
+              ? ''
+              : t(isPlaying ? 'home.laptop.pause' : 'home.laptop.play')
+          }
         >
           <Fab
             className="Laptop-Control"
@@ -192,10 +204,13 @@ export default function Laptop() {
           </Fab>
         </Tooltip>
         <LaptopSpeedControl
+          anchorRef={controlsRef}
           triggerClassName="Laptop-Control"
           t={t}
           animationSpeed={animationSpeed}
           isReady={isReady}
+          isOpen={isSpeedPanelOpen}
+          onOpenChange={setIsSpeedPanelOpen}
           onSpeedChange={handleSpeedChange}
         />
       </div>

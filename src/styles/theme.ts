@@ -8,6 +8,9 @@ import {
   DURATION,
   EASING,
   FONT_SIZE,
+  HTML_FONT_SIZE,
+  SIDEBAR_WIDTH,
+  toRem,
 } from './tokens'
 
 declare module '@mui/material/styles' {
@@ -15,6 +18,7 @@ declare module '@mui/material/styles' {
     duration?: Record<string, string>
     easing?: typeof EASING
     fontSize?: typeof fontSizes
+    sidebarWidth?: string
   }
 
   interface PaletteOptions {
@@ -28,10 +32,6 @@ declare module '@mui/material/styles' {
   }
 }
 
-const htmlFontSize = 16
-
-const toRem = (px: number) => `${px / htmlFontSize}rem`
-
 const toResponsiveRem = (basePx: number, compactPx: number) =>
   `calc(${toRem(basePx)} + ${toRem(compactPx - basePx)} * var(--font-size-compact))`
 
@@ -42,24 +42,28 @@ const fontSizes = {
   large: toResponsiveRem(22, 20),
 }
 
-const borderRadiusQuarter = BORDER_RADIUS / 4
+const borderRadius = toRem(BORDER_RADIUS)
+const borderRadiusQuarter = toRem(BORDER_RADIUS / 4)
 
 const charcoalAlpha = alpha(COLOR.charcoal, 0.12)
 
-const fabCompactSize = 48
+const fabSize = toRem(56)
+const fabCompactSize = toRem(48)
 
 const iconButtonInteractionBackground =
   'rgb(var(--mui-palette-text-primaryChannel) / 0.04)'
 
 const THEME: ThemeOptions = {
   cssVariables: true,
+  spacing: toRem(8),
+  sidebarWidth: toRem(SIDEBAR_WIDTH),
   duration: Object.fromEntries(
     Object.entries(DURATION).map(([name, value]) => [name, `${value}ms`])
   ),
   easing: EASING,
   fontSize: fontSizes,
   typography: {
-    htmlFontSize,
+    htmlFontSize: HTML_FONT_SIZE,
     fontFamily: '"Neutra Text", sans-serif',
     fontSize: FONT_SIZE.base,
     body1: {
@@ -71,18 +75,20 @@ const THEME: ThemeOptions = {
       lineHeight: 1.5,
     },
     button: {
-      letterSpacing: 1,
+      letterSpacing: toRem(1),
       fontWeight: 'bold',
       textTransform: 'none',
     },
   },
   breakpoints: {
+    unit: 'rem',
+    step: 5 / HTML_FONT_SIZE,
     values: {
       xs: 0,
-      sm: BREAKPOINT.xs + 1,
-      md: BREAKPOINT.sm + 1,
-      lg: BREAKPOINT.md + 1,
-      xl: BREAKPOINT.lg + 1,
+      sm: (BREAKPOINT.xs + 1) / HTML_FONT_SIZE,
+      md: (BREAKPOINT.sm + 1) / HTML_FONT_SIZE,
+      lg: (BREAKPOINT.md + 1) / HTML_FONT_SIZE,
+      xl: (BREAKPOINT.lg + 1) / HTML_FONT_SIZE,
     },
   },
   palette: {
@@ -153,13 +159,17 @@ const THEME: ThemeOptions = {
   },
   shadows: Array(25).fill('none') as Shadows,
   shape: {
-    borderRadius: BORDER_RADIUS,
+    borderRadius,
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: ({theme}) => ({
-          padding: theme.spacing(1, 3),
+          minWidth: `min(${toRem(64)}, 100%)`,
+          maxWidth: '100%',
+          paddingBlock: theme.spacing(1),
+          paddingInline: `min(${theme.spacing(3)}, 8vw)`,
+          overflowWrap: 'anywhere',
           '.MuiButton-icon .MuiSvgIcon-root': {
             fontSize: toResponsiveRem(27, 24),
           },
@@ -167,33 +177,39 @@ const THEME: ThemeOptions = {
             {
               props: {variant: 'text', size: 'large'},
               style: {
-                padding: theme.spacing(1.5, 3),
+                paddingBlock: theme.spacing(1.5),
                 fontSize: 'var(--mui-fontSize-large)',
               },
             },
           ],
+        }),
+        startIcon: ({theme}) => ({
+          marginRight: theme.spacing(1),
+        }),
+        endIcon: ({theme}) => ({
+          marginLeft: theme.spacing(1),
         }),
       },
     },
     MuiFab: {
       styleOverrides: {
         root: {
+          width: fabSize,
+          height: fabSize,
+          minHeight: toRem(36),
+          '&.MuiFab-sizeMedium': {
+            width: fabCompactSize,
+            height: fabCompactSize,
+          },
           '&.Mui-disabled': {
             backgroundColor: 'rgba(0, 0, 0, 0.04)',
           },
           '&:not(.MuiFab-sizeMedium)': {
-            [`@media (width <= ${BREAKPOINT.lg}px)`]: {
-              width: fabCompactSize,
-              height: fabCompactSize,
-            },
-            [`@media (width <= ${BREAKPOINT.md}px)`]: {
-              width: 56,
-              height: 56,
-            },
-            [`@media (width <= ${BREAKPOINT.sm}px)`]: {
-              width: fabCompactSize,
-              height: fabCompactSize,
-            },
+            [`@media (width <= ${toRem(BREAKPOINT.sm)}), (${toRem(BREAKPOINT.md)} < width <= ${toRem(BREAKPOINT.lg)})`]:
+              {
+                width: fabCompactSize,
+                height: fabCompactSize,
+              },
           },
         },
       },
@@ -205,6 +221,7 @@ const THEME: ThemeOptions = {
       },
       styleOverrides: {
         tooltip: ({theme}) => ({
+          maxWidth: 'min(18.75rem, 90vw)',
           fontSize: 'var(--mui-fontSize-small)',
           fontWeight: 'normal',
           color: COLOR.charcoal,
@@ -229,6 +246,9 @@ const THEME: ThemeOptions = {
             },
           },
         },
+        sizeLarge: {
+          padding: toRem(12),
+        },
       },
       defaultProps: {
         size: 'large',
@@ -239,7 +259,7 @@ const THEME: ThemeOptions = {
         root: {
           minWidth: 0,
           color: 'inherit',
-          height: 4,
+          height: toRem(4),
         },
         rail: {
           opacity: 0.15,
@@ -248,32 +268,24 @@ const THEME: ThemeOptions = {
           boxSizing: 'border-box',
         },
         thumb: {
-          width: 16,
-          height: 16,
+          width: toRem(16),
+          height: toRem(16),
           '@media (hover: hover)': {
             '&:hover': {
-              boxShadow: `0 0 0 8px ${charcoalAlpha}`,
+              boxShadow: `0 0 0 0.5rem ${charcoalAlpha}`,
             },
           },
           '@media (hover: none)': {
             '&:active': {
-              boxShadow: `0 0 0 8px ${charcoalAlpha}`,
+              boxShadow: `0 0 0 0.5rem ${charcoalAlpha}`,
             },
           },
           '&.Mui-focusVisible': {
-            boxShadow: `0 0 0 8px ${charcoalAlpha}`,
+            boxShadow: `0 0 0 0.5rem ${charcoalAlpha}`,
           },
           '&.Mui-active': {
-            boxShadow: `0 0 0 14px ${charcoalAlpha}`,
+            boxShadow: `0 0 0 0.875rem ${charcoalAlpha}`,
           },
-        },
-      },
-    },
-    MuiStepper: {
-      styleOverrides: {
-        root: {
-          padding: 24,
-          borderRadius: BORDER_RADIUS,
         },
       },
     },
@@ -325,24 +337,34 @@ const THEME: ThemeOptions = {
           fontSize: 'var(--mui-fontSize-small)',
           fontWeight: 'normal',
         },
-        sizeMedium: {
+        sizeMedium: ({theme}) => ({
           minHeight: '2rem',
           height: 'auto',
           paddingBlock: '0.1875rem',
           borderRadius: '1rem',
-          '.MuiChip-avatar': {
-            width: '1.5rem',
-            height: '1.5rem',
+          '.MuiChip-avatar, .MuiChip-icon': {
+            marginLeft: toRem(5),
+            marginRight: toRem(-6),
             flexShrink: 0,
           },
-          '.MuiChip-icon': {
-            flexShrink: 0,
+          '.MuiChip-avatar': {
+            width: theme.spacing(3),
+            height: theme.spacing(3),
           },
           '.MuiChip-label': {
+            paddingInline: theme.spacing(1.5),
             whiteSpace: 'normal',
             overflowWrap: 'anywhere',
           },
-        },
+          '&.MuiChip-outlined': {
+            '.MuiChip-avatar, .MuiChip-icon': {
+              marginLeft: theme.spacing(0.5),
+            },
+            '.MuiChip-label': {
+              paddingInline: toRem(11),
+            },
+          },
+        }),
         avatar: ({theme}) => ({
           backgroundColor: COLOR.white,
           padding: theme.spacing(0.5),
@@ -367,6 +389,28 @@ const THEME: ThemeOptions = {
         },
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          minHeight: toRem(48),
+          variants: [
+            {
+              props: {disableGutters: false},
+              style: {'&.Mui-expanded': {minHeight: toRem(64)}},
+            },
+          ],
+        },
+        content: {
+          marginBlock: toRem(12),
+          variants: [
+            {
+              props: {disableGutters: false},
+              style: {'&.Mui-expanded': {marginBlock: toRem(20)}},
+            },
+          ],
+        },
+      },
+    },
     MuiDrawer: {
       defaultProps: {keepMounted: true, disablePortal: true, elevation: 0},
       styleOverrides: {
@@ -385,7 +429,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           backgroundColor: COLOR.white,
-          borderRadius: BORDER_RADIUS,
+          borderRadius,
         },
       },
     },
@@ -393,7 +437,7 @@ const THEME: ThemeOptions = {
       styleOverrides: {
         root: {
           backgroundColor: 'transparent',
-          borderRadius: BORDER_RADIUS,
+          borderRadius,
           '&.Mui-error': {
             backgroundColor: alpha(COLOR.scarlet, 0.2),
             '.MuiSvgIcon-root': {
@@ -442,9 +486,12 @@ const THEME: ThemeOptions = {
         variant: 'scrollable',
       },
       styleOverrides: {
+        root: {
+          minHeight: toRem(48),
+        },
         indicator: {
           backgroundColor: COLOR.white,
-          height: 4,
+          height: toRem(4),
           borderRadius: borderRadiusQuarter,
           transition: `all ${DURATION.mediumPlus}ms ${EASING.out}`,
         },
@@ -453,13 +500,17 @@ const THEME: ThemeOptions = {
     MuiTab: {
       styleOverrides: {
         root: {
+          minWidth: toRem(90),
+          maxWidth: 'min(22.5rem, 80vw)',
+          minHeight: toRem(48),
+          padding: '0.75rem 1rem',
           fontSize: toRem(FONT_SIZE.base),
           color: COLOR.white,
-          borderTopLeftRadius: BORDER_RADIUS,
-          borderTopRightRadius: BORDER_RADIUS,
+          borderTopLeftRadius: borderRadius,
+          borderTopRightRadius: borderRadius,
           borderBottomLeftRadius: borderRadiusQuarter,
           borderBottomRightRadius: borderRadiusQuarter,
-          [`@media (width <= ${BREAKPOINT.sm}px)`]: {
+          [`@media (width <= ${toRem(BREAKPOINT.sm)})`]: {
             fontSize: 'var(--mui-fontSize-small)',
           },
         },
@@ -508,7 +559,7 @@ const THEME: ThemeOptions = {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backdropFilter: 'blur(4px)',
+          backdropFilter: 'blur(0.25rem)',
         },
       },
     },

@@ -5,9 +5,9 @@ import SevenGlyphsIcon from '#assets/icons/7glyphs.svg?react'
 import GitHubIcon from '#assets/icons/github.svg?react'
 import LinkedInIcon from '#assets/icons/linkedin.svg?react'
 import InstagramIcon from '#assets/icons/instagram.svg?react'
-import DuolingoIcon from '#assets/icons/duolingo.svg?react'
 import FacebookIcon from '#assets/icons/facebook.svg?react'
 import TelegramIcon from '#assets/icons/telegram.svg?react'
+import AirbnbIcon from '#assets/icons/airbnb.svg?react'
 import type {ISocialLink, ICompany} from '#utils/types'
 
 interface IContactLink {
@@ -18,7 +18,7 @@ interface IContactLink {
   instagram: ISocialLink
   facebook: ISocialLink
   telegram: ISocialLink
-  duolingo: ISocialLink
+  airbnb: ISocialLink
 }
 
 interface ICompanyData {
@@ -108,7 +108,7 @@ export const CONTACT_LINK: IContactLink = {
   },
   instagram: {
     title: 'Instagram',
-    href: 'https://instagram.com/anymichael',
+    href: 'https://www.instagram.com/anymichael/tagged',
     Icon: InstagramIcon,
     size: 'md',
   },
@@ -124,11 +124,11 @@ export const CONTACT_LINK: IContactLink = {
     Icon: SevenGlyphsIcon,
     size: 'xs',
   },
-  duolingo: {
-    title: 'Duolingo',
-    href: 'https://duolingo.com/profile/michael.any',
-    Icon: DuolingoIcon,
-    size: 'md',
+  airbnb: {
+    title: 'Airbnb',
+    href: 'https://www.airbnb.co.nz/users/profile/1496122520349253877',
+    Icon: AirbnbIcon,
+    size: 'lg',
   },
 }
 

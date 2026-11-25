@@ -1,7 +1,9 @@
+$timeline-padding-inline: min(m.spacing(3), 12%);
+
 .Timeline-Title {
   font-size: var(--mui-fontSize-large);
-  padding-top: 20px;
-  padding-inline: 24px;
+  padding-top: m.spacing(2.5);
+  padding-inline: $timeline-padding-inline;
   font-weight: bold;
 }
 
@@ -9,18 +11,28 @@
   --timeline-marker-size: 1.5rem;
   --timeline-marker-radius: calc(var(--timeline-marker-size) / 2);
 
+  padding: m.spacing(3) $timeline-padding-inline;
+  border-radius: var(--mui-shape-borderRadius);
+  .MuiStepLabel-root {
+    padding-block: m.spacing(1);
+  }
+  .MuiStepLabel-iconContainer {
+    padding-right: m.spacing(1);
+  }
   .MuiStepIcon-root {
     font-size: var(--timeline-marker-size);
   }
   .MuiStepIcon-text {
-    font-size: 0.875rem;
+    // the svg viewBox scales the numbers with the marker
+    font-size: 14px;
   }
   .MuiStepConnector-vertical,
   .MuiStepContent-root {
     margin-left: var(--timeline-marker-radius);
   }
   .MuiStepContent-root {
-    padding-left: calc(var(--timeline-marker-radius) + 8px);
+    padding-left: calc(var(--timeline-marker-radius) + m.spacing(1));
+    padding-right: m.spacing(1);
   }
 }
 
@@ -30,11 +42,11 @@
 }
 
 .Timeline-Text {
-  padding-top: 8px;
-  margin-bottom: 24px;
+  padding-top: m.spacing(1);
+  margin-bottom: m.spacing(3);
   &_last {
     text-align: center;
-    padding-top: 16px;
+    padding-top: m.spacing(2);
   }
 }
 
@@ -53,7 +65,7 @@
 }
 
 .Timeline-ButtonIcon {
-  font-size: 24px;
+  font-size: 1.5rem;
   transform: rotate(0deg);
   transition: transform var(--mui-duration-short) var(--mui-easing-inOut);
   &_refresh {

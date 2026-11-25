@@ -166,15 +166,18 @@
     width: 100%;
     margin-right: 0;
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: m.spacing(2);
     }
   }
 }
 
 .NavigationButton {
+  display: flex;
+  min-width: 0;
+  padding: 0;
   color: var(--mui-palette-text-primary);
-  font-size: 32px;
-  height: 54px;
+  font-size: 2rem;
+  height: v.$navigation_row-height;
   &.active {
     @extend .Colorful;
   }
@@ -284,17 +287,17 @@
 }
 
 .Actions {
-  margin-top: 56px;
+  margin-top: m.spacing(7);
   &_center {
     text-align: center;
   }
   &_second {
-    margin-top: 36px;
+    margin-top: m.spacing(4.5);
   }
   @include m.md {
-    margin-top: 48px;
+    margin-top: m.spacing(6);
     &_second {
-      margin-top: 24px;
+      margin-top: m.spacing(3);
     }
   }
 }
@@ -335,12 +338,12 @@
 }
 
 .ButtonIcon {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .Tabs {
   @include m.animation(fadeIn);
-  margin-bottom: 24px;
+  margin-bottom: m.spacing(3);
 }
 
 .Lowercase {
@@ -349,6 +352,6 @@
 
 .TooltipParagraph {
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: m.spacing(1);
   }
 }

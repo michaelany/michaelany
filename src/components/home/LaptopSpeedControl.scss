@@ -1,4 +1,4 @@
-$control-size: 44px;
+$control-size: 2.75rem;
 
 .LaptopSpeedControl {
   display: flex;
@@ -9,30 +9,38 @@ $control-size: 44px;
 }
 
 .LaptopSpeedControl-Panel.MuiPaper-root {
-  width: 288px;
-  max-width: calc(100vw - 32px);
-  padding: 16px;
+  width: 18rem;
+  max-width: calc(100vw - min(m.spacing(4), 10vw));
+  max-height: calc(100dvh - min(m.spacing(4), 10vh));
+  padding: min(m.spacing(2), 5vw);
+  overflow: auto;
   border: 1px solid var(--mui-palette-text-primary);
   border-radius: calc(var(--mui-shape-borderRadius) * 2);
 }
 
 .LaptopSpeedControl-Value {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: m.spacing(1);
   text-align: center;
   font-size: var(--mui-fontSize-large);
   font-weight: bold;
   font-variant-numeric: tabular-nums;
 }
 
+.LaptopSpeedControl-Row.MuiStack-root {
+  flex-wrap: nowrap;
+  gap: min(m.spacing(2), 5vw);
+}
+
 .LaptopSpeedControl-Adjust.MuiIconButton-root {
   flex-shrink: 0;
-  width: $control-size;
-  height: $control-size;
+  width: min(#{$control-size}, 22%);
+  aspect-ratio: 1;
+  padding: 0;
   background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.06);
   color: inherit;
   > .MuiSvgIcon-root {
-    font-size: 31px;
+    font-size: min(1.9375rem, 13vw);
   }
   &.Mui-focusVisible {
     background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
@@ -49,35 +57,36 @@ $control-size: 44px;
   display: flex;
   flex-wrap: wrap;
   gap: m.spacing(0.5);
-  margin-top: 12px;
-  .MuiButton-root {
-    flex: 1 0 auto;
-    min-width: $control-size;
-    min-height: $control-size;
-    padding: 0 0.25rem;
-    border-color: var(--mui-palette-neutral-light);
-    font-size: var(--mui-fontSize-small);
-    white-space: nowrap;
+  margin-top: m.spacing(1.5);
+}
+
+.LaptopSpeedControl-Preset.MuiButton-root {
+  flex: 1 0 auto;
+  min-width: $control-size;
+  min-height: $control-size;
+  padding: 0 0.25rem;
+  border-color: var(--mui-palette-neutral-light);
+  font-size: var(--mui-fontSize-small);
+  white-space: nowrap;
+  &::after {
+    @include m.pseudo;
+    z-index: 1;
+    inset: -1px;
+    border: 1px solid var(--mui-palette-text-primary);
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
+  }
+  &.Mui-focusVisible {
+    background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
     &::after {
-      @include m.pseudo;
-      z-index: 1;
-      inset: -1px;
-      border: 1px solid var(--mui-palette-text-primary);
-      border-radius: inherit;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
+      opacity: 1;
     }
-    &.Mui-focusVisible {
-      background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
-      &::after {
-        opacity: 1;
-      }
-    }
-    @include m.hover {
-      &::after {
-        opacity: 1;
-      }
+  }
+  @include m.hover {
+    &::after {
+      opacity: 1;
     }
   }
 }

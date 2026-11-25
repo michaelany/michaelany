@@ -12,10 +12,10 @@ import {
   ROUTE,
   PATH_COLOR,
   PATH_BACKGROUND_COLOR,
-  QUERY_BREAKPOINT,
   IS_NEW_YEAR_MODE,
 } from '#utils/constants'
 import {handleAppLoaded} from '#utils/base'
+import {SIDEBAR_WIDTH, toRem} from '#styles/tokens'
 
 const Home = lazy(() => import('./home/Home'))
 const About = lazy(() => import('./about/About'))
@@ -27,15 +27,18 @@ const Blog = lazy(() => import('./blog/Blog'))
 const Video = lazy(() => import('./blog/Video'))
 const Contact = lazy(() => import('./contact/Contact'))
 
+const stackedLayoutQuery = `(width < calc(56rem + ${toRem(SIDEBAR_WIDTH)}))`
+
 export default function App() {
   const {pathname} = useLocation()
-  const md = useMediaQuery(QUERY_BREAKPOINT.md)
+  const isStacked = useMediaQuery(stackedLayoutQuery)
 
   const path = getPagePath(pathname)
   const color = PATH_COLOR[path] ?? 'white'
   const backgroundColor = PATH_BACKGROUND_COLOR[path]
   const appClassName = cn(
     'App',
+    isStacked && 'App_stacked',
     `App_color_${color}`,
     color !== 'white' && color !== 'alternate' && 'App_color_accent',
     backgroundColor && `App_hasBackground App_background_${backgroundColor}`
@@ -44,12 +47,15 @@ export default function App() {
   return (
     <>
       <div className={appClassName}>
-        {md ? <Header /> : <Sidebar />}
+        {isStacked ? <Header /> : <Sidebar />}
         <main className="App-Main">
-          {IS_NEW_YEAR_MODE && !md && <Garland />}
+          {IS_NEW_YEAR_MODE && !isStacked && <Garland />}
           <Suspense>
             <Routes>
-              <Route path={ROUTE.home} element={<Home />} />
+              <Route
+                path={ROUTE.home}
+                element={<Home isStacked={isStacked} />}
+              />
               <Route path={ROUTE.about} element={<About />} />
               <Route path={ROUTE.skills} element={<Skills />} />
               <Route path={ROUTE.experience} element={<Experience />} />

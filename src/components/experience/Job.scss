@@ -32,13 +32,11 @@
 
 .Job-Content {
   display: block;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 32px;
+  padding-inline: min(m.spacing(4), 12%);
+  padding-bottom: m.spacing(4);
   @include m.xs {
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px;
+    padding-inline: min(m.spacing(3), 12%);
+    padding-bottom: m.spacing(3);
   }
 }
 
@@ -62,8 +60,7 @@
     & > span {
       position: relative;
       display: inline-block;
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-inline: m.spacing(3);
     }
   }
 }
@@ -73,8 +70,8 @@
   display: flex;
   right: 0;
   top: 50%;
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
   transform: translateY(-50%);
   &::before {
     @include m.pseudo;
@@ -90,8 +87,8 @@
   &::after {
     @include m.pseudo(relative);
     margin: auto;
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: var(--mui-palette-violet-main);
     border-radius: 50%;
   }
@@ -99,14 +96,14 @@
 
 .Job-UpIcon {
   position: relative;
-  top: 4px;
+  top: 0.25rem;
   transform: rotate(-90deg);
   color: var(--mui-palette-neutral-light);
 }
 
 .Job-Block {
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: m.spacing(3);
   }
 }
 

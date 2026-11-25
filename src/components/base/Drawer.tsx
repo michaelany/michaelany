@@ -1,3 +1,4 @@
+import {useEffect, useRef} from 'react'
 import {Drawer as MuiDrawer, IconButton} from '@mui/material'
 import {ArrowBackRounded as ArrowBackIcon} from '@mui/icons-material'
 
@@ -8,23 +9,47 @@ import Settings from './Settings'
 interface IDrawerProps {
   open: boolean
   onClose: () => void
+  onExited: () => void
 }
 
-export default function Drawer({open, onClose}: IDrawerProps) {
+export default function Drawer({open, onClose, onExited}: IDrawerProps) {
+  const paperRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // focus the drawer after mui updates aria-hidden on its siblings
+    if (open) paperRef.current?.focus({preventScroll: true})
+  }, [open])
+
+  const handleClose = () => {
+    const {activeElement} = document
+    if (
+      activeElement instanceof HTMLElement &&
+      paperRef.current?.contains(activeElement)
+    )
+      activeElement.blur()
+    onClose()
+  }
+
   return (
-    <MuiDrawer open={open} onClose={onClose}>
+    <MuiDrawer
+      disableAutoFocus
+      disableRestoreFocus
+      open={open}
+      slotProps={{paper: {ref: paperRef}, transition: {onExited}}}
+      onClose={handleClose}
+    >
       <div className="Drawer-Content">
         <div>
           <div className="Drawer-Block">
             <IconButton
               className="Colorful"
               aria-label="Hide"
-              onClick={onClose}
+              onClick={handleClose}
             >
               <ArrowBackIcon className="ButtonIcon" />
             </IconButton>
           </div>
-          <Navigation onClose={onClose} />
+          <Navigation onClose={handleClose} />
         </div>
         <Settings />
       </div>

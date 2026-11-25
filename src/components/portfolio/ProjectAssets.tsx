@@ -36,6 +36,7 @@ export default function ProjectAssets({project}: IProjectAssetsProps) {
           duration={md ? undefined : 'longer'}
         >
           <img
+            className="ProjectAssets-Logo"
             src={project.images.logo[1]}
             srcSet={`${project.images.logo[2]} 2x`}
             alt={project.title}

@@ -11,7 +11,6 @@ import emailjs from 'emailjs-com'
 import {
   TextField,
   Button,
-  Grid,
   InputAdornment,
   Fade,
   CircularProgress,
@@ -129,24 +128,32 @@ export default function ContactForm() {
 
   return (
     <>
-      <Animate noValidate el="form" effect="bottom" onSubmit={handleSubmit}>
-        <Grid container spacing={2}>
-          <Grid size={{xs: 12, md: 6, lg: 12, xl: 6}}>
+      <Animate
+        className="ContactForm"
+        noValidate
+        el="form"
+        effect="bottom"
+        onSubmit={handleSubmit}
+      >
+        <div className="ContactForm-Fields">
+          <div className="ContactForm-Row">
             <TextField
               fullWidth
               name={field.name}
               label={t('contact.form.name')}
               variant="filled"
               slotProps={{
+                inputLabel: inputLabelProps,
                 input: inputProps[field.name],
-                htmlInput: {ref: fieldElements[field.name]},
+                htmlInput: {
+                  className: 'ContactForm-Value',
+                  ref: fieldElements[field.name],
+                },
               }}
               value={values.name}
               error={errors.name}
               onChange={handleChange}
             />
-          </Grid>
-          <Grid size={{xs: 12, md: 6, lg: 12, xl: 6}}>
             <TextField
               fullWidth
               name={field.email}
@@ -154,35 +161,36 @@ export default function ContactForm() {
               label="Email"
               variant="filled"
               slotProps={{
+                inputLabel: inputLabelProps,
                 input: inputProps[field.email],
-                htmlInput: {ref: fieldElements[field.email]},
+                htmlInput: {
+                  className: 'ContactForm-Value',
+                  ref: fieldElements[field.email],
+                },
               }}
               value={values.email}
               error={errors.email}
               onChange={handleChange}
             />
-          </Grid>
-          <Grid size={12}>
-            <TextField
-              fullWidth
-              multiline
-              name={field.message}
-              label={t('contact.form.message')}
-              minRows={5}
-              variant="filled"
-              slotProps={{
-                input: inputProps[field.message],
-                htmlInput: {ref: fieldElements[field.message]},
-              }}
-              value={values.message}
-              error={errors.message}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid size={12}>
-            <p>This site is protected by reCAPTCHA.</p>
-          </Grid>
-        </Grid>
+          </div>
+          <TextField
+            fullWidth
+            multiline
+            name={field.message}
+            label={t('contact.form.message')}
+            minRows={5}
+            variant="filled"
+            slotProps={{
+              inputLabel: inputLabelProps,
+              input: inputProps[field.message],
+              htmlInput: {ref: fieldElements[field.message]},
+            }}
+            value={values.message}
+            error={errors.message}
+            onChange={handleChange}
+          />
+          <p>This site is protected by reCAPTCHA.</p>
+        </div>
         <Button
           fullWidth
           className="ContactForm-Submit Button"
@@ -194,7 +202,10 @@ export default function ContactForm() {
           <span>{t('contact.form.send')}</span>
           <Fade in={loading}>
             <div className="ContactForm-Loader">
-              <CircularProgress size={36} className="ContactForm-Progress" />
+              <CircularProgress
+                size="2.25rem"
+                className="ContactForm-Progress"
+              />
             </div>
           </Fade>
         </Button>
@@ -227,9 +238,16 @@ const field: IField = {
   message: 'message',
 }
 
+const inputLabelProps = {className: 'ContactForm-Label'}
+
+const filledInputProps = {
+  className: 'ContactForm-Input',
+  disableUnderline: true,
+}
+
 const inputProps: Record<string, InputProps> = {
   [field.name]: {
-    disableUnderline: true,
+    ...filledInputProps,
     endAdornment: (
       <InputAdornment position="end">
         <PersonIcon />
@@ -237,16 +255,14 @@ const inputProps: Record<string, InputProps> = {
     ),
   },
   [field.email]: {
-    disableUnderline: true,
+    ...filledInputProps,
     endAdornment: (
       <InputAdornment position="end">
         <MailIcon />
       </InputAdornment>
     ),
   },
-  [field.message]: {
-    disableUnderline: true,
-  },
+  [field.message]: filledInputProps,
 }
 
 const initialValues: Record<string, string> = getInitialData('')

@@ -3,8 +3,8 @@
     background-color: white;
     color: var(--mui-palette-text-primary);
     border: 1px solid var(--mui-palette-text-primary);
-    padding: m.spacing(1) m.spacing(9) m.spacing(1) m.spacing(2);
-    min-width: 330px;
+    padding: m.spacing(1) min(m.spacing(2), 5vw);
+    min-width: min(20.625rem, 100%);
     @include m.xs {
       min-width: auto;
     }
@@ -13,15 +13,23 @@
   .MuiSnackbarContent-message {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: min(m.spacing(1.5), 4vw);
+    overflow-wrap: anywhere;
   }
 }
 
 .Message-Icon {
   flex-shrink: 0;
+  width: min(4rem, 18vw);
+  height: auto;
 }
 
-.Message-Close {
-  position: absolute;
-  right: 8px;
+.Message-Close.MuiIconButton-root {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding: min(m.spacing(1), 3vw);
+}
+
+.Message-CloseIcon.MuiSvgIcon-root {
+  font-size: min(2rem, 8vw);
 }

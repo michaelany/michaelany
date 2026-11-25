@@ -1,9 +1,9 @@
 .Logo {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-right: 8px;
-  margin-left: 8px;
-  margin-bottom: 80px;
+  padding-top: m.spacing(1);
+  padding-bottom: m.spacing(1);
+  margin-right: m.spacing(1);
+  margin-left: m.spacing(1);
+  margin-bottom: m.spacing(10);
   display: flex;
   justify-content: center;
   transition:
@@ -12,8 +12,9 @@
   @include m.hover {
     transform: scale(1.15) rotate(-10deg);
   }
-  @include m.md {
+  .Header & {
     padding: 0;
+    margin-inline: 0.5em;
     margin-bottom: 0;
     @include m.hover {
       transform: scale(1.15) rotate(10deg);
@@ -22,8 +23,10 @@
 }
 
 .Logo-Svg {
-  @include m.md {
-    width: 46px;
-    height: 46px;
+  width: 4rem;
+  height: 4rem;
+  .Header & {
+    width: 2.875em;
+    height: 2.875em;
   }
 }

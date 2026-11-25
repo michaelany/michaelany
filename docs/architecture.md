@@ -35,5 +35,8 @@ the import aliases in `tsconfig.json`.
 - Set project-wide MUI defaults in `src/styles/theme.ts` and apply exceptions
   where they are used. Use `partials.scss` for reusable opt-in classes.
 - Use `Sections` for split pages and `.Cards` for portfolio and blog lists.
-  Their column widths use `rem` so the layout can reduce its column count as
-  the browser font size grows.
+  `App` switches both `Sections` and the navigation when there is too little
+  room for two `28rem` columns beside the sidebar. `.Cards` uses a minimum
+  width in `rem` to reduce its column count as the browser font size grows.
+- The contact form switches its first row between one and two columns based
+  on the width of the form container.

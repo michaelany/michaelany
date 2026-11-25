@@ -1,7 +1,7 @@
 .Greeting {
-  padding-bottom: 160px;
+  padding-bottom: m.spacing(20);
   @include m.lg {
-    padding-bottom: 80px;
+    padding-bottom: m.spacing(10);
   }
   @include m.xs {
     .Sections-Section:first-child > & {
@@ -28,14 +28,14 @@
 .Greeting-IconWrapper {
   position: relative;
   display: inline-block;
-  top: 4px;
+  top: 0.25rem;
   margin-left: m.spacing(2);
   @include m.lg {
-    top: 3px;
+    top: 0.1875rem;
     margin-left: m.spacing(1.5);
   }
   @include m.xs {
-    top: 2px;
+    top: 0.125rem;
     margin-left: m.spacing(1);
   }
 }
@@ -74,16 +74,16 @@
   display: flex;
   position: relative;
   z-index: 1;
-  margin-left: 24px;
+  margin-left: m.spacing(3);
   transition: transform var(--mui-duration-standard) var(--mui-easing-out);
   &_first {
     outline-color: var(--mui-palette-yellow-main);
-    top: 14px;
+    top: 0.875rem;
     transform: rotate(20deg);
   }
   &_second {
     outline-color: var(--mui-palette-red-main);
-    top: 18px;
+    top: 1.125rem;
     transform: rotate(-15deg);
   }
   @include m.hover {
@@ -93,21 +93,21 @@
     transform: rotate(0) scale(1.2);
   }
   @include m.lg {
-    margin-left: 20px;
+    margin-left: m.spacing(2.5);
     &_first {
-      top: 11px;
+      top: 0.6875rem;
     }
     &_second {
-      top: 14px;
+      top: 0.875rem;
     }
   }
   @include m.xs {
-    margin-left: 15px;
+    margin-left: 0.9375rem;
     &_first {
-      top: 8px;
+      top: 0.5rem;
     }
     &_second {
-      top: 11px;
+      top: 0.6875rem;
     }
   }
 }
@@ -146,17 +146,17 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: m.spacing(4.5);
-  margin-bottom: -16px;
+  margin-bottom: m.spacing(-2);
   @include m.compact {
     margin-top: m.spacing(4);
   }
   @include m.xs {
-    margin-bottom: 24px;
+    margin-bottom: m.spacing(3);
   }
 }
 
 .Greeting-Button {
-  margin-bottom: 16px;
+  margin-bottom: m.spacing(2);
   &:nth-child(1) {
     @include m.animation(fadeInBottom, 3250ms);
   }
@@ -183,25 +183,25 @@
   right: 10%;
   bottom: 0;
   width: 42%;
-  min-width: 280px;
-  max-width: 480px;
+  min-width: min(17.5rem, 100%);
+  max-width: 30rem;
   @include m.lg {
-    min-width: 200px;
-    max-width: 320px;
+    min-width: min(12.5rem, 100%);
+    max-width: 20rem;
   }
   @include m.md {
-    min-width: 180px;
+    min-width: min(11.25rem, 100%);
     right: 7.5%;
   }
   @include m.sm {
-    right: 24px;
+    right: min(m.spacing(3), 7.5vw);
   }
   @include m.xs {
     @include m.animation(fadeInBottom, 3900ms);
     position: static;
     right: auto;
     bottom: auto;
-    width: 180px;
+    width: min(11.25rem, 100%);
     margin: auto;
   }
 }

@@ -3,7 +3,8 @@ import {DURATION} from '#styles/tokens'
 
 export const handleAppLoaded = () => {
   const preloader = document.getElementById('preloader') as HTMLElement
-  document.body.style.overflow = 'auto'
+  // keep the document as the scroll container for sticky sections
+  document.body.style.overflow = 'visible'
   preloader.classList.remove('Preloader_show')
   setTimeout(() => preloader.remove(), DURATION.longer)
 }

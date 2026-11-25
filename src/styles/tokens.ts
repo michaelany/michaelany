@@ -50,9 +50,15 @@ export const BREAKPOINT = {
   lg: 1279,
 }
 
+export const HTML_FONT_SIZE = 16
+
 export const FONT_SIZE = {
   base: 18,
   small: 16,
 }
 
 export const BORDER_RADIUS = 8
+
+export const SIDEBAR_WIDTH = 100
+
+export const toRem = (px: number) => `${px / HTML_FONT_SIZE}rem`

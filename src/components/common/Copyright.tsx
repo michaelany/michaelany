@@ -45,7 +45,7 @@ export default function Copyright() {
               className="Copyright-Link"
               href={link.href}
             >
-              <Icon />
+              <Icon className="Copyright-LinkIcon" />
             </a>
           </Tooltip>
         ))}

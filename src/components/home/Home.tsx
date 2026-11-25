@@ -1,19 +1,16 @@
-import {useMediaQuery} from '@mui/material'
-
 import {Sections} from '#components/common'
-import {QUERY_BREAKPOINT} from '#utils/constants'
 import Greeting from './Greeting'
 import Banner from './Banner'
 
-export default function Home() {
-  // matches for key to responsive alternate animations reset
-  const isMd = useMediaQuery(QUERY_BREAKPOINT.md)
+interface IHomeProps {
+  isStacked: boolean
+}
 
+export default function Home({isStacked}: IHomeProps) {
   return (
     <Sections
-      key={String(isMd)}
       firstSection={<Greeting />}
-      secondSection={<Banner isMd={isMd} />}
+      secondSection={<Banner isStacked={isStacked} />}
     />
   )
 }

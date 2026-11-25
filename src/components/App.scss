@@ -1,9 +1,6 @@
-@use 'sass:math';
-
 .App {
   position: relative;
   display: flex;
-  min-width: 320px;
   background-color: var(--page-background-color);
   transition: background-color var(--mui-duration-standard)
     var(--mui-easing-inOut);
@@ -50,9 +47,9 @@
 .App-Main {
   min-height: 100vh;
   width: 100%;
-  padding-left: v.$sidebar-width;
-  @include m.md {
-    padding-top: math.div(v.$header_height, 2);
+  padding-left: var(--mui-sidebarWidth);
+  .App_stacked > & {
+    padding-top: v.$header_height;
     padding-left: 0;
   }
 }

@@ -1,6 +1,6 @@
 import {differenceInYears, format} from 'date-fns'
 
-import {BREAKPOINT} from '#styles/tokens'
+import {BREAKPOINT, toRem} from '#styles/tokens'
 import {PROJECT_COLORS, VIDEO_COLORS} from '#data/contentColors'
 import type {
   TRoute,
@@ -106,10 +106,10 @@ export const PATH_BACKGROUND_COLOR: Partial<Record<string, TColor>> = {
 }
 
 export const QUERY_BREAKPOINT: IQueryBreakpoint = {
-  xs: `(width <= ${BREAKPOINT.xs}px)`,
-  sm: `(width <= ${BREAKPOINT.sm}px)`,
-  md: `(width <= ${BREAKPOINT.md}px)`,
-  lg: `(width <= ${BREAKPOINT.lg}px)`,
+  xs: `(width <= ${toRem(BREAKPOINT.xs)})`,
+  sm: `(width <= ${toRem(BREAKPOINT.sm)})`,
+  md: `(width <= ${toRem(BREAKPOINT.md)})`,
+  lg: `(width <= ${toRem(BREAKPOINT.lg)})`,
 }
 
 export const BLANK_LINK_PROPS: IBlankLinkProps = {

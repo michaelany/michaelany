@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding-top: 8px;
-  padding-bottom: 12px;
+  padding-top: m.spacing(1);
+  padding-bottom: m.spacing(1.5);
   overflow-y: auto;
   overflow-x: hidden;
 }

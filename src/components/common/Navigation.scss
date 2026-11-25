@@ -1,16 +1,20 @@
 .Navigation {
   position: relative;
-  width: v.$sidebar-width;
-  margin-bottom: 48px;
+  width: var(--mui-sidebarWidth);
+  margin-bottom: m.spacing(6);
   &::after {
     @include m.pseudo;
     top: 0;
     right: 0;
-    width: 8px;
-    height: 54px;
+    width: 0.5rem;
+    height: v.$navigation_row-height;
     border-radius: calc(var(--mui-shape-borderRadius) / 2);
     background-color: var(--page-accent-color);
-    transform: translate3d(0, calc(54px * var(--nav-index)), 0);
+    transform: translate3d(
+      0,
+      calc(#{v.$navigation_row-height} * var(--nav-index)),
+      0
+    );
     transition:
       transform var(--mui-duration-mediumPlus) var(--mui-easing-out),
       background-color var(--mui-duration-short) var(--mui-easing-inOut);
@@ -18,7 +22,7 @@
       @include m.animationAlternate(alternateBackgroundColor);
     }
   }
-  .Header-Drawer > & {
-    padding-bottom: 24px;
+  .Drawer-Content & {
+    width: 100%;
   }
 }

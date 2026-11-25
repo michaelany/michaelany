@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, type RefObject} from 'react'
 import type {TFunction} from 'i18next'
 import {
   Button,
@@ -23,57 +23,60 @@ import {Tooltip} from '#components/common'
 import {DURATION} from '#styles/tokens'
 
 interface ILaptopSpeedControlProps {
+  anchorRef: RefObject<HTMLDivElement | null>
   triggerClassName: string
   t: TFunction
   animationSpeed: number
   isReady: boolean
+  isOpen: boolean
+  onOpenChange: (isOpen: boolean) => void
   onSpeedChange: (speed: number) => void
 }
 
 export default function LaptopSpeedControl({
+  anchorRef,
   triggerClassName,
   t,
   animationSpeed,
   isReady,
+  isOpen,
+  onOpenChange,
   onSpeedChange,
 }: ILaptopSpeedControlProps) {
-  const [isOpen, setIsOpen] = useState(false)
   const speedPanelRef = useRef<HTMLDivElement>(null)
   const speedButtonRef = useRef<HTMLButtonElement>(null)
 
-  const isSpeedPanelOpen = isReady && isOpen
-
   useEffect(() => {
-    if (!isSpeedPanelOpen) return
+    if (!isOpen) return
 
     const handleSpeedPanelKeyDown = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return
-      setIsOpen(false)
+      onOpenChange(false)
       if (speedPanelRef.current?.contains(document.activeElement))
         speedButtonRef.current?.focus()
     }
     document.addEventListener('keydown', handleSpeedPanelKeyDown)
     return () =>
       document.removeEventListener('keydown', handleSpeedPanelKeyDown)
-  }, [isSpeedPanelOpen])
+  }, [isOpen, onOpenChange])
 
-  const handleSpeedToggle = () => setIsOpen(isOpen => !isOpen)
+  const handleSpeedToggle = () => onOpenChange(!isOpen)
 
-  const handleSpeedClose = () => setIsOpen(false)
+  const handleSpeedClose = () => onOpenChange(false)
 
   const speedLabel = t('home.laptop.animationSpeed')
 
   return (
     <ClickAwayListener onClickAway={handleSpeedClose}>
       <div className="LaptopSpeedControl">
-        <Tooltip title={speedLabel}>
+        <Tooltip title={isOpen ? '' : speedLabel}>
           <Fab
             ref={speedButtonRef}
             className={triggerClassName}
             disabled={!isReady}
             aria-label={speedLabel}
             aria-haspopup="dialog"
-            aria-expanded={isSpeedPanelOpen}
+            aria-expanded={isOpen}
             onClick={handleSpeedToggle}
           >
             <SpeedIcon />
@@ -83,8 +86,8 @@ export default function LaptopSpeedControl({
           className="LaptopSpeedControl-Popper"
           disablePortal
           transition
-          open={isSpeedPanelOpen}
-          anchorEl={speedButtonRef.current}
+          open={isOpen}
+          anchorEl={anchorRef.current}
           placement="top"
           role="presentation"
           modifiers={speedPopoverModifiers}
@@ -93,7 +96,7 @@ export default function LaptopSpeedControl({
             <Fade
               {...TransitionProps}
               timeout={DURATION.short}
-              style={{pointerEvents: isSpeedPanelOpen ? 'auto' : 'none'}}
+              style={{pointerEvents: isOpen ? 'auto' : 'none'}}
             >
               <Paper
                 ref={speedPanelRef}
@@ -104,7 +107,7 @@ export default function LaptopSpeedControl({
                 <output className="LaptopSpeedControl-Value">
                   {formatSpeed(animationSpeed)}
                 </output>
-                <Stack spacing={2} sx={{flexWrap: 'nowrap'}}>
+                <Stack className="LaptopSpeedControl-Row">
                   <IconButton
                     className="LaptopSpeedControl-Adjust"
                     aria-label={t('home.laptop.slowDownAnimation')}
@@ -143,6 +146,7 @@ export default function LaptopSpeedControl({
                   {speedOptions.presets.map(speed => (
                     <Button
                       key={speed}
+                      className="LaptopSpeedControl-Preset"
                       variant="outlined"
                       color="inherit"
                       onClick={() => onSpeedChange(speed)}
@@ -171,5 +175,5 @@ const speedOptions = {
 
 const speedPopoverModifiers: PopperProps['modifiers'] = [
   {name: 'offset', options: {offset: [0, 12]}},
-  {name: 'preventOverflow', options: {padding: 16}},
+  {name: 'preventOverflow', options: {padding: 16, altAxis: true}},
 ]

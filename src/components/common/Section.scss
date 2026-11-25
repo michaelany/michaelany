@@ -1,12 +1,15 @@
-$max-content-width: 1000px;
+$max-content-width: 62.5rem;
 
 .Section {
   position: relative;
-  padding: 80px 10% 144px;
+  padding: m.spacing(10) 10% m.spacing(18);
   height: 100%;
   &_wide {
     padding-left: 5%;
     padding-right: 5%;
+  }
+  &_hasFooter {
+    padding-bottom: m.spacing(4);
   }
   &_colorful {
     &::before {
@@ -23,12 +26,11 @@ $max-content-width: 1000px;
     padding-left: 7.5%;
     padding-right: 7.5%;
     .Sections-Section_compact > & {
-      padding-bottom: 80px;
+      padding-bottom: m.spacing(10);
     }
   }
   @include m.sm {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-inline: min(m.spacing(3), 7.5vw);
   }
 }
 
@@ -50,4 +52,9 @@ $max-content-width: 1000px;
     flex-direction: column;
     justify-content: space-between;
   }
+}
+
+.Section-Footer {
+  display: grid;
+  gap: min(m.spacing(7), 10vh);
 }
