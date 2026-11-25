@@ -2,79 +2,16 @@ $videos:
   'day-in-a-life-montenegro', 'my-dreamdesk', 'day-in-a-life-new-zealand',
   'how-i-became-software-engineer';
 
-.VideoLink-Tilt {
-  transform-style: preserve-3d;
-}
-
-.VideoLink-Item {
-  grid-template-columns: minmax(0, 1fr);
-  width: 100%;
-  background-color: white;
-  border-radius: var(--mui-shape-borderRadius);
-  transform-style: preserve-3d;
-  &.MuiButtonBase-root {
-    display: grid;
-    align-items: stretch;
-  }
-  &.Mui-focusVisible {
-    .VideoLink-View {
-      opacity: 0;
-    }
-    .VideoLink-Content {
-      opacity: 1;
-    }
-  }
-  @media (hover: hover) {
-    &:hover {
-      .VideoLink-View {
-        opacity: 0;
-      }
-      .VideoLink-Content {
-        opacity: 1;
-      }
-    }
-  }
-}
-
 .VideoLink-View {
-  grid-area: 1 / 1;
   aspect-ratio: 1 / 0.64;
-  width: 100%;
-  border-radius: inherit;
-  overflow: hidden;
-  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
+  &::after {
+    background-position: center;
+  }
   @each $video in $videos {
     &_name_#{$video}::after {
       @include m.retinaImg($video, 'jpg', '/assets/videos');
     }
   }
-  &::after {
-    @include m.pseudo(relative);
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-.VideoLink-Content {
-  grid-area: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: m.spacing(3) min(m.spacing(3), 12%);
-  opacity: 0;
-  transform: translateZ(1.5rem);
-  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
-}
-
-.VideoLink-Title {
-  padding-top: m.spacing(0.5);
-  font-size: 1.375rem;
-  line-height: 1.2;
-  color: var(--card-accent-dark-color);
 }
 
 .VideoLink-Date {

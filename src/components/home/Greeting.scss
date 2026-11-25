@@ -102,7 +102,7 @@
     }
   }
   @include m.xs {
-    margin-left: 0.9375rem;
+    margin-left: v.toRem(15);
     &_first {
       top: 0.5rem;
     }
@@ -118,25 +118,25 @@
     width: 3.75rem;
     height: 4.25rem;
     @include m.lg {
-      width: 2.875rem;
-      height: 3.3125rem;
+      width: v.toRem(46);
+      height: v.toRem(53);
     }
     @include m.xs {
-      width: 2.1875rem;
+      width: v.toRem(35);
       height: 2.5rem;
     }
   }
   .Greeting-Badge_second > & {
     @include m.animation(fadeInZoomIn, 3050ms);
-    width: 4.125rem;
-    height: 2.875rem;
+    width: v.toRem(66);
+    height: v.toRem(46);
     @include m.lg {
-      width: 3.1875rem;
+      width: v.toRem(51);
       height: 2.25rem;
     }
     @include m.xs {
-      width: 2.375rem;
-      height: 1.6875rem;
+      width: v.toRem(38);
+      height: v.toRem(27);
     }
   }
 }

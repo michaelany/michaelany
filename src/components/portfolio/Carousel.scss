@@ -9,7 +9,7 @@
   }
   &_type_mobile {
     position: relative;
-    width: min(13.6875rem, 100%);
+    width: min(v.toRem(219), 100%);
     aspect-ratio: 219 / 462;
     margin: auto;
   }

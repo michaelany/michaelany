@@ -17,8 +17,7 @@ $dialog-margin: min(m.spacing(4), 10vw);
   width: 5rem;
   max-width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   margin-bottom: m.spacing(2);
   @include m.sm {
     width: 3.75rem;

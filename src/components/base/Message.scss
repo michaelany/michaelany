@@ -4,7 +4,7 @@
     color: var(--mui-palette-text-primary);
     border: 1px solid var(--mui-palette-text-primary);
     padding: m.spacing(1) min(m.spacing(2), 5vw);
-    min-width: min(20.625rem, 100%);
+    min-width: min(v.toRem(330), 100%);
     @include m.xs {
       min-width: auto;
     }

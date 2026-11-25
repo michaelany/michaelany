@@ -1,0 +1,67 @@
+.CardLink-Tilt {
+  transform-style: preserve-3d;
+}
+
+.CardLink {
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  background-color: white;
+  border-radius: var(--mui-shape-borderRadius);
+  transform-style: preserve-3d;
+  &.MuiButtonBase-root {
+    display: grid;
+    align-items: stretch;
+  }
+  &.Mui-focusVisible {
+    .CardLink-View {
+      opacity: 0;
+    }
+    .CardLink-Content {
+      opacity: 1;
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      .CardLink-View {
+        opacity: 0;
+      }
+      .CardLink-Content {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.CardLink-View {
+  grid-area: 1 / 1;
+  width: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
+  &::after {
+    @include m.pseudo(relative);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.CardLink-Content {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: m.spacing(3) min(m.spacing(3), 12%);
+  opacity: 0;
+  transform: translateZ(1.5rem);
+  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
+}
+
+.CardLink-Title {
+  padding-top: m.spacing(0.5);
+  font-size: v.toRem(22);
+  line-height: 1.2;
+  color: var(--card-accent-dark-color);
+}

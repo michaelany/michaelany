@@ -80,7 +80,8 @@
   }
 }
 
-.Text {
+.Text,
+.MainText {
   font-size: 1.875rem;
   line-height: 1.5;
   @include m.lg {
@@ -92,7 +93,6 @@
 }
 
 .MainText {
-  @extend .Text;
   @include m.animation(fadeInBottom);
   margin-bottom: m.spacing(7.5);
   color: var(--mui-palette-text-secondary);

@@ -1,12 +1,18 @@
+@use 'sass:math';
+
+@function toRem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
 $accent-colors: 'neutral', 'blue', 'green', 'grass', 'yellow', 'red', 'violet';
 
 $dark-alfa: 0.7;
 $backdrop-opacity: 0.33;
-$header_height: 3.875rem;
+$header_height: toRem(62);
 $header_border-width: 2px;
-$navigation_row-height: 3.375rem;
+$navigation_row-height: toRem(54);
 
-$breakpoint_xs: 24.9375rem;
-$breakpoint_sm: 37.4375rem;
-$breakpoint_md: 59.9375rem;
-$breakpoint_lg: 79.9375rem;
+$breakpoint_xs: toRem(399);
+$breakpoint_sm: toRem(599);
+$breakpoint_md: toRem(959);
+$breakpoint_lg: toRem(1279);

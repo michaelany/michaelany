@@ -9,84 +9,19 @@ $projects:
   'madfit', 'pridefit-cms', 'ally-cms', 'pridefit', 'strongher-cms', 'help-ai',
   'ally-2', 'reps-rest', 'best-me', 'madfit-2', 'go-rentals';
 
-.ProjectLink-Tilt {
-  transform-style: preserve-3d;
-}
-
-.ProjectLink-Item {
-  grid-template-columns: minmax(0, 1fr);
-  width: 100%;
-  background-color: white;
-  border-radius: var(--mui-shape-borderRadius);
-  transform-style: preserve-3d;
-  &.MuiButtonBase-root {
-    display: grid;
-    align-items: stretch;
-  }
-  &.Mui-focusVisible {
-    .ProjectLink-View {
-      opacity: 0;
-    }
-    .ProjectLink-Content {
-      opacity: 1;
-    }
-  }
-  @media (hover: hover) {
-    &:hover {
-      .ProjectLink-View {
-        opacity: 0;
-      }
-      .ProjectLink-Content {
-        opacity: 1;
-      }
-    }
-  }
-}
-
 .ProjectLink-View {
-  grid-area: 1 / 1;
   aspect-ratio: 1 / 0.7035;
-  width: 100%;
-  border-radius: inherit;
-  overflow: hidden;
-  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
   @each $project in $projects {
     &_name_#{$project}::after {
       @include m.retinaImg($project, 'jpg', '/assets/projects');
     }
   }
-  &::after {
-    @include m.pseudo(relative);
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-.ProjectLink-Content {
-  grid-area: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: m.spacing(3) min(m.spacing(3), 12%);
-  opacity: 0;
-  transform: translateZ(1.5rem);
-  transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
 }
 
 .ProjectLink-Logo {
   width: min(2.5rem, 100%);
   height: 2.5rem;
   object-fit: contain;
-}
-
-.ProjectLink-Title {
-  padding-top: m.spacing(0.5);
-  font-size: 1.375rem;
-  line-height: 1.2;
-  color: var(--card-accent-dark-color);
 }
 
 .ProjectLink-Label {

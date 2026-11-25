@@ -5,8 +5,7 @@ $max-content-width: 62.5rem;
   padding: m.spacing(10) 10% m.spacing(18);
   height: 100%;
   &_wide {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-inline: 5%;
   }
   &_hasFooter {
     padding-bottom: m.spacing(4);
@@ -23,8 +22,7 @@ $max-content-width: 62.5rem;
     }
   }
   @include m.md {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    padding-inline: 7.5%;
     .Sections-Section_compact > & {
       padding-bottom: m.spacing(10);
     }

@@ -1,12 +1,8 @@
-import {useMemo} from 'react'
-import {Link} from 'react-router-dom'
-import {ButtonBase} from '@mui/material'
 import type {TFunction} from 'i18next'
 
 import './VideoLink.scss'
-import {Animate, Tilt, Panel} from '#components/common'
-import {getGridAnimationDelay} from '#utils/helpers'
-import {IS_MOBILE_DEVICE, RANDOM_EFFECTS, ROUTE} from '#utils/constants'
+import CardLink from '#components/common/CardLink'
+import {ROUTE} from '#utils/constants'
 import VideoDate from './VideoDate'
 import type {IWidth, TLng, IVideo} from '#utils/types'
 
@@ -25,42 +21,16 @@ export default function VideoLink({
   width,
   video,
 }: IVideoLinkProps) {
-  const effect = useMemo(
-    () =>
-      width.sm ? undefined : RANDOM_EFFECTS[Math.floor(Math.random() * 4)],
-    [width.sm]
-  )
-
   return (
-    <li>
-      <Animate
-        className={IS_MOBILE_DEVICE ? 'VideoLink-Tilt' : undefined}
-        effect={effect}
-        delay={getGridAnimationDelay(index, width)}
-      >
-        <Tilt className="VideoLink-Tilt">
-          <ButtonBase
-            focusRipple
-            component={Link}
-            className={`VideoLink-Item ColorInteract ColorInteract_color_${video.color}`}
-            to={`${ROUTE.blog}/${video.name}`}
-          >
-            <Panel
-              className={`VideoLink-View VideoLink-View_name_${video.name}`}
-            />
-            <div className="VideoLink-Content">
-              <h3 className="VideoLink-Title">
-                {t(`blog.video.${video.name}.title`, {replace: ['|']})}
-              </h3>
-              <VideoDate
-                className="VideoLink-Date"
-                date={video.date}
-                lng={lng}
-              />
-            </div>
-          </ButtonBase>
-        </Tilt>
-      </Animate>
-    </li>
+    <CardLink
+      to={`${ROUTE.blog}/${video.name}`}
+      title={t(`blog.video.${video.name}.title`, {replace: ['|']})}
+      color={video.color}
+      index={index}
+      width={width}
+      viewClassName={`VideoLink-View VideoLink-View_name_${video.name}`}
+    >
+      <VideoDate className="VideoLink-Date" date={video.date} lng={lng} />
+    </CardLink>
   )
 }

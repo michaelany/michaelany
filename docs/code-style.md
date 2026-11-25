@@ -38,6 +38,9 @@ cannot handle.
   hook needs it. Put state hooks before refs unless a ref initialises state.
 - Use blank lines between groups and between adjacent functions and handlers.
   Keep related constants together.
+- Put common props such as `children`, `ref` and `className` near the start of
+  prop interfaces and destructuring. Group related props and put callbacks and
+  event handlers last.
 - Order JSX props as `key`, `ref`, `id`, `className`, shorthand booleans, other
   props and handlers. Preserve override and evaluation order around spreads.
 
@@ -82,6 +85,9 @@ cannot handle.
 - Use `rem` for interface sizes, corner radii and layout breakpoints so they
   follow the browser's base font size. Let text controls grow with their
   content and wrap rows when the available space is too small.
+- Use `v.toRem()` when the whole-pixel value at the default root is easier to
+  read than the equivalent `rem` literal. Keep simple values such as `1.5rem`
+  inline.
 - Use `em` for sizes that should follow the local font, such as an inline icon
   at `1em`. Use percentages and viewport units to constrain elements to the
   available space. Use `px` for thin strokes, SVG coordinates and APIs that

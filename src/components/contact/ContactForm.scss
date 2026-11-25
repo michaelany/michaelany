@@ -23,7 +23,7 @@ $field-padding-block: m.spacing(3.5) m.spacing(1);
   transform: translate($field-padding-inline, 1rem);
   &.MuiInputLabel-shrink {
     max-width: calc(133% - 2 * $field-padding-inline);
-    transform: translate($field-padding-inline, 0.4375rem) scale(0.75);
+    transform: translate($field-padding-inline, v.toRem(7)) scale(0.75);
   }
 }
 
