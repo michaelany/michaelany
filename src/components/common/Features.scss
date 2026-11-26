@@ -4,7 +4,7 @@
 
 .Features-Icon {
   font-size: 2.25rem;
-  margin-bottom: m.spacing(0.5);
+  margin-bottom: f.spacing(0.5);
   @include m.compact {
     font-size: 2rem;
   }
@@ -16,6 +16,6 @@
 
 .Features-Description {
   font-size: var(--mui-fontSize-small);
-  padding-top: m.spacing(1.5);
+  padding-top: f.spacing(1.5);
   color: var(--mui-palette-text-secondary);
 }

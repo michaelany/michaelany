@@ -65,6 +65,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use 'styles/variables' as v;
+          @use 'styles/functions' as f;
           @use 'styles/mixins' as m;
         `,
       },

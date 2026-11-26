@@ -1,8 +1,8 @@
-$timeline-padding-inline: min(m.spacing(3), 12%);
+$timeline-padding-inline: min(f.spacing(3), 12%);
 
 .Timeline-Title {
   font-size: var(--mui-fontSize-large);
-  padding-top: m.spacing(2.5);
+  padding-top: f.spacing(2.5);
   padding-inline: $timeline-padding-inline;
   font-weight: bold;
 }
@@ -11,13 +11,13 @@ $timeline-padding-inline: min(m.spacing(3), 12%);
   --timeline-marker-size: 1.5rem;
   --timeline-marker-radius: calc(var(--timeline-marker-size) / 2);
 
-  padding: m.spacing(3) $timeline-padding-inline;
+  padding: f.spacing(3) $timeline-padding-inline;
   border-radius: var(--mui-shape-borderRadius);
   .MuiStepLabel-root {
-    padding-block: m.spacing(1);
+    padding-block: f.spacing(1);
   }
   .MuiStepLabel-iconContainer {
-    padding-right: m.spacing(1);
+    padding-right: f.spacing(1);
   }
   .MuiStepIcon-root {
     font-size: var(--timeline-marker-size);
@@ -31,8 +31,8 @@ $timeline-padding-inline: min(m.spacing(3), 12%);
     margin-left: var(--timeline-marker-radius);
   }
   .MuiStepContent-root {
-    padding-left: calc(var(--timeline-marker-radius) + m.spacing(1));
-    padding-right: m.spacing(1);
+    padding-left: calc(var(--timeline-marker-radius) + f.spacing(1));
+    padding-right: f.spacing(1);
   }
 }
 
@@ -42,11 +42,11 @@ $timeline-padding-inline: min(m.spacing(3), 12%);
 }
 
 .Timeline-Text {
-  padding-top: m.spacing(1);
-  margin-bottom: m.spacing(3);
+  padding-top: f.spacing(1);
+  margin-bottom: f.spacing(3);
   &_last {
     text-align: center;
-    padding-top: m.spacing(2);
+    padding-top: f.spacing(2);
   }
 }
 

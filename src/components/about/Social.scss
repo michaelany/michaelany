@@ -7,7 +7,7 @@
 .Social-PhotoWrapper {
   position: relative;
   width: min(21rem, 100%);
-  margin-bottom: m.spacing(6);
+  margin-bottom: f.spacing(6);
   &::after {
     @include m.pseudo;
     top: 0;
@@ -25,7 +25,7 @@
     animation-play-state: paused;
   }
   @include m.xs {
-    margin-bottom: m.spacing(4.5);
+    margin-bottom: f.spacing(4.5);
   }
 }
 

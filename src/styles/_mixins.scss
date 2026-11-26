@@ -1,9 +1,5 @@
 @use 'styles/variables' as v;
 
-@function spacing($factor) {
-  @return calc(var(--mui-spacing) * $factor);
-}
-
 @mixin pseudo($pos: absolute, $display: block, $content: '') {
   content: $content;
   display: $display;

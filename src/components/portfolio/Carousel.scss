@@ -2,14 +2,14 @@
   border-radius: var(--mui-shape-borderRadius);
   overflow: hidden;
   &:not(:last-child) {
-    margin-bottom: m.spacing(5);
+    margin-bottom: f.spacing(5);
   }
   &_type_desktop {
     background-color: white;
   }
   &_type_mobile {
     position: relative;
-    width: min(v.toRem(219), 100%);
+    width: min(f.toRem(219), 100%);
     aspect-ratio: 219 / 462;
     margin: auto;
   }

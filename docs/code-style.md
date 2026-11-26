@@ -1,11 +1,6 @@
 # Code Style
 
-Apply these conventions to new and changed code. Use comparable components to
-guide choices the docs leave open.
-
-Start with the simplest readable implementation that meets the requirements.
-Add complexity only when it solves a concrete problem the simpler approach
-cannot handle.
+Apply these conventions to new and changed code.
 
 ## React
 
@@ -26,9 +21,8 @@ cannot handle.
 
 - Group third-party imports first, then project imports after a blank line.
   Start the project group with the component's SCSS import, if present.
-- Put imports and local types first, then the main component, local helpers
-  and module constants. Define values before anything that uses them during
-  module initialisation.
+- Within a file, order imports, local types, the main component, local helpers
+  and module constants. Declare dependencies before use at module initialisation.
 - Export components with an inline function declaration. Assign wrapped
   components to a `const` and export them at the bottom. Define JSX helpers
   as arrow functions below the main component when they belong in the same file.
@@ -37,7 +31,6 @@ cannot handle.
   functions and handlers, then render values. Declare a value earlier if a
   hook needs it. Put state hooks before refs unless a ref initialises state.
 - Use blank lines between groups and between adjacent functions and handlers.
-  Keep related constants together.
 - Put common props such as `children`, `ref` and `className` near the start of
   prop interfaces and destructuring. Group related props and put callbacks and
   event handlers last.
@@ -46,14 +39,11 @@ cannot handle.
 
 ## Naming
 
-- Use the simplest name that clearly describes the role. Add a qualifier when
-  it distinguishes the name from another concept in use, such as a different
-  layout for the same content.
-- Use consistent domain names in `camelCase`. Name helpers for what they do
-  and use singular names for collection items. Keep established short names
-  such as `t`, `md` and `e`.
-- Use action-oriented names for helpers and keep related names consistent,
-  as in `toRem` and `toResponsiveRem`.
+- Use the simplest clear name. Add a qualifier only to distinguish concepts
+  already in use.
+- Use consistent domain names in `camelCase`, singular names for collection
+  items and established short names such as `t`, `md` and `e`. Name related
+  helpers by action, as in `toRem` and `toResponsiveRem`.
 - Use `PascalCase` for components and match the `.tsx` filename to the main
   component. Use contextual names for local helpers and include the domain
   in separately used component names when it helps.
@@ -73,19 +63,16 @@ cannot handle.
 
 ## SCSS
 
-- Keep the root font size at `100%`. Set text sizes in `rem` that resolve to
-  whole CSS pixels at the default `16px` root. Set responsive text sizes in
-  typography styles.
-- Use unitless `line-height` in custom styles so it follows the element's font
-  size. The computed line height may be fractional.
-- Use the shared MUI spacing scale for gaps, margins and padding. Its base step
-  is `0.5rem` (`8px` at the default root), with half steps for `4px` increments
-  at that size. Use `theme.spacing()` or MUI spacing props in React and
-  `m.spacing()` in SCSS. Keep wide gutters responsive to available width.
+- Keep the root font size at `100%`. Use `rem` text sizes that resolve to whole
+  CSS pixels at the default `16px` root. Define responsive sizes in typography
+  styles. Use unitless `line-height` in custom styles, allowing fractional results.
+- For gaps, margins and padding, use `theme.spacing()` or MUI spacing props in
+  React and `f.spacing()` in SCSS. At the default root, a full `0.5rem` step
+  is `8px` and a half step is `4px`. Let wide gutters adapt to available width.
 - Use `rem` for interface sizes, corner radii and layout breakpoints so they
   follow the browser's base font size. Let text controls grow with their
   content and wrap rows when the available space is too small.
-- Use `v.toRem()` when the whole-pixel value at the default root is easier to
+- Use `f.toRem()` when the whole-pixel value at the default root is easier to
   read than the equivalent `rem` literal. Keep simple values such as `1.5rem`
   inline.
 - Use `em` for sizes that should follow the local font, such as an inline icon
@@ -96,11 +83,9 @@ cannot handle.
   fractional CSS pixels.
 - Use component-based block names with `.Block-Element` and
   `.Block_modifier` for elements and modifiers.
-- Give child elements their own component class when they need styles. For
-  library components, use the public API to assign a class to the relevant
-  slot when possible. If the markup offers no way to assign a class, scope
-  the descendant selector to the owning component and prefer documented
-  library classes where available.
+- Give each styled child its own component class. For library elements, assign
+  a slot class through the public API when possible. Otherwise scope descendant
+  selectors to the component and prefer documented library classes.
 - Put file-level variables after `@use` and `@import`, before mixins and rules.
   Keep related declarations and nested rules together. Separate top-level
   blocks with a blank line.
@@ -108,10 +93,9 @@ cannot handle.
   same-element selectors. Write descendant selectors directly.
 - Declare shared design tokens in the MUI theme and component-specific CSS
   variables in the styles of the component that owns them.
-- Use MUI CSS variables for theme values and Sass `v` tokens for breakpoints
-  and other shared values. Put mixin calls first in a rule, with `m.hover`
-  and breakpoint mixins at the end to preserve the cascade. Vite provides
-  the `v` and `m` namespaces.
+- Read theme values from MUI CSS variables. Vite provides `v` for Sass tokens
+  (including breakpoints), `f` for functions and `m` for mixins.
+- Put mixin calls first in a rule, with `m.hover` and breakpoint mixins last.
 - Use range syntax for custom width media queries, such as `(width <= 37.4375rem)`.
 - Follow existing responsive and retina image patterns. Use `m.retinaImg`
   for decorative CSS backgrounds with standard and retina assets.
@@ -125,7 +109,7 @@ cannot handle.
 - Follow the project's Prettier settings. Start comments with a lowercase
   letter and omit the final period.
 - Group related module constants and order them from shared configuration to
-  component-specific values. Declare dependencies before their consumers.
+  component-specific values.
 - Put shorthand object properties first, preserving evaluation and override
   order around spreads and computed keys.
 - Prefer `const`, clear inferred types and arrow functions for helpers and

@@ -2,13 +2,13 @@ $max-content-width: 62.5rem;
 
 .Section {
   position: relative;
-  padding: m.spacing(10) 10% m.spacing(18);
+  padding: f.spacing(10) 10% f.spacing(18);
   height: 100%;
   &_wide {
     padding-inline: 5%;
   }
   &_hasFooter {
-    padding-bottom: m.spacing(4);
+    padding-bottom: f.spacing(4);
   }
   &_colorful {
     &::before {
@@ -24,11 +24,11 @@ $max-content-width: 62.5rem;
   @include m.md {
     padding-inline: 7.5%;
     .Sections-Section_compact > & {
-      padding-bottom: m.spacing(10);
+      padding-bottom: f.spacing(10);
     }
   }
   @include m.sm {
-    padding-inline: min(m.spacing(3), 7.5vw);
+    padding-inline: min(f.spacing(3), 7.5vw);
   }
 }
 
@@ -54,5 +54,5 @@ $max-content-width: 62.5rem;
 
 .Section-Footer {
   display: grid;
-  gap: min(m.spacing(7), 10vh);
+  gap: min(f.spacing(7), 10vh);
 }

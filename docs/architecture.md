@@ -19,7 +19,6 @@ the import aliases in `tsconfig.json`.
 ## Components
 
 - Extract components that own meaningful structure, logic, state or behaviour.
-  Give a reused structure with styled child elements its own component.
 - Reuse building blocks such as `Section`, `Sections`, `Animate`, `Panel` and
   `ExpandAction`. Prefer built-in MUI components, props, states and transitions.
 - Use MUI `Stack` for rows and columns and `Grid` for grids when their layout
@@ -30,12 +29,11 @@ the import aliases in `tsconfig.json`.
 
 ## Styles
 
-- Put a standalone component's styles in a matching SCSS file beside it.
-  Import the stylesheet from the component that owns it.
+- Use `partials.scss` for reusable opt-in classes that style a single element.
+  Give repeated markup with styled children its own component. Keep component
+  and child styles in a matching SCSS file beside the component and import it there.
 - Set project-wide MUI defaults in `src/styles/theme.ts` and apply exceptions
-  where they are used. Use `partials.scss` for reusable opt-in classes that
-  style a single element. Keep styles for a component's child elements in its
-  own SCSS file.
+  where they are used.
 - Use `Sections` for split pages and `.Cards` for portfolio and blog lists.
   `App` switches both `Sections` and the navigation when there is too little
   room for two `28rem` columns beside the sidebar. `.Cards` uses a minimum

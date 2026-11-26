@@ -1,7 +1,7 @@
 .Navigation {
   position: relative;
   width: var(--mui-sidebarWidth);
-  margin-bottom: m.spacing(6);
+  margin-bottom: f.spacing(6);
   &::after {
     @include m.pseudo;
     top: 0;

@@ -20,9 +20,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-left: m.spacing(4);
+  padding-left: f.spacing(4);
   @include m.compact {
-    padding-left: m.spacing(3.5);
+    padding-left: f.spacing(3.5);
   }
   @include m.xs {
     justify-content: flex-start;
@@ -32,20 +32,20 @@
 
 .Job-Content {
   display: block;
-  padding-inline: min(m.spacing(4), 12%);
-  padding-bottom: m.spacing(4);
+  padding-inline: min(f.spacing(4), 12%);
+  padding-bottom: f.spacing(4);
   @include m.xs {
-    padding-inline: min(m.spacing(3), 12%);
-    padding-bottom: m.spacing(3);
+    padding-inline: min(f.spacing(3), 12%);
+    padding-bottom: f.spacing(3);
   }
 }
 
 .Job-Occupations {
   text-align: center;
-  padding-top: m.spacing(1);
-  margin-bottom: m.spacing(4);
+  padding-top: f.spacing(1);
+  margin-bottom: f.spacing(4);
   @include m.compact {
-    margin-bottom: m.spacing(3.5);
+    margin-bottom: f.spacing(3.5);
   }
 }
 
@@ -60,7 +60,7 @@
     & > span {
       position: relative;
       display: inline-block;
-      padding-inline: m.spacing(3);
+      padding-inline: f.spacing(3);
     }
   }
 }
@@ -103,13 +103,13 @@
 
 .Job-Block {
   &:not(:last-child) {
-    margin-bottom: m.spacing(3);
+    margin-bottom: f.spacing(3);
   }
 }
 
 .Job-SubTitle {
-  margin-bottom: m.spacing(2);
-  gap: m.spacing(1);
+  margin-bottom: f.spacing(2);
+  gap: f.spacing(1);
   display: inline-flex;
   align-items: center;
   & > svg {
@@ -118,17 +118,17 @@
 }
 
 .Job-SubTitleText {
-  padding-top: m.spacing(0.5);
+  padding-top: f.spacing(0.5);
 }
 
 .Job-Items {
   list-style: disc;
-  padding-left: m.spacing(2.5);
+  padding-left: f.spacing(2.5);
 }
 
 .Job-Item {
   &:not(:last-child) {
-    margin-bottom: m.spacing(1);
+    margin-bottom: f.spacing(1);
   }
 }
 

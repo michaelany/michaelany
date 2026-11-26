@@ -6,15 +6,15 @@ $img-height_sm: 1.875rem;
 
 .Company {
   max-width: 100%;
-  padding: m.spacing($spacing_st);
+  padding: f.spacing($spacing_st);
   &_animated {
     @include m.animation(fadeInZoomOutSm);
-    margin-inline: m.spacing(-$spacing_st);
+    margin-inline: f.spacing(-$spacing_st);
   }
   @include m.compact {
-    padding: m.spacing($spacing_sm);
+    padding: f.spacing($spacing_sm);
     &_animated {
-      margin-inline: m.spacing(-$spacing_sm);
+      margin-inline: f.spacing(-$spacing_sm);
     }
   }
 }

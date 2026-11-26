@@ -1,4 +1,5 @@
 @use 'styles/variables' as v;
+@use 'styles/functions' as f;
 @use 'styles/mixins' as m;
 
 .VisuallyHidden {
@@ -31,12 +32,12 @@
   font-size: 4.5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: m.spacing(4.5);
+  margin-bottom: f.spacing(4.5);
   &_mediumIndent {
-    margin-bottom: m.spacing(3);
+    margin-bottom: f.spacing(3);
   }
   &_smallIndent {
-    margin-bottom: m.spacing(1.5);
+    margin-bottom: f.spacing(1.5);
   }
   &_withIcon {
     display: flex;
@@ -51,32 +52,32 @@
   }
   @include m.lg {
     font-size: 3.5rem;
-    margin-bottom: m.spacing(3.5);
+    margin-bottom: f.spacing(3.5);
     &_mediumIndent {
-      margin-bottom: m.spacing(2.5);
+      margin-bottom: f.spacing(2.5);
     }
     &_smallIndent {
-      margin-bottom: m.spacing(1);
+      margin-bottom: f.spacing(1);
     }
   }
   @include m.xs {
     font-size: 2.625rem;
-    margin-bottom: m.spacing(2.5);
+    margin-bottom: f.spacing(2.5);
     &_mediumIndent {
-      margin-bottom: m.spacing(1.5);
+      margin-bottom: f.spacing(1.5);
     }
   }
 }
 
 .TitleIconWrapper {
-  padding: m.spacing(1);
+  padding: f.spacing(1);
   display: flex;
-  margin-left: m.spacing(2);
+  margin-left: f.spacing(2);
   @include m.lg {
-    margin-left: m.spacing(1.5);
+    margin-left: f.spacing(1.5);
   }
   @include m.xs {
-    margin-left: m.spacing(1);
+    margin-left: f.spacing(1);
   }
 }
 
@@ -94,7 +95,7 @@
 
 .MainText {
   @include m.animation(fadeInBottom);
-  margin-bottom: m.spacing(7.5);
+  margin-bottom: f.spacing(7.5);
   color: var(--mui-palette-text-secondary);
   &_dark {
     color: var(--mui-palette-text-primary);
@@ -103,18 +104,18 @@
     animation: none;
   }
   &_smallIndent {
-    margin-bottom: m.spacing(3);
+    margin-bottom: f.spacing(3);
   }
   @include m.lg {
-    margin-bottom: m.spacing(6.5);
+    margin-bottom: f.spacing(6.5);
     &_smallIndent {
-      margin-bottom: m.spacing(2.5);
+      margin-bottom: f.spacing(2.5);
     }
   }
   @include m.xs {
-    margin-bottom: m.spacing(5.5);
+    margin-bottom: f.spacing(5.5);
     &_smallIndent {
-      margin-bottom: m.spacing(2);
+      margin-bottom: f.spacing(2);
     }
   }
 }
@@ -166,7 +167,7 @@
     width: 100%;
     margin-right: 0;
     &:not(:last-child) {
-      margin-bottom: m.spacing(2);
+      margin-bottom: f.spacing(2);
     }
   }
 }
@@ -212,7 +213,7 @@
 
 .Cards {
   --cards-max-columns: 4;
-  --cards-gap: #{m.spacing(2)};
+  --cards-gap: #{f.spacing(2)};
   --cards-min-width: max(
     16rem,
     (100% - (var(--cards-max-columns) - 1) * var(--cards-gap)) /
@@ -287,17 +288,17 @@
 }
 
 .Actions {
-  margin-top: m.spacing(7);
+  margin-top: f.spacing(7);
   &_center {
     text-align: center;
   }
   &_second {
-    margin-top: m.spacing(4.5);
+    margin-top: f.spacing(4.5);
   }
   @include m.md {
-    margin-top: m.spacing(6);
+    margin-top: f.spacing(6);
     &_second {
-      margin-top: m.spacing(3);
+      margin-top: f.spacing(3);
     }
   }
 }
@@ -343,7 +344,7 @@
 
 .Tabs {
   @include m.animation(fadeIn);
-  margin-bottom: m.spacing(3);
+  margin-bottom: f.spacing(3);
 }
 
 .Lowercase {
@@ -352,6 +353,6 @@
 
 .TooltipParagraph {
   &:not(:last-child) {
-    margin-bottom: m.spacing(1);
+    margin-bottom: f.spacing(1);
   }
 }

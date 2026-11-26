@@ -1,5 +1,5 @@
-$field-padding-inline: m.spacing(1.5);
-$field-padding-block: m.spacing(3.5) m.spacing(1);
+$field-padding-inline: f.spacing(1.5);
+$field-padding-block: f.spacing(3.5) f.spacing(1);
 
 .ContactForm {
   container-type: inline-size;
@@ -7,7 +7,7 @@ $field-padding-block: m.spacing(3.5) m.spacing(1);
 
 .ContactForm-Fields {
   display: grid;
-  gap: m.spacing(2);
+  gap: f.spacing(2);
 }
 
 .ContactForm-Row {
@@ -23,7 +23,7 @@ $field-padding-block: m.spacing(3.5) m.spacing(1);
   transform: translate($field-padding-inline, 1rem);
   &.MuiInputLabel-shrink {
     max-width: calc(133% - 2 * $field-padding-inline);
-    transform: translate($field-padding-inline, v.toRem(7)) scale(0.75);
+    transform: translate($field-padding-inline, f.toRem(7)) scale(0.75);
   }
 }
 
@@ -44,14 +44,14 @@ $field-padding-block: m.spacing(3.5) m.spacing(1);
 
 .ContactForm-Submit {
   position: relative;
-  margin-top: m.spacing(3);
-  margin-bottom: m.spacing(10);
+  margin-top: f.spacing(3);
+  margin-bottom: f.spacing(10);
   overflow: hidden;
   @include m.md {
-    margin-bottom: m.spacing(8);
+    margin-bottom: f.spacing(8);
   }
   @include m.sm {
-    margin-bottom: m.spacing(7);
+    margin-bottom: f.spacing(7);
   }
 }
 

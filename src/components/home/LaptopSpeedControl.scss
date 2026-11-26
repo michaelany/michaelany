@@ -10,9 +10,9 @@ $control-size: 2.75rem;
 
 .LaptopSpeedControl-Panel.MuiPaper-root {
   width: 18rem;
-  max-width: calc(100vw - min(m.spacing(4), 10vw));
-  max-height: calc(100dvh - min(m.spacing(4), 10vh));
-  padding: min(m.spacing(2), 5vw);
+  max-width: calc(100vw - min(f.spacing(4), 10vw));
+  max-height: calc(100dvh - min(f.spacing(4), 10vh));
+  padding: min(f.spacing(2), 5vw);
   overflow: auto;
   border: 1px solid var(--mui-palette-text-primary);
   border-radius: calc(var(--mui-shape-borderRadius) * 2);
@@ -20,7 +20,7 @@ $control-size: 2.75rem;
 
 .LaptopSpeedControl-Value {
   display: block;
-  margin-bottom: m.spacing(1);
+  margin-bottom: f.spacing(1);
   text-align: center;
   font-size: var(--mui-fontSize-large);
   font-weight: bold;
@@ -29,7 +29,7 @@ $control-size: 2.75rem;
 
 .LaptopSpeedControl-Row.MuiStack-root {
   flex-wrap: nowrap;
-  gap: min(m.spacing(2), 5vw);
+  gap: min(f.spacing(2), 5vw);
 }
 
 .LaptopSpeedControl-Adjust.MuiIconButton-root {
@@ -56,15 +56,15 @@ $control-size: 2.75rem;
 .LaptopSpeedControl-Presets {
   display: flex;
   flex-wrap: wrap;
-  gap: m.spacing(0.5);
-  margin-top: m.spacing(1.5);
+  gap: f.spacing(0.5);
+  margin-top: f.spacing(1.5);
 }
 
 .LaptopSpeedControl-Preset.MuiButton-root {
   flex: 1 0 auto;
   min-width: $control-size;
   min-height: $control-size;
-  padding: 0 m.spacing(0.5);
+  padding: 0 f.spacing(0.5);
   border-color: var(--mui-palette-neutral-light);
   font-size: var(--mui-fontSize-small);
   white-space: nowrap;

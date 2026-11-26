@@ -1,5 +1,5 @@
 .ProjectDetails-Block {
-  margin-bottom: m.spacing(1.5);
+  margin-bottom: f.spacing(1.5);
 }
 
 .ProjectDetails-Features {
@@ -8,10 +8,10 @@
 
 .ProjectDetails-Text {
   font-size: var(--mui-fontSize-medium);
-  padding-top: m.spacing(5);
-  margin-bottom: m.spacing(4);
+  padding-top: f.spacing(5);
+  margin-bottom: f.spacing(4);
   @include m.compact {
-    padding-top: m.spacing(4.5);
-    margin-bottom: m.spacing(3.5);
+    padding-top: f.spacing(4.5);
+    margin-bottom: f.spacing(3.5);
   }
 }

@@ -1,7 +1,7 @@
 .Greeting {
-  padding-bottom: m.spacing(20);
+  padding-bottom: f.spacing(20);
   @include m.lg {
-    padding-bottom: m.spacing(10);
+    padding-bottom: f.spacing(10);
   }
   @include m.xs {
     .Sections-Section:first-child > & {
@@ -29,14 +29,14 @@
   position: relative;
   display: inline-block;
   top: 0.25rem;
-  margin-left: m.spacing(2);
+  margin-left: f.spacing(2);
   @include m.lg {
     top: 0.1875rem;
-    margin-left: m.spacing(1.5);
+    margin-left: f.spacing(1.5);
   }
   @include m.xs {
     top: 0.125rem;
-    margin-left: m.spacing(1);
+    margin-left: f.spacing(1);
   }
 }
 
@@ -74,7 +74,7 @@
   display: flex;
   position: relative;
   z-index: 1;
-  margin-left: m.spacing(3);
+  margin-left: f.spacing(3);
   transition: transform var(--mui-duration-standard) var(--mui-easing-out);
   &_first {
     outline-color: var(--mui-palette-yellow-main);
@@ -93,7 +93,7 @@
     transform: rotate(0) scale(1.2);
   }
   @include m.lg {
-    margin-left: m.spacing(2.5);
+    margin-left: f.spacing(2.5);
     &_first {
       top: 0.6875rem;
     }
@@ -102,7 +102,7 @@
     }
   }
   @include m.xs {
-    margin-left: v.toRem(15);
+    margin-left: f.toRem(15);
     &_first {
       top: 0.5rem;
     }
@@ -118,25 +118,25 @@
     width: 3.75rem;
     height: 4.25rem;
     @include m.lg {
-      width: v.toRem(46);
-      height: v.toRem(53);
+      width: f.toRem(46);
+      height: f.toRem(53);
     }
     @include m.xs {
-      width: v.toRem(35);
+      width: f.toRem(35);
       height: 2.5rem;
     }
   }
   .Greeting-Badge_second > & {
     @include m.animation(fadeInZoomIn, 3050ms);
-    width: v.toRem(66);
-    height: v.toRem(46);
+    width: f.toRem(66);
+    height: f.toRem(46);
     @include m.lg {
-      width: v.toRem(51);
+      width: f.toRem(51);
       height: 2.25rem;
     }
     @include m.xs {
-      width: v.toRem(38);
-      height: v.toRem(27);
+      width: f.toRem(38);
+      height: f.toRem(27);
     }
   }
 }
@@ -145,18 +145,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: m.spacing(4.5);
-  margin-bottom: m.spacing(-2);
+  margin-top: f.spacing(4.5);
+  margin-bottom: f.spacing(-2);
   @include m.compact {
-    margin-top: m.spacing(4);
+    margin-top: f.spacing(4);
   }
   @include m.xs {
-    margin-bottom: m.spacing(3);
+    margin-bottom: f.spacing(3);
   }
 }
 
 .Greeting-Button {
-  margin-bottom: m.spacing(2);
+  margin-bottom: f.spacing(2);
   &:nth-child(1) {
     @include m.animation(fadeInBottom, 3250ms);
   }
@@ -194,7 +194,7 @@
     right: 7.5%;
   }
   @include m.sm {
-    right: min(m.spacing(3), 7.5vw);
+    right: min(f.spacing(3), 7.5vw);
   }
   @include m.xs {
     @include m.animation(fadeInBottom, 3900ms);

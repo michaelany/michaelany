@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: m.spacing(1);
+  column-gap: f.spacing(1);
   font-size: var(--mui-fontSize-small);
   & > span:not(:last-child) {
     font-weight: bold;

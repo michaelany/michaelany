@@ -1,4 +1,4 @@
-$dialog-margin: min(m.spacing(4), 10vw);
+$dialog-margin: min(f.spacing(4), 10vw);
 
 .SuccessDialog-Paper.MuiPaper-root {
   margin: $dialog-margin;
@@ -6,10 +6,10 @@ $dialog-margin: min(m.spacing(4), 10vw);
 }
 
 .SuccessDialog {
-  padding: m.spacing(6) min(m.spacing(6), 15%);
+  padding: f.spacing(6) min(f.spacing(6), 15%);
   text-align: center;
   @include m.sm {
-    padding: m.spacing(4) min(m.spacing(4), 15%);
+    padding: f.spacing(4) min(f.spacing(4), 15%);
   }
 }
 
@@ -18,7 +18,7 @@ $dialog-margin: min(m.spacing(4), 10vw);
   max-width: 100%;
   height: auto;
   margin-inline: auto;
-  margin-bottom: m.spacing(2);
+  margin-bottom: f.spacing(2);
   @include m.sm {
     width: 3.75rem;
   }
@@ -26,13 +26,13 @@ $dialog-margin: min(m.spacing(4), 10vw);
 
 .SuccessDialog-Title {
   font-size: 2.25rem;
-  margin-bottom: m.spacing(3);
+  margin-bottom: f.spacing(3);
   @include m.lg {
     font-size: 1.875rem;
-    margin-bottom: m.spacing(2.5);
+    margin-bottom: f.spacing(2.5);
   }
   @include m.sm {
     font-size: 1.625rem;
-    margin-bottom: m.spacing(2);
+    margin-bottom: f.spacing(2);
   }
 }

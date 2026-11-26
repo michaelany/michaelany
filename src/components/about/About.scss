@@ -5,6 +5,6 @@
 .About-Countries {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: m.spacing(2);
-  row-gap: m.spacing(0.5);
+  column-gap: f.spacing(2);
+  row-gap: f.spacing(0.5);
 }

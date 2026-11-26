@@ -7,7 +7,7 @@
   background-color: black;
   border-radius: var(--mui-shape-borderRadius);
   overflow: hidden;
-  margin-bottom: m.spacing(5);
+  margin-bottom: f.spacing(5);
   @include m.md {
     @include m.animation(fadeIn);
   }
@@ -24,11 +24,11 @@
 }
 
 .Video-Text {
-  margin-bottom: m.spacing(4);
+  margin-bottom: f.spacing(4);
   @include m.lg {
-    margin-bottom: m.spacing(3.5);
+    margin-bottom: f.spacing(3.5);
   }
   @include m.xs {
-    margin-bottom: m.spacing(3);
+    margin-bottom: f.spacing(3);
   }
 }

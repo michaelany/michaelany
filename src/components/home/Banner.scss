@@ -3,7 +3,7 @@
     padding-top: 7.5%;
   }
   @include m.sm {
-    padding-top: min(m.spacing(3), 7.5vw);
+    padding-top: min(f.spacing(3), 7.5vw);
   }
 }
 

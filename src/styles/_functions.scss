@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function spacing($factor) {
+  @return calc(var(--mui-spacing) * $factor);
+}
+
+@function toRem($px) {
+  @return math.div($px, 16) * 1rem;
+}

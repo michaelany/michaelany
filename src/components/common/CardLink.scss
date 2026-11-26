@@ -53,15 +53,15 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  padding: m.spacing(3) min(m.spacing(3), 12%);
+  padding: f.spacing(3) min(f.spacing(3), 12%);
   opacity: 0;
   transform: translateZ(1.5rem);
   transition: opacity var(--mui-duration-short) var(--mui-easing-inOut);
 }
 
 .CardLink-Title {
-  padding-top: m.spacing(0.5);
-  font-size: v.toRem(22);
+  padding-top: f.spacing(0.5);
+  font-size: f.toRem(22);
   line-height: 1.2;
   color: var(--card-accent-dark-color);
 }
