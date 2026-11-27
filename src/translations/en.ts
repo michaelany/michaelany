@@ -705,7 +705,6 @@ const EN = {
     error: 'Server connection error',
   },
   message: {
-    stopWar: 'My relatives live in Russia and Ukraine. <0>NO WAR</0>',
     newYear: '<0>Merry Christmas and Happy New Year!</0>',
   },
 }

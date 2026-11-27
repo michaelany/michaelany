@@ -6,6 +6,9 @@
   `base/` for the app shell and `common/` for components shared across domains.
 - `src/data/` holds static content and shared data. Keep page-specific
   configuration with its page.
+- Keep interface icons in `src/assets/icons/` and standalone images in
+  `src/assets/images/`. The laptop scene's technology logos live in
+  `src/assets/images/main-technologies/`.
 - `src/translations/` holds the English and Russian dictionaries.
 - `src/styles/` holds the MUI theme, global styles and shared Sass.
 - `src/utils/` holds helpers, constants, i18n setup and types. Group related

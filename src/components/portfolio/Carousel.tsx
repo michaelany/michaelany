@@ -7,7 +7,7 @@ import type {SwiperModule, SwiperOptions} from 'swiper/types'
 import 'swiper/css'
 
 import './Carousel.scss'
-import PhoneSvg from '#assets/img/shapes/phone.svg?react'
+import PhoneSvg from '#assets/images/phone.svg?react'
 import {Animate, Panel} from '#components/common'
 import {DURATION} from '#styles/tokens'
 

@@ -2,8 +2,8 @@ import {useTranslation} from 'react-i18next'
 import {Button} from '@mui/material'
 
 import './Settings.scss'
-import EnIcon from '#assets/icons/en.svg?react'
-import RuIcon from '#assets/icons/ru.svg?react'
+import EnIcon from '#assets/images/en.svg?react'
+import RuIcon from '#assets/images/ru.svg?react'
 import {Tooltip} from '#components/common'
 
 export default function Settings() {

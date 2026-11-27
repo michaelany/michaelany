@@ -2,7 +2,7 @@ import cn from 'clsx'
 import type {JSX} from 'react'
 
 import './Panel.scss'
-import DesktopSvg from '#assets/img/shapes/desktop.svg?react'
+import DesktopSvg from '#assets/images/desktop.svg?react'
 
 interface IPanelProps {
   children?: JSX.Element

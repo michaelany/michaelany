@@ -17,7 +17,7 @@
   pointer-events: none;
   &::before {
     @include m.pseudo;
-    @include m.retinaImg('assets/img/shapes/macbook-poster', 'webp');
+    @include m.retinaImg('assets/images/macbook-poster', 'webp');
     inset: 0;
     background-position: center;
     background-size: contain;

@@ -17,7 +17,7 @@ import {
 } from '@mui/icons-material'
 
 import './Laptop.scss'
-import FrameCorner from '#assets/img/shapes/frame-corner.svg?react'
+import FrameCorner from '#assets/images/frame-corner.svg?react'
 import {Tooltip} from '#components/common'
 import {DURATION} from '#styles/tokens'
 import type {TLaptopScene} from '#utils/laptop/laptopScene'

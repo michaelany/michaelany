@@ -3,7 +3,7 @@ import {useTranslation} from 'react-i18next'
 import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api'
 
 import './Map.scss'
-import markerIcon from '#assets/icons/marker.svg'
+import markerIcon from '#assets/images/marker.svg'
 import {ROUTE} from '#utils/constants'
 import MAP_STYLES from '#styles/map'
 
