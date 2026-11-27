@@ -5,7 +5,6 @@ import {
   ClickAwayListener,
   Fab,
   Fade,
-  IconButton,
   Paper,
   Popper,
   Slider,
@@ -108,8 +107,9 @@ export default function LaptopSpeedControl({
                   {formatSpeed(animationSpeed)}
                 </output>
                 <Stack className="LaptopSpeedControl-Row">
-                  <IconButton
+                  <Fab
                     className="LaptopSpeedControl-Adjust"
+                    size="medium"
                     aria-label={t('home.laptop.slowDownAnimation')}
                     disabled={animationSpeed <= speedOptions.min}
                     onClick={() =>
@@ -117,7 +117,7 @@ export default function LaptopSpeedControl({
                     }
                   >
                     <RemoveIcon />
-                  </IconButton>
+                  </Fab>
                   <Slider
                     aria-label={speedLabel}
                     min={speedOptions.min}
@@ -127,8 +127,9 @@ export default function LaptopSpeedControl({
                     getAriaValueText={formatSpeed}
                     onChange={(_, value) => onSpeedChange(value)}
                   />
-                  <IconButton
+                  <Fab
                     className="LaptopSpeedControl-Adjust"
+                    size="medium"
                     aria-label={t('home.laptop.speedUpAnimation')}
                     disabled={animationSpeed >= speedOptions.max}
                     onClick={() =>
@@ -136,7 +137,7 @@ export default function LaptopSpeedControl({
                     }
                   >
                     <AddIcon />
-                  </IconButton>
+                  </Fab>
                 </Stack>
                 <div
                   className="LaptopSpeedControl-Presets"

@@ -48,7 +48,6 @@ export interface ISocialLink {
   title: string
   href: string
   Icon: FunctionComponent<SVGProps<SVGSVGElement>> | TSvgIcon
-  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 }
 
 export interface IFeature {

@@ -5,7 +5,6 @@ import SevenGlyphsIcon from '#assets/icons/7glyphs.svg?react'
 import GitHubIcon from '#assets/icons/github.svg?react'
 import LinkedInIcon from '#assets/icons/linkedin.svg?react'
 import InstagramIcon from '#assets/icons/instagram.svg?react'
-import FacebookIcon from '#assets/icons/facebook.svg?react'
 import TelegramIcon from '#assets/icons/telegram.svg?react'
 import AirbnbIcon from '#assets/icons/airbnb.svg?react'
 import type {ISocialLink, ICompany} from '#utils/types'
@@ -16,7 +15,6 @@ interface IContactLink {
   sevenGlyphs: ISocialLink
   youTube: ISocialLink
   instagram: ISocialLink
-  facebook: ISocialLink
   telegram: ISocialLink
   airbnb: ISocialLink
 }
@@ -74,49 +72,36 @@ export const CONTACT_LINK: IContactLink = {
     title: 'GitHub',
     href: 'https://github.com/michaelany',
     Icon: GitHubIcon,
-    size: 'lg',
   },
   linkedIn: {
     title: 'LinkedIn',
     href: 'https://linkedin.com/in/michaelany',
     Icon: LinkedInIcon,
-    size: 'sm',
   },
   telegram: {
     title: 'Telegram',
     href: 'https://t.me/michaelany',
     Icon: TelegramIcon,
-    size: 'md',
   },
   youTube: {
     title: 'YouTube',
     href: 'https://youtube.com/@michaelany',
     Icon: YouTubeIcon,
-    size: 'xl',
   },
   instagram: {
     title: 'Instagram',
     href: 'https://www.instagram.com/anymichael/tagged',
     Icon: InstagramIcon,
-    size: 'md',
-  },
-  facebook: {
-    title: 'Facebook',
-    href: 'https://facebook.com/michaelany.fb',
-    Icon: FacebookIcon,
-    size: 'sm',
   },
   sevenGlyphs: {
     title: `${COMPANY.sevenGlyphs.title} Team`,
     href: 'https://7glyphs.com/agency/team',
     Icon: SevenGlyphsIcon,
-    size: 'xs',
   },
   airbnb: {
     title: 'Airbnb',
     href: 'https://www.airbnb.co.nz/users/profile/1496122520349253877',
     Icon: AirbnbIcon,
-    size: 'lg',
   },
 }
 

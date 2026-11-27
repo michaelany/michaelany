@@ -49,6 +49,19 @@ const charcoalAlpha = alpha(COLOR.charcoal, 0.12)
 
 const fabSize = toRem(56)
 const fabCompactSize = toRem(48)
+const smallIconSize = toRem(24)
+const mediumIconSize = toRem(32)
+const buttonIconStyles = {
+  width: '1em',
+  height: '1em',
+  flexShrink: 0,
+  fontSize: smallIconSize,
+}
+const compactFabStyles = {
+  width: fabCompactSize,
+  height: fabCompactSize,
+  '& > svg': {fontSize: smallIconSize},
+}
 
 const iconButtonInteractionBackground =
   'rgb(var(--mui-palette-text-primaryChannel) / 0.04)'
@@ -162,6 +175,12 @@ const THEME: ThemeOptions = {
     borderRadius,
   },
   components: {
+    MuiSvgIcon: {
+      styleOverrides: {
+        fontSizeSmall: {fontSize: smallIconSize},
+        fontSizeMedium: {fontSize: mediumIconSize},
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: ({theme}) => ({
@@ -170,15 +189,20 @@ const THEME: ThemeOptions = {
           paddingBlock: theme.spacing(1),
           paddingInline: `min(${theme.spacing(3)}, 8vw)`,
           overflowWrap: 'anywhere',
-          '.MuiButton-icon .MuiSvgIcon-root': {
-            fontSize: toResponsiveRem(27, 24),
-          },
+          lineHeight: 1.5,
+          '.MuiButton-icon > svg': buttonIconStyles,
           variants: [
             {
-              props: {variant: 'text', size: 'large'},
+              props: {size: 'medium'},
+              style: {minHeight: toRem(48)},
+            },
+            {
+              props: {size: 'large'},
               style: {
+                minHeight: toRem(64),
                 paddingBlock: theme.spacing(1.5),
                 fontSize: 'var(--mui-fontSize-large)',
+                '.MuiButton-icon > svg': {fontSize: mediumIconSize},
               },
             },
           ],
@@ -197,20 +221,13 @@ const THEME: ThemeOptions = {
           width: fabSize,
           height: fabSize,
           minHeight: toRem(36),
-          '&.MuiFab-sizeMedium': {
-            width: fabCompactSize,
-            height: fabCompactSize,
-          },
+          '& > svg': {...buttonIconStyles, fontSize: mediumIconSize},
+          '&.MuiFab-sizeMedium': compactFabStyles,
           '&.Mui-disabled': {
             backgroundColor: 'rgba(0, 0, 0, 0.04)',
           },
-          '&:not(.MuiFab-sizeMedium)': {
-            [`@media (width <= ${toRem(BREAKPOINT.sm)}), (${toRem(BREAKPOINT.md)} < width <= ${toRem(BREAKPOINT.lg)})`]:
-              {
-                width: fabCompactSize,
-                height: fabCompactSize,
-              },
-          },
+          [`@media (width <= ${toRem(BREAKPOINT.sm)}), (${toRem(BREAKPOINT.md)} < width <= ${toRem(BREAKPOINT.lg)})`]:
+            compactFabStyles,
         },
       },
     },

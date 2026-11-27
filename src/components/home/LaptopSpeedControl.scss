@@ -28,20 +28,16 @@ $control-size: 2.75rem;
 }
 
 .LaptopSpeedControl-Row.MuiStack-root {
-  flex-wrap: nowrap;
   gap: min(f.spacing(2), 5vw);
+  > .MuiSlider-root {
+    flex: 1 1 2rem;
+  }
 }
 
-.LaptopSpeedControl-Adjust.MuiIconButton-root {
+.LaptopSpeedControl-Adjust.MuiFab-root {
   flex-shrink: 0;
-  width: min(#{$control-size}, 22%);
-  aspect-ratio: 1;
-  padding: 0;
   background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.06);
   color: inherit;
-  > .MuiSvgIcon-root {
-    font-size: min(1.9375rem, 13vw);
-  }
   &.Mui-focusVisible {
     background-color: rgb(var(--mui-palette-text-primaryChannel) / 0.12);
   }

@@ -65,7 +65,6 @@ $timeline-padding-inline: min(f.spacing(3), 12%);
 }
 
 .Timeline-ButtonIcon {
-  font-size: 1.5rem;
   transform: rotate(0deg);
   transition: transform var(--mui-duration-short) var(--mui-easing-inOut);
   &_refresh {

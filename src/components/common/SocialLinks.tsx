@@ -34,9 +34,7 @@ export default function SocialLinks({links, about}: ISocialLinksProps) {
               href={link.href}
               aria-label={link.title}
             >
-              <Icon
-                className={`SocialLinks-Icon SocialLinks-Icon_size_${link.size}`}
-              />
+              <Icon aria-hidden />
             </Fab>
           </Tooltip>
         </Animate>

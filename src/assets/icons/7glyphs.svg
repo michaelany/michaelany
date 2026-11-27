@@ -1,9 +1,1 @@
-<svg width="20" height="20" viewBox="0 0 20 21" fill="currentColor">
-  <circle cx="1.75" cy="1.75" r="1.75"/>
-  <circle cx="1.75" cy="18.55" r="1.75"/>
-  <circle cx="10.15" cy="1.75" r="1.75"/>
-  <circle cx="10.15" cy="10.15" r="1.75"/>
-  <circle cx="18.55" cy="1.75" r="1.75"/>
-  <circle cx="18.55" cy="10.15" r="1.75"/>
-  <circle cx="18.55" cy="18.55" r="1.75"/>
-</svg>
+<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero"><circle cx="4.551724" cy="4.551724" r="1.551724"/><circle cx="4.551724" cy="19.448276" r="1.551724"/><circle cx="12" cy="4.551724" r="1.551724"/><circle cx="12" cy="12" r="1.551724"/><circle cx="19.448276" cy="4.551724" r="1.551724"/><circle cx="19.448276" cy="12" r="1.551724"/><circle cx="19.448276" cy="19.448276" r="1.551724"/></g></svg>

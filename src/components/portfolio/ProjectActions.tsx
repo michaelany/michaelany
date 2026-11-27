@@ -36,6 +36,9 @@ export default function ProjectActions({
 
   if (!url && !details && !stores) return null
 
+  const DetailsIcon =
+    companyName === 'everpoint' ? EverpointIcon : SevenGlyphsIcon
+
   return (
     <div className="Actions Actions_center">
       {url && (
@@ -44,28 +47,16 @@ export default function ProjectActions({
         </Link>
       )}
       {details && (
-        <Link
-          icon={
-            companyName === 'everpoint' ? (
-              <EverpointIcon className="ProjectActions-DetailsIcon" />
-            ) : (
-              <SevenGlyphsIcon className="ProjectActions-DetailsIcon" />
-            )
-          }
-          href={details}
-        >
+        <Link icon={<DetailsIcon aria-hidden />} href={details}>
           {t('other.more')}
         </Link>
       )}
       {stores && (
         <>
-          <Link
-            icon={<AppleIcon className="ProjectActions-AppleIcon" />}
-            href={stores[0]}
-          >
+          <Link icon={<AppleIcon aria-hidden />} href={stores[0]}>
             {FEATURE.appStore}
           </Link>
-          <Link icon={<GooglePlayIcon />} href={stores[1]}>
+          <Link icon={<GooglePlayIcon aria-hidden />} href={stores[1]}>
             {FEATURE.googlePlay}
           </Link>
         </>
