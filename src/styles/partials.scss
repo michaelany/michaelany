@@ -14,13 +14,23 @@
 }
 
 .Colorful {
-  .App_color_alternate & {
-    @include m.animationAlternate;
-  }
+  .App_color_alternate &,
   .App_color_white &,
   .App_color_accent & {
     color: var(--page-accent-color);
     outline-color: var(--page-accent-color);
+
+    // apply the accent to the svg so visited links use the same fill
+    > svg {
+      color: var(--page-accent-color);
+      fill: currentColor;
+      > path {
+        fill: inherit;
+      }
+    }
+  }
+  .App_color_alternate & > .MuiSvgIcon-root {
+    transition-property: none;
   }
   .App_color_accent &_dark {
     color: rgb(var(--page-accent-dark-channel) / v.$dark-alfa);
@@ -181,6 +191,9 @@
   height: v.$navigation_row-height;
   &.active {
     @extend .Colorful;
+    .App_color_alternate & {
+      transition-property: background-color, box-shadow, border-color;
+    }
   }
   .App_color_white &:not(.active) {
     color: rgba(white, 0.7);

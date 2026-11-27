@@ -1,19 +1,61 @@
-$projects:
-  'msp', '7glyphs', 'lazyaz', 'lazyaz-dashboard', 'whip-around', '12-saffron',
-  'service-packages', 'quarry-trucks', 'rogue-travel', '7glyphs-2', 'strongher',
-  'sds', 'foodprint-landing', 'foodprint-portal', 'foodprint',
-  'melissa-chalmers', '7glyphs-lite', 'embp', 'proximal-coffee', 'uls',
-  'just-hatched', 'dropdrone', 'present-me', 'present-me-portal',
-  'present-me-landing', 'ally', 'celebration', 'road-ninja',
-  'road-ninja-landing', 't1-online', 'tradease', 'vibe-media', 'madfit-cms',
-  'madfit', 'pridefit-cms', 'ally-cms', 'pridefit', 'strongher-cms', 'help-ai',
-  'ally-2', 'reps-rest', 'best-me', 'madfit-2', 'go-rentals';
+$projectsByFormat: (
+  'jpg': (
+    'msp',
+    '7glyphs',
+    'lazyaz',
+    'lazyaz-dashboard',
+    'whip-around',
+    '12-saffron',
+    'service-packages',
+    'quarry-trucks',
+    '7glyphs-2',
+    'strongher',
+    'sds',
+    'foodprint-landing',
+    'foodprint-portal',
+    'foodprint',
+    'melissa-chalmers',
+    '7glyphs-lite',
+    'embp',
+    'proximal-coffee',
+    'uls',
+    'just-hatched',
+    'dropdrone',
+    'present-me',
+    'present-me-portal',
+    'present-me-landing',
+    'ally',
+    'celebration',
+    'road-ninja',
+    'road-ninja-landing',
+    't1-online',
+    'tradease',
+    'vibe-media',
+    'madfit-cms',
+    'madfit',
+    'pridefit-cms',
+    'ally-cms',
+    'pridefit',
+    'strongher-cms',
+  ),
+  'webp': (
+    'rogue-travel',
+    'help-ai',
+    'ally-2',
+    'reps-rest',
+    'best-me',
+    'madfit-2',
+    'go-rentals',
+  ),
+);
 
 .ProjectLink-View {
   aspect-ratio: 1 / 0.7035;
-  @each $project in $projects {
-    &_name_#{$project}::after {
-      @include m.retinaImg($project, 'jpg', '/assets/projects');
+  @each $format, $projects in $projectsByFormat {
+    @each $project in $projects {
+      &_name_#{$project}::after {
+        @include m.retinaImg($project, $format, '/assets/projects');
+      }
     }
   }
 }

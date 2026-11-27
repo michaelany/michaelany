@@ -26,6 +26,8 @@ the import aliases in `tsconfig.json`.
   SCSS for custom elements and layouts.
 - Render repeated UI from data with `map`. Prefer local state and explicit
   props. Introduce shared state when the feature needs it.
+- Use the same WebP poster while the home page 3D laptop loads and when the
+  scene is unavailable.
 
 ## Styles
 
@@ -34,6 +36,8 @@ the import aliases in `tsconfig.json`.
   and child styles in a matching SCSS file beside the component and import it there.
 - Set project-wide MUI defaults in `src/styles/theme.ts` and apply exceptions
   where they are used.
+- Animate `color` on `App` so navigation and page content can follow the same
+  accent through `currentColor`, including in browsers without `@property`.
 - Use `Sections` for split pages and `.Cards` for portfolio and blog lists.
   `App` switches both `Sections` and the navigation when there is too little
   room for two `28rem` columns beside the sidebar. `.Cards` uses a minimum

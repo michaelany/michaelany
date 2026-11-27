@@ -77,7 +77,7 @@ export interface ICompany {
   title: string
   name: TCompanyName
   color: TColor
-  images: any[]
+  image: string
   href: string
 }
 

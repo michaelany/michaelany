@@ -18,10 +18,7 @@ import {
 
 import './Laptop.scss'
 import FrameCorner from '#assets/img/shapes/frame-corner.svg?react'
-import macbookImg from '#assets/img/shapes/macbook.png'
-import macbook2xImg from '#assets/img/shapes/macbook@2x.png'
 import {Tooltip} from '#components/common'
-import {BANNER_IMAGES} from '#data/banner'
 import {DURATION} from '#styles/tokens'
 import type {TLaptopScene} from '#utils/laptop/laptopScene'
 import LaptopSpeedControl from './LaptopSpeedControl'
@@ -129,6 +126,7 @@ export default function Laptop() {
 
   const isReady = status === 'ready'
   const isLoading = status === 'loading'
+  const isFailed = status === 'failed'
 
   return (
     <div
@@ -136,8 +134,12 @@ export default function Laptop() {
       className={cn('Laptop', isManualControlEnabled && 'Laptop_interactive')}
     >
       <div className="Laptop-Stage">
-        <Fade unmountOnExit in={isLoading} timeout={DURATION.short}>
-          <div className="Laptop-Poster" />
+        <Fade unmountOnExit in={!isReady} timeout={DURATION.short}>
+          <div
+            className={cn('Laptop-Poster', isFailed && 'Laptop-Poster_failed')}
+            role={isFailed ? 'img' : undefined}
+            aria-label={isFailed ? 'MacBook Pro' : undefined}
+          />
         </Fade>
         {isLoading && (
           <div className="Laptop-Loading">
@@ -230,27 +232,7 @@ const Stage = ({
   onInteractionKeyDown,
   onLidToggle,
 }: IStageProps) => {
-  if (status === 'failed')
-    return (
-      <div className="Laptop-Fallback">
-        <div className="Laptop-FallbackFigure">
-          <img
-            className="Laptop-FallbackImage"
-            width={652}
-            height={417}
-            src={macbookImg}
-            srcSet={`${macbook2xImg} 2x`}
-            alt="MacBook Pro"
-            loading="lazy"
-          />
-          <img
-            className="Laptop-FallbackScreen"
-            src={BANNER_IMAGES[0]}
-            alt="JavaScript"
-          />
-        </div>
-      </div>
-    )
+  if (status === 'failed') return null
 
   const isReady = status === 'ready'
 

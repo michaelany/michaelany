@@ -9,7 +9,7 @@ $videos:
   }
   @each $video in $videos {
     &_name_#{$video}::after {
-      @include m.retinaImg($video, 'jpg', '/assets/videos');
+      @include m.retinaImg($video, 'webp', '/assets/videos');
     }
   }
 }

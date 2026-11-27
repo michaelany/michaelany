@@ -71,7 +71,3 @@
   animation: $animation var(--mui-duration-long) var(--mui-easing-inOut) $delay
     both;
 }
-
-@mixin animationAlternate($animation: alternateColor) {
-  animation: $animation var(--mui-duration-alternate) linear infinite;
-}

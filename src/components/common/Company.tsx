@@ -16,7 +16,7 @@ export default function Company({
   title,
   color,
   href,
-  images,
+  image,
 }: ICompanyProps) {
   return (
     <Tooltip title={title}>
@@ -32,13 +32,7 @@ export default function Company({
         href={href}
         onClick={handleLinkClick}
       >
-        <img
-          className="Company-Image"
-          src={images[0]}
-          srcSet={`${images[1]} 2x`}
-          alt={title}
-          loading="lazy"
-        />
+        <img className="Company-Image" src={image} alt={title} loading="lazy" />
       </ButtonBase>
     </Tooltip>
   )

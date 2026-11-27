@@ -23,6 +23,10 @@ Run `npm run format:check` and `npm run lint` as appropriate. The user runs buil
 and tests unless they explicitly ask you to run them. Mention any build or test
 the change needs. Do not edit generated files in `dist/`.
 
+Check layout and image sizing in the code. The user handles routine visual
+checks. Use the browser when asked or to diagnose a rendering issue that is
+unclear from the code.
+
 ## Maintaining the Docs
 
 Record explicit user agreements, verified recurring conventions and confirmed

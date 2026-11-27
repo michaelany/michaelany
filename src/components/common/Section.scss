@@ -14,11 +14,9 @@ $max-content-width: 62.5rem;
     &::before {
       @include m.pseudoGradient;
     }
-    .App_color_accent & {
-      background-color: var(--page-accent-color);
-    }
+    .App_color_accent &,
     .App_color_alternate & {
-      @include m.animationAlternate(alternateBackgroundColor);
+      background-color: var(--page-accent-color);
     }
   }
   @include m.md {

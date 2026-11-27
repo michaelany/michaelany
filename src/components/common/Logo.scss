@@ -6,9 +6,7 @@
   margin-bottom: f.spacing(10);
   display: flex;
   justify-content: center;
-  transition:
-    transform var(--mui-duration-standard) var(--mui-easing-out),
-    color var(--mui-duration-short) var(--mui-easing-inOut);
+  transition: transform var(--mui-duration-standard) var(--mui-easing-out);
   @include m.hover {
     transform: scale(1.15) rotate(-10deg);
   }
@@ -25,6 +23,10 @@
 .Logo-Svg {
   width: 4rem;
   height: 4rem;
+  .App_color_white &,
+  .App_color_accent & {
+    transition: color var(--mui-duration-short) var(--mui-easing-inOut);
+  }
   .Header & {
     width: 2.875em;
     height: 2.875em;

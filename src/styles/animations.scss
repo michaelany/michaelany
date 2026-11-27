@@ -1,5 +1,3 @@
-@use 'styles/variables' as v;
-
 $effect_delta: 1rem;
 $alternate-colors: (
   from: blue,
@@ -108,34 +106,12 @@ $alternate-colors: (
   }
 }
 
-@mixin alternateColorFrames($properties, $opacity: null) {
+@keyframes alternateColor {
   @each $stop, $color in $alternate-colors {
     #{$stop} {
-      $value: var(--mui-palette-#{$color}-main);
-      @if $opacity != null {
-        $value: rgb(var(--mui-palette-#{$color}-mainChannel) / $opacity);
-      }
-      @each $property in $properties {
-        #{$property}: $value;
-      }
+      color: var(--mui-palette-#{$color}-main);
     }
   }
-}
-
-@keyframes alternateColor {
-  @include alternateColorFrames(color outline-color);
-}
-
-@keyframes alternateBackgroundColor {
-  @include alternateColorFrames(background-color);
-}
-
-@keyframes alternateBackgroundOpacityColor {
-  @include alternateColorFrames(background-color, v.$backdrop-opacity);
-}
-
-@keyframes alternateBorderColor {
-  @include alternateColorFrames(border-color);
 }
 
 @keyframes hello {

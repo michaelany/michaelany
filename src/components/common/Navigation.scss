@@ -9,7 +9,8 @@
     width: 0.5rem;
     height: v.$navigation_row-height;
     border-radius: calc(var(--mui-shape-borderRadius) / 2);
-    background-color: var(--page-accent-color);
+    color: var(--page-accent-color);
+    background-color: currentColor;
     transform: translate3d(
       0,
       calc(#{v.$navigation_row-height} * var(--nav-index)),
@@ -17,9 +18,9 @@
     );
     transition:
       transform var(--mui-duration-mediumPlus) var(--mui-easing-out),
-      background-color var(--mui-duration-short) var(--mui-easing-inOut);
+      color var(--mui-duration-short) var(--mui-easing-inOut);
     .App_color_alternate & {
-      @include m.animationAlternate(alternateBackgroundColor);
+      transition-property: transform;
     }
   }
   .Drawer-Content & {

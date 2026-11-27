@@ -9,7 +9,6 @@ import {
 import {CloseRounded as CloseIcon} from '@mui/icons-material'
 
 import './Message.scss'
-import santaImg from '#assets/img/pictures/santa.png'
 import {QUERY_BREAKPOINT} from '#utils/constants'
 import {DURATION} from '#styles/tokens'
 
@@ -39,13 +38,6 @@ export default function Message() {
       anchorOrigin={anchorOrigin}
       message={
         <>
-          <img
-            className="Message-Icon"
-            width={64}
-            height={64}
-            src={santaImg}
-            alt="Santa Claus"
-          />
           <p>
             <Trans i18nKey="message.newYear" components={transComponents} />
           </p>

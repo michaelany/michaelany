@@ -35,47 +35,35 @@ export const COMPANY: ICompanyData = {
   goRentals: {
     title: 'GO Rentals',
     name: 'goRentals',
-    images: [
-      publicImg('companies/gorentals.png'),
-      publicImg('companies/gorentals@2x.png'),
-    ],
+    image: publicImg('companies/gorentals.svg'),
     color: 'red',
     href: 'https://gorentals.co.nz',
   },
   sevenGlyphs: {
     title: '7 glyphs',
     name: 'sevenGlyphs',
-    images: [
-      publicImg('companies/7glyphs.png'),
-      publicImg('companies/7glyphs@2x.png'),
-    ],
+    image: publicImg('companies/7glyphs.svg'),
     color: 'neutral',
     href: 'https://7glyphs.com',
   },
   t1: {
     title: 'T1',
     name: 't1',
-    images: [publicImg('companies/t1.png'), publicImg('companies/t1@2x.png')],
+    image: publicImg('companies/t1.svg'),
     color: 'blue',
     href: 'https://t1.ru',
   },
   everpoint: {
     title: 'Everpoint',
     name: 'everpoint',
-    images: [
-      publicImg('companies/everpoint.png'),
-      publicImg('companies/everpoint@2x.png'),
-    ],
+    image: publicImg('companies/everpoint.svg'),
     color: 'grass',
     href: 'https://everpoint.ru',
   },
   mVideo: {
     title: 'M.Video',
     name: 'mVideo',
-    images: [
-      publicImg('companies/mvideo.png'),
-      publicImg('companies/mvideo@2x.png'),
-    ],
+    image: publicImg('companies/mvideo.svg'),
     color: 'red',
     href: 'https://mvideo.ru',
   },

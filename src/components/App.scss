@@ -12,14 +12,31 @@
       background-color: rgb(var(--page-accent-channel) / 0.4);
     }
   }
+  &_color_alternate {
+    --page-accent-color: currentColor;
+    color: var(--mui-palette-blue-main);
+    animation: alternateColor var(--mui-duration-alternate) linear infinite;
+
+    .MuiDrawer-paper {
+      color: inherit;
+    }
+
+    .MuiBackdrop-root {
+      background-color: transparent;
+      &::before {
+        @include m.pseudo;
+        inset: 0;
+        pointer-events: none;
+        background-color: var(--page-accent-color);
+        opacity: v.$backdrop-opacity;
+      }
+    }
+  }
   &_color_alternate,
   &_hasBackground {
     ::selection {
       background-color: rgb(var(--mui-palette-neutral-mainChannel) / 0.4);
     }
-  }
-  &_color_alternate .MuiBackdrop-root {
-    @include m.animationAlternate(alternateBackgroundOpacityColor);
   }
   &_color_white .MuiBackdrop-root,
   &_color_accent .MuiBackdrop-root {
